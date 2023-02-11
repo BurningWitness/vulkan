@@ -1,0 +1,9 @@
+#include <vulkan/vulkan.h>
+
+module Vulkan.Types.Struct.VkPhysicalDeviceInlineUniformBlockFeaturesEXT where
+
+import Vulkan.Types.Struct.VkPhysicalDeviceInlineUniformBlockFeatures
+
+
+
+type VkPhysicalDeviceInlineUniformBlockFeaturesEXT = VkPhysicalDeviceInlineUniformBlockFeatures

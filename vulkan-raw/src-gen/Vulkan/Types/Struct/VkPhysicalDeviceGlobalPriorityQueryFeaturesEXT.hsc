@@ -1,0 +1,9 @@
+#include <vulkan/vulkan.h>
+
+module Vulkan.Types.Struct.VkPhysicalDeviceGlobalPriorityQueryFeaturesEXT where
+
+import Vulkan.Types.Struct.VkPhysicalDeviceGlobalPriorityQueryFeaturesKHR
+
+
+
+type VkPhysicalDeviceGlobalPriorityQueryFeaturesEXT = VkPhysicalDeviceGlobalPriorityQueryFeaturesKHR

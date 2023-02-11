@@ -1,0 +1,58 @@
+{-# LANGUAGE DataKinds #-}
+{-# LANGUAGE DuplicateRecordFields #-}
+{-# LANGUAGE MultiParamTypeClasses #-}
+#if __GLASGOW_HASKELL__ >= 902
+{-# LANGUAGE NoFieldSelectors #-}
+#endif
+{-# LANGUAGE TypeApplications #-}
+
+#include <vulkan/vulkan.h>
+
+module Vulkan.Types.Struct.VkMemoryBarrier where
+
+import Data.Int
+import Data.Word
+import Foreign.Ptr
+import Foreign.Storable
+import Foreign.Storable.Offset
+import Vulkan.Types.Enum.VkAccessFlags
+import Vulkan.Types.Enum.VkStructureType
+
+
+
+data {-# CTYPE "vulkan/vulkan.h" "VkMemoryBarrier" #-} VkMemoryBarrier =
+       VkMemoryBarrier
+         { sType :: VkStructureType
+         , pNext :: Ptr ()
+         , srcAccessMask :: VkAccessFlags -- ^ Memory accesses from the source of the dependency to synchronize
+         , dstAccessMask :: VkAccessFlags -- ^ Memory accesses from the destination of the dependency to synchronize
+         }
+
+instance Storable VkMemoryBarrier where
+  sizeOf    _ = #{size      struct VkMemoryBarrier}
+  alignment _ = #{alignment struct VkMemoryBarrier}
+
+  peek ptr = 
+    VkMemoryBarrier
+       <$> peek (offset @"sType" ptr)
+       <*> peek (offset @"pNext" ptr)
+       <*> peek (offset @"srcAccessMask" ptr)
+       <*> peek (offset @"dstAccessMask" ptr)
+
+  poke ptr val = do
+    pokeField @"sType" ptr val
+    pokeField @"pNext" ptr val
+    pokeField @"srcAccessMask" ptr val
+    pokeField @"dstAccessMask" ptr val
+
+instance Offset "sType" VkMemoryBarrier where
+  rawOffset = #{offset struct VkMemoryBarrier, sType}
+
+instance Offset "pNext" VkMemoryBarrier where
+  rawOffset = #{offset struct VkMemoryBarrier, pNext}
+
+instance Offset "srcAccessMask" VkMemoryBarrier where
+  rawOffset = #{offset struct VkMemoryBarrier, srcAccessMask}
+
+instance Offset "dstAccessMask" VkMemoryBarrier where
+  rawOffset = #{offset struct VkMemoryBarrier, dstAccessMask}

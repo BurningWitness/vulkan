@@ -1,0 +1,49 @@
+cabal-version:       2.2
+
+name:                vulkan-example
+version:             0.1.0.0
+synopsis:            Basic Vulkan tutorial
+description:         Renders a triangle following Vulkan Tutorial
+license:             BSD-3-Clause
+license-file:        LICENSE
+author:              Oleksii Divak
+maintainer:          frozenwitness@gmail.com
+copyright:           (c) 2023 Oleksii Divak
+category:            Example
+build-type:          Simple
+
+library
+  hs-source-dirs:     src
+
+  exposed-modules:    Example
+
+  other-modules:      Example.Extensions
+                      Example.Shaders
+
+  build-depends:      base >= 4.11 && < 5
+                    , bindings-GLFW
+                    , vk-mem-alloc
+                    , vulkan-raw
+
+  default-language:   Haskell2010
+
+  ghc-options:        -Wall
+
+executable vulkan-example
+  hs-source-dirs:      app
+
+  main-is:             Main.hs
+
+  ghc-options:         -Wall
+
+  build-depends:       base
+                     , vulkan-example
+
+  default-language:    Haskell2010
+
+
+
+source-repository head
+    type:     git
+    location: https://github.com/burningwitness/vulkan
+    subdir:   vulkan-triangles

@@ -1,0 +1,9 @@
+#include <vulkan/vulkan.h>
+
+module Vulkan.Types.Struct.VkDescriptorSetVariableDescriptorCountLayoutSupportEXT where
+
+import Vulkan.Types.Struct.VkDescriptorSetVariableDescriptorCountLayoutSupport
+
+
+
+type VkDescriptorSetVariableDescriptorCountLayoutSupportEXT = VkDescriptorSetVariableDescriptorCountLayoutSupport

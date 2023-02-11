@@ -1,0 +1,9 @@
+#include <vulkan/vulkan.h>
+
+module Vulkan.Types.Struct.VkPhysicalDevicePipelineCreationCacheControlFeaturesEXT where
+
+import Vulkan.Types.Struct.VkPhysicalDevicePipelineCreationCacheControlFeatures
+
+
+
+type VkPhysicalDevicePipelineCreationCacheControlFeaturesEXT = VkPhysicalDevicePipelineCreationCacheControlFeatures

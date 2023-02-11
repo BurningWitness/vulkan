@@ -1,0 +1,121 @@
+{-# LANGUAGE CPP #-}
+{-# LANGUAGE MagicHash #-}
+{-# LANGUAGE PatternSynonyms #-}
+{-# LANGUAGE ViewPatterns #-}
+
+#include <vulkan/vulkan.h>
+
+#if VK_EXT_video_encode_h264
+
+module Vulkan.Ext.VK_EXT_video_encode_h264
+  ( pattern VK_EXT_VIDEO_ENCODE_H264_SPEC_VERSION
+  , pattern VK_EXT_VIDEO_ENCODE_H264_EXTENSION_NAME
+  , pattern VK_STRUCTURE_TYPE_VIDEO_ENCODE_H264_CAPABILITIES_EXT
+  , pattern VK_STRUCTURE_TYPE_VIDEO_ENCODE_H264_SESSION_PARAMETERS_CREATE_INFO_EXT
+  , pattern VK_STRUCTURE_TYPE_VIDEO_ENCODE_H264_SESSION_PARAMETERS_ADD_INFO_EXT
+  , pattern VK_STRUCTURE_TYPE_VIDEO_ENCODE_H264_VCL_FRAME_INFO_EXT
+  , pattern VK_STRUCTURE_TYPE_VIDEO_ENCODE_H264_DPB_SLOT_INFO_EXT
+  , pattern VK_STRUCTURE_TYPE_VIDEO_ENCODE_H264_NALU_SLICE_INFO_EXT
+  , pattern VK_STRUCTURE_TYPE_VIDEO_ENCODE_H264_EMIT_PICTURE_PARAMETERS_INFO_EXT
+  , pattern VK_STRUCTURE_TYPE_VIDEO_ENCODE_H264_PROFILE_INFO_EXT
+  , pattern VK_STRUCTURE_TYPE_VIDEO_ENCODE_H264_RATE_CONTROL_INFO_EXT
+  , pattern VK_STRUCTURE_TYPE_VIDEO_ENCODE_H264_RATE_CONTROL_LAYER_INFO_EXT
+  , pattern VK_STRUCTURE_TYPE_VIDEO_ENCODE_H264_REFERENCE_LISTS_INFO_EXT
+  , pattern VK_VIDEO_CODEC_OPERATION_ENCODE_H264_BIT_EXT
+  , VkVideoEncodeH264CapabilityFlagBitsEXT
+  , pattern VK_VIDEO_ENCODE_H264_CAPABILITY_DIRECT_8X8_INFERENCE_ENABLED_BIT_EXT
+  , pattern VK_VIDEO_ENCODE_H264_CAPABILITY_DIRECT_8X8_INFERENCE_DISABLED_BIT_EXT
+  , pattern VK_VIDEO_ENCODE_H264_CAPABILITY_SEPARATE_COLOUR_PLANE_BIT_EXT
+  , pattern VK_VIDEO_ENCODE_H264_CAPABILITY_QPPRIME_Y_ZERO_TRANSFORM_BYPASS_BIT_EXT
+  , pattern VK_VIDEO_ENCODE_H264_CAPABILITY_SCALING_LISTS_BIT_EXT
+  , pattern VK_VIDEO_ENCODE_H264_CAPABILITY_HRD_COMPLIANCE_BIT_EXT
+  , pattern VK_VIDEO_ENCODE_H264_CAPABILITY_CHROMA_QP_OFFSET_BIT_EXT
+  , pattern VK_VIDEO_ENCODE_H264_CAPABILITY_SECOND_CHROMA_QP_OFFSET_BIT_EXT
+  , pattern VK_VIDEO_ENCODE_H264_CAPABILITY_PIC_INIT_QP_MINUS26_BIT_EXT
+  , pattern VK_VIDEO_ENCODE_H264_CAPABILITY_WEIGHTED_PRED_BIT_EXT
+  , pattern VK_VIDEO_ENCODE_H264_CAPABILITY_WEIGHTED_BIPRED_EXPLICIT_BIT_EXT
+  , pattern VK_VIDEO_ENCODE_H264_CAPABILITY_WEIGHTED_BIPRED_IMPLICIT_BIT_EXT
+  , pattern VK_VIDEO_ENCODE_H264_CAPABILITY_WEIGHTED_PRED_NO_TABLE_BIT_EXT
+  , pattern VK_VIDEO_ENCODE_H264_CAPABILITY_TRANSFORM_8X8_BIT_EXT
+  , pattern VK_VIDEO_ENCODE_H264_CAPABILITY_CABAC_BIT_EXT
+  , pattern VK_VIDEO_ENCODE_H264_CAPABILITY_CAVLC_BIT_EXT
+  , pattern VK_VIDEO_ENCODE_H264_CAPABILITY_DEBLOCKING_FILTER_DISABLED_BIT_EXT
+  , pattern VK_VIDEO_ENCODE_H264_CAPABILITY_DEBLOCKING_FILTER_ENABLED_BIT_EXT
+  , pattern VK_VIDEO_ENCODE_H264_CAPABILITY_DEBLOCKING_FILTER_PARTIAL_BIT_EXT
+  , pattern VK_VIDEO_ENCODE_H264_CAPABILITY_DISABLE_DIRECT_SPATIAL_MV_PRED_BIT_EXT
+  , pattern VK_VIDEO_ENCODE_H264_CAPABILITY_MULTIPLE_SLICE_PER_FRAME_BIT_EXT
+  , pattern VK_VIDEO_ENCODE_H264_CAPABILITY_SLICE_MB_COUNT_BIT_EXT
+  , pattern VK_VIDEO_ENCODE_H264_CAPABILITY_ROW_UNALIGNED_SLICE_BIT_EXT
+  , pattern VK_VIDEO_ENCODE_H264_CAPABILITY_DIFFERENT_SLICE_TYPE_BIT_EXT
+  , pattern VK_VIDEO_ENCODE_H264_CAPABILITY_B_FRAME_IN_L1_LIST_BIT_EXT
+  , VkVideoEncodeH264CapabilityFlagsEXT
+  , VkVideoEncodeH264InputModeFlagBitsEXT
+  , pattern VK_VIDEO_ENCODE_H264_INPUT_MODE_FRAME_BIT_EXT
+  , pattern VK_VIDEO_ENCODE_H264_INPUT_MODE_SLICE_BIT_EXT
+  , pattern VK_VIDEO_ENCODE_H264_INPUT_MODE_NON_VCL_BIT_EXT
+  , VkVideoEncodeH264InputModeFlagsEXT
+  , VkVideoEncodeH264OutputModeFlagBitsEXT
+  , pattern VK_VIDEO_ENCODE_H264_OUTPUT_MODE_FRAME_BIT_EXT
+  , pattern VK_VIDEO_ENCODE_H264_OUTPUT_MODE_SLICE_BIT_EXT
+  , pattern VK_VIDEO_ENCODE_H264_OUTPUT_MODE_NON_VCL_BIT_EXT
+  , VkVideoEncodeH264OutputModeFlagsEXT
+  , VkVideoEncodeH264CapabilitiesEXT (..)
+  , VkVideoEncodeH264SessionParametersCreateInfoEXT (..)
+  , VkVideoEncodeH264SessionParametersAddInfoEXT (..)
+  , VkVideoEncodeH264VclFrameInfoEXT (..)
+  , VkVideoEncodeH264ReferenceListsInfoEXT (..)
+  , VkVideoEncodeH264EmitPictureParametersInfoEXT (..)
+  , VkVideoEncodeH264DpbSlotInfoEXT (..)
+  , VkVideoEncodeH264NaluSliceInfoEXT (..)
+  , VkVideoEncodeH264ProfileInfoEXT (..)
+  , VkVideoEncodeH264RateControlInfoEXT (..)
+  , VkVideoEncodeH264RateControlStructureEXT
+  , pattern VK_VIDEO_ENCODE_H264_RATE_CONTROL_STRUCTURE_UNKNOWN_EXT
+  , pattern VK_VIDEO_ENCODE_H264_RATE_CONTROL_STRUCTURE_FLAT_EXT
+  , pattern VK_VIDEO_ENCODE_H264_RATE_CONTROL_STRUCTURE_DYADIC_EXT
+  , VkVideoEncodeH264RateControlLayerInfoEXT (..)
+  , VkVideoEncodeH264QpEXT (..)
+  , VkVideoEncodeH264FrameSizeEXT (..)
+  ) where
+
+import Foreign.C.String
+import GHC.Ptr
+import Vulkan.Types.Enum.VkStructureType
+import Vulkan.Types.Enum.VkVideoCodecOperationFlagBitsKHR
+import Vulkan.Types.Enum.VkVideoEncodeH264CapabilityFlagBitsEXT
+import Vulkan.Types.Enum.VkVideoEncodeH264CapabilityFlagsEXT
+import Vulkan.Types.Enum.VkVideoEncodeH264InputModeFlagBitsEXT
+import Vulkan.Types.Enum.VkVideoEncodeH264InputModeFlagsEXT
+import Vulkan.Types.Enum.VkVideoEncodeH264OutputModeFlagBitsEXT
+import Vulkan.Types.Enum.VkVideoEncodeH264OutputModeFlagsEXT
+import Vulkan.Types.Enum.VkVideoEncodeH264RateControlStructureEXT
+import Vulkan.Types.Struct.VkVideoEncodeH264CapabilitiesEXT
+import Vulkan.Types.Struct.VkVideoEncodeH264DpbSlotInfoEXT
+import Vulkan.Types.Struct.VkVideoEncodeH264EmitPictureParametersInfoEXT
+import Vulkan.Types.Struct.VkVideoEncodeH264FrameSizeEXT
+import Vulkan.Types.Struct.VkVideoEncodeH264NaluSliceInfoEXT
+import Vulkan.Types.Struct.VkVideoEncodeH264ProfileInfoEXT
+import Vulkan.Types.Struct.VkVideoEncodeH264QpEXT
+import Vulkan.Types.Struct.VkVideoEncodeH264RateControlInfoEXT
+import Vulkan.Types.Struct.VkVideoEncodeH264RateControlLayerInfoEXT
+import Vulkan.Types.Struct.VkVideoEncodeH264ReferenceListsInfoEXT
+import Vulkan.Types.Struct.VkVideoEncodeH264SessionParametersAddInfoEXT
+import Vulkan.Types.Struct.VkVideoEncodeH264SessionParametersCreateInfoEXT
+import Vulkan.Types.Struct.VkVideoEncodeH264VclFrameInfoEXT
+import Vulkan.Types.VkFun
+
+
+
+pattern VK_EXT_VIDEO_ENCODE_H264_SPEC_VERSION :: (Eq a, Num a) => a
+pattern VK_EXT_VIDEO_ENCODE_H264_SPEC_VERSION = 9
+
+pattern VK_EXT_VIDEO_ENCODE_H264_EXTENSION_NAME :: CString
+pattern VK_EXT_VIDEO_ENCODE_H264_EXTENSION_NAME <- (const False -> True)
+  where
+    VK_EXT_VIDEO_ENCODE_H264_EXTENSION_NAME = Ptr ("VK_EXT_video_encode_h264\0"##)
+
+#else
+
+module Vulkan.Ext.VK_EXT_video_encode_h264 where
+
+#endif

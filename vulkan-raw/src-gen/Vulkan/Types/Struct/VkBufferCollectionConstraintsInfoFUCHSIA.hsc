@@ -1,0 +1,83 @@
+{-# LANGUAGE DataKinds #-}
+{-# LANGUAGE DuplicateRecordFields #-}
+{-# LANGUAGE MultiParamTypeClasses #-}
+#if __GLASGOW_HASKELL__ >= 902
+{-# LANGUAGE NoFieldSelectors #-}
+#endif
+{-# LANGUAGE TypeApplications #-}
+
+#include <vulkan/vulkan.h>
+
+#if VK_FUCHSIA_buffer_collection
+
+module Vulkan.Types.Struct.VkBufferCollectionConstraintsInfoFUCHSIA where
+
+import Data.Int
+import Data.Word
+import Foreign.Ptr
+import Foreign.Storable
+import Foreign.Storable.Offset
+import Vulkan.Types.Enum.VkStructureType
+
+
+
+data {-# CTYPE "vulkan/vulkan.h" "VkBufferCollectionConstraintsInfoFUCHSIA" #-} VkBufferCollectionConstraintsInfoFUCHSIA =
+       VkBufferCollectionConstraintsInfoFUCHSIA
+         { sType :: VkStructureType
+         , pNext :: Ptr ()
+         , minBufferCount :: #{type uint32_t}
+         , maxBufferCount :: #{type uint32_t}
+         , minBufferCountForCamping :: #{type uint32_t}
+         , minBufferCountForDedicatedSlack :: #{type uint32_t}
+         , minBufferCountForSharedSlack :: #{type uint32_t}
+         }
+
+instance Storable VkBufferCollectionConstraintsInfoFUCHSIA where
+  sizeOf    _ = #{size      struct VkBufferCollectionConstraintsInfoFUCHSIA}
+  alignment _ = #{alignment struct VkBufferCollectionConstraintsInfoFUCHSIA}
+
+  peek ptr = 
+    VkBufferCollectionConstraintsInfoFUCHSIA
+       <$> peek (offset @"sType" ptr)
+       <*> peek (offset @"pNext" ptr)
+       <*> peek (offset @"minBufferCount" ptr)
+       <*> peek (offset @"maxBufferCount" ptr)
+       <*> peek (offset @"minBufferCountForCamping" ptr)
+       <*> peek (offset @"minBufferCountForDedicatedSlack" ptr)
+       <*> peek (offset @"minBufferCountForSharedSlack" ptr)
+
+  poke ptr val = do
+    pokeField @"sType" ptr val
+    pokeField @"pNext" ptr val
+    pokeField @"minBufferCount" ptr val
+    pokeField @"maxBufferCount" ptr val
+    pokeField @"minBufferCountForCamping" ptr val
+    pokeField @"minBufferCountForDedicatedSlack" ptr val
+    pokeField @"minBufferCountForSharedSlack" ptr val
+
+instance Offset "sType" VkBufferCollectionConstraintsInfoFUCHSIA where
+  rawOffset = #{offset struct VkBufferCollectionConstraintsInfoFUCHSIA, sType}
+
+instance Offset "pNext" VkBufferCollectionConstraintsInfoFUCHSIA where
+  rawOffset = #{offset struct VkBufferCollectionConstraintsInfoFUCHSIA, pNext}
+
+instance Offset "minBufferCount" VkBufferCollectionConstraintsInfoFUCHSIA where
+  rawOffset = #{offset struct VkBufferCollectionConstraintsInfoFUCHSIA, minBufferCount}
+
+instance Offset "maxBufferCount" VkBufferCollectionConstraintsInfoFUCHSIA where
+  rawOffset = #{offset struct VkBufferCollectionConstraintsInfoFUCHSIA, maxBufferCount}
+
+instance Offset "minBufferCountForCamping" VkBufferCollectionConstraintsInfoFUCHSIA where
+  rawOffset = #{offset struct VkBufferCollectionConstraintsInfoFUCHSIA, minBufferCountForCamping}
+
+instance Offset "minBufferCountForDedicatedSlack" VkBufferCollectionConstraintsInfoFUCHSIA where
+  rawOffset = #{offset struct VkBufferCollectionConstraintsInfoFUCHSIA, minBufferCountForDedicatedSlack}
+
+instance Offset "minBufferCountForSharedSlack" VkBufferCollectionConstraintsInfoFUCHSIA where
+  rawOffset = #{offset struct VkBufferCollectionConstraintsInfoFUCHSIA, minBufferCountForSharedSlack}
+
+#else
+
+module Vulkan.Types.Struct.VkBufferCollectionConstraintsInfoFUCHSIA where
+
+#endif

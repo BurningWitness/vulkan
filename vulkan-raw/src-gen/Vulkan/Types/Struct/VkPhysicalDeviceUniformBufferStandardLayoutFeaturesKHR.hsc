@@ -1,0 +1,9 @@
+#include <vulkan/vulkan.h>
+
+module Vulkan.Types.Struct.VkPhysicalDeviceUniformBufferStandardLayoutFeaturesKHR where
+
+import Vulkan.Types.Struct.VkPhysicalDeviceUniformBufferStandardLayoutFeatures
+
+
+
+type VkPhysicalDeviceUniformBufferStandardLayoutFeaturesKHR = VkPhysicalDeviceUniformBufferStandardLayoutFeatures

@@ -1,0 +1,9 @@
+#include <vulkan/vulkan.h>
+
+module Vulkan.Types.Struct.VkPhysicalDeviceSamplerYcbcrConversionFeaturesKHR where
+
+import Vulkan.Types.Struct.VkPhysicalDeviceSamplerYcbcrConversionFeatures
+
+
+
+type VkPhysicalDeviceSamplerYcbcrConversionFeaturesKHR = VkPhysicalDeviceSamplerYcbcrConversionFeatures

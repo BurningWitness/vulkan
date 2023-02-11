@@ -1,0 +1,70 @@
+{-# LANGUAGE DataKinds #-}
+{-# LANGUAGE DuplicateRecordFields #-}
+{-# LANGUAGE MultiParamTypeClasses #-}
+#if __GLASGOW_HASKELL__ >= 902
+{-# LANGUAGE NoFieldSelectors #-}
+#endif
+{-# LANGUAGE TypeApplications #-}
+
+#include <vulkan/vulkan.h>
+
+module Vulkan.Types.Struct.VkDeviceQueueCreateInfo where
+
+import Data.Int
+import Data.Word
+import Foreign.Ptr
+import Foreign.Storable
+import Foreign.Storable.Offset
+import Vulkan.Types.Enum.VkDeviceQueueCreateFlags
+import Vulkan.Types.Enum.VkStructureType
+
+
+
+data {-# CTYPE "vulkan/vulkan.h" "VkDeviceQueueCreateInfo" #-} VkDeviceQueueCreateInfo =
+       VkDeviceQueueCreateInfo
+         { sType :: VkStructureType
+         , pNext :: Ptr ()
+         , flags :: VkDeviceQueueCreateFlags
+         , queueFamilyIndex :: #{type uint32_t}
+         , queueCount :: #{type uint32_t}
+         , pQueuePriorities :: Ptr #{type float}
+         }
+
+instance Storable VkDeviceQueueCreateInfo where
+  sizeOf    _ = #{size      struct VkDeviceQueueCreateInfo}
+  alignment _ = #{alignment struct VkDeviceQueueCreateInfo}
+
+  peek ptr = 
+    VkDeviceQueueCreateInfo
+       <$> peek (offset @"sType" ptr)
+       <*> peek (offset @"pNext" ptr)
+       <*> peek (offset @"flags" ptr)
+       <*> peek (offset @"queueFamilyIndex" ptr)
+       <*> peek (offset @"queueCount" ptr)
+       <*> peek (offset @"pQueuePriorities" ptr)
+
+  poke ptr val = do
+    pokeField @"sType" ptr val
+    pokeField @"pNext" ptr val
+    pokeField @"flags" ptr val
+    pokeField @"queueFamilyIndex" ptr val
+    pokeField @"queueCount" ptr val
+    pokeField @"pQueuePriorities" ptr val
+
+instance Offset "sType" VkDeviceQueueCreateInfo where
+  rawOffset = #{offset struct VkDeviceQueueCreateInfo, sType}
+
+instance Offset "pNext" VkDeviceQueueCreateInfo where
+  rawOffset = #{offset struct VkDeviceQueueCreateInfo, pNext}
+
+instance Offset "flags" VkDeviceQueueCreateInfo where
+  rawOffset = #{offset struct VkDeviceQueueCreateInfo, flags}
+
+instance Offset "queueFamilyIndex" VkDeviceQueueCreateInfo where
+  rawOffset = #{offset struct VkDeviceQueueCreateInfo, queueFamilyIndex}
+
+instance Offset "queueCount" VkDeviceQueueCreateInfo where
+  rawOffset = #{offset struct VkDeviceQueueCreateInfo, queueCount}
+
+instance Offset "pQueuePriorities" VkDeviceQueueCreateInfo where
+  rawOffset = #{offset struct VkDeviceQueueCreateInfo, pQueuePriorities}

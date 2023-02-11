@@ -1,0 +1,9 @@
+#include <vulkan/vulkan.h>
+
+module Vulkan.Types.Struct.VkSamplerYcbcrConversionImageFormatPropertiesKHR where
+
+import Vulkan.Types.Struct.VkSamplerYcbcrConversionImageFormatProperties
+
+
+
+type VkSamplerYcbcrConversionImageFormatPropertiesKHR = VkSamplerYcbcrConversionImageFormatProperties

@@ -1,0 +1,29 @@
+#include <vulkan/vulkan.h>
+
+#if VK_KHR_external_semaphore_capabilities
+
+module Vulkan.Types.Command.VkGetPhysicalDeviceExternalSemaphorePropertiesKHR where
+
+import Data.Int
+import Data.Word
+import GHC.Ptr
+import Vulkan.Types.Handle
+import Vulkan.Types.Struct.VkExternalSemaphoreProperties
+import Vulkan.Types.Struct.VkPhysicalDeviceExternalSemaphoreInfo
+import Vulkan.Types.Command.VkGetPhysicalDeviceExternalSemaphoreProperties
+import Vulkan.Types.VkFun
+
+
+
+type VkGetPhysicalDeviceExternalSemaphorePropertiesKHR = VkGetPhysicalDeviceExternalSemaphoreProperties
+
+vkFunGetPhysicalDeviceExternalSemaphorePropertiesKHR
+  :: VkFun VkGetPhysicalDeviceExternalSemaphorePropertiesKHR
+vkFunGetPhysicalDeviceExternalSemaphorePropertiesKHR = vkFunGetPhysicalDeviceExternalSemaphoreProperties
+
+
+#else
+
+module Vulkan.Types.Command.VkGetPhysicalDeviceExternalSemaphorePropertiesKHR where
+
+#endif

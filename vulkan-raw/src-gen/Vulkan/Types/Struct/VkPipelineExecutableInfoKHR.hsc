@@ -1,0 +1,66 @@
+{-# LANGUAGE DataKinds #-}
+{-# LANGUAGE DuplicateRecordFields #-}
+{-# LANGUAGE MultiParamTypeClasses #-}
+#if __GLASGOW_HASKELL__ >= 902
+{-# LANGUAGE NoFieldSelectors #-}
+#endif
+{-# LANGUAGE TypeApplications #-}
+
+#include <vulkan/vulkan.h>
+
+#if VK_KHR_pipeline_executable_properties
+
+module Vulkan.Types.Struct.VkPipelineExecutableInfoKHR where
+
+import Data.Int
+import Data.Word
+import Foreign.Ptr
+import Foreign.Storable
+import Foreign.Storable.Offset
+import Vulkan.Types.Enum.VkStructureType
+import Vulkan.Types.Handle
+
+
+
+data {-# CTYPE "vulkan/vulkan.h" "VkPipelineExecutableInfoKHR" #-} VkPipelineExecutableInfoKHR =
+       VkPipelineExecutableInfoKHR
+         { sType :: VkStructureType
+         , pNext :: Ptr ()
+         , pipeline :: VkPipeline
+         , executableIndex :: #{type uint32_t}
+         }
+
+instance Storable VkPipelineExecutableInfoKHR where
+  sizeOf    _ = #{size      struct VkPipelineExecutableInfoKHR}
+  alignment _ = #{alignment struct VkPipelineExecutableInfoKHR}
+
+  peek ptr = 
+    VkPipelineExecutableInfoKHR
+       <$> peek (offset @"sType" ptr)
+       <*> peek (offset @"pNext" ptr)
+       <*> peek (offset @"pipeline" ptr)
+       <*> peek (offset @"executableIndex" ptr)
+
+  poke ptr val = do
+    pokeField @"sType" ptr val
+    pokeField @"pNext" ptr val
+    pokeField @"pipeline" ptr val
+    pokeField @"executableIndex" ptr val
+
+instance Offset "sType" VkPipelineExecutableInfoKHR where
+  rawOffset = #{offset struct VkPipelineExecutableInfoKHR, sType}
+
+instance Offset "pNext" VkPipelineExecutableInfoKHR where
+  rawOffset = #{offset struct VkPipelineExecutableInfoKHR, pNext}
+
+instance Offset "pipeline" VkPipelineExecutableInfoKHR where
+  rawOffset = #{offset struct VkPipelineExecutableInfoKHR, pipeline}
+
+instance Offset "executableIndex" VkPipelineExecutableInfoKHR where
+  rawOffset = #{offset struct VkPipelineExecutableInfoKHR, executableIndex}
+
+#else
+
+module Vulkan.Types.Struct.VkPipelineExecutableInfoKHR where
+
+#endif

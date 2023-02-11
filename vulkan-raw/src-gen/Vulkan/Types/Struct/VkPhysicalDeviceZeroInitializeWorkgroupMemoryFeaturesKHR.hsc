@@ -1,0 +1,9 @@
+#include <vulkan/vulkan.h>
+
+module Vulkan.Types.Struct.VkPhysicalDeviceZeroInitializeWorkgroupMemoryFeaturesKHR where
+
+import Vulkan.Types.Struct.VkPhysicalDeviceZeroInitializeWorkgroupMemoryFeatures
+
+
+
+type VkPhysicalDeviceZeroInitializeWorkgroupMemoryFeaturesKHR = VkPhysicalDeviceZeroInitializeWorkgroupMemoryFeatures

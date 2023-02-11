@@ -1,0 +1,9 @@
+#include <vulkan/vulkan.h>
+
+module Vulkan.Types.Struct.VkPhysicalDeviceShaderIntegerDotProductFeaturesKHR where
+
+import Vulkan.Types.Struct.VkPhysicalDeviceShaderIntegerDotProductFeatures
+
+
+
+type VkPhysicalDeviceShaderIntegerDotProductFeaturesKHR = VkPhysicalDeviceShaderIntegerDotProductFeatures

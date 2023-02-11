@@ -1,0 +1,134 @@
+{-# LANGUAGE CPP #-}
+{-# LANGUAGE MagicHash #-}
+{-# LANGUAGE PatternSynonyms #-}
+{-# LANGUAGE ViewPatterns #-}
+
+#include <vulkan/vulkan.h>
+
+#if VK_KHR_sampler_ycbcr_conversion
+
+module Vulkan.Ext.VK_KHR_sampler_ycbcr_conversion
+  ( pattern VK_KHR_SAMPLER_YCBCR_CONVERSION_SPEC_VERSION
+  , pattern VK_KHR_SAMPLER_YCBCR_CONVERSION_EXTENSION_NAME
+  , pattern VK_STRUCTURE_TYPE_SAMPLER_YCBCR_CONVERSION_CREATE_INFO_KHR
+  , pattern VK_STRUCTURE_TYPE_SAMPLER_YCBCR_CONVERSION_INFO_KHR
+  , pattern VK_STRUCTURE_TYPE_BIND_IMAGE_PLANE_MEMORY_INFO_KHR
+  , pattern VK_STRUCTURE_TYPE_IMAGE_PLANE_MEMORY_REQUIREMENTS_INFO_KHR
+  , pattern VK_STRUCTURE_TYPE_PHYSICAL_DEVICE_SAMPLER_YCBCR_CONVERSION_FEATURES_KHR
+  , pattern VK_STRUCTURE_TYPE_SAMPLER_YCBCR_CONVERSION_IMAGE_FORMAT_PROPERTIES_KHR
+  , pattern VK_DEBUG_REPORT_OBJECT_TYPE_SAMPLER_YCBCR_CONVERSION_KHR_EXT
+  , pattern VK_OBJECT_TYPE_SAMPLER_YCBCR_CONVERSION_KHR
+  , pattern VK_FORMAT_G8B8G8R8_422_UNORM_KHR
+  , pattern VK_FORMAT_B8G8R8G8_422_UNORM_KHR
+  , pattern VK_FORMAT_G8_B8_R8_3PLANE_420_UNORM_KHR
+  , pattern VK_FORMAT_G8_B8R8_2PLANE_420_UNORM_KHR
+  , pattern VK_FORMAT_G8_B8_R8_3PLANE_422_UNORM_KHR
+  , pattern VK_FORMAT_G8_B8R8_2PLANE_422_UNORM_KHR
+  , pattern VK_FORMAT_G8_B8_R8_3PLANE_444_UNORM_KHR
+  , pattern VK_FORMAT_R10X6_UNORM_PACK16_KHR
+  , pattern VK_FORMAT_R10X6G10X6_UNORM_2PACK16_KHR
+  , pattern VK_FORMAT_R10X6G10X6B10X6A10X6_UNORM_4PACK16_KHR
+  , pattern VK_FORMAT_G10X6B10X6G10X6R10X6_422_UNORM_4PACK16_KHR
+  , pattern VK_FORMAT_B10X6G10X6R10X6G10X6_422_UNORM_4PACK16_KHR
+  , pattern VK_FORMAT_G10X6_B10X6_R10X6_3PLANE_420_UNORM_3PACK16_KHR
+  , pattern VK_FORMAT_G10X6_B10X6R10X6_2PLANE_420_UNORM_3PACK16_KHR
+  , pattern VK_FORMAT_G10X6_B10X6_R10X6_3PLANE_422_UNORM_3PACK16_KHR
+  , pattern VK_FORMAT_G10X6_B10X6R10X6_2PLANE_422_UNORM_3PACK16_KHR
+  , pattern VK_FORMAT_G10X6_B10X6_R10X6_3PLANE_444_UNORM_3PACK16_KHR
+  , pattern VK_FORMAT_R12X4_UNORM_PACK16_KHR
+  , pattern VK_FORMAT_R12X4G12X4_UNORM_2PACK16_KHR
+  , pattern VK_FORMAT_R12X4G12X4B12X4A12X4_UNORM_4PACK16_KHR
+  , pattern VK_FORMAT_G12X4B12X4G12X4R12X4_422_UNORM_4PACK16_KHR
+  , pattern VK_FORMAT_B12X4G12X4R12X4G12X4_422_UNORM_4PACK16_KHR
+  , pattern VK_FORMAT_G12X4_B12X4_R12X4_3PLANE_420_UNORM_3PACK16_KHR
+  , pattern VK_FORMAT_G12X4_B12X4R12X4_2PLANE_420_UNORM_3PACK16_KHR
+  , pattern VK_FORMAT_G12X4_B12X4_R12X4_3PLANE_422_UNORM_3PACK16_KHR
+  , pattern VK_FORMAT_G12X4_B12X4R12X4_2PLANE_422_UNORM_3PACK16_KHR
+  , pattern VK_FORMAT_G12X4_B12X4_R12X4_3PLANE_444_UNORM_3PACK16_KHR
+  , pattern VK_FORMAT_G16B16G16R16_422_UNORM_KHR
+  , pattern VK_FORMAT_B16G16R16G16_422_UNORM_KHR
+  , pattern VK_FORMAT_G16_B16_R16_3PLANE_420_UNORM_KHR
+  , pattern VK_FORMAT_G16_B16R16_2PLANE_420_UNORM_KHR
+  , pattern VK_FORMAT_G16_B16_R16_3PLANE_422_UNORM_KHR
+  , pattern VK_FORMAT_G16_B16R16_2PLANE_422_UNORM_KHR
+  , pattern VK_FORMAT_G16_B16_R16_3PLANE_444_UNORM_KHR
+  , pattern VK_IMAGE_ASPECT_PLANE_0_BIT_KHR
+  , pattern VK_IMAGE_ASPECT_PLANE_1_BIT_KHR
+  , pattern VK_IMAGE_ASPECT_PLANE_2_BIT_KHR
+  , pattern VK_IMAGE_CREATE_DISJOINT_BIT_KHR
+  , pattern VK_FORMAT_FEATURE_MIDPOINT_CHROMA_SAMPLES_BIT_KHR
+  , pattern VK_FORMAT_FEATURE_SAMPLED_IMAGE_YCBCR_CONVERSION_LINEAR_FILTER_BIT_KHR
+  , pattern VK_FORMAT_FEATURE_SAMPLED_IMAGE_YCBCR_CONVERSION_SEPARATE_RECONSTRUCTION_FILTER_BIT_KHR
+  , pattern VK_FORMAT_FEATURE_SAMPLED_IMAGE_YCBCR_CONVERSION_CHROMA_RECONSTRUCTION_EXPLICIT_BIT_KHR
+  , pattern VK_FORMAT_FEATURE_SAMPLED_IMAGE_YCBCR_CONVERSION_CHROMA_RECONSTRUCTION_EXPLICIT_FORCEABLE_BIT_KHR
+  , pattern VK_FORMAT_FEATURE_DISJOINT_BIT_KHR
+  , pattern VK_FORMAT_FEATURE_COSITED_CHROMA_SAMPLES_BIT_KHR
+  , VkSamplerYcbcrConversionCreateInfoKHR
+  , VkSamplerYcbcrConversionInfoKHR
+  , VkBindImagePlaneMemoryInfoKHR
+  , VkImagePlaneMemoryRequirementsInfoKHR
+  , VkPhysicalDeviceSamplerYcbcrConversionFeaturesKHR
+  , VkSamplerYcbcrConversionImageFormatPropertiesKHR
+  , VkCreateSamplerYcbcrConversionKHR
+  , vkFunCreateSamplerYcbcrConversionKHR
+  , VkDestroySamplerYcbcrConversionKHR
+  , vkFunDestroySamplerYcbcrConversionKHR
+  , VkSamplerYcbcrConversionKHR
+  , VkSamplerYcbcrModelConversionKHR
+  , pattern VK_SAMPLER_YCBCR_MODEL_CONVERSION_RGB_IDENTITY_KHR
+  , pattern VK_SAMPLER_YCBCR_MODEL_CONVERSION_YCBCR_IDENTITY_KHR
+  , pattern VK_SAMPLER_YCBCR_MODEL_CONVERSION_YCBCR_709_KHR
+  , pattern VK_SAMPLER_YCBCR_MODEL_CONVERSION_YCBCR_601_KHR
+  , pattern VK_SAMPLER_YCBCR_MODEL_CONVERSION_YCBCR_2020_KHR
+  , VkSamplerYcbcrRangeKHR
+  , pattern VK_SAMPLER_YCBCR_RANGE_ITU_FULL_KHR
+  , pattern VK_SAMPLER_YCBCR_RANGE_ITU_NARROW_KHR
+  , VkChromaLocationKHR
+  , pattern VK_CHROMA_LOCATION_COSITED_EVEN_KHR
+  , pattern VK_CHROMA_LOCATION_MIDPOINT_KHR
+#if VK_EXT_debug_report
+  , pattern VK_DEBUG_REPORT_OBJECT_TYPE_SAMPLER_YCBCR_CONVERSION_EXT
+#endif
+  ) where
+
+import Foreign.C.String
+import GHC.Ptr
+import Vulkan.Types.Enum.VkChromaLocation
+import Vulkan.Types.Enum.VkChromaLocationKHR
+import Vulkan.Types.Enum.VkDebugReportObjectTypeEXT
+import Vulkan.Types.Enum.VkFormat
+import Vulkan.Types.Enum.VkFormatFeatureFlagBits
+import Vulkan.Types.Enum.VkImageAspectFlagBits
+import Vulkan.Types.Enum.VkImageCreateFlagBits
+import Vulkan.Types.Enum.VkObjectType
+import Vulkan.Types.Enum.VkSamplerYcbcrModelConversion
+import Vulkan.Types.Enum.VkSamplerYcbcrModelConversionKHR
+import Vulkan.Types.Enum.VkSamplerYcbcrRange
+import Vulkan.Types.Enum.VkSamplerYcbcrRangeKHR
+import Vulkan.Types.Enum.VkStructureType
+import Vulkan.Types.Handle
+import Vulkan.Types.Struct.VkBindImagePlaneMemoryInfoKHR
+import Vulkan.Types.Struct.VkImagePlaneMemoryRequirementsInfoKHR
+import Vulkan.Types.Struct.VkPhysicalDeviceSamplerYcbcrConversionFeaturesKHR
+import Vulkan.Types.Struct.VkSamplerYcbcrConversionCreateInfoKHR
+import Vulkan.Types.Struct.VkSamplerYcbcrConversionImageFormatPropertiesKHR
+import Vulkan.Types.Struct.VkSamplerYcbcrConversionInfoKHR
+import Vulkan.Types.Command.VkCreateSamplerYcbcrConversionKHR
+import Vulkan.Types.Command.VkDestroySamplerYcbcrConversionKHR
+import Vulkan.Types.VkFun
+
+
+
+pattern VK_KHR_SAMPLER_YCBCR_CONVERSION_SPEC_VERSION :: (Eq a, Num a) => a
+pattern VK_KHR_SAMPLER_YCBCR_CONVERSION_SPEC_VERSION = 14
+
+pattern VK_KHR_SAMPLER_YCBCR_CONVERSION_EXTENSION_NAME :: CString
+pattern VK_KHR_SAMPLER_YCBCR_CONVERSION_EXTENSION_NAME <- (const False -> True)
+  where
+    VK_KHR_SAMPLER_YCBCR_CONVERSION_EXTENSION_NAME = Ptr ("VK_KHR_sampler_ycbcr_conversion\0"##)
+
+#else
+
+module Vulkan.Ext.VK_KHR_sampler_ycbcr_conversion where
+
+#endif

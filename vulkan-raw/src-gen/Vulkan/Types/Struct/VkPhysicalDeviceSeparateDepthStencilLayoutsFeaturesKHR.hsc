@@ -1,0 +1,9 @@
+#include <vulkan/vulkan.h>
+
+module Vulkan.Types.Struct.VkPhysicalDeviceSeparateDepthStencilLayoutsFeaturesKHR where
+
+import Vulkan.Types.Struct.VkPhysicalDeviceSeparateDepthStencilLayoutsFeatures
+
+
+
+type VkPhysicalDeviceSeparateDepthStencilLayoutsFeaturesKHR = VkPhysicalDeviceSeparateDepthStencilLayoutsFeatures

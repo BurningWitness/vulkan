@@ -1,0 +1,9 @@
+#include <vulkan/vulkan.h>
+
+module Vulkan.Types.Struct.VkPhysicalDeviceTimelineSemaphoreFeaturesKHR where
+
+import Vulkan.Types.Struct.VkPhysicalDeviceTimelineSemaphoreFeatures
+
+
+
+type VkPhysicalDeviceTimelineSemaphoreFeaturesKHR = VkPhysicalDeviceTimelineSemaphoreFeatures

@@ -1,0 +1,123 @@
+{-# LANGUAGE DataKinds #-}
+{-# LANGUAGE DuplicateRecordFields #-}
+{-# LANGUAGE MultiParamTypeClasses #-}
+#if __GLASGOW_HASKELL__ >= 902
+{-# LANGUAGE NoFieldSelectors #-}
+#endif
+{-# LANGUAGE TypeApplications #-}
+
+#include <vulkan/vulkan.h>
+
+#if VK_NV_ray_tracing
+
+module Vulkan.Types.Struct.VkGeometryTrianglesNV where
+
+import Data.Int
+import Data.Word
+import Foreign.Ptr
+import Foreign.Storable
+import Foreign.Storable.Offset
+import Vulkan.Types.Base
+import Vulkan.Types.Enum.VkFormat
+import Vulkan.Types.Enum.VkIndexType
+import Vulkan.Types.Enum.VkStructureType
+import Vulkan.Types.Handle
+
+
+
+data {-# CTYPE "vulkan/vulkan.h" "VkGeometryTrianglesNV" #-} VkGeometryTrianglesNV =
+       VkGeometryTrianglesNV
+         { sType :: VkStructureType
+         , pNext :: Ptr ()
+         , vertexData :: VkBuffer
+         , vertexOffset :: VkDeviceSize
+         , vertexCount :: #{type uint32_t}
+         , vertexStride :: VkDeviceSize
+         , vertexFormat :: VkFormat
+         , indexData :: VkBuffer
+         , indexOffset :: VkDeviceSize
+         , indexCount :: #{type uint32_t}
+         , indexType :: VkIndexType
+         , transformData :: VkBuffer -- ^ Optional reference to array of floats representing a 3x4 row major affine transformation matrix.
+         , transformOffset :: VkDeviceSize
+         }
+
+instance Storable VkGeometryTrianglesNV where
+  sizeOf    _ = #{size      struct VkGeometryTrianglesNV}
+  alignment _ = #{alignment struct VkGeometryTrianglesNV}
+
+  peek ptr = 
+    VkGeometryTrianglesNV
+       <$> peek (offset @"sType" ptr)
+       <*> peek (offset @"pNext" ptr)
+       <*> peek (offset @"vertexData" ptr)
+       <*> peek (offset @"vertexOffset" ptr)
+       <*> peek (offset @"vertexCount" ptr)
+       <*> peek (offset @"vertexStride" ptr)
+       <*> peek (offset @"vertexFormat" ptr)
+       <*> peek (offset @"indexData" ptr)
+       <*> peek (offset @"indexOffset" ptr)
+       <*> peek (offset @"indexCount" ptr)
+       <*> peek (offset @"indexType" ptr)
+       <*> peek (offset @"transformData" ptr)
+       <*> peek (offset @"transformOffset" ptr)
+
+  poke ptr val = do
+    pokeField @"sType" ptr val
+    pokeField @"pNext" ptr val
+    pokeField @"vertexData" ptr val
+    pokeField @"vertexOffset" ptr val
+    pokeField @"vertexCount" ptr val
+    pokeField @"vertexStride" ptr val
+    pokeField @"vertexFormat" ptr val
+    pokeField @"indexData" ptr val
+    pokeField @"indexOffset" ptr val
+    pokeField @"indexCount" ptr val
+    pokeField @"indexType" ptr val
+    pokeField @"transformData" ptr val
+    pokeField @"transformOffset" ptr val
+
+instance Offset "sType" VkGeometryTrianglesNV where
+  rawOffset = #{offset struct VkGeometryTrianglesNV, sType}
+
+instance Offset "pNext" VkGeometryTrianglesNV where
+  rawOffset = #{offset struct VkGeometryTrianglesNV, pNext}
+
+instance Offset "vertexData" VkGeometryTrianglesNV where
+  rawOffset = #{offset struct VkGeometryTrianglesNV, vertexData}
+
+instance Offset "vertexOffset" VkGeometryTrianglesNV where
+  rawOffset = #{offset struct VkGeometryTrianglesNV, vertexOffset}
+
+instance Offset "vertexCount" VkGeometryTrianglesNV where
+  rawOffset = #{offset struct VkGeometryTrianglesNV, vertexCount}
+
+instance Offset "vertexStride" VkGeometryTrianglesNV where
+  rawOffset = #{offset struct VkGeometryTrianglesNV, vertexStride}
+
+instance Offset "vertexFormat" VkGeometryTrianglesNV where
+  rawOffset = #{offset struct VkGeometryTrianglesNV, vertexFormat}
+
+instance Offset "indexData" VkGeometryTrianglesNV where
+  rawOffset = #{offset struct VkGeometryTrianglesNV, indexData}
+
+instance Offset "indexOffset" VkGeometryTrianglesNV where
+  rawOffset = #{offset struct VkGeometryTrianglesNV, indexOffset}
+
+instance Offset "indexCount" VkGeometryTrianglesNV where
+  rawOffset = #{offset struct VkGeometryTrianglesNV, indexCount}
+
+instance Offset "indexType" VkGeometryTrianglesNV where
+  rawOffset = #{offset struct VkGeometryTrianglesNV, indexType}
+
+instance Offset "transformData" VkGeometryTrianglesNV where
+  rawOffset = #{offset struct VkGeometryTrianglesNV, transformData}
+
+instance Offset "transformOffset" VkGeometryTrianglesNV where
+  rawOffset = #{offset struct VkGeometryTrianglesNV, transformOffset}
+
+#else
+
+module Vulkan.Types.Struct.VkGeometryTrianglesNV where
+
+#endif

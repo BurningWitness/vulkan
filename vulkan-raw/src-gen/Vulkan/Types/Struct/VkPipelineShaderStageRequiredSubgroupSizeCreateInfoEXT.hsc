@@ -1,0 +1,9 @@
+#include <vulkan/vulkan.h>
+
+module Vulkan.Types.Struct.VkPipelineShaderStageRequiredSubgroupSizeCreateInfoEXT where
+
+import Vulkan.Types.Struct.VkPipelineShaderStageRequiredSubgroupSizeCreateInfo
+
+
+
+type VkPipelineShaderStageRequiredSubgroupSizeCreateInfoEXT = VkPipelineShaderStageRequiredSubgroupSizeCreateInfo

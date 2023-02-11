@@ -1,0 +1,9 @@
+#include <vulkan/vulkan.h>
+
+module Vulkan.Types.Struct.VkPipelineTessellationDomainOriginStateCreateInfoKHR where
+
+import Vulkan.Types.Struct.VkPipelineTessellationDomainOriginStateCreateInfo
+
+
+
+type VkPipelineTessellationDomainOriginStateCreateInfoKHR = VkPipelineTessellationDomainOriginStateCreateInfo

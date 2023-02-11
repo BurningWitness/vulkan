@@ -1,0 +1,97 @@
+{-# LANGUAGE DataKinds #-}
+{-# LANGUAGE DuplicateRecordFields #-}
+{-# LANGUAGE MultiParamTypeClasses #-}
+#if __GLASGOW_HASKELL__ >= 902
+{-# LANGUAGE NoFieldSelectors #-}
+#endif
+{-# LANGUAGE TypeApplications #-}
+
+#include <vulkan/vulkan.h>
+
+module Vulkan.Types.Struct.VkWriteDescriptorSet where
+
+import Data.Int
+import Data.Word
+import Foreign.Ptr
+import Foreign.Storable
+import Foreign.Storable.Offset
+import Vulkan.Types.Enum.VkDescriptorType
+import Vulkan.Types.Enum.VkStructureType
+import Vulkan.Types.Handle
+import Vulkan.Types.Struct.VkDescriptorBufferInfo
+import Vulkan.Types.Struct.VkDescriptorImageInfo
+
+
+
+data {-# CTYPE "vulkan/vulkan.h" "VkWriteDescriptorSet" #-} VkWriteDescriptorSet =
+       VkWriteDescriptorSet
+         { sType :: VkStructureType
+         , pNext :: Ptr ()
+         , dstSet :: VkDescriptorSet -- ^ Destination descriptor set
+         , dstBinding :: #{type uint32_t} -- ^ Binding within the destination descriptor set to write
+         , dstArrayElement :: #{type uint32_t} -- ^ Array element within the destination binding to write
+         , descriptorCount :: #{type uint32_t} -- ^ Number of descriptors to write (determines the size of the array pointed by pDescriptors)
+         , descriptorType :: VkDescriptorType -- ^ Descriptor type to write (determines which members of the array pointed by pDescriptors are going to be used)
+         , pImageInfo :: Ptr VkDescriptorImageInfo -- ^ Sampler, image view, and layout for SAMPLER, COMBINED_IMAGE_SAMPLER, {SAMPLED,STORAGE}_IMAGE, and INPUT_ATTACHMENT descriptor types.
+         , pBufferInfo :: Ptr VkDescriptorBufferInfo -- ^ Raw buffer, size, and offset for {UNIFORM,STORAGE}_BUFFER[_DYNAMIC] descriptor types.
+         , pTexelBufferView :: Ptr VkBufferView -- ^ Buffer view to write to the descriptor for {UNIFORM,STORAGE}_TEXEL_BUFFER descriptor types.
+         }
+
+instance Storable VkWriteDescriptorSet where
+  sizeOf    _ = #{size      struct VkWriteDescriptorSet}
+  alignment _ = #{alignment struct VkWriteDescriptorSet}
+
+  peek ptr = 
+    VkWriteDescriptorSet
+       <$> peek (offset @"sType" ptr)
+       <*> peek (offset @"pNext" ptr)
+       <*> peek (offset @"dstSet" ptr)
+       <*> peek (offset @"dstBinding" ptr)
+       <*> peek (offset @"dstArrayElement" ptr)
+       <*> peek (offset @"descriptorCount" ptr)
+       <*> peek (offset @"descriptorType" ptr)
+       <*> peek (offset @"pImageInfo" ptr)
+       <*> peek (offset @"pBufferInfo" ptr)
+       <*> peek (offset @"pTexelBufferView" ptr)
+
+  poke ptr val = do
+    pokeField @"sType" ptr val
+    pokeField @"pNext" ptr val
+    pokeField @"dstSet" ptr val
+    pokeField @"dstBinding" ptr val
+    pokeField @"dstArrayElement" ptr val
+    pokeField @"descriptorCount" ptr val
+    pokeField @"descriptorType" ptr val
+    pokeField @"pImageInfo" ptr val
+    pokeField @"pBufferInfo" ptr val
+    pokeField @"pTexelBufferView" ptr val
+
+instance Offset "sType" VkWriteDescriptorSet where
+  rawOffset = #{offset struct VkWriteDescriptorSet, sType}
+
+instance Offset "pNext" VkWriteDescriptorSet where
+  rawOffset = #{offset struct VkWriteDescriptorSet, pNext}
+
+instance Offset "dstSet" VkWriteDescriptorSet where
+  rawOffset = #{offset struct VkWriteDescriptorSet, dstSet}
+
+instance Offset "dstBinding" VkWriteDescriptorSet where
+  rawOffset = #{offset struct VkWriteDescriptorSet, dstBinding}
+
+instance Offset "dstArrayElement" VkWriteDescriptorSet where
+  rawOffset = #{offset struct VkWriteDescriptorSet, dstArrayElement}
+
+instance Offset "descriptorCount" VkWriteDescriptorSet where
+  rawOffset = #{offset struct VkWriteDescriptorSet, descriptorCount}
+
+instance Offset "descriptorType" VkWriteDescriptorSet where
+  rawOffset = #{offset struct VkWriteDescriptorSet, descriptorType}
+
+instance Offset "pImageInfo" VkWriteDescriptorSet where
+  rawOffset = #{offset struct VkWriteDescriptorSet, pImageInfo}
+
+instance Offset "pBufferInfo" VkWriteDescriptorSet where
+  rawOffset = #{offset struct VkWriteDescriptorSet, pBufferInfo}
+
+instance Offset "pTexelBufferView" VkWriteDescriptorSet where
+  rawOffset = #{offset struct VkWriteDescriptorSet, pTexelBufferView}

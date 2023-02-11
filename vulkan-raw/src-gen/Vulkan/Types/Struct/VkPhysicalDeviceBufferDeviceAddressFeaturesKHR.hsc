@@ -1,0 +1,9 @@
+#include <vulkan/vulkan.h>
+
+module Vulkan.Types.Struct.VkPhysicalDeviceBufferDeviceAddressFeaturesKHR where
+
+import Vulkan.Types.Struct.VkPhysicalDeviceBufferDeviceAddressFeatures
+
+
+
+type VkPhysicalDeviceBufferDeviceAddressFeaturesKHR = VkPhysicalDeviceBufferDeviceAddressFeatures

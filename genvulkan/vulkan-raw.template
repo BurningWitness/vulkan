@@ -1,0 +1,75 @@
+cabal-version:       2.2
+
+name:                vulkan-raw
+version:             0.1.0.0
+synopsis:            Raw bindings to the Vulkan API
+description:         Please check the README for information on how these bindings operate.
+license:             BSD-3-Clause
+license-file:        LICENSE
+author:              Oleksii Divak
+maintainer:          Oleksii Divak <frozenwitness@gmail.com>
+copyright:           Copyright: (c) 2023 Oleksii Divak
+category:            Graphics
+build-type:          Simple
+
+flag ccall
+  description: Use the ccall call convention.
+  default: False
+
+flag stdcall
+  description: Use the stdcall call convention (takes precedence over the ccall flag).
+  default: False
+
+flag core-1-1
+  description: Provide foreign function imports for core functions up to Vulkan 1.1.
+  default: False
+
+flag core-1-2
+  description: Provide foreign function imports for core functions up to Vulkan 1.2.
+  default: False
+
+flag core-1-3
+  description: Provide foreign function imports for core functions up to Vulkan 1.3.
+  default: False
+
+--[FLAGS]--
+
+library
+
+    build-tool-depends:  hsc2hs:hsc2hs
+    hs-source-dirs:      src
+                       , src-gen
+
+    build-depends:
+        base >= 4.9 && < 5
+      , storable-offset
+
+    default-language:    Haskell2010
+    ghc-options:         -Wall -Wno-unused-imports -Wno-missing-pattern-synonym-signatures
+
+    if flag (stdcall)
+      cpp-options:       -DCALLCV=stdcall
+    elif flag (ccall)
+      cpp-options:       -DCALLCV=ccall
+    else
+      cpp-options:       -DCALLCV=capi
+
+    if flag (core-1-1)
+      cpp-options:       -DCORE_1_1
+
+    if flag (core-1-2)
+      cpp-options:       -DCORE_1_1 -DCORE_1_2
+
+    if flag (core-1-3)
+      cpp-options:       -DCORE_1_1 -DCORE_1_2 -DCORE_1_3
+
+    reexported-modules:  Foreign.Storable.Offset
+
+    pkgconfig-depends:   vulkan
+
+--[BULK]--
+
+source-repository head
+    type:     git
+    location: https://github.com/burningwitness/vulkan
+    subdir:   vulkan-raw

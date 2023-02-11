@@ -1,0 +1,9 @@
+#include <vulkan/vulkan.h>
+
+module Vulkan.Types.Struct.VkDescriptorSetLayoutBindingFlagsCreateInfoEXT where
+
+import Vulkan.Types.Struct.VkDescriptorSetLayoutBindingFlagsCreateInfo
+
+
+
+type VkDescriptorSetLayoutBindingFlagsCreateInfoEXT = VkDescriptorSetLayoutBindingFlagsCreateInfo

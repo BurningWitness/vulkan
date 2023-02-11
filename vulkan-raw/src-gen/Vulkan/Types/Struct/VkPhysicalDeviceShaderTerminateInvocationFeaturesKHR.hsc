@@ -1,0 +1,9 @@
+#include <vulkan/vulkan.h>
+
+module Vulkan.Types.Struct.VkPhysicalDeviceShaderTerminateInvocationFeaturesKHR where
+
+import Vulkan.Types.Struct.VkPhysicalDeviceShaderTerminateInvocationFeatures
+
+
+
+type VkPhysicalDeviceShaderTerminateInvocationFeaturesKHR = VkPhysicalDeviceShaderTerminateInvocationFeatures

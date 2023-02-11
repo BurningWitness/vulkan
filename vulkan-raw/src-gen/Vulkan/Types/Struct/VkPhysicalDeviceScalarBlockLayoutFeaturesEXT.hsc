@@ -1,0 +1,9 @@
+#include <vulkan/vulkan.h>
+
+module Vulkan.Types.Struct.VkPhysicalDeviceScalarBlockLayoutFeaturesEXT where
+
+import Vulkan.Types.Struct.VkPhysicalDeviceScalarBlockLayoutFeatures
+
+
+
+type VkPhysicalDeviceScalarBlockLayoutFeaturesEXT = VkPhysicalDeviceScalarBlockLayoutFeatures

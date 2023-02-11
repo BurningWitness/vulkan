@@ -1,0 +1,9 @@
+#include <vulkan/vulkan.h>
+
+module Vulkan.Types.Struct.VkPhysicalDeviceMutableDescriptorTypeFeaturesVALVE where
+
+import Vulkan.Types.Struct.VkPhysicalDeviceMutableDescriptorTypeFeaturesEXT
+
+
+
+type VkPhysicalDeviceMutableDescriptorTypeFeaturesVALVE = VkPhysicalDeviceMutableDescriptorTypeFeaturesEXT

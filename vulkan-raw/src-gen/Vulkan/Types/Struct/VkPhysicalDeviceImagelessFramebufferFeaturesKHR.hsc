@@ -1,0 +1,9 @@
+#include <vulkan/vulkan.h>
+
+module Vulkan.Types.Struct.VkPhysicalDeviceImagelessFramebufferFeaturesKHR where
+
+import Vulkan.Types.Struct.VkPhysicalDeviceImagelessFramebufferFeatures
+
+
+
+type VkPhysicalDeviceImagelessFramebufferFeaturesKHR = VkPhysicalDeviceImagelessFramebufferFeatures

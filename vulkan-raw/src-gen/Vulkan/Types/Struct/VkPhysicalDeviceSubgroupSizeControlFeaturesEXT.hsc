@@ -1,0 +1,9 @@
+#include <vulkan/vulkan.h>
+
+module Vulkan.Types.Struct.VkPhysicalDeviceSubgroupSizeControlFeaturesEXT where
+
+import Vulkan.Types.Struct.VkPhysicalDeviceSubgroupSizeControlFeatures
+
+
+
+type VkPhysicalDeviceSubgroupSizeControlFeaturesEXT = VkPhysicalDeviceSubgroupSizeControlFeatures

@@ -1,0 +1,9 @@
+#include <vulkan/vulkan.h>
+
+module Vulkan.Types.Struct.VkPhysicalDeviceShaderDrawParameterFeatures where
+
+import Vulkan.Types.Struct.VkPhysicalDeviceShaderDrawParametersFeatures
+
+
+
+type VkPhysicalDeviceShaderDrawParameterFeatures = VkPhysicalDeviceShaderDrawParametersFeatures

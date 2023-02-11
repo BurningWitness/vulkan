@@ -1,0 +1,159 @@
+{-# LANGUAGE DataKinds #-}
+{-# LANGUAGE DuplicateRecordFields #-}
+{-# LANGUAGE MultiParamTypeClasses #-}
+#if __GLASGOW_HASKELL__ >= 902
+{-# LANGUAGE NoFieldSelectors #-}
+#endif
+{-# LANGUAGE TypeApplications #-}
+
+#include <vulkan/vulkan.h>
+
+module Vulkan.Types.Struct.VkGraphicsPipelineCreateInfo where
+
+import Data.Int
+import Data.Word
+import Foreign.Ptr
+import Foreign.Storable
+import Foreign.Storable.Offset
+import Vulkan.Types.Enum.VkPipelineCreateFlags
+import Vulkan.Types.Enum.VkStructureType
+import Vulkan.Types.Handle
+import Vulkan.Types.Struct.VkPipelineColorBlendStateCreateInfo
+import Vulkan.Types.Struct.VkPipelineDepthStencilStateCreateInfo
+import Vulkan.Types.Struct.VkPipelineDynamicStateCreateInfo
+import Vulkan.Types.Struct.VkPipelineInputAssemblyStateCreateInfo
+import Vulkan.Types.Struct.VkPipelineMultisampleStateCreateInfo
+import Vulkan.Types.Struct.VkPipelineRasterizationStateCreateInfo
+import Vulkan.Types.Struct.VkPipelineShaderStageCreateInfo
+import Vulkan.Types.Struct.VkPipelineTessellationStateCreateInfo
+import Vulkan.Types.Struct.VkPipelineVertexInputStateCreateInfo
+import Vulkan.Types.Struct.VkPipelineViewportStateCreateInfo
+
+
+
+data {-# CTYPE "vulkan/vulkan.h" "VkGraphicsPipelineCreateInfo" #-} VkGraphicsPipelineCreateInfo =
+       VkGraphicsPipelineCreateInfo
+         { sType :: VkStructureType
+         , pNext :: Ptr ()
+         , flags :: VkPipelineCreateFlags -- ^ Pipeline creation flags
+         , stageCount :: #{type uint32_t}
+         , pStages :: Ptr VkPipelineShaderStageCreateInfo -- ^ One entry for each active shader stage
+         , pVertexInputState :: Ptr VkPipelineVertexInputStateCreateInfo
+         , pInputAssemblyState :: Ptr VkPipelineInputAssemblyStateCreateInfo
+         , pTessellationState :: Ptr VkPipelineTessellationStateCreateInfo
+         , pViewportState :: Ptr VkPipelineViewportStateCreateInfo
+         , pRasterizationState :: Ptr VkPipelineRasterizationStateCreateInfo
+         , pMultisampleState :: Ptr VkPipelineMultisampleStateCreateInfo
+         , pDepthStencilState :: Ptr VkPipelineDepthStencilStateCreateInfo
+         , pColorBlendState :: Ptr VkPipelineColorBlendStateCreateInfo
+         , pDynamicState :: Ptr VkPipelineDynamicStateCreateInfo
+         , layout :: VkPipelineLayout -- ^ Interface layout of the pipeline
+         , renderPass :: VkRenderPass
+         , subpass :: #{type uint32_t}
+         , basePipelineHandle :: VkPipeline -- ^ If VK_PIPELINE_CREATE_DERIVATIVE_BIT is set and this value is nonzero, it specifies the handle of the base pipeline this is a derivative of
+         , basePipelineIndex :: #{type int32_t} -- ^ If VK_PIPELINE_CREATE_DERIVATIVE_BIT is set and this value is not -1, it specifies an index into pCreateInfos of the base pipeline this is a derivative of
+         }
+
+instance Storable VkGraphicsPipelineCreateInfo where
+  sizeOf    _ = #{size      struct VkGraphicsPipelineCreateInfo}
+  alignment _ = #{alignment struct VkGraphicsPipelineCreateInfo}
+
+  peek ptr = 
+    VkGraphicsPipelineCreateInfo
+       <$> peek (offset @"sType" ptr)
+       <*> peek (offset @"pNext" ptr)
+       <*> peek (offset @"flags" ptr)
+       <*> peek (offset @"stageCount" ptr)
+       <*> peek (offset @"pStages" ptr)
+       <*> peek (offset @"pVertexInputState" ptr)
+       <*> peek (offset @"pInputAssemblyState" ptr)
+       <*> peek (offset @"pTessellationState" ptr)
+       <*> peek (offset @"pViewportState" ptr)
+       <*> peek (offset @"pRasterizationState" ptr)
+       <*> peek (offset @"pMultisampleState" ptr)
+       <*> peek (offset @"pDepthStencilState" ptr)
+       <*> peek (offset @"pColorBlendState" ptr)
+       <*> peek (offset @"pDynamicState" ptr)
+       <*> peek (offset @"layout" ptr)
+       <*> peek (offset @"renderPass" ptr)
+       <*> peek (offset @"subpass" ptr)
+       <*> peek (offset @"basePipelineHandle" ptr)
+       <*> peek (offset @"basePipelineIndex" ptr)
+
+  poke ptr val = do
+    pokeField @"sType" ptr val
+    pokeField @"pNext" ptr val
+    pokeField @"flags" ptr val
+    pokeField @"stageCount" ptr val
+    pokeField @"pStages" ptr val
+    pokeField @"pVertexInputState" ptr val
+    pokeField @"pInputAssemblyState" ptr val
+    pokeField @"pTessellationState" ptr val
+    pokeField @"pViewportState" ptr val
+    pokeField @"pRasterizationState" ptr val
+    pokeField @"pMultisampleState" ptr val
+    pokeField @"pDepthStencilState" ptr val
+    pokeField @"pColorBlendState" ptr val
+    pokeField @"pDynamicState" ptr val
+    pokeField @"layout" ptr val
+    pokeField @"renderPass" ptr val
+    pokeField @"subpass" ptr val
+    pokeField @"basePipelineHandle" ptr val
+    pokeField @"basePipelineIndex" ptr val
+
+instance Offset "sType" VkGraphicsPipelineCreateInfo where
+  rawOffset = #{offset struct VkGraphicsPipelineCreateInfo, sType}
+
+instance Offset "pNext" VkGraphicsPipelineCreateInfo where
+  rawOffset = #{offset struct VkGraphicsPipelineCreateInfo, pNext}
+
+instance Offset "flags" VkGraphicsPipelineCreateInfo where
+  rawOffset = #{offset struct VkGraphicsPipelineCreateInfo, flags}
+
+instance Offset "stageCount" VkGraphicsPipelineCreateInfo where
+  rawOffset = #{offset struct VkGraphicsPipelineCreateInfo, stageCount}
+
+instance Offset "pStages" VkGraphicsPipelineCreateInfo where
+  rawOffset = #{offset struct VkGraphicsPipelineCreateInfo, pStages}
+
+instance Offset "pVertexInputState" VkGraphicsPipelineCreateInfo where
+  rawOffset = #{offset struct VkGraphicsPipelineCreateInfo, pVertexInputState}
+
+instance Offset "pInputAssemblyState" VkGraphicsPipelineCreateInfo where
+  rawOffset = #{offset struct VkGraphicsPipelineCreateInfo, pInputAssemblyState}
+
+instance Offset "pTessellationState" VkGraphicsPipelineCreateInfo where
+  rawOffset = #{offset struct VkGraphicsPipelineCreateInfo, pTessellationState}
+
+instance Offset "pViewportState" VkGraphicsPipelineCreateInfo where
+  rawOffset = #{offset struct VkGraphicsPipelineCreateInfo, pViewportState}
+
+instance Offset "pRasterizationState" VkGraphicsPipelineCreateInfo where
+  rawOffset = #{offset struct VkGraphicsPipelineCreateInfo, pRasterizationState}
+
+instance Offset "pMultisampleState" VkGraphicsPipelineCreateInfo where
+  rawOffset = #{offset struct VkGraphicsPipelineCreateInfo, pMultisampleState}
+
+instance Offset "pDepthStencilState" VkGraphicsPipelineCreateInfo where
+  rawOffset = #{offset struct VkGraphicsPipelineCreateInfo, pDepthStencilState}
+
+instance Offset "pColorBlendState" VkGraphicsPipelineCreateInfo where
+  rawOffset = #{offset struct VkGraphicsPipelineCreateInfo, pColorBlendState}
+
+instance Offset "pDynamicState" VkGraphicsPipelineCreateInfo where
+  rawOffset = #{offset struct VkGraphicsPipelineCreateInfo, pDynamicState}
+
+instance Offset "layout" VkGraphicsPipelineCreateInfo where
+  rawOffset = #{offset struct VkGraphicsPipelineCreateInfo, layout}
+
+instance Offset "renderPass" VkGraphicsPipelineCreateInfo where
+  rawOffset = #{offset struct VkGraphicsPipelineCreateInfo, renderPass}
+
+instance Offset "subpass" VkGraphicsPipelineCreateInfo where
+  rawOffset = #{offset struct VkGraphicsPipelineCreateInfo, subpass}
+
+instance Offset "basePipelineHandle" VkGraphicsPipelineCreateInfo where
+  rawOffset = #{offset struct VkGraphicsPipelineCreateInfo, basePipelineHandle}
+
+instance Offset "basePipelineIndex" VkGraphicsPipelineCreateInfo where
+  rawOffset = #{offset struct VkGraphicsPipelineCreateInfo, basePipelineIndex}

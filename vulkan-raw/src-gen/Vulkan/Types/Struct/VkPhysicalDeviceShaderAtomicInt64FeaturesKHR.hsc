@@ -1,0 +1,9 @@
+#include <vulkan/vulkan.h>
+
+module Vulkan.Types.Struct.VkPhysicalDeviceShaderAtomicInt64FeaturesKHR where
+
+import Vulkan.Types.Struct.VkPhysicalDeviceShaderAtomicInt64Features
+
+
+
+type VkPhysicalDeviceShaderAtomicInt64FeaturesKHR = VkPhysicalDeviceShaderAtomicInt64Features

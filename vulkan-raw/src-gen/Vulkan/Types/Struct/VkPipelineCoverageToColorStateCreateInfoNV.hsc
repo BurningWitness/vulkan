@@ -1,0 +1,73 @@
+{-# LANGUAGE DataKinds #-}
+{-# LANGUAGE DuplicateRecordFields #-}
+{-# LANGUAGE MultiParamTypeClasses #-}
+#if __GLASGOW_HASKELL__ >= 902
+{-# LANGUAGE NoFieldSelectors #-}
+#endif
+{-# LANGUAGE TypeApplications #-}
+
+#include <vulkan/vulkan.h>
+
+#if VK_NV_fragment_coverage_to_color
+
+module Vulkan.Types.Struct.VkPipelineCoverageToColorStateCreateInfoNV where
+
+import Data.Int
+import Data.Word
+import Foreign.Ptr
+import Foreign.Storable
+import Foreign.Storable.Offset
+import Vulkan.Types.Base
+import Vulkan.Types.Enum.VkPipelineCoverageToColorStateCreateFlagsNV
+import Vulkan.Types.Enum.VkStructureType
+
+
+
+data {-# CTYPE "vulkan/vulkan.h" "VkPipelineCoverageToColorStateCreateInfoNV" #-} VkPipelineCoverageToColorStateCreateInfoNV =
+       VkPipelineCoverageToColorStateCreateInfoNV
+         { sType :: VkStructureType
+         , pNext :: Ptr ()
+         , flags :: VkPipelineCoverageToColorStateCreateFlagsNV
+         , coverageToColorEnable :: VkBool32
+         , coverageToColorLocation :: #{type uint32_t}
+         }
+
+instance Storable VkPipelineCoverageToColorStateCreateInfoNV where
+  sizeOf    _ = #{size      struct VkPipelineCoverageToColorStateCreateInfoNV}
+  alignment _ = #{alignment struct VkPipelineCoverageToColorStateCreateInfoNV}
+
+  peek ptr = 
+    VkPipelineCoverageToColorStateCreateInfoNV
+       <$> peek (offset @"sType" ptr)
+       <*> peek (offset @"pNext" ptr)
+       <*> peek (offset @"flags" ptr)
+       <*> peek (offset @"coverageToColorEnable" ptr)
+       <*> peek (offset @"coverageToColorLocation" ptr)
+
+  poke ptr val = do
+    pokeField @"sType" ptr val
+    pokeField @"pNext" ptr val
+    pokeField @"flags" ptr val
+    pokeField @"coverageToColorEnable" ptr val
+    pokeField @"coverageToColorLocation" ptr val
+
+instance Offset "sType" VkPipelineCoverageToColorStateCreateInfoNV where
+  rawOffset = #{offset struct VkPipelineCoverageToColorStateCreateInfoNV, sType}
+
+instance Offset "pNext" VkPipelineCoverageToColorStateCreateInfoNV where
+  rawOffset = #{offset struct VkPipelineCoverageToColorStateCreateInfoNV, pNext}
+
+instance Offset "flags" VkPipelineCoverageToColorStateCreateInfoNV where
+  rawOffset = #{offset struct VkPipelineCoverageToColorStateCreateInfoNV, flags}
+
+instance Offset "coverageToColorEnable" VkPipelineCoverageToColorStateCreateInfoNV where
+  rawOffset = #{offset struct VkPipelineCoverageToColorStateCreateInfoNV, coverageToColorEnable}
+
+instance Offset "coverageToColorLocation" VkPipelineCoverageToColorStateCreateInfoNV where
+  rawOffset = #{offset struct VkPipelineCoverageToColorStateCreateInfoNV, coverageToColorLocation}
+
+#else
+
+module Vulkan.Types.Struct.VkPipelineCoverageToColorStateCreateInfoNV where
+
+#endif

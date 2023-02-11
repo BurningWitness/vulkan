@@ -1,0 +1,9 @@
+#include <vulkan/vulkan.h>
+
+module Vulkan.Types.Struct.VkPhysicalDeviceDepthStencilResolvePropertiesKHR where
+
+import Vulkan.Types.Struct.VkPhysicalDeviceDepthStencilResolveProperties
+
+
+
+type VkPhysicalDeviceDepthStencilResolvePropertiesKHR = VkPhysicalDeviceDepthStencilResolveProperties

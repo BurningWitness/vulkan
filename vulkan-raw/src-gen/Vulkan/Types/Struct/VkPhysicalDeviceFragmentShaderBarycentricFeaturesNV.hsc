@@ -1,0 +1,9 @@
+#include <vulkan/vulkan.h>
+
+module Vulkan.Types.Struct.VkPhysicalDeviceFragmentShaderBarycentricFeaturesNV where
+
+import Vulkan.Types.Struct.VkPhysicalDeviceFragmentShaderBarycentricFeaturesKHR
+
+
+
+type VkPhysicalDeviceFragmentShaderBarycentricFeaturesNV = VkPhysicalDeviceFragmentShaderBarycentricFeaturesKHR
