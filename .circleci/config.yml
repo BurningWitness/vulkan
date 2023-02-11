@@ -6,7 +6,7 @@ orbs:
 jobs:
   build-arm64:
     machine:
-      image: ubuntu-2004:current
+      image: ubuntu-2204:current
     resource_class: arm.medium
     steps:
       - checkout
@@ -31,7 +31,9 @@ jobs:
           command: cabal new-update
       - run:
           name: Build
-          command: cabal new-build vulkan-example
+          command: |
+            cabal new-build vulkan-example
+            cabal new-build vk-mem-alloc
       - save_cache:
           name: Cache
           key: arm64-{{ checksum "vulkan-raw/vulkan-raw.cabal" }}
@@ -41,7 +43,7 @@ jobs:
 
   build-linux:
     machine:
-      image: ubuntu-2004:current
+      image: ubuntu-2204:current
     resource_class: medium
     parameters:
       version:
@@ -64,7 +66,9 @@ jobs:
           command: cabal new-update
       - run:
           name: Build
-          command: cabal new-build vulkan-example
+          command: |
+            cabal new-build vulkan-example
+            cabal new-build vk-mem-alloc
       - save_cache:
           name: Cache
           key: linux-<< parameters.version >>-{{ checksum "vulkan-raw/vulkan-raw.cabal" }}
@@ -95,7 +99,8 @@ jobs:
           command: |
             stack init --resolver << parameters.resolver >> --omit-packages
             echo -e 'packages:\n- vk-mem-alloc\n- vulkan-example\n- vulkan-raw\n\nresolver: << parameters.resolver >>\n\nextra-deps:\n- storable-offset-0.1.0.0' > stack.yaml
-            stack build vulkan-example --no-terminal
+            stack build vulkan-raw
+            stack build vk-mem-alloc
       - save_cache:
           name: Cache
           key: macos-<< parameters.resolver >>-{{ checksum "vulkan-raw/vulkan-raw.cabal" }}
@@ -117,8 +122,7 @@ jobs:
           name: Install Stack
           shell: bash.exe
           command: |
-            choco install vulkan-sdk --version=1.2.182.0
-            "$TEMP/chocolatey/vulkan-sdk/1.2.182.0/VulkanSDK-1.2.182.0-Installer.exe"
+            choco install vulkan-sdk
             mkdir stack-build
             cd stack-build
             curl -LO --no-progress-meter https://get.haskellstack.org/stable/windows-x86_64.zip
@@ -134,7 +138,8 @@ jobs:
           command: |
             stack init --resolver << parameters.resolver >> --omit-packages
             echo -e 'packages:\n- vk-mem-alloc\n- vulkan-example\n- vulkan-raw\n\nresolver: << parameters.resolver >>\n\nextra-deps:\n- storable-offset-0.1.0.0' > stack.yaml
-            stack build vulkan-example --no-run-tests
+            stack build vulkan-raw
+            stack build vk-mem-alloc
       - save_cache:
           name: Cache
           key: windows-<< parameters.resolver >>-{{ checksum "vulkan-raw/vulkan-raw.cabal" }}

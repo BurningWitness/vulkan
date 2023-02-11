@@ -127,8 +127,8 @@ library
       include-dirs:      "%VULKAN_SDK%\\Include"
       extra-libraries:   vulkan
     elif os(darwin)
-      frameworks: vulkan
-      include-dirs: "/usr/local/Cellar/vulkan-headers/include"
+      frameworks: Vulkan
+      include-dirs: "$VULKAN_SDK/include"
     else
       extra-libraries:   vulkan
 
