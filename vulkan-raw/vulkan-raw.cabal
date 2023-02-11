@@ -123,12 +123,8 @@ library
 
     reexported-modules:  Foreign.Storable.Offset
 
-    if os(windows)
-      include-dirs:      "%VULKAN_SDK%\\Include"
-      extra-libraries:   vulkan
-    elif os(darwin)
-      frameworks: Vulkan
-      include-dirs: "$VULKAN_SDK/include"
+    if os(darwin)
+      frameworks:        MoltenVK
     else
       extra-libraries:   vulkan
 
