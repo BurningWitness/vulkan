@@ -16,6 +16,7 @@ jobs:
       - run:
           name: Install GHC
           command: |
+            sudo apt install vulkan-sdk
             sudo apt-get install ghc cabal-install
 
             # Fix for Cabal-2.4.0.0 not initializing the package DB automatically
@@ -54,6 +55,7 @@ jobs:
           name: Install GHC
           command: |
             sudo add-apt-repository ppa:hvr/ghc
+            sudo apt install vulkan-sdk
             sudo apt-get install ghc-<< parameters.version >> cabal-install-3.4
             echo 'export PATH=/opt/ghc/bin:$PATH' >> $BASH_ENV
 
@@ -85,13 +87,14 @@ jobs:
       - run:
           name: Install Stack
           command: |
+            brew install vulkan-headers
             curl -sSL https://get.haskellstack.org/ | sh
 
       - run:
           name: Build
           command: |
             stack init --resolver << parameters.resolver >> --omit-packages
-            echo -e 'resolver: << parameters.resolver >>\n\nextra-deps:\n- storable-offset-0.1.0.0' > stack.yaml
+            echo -e 'packages:\n- vk-mem-alloc\n- vulkan-example\n- vulkan-raw\n\nresolver: << parameters.resolver >>\n\nextra-deps:\n- storable-offset-0.1.0.0' > stack.yaml
             stack build vulkan-example --no-terminal
       - save_cache:
           name: Cache
@@ -114,6 +117,7 @@ jobs:
           name: Install Stack
           shell: bash.exe
           command: |
+            choco install vulkan-sdk
             mkdir stack-build
             cd stack-build
             curl -LO --no-progress-meter https://get.haskellstack.org/stable/windows-x86_64.zip
@@ -128,7 +132,7 @@ jobs:
           shell: bash.exe
           command: |
             stack init --resolver << parameters.resolver >> --omit-packages
-            echo -e 'resolver: << parameters.resolver >>\n\nextra-deps:\n- storable-offset-0.1.0.0' > stack.yaml
+            echo -e 'packages:\n- vk-mem-alloc\n- vulkan-example\n- vulkan-raw\n\nresolver: << parameters.resolver >>\n\nextra-deps:\n- storable-offset-0.1.0.0' > stack.yaml
             stack build vulkan-example --no-run-tests
       - save_cache:
           name: Cache

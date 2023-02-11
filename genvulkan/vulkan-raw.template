@@ -65,7 +65,10 @@ library
 
     reexported-modules:  Foreign.Storable.Offset
 
-    pkgconfig-depends:   vulkan
+    if os (windows)
+      extra-libraries:   vulkan-1
+    else
+      extra-libraries:   vulkan
 
 --[BULK]--
 
