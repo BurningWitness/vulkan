@@ -16,7 +16,7 @@ jobs:
       - run:
           name: Install GHC
           command: |
-            sudo apt install vulkan-sdk
+            sudo apt install libvulkan-dev
             sudo apt-get install ghc cabal-install
 
             # Fix for Cabal-2.4.0.0 not initializing the package DB automatically
@@ -55,7 +55,7 @@ jobs:
           name: Install GHC
           command: |
             sudo add-apt-repository ppa:hvr/ghc
-            sudo apt install vulkan-sdk
+            sudo apt install libvulkan-dev
             sudo apt-get install ghc-<< parameters.version >> cabal-install-3.4
             echo 'export PATH=/opt/ghc/bin:$PATH' >> $BASH_ENV
 
@@ -117,7 +117,8 @@ jobs:
           name: Install Stack
           shell: bash.exe
           command: |
-            choco install vulkan-sdk
+            choco install vulkan-sdk --version=1.2.182.0
+            "$TEMP/chocolatey/vulkan-sdk/1.2.182.0/VulkanSDK-1.2.182.0-Installer.exe"
             mkdir stack-build
             cd stack-build
             curl -LO --no-progress-meter https://get.haskellstack.org/stable/windows-x86_64.zip
