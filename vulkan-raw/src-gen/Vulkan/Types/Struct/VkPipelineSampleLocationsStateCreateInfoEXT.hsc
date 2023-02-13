@@ -37,10 +37,10 @@ instance Storable VkPipelineSampleLocationsStateCreateInfoEXT where
 
   peek ptr = 
     VkPipelineSampleLocationsStateCreateInfoEXT
-       <$> peek (offset @"sType" ptr)
-       <*> peek (offset @"pNext" ptr)
-       <*> peek (offset @"sampleLocationsEnable" ptr)
-       <*> peek (offset @"sampleLocationsInfo" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"sType" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pNext" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"sampleLocationsEnable" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"sampleLocationsInfo" ptr)
 
   poke ptr val = do
     pokeField @"sType" ptr val

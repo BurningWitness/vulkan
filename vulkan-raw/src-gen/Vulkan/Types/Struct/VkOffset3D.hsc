@@ -31,9 +31,9 @@ instance Storable VkOffset3D where
 
   peek ptr = 
     VkOffset3D
-       <$> peek (offset @"x" ptr)
-       <*> peek (offset @"y" ptr)
-       <*> peek (offset @"z" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"x" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"y" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"z" ptr)
 
   poke ptr val = do
     pokeField @"x" ptr val

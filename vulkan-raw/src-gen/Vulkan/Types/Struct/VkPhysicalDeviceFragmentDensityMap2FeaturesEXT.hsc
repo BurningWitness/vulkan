@@ -35,9 +35,9 @@ instance Storable VkPhysicalDeviceFragmentDensityMap2FeaturesEXT where
 
   peek ptr = 
     VkPhysicalDeviceFragmentDensityMap2FeaturesEXT
-       <$> peek (offset @"sType" ptr)
-       <*> peek (offset @"pNext" ptr)
-       <*> peek (offset @"fragmentDensityMapDeferred" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"sType" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pNext" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"fragmentDensityMapDeferred" ptr)
 
   poke ptr val = do
     pokeField @"sType" ptr val

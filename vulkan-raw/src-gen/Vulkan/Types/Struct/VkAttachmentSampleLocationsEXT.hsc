@@ -33,8 +33,8 @@ instance Storable VkAttachmentSampleLocationsEXT where
 
   peek ptr = 
     VkAttachmentSampleLocationsEXT
-       <$> peek (offset @"attachmentIndex" ptr)
-       <*> peek (offset @"sampleLocationsInfo" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"attachmentIndex" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"sampleLocationsInfo" ptr)
 
   poke ptr val = do
     pokeField @"attachmentIndex" ptr val

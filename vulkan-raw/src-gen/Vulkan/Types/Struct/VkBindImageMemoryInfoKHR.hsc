@@ -38,11 +38,11 @@ instance Storable VkBindImageMemoryInfoKHR where
 
   peek ptr = 
     VkBindImageMemoryInfoKHR
-       <$> peek (offset @"sType" ptr)
-       <*> peek (offset @"pNext" ptr)
-       <*> peek (offset @"image" ptr)
-       <*> peek (offset @"memory" ptr)
-       <*> peek (offset @"memoryOffset" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"sType" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pNext" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"image" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"memory" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"memoryOffset" ptr)
 
   poke ptr val = do
     pokeField @"sType" ptr val

@@ -35,9 +35,9 @@ instance Storable VkPhysicalDeviceMultiDrawFeaturesEXT where
 
   peek ptr = 
     VkPhysicalDeviceMultiDrawFeaturesEXT
-       <$> peek (offset @"sType" ptr)
-       <*> peek (offset @"pNext" ptr)
-       <*> peek (offset @"multiDraw" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"sType" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pNext" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"multiDraw" ptr)
 
   poke ptr val = do
     pokeField @"sType" ptr val

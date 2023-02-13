@@ -1474,10 +1474,10 @@ composeDeclaration ext decl =
                 fn:fns -> mconcat
                             [ "  peek ptr = \n"
                             , "    ", name, "\n"
-                            , "       <$> peek (offset @\"", fn, "\" ptr)\n"
+                            , "       <$> peek (Foreign.Storable.Offset.offset @\"", fn, "\" ptr)\n"
                             , List.intercalate "\n" $
                                 fns <&> \fname ->
-                                  "       <*> peek (offset @\"" <> fname <> "\" ptr)"
+                                  "       <*> peek (Foreign.Storable.Offset.offset @\"" <> fname <> "\" ptr)"
                             ]
             , "\n"
             , "\n"

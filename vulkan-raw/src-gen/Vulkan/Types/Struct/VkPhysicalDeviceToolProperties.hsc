@@ -39,13 +39,13 @@ instance Storable VkPhysicalDeviceToolProperties where
 
   peek ptr = 
     VkPhysicalDeviceToolProperties
-       <$> peek (offset @"sType" ptr)
-       <*> peek (offset @"pNext" ptr)
-       <*> peek (offset @"name" ptr)
-       <*> peek (offset @"version" ptr)
-       <*> peek (offset @"purposes" ptr)
-       <*> peek (offset @"description" ptr)
-       <*> peek (offset @"layer" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"sType" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pNext" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"name" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"version" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"purposes" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"description" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"layer" ptr)
 
   poke ptr val = do
     pokeField @"sType" ptr val

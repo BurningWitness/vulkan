@@ -35,9 +35,9 @@ instance Storable VkQueueFamilyQueryResultStatusPropertiesKHR where
 
   peek ptr = 
     VkQueueFamilyQueryResultStatusPropertiesKHR
-       <$> peek (offset @"sType" ptr)
-       <*> peek (offset @"pNext" ptr)
-       <*> peek (offset @"queryResultStatusSupport" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"sType" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pNext" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"queryResultStatusSupport" ptr)
 
   poke ptr val = do
     pokeField @"sType" ptr val

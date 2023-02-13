@@ -40,13 +40,13 @@ instance Storable VkBufferViewCreateInfo where
 
   peek ptr = 
     VkBufferViewCreateInfo
-       <$> peek (offset @"sType" ptr)
-       <*> peek (offset @"pNext" ptr)
-       <*> peek (offset @"flags" ptr)
-       <*> peek (offset @"buffer" ptr)
-       <*> peek (offset @"format" ptr)
-       <*> peek (offset @"offset" ptr)
-       <*> peek (offset @"range" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"sType" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pNext" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"flags" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"buffer" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"format" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"offset" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"range" ptr)
 
   poke ptr val = do
     pokeField @"sType" ptr val

@@ -38,12 +38,12 @@ instance Storable VkPhysicalDeviceWorkgroupMemoryExplicitLayoutFeaturesKHR where
 
   peek ptr = 
     VkPhysicalDeviceWorkgroupMemoryExplicitLayoutFeaturesKHR
-       <$> peek (offset @"sType" ptr)
-       <*> peek (offset @"pNext" ptr)
-       <*> peek (offset @"workgroupMemoryExplicitLayout" ptr)
-       <*> peek (offset @"workgroupMemoryExplicitLayoutScalarBlockLayout" ptr)
-       <*> peek (offset @"workgroupMemoryExplicitLayout8BitAccess" ptr)
-       <*> peek (offset @"workgroupMemoryExplicitLayout16BitAccess" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"sType" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pNext" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"workgroupMemoryExplicitLayout" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"workgroupMemoryExplicitLayoutScalarBlockLayout" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"workgroupMemoryExplicitLayout8BitAccess" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"workgroupMemoryExplicitLayout16BitAccess" ptr)
 
   poke ptr val = do
     pokeField @"sType" ptr val

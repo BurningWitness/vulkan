@@ -34,10 +34,10 @@ instance Storable VkMemoryAllocateInfo where
 
   peek ptr = 
     VkMemoryAllocateInfo
-       <$> peek (offset @"sType" ptr)
-       <*> peek (offset @"pNext" ptr)
-       <*> peek (offset @"allocationSize" ptr)
-       <*> peek (offset @"memoryTypeIndex" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"sType" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pNext" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"allocationSize" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"memoryTypeIndex" ptr)
 
   poke ptr val = do
     pokeField @"sType" ptr val

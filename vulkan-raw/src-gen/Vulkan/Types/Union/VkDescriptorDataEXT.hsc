@@ -44,16 +44,16 @@ instance Storable VkDescriptorDataEXT where
 
   peek ptr = 
     VkDescriptorDataEXT
-       <$> peek (offset @"pSampler" ptr)
-       <*> peek (offset @"pCombinedImageSampler" ptr)
-       <*> peek (offset @"pInputAttachmentImage" ptr)
-       <*> peek (offset @"pSampledImage" ptr)
-       <*> peek (offset @"pStorageImage" ptr)
-       <*> peek (offset @"pUniformTexelBuffer" ptr)
-       <*> peek (offset @"pStorageTexelBuffer" ptr)
-       <*> peek (offset @"pUniformBuffer" ptr)
-       <*> peek (offset @"pStorageBuffer" ptr)
-       <*> peek (offset @"accelerationStructure" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"pSampler" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pCombinedImageSampler" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pInputAttachmentImage" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pSampledImage" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pStorageImage" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pUniformTexelBuffer" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pStorageTexelBuffer" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pUniformBuffer" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pStorageBuffer" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"accelerationStructure" ptr)
 
   poke ptr val = do
     pokeField @"pSampler" ptr val

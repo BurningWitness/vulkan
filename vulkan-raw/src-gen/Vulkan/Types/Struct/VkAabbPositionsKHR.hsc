@@ -36,12 +36,12 @@ instance Storable VkAabbPositionsKHR where
 
   peek ptr = 
     VkAabbPositionsKHR
-       <$> peek (offset @"minX" ptr)
-       <*> peek (offset @"minY" ptr)
-       <*> peek (offset @"minZ" ptr)
-       <*> peek (offset @"maxX" ptr)
-       <*> peek (offset @"maxY" ptr)
-       <*> peek (offset @"maxZ" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"minX" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"minY" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"minZ" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"maxX" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"maxY" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"maxZ" ptr)
 
   poke ptr val = do
     pokeField @"minX" ptr val

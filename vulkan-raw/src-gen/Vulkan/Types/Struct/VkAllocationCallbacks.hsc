@@ -35,12 +35,12 @@ instance Storable VkAllocationCallbacks where
 
   peek ptr = 
     VkAllocationCallbacks
-       <$> peek (offset @"pUserData" ptr)
-       <*> peek (offset @"pfnAllocation" ptr)
-       <*> peek (offset @"pfnReallocation" ptr)
-       <*> peek (offset @"pfnFree" ptr)
-       <*> peek (offset @"pfnInternalAllocation" ptr)
-       <*> peek (offset @"pfnInternalFree" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"pUserData" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pfnAllocation" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pfnReallocation" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pfnFree" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pfnInternalAllocation" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pfnInternalFree" ptr)
 
   poke ptr val = do
     pokeField @"pUserData" ptr val

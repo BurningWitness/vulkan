@@ -35,9 +35,9 @@ instance Storable VkPhysicalDeviceShaderModuleIdentifierFeaturesEXT where
 
   peek ptr = 
     VkPhysicalDeviceShaderModuleIdentifierFeaturesEXT
-       <$> peek (offset @"sType" ptr)
-       <*> peek (offset @"pNext" ptr)
-       <*> peek (offset @"shaderModuleIdentifier" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"sType" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pNext" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"shaderModuleIdentifier" ptr)
 
   poke ptr val = do
     pokeField @"sType" ptr val

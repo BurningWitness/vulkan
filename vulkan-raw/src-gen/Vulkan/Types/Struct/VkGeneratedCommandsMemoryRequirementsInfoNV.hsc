@@ -39,12 +39,12 @@ instance Storable VkGeneratedCommandsMemoryRequirementsInfoNV where
 
   peek ptr = 
     VkGeneratedCommandsMemoryRequirementsInfoNV
-       <$> peek (offset @"sType" ptr)
-       <*> peek (offset @"pNext" ptr)
-       <*> peek (offset @"pipelineBindPoint" ptr)
-       <*> peek (offset @"pipeline" ptr)
-       <*> peek (offset @"indirectCommandsLayout" ptr)
-       <*> peek (offset @"maxSequencesCount" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"sType" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pNext" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pipelineBindPoint" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pipeline" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"indirectCommandsLayout" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"maxSequencesCount" ptr)
 
   poke ptr val = do
     pokeField @"sType" ptr val

@@ -33,8 +33,8 @@ instance Storable VkDisplayPlanePropertiesKHR where
 
   peek ptr = 
     VkDisplayPlanePropertiesKHR
-       <$> peek (offset @"currentDisplay" ptr)
-       <*> peek (offset @"currentStackIndex" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"currentDisplay" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"currentStackIndex" ptr)
 
   poke ptr val = do
     pokeField @"currentDisplay" ptr val

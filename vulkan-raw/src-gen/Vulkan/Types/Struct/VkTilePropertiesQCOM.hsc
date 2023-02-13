@@ -39,11 +39,11 @@ instance Storable VkTilePropertiesQCOM where
 
   peek ptr = 
     VkTilePropertiesQCOM
-       <$> peek (offset @"sType" ptr)
-       <*> peek (offset @"pNext" ptr)
-       <*> peek (offset @"tileSize" ptr)
-       <*> peek (offset @"apronSize" ptr)
-       <*> peek (offset @"origin" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"sType" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pNext" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"tileSize" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"apronSize" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"origin" ptr)
 
   poke ptr val = do
     pokeField @"sType" ptr val

@@ -39,11 +39,11 @@ instance Storable VkAccelerationStructureGeometryKHR where
 
   peek ptr = 
     VkAccelerationStructureGeometryKHR
-       <$> peek (offset @"sType" ptr)
-       <*> peek (offset @"pNext" ptr)
-       <*> peek (offset @"geometryType" ptr)
-       <*> peek (offset @"geometry" ptr)
-       <*> peek (offset @"flags" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"sType" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pNext" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"geometryType" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"geometry" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"flags" ptr)
 
   poke ptr val = do
     pokeField @"sType" ptr val

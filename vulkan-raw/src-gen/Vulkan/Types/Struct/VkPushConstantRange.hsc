@@ -32,9 +32,9 @@ instance Storable VkPushConstantRange where
 
   peek ptr = 
     VkPushConstantRange
-       <$> peek (offset @"stageFlags" ptr)
-       <*> peek (offset @"offset" ptr)
-       <*> peek (offset @"size" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"stageFlags" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"offset" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"size" ptr)
 
   poke ptr val = do
     pokeField @"stageFlags" ptr val

@@ -38,11 +38,11 @@ instance Storable VkSwapchainPresentScalingCreateInfoEXT where
 
   peek ptr = 
     VkSwapchainPresentScalingCreateInfoEXT
-       <$> peek (offset @"sType" ptr)
-       <*> peek (offset @"pNext" ptr)
-       <*> peek (offset @"scalingBehavior" ptr)
-       <*> peek (offset @"presentGravityX" ptr)
-       <*> peek (offset @"presentGravityY" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"sType" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pNext" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"scalingBehavior" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"presentGravityX" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"presentGravityY" ptr)
 
   poke ptr val = do
     pokeField @"sType" ptr val

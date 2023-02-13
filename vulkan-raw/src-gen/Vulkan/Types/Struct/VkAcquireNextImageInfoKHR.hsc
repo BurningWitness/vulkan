@@ -39,13 +39,13 @@ instance Storable VkAcquireNextImageInfoKHR where
 
   peek ptr = 
     VkAcquireNextImageInfoKHR
-       <$> peek (offset @"sType" ptr)
-       <*> peek (offset @"pNext" ptr)
-       <*> peek (offset @"swapchain" ptr)
-       <*> peek (offset @"timeout" ptr)
-       <*> peek (offset @"semaphore" ptr)
-       <*> peek (offset @"fence" ptr)
-       <*> peek (offset @"deviceMask" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"sType" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pNext" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"swapchain" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"timeout" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"semaphore" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"fence" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"deviceMask" ptr)
 
   poke ptr val = do
     pokeField @"sType" ptr val

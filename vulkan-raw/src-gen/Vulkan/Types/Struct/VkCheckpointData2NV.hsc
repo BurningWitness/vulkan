@@ -36,10 +36,10 @@ instance Storable VkCheckpointData2NV where
 
   peek ptr = 
     VkCheckpointData2NV
-       <$> peek (offset @"sType" ptr)
-       <*> peek (offset @"pNext" ptr)
-       <*> peek (offset @"stage" ptr)
-       <*> peek (offset @"pCheckpointMarker" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"sType" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pNext" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"stage" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pCheckpointMarker" ptr)
 
   poke ptr val = do
     pokeField @"sType" ptr val

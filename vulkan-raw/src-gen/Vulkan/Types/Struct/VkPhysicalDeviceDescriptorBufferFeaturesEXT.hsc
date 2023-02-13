@@ -38,12 +38,12 @@ instance Storable VkPhysicalDeviceDescriptorBufferFeaturesEXT where
 
   peek ptr = 
     VkPhysicalDeviceDescriptorBufferFeaturesEXT
-       <$> peek (offset @"sType" ptr)
-       <*> peek (offset @"pNext" ptr)
-       <*> peek (offset @"descriptorBuffer" ptr)
-       <*> peek (offset @"descriptorBufferCaptureReplay" ptr)
-       <*> peek (offset @"descriptorBufferImageLayoutIgnored" ptr)
-       <*> peek (offset @"descriptorBufferPushDescriptors" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"sType" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pNext" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"descriptorBuffer" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"descriptorBufferCaptureReplay" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"descriptorBufferImageLayoutIgnored" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"descriptorBufferPushDescriptors" ptr)
 
   poke ptr val = do
     pokeField @"sType" ptr val

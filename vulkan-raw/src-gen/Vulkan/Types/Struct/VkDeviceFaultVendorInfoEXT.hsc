@@ -33,9 +33,9 @@ instance Storable VkDeviceFaultVendorInfoEXT where
 
   peek ptr = 
     VkDeviceFaultVendorInfoEXT
-       <$> peek (offset @"description" ptr)
-       <*> peek (offset @"vendorFaultCode" ptr)
-       <*> peek (offset @"vendorFaultData" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"description" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"vendorFaultCode" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"vendorFaultData" ptr)
 
   poke ptr val = do
     pokeField @"description" ptr val

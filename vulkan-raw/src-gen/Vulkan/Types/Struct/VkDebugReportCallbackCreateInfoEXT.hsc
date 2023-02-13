@@ -38,11 +38,11 @@ instance Storable VkDebugReportCallbackCreateInfoEXT where
 
   peek ptr = 
     VkDebugReportCallbackCreateInfoEXT
-       <$> peek (offset @"sType" ptr)
-       <*> peek (offset @"pNext" ptr)
-       <*> peek (offset @"flags" ptr)
-       <*> peek (offset @"pfnCallback" ptr)
-       <*> peek (offset @"pUserData" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"sType" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pNext" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"flags" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pfnCallback" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pUserData" ptr)
 
   poke ptr val = do
     pokeField @"sType" ptr val

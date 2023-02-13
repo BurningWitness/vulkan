@@ -39,12 +39,12 @@ instance Storable VkValidationFeaturesEXT where
 
   peek ptr = 
     VkValidationFeaturesEXT
-       <$> peek (offset @"sType" ptr)
-       <*> peek (offset @"pNext" ptr)
-       <*> peek (offset @"enabledValidationFeatureCount" ptr)
-       <*> peek (offset @"pEnabledValidationFeatures" ptr)
-       <*> peek (offset @"disabledValidationFeatureCount" ptr)
-       <*> peek (offset @"pDisabledValidationFeatures" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"sType" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pNext" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"enabledValidationFeatureCount" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pEnabledValidationFeatures" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"disabledValidationFeatureCount" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pDisabledValidationFeatures" ptr)
 
   poke ptr val = do
     pokeField @"sType" ptr val

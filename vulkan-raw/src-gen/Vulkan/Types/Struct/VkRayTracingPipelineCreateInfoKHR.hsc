@@ -52,20 +52,20 @@ instance Storable VkRayTracingPipelineCreateInfoKHR where
 
   peek ptr = 
     VkRayTracingPipelineCreateInfoKHR
-       <$> peek (offset @"sType" ptr)
-       <*> peek (offset @"pNext" ptr)
-       <*> peek (offset @"flags" ptr)
-       <*> peek (offset @"stageCount" ptr)
-       <*> peek (offset @"pStages" ptr)
-       <*> peek (offset @"groupCount" ptr)
-       <*> peek (offset @"pGroups" ptr)
-       <*> peek (offset @"maxPipelineRayRecursionDepth" ptr)
-       <*> peek (offset @"pLibraryInfo" ptr)
-       <*> peek (offset @"pLibraryInterface" ptr)
-       <*> peek (offset @"pDynamicState" ptr)
-       <*> peek (offset @"layout" ptr)
-       <*> peek (offset @"basePipelineHandle" ptr)
-       <*> peek (offset @"basePipelineIndex" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"sType" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pNext" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"flags" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"stageCount" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pStages" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"groupCount" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pGroups" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"maxPipelineRayRecursionDepth" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pLibraryInfo" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pLibraryInterface" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pDynamicState" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"layout" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"basePipelineHandle" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"basePipelineIndex" ptr)
 
   poke ptr val = do
     pokeField @"sType" ptr val

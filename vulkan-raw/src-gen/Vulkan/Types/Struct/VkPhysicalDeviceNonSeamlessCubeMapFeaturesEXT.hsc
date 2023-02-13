@@ -35,9 +35,9 @@ instance Storable VkPhysicalDeviceNonSeamlessCubeMapFeaturesEXT where
 
   peek ptr = 
     VkPhysicalDeviceNonSeamlessCubeMapFeaturesEXT
-       <$> peek (offset @"sType" ptr)
-       <*> peek (offset @"pNext" ptr)
-       <*> peek (offset @"nonSeamlessCubeMap" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"sType" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pNext" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"nonSeamlessCubeMap" ptr)
 
   poke ptr val = do
     pokeField @"sType" ptr val

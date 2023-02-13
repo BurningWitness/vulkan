@@ -35,9 +35,9 @@ instance Storable VkImportMetalBufferInfoEXT where
 
   peek ptr = 
     VkImportMetalBufferInfoEXT
-       <$> peek (offset @"sType" ptr)
-       <*> peek (offset @"pNext" ptr)
-       <*> peek (offset @"mtlBuffer" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"sType" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pNext" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"mtlBuffer" ptr)
 
   poke ptr val = do
     pokeField @"sType" ptr val

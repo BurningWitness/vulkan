@@ -36,10 +36,10 @@ instance Storable VkPresentRegionsKHR where
 
   peek ptr = 
     VkPresentRegionsKHR
-       <$> peek (offset @"sType" ptr)
-       <*> peek (offset @"pNext" ptr)
-       <*> peek (offset @"swapchainCount" ptr)
-       <*> peek (offset @"pRegions" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"sType" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pNext" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"swapchainCount" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pRegions" ptr)
 
   poke ptr val = do
     pokeField @"sType" ptr val

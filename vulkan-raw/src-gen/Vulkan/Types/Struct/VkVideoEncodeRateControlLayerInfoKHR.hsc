@@ -39,14 +39,14 @@ instance Storable VkVideoEncodeRateControlLayerInfoKHR where
 
   peek ptr = 
     VkVideoEncodeRateControlLayerInfoKHR
-       <$> peek (offset @"sType" ptr)
-       <*> peek (offset @"pNext" ptr)
-       <*> peek (offset @"averageBitrate" ptr)
-       <*> peek (offset @"maxBitrate" ptr)
-       <*> peek (offset @"frameRateNumerator" ptr)
-       <*> peek (offset @"frameRateDenominator" ptr)
-       <*> peek (offset @"virtualBufferSizeInMs" ptr)
-       <*> peek (offset @"initialVirtualBufferSizeInMs" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"sType" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pNext" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"averageBitrate" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"maxBitrate" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"frameRateNumerator" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"frameRateDenominator" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"virtualBufferSizeInMs" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"initialVirtualBufferSizeInMs" ptr)
 
   poke ptr val = do
     pokeField @"sType" ptr val

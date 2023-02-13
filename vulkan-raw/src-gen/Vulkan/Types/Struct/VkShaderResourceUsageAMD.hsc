@@ -35,11 +35,11 @@ instance Storable VkShaderResourceUsageAMD where
 
   peek ptr = 
     VkShaderResourceUsageAMD
-       <$> peek (offset @"numUsedVgprs" ptr)
-       <*> peek (offset @"numUsedSgprs" ptr)
-       <*> peek (offset @"ldsSizePerLocalWorkGroup" ptr)
-       <*> peek (offset @"ldsUsageSizeInBytes" ptr)
-       <*> peek (offset @"scratchMemUsageInBytes" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"numUsedVgprs" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"numUsedSgprs" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"ldsSizePerLocalWorkGroup" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"ldsUsageSizeInBytes" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"scratchMemUsageInBytes" ptr)
 
   poke ptr val = do
     pokeField @"numUsedVgprs" ptr val

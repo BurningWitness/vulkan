@@ -34,12 +34,12 @@ instance Storable VkViewport where
 
   peek ptr = 
     VkViewport
-       <$> peek (offset @"x" ptr)
-       <*> peek (offset @"y" ptr)
-       <*> peek (offset @"width" ptr)
-       <*> peek (offset @"height" ptr)
-       <*> peek (offset @"minDepth" ptr)
-       <*> peek (offset @"maxDepth" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"x" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"y" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"width" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"height" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"minDepth" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"maxDepth" ptr)
 
   poke ptr val = do
     pokeField @"x" ptr val

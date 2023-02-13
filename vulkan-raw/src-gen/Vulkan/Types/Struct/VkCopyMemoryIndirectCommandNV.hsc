@@ -34,9 +34,9 @@ instance Storable VkCopyMemoryIndirectCommandNV where
 
   peek ptr = 
     VkCopyMemoryIndirectCommandNV
-       <$> peek (offset @"srcAddress" ptr)
-       <*> peek (offset @"dstAddress" ptr)
-       <*> peek (offset @"size" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"srcAddress" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"dstAddress" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"size" ptr)
 
   poke ptr val = do
     pokeField @"srcAddress" ptr val

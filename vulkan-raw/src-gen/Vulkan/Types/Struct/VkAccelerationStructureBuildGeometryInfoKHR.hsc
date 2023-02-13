@@ -49,17 +49,17 @@ instance Storable VkAccelerationStructureBuildGeometryInfoKHR where
 
   peek ptr = 
     VkAccelerationStructureBuildGeometryInfoKHR
-       <$> peek (offset @"sType" ptr)
-       <*> peek (offset @"pNext" ptr)
-       <*> peek (offset @"type" ptr)
-       <*> peek (offset @"flags" ptr)
-       <*> peek (offset @"mode" ptr)
-       <*> peek (offset @"srcAccelerationStructure" ptr)
-       <*> peek (offset @"dstAccelerationStructure" ptr)
-       <*> peek (offset @"geometryCount" ptr)
-       <*> peek (offset @"pGeometries" ptr)
-       <*> peek (offset @"ppGeometries" ptr)
-       <*> peek (offset @"scratchData" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"sType" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pNext" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"type" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"flags" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"mode" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"srcAccelerationStructure" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"dstAccelerationStructure" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"geometryCount" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pGeometries" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"ppGeometries" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"scratchData" ptr)
 
   poke ptr val = do
     pokeField @"sType" ptr val

@@ -35,10 +35,10 @@ instance Storable VkDebugUtilsLabelEXT where
 
   peek ptr = 
     VkDebugUtilsLabelEXT
-       <$> peek (offset @"sType" ptr)
-       <*> peek (offset @"pNext" ptr)
-       <*> peek (offset @"pLabelName" ptr)
-       <*> peek (offset @"color" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"sType" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pNext" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pLabelName" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"color" ptr)
 
   poke ptr val = do
     pokeField @"sType" ptr val

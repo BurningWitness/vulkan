@@ -36,10 +36,10 @@ instance Storable VkPhysicalDeviceMemoryDecompressionPropertiesNV where
 
   peek ptr = 
     VkPhysicalDeviceMemoryDecompressionPropertiesNV
-       <$> peek (offset @"sType" ptr)
-       <*> peek (offset @"pNext" ptr)
-       <*> peek (offset @"decompressionMethods" ptr)
-       <*> peek (offset @"maxDecompressionIndirectCount" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"sType" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pNext" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"decompressionMethods" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"maxDecompressionIndirectCount" ptr)
 
   poke ptr val = do
     pokeField @"sType" ptr val

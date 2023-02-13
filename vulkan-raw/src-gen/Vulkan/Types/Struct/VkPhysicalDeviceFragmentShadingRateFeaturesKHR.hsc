@@ -37,11 +37,11 @@ instance Storable VkPhysicalDeviceFragmentShadingRateFeaturesKHR where
 
   peek ptr = 
     VkPhysicalDeviceFragmentShadingRateFeaturesKHR
-       <$> peek (offset @"sType" ptr)
-       <*> peek (offset @"pNext" ptr)
-       <*> peek (offset @"pipelineFragmentShadingRate" ptr)
-       <*> peek (offset @"primitiveFragmentShadingRate" ptr)
-       <*> peek (offset @"attachmentFragmentShadingRate" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"sType" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pNext" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pipelineFragmentShadingRate" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"primitiveFragmentShadingRate" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"attachmentFragmentShadingRate" ptr)
 
   poke ptr val = do
     pokeField @"sType" ptr val

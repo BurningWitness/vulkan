@@ -36,10 +36,10 @@ instance Storable VkImportMemoryHostPointerInfoEXT where
 
   peek ptr = 
     VkImportMemoryHostPointerInfoEXT
-       <$> peek (offset @"sType" ptr)
-       <*> peek (offset @"pNext" ptr)
-       <*> peek (offset @"handleType" ptr)
-       <*> peek (offset @"pHostPointer" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"sType" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pNext" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"handleType" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pHostPointer" ptr)
 
   poke ptr val = do
     pokeField @"sType" ptr val

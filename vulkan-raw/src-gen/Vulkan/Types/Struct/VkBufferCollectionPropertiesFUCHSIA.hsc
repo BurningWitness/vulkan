@@ -50,19 +50,19 @@ instance Storable VkBufferCollectionPropertiesFUCHSIA where
 
   peek ptr = 
     VkBufferCollectionPropertiesFUCHSIA
-       <$> peek (offset @"sType" ptr)
-       <*> peek (offset @"pNext" ptr)
-       <*> peek (offset @"memoryTypeBits" ptr)
-       <*> peek (offset @"bufferCount" ptr)
-       <*> peek (offset @"createInfoIndex" ptr)
-       <*> peek (offset @"sysmemPixelFormat" ptr)
-       <*> peek (offset @"formatFeatures" ptr)
-       <*> peek (offset @"sysmemColorSpaceIndex" ptr)
-       <*> peek (offset @"samplerYcbcrConversionComponents" ptr)
-       <*> peek (offset @"suggestedYcbcrModel" ptr)
-       <*> peek (offset @"suggestedYcbcrRange" ptr)
-       <*> peek (offset @"suggestedXChromaOffset" ptr)
-       <*> peek (offset @"suggestedYChromaOffset" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"sType" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pNext" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"memoryTypeBits" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"bufferCount" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"createInfoIndex" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"sysmemPixelFormat" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"formatFeatures" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"sysmemColorSpaceIndex" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"samplerYcbcrConversionComponents" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"suggestedYcbcrModel" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"suggestedYcbcrRange" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"suggestedXChromaOffset" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"suggestedYChromaOffset" ptr)
 
   poke ptr val = do
     pokeField @"sType" ptr val

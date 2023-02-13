@@ -38,11 +38,11 @@ instance Storable VkPipelineViewportCoarseSampleOrderStateCreateInfoNV where
 
   peek ptr = 
     VkPipelineViewportCoarseSampleOrderStateCreateInfoNV
-       <$> peek (offset @"sType" ptr)
-       <*> peek (offset @"pNext" ptr)
-       <*> peek (offset @"sampleOrderType" ptr)
-       <*> peek (offset @"customSampleOrderCount" ptr)
-       <*> peek (offset @"pCustomSampleOrders" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"sType" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pNext" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"sampleOrderType" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"customSampleOrderCount" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pCustomSampleOrders" ptr)
 
   poke ptr val = do
     pokeField @"sType" ptr val

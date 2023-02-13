@@ -36,10 +36,10 @@ instance Storable VkSwapchainPresentModesCreateInfoEXT where
 
   peek ptr = 
     VkSwapchainPresentModesCreateInfoEXT
-       <$> peek (offset @"sType" ptr)
-       <*> peek (offset @"pNext" ptr)
-       <*> peek (offset @"presentModeCount" ptr)
-       <*> peek (offset @"pPresentModes" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"sType" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pNext" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"presentModeCount" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pPresentModes" ptr)
 
   poke ptr val = do
     pokeField @"sType" ptr val

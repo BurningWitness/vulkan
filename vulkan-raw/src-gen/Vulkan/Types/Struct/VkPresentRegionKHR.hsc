@@ -33,8 +33,8 @@ instance Storable VkPresentRegionKHR where
 
   peek ptr = 
     VkPresentRegionKHR
-       <$> peek (offset @"rectangleCount" ptr)
-       <*> peek (offset @"pRectangles" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"rectangleCount" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pRectangles" ptr)
 
   poke ptr val = do
     pokeField @"rectangleCount" ptr val

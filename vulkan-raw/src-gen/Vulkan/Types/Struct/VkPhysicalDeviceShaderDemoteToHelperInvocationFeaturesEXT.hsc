@@ -35,9 +35,9 @@ instance Storable VkPhysicalDeviceShaderDemoteToHelperInvocationFeaturesEXT wher
 
   peek ptr = 
     VkPhysicalDeviceShaderDemoteToHelperInvocationFeaturesEXT
-       <$> peek (offset @"sType" ptr)
-       <*> peek (offset @"pNext" ptr)
-       <*> peek (offset @"shaderDemoteToHelperInvocation" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"sType" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pNext" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"shaderDemoteToHelperInvocation" ptr)
 
   poke ptr val = do
     pokeField @"sType" ptr val

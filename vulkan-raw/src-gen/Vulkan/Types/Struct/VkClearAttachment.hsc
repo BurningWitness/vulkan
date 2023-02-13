@@ -33,9 +33,9 @@ instance Storable VkClearAttachment where
 
   peek ptr = 
     VkClearAttachment
-       <$> peek (offset @"aspectMask" ptr)
-       <*> peek (offset @"colorAttachment" ptr)
-       <*> peek (offset @"clearValue" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"aspectMask" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"colorAttachment" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"clearValue" ptr)
 
   poke ptr val = do
     pokeField @"aspectMask" ptr val

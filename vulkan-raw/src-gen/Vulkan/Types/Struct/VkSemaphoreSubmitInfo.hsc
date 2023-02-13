@@ -39,12 +39,12 @@ instance Storable VkSemaphoreSubmitInfo where
 
   peek ptr = 
     VkSemaphoreSubmitInfo
-       <$> peek (offset @"sType" ptr)
-       <*> peek (offset @"pNext" ptr)
-       <*> peek (offset @"semaphore" ptr)
-       <*> peek (offset @"value" ptr)
-       <*> peek (offset @"stageMask" ptr)
-       <*> peek (offset @"deviceIndex" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"sType" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pNext" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"semaphore" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"value" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"stageMask" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"deviceIndex" ptr)
 
   poke ptr val = do
     pokeField @"sType" ptr val

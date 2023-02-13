@@ -35,9 +35,9 @@ instance Storable VkDisplayEventInfoEXT where
 
   peek ptr = 
     VkDisplayEventInfoEXT
-       <$> peek (offset @"sType" ptr)
-       <*> peek (offset @"pNext" ptr)
-       <*> peek (offset @"displayEvent" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"sType" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pNext" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"displayEvent" ptr)
 
   poke ptr val = do
     pokeField @"sType" ptr val

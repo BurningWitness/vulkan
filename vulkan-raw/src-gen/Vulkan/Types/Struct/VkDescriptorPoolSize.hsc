@@ -32,8 +32,8 @@ instance Storable VkDescriptorPoolSize where
 
   peek ptr = 
     VkDescriptorPoolSize
-       <$> peek (offset @"type" ptr)
-       <*> peek (offset @"descriptorCount" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"type" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"descriptorCount" ptr)
 
   poke ptr val = do
     pokeField @"type" ptr val

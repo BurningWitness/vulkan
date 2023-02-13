@@ -48,19 +48,19 @@ instance Storable VkVideoEncodeH264CapabilitiesEXT where
 
   peek ptr = 
     VkVideoEncodeH264CapabilitiesEXT
-       <$> peek (offset @"sType" ptr)
-       <*> peek (offset @"pNext" ptr)
-       <*> peek (offset @"flags" ptr)
-       <*> peek (offset @"inputModeFlags" ptr)
-       <*> peek (offset @"outputModeFlags" ptr)
-       <*> peek (offset @"maxPPictureL0ReferenceCount" ptr)
-       <*> peek (offset @"maxBPictureL0ReferenceCount" ptr)
-       <*> peek (offset @"maxL1ReferenceCount" ptr)
-       <*> peek (offset @"motionVectorsOverPicBoundariesFlag" ptr)
-       <*> peek (offset @"maxBytesPerPicDenom" ptr)
-       <*> peek (offset @"maxBitsPerMbDenom" ptr)
-       <*> peek (offset @"log2MaxMvLengthHorizontal" ptr)
-       <*> peek (offset @"log2MaxMvLengthVertical" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"sType" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pNext" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"flags" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"inputModeFlags" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"outputModeFlags" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"maxPPictureL0ReferenceCount" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"maxBPictureL0ReferenceCount" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"maxL1ReferenceCount" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"motionVectorsOverPicBoundariesFlag" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"maxBytesPerPicDenom" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"maxBitsPerMbDenom" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"log2MaxMvLengthHorizontal" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"log2MaxMvLengthVertical" ptr)
 
   poke ptr val = do
     pokeField @"sType" ptr val

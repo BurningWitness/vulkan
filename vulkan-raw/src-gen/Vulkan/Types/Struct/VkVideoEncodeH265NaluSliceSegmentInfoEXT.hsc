@@ -38,11 +38,11 @@ instance Storable VkVideoEncodeH265NaluSliceSegmentInfoEXT where
 
   peek ptr = 
     VkVideoEncodeH265NaluSliceSegmentInfoEXT
-       <$> peek (offset @"sType" ptr)
-       <*> peek (offset @"pNext" ptr)
-       <*> peek (offset @"ctbCount" ptr)
-       <*> peek (offset @"pReferenceFinalLists" ptr)
-       <*> peek (offset @"pSliceSegmentHeaderStd" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"sType" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pNext" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"ctbCount" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pReferenceFinalLists" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pSliceSegmentHeaderStd" ptr)
 
   poke ptr val = do
     pokeField @"sType" ptr val

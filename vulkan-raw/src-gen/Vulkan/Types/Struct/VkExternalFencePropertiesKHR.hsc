@@ -38,11 +38,11 @@ instance Storable VkExternalFencePropertiesKHR where
 
   peek ptr = 
     VkExternalFencePropertiesKHR
-       <$> peek (offset @"sType" ptr)
-       <*> peek (offset @"pNext" ptr)
-       <*> peek (offset @"exportFromImportedHandleTypes" ptr)
-       <*> peek (offset @"compatibleHandleTypes" ptr)
-       <*> peek (offset @"externalFenceFeatures" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"sType" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pNext" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"exportFromImportedHandleTypes" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"compatibleHandleTypes" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"externalFenceFeatures" ptr)
 
   poke ptr val = do
     pokeField @"sType" ptr val

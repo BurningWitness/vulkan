@@ -36,11 +36,11 @@ instance Storable VkImageFormatProperties where
 
   peek ptr = 
     VkImageFormatProperties
-       <$> peek (offset @"maxExtent" ptr)
-       <*> peek (offset @"maxMipLevels" ptr)
-       <*> peek (offset @"maxArrayLayers" ptr)
-       <*> peek (offset @"sampleCounts" ptr)
-       <*> peek (offset @"maxResourceSize" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"maxExtent" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"maxMipLevels" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"maxArrayLayers" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"sampleCounts" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"maxResourceSize" ptr)
 
   poke ptr val = do
     pokeField @"maxExtent" ptr val

@@ -46,16 +46,16 @@ instance Storable VkDescriptorUpdateTemplateCreateInfo where
 
   peek ptr = 
     VkDescriptorUpdateTemplateCreateInfo
-       <$> peek (offset @"sType" ptr)
-       <*> peek (offset @"pNext" ptr)
-       <*> peek (offset @"flags" ptr)
-       <*> peek (offset @"descriptorUpdateEntryCount" ptr)
-       <*> peek (offset @"pDescriptorUpdateEntries" ptr)
-       <*> peek (offset @"templateType" ptr)
-       <*> peek (offset @"descriptorSetLayout" ptr)
-       <*> peek (offset @"pipelineBindPoint" ptr)
-       <*> peek (offset @"pipelineLayout" ptr)
-       <*> peek (offset @"set" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"sType" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pNext" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"flags" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"descriptorUpdateEntryCount" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pDescriptorUpdateEntries" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"templateType" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"descriptorSetLayout" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pipelineBindPoint" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pipelineLayout" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"set" ptr)
 
   poke ptr val = do
     pokeField @"sType" ptr val

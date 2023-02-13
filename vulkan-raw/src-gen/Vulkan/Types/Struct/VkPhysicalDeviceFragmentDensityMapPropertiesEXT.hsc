@@ -38,11 +38,11 @@ instance Storable VkPhysicalDeviceFragmentDensityMapPropertiesEXT where
 
   peek ptr = 
     VkPhysicalDeviceFragmentDensityMapPropertiesEXT
-       <$> peek (offset @"sType" ptr)
-       <*> peek (offset @"pNext" ptr)
-       <*> peek (offset @"minFragmentDensityTexelSize" ptr)
-       <*> peek (offset @"maxFragmentDensityTexelSize" ptr)
-       <*> peek (offset @"fragmentDensityInvocations" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"sType" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pNext" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"minFragmentDensityTexelSize" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"maxFragmentDensityTexelSize" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"fragmentDensityInvocations" ptr)
 
   poke ptr val = do
     pokeField @"sType" ptr val

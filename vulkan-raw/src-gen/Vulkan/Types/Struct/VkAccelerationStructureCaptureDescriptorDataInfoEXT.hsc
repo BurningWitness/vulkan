@@ -36,10 +36,10 @@ instance Storable VkAccelerationStructureCaptureDescriptorDataInfoEXT where
 
   peek ptr = 
     VkAccelerationStructureCaptureDescriptorDataInfoEXT
-       <$> peek (offset @"sType" ptr)
-       <*> peek (offset @"pNext" ptr)
-       <*> peek (offset @"accelerationStructure" ptr)
-       <*> peek (offset @"accelerationStructureNV" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"sType" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pNext" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"accelerationStructure" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"accelerationStructureNV" ptr)
 
   poke ptr val = do
     pokeField @"sType" ptr val

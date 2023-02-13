@@ -33,9 +33,9 @@ instance Storable VkMicromapTriangleEXT where
 
   peek ptr = 
     VkMicromapTriangleEXT
-       <$> peek (offset @"dataOffset" ptr)
-       <*> peek (offset @"subdivisionLevel" ptr)
-       <*> peek (offset @"format" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"dataOffset" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"subdivisionLevel" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"format" ptr)
 
   poke ptr val = do
     pokeField @"dataOffset" ptr val

@@ -46,19 +46,19 @@ instance Storable VkPhysicalDeviceOpticalFlowPropertiesNV where
 
   peek ptr = 
     VkPhysicalDeviceOpticalFlowPropertiesNV
-       <$> peek (offset @"sType" ptr)
-       <*> peek (offset @"pNext" ptr)
-       <*> peek (offset @"supportedOutputGridSizes" ptr)
-       <*> peek (offset @"supportedHintGridSizes" ptr)
-       <*> peek (offset @"hintSupported" ptr)
-       <*> peek (offset @"costSupported" ptr)
-       <*> peek (offset @"bidirectionalFlowSupported" ptr)
-       <*> peek (offset @"globalFlowSupported" ptr)
-       <*> peek (offset @"minWidth" ptr)
-       <*> peek (offset @"minHeight" ptr)
-       <*> peek (offset @"maxWidth" ptr)
-       <*> peek (offset @"maxHeight" ptr)
-       <*> peek (offset @"maxNumRegionsOfInterest" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"sType" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pNext" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"supportedOutputGridSizes" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"supportedHintGridSizes" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"hintSupported" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"costSupported" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"bidirectionalFlowSupported" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"globalFlowSupported" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"minWidth" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"minHeight" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"maxWidth" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"maxHeight" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"maxNumRegionsOfInterest" ptr)
 
   poke ptr val = do
     pokeField @"sType" ptr val

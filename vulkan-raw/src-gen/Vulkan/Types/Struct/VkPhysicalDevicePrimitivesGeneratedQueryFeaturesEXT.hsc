@@ -37,11 +37,11 @@ instance Storable VkPhysicalDevicePrimitivesGeneratedQueryFeaturesEXT where
 
   peek ptr = 
     VkPhysicalDevicePrimitivesGeneratedQueryFeaturesEXT
-       <$> peek (offset @"sType" ptr)
-       <*> peek (offset @"pNext" ptr)
-       <*> peek (offset @"primitivesGeneratedQuery" ptr)
-       <*> peek (offset @"primitivesGeneratedQueryWithRasterizerDiscard" ptr)
-       <*> peek (offset @"primitivesGeneratedQueryWithNonZeroStreams" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"sType" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pNext" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"primitivesGeneratedQuery" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"primitivesGeneratedQueryWithRasterizerDiscard" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"primitivesGeneratedQueryWithNonZeroStreams" ptr)
 
   poke ptr val = do
     pokeField @"sType" ptr val

@@ -37,10 +37,10 @@ instance Storable VkDeviceImageMemoryRequirements where
 
   peek ptr = 
     VkDeviceImageMemoryRequirements
-       <$> peek (offset @"sType" ptr)
-       <*> peek (offset @"pNext" ptr)
-       <*> peek (offset @"pCreateInfo" ptr)
-       <*> peek (offset @"planeAspect" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"sType" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pNext" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pCreateInfo" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"planeAspect" ptr)
 
   poke ptr val = do
     pokeField @"sType" ptr val

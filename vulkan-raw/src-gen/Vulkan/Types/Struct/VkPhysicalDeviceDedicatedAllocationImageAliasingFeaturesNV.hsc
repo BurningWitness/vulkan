@@ -35,9 +35,9 @@ instance Storable VkPhysicalDeviceDedicatedAllocationImageAliasingFeaturesNV whe
 
   peek ptr = 
     VkPhysicalDeviceDedicatedAllocationImageAliasingFeaturesNV
-       <$> peek (offset @"sType" ptr)
-       <*> peek (offset @"pNext" ptr)
-       <*> peek (offset @"dedicatedAllocationImageAliasing" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"sType" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pNext" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"dedicatedAllocationImageAliasing" ptr)
 
   poke ptr val = do
     pokeField @"sType" ptr val

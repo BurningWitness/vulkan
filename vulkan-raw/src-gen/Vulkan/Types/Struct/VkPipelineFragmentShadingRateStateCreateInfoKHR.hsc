@@ -37,10 +37,10 @@ instance Storable VkPipelineFragmentShadingRateStateCreateInfoKHR where
 
   peek ptr = 
     VkPipelineFragmentShadingRateStateCreateInfoKHR
-       <$> peek (offset @"sType" ptr)
-       <*> peek (offset @"pNext" ptr)
-       <*> peek (offset @"fragmentSize" ptr)
-       <*> peek (offset @"combinerOps" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"sType" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pNext" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"fragmentSize" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"combinerOps" ptr)
 
   poke ptr val = do
     pokeField @"sType" ptr val

@@ -35,9 +35,9 @@ instance Storable VkPhysicalDeviceShaderSubgroupUniformControlFlowFeaturesKHR wh
 
   peek ptr = 
     VkPhysicalDeviceShaderSubgroupUniformControlFlowFeaturesKHR
-       <$> peek (offset @"sType" ptr)
-       <*> peek (offset @"pNext" ptr)
-       <*> peek (offset @"shaderSubgroupUniformControlFlow" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"sType" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pNext" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"shaderSubgroupUniformControlFlow" ptr)
 
   poke ptr val = do
     pokeField @"sType" ptr val

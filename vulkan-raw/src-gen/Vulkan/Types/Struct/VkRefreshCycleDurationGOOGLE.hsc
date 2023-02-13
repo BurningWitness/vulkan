@@ -31,7 +31,7 @@ instance Storable VkRefreshCycleDurationGOOGLE where
 
   peek ptr = 
     VkRefreshCycleDurationGOOGLE
-       <$> peek (offset @"refreshDuration" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"refreshDuration" ptr)
 
 
   poke ptr val = do

@@ -43,16 +43,16 @@ instance Storable VkWriteDescriptorSet where
 
   peek ptr = 
     VkWriteDescriptorSet
-       <$> peek (offset @"sType" ptr)
-       <*> peek (offset @"pNext" ptr)
-       <*> peek (offset @"dstSet" ptr)
-       <*> peek (offset @"dstBinding" ptr)
-       <*> peek (offset @"dstArrayElement" ptr)
-       <*> peek (offset @"descriptorCount" ptr)
-       <*> peek (offset @"descriptorType" ptr)
-       <*> peek (offset @"pImageInfo" ptr)
-       <*> peek (offset @"pBufferInfo" ptr)
-       <*> peek (offset @"pTexelBufferView" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"sType" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pNext" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"dstSet" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"dstBinding" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"dstArrayElement" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"descriptorCount" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"descriptorType" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pImageInfo" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pBufferInfo" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pTexelBufferView" ptr)
 
   poke ptr val = do
     pokeField @"sType" ptr val

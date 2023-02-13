@@ -37,10 +37,10 @@ instance Storable VkExternalImageFormatPropertiesNV where
 
   peek ptr = 
     VkExternalImageFormatPropertiesNV
-       <$> peek (offset @"imageFormatProperties" ptr)
-       <*> peek (offset @"externalMemoryFeatures" ptr)
-       <*> peek (offset @"exportFromImportedHandleTypes" ptr)
-       <*> peek (offset @"compatibleHandleTypes" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"imageFormatProperties" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"externalMemoryFeatures" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"exportFromImportedHandleTypes" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"compatibleHandleTypes" ptr)
 
   poke ptr val = do
     pokeField @"imageFormatProperties" ptr val

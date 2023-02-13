@@ -38,12 +38,12 @@ instance Storable VkPhysicalDeviceImageDrmFormatModifierInfoEXT where
 
   peek ptr = 
     VkPhysicalDeviceImageDrmFormatModifierInfoEXT
-       <$> peek (offset @"sType" ptr)
-       <*> peek (offset @"pNext" ptr)
-       <*> peek (offset @"drmFormatModifier" ptr)
-       <*> peek (offset @"sharingMode" ptr)
-       <*> peek (offset @"queueFamilyIndexCount" ptr)
-       <*> peek (offset @"pQueueFamilyIndices" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"sType" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pNext" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"drmFormatModifier" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"sharingMode" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"queueFamilyIndexCount" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pQueueFamilyIndices" ptr)
 
   poke ptr val = do
     pokeField @"sType" ptr val

@@ -36,10 +36,10 @@ instance Storable VkVideoProfileListInfoKHR where
 
   peek ptr = 
     VkVideoProfileListInfoKHR
-       <$> peek (offset @"sType" ptr)
-       <*> peek (offset @"pNext" ptr)
-       <*> peek (offset @"profileCount" ptr)
-       <*> peek (offset @"pProfiles" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"sType" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pNext" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"profileCount" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pProfiles" ptr)
 
   poke ptr val = do
     pokeField @"sType" ptr val

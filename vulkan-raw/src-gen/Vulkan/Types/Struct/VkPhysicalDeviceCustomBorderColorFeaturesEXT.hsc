@@ -36,10 +36,10 @@ instance Storable VkPhysicalDeviceCustomBorderColorFeaturesEXT where
 
   peek ptr = 
     VkPhysicalDeviceCustomBorderColorFeaturesEXT
-       <$> peek (offset @"sType" ptr)
-       <*> peek (offset @"pNext" ptr)
-       <*> peek (offset @"customBorderColors" ptr)
-       <*> peek (offset @"customBorderColorWithoutFormat" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"sType" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pNext" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"customBorderColors" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"customBorderColorWithoutFormat" ptr)
 
   poke ptr val = do
     pokeField @"sType" ptr val

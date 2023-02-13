@@ -36,10 +36,10 @@ instance Storable VkBindImageMemorySwapchainInfoKHR where
 
   peek ptr = 
     VkBindImageMemorySwapchainInfoKHR
-       <$> peek (offset @"sType" ptr)
-       <*> peek (offset @"pNext" ptr)
-       <*> peek (offset @"swapchain" ptr)
-       <*> peek (offset @"imageIndex" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"sType" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pNext" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"swapchain" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"imageIndex" ptr)
 
   poke ptr val = do
     pokeField @"sType" ptr val

@@ -36,10 +36,10 @@ instance Storable VkVideoEncodeH265DpbSlotInfoEXT where
 
   peek ptr = 
     VkVideoEncodeH265DpbSlotInfoEXT
-       <$> peek (offset @"sType" ptr)
-       <*> peek (offset @"pNext" ptr)
-       <*> peek (offset @"slotIndex" ptr)
-       <*> peek (offset @"pStdReferenceInfo" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"sType" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pNext" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"slotIndex" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pStdReferenceInfo" ptr)
 
   poke ptr val = do
     pokeField @"sType" ptr val

@@ -35,9 +35,9 @@ instance Storable VkPhysicalDeviceRGBA10X6FormatsFeaturesEXT where
 
   peek ptr = 
     VkPhysicalDeviceRGBA10X6FormatsFeaturesEXT
-       <$> peek (offset @"sType" ptr)
-       <*> peek (offset @"pNext" ptr)
-       <*> peek (offset @"formatRgba10x6WithoutYCbCrSampler" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"sType" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pNext" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"formatRgba10x6WithoutYCbCrSampler" ptr)
 
   poke ptr val = do
     pokeField @"sType" ptr val

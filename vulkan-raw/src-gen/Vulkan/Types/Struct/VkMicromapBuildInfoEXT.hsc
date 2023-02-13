@@ -53,19 +53,19 @@ instance Storable VkMicromapBuildInfoEXT where
 
   peek ptr = 
     VkMicromapBuildInfoEXT
-       <$> peek (offset @"sType" ptr)
-       <*> peek (offset @"pNext" ptr)
-       <*> peek (offset @"type" ptr)
-       <*> peek (offset @"flags" ptr)
-       <*> peek (offset @"mode" ptr)
-       <*> peek (offset @"dstMicromap" ptr)
-       <*> peek (offset @"usageCountsCount" ptr)
-       <*> peek (offset @"pUsageCounts" ptr)
-       <*> peek (offset @"ppUsageCounts" ptr)
-       <*> peek (offset @"data" ptr)
-       <*> peek (offset @"scratchData" ptr)
-       <*> peek (offset @"triangleArray" ptr)
-       <*> peek (offset @"triangleArrayStride" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"sType" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pNext" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"type" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"flags" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"mode" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"dstMicromap" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"usageCountsCount" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pUsageCounts" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"ppUsageCounts" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"data" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"scratchData" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"triangleArray" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"triangleArrayStride" ptr)
 
   poke ptr val = do
     pokeField @"sType" ptr val

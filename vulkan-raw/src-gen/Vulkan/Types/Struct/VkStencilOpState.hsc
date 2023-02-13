@@ -37,13 +37,13 @@ instance Storable VkStencilOpState where
 
   peek ptr = 
     VkStencilOpState
-       <$> peek (offset @"failOp" ptr)
-       <*> peek (offset @"passOp" ptr)
-       <*> peek (offset @"depthFailOp" ptr)
-       <*> peek (offset @"compareOp" ptr)
-       <*> peek (offset @"compareMask" ptr)
-       <*> peek (offset @"writeMask" ptr)
-       <*> peek (offset @"reference" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"failOp" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"passOp" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"depthFailOp" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"compareOp" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"compareMask" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"writeMask" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"reference" ptr)
 
   poke ptr val = do
     pokeField @"failOp" ptr val

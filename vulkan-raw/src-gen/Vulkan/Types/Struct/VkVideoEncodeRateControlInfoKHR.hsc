@@ -40,12 +40,12 @@ instance Storable VkVideoEncodeRateControlInfoKHR where
 
   peek ptr = 
     VkVideoEncodeRateControlInfoKHR
-       <$> peek (offset @"sType" ptr)
-       <*> peek (offset @"pNext" ptr)
-       <*> peek (offset @"flags" ptr)
-       <*> peek (offset @"rateControlMode" ptr)
-       <*> peek (offset @"layerCount" ptr)
-       <*> peek (offset @"pLayerConfigs" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"sType" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pNext" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"flags" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"rateControlMode" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"layerCount" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pLayerConfigs" ptr)
 
   poke ptr val = do
     pokeField @"sType" ptr val

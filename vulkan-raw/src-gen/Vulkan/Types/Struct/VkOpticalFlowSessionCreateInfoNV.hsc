@@ -46,17 +46,17 @@ instance Storable VkOpticalFlowSessionCreateInfoNV where
 
   peek ptr = 
     VkOpticalFlowSessionCreateInfoNV
-       <$> peek (offset @"sType" ptr)
-       <*> peek (offset @"pNext" ptr)
-       <*> peek (offset @"width" ptr)
-       <*> peek (offset @"height" ptr)
-       <*> peek (offset @"imageFormat" ptr)
-       <*> peek (offset @"flowVectorFormat" ptr)
-       <*> peek (offset @"costFormat" ptr)
-       <*> peek (offset @"outputGridSize" ptr)
-       <*> peek (offset @"hintGridSize" ptr)
-       <*> peek (offset @"performanceLevel" ptr)
-       <*> peek (offset @"flags" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"sType" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pNext" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"width" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"height" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"imageFormat" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"flowVectorFormat" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"costFormat" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"outputGridSize" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"hintGridSize" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"performanceLevel" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"flags" ptr)
 
   poke ptr val = do
     pokeField @"sType" ptr val

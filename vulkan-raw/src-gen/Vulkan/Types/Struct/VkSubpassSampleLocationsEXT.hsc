@@ -33,8 +33,8 @@ instance Storable VkSubpassSampleLocationsEXT where
 
   peek ptr = 
     VkSubpassSampleLocationsEXT
-       <$> peek (offset @"subpassIndex" ptr)
-       <*> peek (offset @"sampleLocationsInfo" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"subpassIndex" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"sampleLocationsInfo" ptr)
 
   poke ptr val = do
     pokeField @"subpassIndex" ptr val

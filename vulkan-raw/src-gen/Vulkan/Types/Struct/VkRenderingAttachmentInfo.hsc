@@ -47,16 +47,16 @@ instance Storable VkRenderingAttachmentInfo where
 
   peek ptr = 
     VkRenderingAttachmentInfo
-       <$> peek (offset @"sType" ptr)
-       <*> peek (offset @"pNext" ptr)
-       <*> peek (offset @"imageView" ptr)
-       <*> peek (offset @"imageLayout" ptr)
-       <*> peek (offset @"resolveMode" ptr)
-       <*> peek (offset @"resolveImageView" ptr)
-       <*> peek (offset @"resolveImageLayout" ptr)
-       <*> peek (offset @"loadOp" ptr)
-       <*> peek (offset @"storeOp" ptr)
-       <*> peek (offset @"clearValue" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"sType" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pNext" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"imageView" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"imageLayout" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"resolveMode" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"resolveImageView" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"resolveImageLayout" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"loadOp" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"storeOp" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"clearValue" ptr)
 
   poke ptr val = do
     pokeField @"sType" ptr val

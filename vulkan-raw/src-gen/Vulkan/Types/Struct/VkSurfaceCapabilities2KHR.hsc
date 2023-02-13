@@ -35,9 +35,9 @@ instance Storable VkSurfaceCapabilities2KHR where
 
   peek ptr = 
     VkSurfaceCapabilities2KHR
-       <$> peek (offset @"sType" ptr)
-       <*> peek (offset @"pNext" ptr)
-       <*> peek (offset @"surfaceCapabilities" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"sType" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pNext" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"surfaceCapabilities" ptr)
 
   poke ptr val = do
     pokeField @"sType" ptr val

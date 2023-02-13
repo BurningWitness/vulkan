@@ -37,11 +37,11 @@ instance Storable VkVideoDecodeH265PictureInfoKHR where
 
   peek ptr = 
     VkVideoDecodeH265PictureInfoKHR
-       <$> peek (offset @"sType" ptr)
-       <*> peek (offset @"pNext" ptr)
-       <*> peek (offset @"pStdPictureInfo" ptr)
-       <*> peek (offset @"sliceSegmentCount" ptr)
-       <*> peek (offset @"pSliceSegmentOffsets" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"sType" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pNext" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pStdPictureInfo" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"sliceSegmentCount" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pSliceSegmentOffsets" ptr)
 
   poke ptr val = do
     pokeField @"sType" ptr val

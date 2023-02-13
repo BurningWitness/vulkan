@@ -39,12 +39,12 @@ instance Storable VkPhysicalDeviceDepthStencilResolveProperties where
 
   peek ptr = 
     VkPhysicalDeviceDepthStencilResolveProperties
-       <$> peek (offset @"sType" ptr)
-       <*> peek (offset @"pNext" ptr)
-       <*> peek (offset @"supportedDepthResolveModes" ptr)
-       <*> peek (offset @"supportedStencilResolveModes" ptr)
-       <*> peek (offset @"independentResolveNone" ptr)
-       <*> peek (offset @"independentResolve" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"sType" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pNext" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"supportedDepthResolveModes" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"supportedStencilResolveModes" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"independentResolveNone" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"independentResolve" ptr)
 
   poke ptr val = do
     pokeField @"sType" ptr val

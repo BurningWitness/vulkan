@@ -41,16 +41,16 @@ instance Storable VkPhysicalDeviceRayTracingPipelinePropertiesKHR where
 
   peek ptr = 
     VkPhysicalDeviceRayTracingPipelinePropertiesKHR
-       <$> peek (offset @"sType" ptr)
-       <*> peek (offset @"pNext" ptr)
-       <*> peek (offset @"shaderGroupHandleSize" ptr)
-       <*> peek (offset @"maxRayRecursionDepth" ptr)
-       <*> peek (offset @"maxShaderGroupStride" ptr)
-       <*> peek (offset @"shaderGroupBaseAlignment" ptr)
-       <*> peek (offset @"shaderGroupHandleCaptureReplaySize" ptr)
-       <*> peek (offset @"maxRayDispatchInvocationCount" ptr)
-       <*> peek (offset @"shaderGroupHandleAlignment" ptr)
-       <*> peek (offset @"maxRayHitAttributeSize" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"sType" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pNext" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"shaderGroupHandleSize" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"maxRayRecursionDepth" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"maxShaderGroupStride" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"shaderGroupBaseAlignment" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"shaderGroupHandleCaptureReplaySize" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"maxRayDispatchInvocationCount" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"shaderGroupHandleAlignment" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"maxRayHitAttributeSize" ptr)
 
   poke ptr val = do
     pokeField @"sType" ptr val

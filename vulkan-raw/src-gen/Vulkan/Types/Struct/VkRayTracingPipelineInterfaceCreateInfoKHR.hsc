@@ -35,10 +35,10 @@ instance Storable VkRayTracingPipelineInterfaceCreateInfoKHR where
 
   peek ptr = 
     VkRayTracingPipelineInterfaceCreateInfoKHR
-       <$> peek (offset @"sType" ptr)
-       <*> peek (offset @"pNext" ptr)
-       <*> peek (offset @"maxPipelineRayPayloadSize" ptr)
-       <*> peek (offset @"maxPipelineRayHitAttributeSize" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"sType" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pNext" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"maxPipelineRayPayloadSize" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"maxPipelineRayHitAttributeSize" ptr)
 
   poke ptr val = do
     pokeField @"sType" ptr val

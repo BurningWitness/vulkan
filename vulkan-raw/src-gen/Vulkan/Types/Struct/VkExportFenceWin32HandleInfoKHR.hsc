@@ -37,11 +37,11 @@ instance Storable VkExportFenceWin32HandleInfoKHR where
 
   peek ptr = 
     VkExportFenceWin32HandleInfoKHR
-       <$> peek (offset @"sType" ptr)
-       <*> peek (offset @"pNext" ptr)
-       <*> peek (offset @"pAttributes" ptr)
-       <*> peek (offset @"dwAccess" ptr)
-       <*> peek (offset @"name" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"sType" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pNext" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pAttributes" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"dwAccess" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"name" ptr)
 
   poke ptr val = do
     pokeField @"sType" ptr val

@@ -39,13 +39,13 @@ instance Storable VkPipelineVertexInputStateCreateInfo where
 
   peek ptr = 
     VkPipelineVertexInputStateCreateInfo
-       <$> peek (offset @"sType" ptr)
-       <*> peek (offset @"pNext" ptr)
-       <*> peek (offset @"flags" ptr)
-       <*> peek (offset @"vertexBindingDescriptionCount" ptr)
-       <*> peek (offset @"pVertexBindingDescriptions" ptr)
-       <*> peek (offset @"vertexAttributeDescriptionCount" ptr)
-       <*> peek (offset @"pVertexAttributeDescriptions" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"sType" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pNext" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"flags" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"vertexBindingDescriptionCount" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pVertexBindingDescriptions" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"vertexAttributeDescriptionCount" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pVertexAttributeDescriptions" ptr)
 
   poke ptr val = do
     pokeField @"sType" ptr val

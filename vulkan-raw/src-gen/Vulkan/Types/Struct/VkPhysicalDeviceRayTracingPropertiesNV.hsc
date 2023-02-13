@@ -41,16 +41,16 @@ instance Storable VkPhysicalDeviceRayTracingPropertiesNV where
 
   peek ptr = 
     VkPhysicalDeviceRayTracingPropertiesNV
-       <$> peek (offset @"sType" ptr)
-       <*> peek (offset @"pNext" ptr)
-       <*> peek (offset @"shaderGroupHandleSize" ptr)
-       <*> peek (offset @"maxRecursionDepth" ptr)
-       <*> peek (offset @"maxShaderGroupStride" ptr)
-       <*> peek (offset @"shaderGroupBaseAlignment" ptr)
-       <*> peek (offset @"maxGeometryCount" ptr)
-       <*> peek (offset @"maxInstanceCount" ptr)
-       <*> peek (offset @"maxTriangleCount" ptr)
-       <*> peek (offset @"maxDescriptorSetAccelerationStructures" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"sType" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pNext" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"shaderGroupHandleSize" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"maxRecursionDepth" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"maxShaderGroupStride" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"shaderGroupBaseAlignment" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"maxGeometryCount" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"maxInstanceCount" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"maxTriangleCount" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"maxDescriptorSetAccelerationStructures" ptr)
 
   poke ptr val = do
     pokeField @"sType" ptr val

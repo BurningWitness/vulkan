@@ -38,11 +38,11 @@ instance Storable VkAttachmentReference2KHR where
 
   peek ptr = 
     VkAttachmentReference2KHR
-       <$> peek (offset @"sType" ptr)
-       <*> peek (offset @"pNext" ptr)
-       <*> peek (offset @"attachment" ptr)
-       <*> peek (offset @"layout" ptr)
-       <*> peek (offset @"aspectMask" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"sType" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pNext" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"attachment" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"layout" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"aspectMask" ptr)
 
   poke ptr val = do
     pokeField @"sType" ptr val

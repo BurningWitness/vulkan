@@ -35,9 +35,9 @@ instance Storable VkPhysicalDeviceSynchronization2FeaturesKHR where
 
   peek ptr = 
     VkPhysicalDeviceSynchronization2FeaturesKHR
-       <$> peek (offset @"sType" ptr)
-       <*> peek (offset @"pNext" ptr)
-       <*> peek (offset @"synchronization2" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"sType" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pNext" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"synchronization2" ptr)
 
   poke ptr val = do
     pokeField @"sType" ptr val

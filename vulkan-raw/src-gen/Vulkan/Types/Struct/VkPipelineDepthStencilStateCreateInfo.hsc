@@ -45,18 +45,18 @@ instance Storable VkPipelineDepthStencilStateCreateInfo where
 
   peek ptr = 
     VkPipelineDepthStencilStateCreateInfo
-       <$> peek (offset @"sType" ptr)
-       <*> peek (offset @"pNext" ptr)
-       <*> peek (offset @"flags" ptr)
-       <*> peek (offset @"depthTestEnable" ptr)
-       <*> peek (offset @"depthWriteEnable" ptr)
-       <*> peek (offset @"depthCompareOp" ptr)
-       <*> peek (offset @"depthBoundsTestEnable" ptr)
-       <*> peek (offset @"stencilTestEnable" ptr)
-       <*> peek (offset @"front" ptr)
-       <*> peek (offset @"back" ptr)
-       <*> peek (offset @"minDepthBounds" ptr)
-       <*> peek (offset @"maxDepthBounds" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"sType" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pNext" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"flags" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"depthTestEnable" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"depthWriteEnable" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"depthCompareOp" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"depthBoundsTestEnable" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"stencilTestEnable" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"front" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"back" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"minDepthBounds" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"maxDepthBounds" ptr)
 
   poke ptr val = do
     pokeField @"sType" ptr val

@@ -42,13 +42,13 @@ instance Storable VkAccelerationStructureInfoNV where
 
   peek ptr = 
     VkAccelerationStructureInfoNV
-       <$> peek (offset @"sType" ptr)
-       <*> peek (offset @"pNext" ptr)
-       <*> peek (offset @"type" ptr)
-       <*> peek (offset @"flags" ptr)
-       <*> peek (offset @"instanceCount" ptr)
-       <*> peek (offset @"geometryCount" ptr)
-       <*> peek (offset @"pGeometries" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"sType" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pNext" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"type" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"flags" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"instanceCount" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"geometryCount" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pGeometries" ptr)
 
   poke ptr val = do
     pokeField @"sType" ptr val

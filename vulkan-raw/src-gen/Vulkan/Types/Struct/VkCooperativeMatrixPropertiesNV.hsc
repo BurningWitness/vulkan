@@ -44,16 +44,16 @@ instance Storable VkCooperativeMatrixPropertiesNV where
 
   peek ptr = 
     VkCooperativeMatrixPropertiesNV
-       <$> peek (offset @"sType" ptr)
-       <*> peek (offset @"pNext" ptr)
-       <*> peek (offset @"MSize" ptr)
-       <*> peek (offset @"NSize" ptr)
-       <*> peek (offset @"KSize" ptr)
-       <*> peek (offset @"AType" ptr)
-       <*> peek (offset @"BType" ptr)
-       <*> peek (offset @"CType" ptr)
-       <*> peek (offset @"DType" ptr)
-       <*> peek (offset @"scope" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"sType" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pNext" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"MSize" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"NSize" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"KSize" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"AType" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"BType" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"CType" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"DType" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"scope" ptr)
 
   poke ptr val = do
     pokeField @"sType" ptr val

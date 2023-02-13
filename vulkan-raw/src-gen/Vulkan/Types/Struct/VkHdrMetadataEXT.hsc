@@ -42,16 +42,16 @@ instance Storable VkHdrMetadataEXT where
 
   peek ptr = 
     VkHdrMetadataEXT
-       <$> peek (offset @"sType" ptr)
-       <*> peek (offset @"pNext" ptr)
-       <*> peek (offset @"displayPrimaryRed" ptr)
-       <*> peek (offset @"displayPrimaryGreen" ptr)
-       <*> peek (offset @"displayPrimaryBlue" ptr)
-       <*> peek (offset @"whitePoint" ptr)
-       <*> peek (offset @"maxLuminance" ptr)
-       <*> peek (offset @"minLuminance" ptr)
-       <*> peek (offset @"maxContentLightLevel" ptr)
-       <*> peek (offset @"maxFrameAverageLightLevel" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"sType" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pNext" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"displayPrimaryRed" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"displayPrimaryGreen" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"displayPrimaryBlue" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"whitePoint" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"maxLuminance" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"minLuminance" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"maxContentLightLevel" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"maxFrameAverageLightLevel" ptr)
 
   poke ptr val = do
     pokeField @"sType" ptr val

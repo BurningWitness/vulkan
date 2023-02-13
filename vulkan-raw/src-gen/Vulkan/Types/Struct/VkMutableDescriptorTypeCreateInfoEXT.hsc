@@ -36,10 +36,10 @@ instance Storable VkMutableDescriptorTypeCreateInfoEXT where
 
   peek ptr = 
     VkMutableDescriptorTypeCreateInfoEXT
-       <$> peek (offset @"sType" ptr)
-       <*> peek (offset @"pNext" ptr)
-       <*> peek (offset @"mutableDescriptorTypeListCount" ptr)
-       <*> peek (offset @"pMutableDescriptorTypeLists" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"sType" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pNext" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"mutableDescriptorTypeListCount" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pMutableDescriptorTypeLists" ptr)
 
   poke ptr val = do
     pokeField @"sType" ptr val

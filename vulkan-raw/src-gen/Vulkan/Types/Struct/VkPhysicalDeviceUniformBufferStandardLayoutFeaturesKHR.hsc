@@ -35,9 +35,9 @@ instance Storable VkPhysicalDeviceUniformBufferStandardLayoutFeaturesKHR where
 
   peek ptr = 
     VkPhysicalDeviceUniformBufferStandardLayoutFeaturesKHR
-       <$> peek (offset @"sType" ptr)
-       <*> peek (offset @"pNext" ptr)
-       <*> peek (offset @"uniformBufferStandardLayout" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"sType" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pNext" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"uniformBufferStandardLayout" ptr)
 
   poke ptr val = do
     pokeField @"sType" ptr val

@@ -40,12 +40,12 @@ instance Storable VkGraphicsShaderGroupCreateInfoNV where
 
   peek ptr = 
     VkGraphicsShaderGroupCreateInfoNV
-       <$> peek (offset @"sType" ptr)
-       <*> peek (offset @"pNext" ptr)
-       <*> peek (offset @"stageCount" ptr)
-       <*> peek (offset @"pStages" ptr)
-       <*> peek (offset @"pVertexInputState" ptr)
-       <*> peek (offset @"pTessellationState" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"sType" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pNext" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"stageCount" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pStages" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pVertexInputState" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pTessellationState" ptr)
 
   poke ptr val = do
     pokeField @"sType" ptr val

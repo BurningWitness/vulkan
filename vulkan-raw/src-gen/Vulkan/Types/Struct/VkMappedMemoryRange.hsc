@@ -36,11 +36,11 @@ instance Storable VkMappedMemoryRange where
 
   peek ptr = 
     VkMappedMemoryRange
-       <$> peek (offset @"sType" ptr)
-       <*> peek (offset @"pNext" ptr)
-       <*> peek (offset @"memory" ptr)
-       <*> peek (offset @"offset" ptr)
-       <*> peek (offset @"size" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"sType" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pNext" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"memory" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"offset" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"size" ptr)
 
   poke ptr val = do
     pokeField @"sType" ptr val

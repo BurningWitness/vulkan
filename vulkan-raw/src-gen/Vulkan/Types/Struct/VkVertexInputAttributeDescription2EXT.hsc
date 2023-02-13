@@ -38,12 +38,12 @@ instance Storable VkVertexInputAttributeDescription2EXT where
 
   peek ptr = 
     VkVertexInputAttributeDescription2EXT
-       <$> peek (offset @"sType" ptr)
-       <*> peek (offset @"pNext" ptr)
-       <*> peek (offset @"location" ptr)
-       <*> peek (offset @"binding" ptr)
-       <*> peek (offset @"format" ptr)
-       <*> peek (offset @"offset" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"sType" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pNext" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"location" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"binding" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"format" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"offset" ptr)
 
   poke ptr val = do
     pokeField @"sType" ptr val

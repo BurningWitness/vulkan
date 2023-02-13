@@ -39,12 +39,12 @@ instance Storable VkPipelineExecutableStatisticKHR where
 
   peek ptr = 
     VkPipelineExecutableStatisticKHR
-       <$> peek (offset @"sType" ptr)
-       <*> peek (offset @"pNext" ptr)
-       <*> peek (offset @"name" ptr)
-       <*> peek (offset @"description" ptr)
-       <*> peek (offset @"format" ptr)
-       <*> peek (offset @"value" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"sType" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pNext" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"name" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"description" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"format" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"value" ptr)
 
   poke ptr val = do
     pokeField @"sType" ptr val

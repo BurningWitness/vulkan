@@ -33,9 +33,9 @@ instance Storable VkDescriptorImageInfo where
 
   peek ptr = 
     VkDescriptorImageInfo
-       <$> peek (offset @"sampler" ptr)
-       <*> peek (offset @"imageView" ptr)
-       <*> peek (offset @"imageLayout" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"sampler" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"imageView" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"imageLayout" ptr)
 
   poke ptr val = do
     pokeField @"sampler" ptr val

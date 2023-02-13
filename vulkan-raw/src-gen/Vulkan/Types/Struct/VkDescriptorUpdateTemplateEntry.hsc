@@ -37,12 +37,12 @@ instance Storable VkDescriptorUpdateTemplateEntry where
 
   peek ptr = 
     VkDescriptorUpdateTemplateEntry
-       <$> peek (offset @"dstBinding" ptr)
-       <*> peek (offset @"dstArrayElement" ptr)
-       <*> peek (offset @"descriptorCount" ptr)
-       <*> peek (offset @"descriptorType" ptr)
-       <*> peek (offset @"offset" ptr)
-       <*> peek (offset @"stride" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"dstBinding" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"dstArrayElement" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"descriptorCount" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"descriptorType" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"offset" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"stride" ptr)
 
   poke ptr val = do
     pokeField @"dstBinding" ptr val

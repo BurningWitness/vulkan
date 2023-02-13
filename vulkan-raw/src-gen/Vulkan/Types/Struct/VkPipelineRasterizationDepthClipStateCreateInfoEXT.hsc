@@ -37,10 +37,10 @@ instance Storable VkPipelineRasterizationDepthClipStateCreateInfoEXT where
 
   peek ptr = 
     VkPipelineRasterizationDepthClipStateCreateInfoEXT
-       <$> peek (offset @"sType" ptr)
-       <*> peek (offset @"pNext" ptr)
-       <*> peek (offset @"flags" ptr)
-       <*> peek (offset @"depthClipEnable" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"sType" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pNext" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"flags" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"depthClipEnable" ptr)
 
   poke ptr val = do
     pokeField @"sType" ptr val

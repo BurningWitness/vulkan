@@ -38,11 +38,11 @@ instance Storable VkColorBlendAdvancedEXT where
 
   peek ptr = 
     VkColorBlendAdvancedEXT
-       <$> peek (offset @"advancedBlendOp" ptr)
-       <*> peek (offset @"srcPremultiplied" ptr)
-       <*> peek (offset @"dstPremultiplied" ptr)
-       <*> peek (offset @"blendOverlap" ptr)
-       <*> peek (offset @"clampResults" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"advancedBlendOp" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"srcPremultiplied" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"dstPremultiplied" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"blendOverlap" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"clampResults" ptr)
 
   poke ptr val = do
     pokeField @"advancedBlendOp" ptr val

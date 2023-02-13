@@ -32,8 +32,8 @@ instance Storable VkMemoryHeap where
 
   peek ptr = 
     VkMemoryHeap
-       <$> peek (offset @"size" ptr)
-       <*> peek (offset @"flags" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"size" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"flags" ptr)
 
   poke ptr val = do
     pokeField @"size" ptr val

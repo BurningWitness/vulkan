@@ -44,15 +44,15 @@ instance Storable VkAccelerationStructureGeometryTrianglesDataKHR where
 
   peek ptr = 
     VkAccelerationStructureGeometryTrianglesDataKHR
-       <$> peek (offset @"sType" ptr)
-       <*> peek (offset @"pNext" ptr)
-       <*> peek (offset @"vertexFormat" ptr)
-       <*> peek (offset @"vertexData" ptr)
-       <*> peek (offset @"vertexStride" ptr)
-       <*> peek (offset @"maxVertex" ptr)
-       <*> peek (offset @"indexType" ptr)
-       <*> peek (offset @"indexData" ptr)
-       <*> peek (offset @"transformData" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"sType" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pNext" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"vertexFormat" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"vertexData" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"vertexStride" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"maxVertex" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"indexType" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"indexData" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"transformData" ptr)
 
   poke ptr val = do
     pokeField @"sType" ptr val

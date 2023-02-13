@@ -30,8 +30,8 @@ instance Storable VkClearDepthStencilValue where
 
   peek ptr = 
     VkClearDepthStencilValue
-       <$> peek (offset @"depth" ptr)
-       <*> peek (offset @"stencil" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"depth" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"stencil" ptr)
 
   poke ptr val = do
     pokeField @"depth" ptr val

@@ -35,10 +35,10 @@ instance Storable VkAmigoProfilingSubmitInfoSEC where
 
   peek ptr = 
     VkAmigoProfilingSubmitInfoSEC
-       <$> peek (offset @"sType" ptr)
-       <*> peek (offset @"pNext" ptr)
-       <*> peek (offset @"firstDrawTimestamp" ptr)
-       <*> peek (offset @"swapBufferTimestamp" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"sType" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pNext" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"firstDrawTimestamp" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"swapBufferTimestamp" ptr)
 
   poke ptr val = do
     pokeField @"sType" ptr val

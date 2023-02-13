@@ -39,13 +39,13 @@ instance Storable VkRenderPassBeginInfo where
 
   peek ptr = 
     VkRenderPassBeginInfo
-       <$> peek (offset @"sType" ptr)
-       <*> peek (offset @"pNext" ptr)
-       <*> peek (offset @"renderPass" ptr)
-       <*> peek (offset @"framebuffer" ptr)
-       <*> peek (offset @"renderArea" ptr)
-       <*> peek (offset @"clearValueCount" ptr)
-       <*> peek (offset @"pClearValues" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"sType" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pNext" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"renderPass" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"framebuffer" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"renderArea" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"clearValueCount" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pClearValues" ptr)
 
   poke ptr val = do
     pokeField @"sType" ptr val

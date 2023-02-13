@@ -38,13 +38,13 @@ instance Storable VkPhysicalDeviceInlineUniformBlockPropertiesEXT where
 
   peek ptr = 
     VkPhysicalDeviceInlineUniformBlockPropertiesEXT
-       <$> peek (offset @"sType" ptr)
-       <*> peek (offset @"pNext" ptr)
-       <*> peek (offset @"maxInlineUniformBlockSize" ptr)
-       <*> peek (offset @"maxPerStageDescriptorInlineUniformBlocks" ptr)
-       <*> peek (offset @"maxPerStageDescriptorUpdateAfterBindInlineUniformBlocks" ptr)
-       <*> peek (offset @"maxDescriptorSetInlineUniformBlocks" ptr)
-       <*> peek (offset @"maxDescriptorSetUpdateAfterBindInlineUniformBlocks" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"sType" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pNext" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"maxInlineUniformBlockSize" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"maxPerStageDescriptorInlineUniformBlocks" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"maxPerStageDescriptorUpdateAfterBindInlineUniformBlocks" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"maxDescriptorSetInlineUniformBlocks" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"maxDescriptorSetUpdateAfterBindInlineUniformBlocks" ptr)
 
   poke ptr val = do
     pokeField @"sType" ptr val

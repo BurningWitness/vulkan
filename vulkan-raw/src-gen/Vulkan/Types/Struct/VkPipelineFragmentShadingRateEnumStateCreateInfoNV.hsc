@@ -39,11 +39,11 @@ instance Storable VkPipelineFragmentShadingRateEnumStateCreateInfoNV where
 
   peek ptr = 
     VkPipelineFragmentShadingRateEnumStateCreateInfoNV
-       <$> peek (offset @"sType" ptr)
-       <*> peek (offset @"pNext" ptr)
-       <*> peek (offset @"shadingRateType" ptr)
-       <*> peek (offset @"shadingRate" ptr)
-       <*> peek (offset @"combinerOps" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"sType" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pNext" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"shadingRateType" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"shadingRate" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"combinerOps" ptr)
 
   poke ptr val = do
     pokeField @"sType" ptr val

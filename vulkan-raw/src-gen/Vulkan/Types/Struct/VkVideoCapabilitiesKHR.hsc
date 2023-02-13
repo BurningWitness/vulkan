@@ -46,17 +46,17 @@ instance Storable VkVideoCapabilitiesKHR where
 
   peek ptr = 
     VkVideoCapabilitiesKHR
-       <$> peek (offset @"sType" ptr)
-       <*> peek (offset @"pNext" ptr)
-       <*> peek (offset @"flags" ptr)
-       <*> peek (offset @"minBitstreamBufferOffsetAlignment" ptr)
-       <*> peek (offset @"minBitstreamBufferSizeAlignment" ptr)
-       <*> peek (offset @"pictureAccessGranularity" ptr)
-       <*> peek (offset @"minCodedExtent" ptr)
-       <*> peek (offset @"maxCodedExtent" ptr)
-       <*> peek (offset @"maxDpbSlots" ptr)
-       <*> peek (offset @"maxActiveReferencePictures" ptr)
-       <*> peek (offset @"stdHeaderVersion" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"sType" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pNext" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"flags" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"minBitstreamBufferOffsetAlignment" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"minBitstreamBufferSizeAlignment" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pictureAccessGranularity" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"minCodedExtent" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"maxCodedExtent" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"maxDpbSlots" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"maxActiveReferencePictures" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"stdHeaderVersion" ptr)
 
   poke ptr val = do
     pokeField @"sType" ptr val

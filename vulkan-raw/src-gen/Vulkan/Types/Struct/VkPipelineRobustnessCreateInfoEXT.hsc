@@ -39,12 +39,12 @@ instance Storable VkPipelineRobustnessCreateInfoEXT where
 
   peek ptr = 
     VkPipelineRobustnessCreateInfoEXT
-       <$> peek (offset @"sType" ptr)
-       <*> peek (offset @"pNext" ptr)
-       <*> peek (offset @"storageBuffers" ptr)
-       <*> peek (offset @"uniformBuffers" ptr)
-       <*> peek (offset @"vertexInputs" ptr)
-       <*> peek (offset @"images" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"sType" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pNext" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"storageBuffers" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"uniformBuffers" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"vertexInputs" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"images" ptr)
 
   poke ptr val = do
     pokeField @"sType" ptr val

@@ -46,20 +46,20 @@ instance Storable VkPhysicalDeviceVulkan11Features where
 
   peek ptr = 
     VkPhysicalDeviceVulkan11Features
-       <$> peek (offset @"sType" ptr)
-       <*> peek (offset @"pNext" ptr)
-       <*> peek (offset @"storageBuffer16BitAccess" ptr)
-       <*> peek (offset @"uniformAndStorageBuffer16BitAccess" ptr)
-       <*> peek (offset @"storagePushConstant16" ptr)
-       <*> peek (offset @"storageInputOutput16" ptr)
-       <*> peek (offset @"multiview" ptr)
-       <*> peek (offset @"multiviewGeometryShader" ptr)
-       <*> peek (offset @"multiviewTessellationShader" ptr)
-       <*> peek (offset @"variablePointersStorageBuffer" ptr)
-       <*> peek (offset @"variablePointers" ptr)
-       <*> peek (offset @"protectedMemory" ptr)
-       <*> peek (offset @"samplerYcbcrConversion" ptr)
-       <*> peek (offset @"shaderDrawParameters" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"sType" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pNext" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"storageBuffer16BitAccess" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"uniformAndStorageBuffer16BitAccess" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"storagePushConstant16" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"storageInputOutput16" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"multiview" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"multiviewGeometryShader" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"multiviewTessellationShader" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"variablePointersStorageBuffer" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"variablePointers" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"protectedMemory" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"samplerYcbcrConversion" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"shaderDrawParameters" ptr)
 
   poke ptr val = do
     pokeField @"sType" ptr val

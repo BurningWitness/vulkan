@@ -47,22 +47,22 @@ instance Storable VkPhysicalDeviceShaderCorePropertiesAMD where
 
   peek ptr = 
     VkPhysicalDeviceShaderCorePropertiesAMD
-       <$> peek (offset @"sType" ptr)
-       <*> peek (offset @"pNext" ptr)
-       <*> peek (offset @"shaderEngineCount" ptr)
-       <*> peek (offset @"shaderArraysPerEngineCount" ptr)
-       <*> peek (offset @"computeUnitsPerShaderArray" ptr)
-       <*> peek (offset @"simdPerComputeUnit" ptr)
-       <*> peek (offset @"wavefrontsPerSimd" ptr)
-       <*> peek (offset @"wavefrontSize" ptr)
-       <*> peek (offset @"sgprsPerSimd" ptr)
-       <*> peek (offset @"minSgprAllocation" ptr)
-       <*> peek (offset @"maxSgprAllocation" ptr)
-       <*> peek (offset @"sgprAllocationGranularity" ptr)
-       <*> peek (offset @"vgprsPerSimd" ptr)
-       <*> peek (offset @"minVgprAllocation" ptr)
-       <*> peek (offset @"maxVgprAllocation" ptr)
-       <*> peek (offset @"vgprAllocationGranularity" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"sType" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pNext" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"shaderEngineCount" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"shaderArraysPerEngineCount" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"computeUnitsPerShaderArray" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"simdPerComputeUnit" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"wavefrontsPerSimd" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"wavefrontSize" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"sgprsPerSimd" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"minSgprAllocation" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"maxSgprAllocation" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"sgprAllocationGranularity" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"vgprsPerSimd" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"minVgprAllocation" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"maxVgprAllocation" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"vgprAllocationGranularity" ptr)
 
   poke ptr val = do
     pokeField @"sType" ptr val

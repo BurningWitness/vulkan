@@ -39,12 +39,12 @@ instance Storable VkGraphicsPipelineShaderGroupsCreateInfoNV where
 
   peek ptr = 
     VkGraphicsPipelineShaderGroupsCreateInfoNV
-       <$> peek (offset @"sType" ptr)
-       <*> peek (offset @"pNext" ptr)
-       <*> peek (offset @"groupCount" ptr)
-       <*> peek (offset @"pGroups" ptr)
-       <*> peek (offset @"pipelineCount" ptr)
-       <*> peek (offset @"pPipelines" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"sType" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pNext" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"groupCount" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pGroups" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pipelineCount" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pPipelines" ptr)
 
   poke ptr val = do
     pokeField @"sType" ptr val

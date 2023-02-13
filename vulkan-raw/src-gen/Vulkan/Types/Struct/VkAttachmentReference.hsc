@@ -31,8 +31,8 @@ instance Storable VkAttachmentReference where
 
   peek ptr = 
     VkAttachmentReference
-       <$> peek (offset @"attachment" ptr)
-       <*> peek (offset @"layout" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"attachment" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"layout" ptr)
 
   poke ptr val = do
     pokeField @"attachment" ptr val

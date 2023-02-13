@@ -34,9 +34,9 @@ instance Storable VkPipelineShaderStageRequiredSubgroupSizeCreateInfo where
 
   peek ptr = 
     VkPipelineShaderStageRequiredSubgroupSizeCreateInfo
-       <$> peek (offset @"sType" ptr)
-       <*> peek (offset @"pNext" ptr)
-       <*> peek (offset @"requiredSubgroupSize" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"sType" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pNext" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"requiredSubgroupSize" ptr)
 
   poke ptr val = do
     pokeField @"sType" ptr val

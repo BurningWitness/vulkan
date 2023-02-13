@@ -37,12 +37,12 @@ instance Storable VkPhysicalDevicePCIBusInfoPropertiesEXT where
 
   peek ptr = 
     VkPhysicalDevicePCIBusInfoPropertiesEXT
-       <$> peek (offset @"sType" ptr)
-       <*> peek (offset @"pNext" ptr)
-       <*> peek (offset @"pciDomain" ptr)
-       <*> peek (offset @"pciBus" ptr)
-       <*> peek (offset @"pciDevice" ptr)
-       <*> peek (offset @"pciFunction" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"sType" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pNext" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pciDomain" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pciBus" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pciDevice" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pciFunction" ptr)
 
   poke ptr val = do
     pokeField @"sType" ptr val

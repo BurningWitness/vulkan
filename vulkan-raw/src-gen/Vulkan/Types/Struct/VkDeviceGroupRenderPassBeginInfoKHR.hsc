@@ -37,11 +37,11 @@ instance Storable VkDeviceGroupRenderPassBeginInfoKHR where
 
   peek ptr = 
     VkDeviceGroupRenderPassBeginInfoKHR
-       <$> peek (offset @"sType" ptr)
-       <*> peek (offset @"pNext" ptr)
-       <*> peek (offset @"deviceMask" ptr)
-       <*> peek (offset @"deviceRenderAreaCount" ptr)
-       <*> peek (offset @"pDeviceRenderAreas" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"sType" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pNext" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"deviceMask" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"deviceRenderAreaCount" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pDeviceRenderAreas" ptr)
 
   poke ptr val = do
     pokeField @"sType" ptr val

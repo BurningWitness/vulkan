@@ -35,9 +35,9 @@ instance Storable VkSamplerCaptureDescriptorDataInfoEXT where
 
   peek ptr = 
     VkSamplerCaptureDescriptorDataInfoEXT
-       <$> peek (offset @"sType" ptr)
-       <*> peek (offset @"pNext" ptr)
-       <*> peek (offset @"sampler" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"sType" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pNext" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"sampler" ptr)
 
   poke ptr val = do
     pokeField @"sType" ptr val

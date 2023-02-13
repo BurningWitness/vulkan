@@ -40,14 +40,14 @@ instance Storable VkPipelineColorBlendAttachmentState where
 
   peek ptr = 
     VkPipelineColorBlendAttachmentState
-       <$> peek (offset @"blendEnable" ptr)
-       <*> peek (offset @"srcColorBlendFactor" ptr)
-       <*> peek (offset @"dstColorBlendFactor" ptr)
-       <*> peek (offset @"colorBlendOp" ptr)
-       <*> peek (offset @"srcAlphaBlendFactor" ptr)
-       <*> peek (offset @"dstAlphaBlendFactor" ptr)
-       <*> peek (offset @"alphaBlendOp" ptr)
-       <*> peek (offset @"colorWriteMask" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"blendEnable" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"srcColorBlendFactor" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"dstColorBlendFactor" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"colorBlendOp" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"srcAlphaBlendFactor" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"dstAlphaBlendFactor" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"alphaBlendOp" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"colorWriteMask" ptr)
 
   poke ptr val = do
     pokeField @"blendEnable" ptr val

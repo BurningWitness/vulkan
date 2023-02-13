@@ -38,11 +38,11 @@ instance Storable VkSubpassDescriptionDepthStencilResolve where
 
   peek ptr = 
     VkSubpassDescriptionDepthStencilResolve
-       <$> peek (offset @"sType" ptr)
-       <*> peek (offset @"pNext" ptr)
-       <*> peek (offset @"depthResolveMode" ptr)
-       <*> peek (offset @"stencilResolveMode" ptr)
-       <*> peek (offset @"pDepthStencilResolveAttachment" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"sType" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pNext" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"depthResolveMode" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"stencilResolveMode" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pDepthStencilResolveAttachment" ptr)
 
   poke ptr val = do
     pokeField @"sType" ptr val

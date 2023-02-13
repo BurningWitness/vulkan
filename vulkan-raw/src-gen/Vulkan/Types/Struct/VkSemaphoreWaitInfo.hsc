@@ -39,12 +39,12 @@ instance Storable VkSemaphoreWaitInfo where
 
   peek ptr = 
     VkSemaphoreWaitInfo
-       <$> peek (offset @"sType" ptr)
-       <*> peek (offset @"pNext" ptr)
-       <*> peek (offset @"flags" ptr)
-       <*> peek (offset @"semaphoreCount" ptr)
-       <*> peek (offset @"pSemaphores" ptr)
-       <*> peek (offset @"pValues" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"sType" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pNext" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"flags" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"semaphoreCount" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pSemaphores" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pValues" ptr)
 
   poke ptr val = do
     pokeField @"sType" ptr val

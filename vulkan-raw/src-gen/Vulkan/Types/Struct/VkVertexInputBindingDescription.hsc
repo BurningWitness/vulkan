@@ -32,9 +32,9 @@ instance Storable VkVertexInputBindingDescription where
 
   peek ptr = 
     VkVertexInputBindingDescription
-       <$> peek (offset @"binding" ptr)
-       <*> peek (offset @"stride" ptr)
-       <*> peek (offset @"inputRate" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"binding" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"stride" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"inputRate" ptr)
 
   poke ptr val = do
     pokeField @"binding" ptr val

@@ -34,9 +34,9 @@ instance Storable VkMicromapVersionInfoEXT where
 
   peek ptr = 
     VkMicromapVersionInfoEXT
-       <$> peek (offset @"sType" ptr)
-       <*> peek (offset @"pNext" ptr)
-       <*> peek (offset @"pVersionData" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"sType" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pNext" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pVersionData" ptr)
 
   poke ptr val = do
     pokeField @"sType" ptr val

@@ -35,9 +35,9 @@ instance Storable VkPhysicalDeviceVideoFormatInfoKHR where
 
   peek ptr = 
     VkPhysicalDeviceVideoFormatInfoKHR
-       <$> peek (offset @"sType" ptr)
-       <*> peek (offset @"pNext" ptr)
-       <*> peek (offset @"imageUsage" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"sType" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pNext" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"imageUsage" ptr)
 
   poke ptr val = do
     pokeField @"sType" ptr val

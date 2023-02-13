@@ -32,9 +32,9 @@ instance Storable VkImageSubresource where
 
   peek ptr = 
     VkImageSubresource
-       <$> peek (offset @"aspectMask" ptr)
-       <*> peek (offset @"mipLevel" ptr)
-       <*> peek (offset @"arrayLayer" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"aspectMask" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"mipLevel" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"arrayLayer" ptr)
 
   poke ptr val = do
     pokeField @"aspectMask" ptr val

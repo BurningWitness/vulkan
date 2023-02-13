@@ -39,12 +39,12 @@ instance Storable VkRenderPassSampleLocationsBeginInfoEXT where
 
   peek ptr = 
     VkRenderPassSampleLocationsBeginInfoEXT
-       <$> peek (offset @"sType" ptr)
-       <*> peek (offset @"pNext" ptr)
-       <*> peek (offset @"attachmentInitialSampleLocationsCount" ptr)
-       <*> peek (offset @"pAttachmentInitialSampleLocations" ptr)
-       <*> peek (offset @"postSubpassSampleLocationsCount" ptr)
-       <*> peek (offset @"pPostSubpassSampleLocations" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"sType" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pNext" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"attachmentInitialSampleLocationsCount" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pAttachmentInitialSampleLocations" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"postSubpassSampleLocationsCount" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pPostSubpassSampleLocations" ptr)
 
   poke ptr val = do
     pokeField @"sType" ptr val

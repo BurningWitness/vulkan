@@ -39,11 +39,11 @@ instance Storable VkVideoEncodeUsageInfoKHR where
 
   peek ptr = 
     VkVideoEncodeUsageInfoKHR
-       <$> peek (offset @"sType" ptr)
-       <*> peek (offset @"pNext" ptr)
-       <*> peek (offset @"videoUsageHints" ptr)
-       <*> peek (offset @"videoContentHints" ptr)
-       <*> peek (offset @"tuningMode" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"sType" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pNext" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"videoUsageHints" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"videoContentHints" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"tuningMode" ptr)
 
   poke ptr val = do
     pokeField @"sType" ptr val

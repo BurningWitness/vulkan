@@ -36,10 +36,10 @@ instance Storable VkPhysicalDeviceRayTracingMotionBlurFeaturesNV where
 
   peek ptr = 
     VkPhysicalDeviceRayTracingMotionBlurFeaturesNV
-       <$> peek (offset @"sType" ptr)
-       <*> peek (offset @"pNext" ptr)
-       <*> peek (offset @"rayTracingMotionBlur" ptr)
-       <*> peek (offset @"rayTracingMotionBlurPipelineTraceRaysIndirect" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"sType" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pNext" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"rayTracingMotionBlur" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"rayTracingMotionBlurPipelineTraceRaysIndirect" ptr)
 
   poke ptr val = do
     pokeField @"sType" ptr val

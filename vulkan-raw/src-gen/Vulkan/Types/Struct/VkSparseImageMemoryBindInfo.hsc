@@ -33,9 +33,9 @@ instance Storable VkSparseImageMemoryBindInfo where
 
   peek ptr = 
     VkSparseImageMemoryBindInfo
-       <$> peek (offset @"image" ptr)
-       <*> peek (offset @"bindCount" ptr)
-       <*> peek (offset @"pBinds" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"image" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"bindCount" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pBinds" ptr)
 
   poke ptr val = do
     pokeField @"image" ptr val

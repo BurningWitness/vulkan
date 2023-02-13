@@ -37,11 +37,11 @@ instance Storable VkPhysicalDeviceFragmentShadingRateEnumsFeaturesNV where
 
   peek ptr = 
     VkPhysicalDeviceFragmentShadingRateEnumsFeaturesNV
-       <$> peek (offset @"sType" ptr)
-       <*> peek (offset @"pNext" ptr)
-       <*> peek (offset @"fragmentShadingRateEnums" ptr)
-       <*> peek (offset @"supersampleFragmentShadingRates" ptr)
-       <*> peek (offset @"noInvocationFragmentShadingRates" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"sType" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pNext" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"fragmentShadingRateEnums" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"supersampleFragmentShadingRates" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"noInvocationFragmentShadingRates" ptr)
 
   poke ptr val = do
     pokeField @"sType" ptr val

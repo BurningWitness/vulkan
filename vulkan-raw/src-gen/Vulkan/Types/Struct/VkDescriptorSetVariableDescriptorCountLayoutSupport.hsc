@@ -34,9 +34,9 @@ instance Storable VkDescriptorSetVariableDescriptorCountLayoutSupport where
 
   peek ptr = 
     VkDescriptorSetVariableDescriptorCountLayoutSupport
-       <$> peek (offset @"sType" ptr)
-       <*> peek (offset @"pNext" ptr)
-       <*> peek (offset @"maxVariableDescriptorCount" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"sType" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pNext" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"maxVariableDescriptorCount" ptr)
 
   poke ptr val = do
     pokeField @"sType" ptr val

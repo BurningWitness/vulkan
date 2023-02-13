@@ -37,10 +37,10 @@ instance Storable VkImagePipeSurfaceCreateInfoFUCHSIA where
 
   peek ptr = 
     VkImagePipeSurfaceCreateInfoFUCHSIA
-       <$> peek (offset @"sType" ptr)
-       <*> peek (offset @"pNext" ptr)
-       <*> peek (offset @"flags" ptr)
-       <*> peek (offset @"imagePipeHandle" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"sType" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pNext" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"flags" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"imagePipeHandle" ptr)
 
   poke ptr val = do
     pokeField @"sType" ptr val

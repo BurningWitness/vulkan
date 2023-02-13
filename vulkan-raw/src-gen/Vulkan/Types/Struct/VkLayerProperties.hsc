@@ -32,10 +32,10 @@ instance Storable VkLayerProperties where
 
   peek ptr = 
     VkLayerProperties
-       <$> peek (offset @"layerName" ptr)
-       <*> peek (offset @"specVersion" ptr)
-       <*> peek (offset @"implementationVersion" ptr)
-       <*> peek (offset @"description" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"layerName" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"specVersion" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"implementationVersion" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"description" ptr)
 
   poke ptr val = do
     pokeField @"layerName" ptr val

@@ -34,9 +34,9 @@ instance Storable VkDrmFormatModifierPropertiesEXT where
 
   peek ptr = 
     VkDrmFormatModifierPropertiesEXT
-       <$> peek (offset @"drmFormatModifier" ptr)
-       <*> peek (offset @"drmFormatModifierPlaneCount" ptr)
-       <*> peek (offset @"drmFormatModifierTilingFeatures" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"drmFormatModifier" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"drmFormatModifierPlaneCount" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"drmFormatModifierTilingFeatures" ptr)
 
   poke ptr val = do
     pokeField @"drmFormatModifier" ptr val

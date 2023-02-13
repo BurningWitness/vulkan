@@ -35,9 +35,9 @@ instance Storable VkDeviceFaultAddressInfoEXT where
 
   peek ptr = 
     VkDeviceFaultAddressInfoEXT
-       <$> peek (offset @"addressType" ptr)
-       <*> peek (offset @"reportedAddress" ptr)
-       <*> peek (offset @"addressPrecision" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"addressType" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"reportedAddress" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"addressPrecision" ptr)
 
   poke ptr val = do
     pokeField @"addressType" ptr val

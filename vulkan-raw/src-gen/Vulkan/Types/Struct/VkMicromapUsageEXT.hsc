@@ -33,9 +33,9 @@ instance Storable VkMicromapUsageEXT where
 
   peek ptr = 
     VkMicromapUsageEXT
-       <$> peek (offset @"count" ptr)
-       <*> peek (offset @"subdivisionLevel" ptr)
-       <*> peek (offset @"format" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"count" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"subdivisionLevel" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"format" ptr)
 
   poke ptr val = do
     pokeField @"count" ptr val

@@ -38,11 +38,11 @@ instance Storable VkExportMetalSharedEventInfoEXT where
 
   peek ptr = 
     VkExportMetalSharedEventInfoEXT
-       <$> peek (offset @"sType" ptr)
-       <*> peek (offset @"pNext" ptr)
-       <*> peek (offset @"semaphore" ptr)
-       <*> peek (offset @"event" ptr)
-       <*> peek (offset @"mtlSharedEvent" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"sType" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pNext" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"semaphore" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"event" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"mtlSharedEvent" ptr)
 
   poke ptr val = do
     pokeField @"sType" ptr val

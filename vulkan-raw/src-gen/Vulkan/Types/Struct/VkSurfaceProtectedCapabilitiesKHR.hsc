@@ -35,9 +35,9 @@ instance Storable VkSurfaceProtectedCapabilitiesKHR where
 
   peek ptr = 
     VkSurfaceProtectedCapabilitiesKHR
-       <$> peek (offset @"sType" ptr)
-       <*> peek (offset @"pNext" ptr)
-       <*> peek (offset @"supportsProtected" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"sType" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pNext" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"supportsProtected" ptr)
 
   poke ptr val = do
     pokeField @"sType" ptr val

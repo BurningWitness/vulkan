@@ -36,12 +36,12 @@ instance Storable VkPerformanceCounterResultKHR where
 
   peek ptr = 
     VkPerformanceCounterResultKHR
-       <$> peek (offset @"int32" ptr)
-       <*> peek (offset @"int64" ptr)
-       <*> peek (offset @"uint32" ptr)
-       <*> peek (offset @"uint64" ptr)
-       <*> peek (offset @"float32" ptr)
-       <*> peek (offset @"float64" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"int32" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"int64" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"uint32" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"uint64" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"float32" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"float64" ptr)
 
   poke ptr val = do
     pokeField @"int32" ptr val

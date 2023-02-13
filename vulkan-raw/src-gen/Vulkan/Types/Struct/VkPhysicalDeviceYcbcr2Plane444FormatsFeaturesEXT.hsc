@@ -35,9 +35,9 @@ instance Storable VkPhysicalDeviceYcbcr2Plane444FormatsFeaturesEXT where
 
   peek ptr = 
     VkPhysicalDeviceYcbcr2Plane444FormatsFeaturesEXT
-       <$> peek (offset @"sType" ptr)
-       <*> peek (offset @"pNext" ptr)
-       <*> peek (offset @"ycbcr2plane444Formats" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"sType" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pNext" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"ycbcr2plane444Formats" ptr)
 
   poke ptr val = do
     pokeField @"sType" ptr val

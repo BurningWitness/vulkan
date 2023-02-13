@@ -38,11 +38,11 @@ instance Storable VkCopyMicromapInfoEXT where
 
   peek ptr = 
     VkCopyMicromapInfoEXT
-       <$> peek (offset @"sType" ptr)
-       <*> peek (offset @"pNext" ptr)
-       <*> peek (offset @"src" ptr)
-       <*> peek (offset @"dst" ptr)
-       <*> peek (offset @"mode" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"sType" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pNext" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"src" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"dst" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"mode" ptr)
 
   poke ptr val = do
     pokeField @"sType" ptr val

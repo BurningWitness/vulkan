@@ -48,19 +48,19 @@ instance Storable VkGeometryTrianglesNV where
 
   peek ptr = 
     VkGeometryTrianglesNV
-       <$> peek (offset @"sType" ptr)
-       <*> peek (offset @"pNext" ptr)
-       <*> peek (offset @"vertexData" ptr)
-       <*> peek (offset @"vertexOffset" ptr)
-       <*> peek (offset @"vertexCount" ptr)
-       <*> peek (offset @"vertexStride" ptr)
-       <*> peek (offset @"vertexFormat" ptr)
-       <*> peek (offset @"indexData" ptr)
-       <*> peek (offset @"indexOffset" ptr)
-       <*> peek (offset @"indexCount" ptr)
-       <*> peek (offset @"indexType" ptr)
-       <*> peek (offset @"transformData" ptr)
-       <*> peek (offset @"transformOffset" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"sType" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pNext" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"vertexData" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"vertexOffset" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"vertexCount" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"vertexStride" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"vertexFormat" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"indexData" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"indexOffset" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"indexCount" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"indexType" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"transformData" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"transformOffset" ptr)
 
   poke ptr val = do
     pokeField @"sType" ptr val

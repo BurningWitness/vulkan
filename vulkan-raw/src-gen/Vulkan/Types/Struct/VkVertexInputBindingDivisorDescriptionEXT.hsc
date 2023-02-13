@@ -32,8 +32,8 @@ instance Storable VkVertexInputBindingDivisorDescriptionEXT where
 
   peek ptr = 
     VkVertexInputBindingDivisorDescriptionEXT
-       <$> peek (offset @"binding" ptr)
-       <*> peek (offset @"divisor" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"binding" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"divisor" ptr)
 
   poke ptr val = do
     pokeField @"binding" ptr val

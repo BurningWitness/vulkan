@@ -40,15 +40,15 @@ instance Storable VkPhysicalDeviceProperties where
 
   peek ptr = 
     VkPhysicalDeviceProperties
-       <$> peek (offset @"apiVersion" ptr)
-       <*> peek (offset @"driverVersion" ptr)
-       <*> peek (offset @"vendorID" ptr)
-       <*> peek (offset @"deviceID" ptr)
-       <*> peek (offset @"deviceType" ptr)
-       <*> peek (offset @"deviceName" ptr)
-       <*> peek (offset @"pipelineCacheUUID" ptr)
-       <*> peek (offset @"limits" ptr)
-       <*> peek (offset @"sparseProperties" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"apiVersion" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"driverVersion" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"vendorID" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"deviceID" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"deviceType" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"deviceName" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pipelineCacheUUID" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"limits" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"sparseProperties" ptr)
 
   poke ptr val = do
     pokeField @"apiVersion" ptr val

@@ -35,9 +35,9 @@ instance Storable VkPhysicalDeviceInvocationMaskFeaturesHUAWEI where
 
   peek ptr = 
     VkPhysicalDeviceInvocationMaskFeaturesHUAWEI
-       <$> peek (offset @"sType" ptr)
-       <*> peek (offset @"pNext" ptr)
-       <*> peek (offset @"invocationMask" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"sType" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pNext" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"invocationMask" ptr)
 
   poke ptr val = do
     pokeField @"sType" ptr val

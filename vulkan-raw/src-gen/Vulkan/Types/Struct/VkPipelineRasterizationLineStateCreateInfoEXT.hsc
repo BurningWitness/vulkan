@@ -39,12 +39,12 @@ instance Storable VkPipelineRasterizationLineStateCreateInfoEXT where
 
   peek ptr = 
     VkPipelineRasterizationLineStateCreateInfoEXT
-       <$> peek (offset @"sType" ptr)
-       <*> peek (offset @"pNext" ptr)
-       <*> peek (offset @"lineRasterizationMode" ptr)
-       <*> peek (offset @"stippledLineEnable" ptr)
-       <*> peek (offset @"lineStippleFactor" ptr)
-       <*> peek (offset @"lineStipplePattern" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"sType" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pNext" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"lineRasterizationMode" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"stippledLineEnable" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"lineStippleFactor" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"lineStipplePattern" ptr)
 
   poke ptr val = do
     pokeField @"sType" ptr val

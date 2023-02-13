@@ -35,9 +35,9 @@ instance Storable VkVideoEncodeH264ProfileInfoEXT where
 
   peek ptr = 
     VkVideoEncodeH264ProfileInfoEXT
-       <$> peek (offset @"sType" ptr)
-       <*> peek (offset @"pNext" ptr)
-       <*> peek (offset @"stdProfileIdc" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"sType" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pNext" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"stdProfileIdc" ptr)
 
   poke ptr val = do
     pokeField @"sType" ptr val

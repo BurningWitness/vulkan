@@ -37,11 +37,11 @@ instance Storable VkDebugUtilsObjectNameInfoEXT where
 
   peek ptr = 
     VkDebugUtilsObjectNameInfoEXT
-       <$> peek (offset @"sType" ptr)
-       <*> peek (offset @"pNext" ptr)
-       <*> peek (offset @"objectType" ptr)
-       <*> peek (offset @"objectHandle" ptr)
-       <*> peek (offset @"pObjectName" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"sType" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pNext" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"objectType" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"objectHandle" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pObjectName" ptr)
 
   poke ptr val = do
     pokeField @"sType" ptr val

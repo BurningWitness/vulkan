@@ -41,15 +41,15 @@ instance Storable VkPipelineMultisampleStateCreateInfo where
 
   peek ptr = 
     VkPipelineMultisampleStateCreateInfo
-       <$> peek (offset @"sType" ptr)
-       <*> peek (offset @"pNext" ptr)
-       <*> peek (offset @"flags" ptr)
-       <*> peek (offset @"rasterizationSamples" ptr)
-       <*> peek (offset @"sampleShadingEnable" ptr)
-       <*> peek (offset @"minSampleShading" ptr)
-       <*> peek (offset @"pSampleMask" ptr)
-       <*> peek (offset @"alphaToCoverageEnable" ptr)
-       <*> peek (offset @"alphaToOneEnable" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"sType" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pNext" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"flags" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"rasterizationSamples" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"sampleShadingEnable" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"minSampleShading" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pSampleMask" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"alphaToCoverageEnable" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"alphaToOneEnable" ptr)
 
   poke ptr val = do
     pokeField @"sType" ptr val

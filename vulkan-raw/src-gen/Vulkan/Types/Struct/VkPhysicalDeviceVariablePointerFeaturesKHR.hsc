@@ -36,10 +36,10 @@ instance Storable VkPhysicalDeviceVariablePointerFeaturesKHR where
 
   peek ptr = 
     VkPhysicalDeviceVariablePointerFeaturesKHR
-       <$> peek (offset @"sType" ptr)
-       <*> peek (offset @"pNext" ptr)
-       <*> peek (offset @"variablePointersStorageBuffer" ptr)
-       <*> peek (offset @"variablePointers" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"sType" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pNext" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"variablePointersStorageBuffer" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"variablePointers" ptr)
 
   poke ptr val = do
     pokeField @"sType" ptr val

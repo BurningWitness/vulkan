@@ -35,9 +35,9 @@ instance Storable VkPhysicalDeviceCoherentMemoryFeaturesAMD where
 
   peek ptr = 
     VkPhysicalDeviceCoherentMemoryFeaturesAMD
-       <$> peek (offset @"sType" ptr)
-       <*> peek (offset @"pNext" ptr)
-       <*> peek (offset @"deviceCoherentMemory" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"sType" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pNext" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"deviceCoherentMemory" ptr)
 
   poke ptr val = do
     pokeField @"sType" ptr val

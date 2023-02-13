@@ -38,12 +38,12 @@ instance Storable VkPhysicalDevice16BitStorageFeaturesKHR where
 
   peek ptr = 
     VkPhysicalDevice16BitStorageFeaturesKHR
-       <$> peek (offset @"sType" ptr)
-       <*> peek (offset @"pNext" ptr)
-       <*> peek (offset @"storageBuffer16BitAccess" ptr)
-       <*> peek (offset @"uniformAndStorageBuffer16BitAccess" ptr)
-       <*> peek (offset @"storagePushConstant16" ptr)
-       <*> peek (offset @"storageInputOutput16" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"sType" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pNext" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"storageBuffer16BitAccess" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"uniformAndStorageBuffer16BitAccess" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"storagePushConstant16" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"storageInputOutput16" ptr)
 
   poke ptr val = do
     pokeField @"sType" ptr val

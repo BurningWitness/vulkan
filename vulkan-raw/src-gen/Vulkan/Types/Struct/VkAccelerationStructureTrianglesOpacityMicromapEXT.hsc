@@ -46,16 +46,16 @@ instance Storable VkAccelerationStructureTrianglesOpacityMicromapEXT where
 
   peek ptr = 
     VkAccelerationStructureTrianglesOpacityMicromapEXT
-       <$> peek (offset @"sType" ptr)
-       <*> peek (offset @"pNext" ptr)
-       <*> peek (offset @"indexType" ptr)
-       <*> peek (offset @"indexBuffer" ptr)
-       <*> peek (offset @"indexStride" ptr)
-       <*> peek (offset @"baseTriangle" ptr)
-       <*> peek (offset @"usageCountsCount" ptr)
-       <*> peek (offset @"pUsageCounts" ptr)
-       <*> peek (offset @"ppUsageCounts" ptr)
-       <*> peek (offset @"micromap" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"sType" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pNext" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"indexType" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"indexBuffer" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"indexStride" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"baseTriangle" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"usageCountsCount" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pUsageCounts" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"ppUsageCounts" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"micromap" ptr)
 
   poke ptr val = do
     pokeField @"sType" ptr val

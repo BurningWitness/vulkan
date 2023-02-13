@@ -35,9 +35,9 @@ instance Storable VkPipelineRasterizationProvokingVertexStateCreateInfoEXT where
 
   peek ptr = 
     VkPipelineRasterizationProvokingVertexStateCreateInfoEXT
-       <$> peek (offset @"sType" ptr)
-       <*> peek (offset @"pNext" ptr)
-       <*> peek (offset @"provokingVertexMode" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"sType" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pNext" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"provokingVertexMode" ptr)
 
   poke ptr val = do
     pokeField @"sType" ptr val

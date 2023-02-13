@@ -38,11 +38,11 @@ instance Storable VkBindBufferMemoryInfo where
 
   peek ptr = 
     VkBindBufferMemoryInfo
-       <$> peek (offset @"sType" ptr)
-       <*> peek (offset @"pNext" ptr)
-       <*> peek (offset @"buffer" ptr)
-       <*> peek (offset @"memory" ptr)
-       <*> peek (offset @"memoryOffset" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"sType" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pNext" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"buffer" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"memory" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"memoryOffset" ptr)
 
   poke ptr val = do
     pokeField @"sType" ptr val

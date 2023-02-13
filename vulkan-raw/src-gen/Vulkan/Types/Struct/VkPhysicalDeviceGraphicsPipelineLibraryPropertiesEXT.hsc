@@ -36,10 +36,10 @@ instance Storable VkPhysicalDeviceGraphicsPipelineLibraryPropertiesEXT where
 
   peek ptr = 
     VkPhysicalDeviceGraphicsPipelineLibraryPropertiesEXT
-       <$> peek (offset @"sType" ptr)
-       <*> peek (offset @"pNext" ptr)
-       <*> peek (offset @"graphicsPipelineLibraryFastLinking" ptr)
-       <*> peek (offset @"graphicsPipelineLibraryIndependentInterpolationDecoration" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"sType" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pNext" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"graphicsPipelineLibraryFastLinking" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"graphicsPipelineLibraryIndependentInterpolationDecoration" ptr)
 
   poke ptr val = do
     pokeField @"sType" ptr val

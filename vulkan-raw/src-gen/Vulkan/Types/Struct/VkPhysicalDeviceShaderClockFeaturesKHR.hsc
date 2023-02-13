@@ -36,10 +36,10 @@ instance Storable VkPhysicalDeviceShaderClockFeaturesKHR where
 
   peek ptr = 
     VkPhysicalDeviceShaderClockFeaturesKHR
-       <$> peek (offset @"sType" ptr)
-       <*> peek (offset @"pNext" ptr)
-       <*> peek (offset @"shaderSubgroupClock" ptr)
-       <*> peek (offset @"shaderDeviceClock" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"sType" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pNext" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"shaderSubgroupClock" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"shaderDeviceClock" ptr)
 
   poke ptr val = do
     pokeField @"sType" ptr val

@@ -36,10 +36,10 @@ instance Storable VkCommandBufferSubmitInfoKHR where
 
   peek ptr = 
     VkCommandBufferSubmitInfoKHR
-       <$> peek (offset @"sType" ptr)
-       <*> peek (offset @"pNext" ptr)
-       <*> peek (offset @"commandBuffer" ptr)
-       <*> peek (offset @"deviceMask" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"sType" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pNext" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"commandBuffer" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"deviceMask" ptr)
 
   poke ptr val = do
     pokeField @"sType" ptr val

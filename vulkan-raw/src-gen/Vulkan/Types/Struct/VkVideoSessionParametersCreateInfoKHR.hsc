@@ -38,11 +38,11 @@ instance Storable VkVideoSessionParametersCreateInfoKHR where
 
   peek ptr = 
     VkVideoSessionParametersCreateInfoKHR
-       <$> peek (offset @"sType" ptr)
-       <*> peek (offset @"pNext" ptr)
-       <*> peek (offset @"flags" ptr)
-       <*> peek (offset @"videoSessionParametersTemplate" ptr)
-       <*> peek (offset @"videoSession" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"sType" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pNext" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"flags" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"videoSessionParametersTemplate" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"videoSession" ptr)
 
   poke ptr val = do
     pokeField @"sType" ptr val

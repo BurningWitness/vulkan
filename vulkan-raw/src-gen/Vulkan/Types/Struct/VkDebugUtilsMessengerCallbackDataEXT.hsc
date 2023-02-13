@@ -46,18 +46,18 @@ instance Storable VkDebugUtilsMessengerCallbackDataEXT where
 
   peek ptr = 
     VkDebugUtilsMessengerCallbackDataEXT
-       <$> peek (offset @"sType" ptr)
-       <*> peek (offset @"pNext" ptr)
-       <*> peek (offset @"flags" ptr)
-       <*> peek (offset @"pMessageIdName" ptr)
-       <*> peek (offset @"messageIdNumber" ptr)
-       <*> peek (offset @"pMessage" ptr)
-       <*> peek (offset @"queueLabelCount" ptr)
-       <*> peek (offset @"pQueueLabels" ptr)
-       <*> peek (offset @"cmdBufLabelCount" ptr)
-       <*> peek (offset @"pCmdBufLabels" ptr)
-       <*> peek (offset @"objectCount" ptr)
-       <*> peek (offset @"pObjects" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"sType" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pNext" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"flags" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pMessageIdName" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"messageIdNumber" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pMessage" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"queueLabelCount" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pQueueLabels" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"cmdBufLabelCount" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pCmdBufLabels" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"objectCount" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pObjects" ptr)
 
   poke ptr val = do
     pokeField @"sType" ptr val

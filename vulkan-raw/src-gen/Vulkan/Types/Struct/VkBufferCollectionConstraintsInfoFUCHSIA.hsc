@@ -38,13 +38,13 @@ instance Storable VkBufferCollectionConstraintsInfoFUCHSIA where
 
   peek ptr = 
     VkBufferCollectionConstraintsInfoFUCHSIA
-       <$> peek (offset @"sType" ptr)
-       <*> peek (offset @"pNext" ptr)
-       <*> peek (offset @"minBufferCount" ptr)
-       <*> peek (offset @"maxBufferCount" ptr)
-       <*> peek (offset @"minBufferCountForCamping" ptr)
-       <*> peek (offset @"minBufferCountForDedicatedSlack" ptr)
-       <*> peek (offset @"minBufferCountForSharedSlack" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"sType" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pNext" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"minBufferCount" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"maxBufferCount" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"minBufferCountForCamping" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"minBufferCountForDedicatedSlack" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"minBufferCountForSharedSlack" ptr)
 
   poke ptr val = do
     pokeField @"sType" ptr val

@@ -36,10 +36,10 @@ instance Storable VkMultiviewPerViewAttributesInfoNVX where
 
   peek ptr = 
     VkMultiviewPerViewAttributesInfoNVX
-       <$> peek (offset @"sType" ptr)
-       <*> peek (offset @"pNext" ptr)
-       <*> peek (offset @"perViewAttributes" ptr)
-       <*> peek (offset @"perViewAttributesPositionXOnly" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"sType" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pNext" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"perViewAttributes" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"perViewAttributesPositionXOnly" ptr)
 
   poke ptr val = do
     pokeField @"sType" ptr val

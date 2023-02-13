@@ -35,9 +35,9 @@ instance Storable VkExternalBufferProperties where
 
   peek ptr = 
     VkExternalBufferProperties
-       <$> peek (offset @"sType" ptr)
-       <*> peek (offset @"pNext" ptr)
-       <*> peek (offset @"externalMemoryProperties" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"sType" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pNext" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"externalMemoryProperties" ptr)
 
   poke ptr val = do
     pokeField @"sType" ptr val

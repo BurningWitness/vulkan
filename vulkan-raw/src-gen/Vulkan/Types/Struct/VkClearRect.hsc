@@ -32,9 +32,9 @@ instance Storable VkClearRect where
 
   peek ptr = 
     VkClearRect
-       <$> peek (offset @"rect" ptr)
-       <*> peek (offset @"baseArrayLayer" ptr)
-       <*> peek (offset @"layerCount" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"rect" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"baseArrayLayer" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"layerCount" ptr)
 
   poke ptr val = do
     pokeField @"rect" ptr val

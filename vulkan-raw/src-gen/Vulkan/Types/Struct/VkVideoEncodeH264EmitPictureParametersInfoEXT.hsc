@@ -38,12 +38,12 @@ instance Storable VkVideoEncodeH264EmitPictureParametersInfoEXT where
 
   peek ptr = 
     VkVideoEncodeH264EmitPictureParametersInfoEXT
-       <$> peek (offset @"sType" ptr)
-       <*> peek (offset @"pNext" ptr)
-       <*> peek (offset @"spsId" ptr)
-       <*> peek (offset @"emitSpsEnable" ptr)
-       <*> peek (offset @"ppsIdEntryCount" ptr)
-       <*> peek (offset @"ppsIdEntries" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"sType" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pNext" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"spsId" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"emitSpsEnable" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"ppsIdEntryCount" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"ppsIdEntries" ptr)
 
   poke ptr val = do
     pokeField @"sType" ptr val

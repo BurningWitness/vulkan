@@ -35,9 +35,9 @@ instance Storable VkImageSparseMemoryRequirementsInfo2 where
 
   peek ptr = 
     VkImageSparseMemoryRequirementsInfo2
-       <$> peek (offset @"sType" ptr)
-       <*> peek (offset @"pNext" ptr)
-       <*> peek (offset @"image" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"sType" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pNext" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"image" ptr)
 
   poke ptr val = do
     pokeField @"sType" ptr val

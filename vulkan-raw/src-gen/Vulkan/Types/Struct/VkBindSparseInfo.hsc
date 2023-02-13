@@ -45,18 +45,18 @@ instance Storable VkBindSparseInfo where
 
   peek ptr = 
     VkBindSparseInfo
-       <$> peek (offset @"sType" ptr)
-       <*> peek (offset @"pNext" ptr)
-       <*> peek (offset @"waitSemaphoreCount" ptr)
-       <*> peek (offset @"pWaitSemaphores" ptr)
-       <*> peek (offset @"bufferBindCount" ptr)
-       <*> peek (offset @"pBufferBinds" ptr)
-       <*> peek (offset @"imageOpaqueBindCount" ptr)
-       <*> peek (offset @"pImageOpaqueBinds" ptr)
-       <*> peek (offset @"imageBindCount" ptr)
-       <*> peek (offset @"pImageBinds" ptr)
-       <*> peek (offset @"signalSemaphoreCount" ptr)
-       <*> peek (offset @"pSignalSemaphores" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"sType" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pNext" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"waitSemaphoreCount" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pWaitSemaphores" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"bufferBindCount" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pBufferBinds" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"imageOpaqueBindCount" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pImageOpaqueBinds" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"imageBindCount" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pImageBinds" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"signalSemaphoreCount" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pSignalSemaphores" ptr)
 
   poke ptr val = do
     pokeField @"sType" ptr val

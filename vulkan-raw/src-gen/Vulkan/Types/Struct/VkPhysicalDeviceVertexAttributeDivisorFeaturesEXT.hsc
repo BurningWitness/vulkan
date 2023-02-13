@@ -36,10 +36,10 @@ instance Storable VkPhysicalDeviceVertexAttributeDivisorFeaturesEXT where
 
   peek ptr = 
     VkPhysicalDeviceVertexAttributeDivisorFeaturesEXT
-       <$> peek (offset @"sType" ptr)
-       <*> peek (offset @"pNext" ptr)
-       <*> peek (offset @"vertexAttributeInstanceRateDivisor" ptr)
-       <*> peek (offset @"vertexAttributeInstanceRateZeroDivisor" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"sType" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pNext" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"vertexAttributeInstanceRateDivisor" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"vertexAttributeInstanceRateZeroDivisor" ptr)
 
   poke ptr val = do
     pokeField @"sType" ptr val

@@ -40,13 +40,13 @@ instance Storable VkRayTracingShaderGroupCreateInfoNV where
 
   peek ptr = 
     VkRayTracingShaderGroupCreateInfoNV
-       <$> peek (offset @"sType" ptr)
-       <*> peek (offset @"pNext" ptr)
-       <*> peek (offset @"type" ptr)
-       <*> peek (offset @"generalShader" ptr)
-       <*> peek (offset @"closestHitShader" ptr)
-       <*> peek (offset @"anyHitShader" ptr)
-       <*> peek (offset @"intersectionShader" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"sType" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pNext" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"type" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"generalShader" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"closestHitShader" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"anyHitShader" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"intersectionShader" ptr)
 
   poke ptr val = do
     pokeField @"sType" ptr val

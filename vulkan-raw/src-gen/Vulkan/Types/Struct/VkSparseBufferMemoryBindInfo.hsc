@@ -33,9 +33,9 @@ instance Storable VkSparseBufferMemoryBindInfo where
 
   peek ptr = 
     VkSparseBufferMemoryBindInfo
-       <$> peek (offset @"buffer" ptr)
-       <*> peek (offset @"bindCount" ptr)
-       <*> peek (offset @"pBinds" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"buffer" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"bindCount" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pBinds" ptr)
 
   poke ptr val = do
     pokeField @"buffer" ptr val

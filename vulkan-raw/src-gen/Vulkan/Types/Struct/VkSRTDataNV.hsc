@@ -46,22 +46,22 @@ instance Storable VkSRTDataNV where
 
   peek ptr = 
     VkSRTDataNV
-       <$> peek (offset @"sx" ptr)
-       <*> peek (offset @"a" ptr)
-       <*> peek (offset @"b" ptr)
-       <*> peek (offset @"pvx" ptr)
-       <*> peek (offset @"sy" ptr)
-       <*> peek (offset @"c" ptr)
-       <*> peek (offset @"pvy" ptr)
-       <*> peek (offset @"sz" ptr)
-       <*> peek (offset @"pvz" ptr)
-       <*> peek (offset @"qx" ptr)
-       <*> peek (offset @"qy" ptr)
-       <*> peek (offset @"qz" ptr)
-       <*> peek (offset @"qw" ptr)
-       <*> peek (offset @"tx" ptr)
-       <*> peek (offset @"ty" ptr)
-       <*> peek (offset @"tz" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"sx" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"a" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"b" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pvx" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"sy" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"c" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pvy" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"sz" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pvz" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"qx" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"qy" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"qz" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"qw" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"tx" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"ty" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"tz" ptr)
 
   poke ptr val = do
     pokeField @"sx" ptr val

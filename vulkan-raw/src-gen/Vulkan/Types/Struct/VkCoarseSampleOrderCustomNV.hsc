@@ -36,10 +36,10 @@ instance Storable VkCoarseSampleOrderCustomNV where
 
   peek ptr = 
     VkCoarseSampleOrderCustomNV
-       <$> peek (offset @"shadingRate" ptr)
-       <*> peek (offset @"sampleCount" ptr)
-       <*> peek (offset @"sampleLocationCount" ptr)
-       <*> peek (offset @"pSampleLocations" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"shadingRate" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"sampleCount" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"sampleLocationCount" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pSampleLocations" ptr)
 
   poke ptr val = do
     pokeField @"shadingRate" ptr val

@@ -36,10 +36,10 @@ instance Storable VkFramebufferAttachmentsCreateInfo where
 
   peek ptr = 
     VkFramebufferAttachmentsCreateInfo
-       <$> peek (offset @"sType" ptr)
-       <*> peek (offset @"pNext" ptr)
-       <*> peek (offset @"attachmentImageInfoCount" ptr)
-       <*> peek (offset @"pAttachmentImageInfos" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"sType" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pNext" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"attachmentImageInfoCount" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pAttachmentImageInfos" ptr)
 
   poke ptr val = do
     pokeField @"sType" ptr val

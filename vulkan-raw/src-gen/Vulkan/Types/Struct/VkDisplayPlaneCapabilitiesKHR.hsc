@@ -42,15 +42,15 @@ instance Storable VkDisplayPlaneCapabilitiesKHR where
 
   peek ptr = 
     VkDisplayPlaneCapabilitiesKHR
-       <$> peek (offset @"supportedAlpha" ptr)
-       <*> peek (offset @"minSrcPosition" ptr)
-       <*> peek (offset @"maxSrcPosition" ptr)
-       <*> peek (offset @"minSrcExtent" ptr)
-       <*> peek (offset @"maxSrcExtent" ptr)
-       <*> peek (offset @"minDstPosition" ptr)
-       <*> peek (offset @"maxDstPosition" ptr)
-       <*> peek (offset @"minDstExtent" ptr)
-       <*> peek (offset @"maxDstExtent" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"supportedAlpha" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"minSrcPosition" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"maxSrcPosition" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"minSrcExtent" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"maxSrcExtent" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"minDstPosition" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"maxDstPosition" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"minDstExtent" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"maxDstExtent" ptr)
 
   poke ptr val = do
     pokeField @"supportedAlpha" ptr val

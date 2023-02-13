@@ -36,10 +36,10 @@ instance Storable VkPhysicalDeviceConditionalRenderingFeaturesEXT where
 
   peek ptr = 
     VkPhysicalDeviceConditionalRenderingFeaturesEXT
-       <$> peek (offset @"sType" ptr)
-       <*> peek (offset @"pNext" ptr)
-       <*> peek (offset @"conditionalRendering" ptr)
-       <*> peek (offset @"inheritedConditionalRendering" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"sType" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pNext" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"conditionalRendering" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"inheritedConditionalRendering" ptr)
 
   poke ptr val = do
     pokeField @"sType" ptr val

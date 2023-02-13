@@ -45,17 +45,17 @@ instance Storable VkVideoEncodeH265RateControlLayerInfoEXT where
 
   peek ptr = 
     VkVideoEncodeH265RateControlLayerInfoEXT
-       <$> peek (offset @"sType" ptr)
-       <*> peek (offset @"pNext" ptr)
-       <*> peek (offset @"temporalId" ptr)
-       <*> peek (offset @"useInitialRcQp" ptr)
-       <*> peek (offset @"initialRcQp" ptr)
-       <*> peek (offset @"useMinQp" ptr)
-       <*> peek (offset @"minQp" ptr)
-       <*> peek (offset @"useMaxQp" ptr)
-       <*> peek (offset @"maxQp" ptr)
-       <*> peek (offset @"useMaxFrameSize" ptr)
-       <*> peek (offset @"maxFrameSize" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"sType" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pNext" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"temporalId" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"useInitialRcQp" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"initialRcQp" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"useMinQp" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"minQp" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"useMaxQp" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"maxQp" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"useMaxFrameSize" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"maxFrameSize" ptr)
 
   poke ptr val = do
     pokeField @"sType" ptr val

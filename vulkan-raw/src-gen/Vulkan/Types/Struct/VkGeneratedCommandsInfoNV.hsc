@@ -50,21 +50,21 @@ instance Storable VkGeneratedCommandsInfoNV where
 
   peek ptr = 
     VkGeneratedCommandsInfoNV
-       <$> peek (offset @"sType" ptr)
-       <*> peek (offset @"pNext" ptr)
-       <*> peek (offset @"pipelineBindPoint" ptr)
-       <*> peek (offset @"pipeline" ptr)
-       <*> peek (offset @"indirectCommandsLayout" ptr)
-       <*> peek (offset @"streamCount" ptr)
-       <*> peek (offset @"pStreams" ptr)
-       <*> peek (offset @"sequencesCount" ptr)
-       <*> peek (offset @"preprocessBuffer" ptr)
-       <*> peek (offset @"preprocessOffset" ptr)
-       <*> peek (offset @"preprocessSize" ptr)
-       <*> peek (offset @"sequencesCountBuffer" ptr)
-       <*> peek (offset @"sequencesCountOffset" ptr)
-       <*> peek (offset @"sequencesIndexBuffer" ptr)
-       <*> peek (offset @"sequencesIndexOffset" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"sType" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pNext" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pipelineBindPoint" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pipeline" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"indirectCommandsLayout" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"streamCount" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pStreams" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"sequencesCount" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"preprocessBuffer" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"preprocessOffset" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"preprocessSize" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"sequencesCountBuffer" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"sequencesCountOffset" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"sequencesIndexBuffer" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"sequencesIndexOffset" ptr)
 
   poke ptr val = do
     pokeField @"sType" ptr val

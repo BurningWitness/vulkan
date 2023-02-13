@@ -35,9 +35,9 @@ instance Storable VkPhysicalDeviceTexelBufferAlignmentFeaturesEXT where
 
   peek ptr = 
     VkPhysicalDeviceTexelBufferAlignmentFeaturesEXT
-       <$> peek (offset @"sType" ptr)
-       <*> peek (offset @"pNext" ptr)
-       <*> peek (offset @"texelBufferAlignment" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"sType" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pNext" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"texelBufferAlignment" ptr)
 
   poke ptr val = do
     pokeField @"sType" ptr val

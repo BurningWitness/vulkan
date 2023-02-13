@@ -37,11 +37,11 @@ instance Storable VkMicromapBuildSizesInfoEXT where
 
   peek ptr = 
     VkMicromapBuildSizesInfoEXT
-       <$> peek (offset @"sType" ptr)
-       <*> peek (offset @"pNext" ptr)
-       <*> peek (offset @"micromapSize" ptr)
-       <*> peek (offset @"buildScratchSize" ptr)
-       <*> peek (offset @"discardable" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"sType" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pNext" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"micromapSize" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"buildScratchSize" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"discardable" ptr)
 
   poke ptr val = do
     pokeField @"sType" ptr val

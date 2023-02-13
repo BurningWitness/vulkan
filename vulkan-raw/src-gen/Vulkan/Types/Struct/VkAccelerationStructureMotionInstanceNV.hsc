@@ -37,9 +37,9 @@ instance Storable VkAccelerationStructureMotionInstanceNV where
 
   peek ptr = 
     VkAccelerationStructureMotionInstanceNV
-       <$> peek (offset @"type" ptr)
-       <*> peek (offset @"flags" ptr)
-       <*> peek (offset @"data" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"type" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"flags" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"data" ptr)
 
   poke ptr val = do
     pokeField @"type" ptr val

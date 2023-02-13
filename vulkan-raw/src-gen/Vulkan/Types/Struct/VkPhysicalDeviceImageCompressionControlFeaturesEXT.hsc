@@ -35,9 +35,9 @@ instance Storable VkPhysicalDeviceImageCompressionControlFeaturesEXT where
 
   peek ptr = 
     VkPhysicalDeviceImageCompressionControlFeaturesEXT
-       <$> peek (offset @"sType" ptr)
-       <*> peek (offset @"pNext" ptr)
-       <*> peek (offset @"imageCompressionControl" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"sType" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pNext" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"imageCompressionControl" ptr)
 
   poke ptr val = do
     pokeField @"sType" ptr val

@@ -38,12 +38,12 @@ instance Storable VkBufferImageCopy where
 
   peek ptr = 
     VkBufferImageCopy
-       <$> peek (offset @"bufferOffset" ptr)
-       <*> peek (offset @"bufferRowLength" ptr)
-       <*> peek (offset @"bufferImageHeight" ptr)
-       <*> peek (offset @"imageSubresource" ptr)
-       <*> peek (offset @"imageOffset" ptr)
-       <*> peek (offset @"imageExtent" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"bufferOffset" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"bufferRowLength" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"bufferImageHeight" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"imageSubresource" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"imageOffset" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"imageExtent" ptr)
 
   poke ptr val = do
     pokeField @"bufferOffset" ptr val

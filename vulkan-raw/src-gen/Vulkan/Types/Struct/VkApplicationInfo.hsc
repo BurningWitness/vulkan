@@ -36,13 +36,13 @@ instance Storable VkApplicationInfo where
 
   peek ptr = 
     VkApplicationInfo
-       <$> peek (offset @"sType" ptr)
-       <*> peek (offset @"pNext" ptr)
-       <*> peek (offset @"pApplicationName" ptr)
-       <*> peek (offset @"applicationVersion" ptr)
-       <*> peek (offset @"pEngineName" ptr)
-       <*> peek (offset @"engineVersion" ptr)
-       <*> peek (offset @"apiVersion" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"sType" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pNext" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pApplicationName" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"applicationVersion" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pEngineName" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"engineVersion" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"apiVersion" ptr)
 
   poke ptr val = do
     pokeField @"sType" ptr val

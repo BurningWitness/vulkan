@@ -38,11 +38,11 @@ instance Storable VkPipelineViewportSwizzleStateCreateInfoNV where
 
   peek ptr = 
     VkPipelineViewportSwizzleStateCreateInfoNV
-       <$> peek (offset @"sType" ptr)
-       <*> peek (offset @"pNext" ptr)
-       <*> peek (offset @"flags" ptr)
-       <*> peek (offset @"viewportCount" ptr)
-       <*> peek (offset @"pViewportSwizzles" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"sType" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pNext" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"flags" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"viewportCount" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pViewportSwizzles" ptr)
 
   poke ptr val = do
     pokeField @"sType" ptr val

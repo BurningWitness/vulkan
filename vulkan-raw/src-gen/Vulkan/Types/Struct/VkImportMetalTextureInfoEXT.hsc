@@ -37,10 +37,10 @@ instance Storable VkImportMetalTextureInfoEXT where
 
   peek ptr = 
     VkImportMetalTextureInfoEXT
-       <$> peek (offset @"sType" ptr)
-       <*> peek (offset @"pNext" ptr)
-       <*> peek (offset @"plane" ptr)
-       <*> peek (offset @"mtlTexture" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"sType" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pNext" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"plane" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"mtlTexture" ptr)
 
   poke ptr val = do
     pokeField @"sType" ptr val

@@ -35,9 +35,9 @@ instance Storable VkPhysicalDeviceTilePropertiesFeaturesQCOM where
 
   peek ptr = 
     VkPhysicalDeviceTilePropertiesFeaturesQCOM
-       <$> peek (offset @"sType" ptr)
-       <*> peek (offset @"pNext" ptr)
-       <*> peek (offset @"tileProperties" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"sType" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pNext" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"tileProperties" ptr)
 
   poke ptr val = do
     pokeField @"sType" ptr val

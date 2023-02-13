@@ -35,10 +35,10 @@ instance Storable VkImageDrmFormatModifierListCreateInfoEXT where
 
   peek ptr = 
     VkImageDrmFormatModifierListCreateInfoEXT
-       <$> peek (offset @"sType" ptr)
-       <*> peek (offset @"pNext" ptr)
-       <*> peek (offset @"drmFormatModifierCount" ptr)
-       <*> peek (offset @"pDrmFormatModifiers" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"sType" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pNext" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"drmFormatModifierCount" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pDrmFormatModifiers" ptr)
 
   poke ptr val = do
     pokeField @"sType" ptr val

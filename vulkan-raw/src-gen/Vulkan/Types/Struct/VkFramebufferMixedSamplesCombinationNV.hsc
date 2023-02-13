@@ -40,12 +40,12 @@ instance Storable VkFramebufferMixedSamplesCombinationNV where
 
   peek ptr = 
     VkFramebufferMixedSamplesCombinationNV
-       <$> peek (offset @"sType" ptr)
-       <*> peek (offset @"pNext" ptr)
-       <*> peek (offset @"coverageReductionMode" ptr)
-       <*> peek (offset @"rasterizationSamples" ptr)
-       <*> peek (offset @"depthStencilSamples" ptr)
-       <*> peek (offset @"colorSamples" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"sType" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pNext" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"coverageReductionMode" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"rasterizationSamples" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"depthStencilSamples" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"colorSamples" ptr)
 
   poke ptr val = do
     pokeField @"sType" ptr val

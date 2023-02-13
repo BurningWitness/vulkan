@@ -39,13 +39,13 @@ instance Storable VkDebugUtilsObjectTagInfoEXT where
 
   peek ptr = 
     VkDebugUtilsObjectTagInfoEXT
-       <$> peek (offset @"sType" ptr)
-       <*> peek (offset @"pNext" ptr)
-       <*> peek (offset @"objectType" ptr)
-       <*> peek (offset @"objectHandle" ptr)
-       <*> peek (offset @"tagName" ptr)
-       <*> peek (offset @"tagSize" ptr)
-       <*> peek (offset @"pTag" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"sType" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pNext" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"objectType" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"objectHandle" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"tagName" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"tagSize" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pTag" ptr)
 
   poke ptr val = do
     pokeField @"sType" ptr val

@@ -36,10 +36,10 @@ instance Storable VkPhysicalDeviceInlineUniformBlockFeatures where
 
   peek ptr = 
     VkPhysicalDeviceInlineUniformBlockFeatures
-       <$> peek (offset @"sType" ptr)
-       <*> peek (offset @"pNext" ptr)
-       <*> peek (offset @"inlineUniformBlock" ptr)
-       <*> peek (offset @"descriptorBindingInlineUniformBlockUpdateAfterBind" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"sType" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pNext" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"inlineUniformBlock" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"descriptorBindingInlineUniformBlockUpdateAfterBind" ptr)
 
   poke ptr val = do
     pokeField @"sType" ptr val

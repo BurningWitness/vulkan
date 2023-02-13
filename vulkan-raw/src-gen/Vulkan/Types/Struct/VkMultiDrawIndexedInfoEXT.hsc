@@ -33,9 +33,9 @@ instance Storable VkMultiDrawIndexedInfoEXT where
 
   peek ptr = 
     VkMultiDrawIndexedInfoEXT
-       <$> peek (offset @"firstIndex" ptr)
-       <*> peek (offset @"indexCount" ptr)
-       <*> peek (offset @"vertexOffset" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"firstIndex" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"indexCount" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"vertexOffset" ptr)
 
   poke ptr val = do
     pokeField @"firstIndex" ptr val

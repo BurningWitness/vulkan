@@ -40,12 +40,12 @@ instance Storable VkVideoPictureResourceInfoKHR where
 
   peek ptr = 
     VkVideoPictureResourceInfoKHR
-       <$> peek (offset @"sType" ptr)
-       <*> peek (offset @"pNext" ptr)
-       <*> peek (offset @"codedOffset" ptr)
-       <*> peek (offset @"codedExtent" ptr)
-       <*> peek (offset @"baseArrayLayer" ptr)
-       <*> peek (offset @"imageViewBinding" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"sType" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pNext" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"codedOffset" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"codedExtent" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"baseArrayLayer" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"imageViewBinding" ptr)
 
   poke ptr val = do
     pokeField @"sType" ptr val

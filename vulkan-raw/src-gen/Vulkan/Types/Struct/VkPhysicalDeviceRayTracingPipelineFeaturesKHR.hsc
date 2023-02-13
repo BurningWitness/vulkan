@@ -39,13 +39,13 @@ instance Storable VkPhysicalDeviceRayTracingPipelineFeaturesKHR where
 
   peek ptr = 
     VkPhysicalDeviceRayTracingPipelineFeaturesKHR
-       <$> peek (offset @"sType" ptr)
-       <*> peek (offset @"pNext" ptr)
-       <*> peek (offset @"rayTracingPipeline" ptr)
-       <*> peek (offset @"rayTracingPipelineShaderGroupHandleCaptureReplay" ptr)
-       <*> peek (offset @"rayTracingPipelineShaderGroupHandleCaptureReplayMixed" ptr)
-       <*> peek (offset @"rayTracingPipelineTraceRaysIndirect" ptr)
-       <*> peek (offset @"rayTraversalPrimitiveCulling" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"sType" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pNext" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"rayTracingPipeline" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"rayTracingPipelineShaderGroupHandleCaptureReplay" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"rayTracingPipelineShaderGroupHandleCaptureReplayMixed" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"rayTracingPipelineTraceRaysIndirect" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"rayTraversalPrimitiveCulling" ptr)
 
   poke ptr val = do
     pokeField @"sType" ptr val

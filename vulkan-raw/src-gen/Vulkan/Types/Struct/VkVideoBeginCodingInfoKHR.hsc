@@ -41,13 +41,13 @@ instance Storable VkVideoBeginCodingInfoKHR where
 
   peek ptr = 
     VkVideoBeginCodingInfoKHR
-       <$> peek (offset @"sType" ptr)
-       <*> peek (offset @"pNext" ptr)
-       <*> peek (offset @"flags" ptr)
-       <*> peek (offset @"videoSession" ptr)
-       <*> peek (offset @"videoSessionParameters" ptr)
-       <*> peek (offset @"referenceSlotCount" ptr)
-       <*> peek (offset @"pReferenceSlots" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"sType" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pNext" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"flags" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"videoSession" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"videoSessionParameters" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"referenceSlotCount" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pReferenceSlots" ptr)
 
   poke ptr val = do
     pokeField @"sType" ptr val

@@ -35,9 +35,9 @@ instance Storable VkPhysicalDeviceTimelineSemaphoreFeaturesKHR where
 
   peek ptr = 
     VkPhysicalDeviceTimelineSemaphoreFeaturesKHR
-       <$> peek (offset @"sType" ptr)
-       <*> peek (offset @"pNext" ptr)
-       <*> peek (offset @"timelineSemaphore" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"sType" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pNext" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"timelineSemaphore" ptr)
 
   poke ptr val = do
     pokeField @"sType" ptr val

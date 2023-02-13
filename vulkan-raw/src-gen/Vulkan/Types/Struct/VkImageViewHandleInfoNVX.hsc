@@ -38,11 +38,11 @@ instance Storable VkImageViewHandleInfoNVX where
 
   peek ptr = 
     VkImageViewHandleInfoNVX
-       <$> peek (offset @"sType" ptr)
-       <*> peek (offset @"pNext" ptr)
-       <*> peek (offset @"imageView" ptr)
-       <*> peek (offset @"descriptorType" ptr)
-       <*> peek (offset @"sampler" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"sType" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pNext" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"imageView" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"descriptorType" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"sampler" ptr)
 
   poke ptr val = do
     pokeField @"sType" ptr val

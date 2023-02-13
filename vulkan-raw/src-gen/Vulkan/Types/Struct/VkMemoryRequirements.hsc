@@ -32,9 +32,9 @@ instance Storable VkMemoryRequirements where
 
   peek ptr = 
     VkMemoryRequirements
-       <$> peek (offset @"size" ptr)
-       <*> peek (offset @"alignment" ptr)
-       <*> peek (offset @"memoryTypeBits" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"size" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"alignment" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"memoryTypeBits" ptr)
 
   poke ptr val = do
     pokeField @"size" ptr val

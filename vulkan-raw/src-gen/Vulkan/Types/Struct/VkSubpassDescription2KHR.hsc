@@ -47,19 +47,19 @@ instance Storable VkSubpassDescription2KHR where
 
   peek ptr = 
     VkSubpassDescription2KHR
-       <$> peek (offset @"sType" ptr)
-       <*> peek (offset @"pNext" ptr)
-       <*> peek (offset @"flags" ptr)
-       <*> peek (offset @"pipelineBindPoint" ptr)
-       <*> peek (offset @"viewMask" ptr)
-       <*> peek (offset @"inputAttachmentCount" ptr)
-       <*> peek (offset @"pInputAttachments" ptr)
-       <*> peek (offset @"colorAttachmentCount" ptr)
-       <*> peek (offset @"pColorAttachments" ptr)
-       <*> peek (offset @"pResolveAttachments" ptr)
-       <*> peek (offset @"pDepthStencilAttachment" ptr)
-       <*> peek (offset @"preserveAttachmentCount" ptr)
-       <*> peek (offset @"pPreserveAttachments" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"sType" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pNext" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"flags" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pipelineBindPoint" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"viewMask" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"inputAttachmentCount" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pInputAttachments" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"colorAttachmentCount" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pColorAttachments" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pResolveAttachments" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pDepthStencilAttachment" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"preserveAttachmentCount" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pPreserveAttachments" ptr)
 
   poke ptr val = do
     pokeField @"sType" ptr val

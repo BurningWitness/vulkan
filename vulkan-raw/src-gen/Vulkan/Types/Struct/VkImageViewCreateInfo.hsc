@@ -43,14 +43,14 @@ instance Storable VkImageViewCreateInfo where
 
   peek ptr = 
     VkImageViewCreateInfo
-       <$> peek (offset @"sType" ptr)
-       <*> peek (offset @"pNext" ptr)
-       <*> peek (offset @"flags" ptr)
-       <*> peek (offset @"image" ptr)
-       <*> peek (offset @"viewType" ptr)
-       <*> peek (offset @"format" ptr)
-       <*> peek (offset @"components" ptr)
-       <*> peek (offset @"subresourceRange" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"sType" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pNext" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"flags" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"image" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"viewType" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"format" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"components" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"subresourceRange" ptr)
 
   poke ptr val = do
     pokeField @"sType" ptr val

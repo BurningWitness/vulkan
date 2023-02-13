@@ -35,9 +35,9 @@ instance Storable VkCopyCommandTransformInfoQCOM where
 
   peek ptr = 
     VkCopyCommandTransformInfoQCOM
-       <$> peek (offset @"sType" ptr)
-       <*> peek (offset @"pNext" ptr)
-       <*> peek (offset @"transform" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"sType" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pNext" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"transform" ptr)
 
   poke ptr val = do
     pokeField @"sType" ptr val

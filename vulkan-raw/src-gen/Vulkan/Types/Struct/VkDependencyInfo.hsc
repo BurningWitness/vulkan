@@ -44,15 +44,15 @@ instance Storable VkDependencyInfo where
 
   peek ptr = 
     VkDependencyInfo
-       <$> peek (offset @"sType" ptr)
-       <*> peek (offset @"pNext" ptr)
-       <*> peek (offset @"dependencyFlags" ptr)
-       <*> peek (offset @"memoryBarrierCount" ptr)
-       <*> peek (offset @"pMemoryBarriers" ptr)
-       <*> peek (offset @"bufferMemoryBarrierCount" ptr)
-       <*> peek (offset @"pBufferMemoryBarriers" ptr)
-       <*> peek (offset @"imageMemoryBarrierCount" ptr)
-       <*> peek (offset @"pImageMemoryBarriers" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"sType" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pNext" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"dependencyFlags" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"memoryBarrierCount" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pMemoryBarriers" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"bufferMemoryBarrierCount" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pBufferMemoryBarriers" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"imageMemoryBarrierCount" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pImageMemoryBarriers" ptr)
 
   poke ptr val = do
     pokeField @"sType" ptr val

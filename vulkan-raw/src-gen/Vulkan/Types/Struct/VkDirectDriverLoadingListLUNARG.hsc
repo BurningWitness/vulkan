@@ -38,11 +38,11 @@ instance Storable VkDirectDriverLoadingListLUNARG where
 
   peek ptr = 
     VkDirectDriverLoadingListLUNARG
-       <$> peek (offset @"sType" ptr)
-       <*> peek (offset @"pNext" ptr)
-       <*> peek (offset @"mode" ptr)
-       <*> peek (offset @"driverCount" ptr)
-       <*> peek (offset @"pDrivers" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"sType" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pNext" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"mode" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"driverCount" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pDrivers" ptr)
 
   poke ptr val = do
     pokeField @"sType" ptr val

@@ -65,10 +65,7 @@ library
 
     reexported-modules:  Foreign.Storable.Offset
 
-    if os(darwin)
-      frameworks:        MoltenVK
-    else
-      extra-libraries:   vulkan
+    extra-libraries:     vulkan
 
 --[BULK]--
 

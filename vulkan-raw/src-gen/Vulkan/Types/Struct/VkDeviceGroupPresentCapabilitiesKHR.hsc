@@ -36,10 +36,10 @@ instance Storable VkDeviceGroupPresentCapabilitiesKHR where
 
   peek ptr = 
     VkDeviceGroupPresentCapabilitiesKHR
-       <$> peek (offset @"sType" ptr)
-       <*> peek (offset @"pNext" ptr)
-       <*> peek (offset @"presentMask" ptr)
-       <*> peek (offset @"modes" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"sType" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pNext" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"presentMask" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"modes" ptr)
 
   poke ptr val = do
     pokeField @"sType" ptr val

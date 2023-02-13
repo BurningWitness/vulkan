@@ -37,10 +37,10 @@ instance Storable VkSamplerBorderColorComponentMappingCreateInfoEXT where
 
   peek ptr = 
     VkSamplerBorderColorComponentMappingCreateInfoEXT
-       <$> peek (offset @"sType" ptr)
-       <*> peek (offset @"pNext" ptr)
-       <*> peek (offset @"components" ptr)
-       <*> peek (offset @"srgb" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"sType" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pNext" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"components" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"srgb" ptr)
 
   poke ptr val = do
     pokeField @"sType" ptr val

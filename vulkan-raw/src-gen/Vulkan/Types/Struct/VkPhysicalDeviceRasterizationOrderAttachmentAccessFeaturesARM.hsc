@@ -37,11 +37,11 @@ instance Storable VkPhysicalDeviceRasterizationOrderAttachmentAccessFeaturesARM 
 
   peek ptr = 
     VkPhysicalDeviceRasterizationOrderAttachmentAccessFeaturesARM
-       <$> peek (offset @"sType" ptr)
-       <*> peek (offset @"pNext" ptr)
-       <*> peek (offset @"rasterizationOrderColorAttachmentAccess" ptr)
-       <*> peek (offset @"rasterizationOrderDepthAttachmentAccess" ptr)
-       <*> peek (offset @"rasterizationOrderStencilAttachmentAccess" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"sType" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pNext" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"rasterizationOrderColorAttachmentAccess" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"rasterizationOrderDepthAttachmentAccess" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"rasterizationOrderStencilAttachmentAccess" ptr)
 
   poke ptr val = do
     pokeField @"sType" ptr val

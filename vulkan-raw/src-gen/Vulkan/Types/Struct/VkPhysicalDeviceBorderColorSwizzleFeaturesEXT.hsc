@@ -36,10 +36,10 @@ instance Storable VkPhysicalDeviceBorderColorSwizzleFeaturesEXT where
 
   peek ptr = 
     VkPhysicalDeviceBorderColorSwizzleFeaturesEXT
-       <$> peek (offset @"sType" ptr)
-       <*> peek (offset @"pNext" ptr)
-       <*> peek (offset @"borderColorSwizzle" ptr)
-       <*> peek (offset @"borderColorSwizzleFromImage" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"sType" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pNext" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"borderColorSwizzle" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"borderColorSwizzleFromImage" ptr)
 
   poke ptr val = do
     pokeField @"sType" ptr val

@@ -41,13 +41,13 @@ instance Storable VkPhysicalDeviceSampleLocationsPropertiesEXT where
 
   peek ptr = 
     VkPhysicalDeviceSampleLocationsPropertiesEXT
-       <$> peek (offset @"sType" ptr)
-       <*> peek (offset @"pNext" ptr)
-       <*> peek (offset @"sampleLocationSampleCounts" ptr)
-       <*> peek (offset @"maxSampleLocationGridSize" ptr)
-       <*> peek (offset @"sampleLocationCoordinateRange" ptr)
-       <*> peek (offset @"sampleLocationSubPixelBits" ptr)
-       <*> peek (offset @"variableSampleLocations" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"sType" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pNext" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"sampleLocationSampleCounts" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"maxSampleLocationGridSize" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"sampleLocationCoordinateRange" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"sampleLocationSubPixelBits" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"variableSampleLocations" ptr)
 
   poke ptr val = do
     pokeField @"sType" ptr val

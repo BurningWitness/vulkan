@@ -36,10 +36,10 @@ instance Storable VkPhysicalDeviceRayTracingMaintenance1FeaturesKHR where
 
   peek ptr = 
     VkPhysicalDeviceRayTracingMaintenance1FeaturesKHR
-       <$> peek (offset @"sType" ptr)
-       <*> peek (offset @"pNext" ptr)
-       <*> peek (offset @"rayTracingMaintenance1" ptr)
-       <*> peek (offset @"rayTracingPipelineTraceRaysIndirect2" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"sType" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pNext" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"rayTracingMaintenance1" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"rayTracingPipelineTraceRaysIndirect2" ptr)
 
   poke ptr val = do
     pokeField @"sType" ptr val

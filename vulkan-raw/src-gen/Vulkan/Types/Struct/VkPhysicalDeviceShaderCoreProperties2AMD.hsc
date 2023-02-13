@@ -36,10 +36,10 @@ instance Storable VkPhysicalDeviceShaderCoreProperties2AMD where
 
   peek ptr = 
     VkPhysicalDeviceShaderCoreProperties2AMD
-       <$> peek (offset @"sType" ptr)
-       <*> peek (offset @"pNext" ptr)
-       <*> peek (offset @"shaderCoreFeatures" ptr)
-       <*> peek (offset @"activeComputeUnitCount" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"sType" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pNext" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"shaderCoreFeatures" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"activeComputeUnitCount" ptr)
 
   poke ptr val = do
     pokeField @"sType" ptr val

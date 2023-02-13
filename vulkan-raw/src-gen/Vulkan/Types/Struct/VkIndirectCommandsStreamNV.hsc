@@ -34,8 +34,8 @@ instance Storable VkIndirectCommandsStreamNV where
 
   peek ptr = 
     VkIndirectCommandsStreamNV
-       <$> peek (offset @"buffer" ptr)
-       <*> peek (offset @"offset" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"buffer" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"offset" ptr)
 
   poke ptr val = do
     pokeField @"buffer" ptr val

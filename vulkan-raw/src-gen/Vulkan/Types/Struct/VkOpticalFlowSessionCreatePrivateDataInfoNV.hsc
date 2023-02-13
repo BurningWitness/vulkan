@@ -36,11 +36,11 @@ instance Storable VkOpticalFlowSessionCreatePrivateDataInfoNV where
 
   peek ptr = 
     VkOpticalFlowSessionCreatePrivateDataInfoNV
-       <$> peek (offset @"sType" ptr)
-       <*> peek (offset @"pNext" ptr)
-       <*> peek (offset @"id" ptr)
-       <*> peek (offset @"size" ptr)
-       <*> peek (offset @"pPrivateData" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"sType" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pNext" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"id" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"size" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pPrivateData" ptr)
 
   poke ptr val = do
     pokeField @"sType" ptr val

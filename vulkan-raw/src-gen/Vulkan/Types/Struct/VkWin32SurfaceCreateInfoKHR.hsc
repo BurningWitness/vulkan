@@ -38,11 +38,11 @@ instance Storable VkWin32SurfaceCreateInfoKHR where
 
   peek ptr = 
     VkWin32SurfaceCreateInfoKHR
-       <$> peek (offset @"sType" ptr)
-       <*> peek (offset @"pNext" ptr)
-       <*> peek (offset @"flags" ptr)
-       <*> peek (offset @"hinstance" ptr)
-       <*> peek (offset @"hwnd" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"sType" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pNext" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"flags" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"hinstance" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"hwnd" ptr)
 
   poke ptr val = do
     pokeField @"sType" ptr val

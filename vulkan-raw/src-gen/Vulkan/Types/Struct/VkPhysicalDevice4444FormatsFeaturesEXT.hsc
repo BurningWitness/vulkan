@@ -36,10 +36,10 @@ instance Storable VkPhysicalDevice4444FormatsFeaturesEXT where
 
   peek ptr = 
     VkPhysicalDevice4444FormatsFeaturesEXT
-       <$> peek (offset @"sType" ptr)
-       <*> peek (offset @"pNext" ptr)
-       <*> peek (offset @"formatA4R4G4B4" ptr)
-       <*> peek (offset @"formatA4B4G4R4" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"sType" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pNext" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"formatA4R4G4B4" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"formatA4B4G4R4" ptr)
 
   poke ptr val = do
     pokeField @"sType" ptr val

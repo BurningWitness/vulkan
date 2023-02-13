@@ -38,11 +38,11 @@ instance Storable VkPipelineViewportShadingRateImageStateCreateInfoNV where
 
   peek ptr = 
     VkPipelineViewportShadingRateImageStateCreateInfoNV
-       <$> peek (offset @"sType" ptr)
-       <*> peek (offset @"pNext" ptr)
-       <*> peek (offset @"shadingRateImageEnable" ptr)
-       <*> peek (offset @"viewportCount" ptr)
-       <*> peek (offset @"pShadingRatePalettes" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"sType" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pNext" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"shadingRateImageEnable" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"viewportCount" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pShadingRatePalettes" ptr)
 
   poke ptr val = do
     pokeField @"sType" ptr val

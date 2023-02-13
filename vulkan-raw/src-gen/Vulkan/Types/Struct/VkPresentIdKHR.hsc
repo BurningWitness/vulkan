@@ -35,10 +35,10 @@ instance Storable VkPresentIdKHR where
 
   peek ptr = 
     VkPresentIdKHR
-       <$> peek (offset @"sType" ptr)
-       <*> peek (offset @"pNext" ptr)
-       <*> peek (offset @"swapchainCount" ptr)
-       <*> peek (offset @"pPresentIds" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"sType" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pNext" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"swapchainCount" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pPresentIds" ptr)
 
   poke ptr val = do
     pokeField @"sType" ptr val

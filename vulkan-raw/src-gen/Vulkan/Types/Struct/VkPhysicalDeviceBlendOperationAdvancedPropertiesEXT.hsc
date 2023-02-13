@@ -40,14 +40,14 @@ instance Storable VkPhysicalDeviceBlendOperationAdvancedPropertiesEXT where
 
   peek ptr = 
     VkPhysicalDeviceBlendOperationAdvancedPropertiesEXT
-       <$> peek (offset @"sType" ptr)
-       <*> peek (offset @"pNext" ptr)
-       <*> peek (offset @"advancedBlendMaxColorAttachments" ptr)
-       <*> peek (offset @"advancedBlendIndependentBlend" ptr)
-       <*> peek (offset @"advancedBlendNonPremultipliedSrcColor" ptr)
-       <*> peek (offset @"advancedBlendNonPremultipliedDstColor" ptr)
-       <*> peek (offset @"advancedBlendCorrelatedOverlap" ptr)
-       <*> peek (offset @"advancedBlendAllOperations" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"sType" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pNext" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"advancedBlendMaxColorAttachments" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"advancedBlendIndependentBlend" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"advancedBlendNonPremultipliedSrcColor" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"advancedBlendNonPremultipliedDstColor" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"advancedBlendCorrelatedOverlap" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"advancedBlendAllOperations" ptr)
 
   poke ptr val = do
     pokeField @"sType" ptr val

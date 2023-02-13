@@ -37,11 +37,11 @@ instance Storable VkPhysicalDeviceMultiviewFeaturesKHR where
 
   peek ptr = 
     VkPhysicalDeviceMultiviewFeaturesKHR
-       <$> peek (offset @"sType" ptr)
-       <*> peek (offset @"pNext" ptr)
-       <*> peek (offset @"multiview" ptr)
-       <*> peek (offset @"multiviewGeometryShader" ptr)
-       <*> peek (offset @"multiviewTessellationShader" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"sType" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pNext" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"multiview" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"multiviewGeometryShader" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"multiviewTessellationShader" ptr)
 
   poke ptr val = do
     pokeField @"sType" ptr val

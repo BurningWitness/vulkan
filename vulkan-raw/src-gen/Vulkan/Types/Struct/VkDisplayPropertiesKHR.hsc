@@ -41,13 +41,13 @@ instance Storable VkDisplayPropertiesKHR where
 
   peek ptr = 
     VkDisplayPropertiesKHR
-       <$> peek (offset @"display" ptr)
-       <*> peek (offset @"displayName" ptr)
-       <*> peek (offset @"physicalDimensions" ptr)
-       <*> peek (offset @"physicalResolution" ptr)
-       <*> peek (offset @"supportedTransforms" ptr)
-       <*> peek (offset @"planeReorderPossible" ptr)
-       <*> peek (offset @"persistentContent" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"display" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"displayName" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"physicalDimensions" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"physicalResolution" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"supportedTransforms" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"planeReorderPossible" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"persistentContent" ptr)
 
   poke ptr val = do
     pokeField @"display" ptr val

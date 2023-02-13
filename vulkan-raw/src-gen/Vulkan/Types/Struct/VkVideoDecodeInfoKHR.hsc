@@ -46,16 +46,16 @@ instance Storable VkVideoDecodeInfoKHR where
 
   peek ptr = 
     VkVideoDecodeInfoKHR
-       <$> peek (offset @"sType" ptr)
-       <*> peek (offset @"pNext" ptr)
-       <*> peek (offset @"flags" ptr)
-       <*> peek (offset @"srcBuffer" ptr)
-       <*> peek (offset @"srcBufferOffset" ptr)
-       <*> peek (offset @"srcBufferRange" ptr)
-       <*> peek (offset @"dstPictureResource" ptr)
-       <*> peek (offset @"pSetupReferenceSlot" ptr)
-       <*> peek (offset @"referenceSlotCount" ptr)
-       <*> peek (offset @"pReferenceSlots" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"sType" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pNext" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"flags" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"srcBuffer" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"srcBufferOffset" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"srcBufferRange" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"dstPictureResource" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pSetupReferenceSlot" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"referenceSlotCount" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pReferenceSlots" ptr)
 
   poke ptr val = do
     pokeField @"sType" ptr val

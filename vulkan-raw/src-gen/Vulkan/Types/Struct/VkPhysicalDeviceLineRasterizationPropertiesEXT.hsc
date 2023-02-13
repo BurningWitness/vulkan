@@ -34,9 +34,9 @@ instance Storable VkPhysicalDeviceLineRasterizationPropertiesEXT where
 
   peek ptr = 
     VkPhysicalDeviceLineRasterizationPropertiesEXT
-       <$> peek (offset @"sType" ptr)
-       <*> peek (offset @"pNext" ptr)
-       <*> peek (offset @"lineSubPixelPrecisionBits" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"sType" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pNext" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"lineSubPixelPrecisionBits" ptr)
 
   poke ptr val = do
     pokeField @"sType" ptr val

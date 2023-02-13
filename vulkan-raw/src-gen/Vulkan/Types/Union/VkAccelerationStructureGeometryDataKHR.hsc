@@ -36,9 +36,9 @@ instance Storable VkAccelerationStructureGeometryDataKHR where
 
   peek ptr = 
     VkAccelerationStructureGeometryDataKHR
-       <$> peek (offset @"triangles" ptr)
-       <*> peek (offset @"aabbs" ptr)
-       <*> peek (offset @"instances" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"triangles" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"aabbs" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"instances" ptr)
 
   poke ptr val = do
     pokeField @"triangles" ptr val

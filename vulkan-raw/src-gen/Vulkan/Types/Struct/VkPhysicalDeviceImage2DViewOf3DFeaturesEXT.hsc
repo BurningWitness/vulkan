@@ -36,10 +36,10 @@ instance Storable VkPhysicalDeviceImage2DViewOf3DFeaturesEXT where
 
   peek ptr = 
     VkPhysicalDeviceImage2DViewOf3DFeaturesEXT
-       <$> peek (offset @"sType" ptr)
-       <*> peek (offset @"pNext" ptr)
-       <*> peek (offset @"image2DViewOf3D" ptr)
-       <*> peek (offset @"sampler2DViewOf3D" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"sType" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pNext" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"image2DViewOf3D" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"sampler2DViewOf3D" ptr)
 
   poke ptr val = do
     pokeField @"sType" ptr val

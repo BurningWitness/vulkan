@@ -35,9 +35,9 @@ instance Storable VkPhysicalDeviceColorWriteEnableFeaturesEXT where
 
   peek ptr = 
     VkPhysicalDeviceColorWriteEnableFeaturesEXT
-       <$> peek (offset @"sType" ptr)
-       <*> peek (offset @"pNext" ptr)
-       <*> peek (offset @"colorWriteEnable" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"sType" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pNext" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"colorWriteEnable" ptr)
 
   poke ptr val = do
     pokeField @"sType" ptr val

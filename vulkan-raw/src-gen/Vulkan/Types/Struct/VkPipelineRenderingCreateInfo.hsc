@@ -39,13 +39,13 @@ instance Storable VkPipelineRenderingCreateInfo where
 
   peek ptr = 
     VkPipelineRenderingCreateInfo
-       <$> peek (offset @"sType" ptr)
-       <*> peek (offset @"pNext" ptr)
-       <*> peek (offset @"viewMask" ptr)
-       <*> peek (offset @"colorAttachmentCount" ptr)
-       <*> peek (offset @"pColorAttachmentFormats" ptr)
-       <*> peek (offset @"depthAttachmentFormat" ptr)
-       <*> peek (offset @"stencilAttachmentFormat" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"sType" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pNext" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"viewMask" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"colorAttachmentCount" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pColorAttachmentFormats" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"depthAttachmentFormat" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"stencilAttachmentFormat" ptr)
 
   poke ptr val = do
     pokeField @"sType" ptr val

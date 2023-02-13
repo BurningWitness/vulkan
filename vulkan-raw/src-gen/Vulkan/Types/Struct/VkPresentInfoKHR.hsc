@@ -41,14 +41,14 @@ instance Storable VkPresentInfoKHR where
 
   peek ptr = 
     VkPresentInfoKHR
-       <$> peek (offset @"sType" ptr)
-       <*> peek (offset @"pNext" ptr)
-       <*> peek (offset @"waitSemaphoreCount" ptr)
-       <*> peek (offset @"pWaitSemaphores" ptr)
-       <*> peek (offset @"swapchainCount" ptr)
-       <*> peek (offset @"pSwapchains" ptr)
-       <*> peek (offset @"pImageIndices" ptr)
-       <*> peek (offset @"pResults" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"sType" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pNext" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"waitSemaphoreCount" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pWaitSemaphores" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"swapchainCount" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pSwapchains" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pImageIndices" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pResults" ptr)
 
   poke ptr val = do
     pokeField @"sType" ptr val

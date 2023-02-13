@@ -45,20 +45,20 @@ instance Storable VkTraceRaysIndirectCommand2KHR where
 
   peek ptr = 
     VkTraceRaysIndirectCommand2KHR
-       <$> peek (offset @"raygenShaderRecordAddress" ptr)
-       <*> peek (offset @"raygenShaderRecordSize" ptr)
-       <*> peek (offset @"missShaderBindingTableAddress" ptr)
-       <*> peek (offset @"missShaderBindingTableSize" ptr)
-       <*> peek (offset @"missShaderBindingTableStride" ptr)
-       <*> peek (offset @"hitShaderBindingTableAddress" ptr)
-       <*> peek (offset @"hitShaderBindingTableSize" ptr)
-       <*> peek (offset @"hitShaderBindingTableStride" ptr)
-       <*> peek (offset @"callableShaderBindingTableAddress" ptr)
-       <*> peek (offset @"callableShaderBindingTableSize" ptr)
-       <*> peek (offset @"callableShaderBindingTableStride" ptr)
-       <*> peek (offset @"width" ptr)
-       <*> peek (offset @"height" ptr)
-       <*> peek (offset @"depth" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"raygenShaderRecordAddress" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"raygenShaderRecordSize" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"missShaderBindingTableAddress" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"missShaderBindingTableSize" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"missShaderBindingTableStride" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"hitShaderBindingTableAddress" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"hitShaderBindingTableSize" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"hitShaderBindingTableStride" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"callableShaderBindingTableAddress" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"callableShaderBindingTableSize" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"callableShaderBindingTableStride" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"width" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"height" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"depth" ptr)
 
   poke ptr val = do
     pokeField @"raygenShaderRecordAddress" ptr val

@@ -46,20 +46,20 @@ instance Storable VkCuLaunchInfoNVX where
 
   peek ptr = 
     VkCuLaunchInfoNVX
-       <$> peek (offset @"sType" ptr)
-       <*> peek (offset @"pNext" ptr)
-       <*> peek (offset @"function" ptr)
-       <*> peek (offset @"gridDimX" ptr)
-       <*> peek (offset @"gridDimY" ptr)
-       <*> peek (offset @"gridDimZ" ptr)
-       <*> peek (offset @"blockDimX" ptr)
-       <*> peek (offset @"blockDimY" ptr)
-       <*> peek (offset @"blockDimZ" ptr)
-       <*> peek (offset @"sharedMemBytes" ptr)
-       <*> peek (offset @"paramCount" ptr)
-       <*> peek (offset @"pParams" ptr)
-       <*> peek (offset @"extraCount" ptr)
-       <*> peek (offset @"pExtras" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"sType" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pNext" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"function" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"gridDimX" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"gridDimY" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"gridDimZ" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"blockDimX" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"blockDimY" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"blockDimZ" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"sharedMemBytes" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"paramCount" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pParams" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"extraCount" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pExtras" ptr)
 
   poke ptr val = do
     pokeField @"sType" ptr val

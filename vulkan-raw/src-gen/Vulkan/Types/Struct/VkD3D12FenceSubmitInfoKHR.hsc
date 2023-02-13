@@ -37,12 +37,12 @@ instance Storable VkD3D12FenceSubmitInfoKHR where
 
   peek ptr = 
     VkD3D12FenceSubmitInfoKHR
-       <$> peek (offset @"sType" ptr)
-       <*> peek (offset @"pNext" ptr)
-       <*> peek (offset @"waitSemaphoreValuesCount" ptr)
-       <*> peek (offset @"pWaitSemaphoreValues" ptr)
-       <*> peek (offset @"signalSemaphoreValuesCount" ptr)
-       <*> peek (offset @"pSignalSemaphoreValues" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"sType" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pNext" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"waitSemaphoreValuesCount" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pWaitSemaphoreValues" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"signalSemaphoreValuesCount" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pSignalSemaphoreValues" ptr)
 
   poke ptr val = do
     pokeField @"sType" ptr val

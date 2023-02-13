@@ -34,9 +34,9 @@ instance Storable VkInputAttachmentAspectReference where
 
   peek ptr = 
     VkInputAttachmentAspectReference
-       <$> peek (offset @"subpass" ptr)
-       <*> peek (offset @"inputAttachmentIndex" ptr)
-       <*> peek (offset @"aspectMask" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"subpass" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"inputAttachmentIndex" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"aspectMask" ptr)
 
   poke ptr val = do
     pokeField @"subpass" ptr val

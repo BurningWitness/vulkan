@@ -39,13 +39,13 @@ instance Storable VkVideoEncodeH265RateControlInfoEXT where
 
   peek ptr = 
     VkVideoEncodeH265RateControlInfoEXT
-       <$> peek (offset @"sType" ptr)
-       <*> peek (offset @"pNext" ptr)
-       <*> peek (offset @"gopFrameCount" ptr)
-       <*> peek (offset @"idrPeriod" ptr)
-       <*> peek (offset @"consecutiveBFrameCount" ptr)
-       <*> peek (offset @"rateControlStructure" ptr)
-       <*> peek (offset @"subLayerCount" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"sType" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pNext" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"gopFrameCount" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"idrPeriod" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"consecutiveBFrameCount" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"rateControlStructure" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"subLayerCount" ptr)
 
   poke ptr val = do
     pokeField @"sType" ptr val

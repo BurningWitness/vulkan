@@ -35,10 +35,10 @@ instance Storable VkPipelineExecutableStatisticValueKHR where
 
   peek ptr = 
     VkPipelineExecutableStatisticValueKHR
-       <$> peek (offset @"b32" ptr)
-       <*> peek (offset @"i64" ptr)
-       <*> peek (offset @"u64" ptr)
-       <*> peek (offset @"f64" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"b32" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"i64" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"u64" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"f64" ptr)
 
   poke ptr val = do
     pokeField @"b32" ptr val

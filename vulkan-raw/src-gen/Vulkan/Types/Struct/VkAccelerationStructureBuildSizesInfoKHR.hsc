@@ -37,11 +37,11 @@ instance Storable VkAccelerationStructureBuildSizesInfoKHR where
 
   peek ptr = 
     VkAccelerationStructureBuildSizesInfoKHR
-       <$> peek (offset @"sType" ptr)
-       <*> peek (offset @"pNext" ptr)
-       <*> peek (offset @"accelerationStructureSize" ptr)
-       <*> peek (offset @"updateScratchSize" ptr)
-       <*> peek (offset @"buildScratchSize" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"sType" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pNext" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"accelerationStructureSize" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"updateScratchSize" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"buildScratchSize" ptr)
 
   poke ptr val = do
     pokeField @"sType" ptr val

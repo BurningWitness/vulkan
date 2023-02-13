@@ -33,9 +33,9 @@ instance Storable VkVideoEncodeH265FrameSizeEXT where
 
   peek ptr = 
     VkVideoEncodeH265FrameSizeEXT
-       <$> peek (offset @"frameISize" ptr)
-       <*> peek (offset @"framePSize" ptr)
-       <*> peek (offset @"frameBSize" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"frameISize" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"framePSize" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"frameBSize" ptr)
 
   poke ptr val = do
     pokeField @"frameISize" ptr val

@@ -36,10 +36,10 @@ instance Storable VkPhysicalDeviceComputeShaderDerivativesFeaturesNV where
 
   peek ptr = 
     VkPhysicalDeviceComputeShaderDerivativesFeaturesNV
-       <$> peek (offset @"sType" ptr)
-       <*> peek (offset @"pNext" ptr)
-       <*> peek (offset @"computeDerivativeGroupQuads" ptr)
-       <*> peek (offset @"computeDerivativeGroupLinear" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"sType" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pNext" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"computeDerivativeGroupQuads" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"computeDerivativeGroupLinear" ptr)
 
   poke ptr val = do
     pokeField @"sType" ptr val

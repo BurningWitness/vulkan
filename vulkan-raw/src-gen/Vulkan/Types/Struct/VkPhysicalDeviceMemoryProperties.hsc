@@ -34,10 +34,10 @@ instance Storable VkPhysicalDeviceMemoryProperties where
 
   peek ptr = 
     VkPhysicalDeviceMemoryProperties
-       <$> peek (offset @"memoryTypeCount" ptr)
-       <*> peek (offset @"memoryTypes" ptr)
-       <*> peek (offset @"memoryHeapCount" ptr)
-       <*> peek (offset @"memoryHeaps" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"memoryTypeCount" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"memoryTypes" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"memoryHeapCount" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"memoryHeaps" ptr)
 
   poke ptr val = do
     pokeField @"memoryTypeCount" ptr val

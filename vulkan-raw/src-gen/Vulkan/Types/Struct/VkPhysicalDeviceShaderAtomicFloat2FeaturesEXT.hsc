@@ -46,20 +46,20 @@ instance Storable VkPhysicalDeviceShaderAtomicFloat2FeaturesEXT where
 
   peek ptr = 
     VkPhysicalDeviceShaderAtomicFloat2FeaturesEXT
-       <$> peek (offset @"sType" ptr)
-       <*> peek (offset @"pNext" ptr)
-       <*> peek (offset @"shaderBufferFloat16Atomics" ptr)
-       <*> peek (offset @"shaderBufferFloat16AtomicAdd" ptr)
-       <*> peek (offset @"shaderBufferFloat16AtomicMinMax" ptr)
-       <*> peek (offset @"shaderBufferFloat32AtomicMinMax" ptr)
-       <*> peek (offset @"shaderBufferFloat64AtomicMinMax" ptr)
-       <*> peek (offset @"shaderSharedFloat16Atomics" ptr)
-       <*> peek (offset @"shaderSharedFloat16AtomicAdd" ptr)
-       <*> peek (offset @"shaderSharedFloat16AtomicMinMax" ptr)
-       <*> peek (offset @"shaderSharedFloat32AtomicMinMax" ptr)
-       <*> peek (offset @"shaderSharedFloat64AtomicMinMax" ptr)
-       <*> peek (offset @"shaderImageFloat32AtomicMinMax" ptr)
-       <*> peek (offset @"sparseImageFloat32AtomicMinMax" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"sType" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pNext" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"shaderBufferFloat16Atomics" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"shaderBufferFloat16AtomicAdd" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"shaderBufferFloat16AtomicMinMax" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"shaderBufferFloat32AtomicMinMax" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"shaderBufferFloat64AtomicMinMax" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"shaderSharedFloat16Atomics" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"shaderSharedFloat16AtomicAdd" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"shaderSharedFloat16AtomicMinMax" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"shaderSharedFloat32AtomicMinMax" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"shaderSharedFloat64AtomicMinMax" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"shaderImageFloat32AtomicMinMax" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"sparseImageFloat32AtomicMinMax" ptr)
 
   poke ptr val = do
     pokeField @"sType" ptr val

@@ -35,9 +35,9 @@ instance Storable VkImageViewASTCDecodeModeEXT where
 
   peek ptr = 
     VkImageViewASTCDecodeModeEXT
-       <$> peek (offset @"sType" ptr)
-       <*> peek (offset @"pNext" ptr)
-       <*> peek (offset @"decodeMode" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"sType" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pNext" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"decodeMode" ptr)
 
   poke ptr val = do
     pokeField @"sType" ptr val

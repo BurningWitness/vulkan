@@ -36,10 +36,10 @@ instance Storable VkPipelineExecutableInfoKHR where
 
   peek ptr = 
     VkPipelineExecutableInfoKHR
-       <$> peek (offset @"sType" ptr)
-       <*> peek (offset @"pNext" ptr)
-       <*> peek (offset @"pipeline" ptr)
-       <*> peek (offset @"executableIndex" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"sType" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pNext" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pipeline" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"executableIndex" ptr)
 
   poke ptr val = do
     pokeField @"sType" ptr val

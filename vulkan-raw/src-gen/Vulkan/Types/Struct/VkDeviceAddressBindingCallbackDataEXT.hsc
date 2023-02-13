@@ -40,12 +40,12 @@ instance Storable VkDeviceAddressBindingCallbackDataEXT where
 
   peek ptr = 
     VkDeviceAddressBindingCallbackDataEXT
-       <$> peek (offset @"sType" ptr)
-       <*> peek (offset @"pNext" ptr)
-       <*> peek (offset @"flags" ptr)
-       <*> peek (offset @"baseAddress" ptr)
-       <*> peek (offset @"size" ptr)
-       <*> peek (offset @"bindingType" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"sType" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pNext" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"flags" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"baseAddress" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"size" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"bindingType" ptr)
 
   poke ptr val = do
     pokeField @"sType" ptr val

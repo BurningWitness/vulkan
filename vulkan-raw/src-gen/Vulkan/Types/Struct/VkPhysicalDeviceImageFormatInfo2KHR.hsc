@@ -44,13 +44,13 @@ instance Storable VkPhysicalDeviceImageFormatInfo2KHR where
 
   peek ptr = 
     VkPhysicalDeviceImageFormatInfo2KHR
-       <$> peek (offset @"sType" ptr)
-       <*> peek (offset @"pNext" ptr)
-       <*> peek (offset @"format" ptr)
-       <*> peek (offset @"type" ptr)
-       <*> peek (offset @"tiling" ptr)
-       <*> peek (offset @"usage" ptr)
-       <*> peek (offset @"flags" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"sType" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pNext" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"format" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"type" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"tiling" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"usage" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"flags" ptr)
 
   poke ptr val = do
     pokeField @"sType" ptr val

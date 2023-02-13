@@ -34,8 +34,8 @@ instance Storable VkGeometryDataNV where
 
   peek ptr = 
     VkGeometryDataNV
-       <$> peek (offset @"triangles" ptr)
-       <*> peek (offset @"aabbs" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"triangles" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"aabbs" ptr)
 
   poke ptr val = do
     pokeField @"triangles" ptr val

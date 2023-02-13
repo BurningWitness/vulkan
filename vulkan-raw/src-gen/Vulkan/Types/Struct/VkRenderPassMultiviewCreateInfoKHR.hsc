@@ -39,14 +39,14 @@ instance Storable VkRenderPassMultiviewCreateInfoKHR where
 
   peek ptr = 
     VkRenderPassMultiviewCreateInfoKHR
-       <$> peek (offset @"sType" ptr)
-       <*> peek (offset @"pNext" ptr)
-       <*> peek (offset @"subpassCount" ptr)
-       <*> peek (offset @"pViewMasks" ptr)
-       <*> peek (offset @"dependencyCount" ptr)
-       <*> peek (offset @"pViewOffsets" ptr)
-       <*> peek (offset @"correlationMaskCount" ptr)
-       <*> peek (offset @"pCorrelationMasks" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"sType" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pNext" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"subpassCount" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pViewMasks" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"dependencyCount" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pViewOffsets" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"correlationMaskCount" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pCorrelationMasks" ptr)
 
   poke ptr val = do
     pokeField @"sType" ptr val

@@ -34,9 +34,9 @@ instance Storable VkPhysicalDeviceDiscardRectanglePropertiesEXT where
 
   peek ptr = 
     VkPhysicalDeviceDiscardRectanglePropertiesEXT
-       <$> peek (offset @"sType" ptr)
-       <*> peek (offset @"pNext" ptr)
-       <*> peek (offset @"maxDiscardRectangles" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"sType" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pNext" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"maxDiscardRectangles" ptr)
 
   poke ptr val = do
     pokeField @"sType" ptr val

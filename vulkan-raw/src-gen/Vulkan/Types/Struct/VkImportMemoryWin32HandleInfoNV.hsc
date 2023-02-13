@@ -37,10 +37,10 @@ instance Storable VkImportMemoryWin32HandleInfoNV where
 
   peek ptr = 
     VkImportMemoryWin32HandleInfoNV
-       <$> peek (offset @"sType" ptr)
-       <*> peek (offset @"pNext" ptr)
-       <*> peek (offset @"handleType" ptr)
-       <*> peek (offset @"handle" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"sType" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pNext" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"handleType" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"handle" ptr)
 
   poke ptr val = do
     pokeField @"sType" ptr val

@@ -36,10 +36,10 @@ instance Storable VkPhysicalDeviceFaultFeaturesEXT where
 
   peek ptr = 
     VkPhysicalDeviceFaultFeaturesEXT
-       <$> peek (offset @"sType" ptr)
-       <*> peek (offset @"pNext" ptr)
-       <*> peek (offset @"deviceFault" ptr)
-       <*> peek (offset @"deviceFaultVendorBinary" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"sType" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pNext" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"deviceFault" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"deviceFaultVendorBinary" ptr)
 
   poke ptr val = do
     pokeField @"sType" ptr val

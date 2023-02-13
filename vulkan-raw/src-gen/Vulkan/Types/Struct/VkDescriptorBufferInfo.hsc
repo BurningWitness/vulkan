@@ -33,9 +33,9 @@ instance Storable VkDescriptorBufferInfo where
 
   peek ptr = 
     VkDescriptorBufferInfo
-       <$> peek (offset @"buffer" ptr)
-       <*> peek (offset @"offset" ptr)
-       <*> peek (offset @"range" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"buffer" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"offset" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"range" ptr)
 
   poke ptr val = do
     pokeField @"buffer" ptr val

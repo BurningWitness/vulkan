@@ -36,11 +36,11 @@ instance Storable VkPerformanceValueDataINTEL where
 
   peek ptr = 
     VkPerformanceValueDataINTEL
-       <$> peek (offset @"value32" ptr)
-       <*> peek (offset @"value64" ptr)
-       <*> peek (offset @"valueFloat" ptr)
-       <*> peek (offset @"valueBool" ptr)
-       <*> peek (offset @"valueString" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"value32" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"value64" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"valueFloat" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"valueBool" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"valueString" ptr)
 
   poke ptr val = do
     pokeField @"value32" ptr val

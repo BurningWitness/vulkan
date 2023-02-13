@@ -35,9 +35,9 @@ instance Storable VkDedicatedAllocationBufferCreateInfoNV where
 
   peek ptr = 
     VkDedicatedAllocationBufferCreateInfoNV
-       <$> peek (offset @"sType" ptr)
-       <*> peek (offset @"pNext" ptr)
-       <*> peek (offset @"dedicatedAllocation" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"sType" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pNext" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"dedicatedAllocation" ptr)
 
   poke ptr val = do
     pokeField @"sType" ptr val

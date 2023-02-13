@@ -39,12 +39,12 @@ instance Storable VkPhysicalDeviceDriverProperties where
 
   peek ptr = 
     VkPhysicalDeviceDriverProperties
-       <$> peek (offset @"sType" ptr)
-       <*> peek (offset @"pNext" ptr)
-       <*> peek (offset @"driverID" ptr)
-       <*> peek (offset @"driverName" ptr)
-       <*> peek (offset @"driverInfo" ptr)
-       <*> peek (offset @"conformanceVersion" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"sType" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pNext" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"driverID" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"driverName" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"driverInfo" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"conformanceVersion" ptr)
 
   poke ptr val = do
     pokeField @"sType" ptr val

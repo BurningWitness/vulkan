@@ -41,13 +41,13 @@ instance Storable VkExportMetalTextureInfoEXT where
 
   peek ptr = 
     VkExportMetalTextureInfoEXT
-       <$> peek (offset @"sType" ptr)
-       <*> peek (offset @"pNext" ptr)
-       <*> peek (offset @"image" ptr)
-       <*> peek (offset @"imageView" ptr)
-       <*> peek (offset @"bufferView" ptr)
-       <*> peek (offset @"plane" ptr)
-       <*> peek (offset @"mtlTexture" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"sType" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pNext" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"image" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"imageView" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"bufferView" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"plane" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"mtlTexture" ptr)
 
   poke ptr val = do
     pokeField @"sType" ptr val

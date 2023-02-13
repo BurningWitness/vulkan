@@ -36,10 +36,10 @@ instance Storable VkPhysicalDeviceShadingRateImageFeaturesNV where
 
   peek ptr = 
     VkPhysicalDeviceShadingRateImageFeaturesNV
-       <$> peek (offset @"sType" ptr)
-       <*> peek (offset @"pNext" ptr)
-       <*> peek (offset @"shadingRateImage" ptr)
-       <*> peek (offset @"shadingRateCoarseSampleOrder" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"sType" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pNext" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"shadingRateImage" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"shadingRateCoarseSampleOrder" ptr)
 
   poke ptr val = do
     pokeField @"sType" ptr val

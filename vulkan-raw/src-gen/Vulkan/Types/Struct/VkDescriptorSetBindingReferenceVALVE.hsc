@@ -36,10 +36,10 @@ instance Storable VkDescriptorSetBindingReferenceVALVE where
 
   peek ptr = 
     VkDescriptorSetBindingReferenceVALVE
-       <$> peek (offset @"sType" ptr)
-       <*> peek (offset @"pNext" ptr)
-       <*> peek (offset @"descriptorSetLayout" ptr)
-       <*> peek (offset @"binding" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"sType" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pNext" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"descriptorSetLayout" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"binding" ptr)
 
   poke ptr val = do
     pokeField @"sType" ptr val

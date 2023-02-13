@@ -35,9 +35,9 @@ instance Storable VkImageViewUsageCreateInfo where
 
   peek ptr = 
     VkImageViewUsageCreateInfo
-       <$> peek (offset @"sType" ptr)
-       <*> peek (offset @"pNext" ptr)
-       <*> peek (offset @"usage" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"sType" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pNext" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"usage" ptr)
 
   poke ptr val = do
     pokeField @"sType" ptr val

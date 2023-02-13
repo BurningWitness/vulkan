@@ -37,11 +37,11 @@ instance Storable VkPhysicalDeviceVulkanMemoryModelFeatures where
 
   peek ptr = 
     VkPhysicalDeviceVulkanMemoryModelFeatures
-       <$> peek (offset @"sType" ptr)
-       <*> peek (offset @"pNext" ptr)
-       <*> peek (offset @"vulkanMemoryModel" ptr)
-       <*> peek (offset @"vulkanMemoryModelDeviceScope" ptr)
-       <*> peek (offset @"vulkanMemoryModelAvailabilityVisibilityChains" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"sType" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pNext" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"vulkanMemoryModel" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"vulkanMemoryModelDeviceScope" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"vulkanMemoryModelAvailabilityVisibilityChains" ptr)
 
   poke ptr val = do
     pokeField @"sType" ptr val

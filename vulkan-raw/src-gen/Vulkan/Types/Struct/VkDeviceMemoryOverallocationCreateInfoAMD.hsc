@@ -35,9 +35,9 @@ instance Storable VkDeviceMemoryOverallocationCreateInfoAMD where
 
   peek ptr = 
     VkDeviceMemoryOverallocationCreateInfoAMD
-       <$> peek (offset @"sType" ptr)
-       <*> peek (offset @"pNext" ptr)
-       <*> peek (offset @"overallocationBehavior" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"sType" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pNext" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"overallocationBehavior" ptr)
 
   poke ptr val = do
     pokeField @"sType" ptr val

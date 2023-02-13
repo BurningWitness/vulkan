@@ -34,11 +34,11 @@ instance Storable VkSubresourceLayout where
 
   peek ptr = 
     VkSubresourceLayout
-       <$> peek (offset @"offset" ptr)
-       <*> peek (offset @"size" ptr)
-       <*> peek (offset @"rowPitch" ptr)
-       <*> peek (offset @"arrayPitch" ptr)
-       <*> peek (offset @"depthPitch" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"offset" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"size" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"rowPitch" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"arrayPitch" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"depthPitch" ptr)
 
   poke ptr val = do
     pokeField @"offset" ptr val

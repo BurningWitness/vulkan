@@ -36,10 +36,10 @@ instance Storable VkPipelineColorWriteCreateInfoEXT where
 
   peek ptr = 
     VkPipelineColorWriteCreateInfoEXT
-       <$> peek (offset @"sType" ptr)
-       <*> peek (offset @"pNext" ptr)
-       <*> peek (offset @"attachmentCount" ptr)
-       <*> peek (offset @"pColorWriteEnables" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"sType" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pNext" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"attachmentCount" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pColorWriteEnables" ptr)
 
   poke ptr val = do
     pokeField @"sType" ptr val

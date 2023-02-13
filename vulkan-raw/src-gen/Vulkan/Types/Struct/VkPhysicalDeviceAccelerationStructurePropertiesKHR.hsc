@@ -41,16 +41,16 @@ instance Storable VkPhysicalDeviceAccelerationStructurePropertiesKHR where
 
   peek ptr = 
     VkPhysicalDeviceAccelerationStructurePropertiesKHR
-       <$> peek (offset @"sType" ptr)
-       <*> peek (offset @"pNext" ptr)
-       <*> peek (offset @"maxGeometryCount" ptr)
-       <*> peek (offset @"maxInstanceCount" ptr)
-       <*> peek (offset @"maxPrimitiveCount" ptr)
-       <*> peek (offset @"maxPerStageDescriptorAccelerationStructures" ptr)
-       <*> peek (offset @"maxPerStageDescriptorUpdateAfterBindAccelerationStructures" ptr)
-       <*> peek (offset @"maxDescriptorSetAccelerationStructures" ptr)
-       <*> peek (offset @"maxDescriptorSetUpdateAfterBindAccelerationStructures" ptr)
-       <*> peek (offset @"minAccelerationStructureScratchOffsetAlignment" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"sType" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pNext" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"maxGeometryCount" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"maxInstanceCount" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"maxPrimitiveCount" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"maxPerStageDescriptorAccelerationStructures" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"maxPerStageDescriptorUpdateAfterBindAccelerationStructures" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"maxDescriptorSetAccelerationStructures" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"maxDescriptorSetUpdateAfterBindAccelerationStructures" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"minAccelerationStructureScratchOffsetAlignment" ptr)
 
   poke ptr val = do
     pokeField @"sType" ptr val

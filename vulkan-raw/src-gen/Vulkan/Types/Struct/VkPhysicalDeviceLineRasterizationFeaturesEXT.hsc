@@ -40,14 +40,14 @@ instance Storable VkPhysicalDeviceLineRasterizationFeaturesEXT where
 
   peek ptr = 
     VkPhysicalDeviceLineRasterizationFeaturesEXT
-       <$> peek (offset @"sType" ptr)
-       <*> peek (offset @"pNext" ptr)
-       <*> peek (offset @"rectangularLines" ptr)
-       <*> peek (offset @"bresenhamLines" ptr)
-       <*> peek (offset @"smoothLines" ptr)
-       <*> peek (offset @"stippledRectangularLines" ptr)
-       <*> peek (offset @"stippledBresenhamLines" ptr)
-       <*> peek (offset @"stippledSmoothLines" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"sType" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pNext" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"rectangularLines" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"bresenhamLines" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"smoothLines" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"stippledRectangularLines" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"stippledBresenhamLines" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"stippledSmoothLines" ptr)
 
   poke ptr val = do
     pokeField @"sType" ptr val

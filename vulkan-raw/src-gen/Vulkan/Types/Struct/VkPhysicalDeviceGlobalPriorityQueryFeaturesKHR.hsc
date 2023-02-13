@@ -35,9 +35,9 @@ instance Storable VkPhysicalDeviceGlobalPriorityQueryFeaturesKHR where
 
   peek ptr = 
     VkPhysicalDeviceGlobalPriorityQueryFeaturesKHR
-       <$> peek (offset @"sType" ptr)
-       <*> peek (offset @"pNext" ptr)
-       <*> peek (offset @"globalPriorityQuery" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"sType" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pNext" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"globalPriorityQuery" ptr)
 
   poke ptr val = do
     pokeField @"sType" ptr val

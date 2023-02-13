@@ -34,8 +34,8 @@ instance Storable VkDisplayModePropertiesKHR where
 
   peek ptr = 
     VkDisplayModePropertiesKHR
-       <$> peek (offset @"displayMode" ptr)
-       <*> peek (offset @"parameters" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"displayMode" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"parameters" ptr)
 
   poke ptr val = do
     pokeField @"displayMode" ptr val

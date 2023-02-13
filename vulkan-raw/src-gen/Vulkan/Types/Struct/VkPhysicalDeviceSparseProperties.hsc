@@ -34,11 +34,11 @@ instance Storable VkPhysicalDeviceSparseProperties where
 
   peek ptr = 
     VkPhysicalDeviceSparseProperties
-       <$> peek (offset @"residencyStandard2DBlockShape" ptr)
-       <*> peek (offset @"residencyStandard2DMultisampleBlockShape" ptr)
-       <*> peek (offset @"residencyStandard3DBlockShape" ptr)
-       <*> peek (offset @"residencyAlignedMipSize" ptr)
-       <*> peek (offset @"residencyNonResidentStrict" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"residencyStandard2DBlockShape" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"residencyStandard2DMultisampleBlockShape" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"residencyStandard3DBlockShape" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"residencyAlignedMipSize" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"residencyNonResidentStrict" ptr)
 
   poke ptr val = do
     pokeField @"residencyStandard2DBlockShape" ptr val

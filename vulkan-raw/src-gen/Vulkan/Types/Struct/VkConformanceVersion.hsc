@@ -34,10 +34,10 @@ instance Storable VkConformanceVersion where
 
   peek ptr = 
     VkConformanceVersion
-       <$> peek (offset @"major" ptr)
-       <*> peek (offset @"minor" ptr)
-       <*> peek (offset @"subminor" ptr)
-       <*> peek (offset @"patch" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"major" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"minor" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"subminor" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"patch" ptr)
 
   poke ptr val = do
     pokeField @"major" ptr val

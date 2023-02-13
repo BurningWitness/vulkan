@@ -40,12 +40,12 @@ instance Storable VkVideoProfileInfoKHR where
 
   peek ptr = 
     VkVideoProfileInfoKHR
-       <$> peek (offset @"sType" ptr)
-       <*> peek (offset @"pNext" ptr)
-       <*> peek (offset @"videoCodecOperation" ptr)
-       <*> peek (offset @"chromaSubsampling" ptr)
-       <*> peek (offset @"lumaBitDepth" ptr)
-       <*> peek (offset @"chromaBitDepth" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"sType" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pNext" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"videoCodecOperation" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"chromaSubsampling" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"lumaBitDepth" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"chromaBitDepth" ptr)
 
   poke ptr val = do
     pokeField @"sType" ptr val

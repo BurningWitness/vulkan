@@ -39,12 +39,12 @@ instance Storable VkBindVideoSessionMemoryInfoKHR where
 
   peek ptr = 
     VkBindVideoSessionMemoryInfoKHR
-       <$> peek (offset @"sType" ptr)
-       <*> peek (offset @"pNext" ptr)
-       <*> peek (offset @"memoryBindIndex" ptr)
-       <*> peek (offset @"memory" ptr)
-       <*> peek (offset @"memoryOffset" ptr)
-       <*> peek (offset @"memorySize" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"sType" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pNext" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"memoryBindIndex" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"memory" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"memoryOffset" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"memorySize" ptr)
 
   poke ptr val = do
     pokeField @"sType" ptr val

@@ -40,15 +40,15 @@ instance Storable VkSubmitInfo where
 
   peek ptr = 
     VkSubmitInfo
-       <$> peek (offset @"sType" ptr)
-       <*> peek (offset @"pNext" ptr)
-       <*> peek (offset @"waitSemaphoreCount" ptr)
-       <*> peek (offset @"pWaitSemaphores" ptr)
-       <*> peek (offset @"pWaitDstStageMask" ptr)
-       <*> peek (offset @"commandBufferCount" ptr)
-       <*> peek (offset @"pCommandBuffers" ptr)
-       <*> peek (offset @"signalSemaphoreCount" ptr)
-       <*> peek (offset @"pSignalSemaphores" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"sType" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pNext" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"waitSemaphoreCount" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pWaitSemaphores" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pWaitDstStageMask" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"commandBufferCount" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pCommandBuffers" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"signalSemaphoreCount" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pSignalSemaphores" ptr)
 
   poke ptr val = do
     pokeField @"sType" ptr val

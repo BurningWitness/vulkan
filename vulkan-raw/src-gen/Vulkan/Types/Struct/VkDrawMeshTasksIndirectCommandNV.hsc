@@ -32,8 +32,8 @@ instance Storable VkDrawMeshTasksIndirectCommandNV where
 
   peek ptr = 
     VkDrawMeshTasksIndirectCommandNV
-       <$> peek (offset @"taskCount" ptr)
-       <*> peek (offset @"firstTask" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"taskCount" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"firstTask" ptr)
 
   poke ptr val = do
     pokeField @"taskCount" ptr val

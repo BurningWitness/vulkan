@@ -37,10 +37,10 @@ instance Storable VkFenceGetFdInfoKHR where
 
   peek ptr = 
     VkFenceGetFdInfoKHR
-       <$> peek (offset @"sType" ptr)
-       <*> peek (offset @"pNext" ptr)
-       <*> peek (offset @"fence" ptr)
-       <*> peek (offset @"handleType" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"sType" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pNext" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"fence" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"handleType" ptr)
 
   poke ptr val = do
     pokeField @"sType" ptr val

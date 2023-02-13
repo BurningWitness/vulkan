@@ -45,16 +45,16 @@ instance Storable VkSurfaceCapabilitiesKHR where
 
   peek ptr = 
     VkSurfaceCapabilitiesKHR
-       <$> peek (offset @"minImageCount" ptr)
-       <*> peek (offset @"maxImageCount" ptr)
-       <*> peek (offset @"currentExtent" ptr)
-       <*> peek (offset @"minImageExtent" ptr)
-       <*> peek (offset @"maxImageExtent" ptr)
-       <*> peek (offset @"maxImageArrayLayers" ptr)
-       <*> peek (offset @"supportedTransforms" ptr)
-       <*> peek (offset @"currentTransform" ptr)
-       <*> peek (offset @"supportedCompositeAlpha" ptr)
-       <*> peek (offset @"supportedUsageFlags" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"minImageCount" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"maxImageCount" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"currentExtent" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"minImageExtent" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"maxImageExtent" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"maxImageArrayLayers" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"supportedTransforms" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"currentTransform" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"supportedCompositeAlpha" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"supportedUsageFlags" ptr)
 
   poke ptr val = do
     pokeField @"minImageCount" ptr val

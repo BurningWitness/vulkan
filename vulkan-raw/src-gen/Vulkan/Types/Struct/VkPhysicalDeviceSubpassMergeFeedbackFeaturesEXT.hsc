@@ -35,9 +35,9 @@ instance Storable VkPhysicalDeviceSubpassMergeFeedbackFeaturesEXT where
 
   peek ptr = 
     VkPhysicalDeviceSubpassMergeFeedbackFeaturesEXT
-       <$> peek (offset @"sType" ptr)
-       <*> peek (offset @"pNext" ptr)
-       <*> peek (offset @"subpassMergeFeedback" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"sType" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pNext" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"subpassMergeFeedback" ptr)
 
   poke ptr val = do
     pokeField @"sType" ptr val

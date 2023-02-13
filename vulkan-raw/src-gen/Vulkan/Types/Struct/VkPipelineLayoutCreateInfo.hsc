@@ -39,13 +39,13 @@ instance Storable VkPipelineLayoutCreateInfo where
 
   peek ptr = 
     VkPipelineLayoutCreateInfo
-       <$> peek (offset @"sType" ptr)
-       <*> peek (offset @"pNext" ptr)
-       <*> peek (offset @"flags" ptr)
-       <*> peek (offset @"setLayoutCount" ptr)
-       <*> peek (offset @"pSetLayouts" ptr)
-       <*> peek (offset @"pushConstantRangeCount" ptr)
-       <*> peek (offset @"pPushConstantRanges" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"sType" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pNext" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"flags" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"setLayoutCount" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pSetLayouts" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pushConstantRangeCount" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pPushConstantRanges" ptr)
 
   poke ptr val = do
     pokeField @"sType" ptr val

@@ -39,11 +39,11 @@ instance Storable VkPhysicalDeviceExternalBufferInfo where
 
   peek ptr = 
     VkPhysicalDeviceExternalBufferInfo
-       <$> peek (offset @"sType" ptr)
-       <*> peek (offset @"pNext" ptr)
-       <*> peek (offset @"flags" ptr)
-       <*> peek (offset @"usage" ptr)
-       <*> peek (offset @"handleType" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"sType" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pNext" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"flags" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"usage" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"handleType" ptr)
 
   poke ptr val = do
     pokeField @"sType" ptr val

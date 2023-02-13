@@ -37,12 +37,12 @@ instance Storable VkDescriptorPoolCreateInfo where
 
   peek ptr = 
     VkDescriptorPoolCreateInfo
-       <$> peek (offset @"sType" ptr)
-       <*> peek (offset @"pNext" ptr)
-       <*> peek (offset @"flags" ptr)
-       <*> peek (offset @"maxSets" ptr)
-       <*> peek (offset @"poolSizeCount" ptr)
-       <*> peek (offset @"pPoolSizes" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"sType" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pNext" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"flags" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"maxSets" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"poolSizeCount" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pPoolSizes" ptr)
 
   poke ptr val = do
     pokeField @"sType" ptr val

@@ -32,9 +32,9 @@ instance Storable VkBufferCopy where
 
   peek ptr = 
     VkBufferCopy
-       <$> peek (offset @"srcOffset" ptr)
-       <*> peek (offset @"dstOffset" ptr)
-       <*> peek (offset @"size" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"srcOffset" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"dstOffset" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"size" ptr)
 
   poke ptr val = do
     pokeField @"srcOffset" ptr val

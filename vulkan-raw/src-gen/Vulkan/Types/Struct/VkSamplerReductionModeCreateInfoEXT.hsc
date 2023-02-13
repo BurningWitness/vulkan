@@ -35,9 +35,9 @@ instance Storable VkSamplerReductionModeCreateInfoEXT where
 
   peek ptr = 
     VkSamplerReductionModeCreateInfoEXT
-       <$> peek (offset @"sType" ptr)
-       <*> peek (offset @"pNext" ptr)
-       <*> peek (offset @"reductionMode" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"sType" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pNext" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"reductionMode" ptr)
 
   poke ptr val = do
     pokeField @"sType" ptr val

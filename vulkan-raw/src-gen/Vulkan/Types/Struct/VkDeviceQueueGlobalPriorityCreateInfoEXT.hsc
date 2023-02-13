@@ -35,9 +35,9 @@ instance Storable VkDeviceQueueGlobalPriorityCreateInfoEXT where
 
   peek ptr = 
     VkDeviceQueueGlobalPriorityCreateInfoEXT
-       <$> peek (offset @"sType" ptr)
-       <*> peek (offset @"pNext" ptr)
-       <*> peek (offset @"globalPriority" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"sType" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pNext" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"globalPriority" ptr)
 
   poke ptr val = do
     pokeField @"sType" ptr val

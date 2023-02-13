@@ -35,11 +35,11 @@ instance Storable VkDescriptorSetAllocateInfo where
 
   peek ptr = 
     VkDescriptorSetAllocateInfo
-       <$> peek (offset @"sType" ptr)
-       <*> peek (offset @"pNext" ptr)
-       <*> peek (offset @"descriptorPool" ptr)
-       <*> peek (offset @"descriptorSetCount" ptr)
-       <*> peek (offset @"pSetLayouts" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"sType" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pNext" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"descriptorPool" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"descriptorSetCount" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pSetLayouts" ptr)
 
   poke ptr val = do
     pokeField @"sType" ptr val

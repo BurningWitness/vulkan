@@ -37,10 +37,10 @@ instance Storable VkDescriptorBufferBindingInfoEXT where
 
   peek ptr = 
     VkDescriptorBufferBindingInfoEXT
-       <$> peek (offset @"sType" ptr)
-       <*> peek (offset @"pNext" ptr)
-       <*> peek (offset @"address" ptr)
-       <*> peek (offset @"usage" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"sType" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pNext" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"address" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"usage" ptr)
 
   poke ptr val = do
     pokeField @"sType" ptr val

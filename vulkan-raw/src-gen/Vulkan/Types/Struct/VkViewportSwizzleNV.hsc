@@ -35,10 +35,10 @@ instance Storable VkViewportSwizzleNV where
 
   peek ptr = 
     VkViewportSwizzleNV
-       <$> peek (offset @"x" ptr)
-       <*> peek (offset @"y" ptr)
-       <*> peek (offset @"z" ptr)
-       <*> peek (offset @"w" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"x" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"y" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"z" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"w" ptr)
 
   poke ptr val = do
     pokeField @"x" ptr val

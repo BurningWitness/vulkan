@@ -31,7 +31,7 @@ instance Storable VkBindShaderGroupIndirectCommandNV where
 
   peek ptr = 
     VkBindShaderGroupIndirectCommandNV
-       <$> peek (offset @"groupIndex" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"groupIndex" ptr)
 
 
   poke ptr val = do

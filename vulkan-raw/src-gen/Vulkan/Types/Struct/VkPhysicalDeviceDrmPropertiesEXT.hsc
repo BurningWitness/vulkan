@@ -40,14 +40,14 @@ instance Storable VkPhysicalDeviceDrmPropertiesEXT where
 
   peek ptr = 
     VkPhysicalDeviceDrmPropertiesEXT
-       <$> peek (offset @"sType" ptr)
-       <*> peek (offset @"pNext" ptr)
-       <*> peek (offset @"hasPrimary" ptr)
-       <*> peek (offset @"hasRender" ptr)
-       <*> peek (offset @"primaryMajor" ptr)
-       <*> peek (offset @"primaryMinor" ptr)
-       <*> peek (offset @"renderMajor" ptr)
-       <*> peek (offset @"renderMinor" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"sType" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pNext" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"hasPrimary" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"hasRender" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"primaryMajor" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"primaryMinor" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"renderMajor" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"renderMinor" ptr)
 
   poke ptr val = do
     pokeField @"sType" ptr val

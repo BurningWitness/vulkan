@@ -48,16 +48,16 @@ instance Storable VkSamplerYcbcrConversionCreateInfo where
 
   peek ptr = 
     VkSamplerYcbcrConversionCreateInfo
-       <$> peek (offset @"sType" ptr)
-       <*> peek (offset @"pNext" ptr)
-       <*> peek (offset @"format" ptr)
-       <*> peek (offset @"ycbcrModel" ptr)
-       <*> peek (offset @"ycbcrRange" ptr)
-       <*> peek (offset @"components" ptr)
-       <*> peek (offset @"xChromaOffset" ptr)
-       <*> peek (offset @"yChromaOffset" ptr)
-       <*> peek (offset @"chromaFilter" ptr)
-       <*> peek (offset @"forceExplicitReconstruction" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"sType" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pNext" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"format" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"ycbcrModel" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"ycbcrRange" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"components" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"xChromaOffset" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"yChromaOffset" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"chromaFilter" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"forceExplicitReconstruction" ptr)
 
   poke ptr val = do
     pokeField @"sType" ptr val

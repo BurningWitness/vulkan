@@ -35,10 +35,10 @@ instance Storable VkPipelineShaderStageModuleIdentifierCreateInfoEXT where
 
   peek ptr = 
     VkPipelineShaderStageModuleIdentifierCreateInfoEXT
-       <$> peek (offset @"sType" ptr)
-       <*> peek (offset @"pNext" ptr)
-       <*> peek (offset @"identifierSize" ptr)
-       <*> peek (offset @"pIdentifier" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"sType" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pNext" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"identifierSize" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pIdentifier" ptr)
 
   poke ptr val = do
     pokeField @"sType" ptr val

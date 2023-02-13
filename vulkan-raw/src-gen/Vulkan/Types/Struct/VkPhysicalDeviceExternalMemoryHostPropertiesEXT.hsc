@@ -35,9 +35,9 @@ instance Storable VkPhysicalDeviceExternalMemoryHostPropertiesEXT where
 
   peek ptr = 
     VkPhysicalDeviceExternalMemoryHostPropertiesEXT
-       <$> peek (offset @"sType" ptr)
-       <*> peek (offset @"pNext" ptr)
-       <*> peek (offset @"minImportedHostPointerAlignment" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"sType" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pNext" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"minImportedHostPointerAlignment" ptr)
 
   poke ptr val = do
     pokeField @"sType" ptr val

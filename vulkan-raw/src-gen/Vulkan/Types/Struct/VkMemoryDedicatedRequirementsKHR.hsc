@@ -36,10 +36,10 @@ instance Storable VkMemoryDedicatedRequirementsKHR where
 
   peek ptr = 
     VkMemoryDedicatedRequirementsKHR
-       <$> peek (offset @"sType" ptr)
-       <*> peek (offset @"pNext" ptr)
-       <*> peek (offset @"prefersDedicatedAllocation" ptr)
-       <*> peek (offset @"requiresDedicatedAllocation" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"sType" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pNext" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"prefersDedicatedAllocation" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"requiresDedicatedAllocation" ptr)
 
   poke ptr val = do
     pokeField @"sType" ptr val

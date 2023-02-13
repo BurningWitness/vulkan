@@ -39,13 +39,13 @@ instance Storable VkPhysicalDeviceIDProperties where
 
   peek ptr = 
     VkPhysicalDeviceIDProperties
-       <$> peek (offset @"sType" ptr)
-       <*> peek (offset @"pNext" ptr)
-       <*> peek (offset @"deviceUUID" ptr)
-       <*> peek (offset @"driverUUID" ptr)
-       <*> peek (offset @"deviceLUID" ptr)
-       <*> peek (offset @"deviceNodeMask" ptr)
-       <*> peek (offset @"deviceLUIDValid" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"sType" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pNext" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"deviceUUID" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"driverUUID" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"deviceLUID" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"deviceNodeMask" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"deviceLUIDValid" ptr)
 
   poke ptr val = do
     pokeField @"sType" ptr val

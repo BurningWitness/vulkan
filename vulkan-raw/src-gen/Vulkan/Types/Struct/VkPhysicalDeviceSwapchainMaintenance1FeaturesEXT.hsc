@@ -35,9 +35,9 @@ instance Storable VkPhysicalDeviceSwapchainMaintenance1FeaturesEXT where
 
   peek ptr = 
     VkPhysicalDeviceSwapchainMaintenance1FeaturesEXT
-       <$> peek (offset @"sType" ptr)
-       <*> peek (offset @"pNext" ptr)
-       <*> peek (offset @"swapchainMaintenance1" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"sType" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pNext" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"swapchainMaintenance1" ptr)
 
   poke ptr val = do
     pokeField @"sType" ptr val

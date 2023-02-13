@@ -31,8 +31,8 @@ instance Storable VkMemoryType where
 
   peek ptr = 
     VkMemoryType
-       <$> peek (offset @"propertyFlags" ptr)
-       <*> peek (offset @"heapIndex" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"propertyFlags" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"heapIndex" ptr)
 
   poke ptr val = do
     pokeField @"propertyFlags" ptr val

@@ -40,12 +40,12 @@ instance Storable VkPipelineDiscardRectangleStateCreateInfoEXT where
 
   peek ptr = 
     VkPipelineDiscardRectangleStateCreateInfoEXT
-       <$> peek (offset @"sType" ptr)
-       <*> peek (offset @"pNext" ptr)
-       <*> peek (offset @"flags" ptr)
-       <*> peek (offset @"discardRectangleMode" ptr)
-       <*> peek (offset @"discardRectangleCount" ptr)
-       <*> peek (offset @"pDiscardRectangles" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"sType" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pNext" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"flags" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"discardRectangleMode" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"discardRectangleCount" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pDiscardRectangles" ptr)
 
   poke ptr val = do
     pokeField @"sType" ptr val

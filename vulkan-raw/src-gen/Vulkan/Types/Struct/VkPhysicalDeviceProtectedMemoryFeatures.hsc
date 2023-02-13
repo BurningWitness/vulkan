@@ -35,9 +35,9 @@ instance Storable VkPhysicalDeviceProtectedMemoryFeatures where
 
   peek ptr = 
     VkPhysicalDeviceProtectedMemoryFeatures
-       <$> peek (offset @"sType" ptr)
-       <*> peek (offset @"pNext" ptr)
-       <*> peek (offset @"protectedMemory" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"sType" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pNext" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"protectedMemory" ptr)
 
   poke ptr val = do
     pokeField @"sType" ptr val

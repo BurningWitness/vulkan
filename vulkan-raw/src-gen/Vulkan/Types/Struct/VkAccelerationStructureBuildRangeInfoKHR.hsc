@@ -34,10 +34,10 @@ instance Storable VkAccelerationStructureBuildRangeInfoKHR where
 
   peek ptr = 
     VkAccelerationStructureBuildRangeInfoKHR
-       <$> peek (offset @"primitiveCount" ptr)
-       <*> peek (offset @"primitiveOffset" ptr)
-       <*> peek (offset @"firstVertex" ptr)
-       <*> peek (offset @"transformOffset" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"primitiveCount" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"primitiveOffset" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"firstVertex" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"transformOffset" ptr)
 
   poke ptr val = do
     pokeField @"primitiveCount" ptr val

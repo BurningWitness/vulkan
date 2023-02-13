@@ -41,13 +41,13 @@ instance Storable VkPipelineCoverageModulationStateCreateInfoNV where
 
   peek ptr = 
     VkPipelineCoverageModulationStateCreateInfoNV
-       <$> peek (offset @"sType" ptr)
-       <*> peek (offset @"pNext" ptr)
-       <*> peek (offset @"flags" ptr)
-       <*> peek (offset @"coverageModulationMode" ptr)
-       <*> peek (offset @"coverageModulationTableEnable" ptr)
-       <*> peek (offset @"coverageModulationTableCount" ptr)
-       <*> peek (offset @"pCoverageModulationTable" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"sType" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pNext" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"flags" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"coverageModulationMode" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"coverageModulationTableEnable" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"coverageModulationTableCount" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pCoverageModulationTable" ptr)
 
   poke ptr val = do
     pokeField @"sType" ptr val

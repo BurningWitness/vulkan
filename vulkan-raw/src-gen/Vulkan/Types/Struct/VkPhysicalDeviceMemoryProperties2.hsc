@@ -35,9 +35,9 @@ instance Storable VkPhysicalDeviceMemoryProperties2 where
 
   peek ptr = 
     VkPhysicalDeviceMemoryProperties2
-       <$> peek (offset @"sType" ptr)
-       <*> peek (offset @"pNext" ptr)
-       <*> peek (offset @"memoryProperties" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"sType" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pNext" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"memoryProperties" ptr)
 
   poke ptr val = do
     pokeField @"sType" ptr val

@@ -35,9 +35,9 @@ instance Storable VkSwapchainDisplayNativeHdrCreateInfoAMD where
 
   peek ptr = 
     VkSwapchainDisplayNativeHdrCreateInfoAMD
-       <$> peek (offset @"sType" ptr)
-       <*> peek (offset @"pNext" ptr)
-       <*> peek (offset @"localDimmingEnable" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"sType" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pNext" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"localDimmingEnable" ptr)
 
   poke ptr val = do
     pokeField @"sType" ptr val

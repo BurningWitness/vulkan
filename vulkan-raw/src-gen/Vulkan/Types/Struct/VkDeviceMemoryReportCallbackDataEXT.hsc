@@ -45,15 +45,15 @@ instance Storable VkDeviceMemoryReportCallbackDataEXT where
 
   peek ptr = 
     VkDeviceMemoryReportCallbackDataEXT
-       <$> peek (offset @"sType" ptr)
-       <*> peek (offset @"pNext" ptr)
-       <*> peek (offset @"flags" ptr)
-       <*> peek (offset @"type" ptr)
-       <*> peek (offset @"memoryObjectId" ptr)
-       <*> peek (offset @"size" ptr)
-       <*> peek (offset @"objectType" ptr)
-       <*> peek (offset @"objectHandle" ptr)
-       <*> peek (offset @"heapIndex" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"sType" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pNext" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"flags" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"type" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"memoryObjectId" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"size" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"objectType" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"objectHandle" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"heapIndex" ptr)
 
   poke ptr val = do
     pokeField @"sType" ptr val

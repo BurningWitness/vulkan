@@ -39,13 +39,13 @@ instance Storable VkShaderStatisticsInfoAMD where
 
   peek ptr = 
     VkShaderStatisticsInfoAMD
-       <$> peek (offset @"shaderStageMask" ptr)
-       <*> peek (offset @"resourceUsage" ptr)
-       <*> peek (offset @"numPhysicalVgprs" ptr)
-       <*> peek (offset @"numPhysicalSgprs" ptr)
-       <*> peek (offset @"numAvailableVgprs" ptr)
-       <*> peek (offset @"numAvailableSgprs" ptr)
-       <*> peek (offset @"computeWorkGroupSize" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"shaderStageMask" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"resourceUsage" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"numPhysicalVgprs" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"numPhysicalSgprs" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"numAvailableVgprs" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"numAvailableSgprs" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"computeWorkGroupSize" ptr)
 
   poke ptr val = do
     pokeField @"shaderStageMask" ptr val

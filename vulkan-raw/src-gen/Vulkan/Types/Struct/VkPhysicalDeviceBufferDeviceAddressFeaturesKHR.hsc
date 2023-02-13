@@ -37,11 +37,11 @@ instance Storable VkPhysicalDeviceBufferDeviceAddressFeaturesKHR where
 
   peek ptr = 
     VkPhysicalDeviceBufferDeviceAddressFeaturesKHR
-       <$> peek (offset @"sType" ptr)
-       <*> peek (offset @"pNext" ptr)
-       <*> peek (offset @"bufferDeviceAddress" ptr)
-       <*> peek (offset @"bufferDeviceAddressCaptureReplay" ptr)
-       <*> peek (offset @"bufferDeviceAddressMultiDevice" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"sType" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pNext" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"bufferDeviceAddress" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"bufferDeviceAddressCaptureReplay" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"bufferDeviceAddressMultiDevice" ptr)
 
   poke ptr val = do
     pokeField @"sType" ptr val

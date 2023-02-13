@@ -41,14 +41,14 @@ instance Storable VkCommandBufferInheritanceInfo where
 
   peek ptr = 
     VkCommandBufferInheritanceInfo
-       <$> peek (offset @"sType" ptr)
-       <*> peek (offset @"pNext" ptr)
-       <*> peek (offset @"renderPass" ptr)
-       <*> peek (offset @"subpass" ptr)
-       <*> peek (offset @"framebuffer" ptr)
-       <*> peek (offset @"occlusionQueryEnable" ptr)
-       <*> peek (offset @"queryFlags" ptr)
-       <*> peek (offset @"pipelineStatistics" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"sType" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pNext" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"renderPass" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"subpass" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"framebuffer" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"occlusionQueryEnable" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"queryFlags" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pipelineStatistics" ptr)
 
   poke ptr val = do
     pokeField @"sType" ptr val

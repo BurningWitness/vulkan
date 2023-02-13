@@ -35,10 +35,10 @@ instance Storable VkPhysicalDeviceOpacityMicromapPropertiesEXT where
 
   peek ptr = 
     VkPhysicalDeviceOpacityMicromapPropertiesEXT
-       <$> peek (offset @"sType" ptr)
-       <*> peek (offset @"pNext" ptr)
-       <*> peek (offset @"maxOpacity2StateSubdivisionLevel" ptr)
-       <*> peek (offset @"maxOpacity4StateSubdivisionLevel" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"sType" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pNext" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"maxOpacity2StateSubdivisionLevel" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"maxOpacity4StateSubdivisionLevel" ptr)
 
   poke ptr val = do
     pokeField @"sType" ptr val

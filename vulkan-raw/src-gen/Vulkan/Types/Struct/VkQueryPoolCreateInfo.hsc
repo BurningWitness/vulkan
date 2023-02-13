@@ -38,12 +38,12 @@ instance Storable VkQueryPoolCreateInfo where
 
   peek ptr = 
     VkQueryPoolCreateInfo
-       <$> peek (offset @"sType" ptr)
-       <*> peek (offset @"pNext" ptr)
-       <*> peek (offset @"flags" ptr)
-       <*> peek (offset @"queryType" ptr)
-       <*> peek (offset @"queryCount" ptr)
-       <*> peek (offset @"pipelineStatistics" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"sType" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pNext" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"flags" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"queryType" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"queryCount" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pipelineStatistics" ptr)
 
   poke ptr val = do
     pokeField @"sType" ptr val

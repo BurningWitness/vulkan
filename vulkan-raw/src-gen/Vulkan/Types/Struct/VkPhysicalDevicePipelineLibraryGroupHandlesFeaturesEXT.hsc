@@ -35,9 +35,9 @@ instance Storable VkPhysicalDevicePipelineLibraryGroupHandlesFeaturesEXT where
 
   peek ptr = 
     VkPhysicalDevicePipelineLibraryGroupHandlesFeaturesEXT
-       <$> peek (offset @"sType" ptr)
-       <*> peek (offset @"pNext" ptr)
-       <*> peek (offset @"pipelineLibraryGroupHandles" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"sType" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pNext" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pipelineLibraryGroupHandles" ptr)
 
   poke ptr val = do
     pokeField @"sType" ptr val

@@ -45,14 +45,14 @@ instance Storable VkVideoFormatPropertiesKHR where
 
   peek ptr = 
     VkVideoFormatPropertiesKHR
-       <$> peek (offset @"sType" ptr)
-       <*> peek (offset @"pNext" ptr)
-       <*> peek (offset @"format" ptr)
-       <*> peek (offset @"componentMapping" ptr)
-       <*> peek (offset @"imageCreateFlags" ptr)
-       <*> peek (offset @"imageType" ptr)
-       <*> peek (offset @"imageTiling" ptr)
-       <*> peek (offset @"imageUsageFlags" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"sType" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pNext" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"format" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"componentMapping" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"imageCreateFlags" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"imageType" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"imageTiling" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"imageUsageFlags" ptr)
 
   poke ptr val = do
     pokeField @"sType" ptr val

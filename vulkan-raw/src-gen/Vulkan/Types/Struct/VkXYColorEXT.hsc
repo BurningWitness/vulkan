@@ -32,8 +32,8 @@ instance Storable VkXYColorEXT where
 
   peek ptr = 
     VkXYColorEXT
-       <$> peek (offset @"x" ptr)
-       <*> peek (offset @"y" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"x" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"y" ptr)
 
   poke ptr val = do
     pokeField @"x" ptr val

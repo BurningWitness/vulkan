@@ -37,11 +37,11 @@ instance Storable VkDeviceFaultCountsEXT where
 
   peek ptr = 
     VkDeviceFaultCountsEXT
-       <$> peek (offset @"sType" ptr)
-       <*> peek (offset @"pNext" ptr)
-       <*> peek (offset @"addressInfoCount" ptr)
-       <*> peek (offset @"vendorInfoCount" ptr)
-       <*> peek (offset @"vendorBinarySize" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"sType" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pNext" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"addressInfoCount" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"vendorInfoCount" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"vendorBinarySize" ptr)
 
   poke ptr val = do
     pokeField @"sType" ptr val

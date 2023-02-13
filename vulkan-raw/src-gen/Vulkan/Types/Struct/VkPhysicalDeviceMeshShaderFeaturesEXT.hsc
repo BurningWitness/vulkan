@@ -39,13 +39,13 @@ instance Storable VkPhysicalDeviceMeshShaderFeaturesEXT where
 
   peek ptr = 
     VkPhysicalDeviceMeshShaderFeaturesEXT
-       <$> peek (offset @"sType" ptr)
-       <*> peek (offset @"pNext" ptr)
-       <*> peek (offset @"taskShader" ptr)
-       <*> peek (offset @"meshShader" ptr)
-       <*> peek (offset @"multiviewMeshShader" ptr)
-       <*> peek (offset @"primitiveFragmentShadingRateMeshShader" ptr)
-       <*> peek (offset @"meshShaderQueries" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"sType" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pNext" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"taskShader" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"meshShader" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"multiviewMeshShader" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"primitiveFragmentShadingRateMeshShader" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"meshShaderQueries" ptr)
 
   poke ptr val = do
     pokeField @"sType" ptr val

@@ -36,10 +36,10 @@ instance Storable VkRenderPassInputAttachmentAspectCreateInfoKHR where
 
   peek ptr = 
     VkRenderPassInputAttachmentAspectCreateInfoKHR
-       <$> peek (offset @"sType" ptr)
-       <*> peek (offset @"pNext" ptr)
-       <*> peek (offset @"aspectReferenceCount" ptr)
-       <*> peek (offset @"pAspectReferences" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"sType" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pNext" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"aspectReferenceCount" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pAspectReferences" ptr)
 
   poke ptr val = do
     pokeField @"sType" ptr val

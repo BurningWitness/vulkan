@@ -41,13 +41,13 @@ instance Storable VkPipelineShaderStageCreateInfo where
 
   peek ptr = 
     VkPipelineShaderStageCreateInfo
-       <$> peek (offset @"sType" ptr)
-       <*> peek (offset @"pNext" ptr)
-       <*> peek (offset @"flags" ptr)
-       <*> peek (offset @"stage" ptr)
-       <*> peek (offset @"module" ptr)
-       <*> peek (offset @"pName" ptr)
-       <*> peek (offset @"pSpecializationInfo" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"sType" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pNext" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"flags" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"stage" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"module" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pName" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pSpecializationInfo" ptr)
 
   poke ptr val = do
     pokeField @"sType" ptr val

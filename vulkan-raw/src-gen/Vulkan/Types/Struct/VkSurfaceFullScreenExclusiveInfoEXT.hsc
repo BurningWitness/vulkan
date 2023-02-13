@@ -35,9 +35,9 @@ instance Storable VkSurfaceFullScreenExclusiveInfoEXT where
 
   peek ptr = 
     VkSurfaceFullScreenExclusiveInfoEXT
-       <$> peek (offset @"sType" ptr)
-       <*> peek (offset @"pNext" ptr)
-       <*> peek (offset @"fullScreenExclusive" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"sType" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pNext" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"fullScreenExclusive" ptr)
 
   poke ptr val = do
     pokeField @"sType" ptr val

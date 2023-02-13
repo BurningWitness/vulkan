@@ -37,11 +37,11 @@ instance Storable VkVideoEncodeH264SessionParametersCreateInfoEXT where
 
   peek ptr = 
     VkVideoEncodeH264SessionParametersCreateInfoEXT
-       <$> peek (offset @"sType" ptr)
-       <*> peek (offset @"pNext" ptr)
-       <*> peek (offset @"maxStdSPSCount" ptr)
-       <*> peek (offset @"maxStdPPSCount" ptr)
-       <*> peek (offset @"pParametersAddInfo" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"sType" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pNext" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"maxStdSPSCount" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"maxStdPPSCount" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pParametersAddInfo" ptr)
 
   poke ptr val = do
     pokeField @"sType" ptr val

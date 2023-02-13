@@ -35,9 +35,9 @@ instance Storable VkPhysicalDeviceImageCompressionControlSwapchainFeaturesEXT wh
 
   peek ptr = 
     VkPhysicalDeviceImageCompressionControlSwapchainFeaturesEXT
-       <$> peek (offset @"sType" ptr)
-       <*> peek (offset @"pNext" ptr)
-       <*> peek (offset @"imageCompressionControlSwapchain" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"sType" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pNext" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"imageCompressionControlSwapchain" ptr)
 
   poke ptr val = do
     pokeField @"sType" ptr val

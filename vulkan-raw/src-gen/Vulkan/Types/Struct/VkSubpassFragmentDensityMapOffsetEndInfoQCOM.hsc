@@ -36,10 +36,10 @@ instance Storable VkSubpassFragmentDensityMapOffsetEndInfoQCOM where
 
   peek ptr = 
     VkSubpassFragmentDensityMapOffsetEndInfoQCOM
-       <$> peek (offset @"sType" ptr)
-       <*> peek (offset @"pNext" ptr)
-       <*> peek (offset @"fragmentDensityOffsetCount" ptr)
-       <*> peek (offset @"pFragmentDensityOffsets" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"sType" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pNext" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"fragmentDensityOffsetCount" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pFragmentDensityOffsets" ptr)
 
   poke ptr val = do
     pokeField @"sType" ptr val

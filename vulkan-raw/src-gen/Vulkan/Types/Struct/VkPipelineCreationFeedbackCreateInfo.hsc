@@ -37,11 +37,11 @@ instance Storable VkPipelineCreationFeedbackCreateInfo where
 
   peek ptr = 
     VkPipelineCreationFeedbackCreateInfo
-       <$> peek (offset @"sType" ptr)
-       <*> peek (offset @"pNext" ptr)
-       <*> peek (offset @"pPipelineCreationFeedback" ptr)
-       <*> peek (offset @"pipelineStageCreationFeedbackCount" ptr)
-       <*> peek (offset @"pPipelineStageCreationFeedbacks" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"sType" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pNext" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pPipelineCreationFeedback" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pipelineStageCreationFeedbackCount" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pPipelineStageCreationFeedbacks" ptr)
 
   poke ptr val = do
     pokeField @"sType" ptr val

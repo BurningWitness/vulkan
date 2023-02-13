@@ -40,14 +40,14 @@ instance Storable VkVideoEncodeH265EmitPictureParametersInfoEXT where
 
   peek ptr = 
     VkVideoEncodeH265EmitPictureParametersInfoEXT
-       <$> peek (offset @"sType" ptr)
-       <*> peek (offset @"pNext" ptr)
-       <*> peek (offset @"vpsId" ptr)
-       <*> peek (offset @"spsId" ptr)
-       <*> peek (offset @"emitVpsEnable" ptr)
-       <*> peek (offset @"emitSpsEnable" ptr)
-       <*> peek (offset @"ppsIdEntryCount" ptr)
-       <*> peek (offset @"ppsIdEntries" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"sType" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pNext" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"vpsId" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"spsId" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"emitVpsEnable" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"emitSpsEnable" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"ppsIdEntryCount" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"ppsIdEntries" ptr)
 
   poke ptr val = do
     pokeField @"sType" ptr val

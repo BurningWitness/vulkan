@@ -39,14 +39,14 @@ instance Storable VkInstanceCreateInfo where
 
   peek ptr = 
     VkInstanceCreateInfo
-       <$> peek (offset @"sType" ptr)
-       <*> peek (offset @"pNext" ptr)
-       <*> peek (offset @"flags" ptr)
-       <*> peek (offset @"pApplicationInfo" ptr)
-       <*> peek (offset @"enabledLayerCount" ptr)
-       <*> peek (offset @"ppEnabledLayerNames" ptr)
-       <*> peek (offset @"enabledExtensionCount" ptr)
-       <*> peek (offset @"ppEnabledExtensionNames" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"sType" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pNext" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"flags" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pApplicationInfo" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"enabledLayerCount" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"ppEnabledLayerNames" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"enabledExtensionCount" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"ppEnabledExtensionNames" ptr)
 
   poke ptr val = do
     pokeField @"sType" ptr val

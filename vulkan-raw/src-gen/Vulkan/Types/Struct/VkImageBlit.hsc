@@ -34,10 +34,10 @@ instance Storable VkImageBlit where
 
   peek ptr = 
     VkImageBlit
-       <$> peek (offset @"srcSubresource" ptr)
-       <*> peek (offset @"srcOffsets" ptr)
-       <*> peek (offset @"dstSubresource" ptr)
-       <*> peek (offset @"dstOffsets" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"srcSubresource" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"srcOffsets" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"dstSubresource" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"dstOffsets" ptr)
 
   poke ptr val = do
     pokeField @"srcSubresource" ptr val

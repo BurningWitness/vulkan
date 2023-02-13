@@ -35,9 +35,9 @@ instance Storable VkDisplayNativeHdrSurfaceCapabilitiesAMD where
 
   peek ptr = 
     VkDisplayNativeHdrSurfaceCapabilitiesAMD
-       <$> peek (offset @"sType" ptr)
-       <*> peek (offset @"pNext" ptr)
-       <*> peek (offset @"localDimmingSupport" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"sType" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pNext" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"localDimmingSupport" ptr)
 
   poke ptr val = do
     pokeField @"sType" ptr val

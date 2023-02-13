@@ -36,10 +36,10 @@ instance Storable VkDescriptorSetLayoutBindingFlagsCreateInfo where
 
   peek ptr = 
     VkDescriptorSetLayoutBindingFlagsCreateInfo
-       <$> peek (offset @"sType" ptr)
-       <*> peek (offset @"pNext" ptr)
-       <*> peek (offset @"bindingCount" ptr)
-       <*> peek (offset @"pBindingFlags" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"sType" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pNext" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"bindingCount" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pBindingFlags" ptr)
 
   poke ptr val = do
     pokeField @"sType" ptr val

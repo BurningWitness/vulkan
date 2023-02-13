@@ -123,10 +123,7 @@ library
 
     reexported-modules:  Foreign.Storable.Offset
 
-    if os(darwin)
-      frameworks:        MoltenVK
-    else
-      extra-libraries:   vulkan
+    extra-libraries:     vulkan
 
     exposed-modules:
       Vulkan.Core_1_0

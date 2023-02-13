@@ -35,11 +35,11 @@ instance Storable VkPipelineCacheCreateInfo where
 
   peek ptr = 
     VkPipelineCacheCreateInfo
-       <$> peek (offset @"sType" ptr)
-       <*> peek (offset @"pNext" ptr)
-       <*> peek (offset @"flags" ptr)
-       <*> peek (offset @"initialDataSize" ptr)
-       <*> peek (offset @"pInitialData" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"sType" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pNext" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"flags" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"initialDataSize" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pInitialData" ptr)
 
   poke ptr val = do
     pokeField @"sType" ptr val

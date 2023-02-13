@@ -36,10 +36,10 @@ instance Storable VkQueueFamilyGlobalPriorityPropertiesEXT where
 
   peek ptr = 
     VkQueueFamilyGlobalPriorityPropertiesEXT
-       <$> peek (offset @"sType" ptr)
-       <*> peek (offset @"pNext" ptr)
-       <*> peek (offset @"priorityCount" ptr)
-       <*> peek (offset @"priorities" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"sType" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pNext" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"priorityCount" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"priorities" ptr)
 
   poke ptr val = do
     pokeField @"sType" ptr val

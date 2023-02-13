@@ -35,9 +35,9 @@ instance Storable VkQueueFamilyProperties2 where
 
   peek ptr = 
     VkQueueFamilyProperties2
-       <$> peek (offset @"sType" ptr)
-       <*> peek (offset @"pNext" ptr)
-       <*> peek (offset @"queueFamilyProperties" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"sType" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pNext" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"queueFamilyProperties" ptr)
 
   poke ptr val = do
     pokeField @"sType" ptr val

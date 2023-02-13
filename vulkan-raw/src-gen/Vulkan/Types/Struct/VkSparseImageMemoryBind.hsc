@@ -40,12 +40,12 @@ instance Storable VkSparseImageMemoryBind where
 
   peek ptr = 
     VkSparseImageMemoryBind
-       <$> peek (offset @"subresource" ptr)
-       <*> peek (offset @"offset" ptr)
-       <*> peek (offset @"extent" ptr)
-       <*> peek (offset @"memory" ptr)
-       <*> peek (offset @"memoryOffset" ptr)
-       <*> peek (offset @"flags" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"subresource" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"offset" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"extent" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"memory" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"memoryOffset" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"flags" ptr)
 
   poke ptr val = do
     pokeField @"subresource" ptr val

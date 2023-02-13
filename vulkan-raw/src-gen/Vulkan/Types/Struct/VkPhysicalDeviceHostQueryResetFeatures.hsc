@@ -35,9 +35,9 @@ instance Storable VkPhysicalDeviceHostQueryResetFeatures where
 
   peek ptr = 
     VkPhysicalDeviceHostQueryResetFeatures
-       <$> peek (offset @"sType" ptr)
-       <*> peek (offset @"pNext" ptr)
-       <*> peek (offset @"hostQueryReset" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"sType" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pNext" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"hostQueryReset" ptr)
 
   poke ptr val = do
     pokeField @"sType" ptr val

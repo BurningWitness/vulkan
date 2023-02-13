@@ -35,9 +35,9 @@ instance Storable VkVideoDecodeH264DpbSlotInfoKHR where
 
   peek ptr = 
     VkVideoDecodeH264DpbSlotInfoKHR
-       <$> peek (offset @"sType" ptr)
-       <*> peek (offset @"pNext" ptr)
-       <*> peek (offset @"pStdReferenceInfo" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"sType" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pNext" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pStdReferenceInfo" ptr)
 
   poke ptr val = do
     pokeField @"sType" ptr val

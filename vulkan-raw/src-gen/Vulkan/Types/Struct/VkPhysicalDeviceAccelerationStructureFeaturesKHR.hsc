@@ -39,13 +39,13 @@ instance Storable VkPhysicalDeviceAccelerationStructureFeaturesKHR where
 
   peek ptr = 
     VkPhysicalDeviceAccelerationStructureFeaturesKHR
-       <$> peek (offset @"sType" ptr)
-       <*> peek (offset @"pNext" ptr)
-       <*> peek (offset @"accelerationStructure" ptr)
-       <*> peek (offset @"accelerationStructureCaptureReplay" ptr)
-       <*> peek (offset @"accelerationStructureIndirectBuild" ptr)
-       <*> peek (offset @"accelerationStructureHostCommands" ptr)
-       <*> peek (offset @"descriptorBindingAccelerationStructureUpdateAfterBind" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"sType" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pNext" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"accelerationStructure" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"accelerationStructureCaptureReplay" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"accelerationStructureIndirectBuild" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"accelerationStructureHostCommands" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"descriptorBindingAccelerationStructureUpdateAfterBind" ptr)
 
   poke ptr val = do
     pokeField @"sType" ptr val

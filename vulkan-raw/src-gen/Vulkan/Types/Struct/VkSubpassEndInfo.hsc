@@ -33,8 +33,8 @@ instance Storable VkSubpassEndInfo where
 
   peek ptr = 
     VkSubpassEndInfo
-       <$> peek (offset @"sType" ptr)
-       <*> peek (offset @"pNext" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"sType" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pNext" ptr)
 
   poke ptr val = do
     pokeField @"sType" ptr val

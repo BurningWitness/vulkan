@@ -32,8 +32,8 @@ instance Storable VkClearValue where
 
   peek ptr = 
     VkClearValue
-       <$> peek (offset @"color" ptr)
-       <*> peek (offset @"depthStencil" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"color" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"depthStencil" ptr)
 
   poke ptr val = do
     pokeField @"color" ptr val

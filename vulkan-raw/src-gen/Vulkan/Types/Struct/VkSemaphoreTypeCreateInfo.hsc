@@ -36,10 +36,10 @@ instance Storable VkSemaphoreTypeCreateInfo where
 
   peek ptr = 
     VkSemaphoreTypeCreateInfo
-       <$> peek (offset @"sType" ptr)
-       <*> peek (offset @"pNext" ptr)
-       <*> peek (offset @"semaphoreType" ptr)
-       <*> peek (offset @"initialValue" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"sType" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pNext" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"semaphoreType" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"initialValue" ptr)
 
   poke ptr val = do
     pokeField @"sType" ptr val

@@ -40,12 +40,12 @@ instance Storable VkImageConstraintsInfoFUCHSIA where
 
   peek ptr = 
     VkImageConstraintsInfoFUCHSIA
-       <$> peek (offset @"sType" ptr)
-       <*> peek (offset @"pNext" ptr)
-       <*> peek (offset @"formatConstraintsCount" ptr)
-       <*> peek (offset @"pFormatConstraints" ptr)
-       <*> peek (offset @"bufferCollectionConstraints" ptr)
-       <*> peek (offset @"flags" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"sType" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pNext" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"formatConstraintsCount" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pFormatConstraints" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"bufferCollectionConstraints" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"flags" ptr)
 
   poke ptr val = do
     pokeField @"sType" ptr val

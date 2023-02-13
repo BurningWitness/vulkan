@@ -35,9 +35,9 @@ instance Storable VkPhysicalDeviceShaderImageFootprintFeaturesNV where
 
   peek ptr = 
     VkPhysicalDeviceShaderImageFootprintFeaturesNV
-       <$> peek (offset @"sType" ptr)
-       <*> peek (offset @"pNext" ptr)
-       <*> peek (offset @"imageFootprint" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"sType" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pNext" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"imageFootprint" ptr)
 
   poke ptr val = do
     pokeField @"sType" ptr val

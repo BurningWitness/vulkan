@@ -46,21 +46,21 @@ instance Storable VkPhysicalDeviceMeshShaderPropertiesNV where
 
   peek ptr = 
     VkPhysicalDeviceMeshShaderPropertiesNV
-       <$> peek (offset @"sType" ptr)
-       <*> peek (offset @"pNext" ptr)
-       <*> peek (offset @"maxDrawMeshTasksCount" ptr)
-       <*> peek (offset @"maxTaskWorkGroupInvocations" ptr)
-       <*> peek (offset @"maxTaskWorkGroupSize" ptr)
-       <*> peek (offset @"maxTaskTotalMemorySize" ptr)
-       <*> peek (offset @"maxTaskOutputCount" ptr)
-       <*> peek (offset @"maxMeshWorkGroupInvocations" ptr)
-       <*> peek (offset @"maxMeshWorkGroupSize" ptr)
-       <*> peek (offset @"maxMeshTotalMemorySize" ptr)
-       <*> peek (offset @"maxMeshOutputVertices" ptr)
-       <*> peek (offset @"maxMeshOutputPrimitives" ptr)
-       <*> peek (offset @"maxMeshMultiviewViewCount" ptr)
-       <*> peek (offset @"meshOutputPerVertexGranularity" ptr)
-       <*> peek (offset @"meshOutputPerPrimitiveGranularity" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"sType" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pNext" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"maxDrawMeshTasksCount" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"maxTaskWorkGroupInvocations" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"maxTaskWorkGroupSize" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"maxTaskTotalMemorySize" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"maxTaskOutputCount" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"maxMeshWorkGroupInvocations" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"maxMeshWorkGroupSize" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"maxMeshTotalMemorySize" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"maxMeshOutputVertices" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"maxMeshOutputPrimitives" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"maxMeshMultiviewViewCount" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"meshOutputPerVertexGranularity" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"meshOutputPerPrimitiveGranularity" ptr)
 
   poke ptr val = do
     pokeField @"sType" ptr val

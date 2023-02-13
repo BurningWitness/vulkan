@@ -35,8 +35,8 @@ instance Storable VkPerformanceValueINTEL where
 
   peek ptr = 
     VkPerformanceValueINTEL
-       <$> peek (offset @"type" ptr)
-       <*> peek (offset @"data" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"type" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"data" ptr)
 
   poke ptr val = do
     pokeField @"type" ptr val

@@ -38,13 +38,13 @@ instance Storable VkSubpassDependency where
 
   peek ptr = 
     VkSubpassDependency
-       <$> peek (offset @"srcSubpass" ptr)
-       <*> peek (offset @"dstSubpass" ptr)
-       <*> peek (offset @"srcStageMask" ptr)
-       <*> peek (offset @"dstStageMask" ptr)
-       <*> peek (offset @"srcAccessMask" ptr)
-       <*> peek (offset @"dstAccessMask" ptr)
-       <*> peek (offset @"dependencyFlags" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"srcSubpass" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"dstSubpass" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"srcStageMask" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"dstStageMask" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"srcAccessMask" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"dstAccessMask" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"dependencyFlags" ptr)
 
   poke ptr val = do
     pokeField @"srcSubpass" ptr val

@@ -35,10 +35,10 @@ instance Storable VkDescriptorSetLayoutHostMappingInfoVALVE where
 
   peek ptr = 
     VkDescriptorSetLayoutHostMappingInfoVALVE
-       <$> peek (offset @"sType" ptr)
-       <*> peek (offset @"pNext" ptr)
-       <*> peek (offset @"descriptorOffset" ptr)
-       <*> peek (offset @"descriptorSize" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"sType" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pNext" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"descriptorOffset" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"descriptorSize" ptr)
 
   poke ptr val = do
     pokeField @"sType" ptr val

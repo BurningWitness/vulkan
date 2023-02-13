@@ -34,9 +34,9 @@ instance Storable VkDevicePrivateDataCreateInfoEXT where
 
   peek ptr = 
     VkDevicePrivateDataCreateInfoEXT
-       <$> peek (offset @"sType" ptr)
-       <*> peek (offset @"pNext" ptr)
-       <*> peek (offset @"privateDataSlotRequestCount" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"sType" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pNext" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"privateDataSlotRequestCount" ptr)
 
   poke ptr val = do
     pokeField @"sType" ptr val

@@ -44,14 +44,14 @@ instance Storable VkMicromapCreateInfoEXT where
 
   peek ptr = 
     VkMicromapCreateInfoEXT
-       <$> peek (offset @"sType" ptr)
-       <*> peek (offset @"pNext" ptr)
-       <*> peek (offset @"createFlags" ptr)
-       <*> peek (offset @"buffer" ptr)
-       <*> peek (offset @"offset" ptr)
-       <*> peek (offset @"size" ptr)
-       <*> peek (offset @"type" ptr)
-       <*> peek (offset @"deviceAddress" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"sType" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pNext" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"createFlags" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"buffer" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"offset" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"size" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"type" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"deviceAddress" ptr)
 
   poke ptr val = do
     pokeField @"sType" ptr val

@@ -37,12 +37,12 @@ instance Storable VkTimelineSemaphoreSubmitInfo where
 
   peek ptr = 
     VkTimelineSemaphoreSubmitInfo
-       <$> peek (offset @"sType" ptr)
-       <*> peek (offset @"pNext" ptr)
-       <*> peek (offset @"waitSemaphoreValueCount" ptr)
-       <*> peek (offset @"pWaitSemaphoreValues" ptr)
-       <*> peek (offset @"signalSemaphoreValueCount" ptr)
-       <*> peek (offset @"pSignalSemaphoreValues" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"sType" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pNext" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"waitSemaphoreValueCount" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pWaitSemaphoreValues" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"signalSemaphoreValueCount" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pSignalSemaphoreValues" ptr)
 
   poke ptr val = do
     pokeField @"sType" ptr val

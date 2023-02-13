@@ -46,16 +46,16 @@ instance Storable VkDisplaySurfaceCreateInfoKHR where
 
   peek ptr = 
     VkDisplaySurfaceCreateInfoKHR
-       <$> peek (offset @"sType" ptr)
-       <*> peek (offset @"pNext" ptr)
-       <*> peek (offset @"flags" ptr)
-       <*> peek (offset @"displayMode" ptr)
-       <*> peek (offset @"planeIndex" ptr)
-       <*> peek (offset @"planeStackIndex" ptr)
-       <*> peek (offset @"transform" ptr)
-       <*> peek (offset @"globalAlpha" ptr)
-       <*> peek (offset @"alphaMode" ptr)
-       <*> peek (offset @"imageExtent" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"sType" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pNext" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"flags" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"displayMode" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"planeIndex" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"planeStackIndex" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"transform" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"globalAlpha" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"alphaMode" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"imageExtent" ptr)
 
   poke ptr val = do
     pokeField @"sType" ptr val

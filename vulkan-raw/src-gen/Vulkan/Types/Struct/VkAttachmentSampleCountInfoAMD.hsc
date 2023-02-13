@@ -37,11 +37,11 @@ instance Storable VkAttachmentSampleCountInfoAMD where
 
   peek ptr = 
     VkAttachmentSampleCountInfoAMD
-       <$> peek (offset @"sType" ptr)
-       <*> peek (offset @"pNext" ptr)
-       <*> peek (offset @"colorAttachmentCount" ptr)
-       <*> peek (offset @"pColorAttachmentSamples" ptr)
-       <*> peek (offset @"depthStencilAttachmentSamples" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"sType" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pNext" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"colorAttachmentCount" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pColorAttachmentSamples" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"depthStencilAttachmentSamples" ptr)
 
   poke ptr val = do
     pokeField @"sType" ptr val

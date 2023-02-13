@@ -34,9 +34,9 @@ instance Storable VkPhysicalDeviceSubpassShadingPropertiesHUAWEI where
 
   peek ptr = 
     VkPhysicalDeviceSubpassShadingPropertiesHUAWEI
-       <$> peek (offset @"sType" ptr)
-       <*> peek (offset @"pNext" ptr)
-       <*> peek (offset @"maxSubpassShadingWorkgroupSizeAspectRatio" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"sType" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pNext" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"maxSubpassShadingWorkgroupSizeAspectRatio" ptr)
 
   poke ptr val = do
     pokeField @"sType" ptr val

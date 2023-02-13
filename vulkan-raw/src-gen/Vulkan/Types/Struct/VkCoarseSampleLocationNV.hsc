@@ -33,9 +33,9 @@ instance Storable VkCoarseSampleLocationNV where
 
   peek ptr = 
     VkCoarseSampleLocationNV
-       <$> peek (offset @"pixelX" ptr)
-       <*> peek (offset @"pixelY" ptr)
-       <*> peek (offset @"sample" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"pixelX" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pixelY" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"sample" ptr)
 
   poke ptr val = do
     pokeField @"pixelX" ptr val

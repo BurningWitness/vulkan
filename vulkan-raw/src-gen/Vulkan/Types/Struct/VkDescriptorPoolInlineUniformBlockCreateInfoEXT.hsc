@@ -34,9 +34,9 @@ instance Storable VkDescriptorPoolInlineUniformBlockCreateInfoEXT where
 
   peek ptr = 
     VkDescriptorPoolInlineUniformBlockCreateInfoEXT
-       <$> peek (offset @"sType" ptr)
-       <*> peek (offset @"pNext" ptr)
-       <*> peek (offset @"maxInlineUniformBlockBindings" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"sType" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pNext" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"maxInlineUniformBlockBindings" ptr)
 
   poke ptr val = do
     pokeField @"sType" ptr val

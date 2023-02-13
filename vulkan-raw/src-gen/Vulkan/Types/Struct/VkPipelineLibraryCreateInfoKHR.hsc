@@ -36,10 +36,10 @@ instance Storable VkPipelineLibraryCreateInfoKHR where
 
   peek ptr = 
     VkPipelineLibraryCreateInfoKHR
-       <$> peek (offset @"sType" ptr)
-       <*> peek (offset @"pNext" ptr)
-       <*> peek (offset @"libraryCount" ptr)
-       <*> peek (offset @"pLibraries" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"sType" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pNext" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"libraryCount" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pLibraries" ptr)
 
   poke ptr val = do
     pokeField @"sType" ptr val

@@ -35,9 +35,9 @@ instance Storable VkRenderPassCreationControlEXT where
 
   peek ptr = 
     VkRenderPassCreationControlEXT
-       <$> peek (offset @"sType" ptr)
-       <*> peek (offset @"pNext" ptr)
-       <*> peek (offset @"disallowMerging" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"sType" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pNext" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"disallowMerging" ptr)
 
   poke ptr val = do
     pokeField @"sType" ptr val

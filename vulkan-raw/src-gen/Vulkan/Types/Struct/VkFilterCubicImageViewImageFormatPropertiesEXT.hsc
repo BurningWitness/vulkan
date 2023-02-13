@@ -36,10 +36,10 @@ instance Storable VkFilterCubicImageViewImageFormatPropertiesEXT where
 
   peek ptr = 
     VkFilterCubicImageViewImageFormatPropertiesEXT
-       <$> peek (offset @"sType" ptr)
-       <*> peek (offset @"pNext" ptr)
-       <*> peek (offset @"filterCubic" ptr)
-       <*> peek (offset @"filterCubicMinmax" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"sType" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pNext" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"filterCubic" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"filterCubicMinmax" ptr)
 
   poke ptr val = do
     pokeField @"sType" ptr val

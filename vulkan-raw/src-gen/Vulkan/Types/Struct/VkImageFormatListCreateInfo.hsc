@@ -36,10 +36,10 @@ instance Storable VkImageFormatListCreateInfo where
 
   peek ptr = 
     VkImageFormatListCreateInfo
-       <$> peek (offset @"sType" ptr)
-       <*> peek (offset @"pNext" ptr)
-       <*> peek (offset @"viewFormatCount" ptr)
-       <*> peek (offset @"pViewFormats" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"sType" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pNext" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"viewFormatCount" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pViewFormats" ptr)
 
   poke ptr val = do
     pokeField @"sType" ptr val

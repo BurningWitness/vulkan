@@ -41,13 +41,13 @@ instance Storable VkSurfacePresentScalingCapabilitiesEXT where
 
   peek ptr = 
     VkSurfacePresentScalingCapabilitiesEXT
-       <$> peek (offset @"sType" ptr)
-       <*> peek (offset @"pNext" ptr)
-       <*> peek (offset @"supportedPresentScaling" ptr)
-       <*> peek (offset @"supportedPresentGravityX" ptr)
-       <*> peek (offset @"supportedPresentGravityY" ptr)
-       <*> peek (offset @"minScaledImageExtent" ptr)
-       <*> peek (offset @"maxScaledImageExtent" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"sType" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pNext" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"supportedPresentScaling" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"supportedPresentGravityX" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"supportedPresentGravityY" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"minScaledImageExtent" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"maxScaledImageExtent" ptr)
 
   poke ptr val = do
     pokeField @"sType" ptr val

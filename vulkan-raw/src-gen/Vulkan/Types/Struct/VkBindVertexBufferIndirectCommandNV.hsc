@@ -34,9 +34,9 @@ instance Storable VkBindVertexBufferIndirectCommandNV where
 
   peek ptr = 
     VkBindVertexBufferIndirectCommandNV
-       <$> peek (offset @"bufferAddress" ptr)
-       <*> peek (offset @"size" ptr)
-       <*> peek (offset @"stride" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"bufferAddress" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"size" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"stride" ptr)
 
   poke ptr val = do
     pokeField @"bufferAddress" ptr val

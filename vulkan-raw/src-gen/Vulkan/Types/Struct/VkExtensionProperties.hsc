@@ -30,8 +30,8 @@ instance Storable VkExtensionProperties where
 
   peek ptr = 
     VkExtensionProperties
-       <$> peek (offset @"extensionName" ptr)
-       <*> peek (offset @"specVersion" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"extensionName" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"specVersion" ptr)
 
   poke ptr val = do
     pokeField @"extensionName" ptr val

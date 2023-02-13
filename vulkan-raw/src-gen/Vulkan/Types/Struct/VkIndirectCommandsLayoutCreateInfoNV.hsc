@@ -42,14 +42,14 @@ instance Storable VkIndirectCommandsLayoutCreateInfoNV where
 
   peek ptr = 
     VkIndirectCommandsLayoutCreateInfoNV
-       <$> peek (offset @"sType" ptr)
-       <*> peek (offset @"pNext" ptr)
-       <*> peek (offset @"flags" ptr)
-       <*> peek (offset @"pipelineBindPoint" ptr)
-       <*> peek (offset @"tokenCount" ptr)
-       <*> peek (offset @"pTokens" ptr)
-       <*> peek (offset @"streamCount" ptr)
-       <*> peek (offset @"pStreamStrides" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"sType" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pNext" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"flags" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pipelineBindPoint" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"tokenCount" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pTokens" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"streamCount" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pStreamStrides" ptr)
 
   poke ptr val = do
     pokeField @"sType" ptr val

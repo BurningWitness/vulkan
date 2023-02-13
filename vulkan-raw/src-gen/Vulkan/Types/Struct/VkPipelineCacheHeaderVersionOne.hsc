@@ -34,11 +34,11 @@ instance Storable VkPipelineCacheHeaderVersionOne where
 
   peek ptr = 
     VkPipelineCacheHeaderVersionOne
-       <$> peek (offset @"headerSize" ptr)
-       <*> peek (offset @"headerVersion" ptr)
-       <*> peek (offset @"vendorID" ptr)
-       <*> peek (offset @"deviceID" ptr)
-       <*> peek (offset @"pipelineCacheUUID" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"headerSize" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"headerVersion" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"vendorID" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"deviceID" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pipelineCacheUUID" ptr)
 
   poke ptr val = do
     pokeField @"headerSize" ptr val

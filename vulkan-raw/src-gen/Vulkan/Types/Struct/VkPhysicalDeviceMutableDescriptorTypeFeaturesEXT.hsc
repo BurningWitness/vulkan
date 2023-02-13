@@ -35,9 +35,9 @@ instance Storable VkPhysicalDeviceMutableDescriptorTypeFeaturesEXT where
 
   peek ptr = 
     VkPhysicalDeviceMutableDescriptorTypeFeaturesEXT
-       <$> peek (offset @"sType" ptr)
-       <*> peek (offset @"pNext" ptr)
-       <*> peek (offset @"mutableDescriptorType" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"sType" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pNext" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"mutableDescriptorType" ptr)
 
   poke ptr val = do
     pokeField @"sType" ptr val

@@ -41,13 +41,13 @@ instance Storable VkCopyImageToBufferInfo2 where
 
   peek ptr = 
     VkCopyImageToBufferInfo2
-       <$> peek (offset @"sType" ptr)
-       <*> peek (offset @"pNext" ptr)
-       <*> peek (offset @"srcImage" ptr)
-       <*> peek (offset @"srcImageLayout" ptr)
-       <*> peek (offset @"dstBuffer" ptr)
-       <*> peek (offset @"regionCount" ptr)
-       <*> peek (offset @"pRegions" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"sType" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pNext" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"srcImage" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"srcImageLayout" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"dstBuffer" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"regionCount" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pRegions" ptr)
 
   poke ptr val = do
     pokeField @"sType" ptr val

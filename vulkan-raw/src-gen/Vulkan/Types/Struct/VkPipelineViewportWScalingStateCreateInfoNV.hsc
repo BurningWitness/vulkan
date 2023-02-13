@@ -38,11 +38,11 @@ instance Storable VkPipelineViewportWScalingStateCreateInfoNV where
 
   peek ptr = 
     VkPipelineViewportWScalingStateCreateInfoNV
-       <$> peek (offset @"sType" ptr)
-       <*> peek (offset @"pNext" ptr)
-       <*> peek (offset @"viewportWScalingEnable" ptr)
-       <*> peek (offset @"viewportCount" ptr)
-       <*> peek (offset @"pViewportWScalings" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"sType" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pNext" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"viewportWScalingEnable" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"viewportCount" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pViewportWScalings" ptr)
 
   poke ptr val = do
     pokeField @"sType" ptr val

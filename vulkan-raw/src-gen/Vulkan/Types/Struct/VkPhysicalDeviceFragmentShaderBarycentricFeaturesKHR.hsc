@@ -35,9 +35,9 @@ instance Storable VkPhysicalDeviceFragmentShaderBarycentricFeaturesKHR where
 
   peek ptr = 
     VkPhysicalDeviceFragmentShaderBarycentricFeaturesKHR
-       <$> peek (offset @"sType" ptr)
-       <*> peek (offset @"pNext" ptr)
-       <*> peek (offset @"fragmentShaderBarycentric" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"sType" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pNext" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"fragmentShaderBarycentric" ptr)
 
   poke ptr val = do
     pokeField @"sType" ptr val

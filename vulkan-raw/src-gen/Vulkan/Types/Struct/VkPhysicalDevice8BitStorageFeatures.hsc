@@ -37,11 +37,11 @@ instance Storable VkPhysicalDevice8BitStorageFeatures where
 
   peek ptr = 
     VkPhysicalDevice8BitStorageFeatures
-       <$> peek (offset @"sType" ptr)
-       <*> peek (offset @"pNext" ptr)
-       <*> peek (offset @"storageBuffer8BitAccess" ptr)
-       <*> peek (offset @"uniformAndStorageBuffer8BitAccess" ptr)
-       <*> peek (offset @"storagePushConstant8" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"sType" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pNext" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"storageBuffer8BitAccess" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"uniformAndStorageBuffer8BitAccess" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"storagePushConstant8" ptr)
 
   poke ptr val = do
     pokeField @"sType" ptr val

@@ -37,11 +37,11 @@ instance Storable VkPhysicalDeviceFragmentShaderInterlockFeaturesEXT where
 
   peek ptr = 
     VkPhysicalDeviceFragmentShaderInterlockFeaturesEXT
-       <$> peek (offset @"sType" ptr)
-       <*> peek (offset @"pNext" ptr)
-       <*> peek (offset @"fragmentShaderSampleInterlock" ptr)
-       <*> peek (offset @"fragmentShaderPixelInterlock" ptr)
-       <*> peek (offset @"fragmentShaderShadingRateInterlock" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"sType" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pNext" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"fragmentShaderSampleInterlock" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"fragmentShaderPixelInterlock" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"fragmentShaderShadingRateInterlock" ptr)
 
   poke ptr val = do
     pokeField @"sType" ptr val

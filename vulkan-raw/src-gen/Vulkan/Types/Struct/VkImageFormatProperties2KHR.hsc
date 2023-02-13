@@ -35,9 +35,9 @@ instance Storable VkImageFormatProperties2KHR where
 
   peek ptr = 
     VkImageFormatProperties2KHR
-       <$> peek (offset @"sType" ptr)
-       <*> peek (offset @"pNext" ptr)
-       <*> peek (offset @"imageFormatProperties" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"sType" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pNext" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"imageFormatProperties" ptr)
 
   poke ptr val = do
     pokeField @"sType" ptr val

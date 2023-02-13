@@ -35,9 +35,9 @@ instance Storable VkPhysicalDeviceDepthClipControlFeaturesEXT where
 
   peek ptr = 
     VkPhysicalDeviceDepthClipControlFeaturesEXT
-       <$> peek (offset @"sType" ptr)
-       <*> peek (offset @"pNext" ptr)
-       <*> peek (offset @"depthClipControl" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"sType" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pNext" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"depthClipControl" ptr)
 
   poke ptr val = do
     pokeField @"sType" ptr val

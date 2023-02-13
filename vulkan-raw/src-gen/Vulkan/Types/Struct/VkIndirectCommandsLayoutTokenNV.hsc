@@ -52,21 +52,21 @@ instance Storable VkIndirectCommandsLayoutTokenNV where
 
   peek ptr = 
     VkIndirectCommandsLayoutTokenNV
-       <$> peek (offset @"sType" ptr)
-       <*> peek (offset @"pNext" ptr)
-       <*> peek (offset @"tokenType" ptr)
-       <*> peek (offset @"stream" ptr)
-       <*> peek (offset @"offset" ptr)
-       <*> peek (offset @"vertexBindingUnit" ptr)
-       <*> peek (offset @"vertexDynamicStride" ptr)
-       <*> peek (offset @"pushconstantPipelineLayout" ptr)
-       <*> peek (offset @"pushconstantShaderStageFlags" ptr)
-       <*> peek (offset @"pushconstantOffset" ptr)
-       <*> peek (offset @"pushconstantSize" ptr)
-       <*> peek (offset @"indirectStateFlags" ptr)
-       <*> peek (offset @"indexTypeCount" ptr)
-       <*> peek (offset @"pIndexTypes" ptr)
-       <*> peek (offset @"pIndexTypeValues" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"sType" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pNext" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"tokenType" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"stream" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"offset" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"vertexBindingUnit" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"vertexDynamicStride" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pushconstantPipelineLayout" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pushconstantShaderStageFlags" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pushconstantOffset" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pushconstantSize" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"indirectStateFlags" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"indexTypeCount" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pIndexTypes" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pIndexTypeValues" ptr)
 
   poke ptr val = do
     pokeField @"sType" ptr val

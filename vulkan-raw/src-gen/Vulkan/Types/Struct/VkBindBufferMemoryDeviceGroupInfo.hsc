@@ -35,10 +35,10 @@ instance Storable VkBindBufferMemoryDeviceGroupInfo where
 
   peek ptr = 
     VkBindBufferMemoryDeviceGroupInfo
-       <$> peek (offset @"sType" ptr)
-       <*> peek (offset @"pNext" ptr)
-       <*> peek (offset @"deviceIndexCount" ptr)
-       <*> peek (offset @"pDeviceIndices" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"sType" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pNext" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"deviceIndexCount" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pDeviceIndices" ptr)
 
   poke ptr val = do
     pokeField @"sType" ptr val

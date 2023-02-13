@@ -38,11 +38,11 @@ instance Storable VkCommandBufferInheritanceViewportScissorInfoNV where
 
   peek ptr = 
     VkCommandBufferInheritanceViewportScissorInfoNV
-       <$> peek (offset @"sType" ptr)
-       <*> peek (offset @"pNext" ptr)
-       <*> peek (offset @"viewportScissor2D" ptr)
-       <*> peek (offset @"viewportDepthCount" ptr)
-       <*> peek (offset @"pViewportDepths" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"sType" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pNext" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"viewportScissor2D" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"viewportDepthCount" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pViewportDepths" ptr)
 
   poke ptr val = do
     pokeField @"sType" ptr val

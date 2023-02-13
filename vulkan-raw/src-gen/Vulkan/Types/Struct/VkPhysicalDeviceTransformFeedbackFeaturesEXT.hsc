@@ -36,10 +36,10 @@ instance Storable VkPhysicalDeviceTransformFeedbackFeaturesEXT where
 
   peek ptr = 
     VkPhysicalDeviceTransformFeedbackFeaturesEXT
-       <$> peek (offset @"sType" ptr)
-       <*> peek (offset @"pNext" ptr)
-       <*> peek (offset @"transformFeedback" ptr)
-       <*> peek (offset @"geometryStreams" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"sType" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pNext" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"transformFeedback" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"geometryStreams" ptr)
 
   poke ptr val = do
     pokeField @"sType" ptr val

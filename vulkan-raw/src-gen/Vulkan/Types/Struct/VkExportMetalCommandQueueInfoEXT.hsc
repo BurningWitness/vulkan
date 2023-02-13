@@ -37,10 +37,10 @@ instance Storable VkExportMetalCommandQueueInfoEXT where
 
   peek ptr = 
     VkExportMetalCommandQueueInfoEXT
-       <$> peek (offset @"sType" ptr)
-       <*> peek (offset @"pNext" ptr)
-       <*> peek (offset @"queue" ptr)
-       <*> peek (offset @"mtlCommandQueue" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"sType" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pNext" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"queue" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"mtlCommandQueue" ptr)
 
   poke ptr val = do
     pokeField @"sType" ptr val

@@ -39,14 +39,14 @@ instance Storable VkDeviceGroupSubmitInfoKHR where
 
   peek ptr = 
     VkDeviceGroupSubmitInfoKHR
-       <$> peek (offset @"sType" ptr)
-       <*> peek (offset @"pNext" ptr)
-       <*> peek (offset @"waitSemaphoreCount" ptr)
-       <*> peek (offset @"pWaitSemaphoreDeviceIndices" ptr)
-       <*> peek (offset @"commandBufferCount" ptr)
-       <*> peek (offset @"pCommandBufferDeviceMasks" ptr)
-       <*> peek (offset @"signalSemaphoreCount" ptr)
-       <*> peek (offset @"pSignalSemaphoreDeviceIndices" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"sType" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pNext" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"waitSemaphoreCount" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pWaitSemaphoreDeviceIndices" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"commandBufferCount" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pCommandBufferDeviceMasks" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"signalSemaphoreCount" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pSignalSemaphoreDeviceIndices" ptr)
 
   poke ptr val = do
     pokeField @"sType" ptr val

@@ -34,9 +34,9 @@ instance Storable VkRenderPassSubpassFeedbackInfoEXT where
 
   peek ptr = 
     VkRenderPassSubpassFeedbackInfoEXT
-       <$> peek (offset @"subpassMergeStatus" ptr)
-       <*> peek (offset @"description" ptr)
-       <*> peek (offset @"postMergeIndex" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"subpassMergeStatus" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"description" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"postMergeIndex" ptr)
 
   poke ptr val = do
     pokeField @"subpassMergeStatus" ptr val

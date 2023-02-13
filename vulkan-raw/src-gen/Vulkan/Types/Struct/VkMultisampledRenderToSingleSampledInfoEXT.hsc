@@ -37,10 +37,10 @@ instance Storable VkMultisampledRenderToSingleSampledInfoEXT where
 
   peek ptr = 
     VkMultisampledRenderToSingleSampledInfoEXT
-       <$> peek (offset @"sType" ptr)
-       <*> peek (offset @"pNext" ptr)
-       <*> peek (offset @"multisampledRenderToSingleSampledEnable" ptr)
-       <*> peek (offset @"rasterizationSamples" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"sType" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pNext" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"multisampledRenderToSingleSampledEnable" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"rasterizationSamples" ptr)
 
   poke ptr val = do
     pokeField @"sType" ptr val

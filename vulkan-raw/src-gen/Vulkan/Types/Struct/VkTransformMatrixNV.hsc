@@ -31,7 +31,7 @@ instance Storable VkTransformMatrixNV where
 
   peek ptr = 
     VkTransformMatrixNV
-       <$> peek (offset @"matrix" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"matrix" ptr)
 
 
   poke ptr val = do

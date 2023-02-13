@@ -34,8 +34,8 @@ instance Storable VkSurfaceFormatKHR where
 
   peek ptr = 
     VkSurfaceFormatKHR
-       <$> peek (offset @"format" ptr)
-       <*> peek (offset @"colorSpace" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"format" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"colorSpace" ptr)
 
   poke ptr val = do
     pokeField @"format" ptr val

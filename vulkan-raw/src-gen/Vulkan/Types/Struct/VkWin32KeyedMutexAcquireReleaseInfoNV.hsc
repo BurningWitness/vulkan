@@ -41,15 +41,15 @@ instance Storable VkWin32KeyedMutexAcquireReleaseInfoNV where
 
   peek ptr = 
     VkWin32KeyedMutexAcquireReleaseInfoNV
-       <$> peek (offset @"sType" ptr)
-       <*> peek (offset @"pNext" ptr)
-       <*> peek (offset @"acquireCount" ptr)
-       <*> peek (offset @"pAcquireSyncs" ptr)
-       <*> peek (offset @"pAcquireKeys" ptr)
-       <*> peek (offset @"pAcquireTimeoutMilliseconds" ptr)
-       <*> peek (offset @"releaseCount" ptr)
-       <*> peek (offset @"pReleaseSyncs" ptr)
-       <*> peek (offset @"pReleaseKeys" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"sType" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pNext" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"acquireCount" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pAcquireSyncs" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pAcquireKeys" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pAcquireTimeoutMilliseconds" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"releaseCount" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pReleaseSyncs" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pReleaseKeys" ptr)
 
   poke ptr val = do
     pokeField @"sType" ptr val

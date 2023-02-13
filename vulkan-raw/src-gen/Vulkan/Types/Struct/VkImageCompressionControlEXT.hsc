@@ -38,11 +38,11 @@ instance Storable VkImageCompressionControlEXT where
 
   peek ptr = 
     VkImageCompressionControlEXT
-       <$> peek (offset @"sType" ptr)
-       <*> peek (offset @"pNext" ptr)
-       <*> peek (offset @"flags" ptr)
-       <*> peek (offset @"compressionControlPlaneCount" ptr)
-       <*> peek (offset @"pFixedRateFlags" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"sType" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pNext" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"flags" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"compressionControlPlaneCount" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pFixedRateFlags" ptr)
 
   poke ptr val = do
     pokeField @"sType" ptr val

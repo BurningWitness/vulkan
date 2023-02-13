@@ -32,7 +32,7 @@ instance Storable VkSetStateFlagsIndirectCommandNV where
 
   peek ptr = 
     VkSetStateFlagsIndirectCommandNV
-       <$> peek (offset @"data" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"data" ptr)
 
 
   poke ptr val = do

@@ -42,13 +42,13 @@ instance Storable VkDebugUtilsMessengerCreateInfoEXT where
 
   peek ptr = 
     VkDebugUtilsMessengerCreateInfoEXT
-       <$> peek (offset @"sType" ptr)
-       <*> peek (offset @"pNext" ptr)
-       <*> peek (offset @"flags" ptr)
-       <*> peek (offset @"messageSeverity" ptr)
-       <*> peek (offset @"messageType" ptr)
-       <*> peek (offset @"pfnUserCallback" ptr)
-       <*> peek (offset @"pUserData" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"sType" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pNext" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"flags" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"messageSeverity" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"messageType" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pfnUserCallback" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pUserData" ptr)
 
   poke ptr val = do
     pokeField @"sType" ptr val

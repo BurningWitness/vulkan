@@ -39,12 +39,12 @@ instance Storable VkPhysicalDevicePipelineRobustnessPropertiesEXT where
 
   peek ptr = 
     VkPhysicalDevicePipelineRobustnessPropertiesEXT
-       <$> peek (offset @"sType" ptr)
-       <*> peek (offset @"pNext" ptr)
-       <*> peek (offset @"defaultRobustnessStorageBuffers" ptr)
-       <*> peek (offset @"defaultRobustnessUniformBuffers" ptr)
-       <*> peek (offset @"defaultRobustnessVertexInputs" ptr)
-       <*> peek (offset @"defaultRobustnessImages" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"sType" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pNext" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"defaultRobustnessStorageBuffers" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"defaultRobustnessUniformBuffers" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"defaultRobustnessVertexInputs" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"defaultRobustnessImages" ptr)
 
   poke ptr val = do
     pokeField @"sType" ptr val

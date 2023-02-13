@@ -35,9 +35,9 @@ instance Storable VkPhysicalDeviceDiagnosticsConfigFeaturesNV where
 
   peek ptr = 
     VkPhysicalDeviceDiagnosticsConfigFeaturesNV
-       <$> peek (offset @"sType" ptr)
-       <*> peek (offset @"pNext" ptr)
-       <*> peek (offset @"diagnosticsConfig" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"sType" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pNext" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"diagnosticsConfig" ptr)
 
   poke ptr val = do
     pokeField @"sType" ptr val

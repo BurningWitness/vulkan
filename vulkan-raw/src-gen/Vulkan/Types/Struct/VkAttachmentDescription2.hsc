@@ -48,17 +48,17 @@ instance Storable VkAttachmentDescription2 where
 
   peek ptr = 
     VkAttachmentDescription2
-       <$> peek (offset @"sType" ptr)
-       <*> peek (offset @"pNext" ptr)
-       <*> peek (offset @"flags" ptr)
-       <*> peek (offset @"format" ptr)
-       <*> peek (offset @"samples" ptr)
-       <*> peek (offset @"loadOp" ptr)
-       <*> peek (offset @"storeOp" ptr)
-       <*> peek (offset @"stencilLoadOp" ptr)
-       <*> peek (offset @"stencilStoreOp" ptr)
-       <*> peek (offset @"initialLayout" ptr)
-       <*> peek (offset @"finalLayout" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"sType" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pNext" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"flags" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"format" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"samples" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"loadOp" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"storeOp" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"stencilLoadOp" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"stencilStoreOp" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"initialLayout" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"finalLayout" ptr)
 
   poke ptr val = do
     pokeField @"sType" ptr val

@@ -33,8 +33,8 @@ instance Storable VkPipelineCreationFeedbackEXT where
 
   peek ptr = 
     VkPipelineCreationFeedbackEXT
-       <$> peek (offset @"flags" ptr)
-       <*> peek (offset @"duration" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"flags" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"duration" ptr)
 
   poke ptr val = do
     pokeField @"flags" ptr val

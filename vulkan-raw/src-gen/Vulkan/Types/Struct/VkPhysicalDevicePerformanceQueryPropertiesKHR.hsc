@@ -35,9 +35,9 @@ instance Storable VkPhysicalDevicePerformanceQueryPropertiesKHR where
 
   peek ptr = 
     VkPhysicalDevicePerformanceQueryPropertiesKHR
-       <$> peek (offset @"sType" ptr)
-       <*> peek (offset @"pNext" ptr)
-       <*> peek (offset @"allowCommandBufferQueryCopies" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"sType" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pNext" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"allowCommandBufferQueryCopies" ptr)
 
   poke ptr val = do
     pokeField @"sType" ptr val

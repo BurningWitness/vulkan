@@ -35,9 +35,9 @@ instance Storable VkImportMetalIOSurfaceInfoEXT where
 
   peek ptr = 
     VkImportMetalIOSurfaceInfoEXT
-       <$> peek (offset @"sType" ptr)
-       <*> peek (offset @"pNext" ptr)
-       <*> peek (offset @"ioSurface" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"sType" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pNext" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"ioSurface" ptr)
 
   poke ptr val = do
     pokeField @"sType" ptr val

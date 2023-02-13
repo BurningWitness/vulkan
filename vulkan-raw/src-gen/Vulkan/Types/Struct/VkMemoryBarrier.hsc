@@ -34,10 +34,10 @@ instance Storable VkMemoryBarrier where
 
   peek ptr = 
     VkMemoryBarrier
-       <$> peek (offset @"sType" ptr)
-       <*> peek (offset @"pNext" ptr)
-       <*> peek (offset @"srcAccessMask" ptr)
-       <*> peek (offset @"dstAccessMask" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"sType" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pNext" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"srcAccessMask" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"dstAccessMask" ptr)
 
   poke ptr val = do
     pokeField @"sType" ptr val

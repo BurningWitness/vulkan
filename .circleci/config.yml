@@ -56,7 +56,8 @@ jobs:
           name: Install GHC
           command: |
             sudo add-apt-repository ppa:hvr/ghc
-            sudo apt-get install libvulkan-dev ghc-<< parameters.version >> cabal-install-3.4
+            sudo apt install libvulkan-dev
+            sudo apt-get install ghc-<< parameters.version >> cabal-install-3.4
             echo 'export PATH=/opt/ghc/bin:$PATH' >> $BASH_ENV
 
       - run:

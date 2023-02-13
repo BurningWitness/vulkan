@@ -42,15 +42,15 @@ instance Storable VkRenderPassCreateInfo where
 
   peek ptr = 
     VkRenderPassCreateInfo
-       <$> peek (offset @"sType" ptr)
-       <*> peek (offset @"pNext" ptr)
-       <*> peek (offset @"flags" ptr)
-       <*> peek (offset @"attachmentCount" ptr)
-       <*> peek (offset @"pAttachments" ptr)
-       <*> peek (offset @"subpassCount" ptr)
-       <*> peek (offset @"pSubpasses" ptr)
-       <*> peek (offset @"dependencyCount" ptr)
-       <*> peek (offset @"pDependencies" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"sType" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pNext" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"flags" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"attachmentCount" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pAttachments" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"subpassCount" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pSubpasses" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"dependencyCount" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pDependencies" ptr)
 
   poke ptr val = do
     pokeField @"sType" ptr val

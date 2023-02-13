@@ -35,9 +35,9 @@ instance Storable VkExternalMemoryImageCreateInfo where
 
   peek ptr = 
     VkExternalMemoryImageCreateInfo
-       <$> peek (offset @"sType" ptr)
-       <*> peek (offset @"pNext" ptr)
-       <*> peek (offset @"handleTypes" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"sType" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pNext" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"handleTypes" ptr)
 
   poke ptr val = do
     pokeField @"sType" ptr val

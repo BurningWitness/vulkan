@@ -32,8 +32,8 @@ instance Storable VkRect2D where
 
   peek ptr = 
     VkRect2D
-       <$> peek (offset @"offset" ptr)
-       <*> peek (offset @"extent" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"offset" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"extent" ptr)
 
   poke ptr val = do
     pokeField @"offset" ptr val

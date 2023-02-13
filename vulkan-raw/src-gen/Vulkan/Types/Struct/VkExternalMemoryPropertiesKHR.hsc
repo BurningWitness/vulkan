@@ -35,9 +35,9 @@ instance Storable VkExternalMemoryPropertiesKHR where
 
   peek ptr = 
     VkExternalMemoryPropertiesKHR
-       <$> peek (offset @"externalMemoryFeatures" ptr)
-       <*> peek (offset @"exportFromImportedHandleTypes" ptr)
-       <*> peek (offset @"compatibleHandleTypes" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"externalMemoryFeatures" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"exportFromImportedHandleTypes" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"compatibleHandleTypes" ptr)
 
   poke ptr val = do
     pokeField @"externalMemoryFeatures" ptr val

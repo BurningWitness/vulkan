@@ -40,12 +40,12 @@ instance Storable VkPhysicalDeviceSubgroupProperties where
 
   peek ptr = 
     VkPhysicalDeviceSubgroupProperties
-       <$> peek (offset @"sType" ptr)
-       <*> peek (offset @"pNext" ptr)
-       <*> peek (offset @"subgroupSize" ptr)
-       <*> peek (offset @"supportedStages" ptr)
-       <*> peek (offset @"supportedOperations" ptr)
-       <*> peek (offset @"quadOperationsInAllStages" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"sType" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pNext" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"subgroupSize" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"supportedStages" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"supportedOperations" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"quadOperationsInAllStages" ptr)
 
   poke ptr val = do
     pokeField @"sType" ptr val

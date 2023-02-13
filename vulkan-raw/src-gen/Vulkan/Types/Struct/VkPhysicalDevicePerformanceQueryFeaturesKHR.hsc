@@ -36,10 +36,10 @@ instance Storable VkPhysicalDevicePerformanceQueryFeaturesKHR where
 
   peek ptr = 
     VkPhysicalDevicePerformanceQueryFeaturesKHR
-       <$> peek (offset @"sType" ptr)
-       <*> peek (offset @"pNext" ptr)
-       <*> peek (offset @"performanceCounterQueryPools" ptr)
-       <*> peek (offset @"performanceCounterMultipleQueryPools" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"sType" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pNext" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"performanceCounterQueryPools" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"performanceCounterMultipleQueryPools" ptr)
 
   poke ptr val = do
     pokeField @"sType" ptr val

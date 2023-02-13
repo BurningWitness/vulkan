@@ -36,11 +36,11 @@ instance Storable VkQueryPoolPerformanceCreateInfoKHR where
 
   peek ptr = 
     VkQueryPoolPerformanceCreateInfoKHR
-       <$> peek (offset @"sType" ptr)
-       <*> peek (offset @"pNext" ptr)
-       <*> peek (offset @"queueFamilyIndex" ptr)
-       <*> peek (offset @"counterIndexCount" ptr)
-       <*> peek (offset @"pCounterIndices" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"sType" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pNext" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"queueFamilyIndex" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"counterIndexCount" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pCounterIndices" ptr)
 
   poke ptr val = do
     pokeField @"sType" ptr val

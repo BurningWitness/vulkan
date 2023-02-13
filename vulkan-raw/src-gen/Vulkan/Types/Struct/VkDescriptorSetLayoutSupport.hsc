@@ -35,9 +35,9 @@ instance Storable VkDescriptorSetLayoutSupport where
 
   peek ptr = 
     VkDescriptorSetLayoutSupport
-       <$> peek (offset @"sType" ptr)
-       <*> peek (offset @"pNext" ptr)
-       <*> peek (offset @"supported" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"sType" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pNext" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"supported" ptr)
 
   poke ptr val = do
     pokeField @"sType" ptr val

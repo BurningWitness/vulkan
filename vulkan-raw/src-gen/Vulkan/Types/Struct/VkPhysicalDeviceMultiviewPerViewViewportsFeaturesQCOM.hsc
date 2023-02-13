@@ -35,9 +35,9 @@ instance Storable VkPhysicalDeviceMultiviewPerViewViewportsFeaturesQCOM where
 
   peek ptr = 
     VkPhysicalDeviceMultiviewPerViewViewportsFeaturesQCOM
-       <$> peek (offset @"sType" ptr)
-       <*> peek (offset @"pNext" ptr)
-       <*> peek (offset @"multiviewPerViewViewports" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"sType" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pNext" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"multiviewPerViewViewports" ptr)
 
   poke ptr val = do
     pokeField @"sType" ptr val

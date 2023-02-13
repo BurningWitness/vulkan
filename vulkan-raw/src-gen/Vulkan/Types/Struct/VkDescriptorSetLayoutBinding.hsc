@@ -36,11 +36,11 @@ instance Storable VkDescriptorSetLayoutBinding where
 
   peek ptr = 
     VkDescriptorSetLayoutBinding
-       <$> peek (offset @"binding" ptr)
-       <*> peek (offset @"descriptorType" ptr)
-       <*> peek (offset @"descriptorCount" ptr)
-       <*> peek (offset @"stageFlags" ptr)
-       <*> peek (offset @"pImmutableSamplers" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"binding" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"descriptorType" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"descriptorCount" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"stageFlags" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pImmutableSamplers" ptr)
 
   poke ptr val = do
     pokeField @"binding" ptr val

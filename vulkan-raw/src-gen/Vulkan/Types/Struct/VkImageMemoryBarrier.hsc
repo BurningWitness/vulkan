@@ -43,16 +43,16 @@ instance Storable VkImageMemoryBarrier where
 
   peek ptr = 
     VkImageMemoryBarrier
-       <$> peek (offset @"sType" ptr)
-       <*> peek (offset @"pNext" ptr)
-       <*> peek (offset @"srcAccessMask" ptr)
-       <*> peek (offset @"dstAccessMask" ptr)
-       <*> peek (offset @"oldLayout" ptr)
-       <*> peek (offset @"newLayout" ptr)
-       <*> peek (offset @"srcQueueFamilyIndex" ptr)
-       <*> peek (offset @"dstQueueFamilyIndex" ptr)
-       <*> peek (offset @"image" ptr)
-       <*> peek (offset @"subresourceRange" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"sType" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pNext" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"srcAccessMask" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"dstAccessMask" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"oldLayout" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"newLayout" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"srcQueueFamilyIndex" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"dstQueueFamilyIndex" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"image" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"subresourceRange" ptr)
 
   poke ptr val = do
     pokeField @"sType" ptr val

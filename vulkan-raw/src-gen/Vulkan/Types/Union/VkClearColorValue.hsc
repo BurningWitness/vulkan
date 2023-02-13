@@ -31,9 +31,9 @@ instance Storable VkClearColorValue where
 
   peek ptr = 
     VkClearColorValue
-       <$> peek (offset @"float32" ptr)
-       <*> peek (offset @"int32" ptr)
-       <*> peek (offset @"uint32" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"float32" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"int32" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"uint32" ptr)
 
   poke ptr val = do
     pokeField @"float32" ptr val

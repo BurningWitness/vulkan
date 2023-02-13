@@ -37,11 +37,11 @@ instance Storable VkPhysicalDeviceOpacityMicromapFeaturesEXT where
 
   peek ptr = 
     VkPhysicalDeviceOpacityMicromapFeaturesEXT
-       <$> peek (offset @"sType" ptr)
-       <*> peek (offset @"pNext" ptr)
-       <*> peek (offset @"micromap" ptr)
-       <*> peek (offset @"micromapCaptureReplay" ptr)
-       <*> peek (offset @"micromapHostCommands" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"sType" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pNext" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"micromap" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"micromapCaptureReplay" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"micromapHostCommands" ptr)
 
   poke ptr val = do
     pokeField @"sType" ptr val

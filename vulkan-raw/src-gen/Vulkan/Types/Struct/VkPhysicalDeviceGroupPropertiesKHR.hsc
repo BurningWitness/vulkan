@@ -38,11 +38,11 @@ instance Storable VkPhysicalDeviceGroupPropertiesKHR where
 
   peek ptr = 
     VkPhysicalDeviceGroupPropertiesKHR
-       <$> peek (offset @"sType" ptr)
-       <*> peek (offset @"pNext" ptr)
-       <*> peek (offset @"physicalDeviceCount" ptr)
-       <*> peek (offset @"physicalDevices" ptr)
-       <*> peek (offset @"subsetAllocation" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"sType" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pNext" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"physicalDeviceCount" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"physicalDevices" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"subsetAllocation" ptr)
 
   poke ptr val = do
     pokeField @"sType" ptr val

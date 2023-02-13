@@ -38,11 +38,11 @@ instance Storable VkWaylandSurfaceCreateInfoKHR where
 
   peek ptr = 
     VkWaylandSurfaceCreateInfoKHR
-       <$> peek (offset @"sType" ptr)
-       <*> peek (offset @"pNext" ptr)
-       <*> peek (offset @"flags" ptr)
-       <*> peek (offset @"display" ptr)
-       <*> peek (offset @"surface" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"sType" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pNext" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"flags" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"display" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"surface" ptr)
 
   poke ptr val = do
     pokeField @"sType" ptr val

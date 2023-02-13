@@ -37,11 +37,11 @@ instance Storable VkPhysicalDeviceExtendedDynamicState2FeaturesEXT where
 
   peek ptr = 
     VkPhysicalDeviceExtendedDynamicState2FeaturesEXT
-       <$> peek (offset @"sType" ptr)
-       <*> peek (offset @"pNext" ptr)
-       <*> peek (offset @"extendedDynamicState2" ptr)
-       <*> peek (offset @"extendedDynamicState2LogicOp" ptr)
-       <*> peek (offset @"extendedDynamicState2PatchControlPoints" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"sType" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pNext" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"extendedDynamicState2" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"extendedDynamicState2LogicOp" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"extendedDynamicState2PatchControlPoints" ptr)
 
   poke ptr val = do
     pokeField @"sType" ptr val

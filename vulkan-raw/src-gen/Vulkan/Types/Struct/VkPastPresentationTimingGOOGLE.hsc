@@ -35,11 +35,11 @@ instance Storable VkPastPresentationTimingGOOGLE where
 
   peek ptr = 
     VkPastPresentationTimingGOOGLE
-       <$> peek (offset @"presentID" ptr)
-       <*> peek (offset @"desiredPresentTime" ptr)
-       <*> peek (offset @"actualPresentTime" ptr)
-       <*> peek (offset @"earliestPresentTime" ptr)
-       <*> peek (offset @"presentMargin" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"presentID" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"desiredPresentTime" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"actualPresentTime" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"earliestPresentTime" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"presentMargin" ptr)
 
   poke ptr val = do
     pokeField @"presentID" ptr val

@@ -32,9 +32,9 @@ instance Storable VkFormatProperties where
 
   peek ptr = 
     VkFormatProperties
-       <$> peek (offset @"linearTilingFeatures" ptr)
-       <*> peek (offset @"optimalTilingFeatures" ptr)
-       <*> peek (offset @"bufferFeatures" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"linearTilingFeatures" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"optimalTilingFeatures" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"bufferFeatures" ptr)
 
   poke ptr val = do
     pokeField @"linearTilingFeatures" ptr val

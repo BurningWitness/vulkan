@@ -36,10 +36,10 @@ instance Storable VkPhysicalDeviceSamplerFilterMinmaxProperties where
 
   peek ptr = 
     VkPhysicalDeviceSamplerFilterMinmaxProperties
-       <$> peek (offset @"sType" ptr)
-       <*> peek (offset @"pNext" ptr)
-       <*> peek (offset @"filterMinmaxSingleComponentFormats" ptr)
-       <*> peek (offset @"filterMinmaxImageComponentMapping" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"sType" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pNext" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"filterMinmaxSingleComponentFormats" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"filterMinmaxImageComponentMapping" ptr)
 
   poke ptr val = do
     pokeField @"sType" ptr val

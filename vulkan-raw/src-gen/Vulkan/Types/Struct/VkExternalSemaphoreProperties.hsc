@@ -38,11 +38,11 @@ instance Storable VkExternalSemaphoreProperties where
 
   peek ptr = 
     VkExternalSemaphoreProperties
-       <$> peek (offset @"sType" ptr)
-       <*> peek (offset @"pNext" ptr)
-       <*> peek (offset @"exportFromImportedHandleTypes" ptr)
-       <*> peek (offset @"compatibleHandleTypes" ptr)
-       <*> peek (offset @"externalSemaphoreFeatures" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"sType" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pNext" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"exportFromImportedHandleTypes" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"compatibleHandleTypes" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"externalSemaphoreFeatures" ptr)
 
   poke ptr val = do
     pokeField @"sType" ptr val

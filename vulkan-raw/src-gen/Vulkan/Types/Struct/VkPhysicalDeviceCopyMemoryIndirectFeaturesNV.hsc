@@ -35,9 +35,9 @@ instance Storable VkPhysicalDeviceCopyMemoryIndirectFeaturesNV where
 
   peek ptr = 
     VkPhysicalDeviceCopyMemoryIndirectFeaturesNV
-       <$> peek (offset @"sType" ptr)
-       <*> peek (offset @"pNext" ptr)
-       <*> peek (offset @"indirectCopy" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"sType" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pNext" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"indirectCopy" ptr)
 
   poke ptr val = do
     pokeField @"sType" ptr val

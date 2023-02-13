@@ -42,16 +42,16 @@ instance Storable VkDeviceCreateInfo where
 
   peek ptr = 
     VkDeviceCreateInfo
-       <$> peek (offset @"sType" ptr)
-       <*> peek (offset @"pNext" ptr)
-       <*> peek (offset @"flags" ptr)
-       <*> peek (offset @"queueCreateInfoCount" ptr)
-       <*> peek (offset @"pQueueCreateInfos" ptr)
-       <*> peek (offset @"enabledLayerCount" ptr)
-       <*> peek (offset @"ppEnabledLayerNames" ptr)
-       <*> peek (offset @"enabledExtensionCount" ptr)
-       <*> peek (offset @"ppEnabledExtensionNames" ptr)
-       <*> peek (offset @"pEnabledFeatures" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"sType" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pNext" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"flags" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"queueCreateInfoCount" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pQueueCreateInfos" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"enabledLayerCount" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"ppEnabledLayerNames" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"enabledExtensionCount" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"ppEnabledExtensionNames" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pEnabledFeatures" ptr)
 
   poke ptr val = do
     pokeField @"sType" ptr val

@@ -39,12 +39,12 @@ instance Storable VkGeometryAABBNV where
 
   peek ptr = 
     VkGeometryAABBNV
-       <$> peek (offset @"sType" ptr)
-       <*> peek (offset @"pNext" ptr)
-       <*> peek (offset @"aabbData" ptr)
-       <*> peek (offset @"numAABBs" ptr)
-       <*> peek (offset @"stride" ptr)
-       <*> peek (offset @"offset" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"sType" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pNext" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"aabbData" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"numAABBs" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"stride" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"offset" ptr)
 
   poke ptr val = do
     pokeField @"sType" ptr val

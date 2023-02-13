@@ -35,9 +35,9 @@ instance Storable VkPhysicalDeviceExtendedDynamicState3PropertiesEXT where
 
   peek ptr = 
     VkPhysicalDeviceExtendedDynamicState3PropertiesEXT
-       <$> peek (offset @"sType" ptr)
-       <*> peek (offset @"pNext" ptr)
-       <*> peek (offset @"dynamicPrimitiveTopologyUnrestricted" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"sType" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pNext" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"dynamicPrimitiveTopologyUnrestricted" ptr)
 
   poke ptr val = do
     pokeField @"sType" ptr val

@@ -42,17 +42,17 @@ instance Storable VkPhysicalDeviceDeviceGeneratedCommandsPropertiesNV where
 
   peek ptr = 
     VkPhysicalDeviceDeviceGeneratedCommandsPropertiesNV
-       <$> peek (offset @"sType" ptr)
-       <*> peek (offset @"pNext" ptr)
-       <*> peek (offset @"maxGraphicsShaderGroupCount" ptr)
-       <*> peek (offset @"maxIndirectSequenceCount" ptr)
-       <*> peek (offset @"maxIndirectCommandsTokenCount" ptr)
-       <*> peek (offset @"maxIndirectCommandsStreamCount" ptr)
-       <*> peek (offset @"maxIndirectCommandsTokenOffset" ptr)
-       <*> peek (offset @"maxIndirectCommandsStreamStride" ptr)
-       <*> peek (offset @"minSequencesCountBufferOffsetAlignment" ptr)
-       <*> peek (offset @"minSequencesIndexBufferOffsetAlignment" ptr)
-       <*> peek (offset @"minIndirectCommandsBufferOffsetAlignment" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"sType" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pNext" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"maxGraphicsShaderGroupCount" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"maxIndirectSequenceCount" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"maxIndirectCommandsTokenCount" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"maxIndirectCommandsStreamCount" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"maxIndirectCommandsTokenOffset" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"maxIndirectCommandsStreamStride" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"minSequencesCountBufferOffsetAlignment" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"minSequencesIndexBufferOffsetAlignment" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"minIndirectCommandsBufferOffsetAlignment" ptr)
 
   poke ptr val = do
     pokeField @"sType" ptr val

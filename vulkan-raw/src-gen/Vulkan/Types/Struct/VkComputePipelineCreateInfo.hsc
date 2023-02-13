@@ -39,13 +39,13 @@ instance Storable VkComputePipelineCreateInfo where
 
   peek ptr = 
     VkComputePipelineCreateInfo
-       <$> peek (offset @"sType" ptr)
-       <*> peek (offset @"pNext" ptr)
-       <*> peek (offset @"flags" ptr)
-       <*> peek (offset @"stage" ptr)
-       <*> peek (offset @"layout" ptr)
-       <*> peek (offset @"basePipelineHandle" ptr)
-       <*> peek (offset @"basePipelineIndex" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"sType" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pNext" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"flags" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"stage" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"layout" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"basePipelineHandle" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"basePipelineIndex" ptr)
 
   poke ptr val = do
     pokeField @"sType" ptr val

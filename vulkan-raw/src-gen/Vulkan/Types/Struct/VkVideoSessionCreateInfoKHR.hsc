@@ -47,17 +47,17 @@ instance Storable VkVideoSessionCreateInfoKHR where
 
   peek ptr = 
     VkVideoSessionCreateInfoKHR
-       <$> peek (offset @"sType" ptr)
-       <*> peek (offset @"pNext" ptr)
-       <*> peek (offset @"queueFamilyIndex" ptr)
-       <*> peek (offset @"flags" ptr)
-       <*> peek (offset @"pVideoProfile" ptr)
-       <*> peek (offset @"pictureFormat" ptr)
-       <*> peek (offset @"maxCodedExtent" ptr)
-       <*> peek (offset @"referencePictureFormat" ptr)
-       <*> peek (offset @"maxDpbSlots" ptr)
-       <*> peek (offset @"maxActiveReferencePictures" ptr)
-       <*> peek (offset @"pStdHeaderVersion" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"sType" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pNext" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"queueFamilyIndex" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"flags" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pVideoProfile" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pictureFormat" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"maxCodedExtent" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"referencePictureFormat" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"maxDpbSlots" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"maxActiveReferencePictures" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pStdHeaderVersion" ptr)
 
   poke ptr val = do
     pokeField @"sType" ptr val

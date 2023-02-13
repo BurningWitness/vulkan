@@ -35,9 +35,9 @@ instance Storable VkPhysicalDeviceLegacyDitheringFeaturesEXT where
 
   peek ptr = 
     VkPhysicalDeviceLegacyDitheringFeaturesEXT
-       <$> peek (offset @"sType" ptr)
-       <*> peek (offset @"pNext" ptr)
-       <*> peek (offset @"legacyDithering" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"sType" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pNext" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"legacyDithering" ptr)
 
   poke ptr val = do
     pokeField @"sType" ptr val

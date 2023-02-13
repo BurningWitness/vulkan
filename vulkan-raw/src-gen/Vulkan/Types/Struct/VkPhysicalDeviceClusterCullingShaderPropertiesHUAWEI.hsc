@@ -36,11 +36,11 @@ instance Storable VkPhysicalDeviceClusterCullingShaderPropertiesHUAWEI where
 
   peek ptr = 
     VkPhysicalDeviceClusterCullingShaderPropertiesHUAWEI
-       <$> peek (offset @"sType" ptr)
-       <*> peek (offset @"pNext" ptr)
-       <*> peek (offset @"maxWorkGroupCount" ptr)
-       <*> peek (offset @"maxWorkGroupSize" ptr)
-       <*> peek (offset @"maxOutputClusterCount" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"sType" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pNext" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"maxWorkGroupCount" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"maxWorkGroupSize" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"maxOutputClusterCount" ptr)
 
   poke ptr val = do
     pokeField @"sType" ptr val

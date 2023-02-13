@@ -37,10 +37,10 @@ instance Storable VkFragmentShadingRateAttachmentInfoKHR where
 
   peek ptr = 
     VkFragmentShadingRateAttachmentInfoKHR
-       <$> peek (offset @"sType" ptr)
-       <*> peek (offset @"pNext" ptr)
-       <*> peek (offset @"pFragmentShadingRateAttachment" ptr)
-       <*> peek (offset @"shadingRateAttachmentTexelSize" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"sType" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pNext" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pFragmentShadingRateAttachment" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"shadingRateAttachmentTexelSize" ptr)
 
   poke ptr val = do
     pokeField @"sType" ptr val

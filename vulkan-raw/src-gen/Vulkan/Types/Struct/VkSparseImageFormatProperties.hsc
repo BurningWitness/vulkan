@@ -34,9 +34,9 @@ instance Storable VkSparseImageFormatProperties where
 
   peek ptr = 
     VkSparseImageFormatProperties
-       <$> peek (offset @"aspectMask" ptr)
-       <*> peek (offset @"imageGranularity" ptr)
-       <*> peek (offset @"flags" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"aspectMask" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"imageGranularity" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"flags" ptr)
 
   poke ptr val = do
     pokeField @"aspectMask" ptr val

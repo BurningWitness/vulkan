@@ -33,10 +33,10 @@ instance Storable VkComponentMapping where
 
   peek ptr = 
     VkComponentMapping
-       <$> peek (offset @"r" ptr)
-       <*> peek (offset @"g" ptr)
-       <*> peek (offset @"b" ptr)
-       <*> peek (offset @"a" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"r" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"g" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"b" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"a" ptr)
 
   poke ptr val = do
     pokeField @"r" ptr val

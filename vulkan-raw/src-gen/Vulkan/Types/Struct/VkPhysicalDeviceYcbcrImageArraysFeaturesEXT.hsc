@@ -35,9 +35,9 @@ instance Storable VkPhysicalDeviceYcbcrImageArraysFeaturesEXT where
 
   peek ptr = 
     VkPhysicalDeviceYcbcrImageArraysFeaturesEXT
-       <$> peek (offset @"sType" ptr)
-       <*> peek (offset @"pNext" ptr)
-       <*> peek (offset @"ycbcrImageArrays" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"sType" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pNext" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"ycbcrImageArrays" ptr)
 
   poke ptr val = do
     pokeField @"sType" ptr val

@@ -38,11 +38,11 @@ instance Storable VkDescriptorAddressInfoEXT where
 
   peek ptr = 
     VkDescriptorAddressInfoEXT
-       <$> peek (offset @"sType" ptr)
-       <*> peek (offset @"pNext" ptr)
-       <*> peek (offset @"address" ptr)
-       <*> peek (offset @"range" ptr)
-       <*> peek (offset @"format" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"sType" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pNext" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"address" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"range" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"format" ptr)
 
   poke ptr val = do
     pokeField @"sType" ptr val

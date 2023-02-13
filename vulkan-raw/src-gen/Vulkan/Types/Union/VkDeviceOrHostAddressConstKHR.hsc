@@ -33,8 +33,8 @@ instance Storable VkDeviceOrHostAddressConstKHR where
 
   peek ptr = 
     VkDeviceOrHostAddressConstKHR
-       <$> peek (offset @"deviceAddress" ptr)
-       <*> peek (offset @"hostAddress" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"deviceAddress" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"hostAddress" ptr)
 
   poke ptr val = do
     pokeField @"deviceAddress" ptr val

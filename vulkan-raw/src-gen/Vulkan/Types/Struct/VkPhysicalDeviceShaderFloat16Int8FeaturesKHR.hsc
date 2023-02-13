@@ -36,10 +36,10 @@ instance Storable VkPhysicalDeviceShaderFloat16Int8FeaturesKHR where
 
   peek ptr = 
     VkPhysicalDeviceShaderFloat16Int8FeaturesKHR
-       <$> peek (offset @"sType" ptr)
-       <*> peek (offset @"pNext" ptr)
-       <*> peek (offset @"shaderFloat16" ptr)
-       <*> peek (offset @"shaderInt8" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"sType" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pNext" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"shaderFloat16" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"shaderInt8" ptr)
 
   poke ptr val = do
     pokeField @"sType" ptr val

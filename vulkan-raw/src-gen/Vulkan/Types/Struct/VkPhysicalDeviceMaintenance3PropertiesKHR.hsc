@@ -36,10 +36,10 @@ instance Storable VkPhysicalDeviceMaintenance3PropertiesKHR where
 
   peek ptr = 
     VkPhysicalDeviceMaintenance3PropertiesKHR
-       <$> peek (offset @"sType" ptr)
-       <*> peek (offset @"pNext" ptr)
-       <*> peek (offset @"maxPerSetDescriptors" ptr)
-       <*> peek (offset @"maxMemoryAllocationSize" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"sType" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pNext" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"maxPerSetDescriptors" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"maxMemoryAllocationSize" ptr)
 
   poke ptr val = do
     pokeField @"sType" ptr val

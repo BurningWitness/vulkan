@@ -43,17 +43,17 @@ instance Storable VkPhysicalDeviceConservativeRasterizationPropertiesEXT where
 
   peek ptr = 
     VkPhysicalDeviceConservativeRasterizationPropertiesEXT
-       <$> peek (offset @"sType" ptr)
-       <*> peek (offset @"pNext" ptr)
-       <*> peek (offset @"primitiveOverestimationSize" ptr)
-       <*> peek (offset @"maxExtraPrimitiveOverestimationSize" ptr)
-       <*> peek (offset @"extraPrimitiveOverestimationSizeGranularity" ptr)
-       <*> peek (offset @"primitiveUnderestimation" ptr)
-       <*> peek (offset @"conservativePointAndLineRasterization" ptr)
-       <*> peek (offset @"degenerateTrianglesRasterized" ptr)
-       <*> peek (offset @"degenerateLinesRasterized" ptr)
-       <*> peek (offset @"fullyCoveredFragmentShaderInputVariable" ptr)
-       <*> peek (offset @"conservativeRasterizationPostDepthCoverage" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"sType" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pNext" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"primitiveOverestimationSize" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"maxExtraPrimitiveOverestimationSize" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"extraPrimitiveOverestimationSizeGranularity" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"primitiveUnderestimation" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"conservativePointAndLineRasterization" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"degenerateTrianglesRasterized" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"degenerateLinesRasterized" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"fullyCoveredFragmentShaderInputVariable" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"conservativeRasterizationPostDepthCoverage" ptr)
 
   poke ptr val = do
     pokeField @"sType" ptr val

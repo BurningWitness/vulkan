@@ -38,12 +38,12 @@ instance Storable VkColorBlendEquationEXT where
 
   peek ptr = 
     VkColorBlendEquationEXT
-       <$> peek (offset @"srcColorBlendFactor" ptr)
-       <*> peek (offset @"dstColorBlendFactor" ptr)
-       <*> peek (offset @"colorBlendOp" ptr)
-       <*> peek (offset @"srcAlphaBlendFactor" ptr)
-       <*> peek (offset @"dstAlphaBlendFactor" ptr)
-       <*> peek (offset @"alphaBlendOp" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"srcColorBlendFactor" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"dstColorBlendFactor" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"colorBlendOp" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"srcAlphaBlendFactor" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"dstAlphaBlendFactor" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"alphaBlendOp" ptr)
 
   poke ptr val = do
     pokeField @"srcColorBlendFactor" ptr val

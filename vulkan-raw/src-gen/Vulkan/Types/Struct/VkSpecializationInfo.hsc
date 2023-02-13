@@ -33,10 +33,10 @@ instance Storable VkSpecializationInfo where
 
   peek ptr = 
     VkSpecializationInfo
-       <$> peek (offset @"mapEntryCount" ptr)
-       <*> peek (offset @"pMapEntries" ptr)
-       <*> peek (offset @"dataSize" ptr)
-       <*> peek (offset @"pData" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"mapEntryCount" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pMapEntries" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"dataSize" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pData" ptr)
 
   poke ptr val = do
     pokeField @"mapEntryCount" ptr val

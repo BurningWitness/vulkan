@@ -36,10 +36,10 @@ instance Storable VkDisplayPlaneInfo2KHR where
 
   peek ptr = 
     VkDisplayPlaneInfo2KHR
-       <$> peek (offset @"sType" ptr)
-       <*> peek (offset @"pNext" ptr)
-       <*> peek (offset @"mode" ptr)
-       <*> peek (offset @"planeIndex" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"sType" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pNext" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"mode" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"planeIndex" ptr)
 
   poke ptr val = do
     pokeField @"sType" ptr val

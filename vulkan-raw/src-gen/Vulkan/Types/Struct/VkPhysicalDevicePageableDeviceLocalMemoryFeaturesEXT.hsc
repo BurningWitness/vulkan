@@ -35,9 +35,9 @@ instance Storable VkPhysicalDevicePageableDeviceLocalMemoryFeaturesEXT where
 
   peek ptr = 
     VkPhysicalDevicePageableDeviceLocalMemoryFeaturesEXT
-       <$> peek (offset @"sType" ptr)
-       <*> peek (offset @"pNext" ptr)
-       <*> peek (offset @"pageableDeviceLocalMemory" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"sType" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pNext" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pageableDeviceLocalMemory" ptr)
 
   poke ptr val = do
     pokeField @"sType" ptr val

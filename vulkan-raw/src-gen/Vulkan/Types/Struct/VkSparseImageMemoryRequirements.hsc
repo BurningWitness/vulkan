@@ -35,11 +35,11 @@ instance Storable VkSparseImageMemoryRequirements where
 
   peek ptr = 
     VkSparseImageMemoryRequirements
-       <$> peek (offset @"formatProperties" ptr)
-       <*> peek (offset @"imageMipTailFirstLod" ptr)
-       <*> peek (offset @"imageMipTailSize" ptr)
-       <*> peek (offset @"imageMipTailOffset" ptr)
-       <*> peek (offset @"imageMipTailStride" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"formatProperties" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"imageMipTailFirstLod" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"imageMipTailSize" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"imageMipTailOffset" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"imageMipTailStride" ptr)
 
   poke ptr val = do
     pokeField @"formatProperties" ptr val

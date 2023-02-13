@@ -40,12 +40,12 @@ instance Storable VkVideoEncodeH265VclFrameInfoEXT where
 
   peek ptr = 
     VkVideoEncodeH265VclFrameInfoEXT
-       <$> peek (offset @"sType" ptr)
-       <*> peek (offset @"pNext" ptr)
-       <*> peek (offset @"pReferenceFinalLists" ptr)
-       <*> peek (offset @"naluSliceSegmentEntryCount" ptr)
-       <*> peek (offset @"pNaluSliceSegmentEntries" ptr)
-       <*> peek (offset @"pCurrentPictureInfo" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"sType" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pNext" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pReferenceFinalLists" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"naluSliceSegmentEntryCount" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pNaluSliceSegmentEntries" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pCurrentPictureInfo" ptr)
 
   poke ptr val = do
     pokeField @"sType" ptr val

@@ -35,9 +35,9 @@ instance Storable VkPhysicalDeviceInheritedViewportScissorFeaturesNV where
 
   peek ptr = 
     VkPhysicalDeviceInheritedViewportScissorFeaturesNV
-       <$> peek (offset @"sType" ptr)
-       <*> peek (offset @"pNext" ptr)
-       <*> peek (offset @"inheritedViewportScissor2D" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"sType" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pNext" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"inheritedViewportScissor2D" ptr)
 
   poke ptr val = do
     pokeField @"sType" ptr val

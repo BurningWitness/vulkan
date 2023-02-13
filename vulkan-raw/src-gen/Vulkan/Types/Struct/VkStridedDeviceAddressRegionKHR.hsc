@@ -34,9 +34,9 @@ instance Storable VkStridedDeviceAddressRegionKHR where
 
   peek ptr = 
     VkStridedDeviceAddressRegionKHR
-       <$> peek (offset @"deviceAddress" ptr)
-       <*> peek (offset @"stride" ptr)
-       <*> peek (offset @"size" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"deviceAddress" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"stride" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"size" ptr)
 
   poke ptr val = do
     pokeField @"deviceAddress" ptr val

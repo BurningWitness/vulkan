@@ -40,12 +40,12 @@ instance Storable VkCopyMemoryToImageIndirectCommandNV where
 
   peek ptr = 
     VkCopyMemoryToImageIndirectCommandNV
-       <$> peek (offset @"srcAddress" ptr)
-       <*> peek (offset @"bufferRowLength" ptr)
-       <*> peek (offset @"bufferImageHeight" ptr)
-       <*> peek (offset @"imageSubresource" ptr)
-       <*> peek (offset @"imageOffset" ptr)
-       <*> peek (offset @"imageExtent" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"srcAddress" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"bufferRowLength" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"bufferImageHeight" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"imageSubresource" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"imageOffset" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"imageExtent" ptr)
 
   poke ptr val = do
     pokeField @"srcAddress" ptr val

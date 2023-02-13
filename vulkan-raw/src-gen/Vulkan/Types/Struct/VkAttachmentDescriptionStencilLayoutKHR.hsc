@@ -36,10 +36,10 @@ instance Storable VkAttachmentDescriptionStencilLayoutKHR where
 
   peek ptr = 
     VkAttachmentDescriptionStencilLayoutKHR
-       <$> peek (offset @"sType" ptr)
-       <*> peek (offset @"pNext" ptr)
-       <*> peek (offset @"stencilInitialLayout" ptr)
-       <*> peek (offset @"stencilFinalLayout" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"sType" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pNext" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"stencilInitialLayout" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"stencilFinalLayout" ptr)
 
   poke ptr val = do
     pokeField @"sType" ptr val

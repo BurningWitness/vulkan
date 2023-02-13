@@ -36,11 +36,11 @@ instance Storable VkPhysicalDeviceShaderCoreBuiltinsPropertiesARM where
 
   peek ptr = 
     VkPhysicalDeviceShaderCoreBuiltinsPropertiesARM
-       <$> peek (offset @"sType" ptr)
-       <*> peek (offset @"pNext" ptr)
-       <*> peek (offset @"shaderCoreMask" ptr)
-       <*> peek (offset @"shaderCoreCount" ptr)
-       <*> peek (offset @"shaderWarpsPerCore" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"sType" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pNext" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"shaderCoreMask" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"shaderCoreCount" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"shaderWarpsPerCore" ptr)
 
   poke ptr val = do
     pokeField @"sType" ptr val

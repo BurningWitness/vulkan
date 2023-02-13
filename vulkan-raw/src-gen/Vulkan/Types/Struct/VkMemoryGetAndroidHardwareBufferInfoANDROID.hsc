@@ -35,9 +35,9 @@ instance Storable VkMemoryGetAndroidHardwareBufferInfoANDROID where
 
   peek ptr = 
     VkMemoryGetAndroidHardwareBufferInfoANDROID
-       <$> peek (offset @"sType" ptr)
-       <*> peek (offset @"pNext" ptr)
-       <*> peek (offset @"memory" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"sType" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pNext" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"memory" ptr)
 
   poke ptr val = do
     pokeField @"sType" ptr val

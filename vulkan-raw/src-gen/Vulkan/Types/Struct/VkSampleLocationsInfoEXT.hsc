@@ -40,12 +40,12 @@ instance Storable VkSampleLocationsInfoEXT where
 
   peek ptr = 
     VkSampleLocationsInfoEXT
-       <$> peek (offset @"sType" ptr)
-       <*> peek (offset @"pNext" ptr)
-       <*> peek (offset @"sampleLocationsPerPixel" ptr)
-       <*> peek (offset @"sampleLocationGridSize" ptr)
-       <*> peek (offset @"sampleLocationsCount" ptr)
-       <*> peek (offset @"pSampleLocations" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"sType" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pNext" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"sampleLocationsPerPixel" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"sampleLocationGridSize" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"sampleLocationsCount" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pSampleLocations" ptr)
 
   poke ptr val = do
     pokeField @"sType" ptr val

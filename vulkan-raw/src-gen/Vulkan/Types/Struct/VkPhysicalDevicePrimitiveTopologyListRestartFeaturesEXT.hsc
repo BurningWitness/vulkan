@@ -36,10 +36,10 @@ instance Storable VkPhysicalDevicePrimitiveTopologyListRestartFeaturesEXT where
 
   peek ptr = 
     VkPhysicalDevicePrimitiveTopologyListRestartFeaturesEXT
-       <$> peek (offset @"sType" ptr)
-       <*> peek (offset @"pNext" ptr)
-       <*> peek (offset @"primitiveTopologyListRestart" ptr)
-       <*> peek (offset @"primitiveTopologyPatchListRestart" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"sType" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pNext" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"primitiveTopologyListRestart" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"primitiveTopologyPatchListRestart" ptr)
 
   poke ptr val = do
     pokeField @"sType" ptr val

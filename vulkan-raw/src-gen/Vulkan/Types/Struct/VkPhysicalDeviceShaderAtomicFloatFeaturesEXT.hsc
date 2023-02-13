@@ -46,20 +46,20 @@ instance Storable VkPhysicalDeviceShaderAtomicFloatFeaturesEXT where
 
   peek ptr = 
     VkPhysicalDeviceShaderAtomicFloatFeaturesEXT
-       <$> peek (offset @"sType" ptr)
-       <*> peek (offset @"pNext" ptr)
-       <*> peek (offset @"shaderBufferFloat32Atomics" ptr)
-       <*> peek (offset @"shaderBufferFloat32AtomicAdd" ptr)
-       <*> peek (offset @"shaderBufferFloat64Atomics" ptr)
-       <*> peek (offset @"shaderBufferFloat64AtomicAdd" ptr)
-       <*> peek (offset @"shaderSharedFloat32Atomics" ptr)
-       <*> peek (offset @"shaderSharedFloat32AtomicAdd" ptr)
-       <*> peek (offset @"shaderSharedFloat64Atomics" ptr)
-       <*> peek (offset @"shaderSharedFloat64AtomicAdd" ptr)
-       <*> peek (offset @"shaderImageFloat32Atomics" ptr)
-       <*> peek (offset @"shaderImageFloat32AtomicAdd" ptr)
-       <*> peek (offset @"sparseImageFloat32Atomics" ptr)
-       <*> peek (offset @"sparseImageFloat32AtomicAdd" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"sType" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pNext" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"shaderBufferFloat32Atomics" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"shaderBufferFloat32AtomicAdd" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"shaderBufferFloat64Atomics" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"shaderBufferFloat64AtomicAdd" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"shaderSharedFloat32Atomics" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"shaderSharedFloat32AtomicAdd" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"shaderSharedFloat64Atomics" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"shaderSharedFloat64AtomicAdd" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"shaderImageFloat32Atomics" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"shaderImageFloat32AtomicAdd" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"sparseImageFloat32Atomics" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"sparseImageFloat32AtomicAdd" ptr)
 
   poke ptr val = do
     pokeField @"sType" ptr val

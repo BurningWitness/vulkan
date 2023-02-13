@@ -40,12 +40,12 @@ instance Storable VkPerformanceCounterKHR where
 
   peek ptr = 
     VkPerformanceCounterKHR
-       <$> peek (offset @"sType" ptr)
-       <*> peek (offset @"pNext" ptr)
-       <*> peek (offset @"unit" ptr)
-       <*> peek (offset @"scope" ptr)
-       <*> peek (offset @"storage" ptr)
-       <*> peek (offset @"uuid" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"sType" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pNext" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"unit" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"scope" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"storage" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"uuid" ptr)
 
   poke ptr val = do
     pokeField @"sType" ptr val

@@ -34,9 +34,9 @@ instance Storable VkPerformanceQuerySubmitInfoKHR where
 
   peek ptr = 
     VkPerformanceQuerySubmitInfoKHR
-       <$> peek (offset @"sType" ptr)
-       <*> peek (offset @"pNext" ptr)
-       <*> peek (offset @"counterPassIndex" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"sType" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pNext" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"counterPassIndex" ptr)
 
   poke ptr val = do
     pokeField @"sType" ptr val

@@ -35,9 +35,9 @@ instance Storable VkCalibratedTimestampInfoEXT where
 
   peek ptr = 
     VkCalibratedTimestampInfoEXT
-       <$> peek (offset @"sType" ptr)
-       <*> peek (offset @"pNext" ptr)
-       <*> peek (offset @"timeDomain" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"sType" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pNext" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"timeDomain" ptr)
 
   poke ptr val = do
     pokeField @"sType" ptr val

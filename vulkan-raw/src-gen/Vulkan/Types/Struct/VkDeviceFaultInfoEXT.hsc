@@ -39,12 +39,12 @@ instance Storable VkDeviceFaultInfoEXT where
 
   peek ptr = 
     VkDeviceFaultInfoEXT
-       <$> peek (offset @"sType" ptr)
-       <*> peek (offset @"pNext" ptr)
-       <*> peek (offset @"description" ptr)
-       <*> peek (offset @"pAddressInfos" ptr)
-       <*> peek (offset @"pVendorInfos" ptr)
-       <*> peek (offset @"pVendorBinaryData" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"sType" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pNext" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"description" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pAddressInfos" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pVendorInfos" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pVendorBinaryData" ptr)
 
   poke ptr val = do
     pokeField @"sType" ptr val

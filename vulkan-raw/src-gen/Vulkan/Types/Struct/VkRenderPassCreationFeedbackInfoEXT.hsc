@@ -31,7 +31,7 @@ instance Storable VkRenderPassCreationFeedbackInfoEXT where
 
   peek ptr = 
     VkRenderPassCreationFeedbackInfoEXT
-       <$> peek (offset @"postMergeSubpassCount" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"postMergeSubpassCount" ptr)
 
 
   poke ptr val = do

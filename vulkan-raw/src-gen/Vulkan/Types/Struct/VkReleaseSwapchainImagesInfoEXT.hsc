@@ -37,11 +37,11 @@ instance Storable VkReleaseSwapchainImagesInfoEXT where
 
   peek ptr = 
     VkReleaseSwapchainImagesInfoEXT
-       <$> peek (offset @"sType" ptr)
-       <*> peek (offset @"pNext" ptr)
-       <*> peek (offset @"swapchain" ptr)
-       <*> peek (offset @"imageIndexCount" ptr)
-       <*> peek (offset @"pImageIndices" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"sType" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pNext" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"swapchain" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"imageIndexCount" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pImageIndices" ptr)
 
   poke ptr val = do
     pokeField @"sType" ptr val

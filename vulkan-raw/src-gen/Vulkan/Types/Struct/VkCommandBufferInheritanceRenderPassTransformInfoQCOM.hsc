@@ -37,10 +37,10 @@ instance Storable VkCommandBufferInheritanceRenderPassTransformInfoQCOM where
 
   peek ptr = 
     VkCommandBufferInheritanceRenderPassTransformInfoQCOM
-       <$> peek (offset @"sType" ptr)
-       <*> peek (offset @"pNext" ptr)
-       <*> peek (offset @"transform" ptr)
-       <*> peek (offset @"renderArea" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"sType" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pNext" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"transform" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"renderArea" ptr)
 
   poke ptr val = do
     pokeField @"sType" ptr val

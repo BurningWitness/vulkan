@@ -38,11 +38,11 @@ instance Storable VkDisplayPresentInfoKHR where
 
   peek ptr = 
     VkDisplayPresentInfoKHR
-       <$> peek (offset @"sType" ptr)
-       <*> peek (offset @"pNext" ptr)
-       <*> peek (offset @"srcRect" ptr)
-       <*> peek (offset @"dstRect" ptr)
-       <*> peek (offset @"persistent" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"sType" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pNext" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"srcRect" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"dstRect" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"persistent" ptr)
 
   poke ptr val = do
     pokeField @"sType" ptr val

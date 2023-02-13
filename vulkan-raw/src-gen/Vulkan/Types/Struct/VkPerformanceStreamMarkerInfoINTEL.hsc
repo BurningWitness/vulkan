@@ -34,9 +34,9 @@ instance Storable VkPerformanceStreamMarkerInfoINTEL where
 
   peek ptr = 
     VkPerformanceStreamMarkerInfoINTEL
-       <$> peek (offset @"sType" ptr)
-       <*> peek (offset @"pNext" ptr)
-       <*> peek (offset @"marker" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"sType" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pNext" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"marker" ptr)
 
   poke ptr val = do
     pokeField @"sType" ptr val

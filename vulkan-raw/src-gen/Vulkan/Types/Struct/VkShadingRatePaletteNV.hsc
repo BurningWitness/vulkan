@@ -33,8 +33,8 @@ instance Storable VkShadingRatePaletteNV where
 
   peek ptr = 
     VkShadingRatePaletteNV
-       <$> peek (offset @"shadingRatePaletteEntryCount" ptr)
-       <*> peek (offset @"pShadingRatePaletteEntries" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"shadingRatePaletteEntryCount" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pShadingRatePaletteEntries" ptr)
 
   poke ptr val = do
     pokeField @"shadingRatePaletteEntryCount" ptr val

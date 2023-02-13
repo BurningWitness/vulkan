@@ -36,10 +36,10 @@ instance Storable VkWriteDescriptorSetAccelerationStructureKHR where
 
   peek ptr = 
     VkWriteDescriptorSetAccelerationStructureKHR
-       <$> peek (offset @"sType" ptr)
-       <*> peek (offset @"pNext" ptr)
-       <*> peek (offset @"accelerationStructureCount" ptr)
-       <*> peek (offset @"pAccelerationStructures" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"sType" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pNext" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"accelerationStructureCount" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pAccelerationStructures" ptr)
 
   poke ptr val = do
     pokeField @"sType" ptr val

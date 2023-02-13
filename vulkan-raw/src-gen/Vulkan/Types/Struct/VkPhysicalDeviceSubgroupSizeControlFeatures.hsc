@@ -36,10 +36,10 @@ instance Storable VkPhysicalDeviceSubgroupSizeControlFeatures where
 
   peek ptr = 
     VkPhysicalDeviceSubgroupSizeControlFeatures
-       <$> peek (offset @"sType" ptr)
-       <*> peek (offset @"pNext" ptr)
-       <*> peek (offset @"subgroupSizeControl" ptr)
-       <*> peek (offset @"computeFullSubgroups" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"sType" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pNext" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"subgroupSizeControl" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"computeFullSubgroups" ptr)
 
   poke ptr val = do
     pokeField @"sType" ptr val

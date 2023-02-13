@@ -38,12 +38,12 @@ instance Storable VkPhysicalDeviceTexelBufferAlignmentProperties where
 
   peek ptr = 
     VkPhysicalDeviceTexelBufferAlignmentProperties
-       <$> peek (offset @"sType" ptr)
-       <*> peek (offset @"pNext" ptr)
-       <*> peek (offset @"storageTexelBufferOffsetAlignmentBytes" ptr)
-       <*> peek (offset @"storageTexelBufferOffsetSingleTexelAlignment" ptr)
-       <*> peek (offset @"uniformTexelBufferOffsetAlignmentBytes" ptr)
-       <*> peek (offset @"uniformTexelBufferOffsetSingleTexelAlignment" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"sType" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pNext" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"storageTexelBufferOffsetAlignmentBytes" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"storageTexelBufferOffsetSingleTexelAlignment" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"uniformTexelBufferOffsetAlignmentBytes" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"uniformTexelBufferOffsetSingleTexelAlignment" ptr)
 
   poke ptr val = do
     pokeField @"sType" ptr val

@@ -35,9 +35,9 @@ instance Storable VkSurfacePresentModeEXT where
 
   peek ptr = 
     VkSurfacePresentModeEXT
-       <$> peek (offset @"sType" ptr)
-       <*> peek (offset @"pNext" ptr)
-       <*> peek (offset @"presentMode" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"sType" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pNext" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"presentMode" ptr)
 
   poke ptr val = do
     pokeField @"sType" ptr val

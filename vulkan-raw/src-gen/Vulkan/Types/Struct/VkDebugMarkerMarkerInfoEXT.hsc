@@ -35,10 +35,10 @@ instance Storable VkDebugMarkerMarkerInfoEXT where
 
   peek ptr = 
     VkDebugMarkerMarkerInfoEXT
-       <$> peek (offset @"sType" ptr)
-       <*> peek (offset @"pNext" ptr)
-       <*> peek (offset @"pMarkerName" ptr)
-       <*> peek (offset @"color" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"sType" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pNext" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pMarkerName" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"color" ptr)
 
   poke ptr val = do
     pokeField @"sType" ptr val

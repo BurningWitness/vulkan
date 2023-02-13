@@ -37,11 +37,11 @@ instance Storable VkPhysicalDeviceImageProcessingFeaturesQCOM where
 
   peek ptr = 
     VkPhysicalDeviceImageProcessingFeaturesQCOM
-       <$> peek (offset @"sType" ptr)
-       <*> peek (offset @"pNext" ptr)
-       <*> peek (offset @"textureSampleWeighted" ptr)
-       <*> peek (offset @"textureBoxFilter" ptr)
-       <*> peek (offset @"textureBlockMatch" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"sType" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pNext" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"textureSampleWeighted" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"textureBoxFilter" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"textureBlockMatch" ptr)
 
   poke ptr val = do
     pokeField @"sType" ptr val

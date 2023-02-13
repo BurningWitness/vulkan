@@ -36,10 +36,10 @@ instance Storable VkSubpassShadingPipelineCreateInfoHUAWEI where
 
   peek ptr = 
     VkSubpassShadingPipelineCreateInfoHUAWEI
-       <$> peek (offset @"sType" ptr)
-       <*> peek (offset @"pNext" ptr)
-       <*> peek (offset @"renderPass" ptr)
-       <*> peek (offset @"subpass" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"sType" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pNext" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"renderPass" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"subpass" ptr)
 
   poke ptr val = do
     pokeField @"sType" ptr val

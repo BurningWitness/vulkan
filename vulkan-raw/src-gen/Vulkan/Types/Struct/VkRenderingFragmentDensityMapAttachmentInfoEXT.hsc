@@ -37,10 +37,10 @@ instance Storable VkRenderingFragmentDensityMapAttachmentInfoEXT where
 
   peek ptr = 
     VkRenderingFragmentDensityMapAttachmentInfoEXT
-       <$> peek (offset @"sType" ptr)
-       <*> peek (offset @"pNext" ptr)
-       <*> peek (offset @"imageView" ptr)
-       <*> peek (offset @"imageLayout" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"sType" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pNext" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"imageView" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"imageLayout" ptr)
 
   poke ptr val = do
     pokeField @"sType" ptr val

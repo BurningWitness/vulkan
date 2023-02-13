@@ -35,10 +35,10 @@ instance Storable VkWriteDescriptorSetInlineUniformBlock where
 
   peek ptr = 
     VkWriteDescriptorSetInlineUniformBlock
-       <$> peek (offset @"sType" ptr)
-       <*> peek (offset @"pNext" ptr)
-       <*> peek (offset @"dataSize" ptr)
-       <*> peek (offset @"pData" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"sType" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pNext" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"dataSize" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pData" ptr)
 
   poke ptr val = do
     pokeField @"sType" ptr val

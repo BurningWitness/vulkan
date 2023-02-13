@@ -47,19 +47,19 @@ instance Storable VkPipelineRasterizationStateCreateInfo where
 
   peek ptr = 
     VkPipelineRasterizationStateCreateInfo
-       <$> peek (offset @"sType" ptr)
-       <*> peek (offset @"pNext" ptr)
-       <*> peek (offset @"flags" ptr)
-       <*> peek (offset @"depthClampEnable" ptr)
-       <*> peek (offset @"rasterizerDiscardEnable" ptr)
-       <*> peek (offset @"polygonMode" ptr)
-       <*> peek (offset @"cullMode" ptr)
-       <*> peek (offset @"frontFace" ptr)
-       <*> peek (offset @"depthBiasEnable" ptr)
-       <*> peek (offset @"depthBiasConstantFactor" ptr)
-       <*> peek (offset @"depthBiasClamp" ptr)
-       <*> peek (offset @"depthBiasSlopeFactor" ptr)
-       <*> peek (offset @"lineWidth" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"sType" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pNext" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"flags" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"depthClampEnable" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"rasterizerDiscardEnable" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"polygonMode" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"cullMode" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"frontFace" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"depthBiasEnable" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"depthBiasConstantFactor" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"depthBiasClamp" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"depthBiasSlopeFactor" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"lineWidth" ptr)
 
   poke ptr val = do
     pokeField @"sType" ptr val

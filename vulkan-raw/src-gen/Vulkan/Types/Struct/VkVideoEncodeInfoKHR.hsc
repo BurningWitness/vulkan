@@ -48,18 +48,18 @@ instance Storable VkVideoEncodeInfoKHR where
 
   peek ptr = 
     VkVideoEncodeInfoKHR
-       <$> peek (offset @"sType" ptr)
-       <*> peek (offset @"pNext" ptr)
-       <*> peek (offset @"flags" ptr)
-       <*> peek (offset @"qualityLevel" ptr)
-       <*> peek (offset @"dstBitstreamBuffer" ptr)
-       <*> peek (offset @"dstBitstreamBufferOffset" ptr)
-       <*> peek (offset @"dstBitstreamBufferMaxRange" ptr)
-       <*> peek (offset @"srcPictureResource" ptr)
-       <*> peek (offset @"pSetupReferenceSlot" ptr)
-       <*> peek (offset @"referenceSlotCount" ptr)
-       <*> peek (offset @"pReferenceSlots" ptr)
-       <*> peek (offset @"precedingExternallyEncodedBytes" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"sType" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pNext" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"flags" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"qualityLevel" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"dstBitstreamBuffer" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"dstBitstreamBufferOffset" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"dstBitstreamBufferMaxRange" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"srcPictureResource" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pSetupReferenceSlot" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"referenceSlotCount" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pReferenceSlots" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"precedingExternallyEncodedBytes" ptr)
 
   poke ptr val = do
     pokeField @"sType" ptr val

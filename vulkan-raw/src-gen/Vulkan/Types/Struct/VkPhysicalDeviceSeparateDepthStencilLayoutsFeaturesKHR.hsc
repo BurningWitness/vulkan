@@ -35,9 +35,9 @@ instance Storable VkPhysicalDeviceSeparateDepthStencilLayoutsFeaturesKHR where
 
   peek ptr = 
     VkPhysicalDeviceSeparateDepthStencilLayoutsFeaturesKHR
-       <$> peek (offset @"sType" ptr)
-       <*> peek (offset @"pNext" ptr)
-       <*> peek (offset @"separateDepthStencilLayouts" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"sType" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pNext" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"separateDepthStencilLayouts" ptr)
 
   poke ptr val = do
     pokeField @"sType" ptr val

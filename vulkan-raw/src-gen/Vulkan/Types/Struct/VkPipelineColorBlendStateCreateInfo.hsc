@@ -41,14 +41,14 @@ instance Storable VkPipelineColorBlendStateCreateInfo where
 
   peek ptr = 
     VkPipelineColorBlendStateCreateInfo
-       <$> peek (offset @"sType" ptr)
-       <*> peek (offset @"pNext" ptr)
-       <*> peek (offset @"flags" ptr)
-       <*> peek (offset @"logicOpEnable" ptr)
-       <*> peek (offset @"logicOp" ptr)
-       <*> peek (offset @"attachmentCount" ptr)
-       <*> peek (offset @"pAttachments" ptr)
-       <*> peek (offset @"blendConstants" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"sType" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pNext" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"flags" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"logicOpEnable" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"logicOp" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"attachmentCount" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pAttachments" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"blendConstants" ptr)
 
   poke ptr val = do
     pokeField @"sType" ptr val

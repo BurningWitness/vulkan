@@ -35,9 +35,9 @@ instance Storable VkPhysicalDevicePipelineProtectedAccessFeaturesEXT where
 
   peek ptr = 
     VkPhysicalDevicePipelineProtectedAccessFeaturesEXT
-       <$> peek (offset @"sType" ptr)
-       <*> peek (offset @"pNext" ptr)
-       <*> peek (offset @"pipelineProtectedAccess" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"sType" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pNext" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pipelineProtectedAccess" ptr)
 
   poke ptr val = do
     pokeField @"sType" ptr val

@@ -36,10 +36,10 @@ instance Storable VkPhysicalDeviceShaderImageAtomicInt64FeaturesEXT where
 
   peek ptr = 
     VkPhysicalDeviceShaderImageAtomicInt64FeaturesEXT
-       <$> peek (offset @"sType" ptr)
-       <*> peek (offset @"pNext" ptr)
-       <*> peek (offset @"shaderImageInt64Atomics" ptr)
-       <*> peek (offset @"sparseImageInt64Atomics" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"sType" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pNext" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"shaderImageInt64Atomics" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"sparseImageInt64Atomics" ptr)
 
   poke ptr val = do
     pokeField @"sType" ptr val

@@ -34,10 +34,10 @@ instance Storable VkQueueFamilyProperties where
 
   peek ptr = 
     VkQueueFamilyProperties
-       <$> peek (offset @"queueFlags" ptr)
-       <*> peek (offset @"queueCount" ptr)
-       <*> peek (offset @"timestampValidBits" ptr)
-       <*> peek (offset @"minImageTransferGranularity" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"queueFlags" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"queueCount" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"timestampValidBits" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"minImageTransferGranularity" ptr)
 
   poke ptr val = do
     pokeField @"queueFlags" ptr val

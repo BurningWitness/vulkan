@@ -44,16 +44,16 @@ instance Storable VkRenderingInfo where
 
   peek ptr = 
     VkRenderingInfo
-       <$> peek (offset @"sType" ptr)
-       <*> peek (offset @"pNext" ptr)
-       <*> peek (offset @"flags" ptr)
-       <*> peek (offset @"renderArea" ptr)
-       <*> peek (offset @"layerCount" ptr)
-       <*> peek (offset @"viewMask" ptr)
-       <*> peek (offset @"colorAttachmentCount" ptr)
-       <*> peek (offset @"pColorAttachments" ptr)
-       <*> peek (offset @"pDepthAttachment" ptr)
-       <*> peek (offset @"pStencilAttachment" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"sType" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pNext" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"flags" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"renderArea" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"layerCount" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"viewMask" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"colorAttachmentCount" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pColorAttachments" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pDepthAttachment" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pStencilAttachment" ptr)
 
   poke ptr val = do
     pokeField @"sType" ptr val

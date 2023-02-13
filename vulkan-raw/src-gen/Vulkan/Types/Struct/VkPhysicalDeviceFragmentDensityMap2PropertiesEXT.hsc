@@ -38,12 +38,12 @@ instance Storable VkPhysicalDeviceFragmentDensityMap2PropertiesEXT where
 
   peek ptr = 
     VkPhysicalDeviceFragmentDensityMap2PropertiesEXT
-       <$> peek (offset @"sType" ptr)
-       <*> peek (offset @"pNext" ptr)
-       <*> peek (offset @"subsampledLoads" ptr)
-       <*> peek (offset @"subsampledCoarseReconstructionEarlyAccess" ptr)
-       <*> peek (offset @"maxSubsampledArrayLayers" ptr)
-       <*> peek (offset @"maxDescriptorSetSubsampledSamplers" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"sType" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pNext" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"subsampledLoads" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"subsampledCoarseReconstructionEarlyAccess" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"maxSubsampledArrayLayers" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"maxDescriptorSetSubsampledSamplers" ptr)
 
   poke ptr val = do
     pokeField @"sType" ptr val

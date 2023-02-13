@@ -38,11 +38,11 @@ instance Storable VkImageViewSampleWeightCreateInfoQCOM where
 
   peek ptr = 
     VkImageViewSampleWeightCreateInfoQCOM
-       <$> peek (offset @"sType" ptr)
-       <*> peek (offset @"pNext" ptr)
-       <*> peek (offset @"filterCenter" ptr)
-       <*> peek (offset @"filterSize" ptr)
-       <*> peek (offset @"numPhases" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"sType" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pNext" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"filterCenter" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"filterSize" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"numPhases" ptr)
 
   poke ptr val = do
     pokeField @"sType" ptr val

@@ -34,10 +34,10 @@ instance Storable VkCommandPoolCreateInfo where
 
   peek ptr = 
     VkCommandPoolCreateInfo
-       <$> peek (offset @"sType" ptr)
-       <*> peek (offset @"pNext" ptr)
-       <*> peek (offset @"flags" ptr)
-       <*> peek (offset @"queueFamilyIndex" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"sType" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pNext" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"flags" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"queueFamilyIndex" ptr)
 
   poke ptr val = do
     pokeField @"sType" ptr val

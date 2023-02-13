@@ -36,10 +36,10 @@ instance Storable VkPhysicalDeviceRobustness2PropertiesEXT where
 
   peek ptr = 
     VkPhysicalDeviceRobustness2PropertiesEXT
-       <$> peek (offset @"sType" ptr)
-       <*> peek (offset @"pNext" ptr)
-       <*> peek (offset @"robustStorageBufferAccessSizeAlignment" ptr)
-       <*> peek (offset @"robustUniformBufferAccessSizeAlignment" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"sType" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pNext" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"robustStorageBufferAccessSizeAlignment" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"robustUniformBufferAccessSizeAlignment" ptr)
 
   poke ptr val = do
     pokeField @"sType" ptr val

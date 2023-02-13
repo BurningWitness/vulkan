@@ -35,9 +35,9 @@ instance Storable VkQueryPoolCreateInfoINTEL where
 
   peek ptr = 
     VkQueryPoolCreateInfoINTEL
-       <$> peek (offset @"sType" ptr)
-       <*> peek (offset @"pNext" ptr)
-       <*> peek (offset @"performanceCountersSampling" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"sType" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pNext" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"performanceCountersSampling" ptr)
 
   poke ptr val = do
     pokeField @"sType" ptr val

@@ -37,10 +37,10 @@ instance Storable VkCuFunctionCreateInfoNVX where
 
   peek ptr = 
     VkCuFunctionCreateInfoNVX
-       <$> peek (offset @"sType" ptr)
-       <*> peek (offset @"pNext" ptr)
-       <*> peek (offset @"module" ptr)
-       <*> peek (offset @"pName" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"sType" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pNext" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"module" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pName" ptr)
 
   poke ptr val = do
     pokeField @"sType" ptr val

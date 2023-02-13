@@ -35,9 +35,9 @@ instance Storable VkPhysicalDeviceCornerSampledImageFeaturesNV where
 
   peek ptr = 
     VkPhysicalDeviceCornerSampledImageFeaturesNV
-       <$> peek (offset @"sType" ptr)
-       <*> peek (offset @"pNext" ptr)
-       <*> peek (offset @"cornerSampledImage" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"sType" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pNext" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"cornerSampledImage" ptr)
 
   poke ptr val = do
     pokeField @"sType" ptr val

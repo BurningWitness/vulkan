@@ -33,11 +33,11 @@ instance Storable VkDrawIndexedIndirectCommand where
 
   peek ptr = 
     VkDrawIndexedIndirectCommand
-       <$> peek (offset @"indexCount" ptr)
-       <*> peek (offset @"instanceCount" ptr)
-       <*> peek (offset @"firstIndex" ptr)
-       <*> peek (offset @"vertexOffset" ptr)
-       <*> peek (offset @"firstInstance" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"indexCount" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"instanceCount" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"firstIndex" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"vertexOffset" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"firstInstance" ptr)
 
   poke ptr val = do
     pokeField @"indexCount" ptr val

@@ -36,11 +36,11 @@ instance Storable VkCommandBufferAllocateInfo where
 
   peek ptr = 
     VkCommandBufferAllocateInfo
-       <$> peek (offset @"sType" ptr)
-       <*> peek (offset @"pNext" ptr)
-       <*> peek (offset @"commandPool" ptr)
-       <*> peek (offset @"level" ptr)
-       <*> peek (offset @"commandBufferCount" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"sType" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pNext" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"commandPool" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"level" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"commandBufferCount" ptr)
 
   poke ptr val = do
     pokeField @"sType" ptr val

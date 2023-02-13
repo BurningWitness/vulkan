@@ -35,9 +35,9 @@ instance Storable VkRenderPassCreationFeedbackCreateInfoEXT where
 
   peek ptr = 
     VkRenderPassCreationFeedbackCreateInfoEXT
-       <$> peek (offset @"sType" ptr)
-       <*> peek (offset @"pNext" ptr)
-       <*> peek (offset @"pRenderPassFeedback" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"sType" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pNext" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pRenderPassFeedback" ptr)
 
   poke ptr val = do
     pokeField @"sType" ptr val

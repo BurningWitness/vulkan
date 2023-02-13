@@ -39,15 +39,15 @@ instance Storable VkCopyDescriptorSet where
 
   peek ptr = 
     VkCopyDescriptorSet
-       <$> peek (offset @"sType" ptr)
-       <*> peek (offset @"pNext" ptr)
-       <*> peek (offset @"srcSet" ptr)
-       <*> peek (offset @"srcBinding" ptr)
-       <*> peek (offset @"srcArrayElement" ptr)
-       <*> peek (offset @"dstSet" ptr)
-       <*> peek (offset @"dstBinding" ptr)
-       <*> peek (offset @"dstArrayElement" ptr)
-       <*> peek (offset @"descriptorCount" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"sType" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pNext" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"srcSet" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"srcBinding" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"srcArrayElement" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"dstSet" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"dstBinding" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"dstArrayElement" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"descriptorCount" ptr)
 
   poke ptr val = do
     pokeField @"sType" ptr val

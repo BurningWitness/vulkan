@@ -37,11 +37,11 @@ instance Storable VkDecompressMemoryRegionNV where
 
   peek ptr = 
     VkDecompressMemoryRegionNV
-       <$> peek (offset @"srcAddress" ptr)
-       <*> peek (offset @"dstAddress" ptr)
-       <*> peek (offset @"compressedSize" ptr)
-       <*> peek (offset @"decompressedSize" ptr)
-       <*> peek (offset @"decompressionMethod" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"srcAddress" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"dstAddress" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"compressedSize" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"decompressedSize" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"decompressionMethod" ptr)
 
   poke ptr val = do
     pokeField @"srcAddress" ptr val

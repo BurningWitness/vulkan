@@ -36,10 +36,10 @@ instance Storable VkPhysicalDeviceMemoryBudgetPropertiesEXT where
 
   peek ptr = 
     VkPhysicalDeviceMemoryBudgetPropertiesEXT
-       <$> peek (offset @"sType" ptr)
-       <*> peek (offset @"pNext" ptr)
-       <*> peek (offset @"heapBudget" ptr)
-       <*> peek (offset @"heapUsage" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"sType" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pNext" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"heapBudget" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"heapUsage" ptr)
 
   poke ptr val = do
     pokeField @"sType" ptr val

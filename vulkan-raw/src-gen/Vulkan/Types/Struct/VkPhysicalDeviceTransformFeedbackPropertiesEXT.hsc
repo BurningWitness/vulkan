@@ -44,18 +44,18 @@ instance Storable VkPhysicalDeviceTransformFeedbackPropertiesEXT where
 
   peek ptr = 
     VkPhysicalDeviceTransformFeedbackPropertiesEXT
-       <$> peek (offset @"sType" ptr)
-       <*> peek (offset @"pNext" ptr)
-       <*> peek (offset @"maxTransformFeedbackStreams" ptr)
-       <*> peek (offset @"maxTransformFeedbackBuffers" ptr)
-       <*> peek (offset @"maxTransformFeedbackBufferSize" ptr)
-       <*> peek (offset @"maxTransformFeedbackStreamDataSize" ptr)
-       <*> peek (offset @"maxTransformFeedbackBufferDataSize" ptr)
-       <*> peek (offset @"maxTransformFeedbackBufferDataStride" ptr)
-       <*> peek (offset @"transformFeedbackQueries" ptr)
-       <*> peek (offset @"transformFeedbackStreamsLinesTriangles" ptr)
-       <*> peek (offset @"transformFeedbackRasterizationStreamSelect" ptr)
-       <*> peek (offset @"transformFeedbackDraw" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"sType" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pNext" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"maxTransformFeedbackStreams" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"maxTransformFeedbackBuffers" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"maxTransformFeedbackBufferSize" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"maxTransformFeedbackStreamDataSize" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"maxTransformFeedbackBufferDataSize" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"maxTransformFeedbackBufferDataStride" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"transformFeedbackQueries" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"transformFeedbackStreamsLinesTriangles" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"transformFeedbackRasterizationStreamSelect" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"transformFeedbackDraw" ptr)
 
   poke ptr val = do
     pokeField @"sType" ptr val

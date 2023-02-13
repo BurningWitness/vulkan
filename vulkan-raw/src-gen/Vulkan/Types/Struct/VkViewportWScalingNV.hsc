@@ -32,8 +32,8 @@ instance Storable VkViewportWScalingNV where
 
   peek ptr = 
     VkViewportWScalingNV
-       <$> peek (offset @"xcoeff" ptr)
-       <*> peek (offset @"ycoeff" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"xcoeff" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"ycoeff" ptr)
 
   poke ptr val = do
     pokeField @"xcoeff" ptr val

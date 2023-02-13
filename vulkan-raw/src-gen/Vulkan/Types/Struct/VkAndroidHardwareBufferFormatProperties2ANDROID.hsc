@@ -47,16 +47,16 @@ instance Storable VkAndroidHardwareBufferFormatProperties2ANDROID where
 
   peek ptr = 
     VkAndroidHardwareBufferFormatProperties2ANDROID
-       <$> peek (offset @"sType" ptr)
-       <*> peek (offset @"pNext" ptr)
-       <*> peek (offset @"format" ptr)
-       <*> peek (offset @"externalFormat" ptr)
-       <*> peek (offset @"formatFeatures" ptr)
-       <*> peek (offset @"samplerYcbcrConversionComponents" ptr)
-       <*> peek (offset @"suggestedYcbcrModel" ptr)
-       <*> peek (offset @"suggestedYcbcrRange" ptr)
-       <*> peek (offset @"suggestedXChromaOffset" ptr)
-       <*> peek (offset @"suggestedYChromaOffset" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"sType" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pNext" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"format" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"externalFormat" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"formatFeatures" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"samplerYcbcrConversionComponents" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"suggestedYcbcrModel" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"suggestedYcbcrRange" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"suggestedXChromaOffset" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"suggestedYChromaOffset" ptr)
 
   poke ptr val = do
     pokeField @"sType" ptr val

@@ -53,21 +53,21 @@ instance Storable VkImageCreateInfo where
 
   peek ptr = 
     VkImageCreateInfo
-       <$> peek (offset @"sType" ptr)
-       <*> peek (offset @"pNext" ptr)
-       <*> peek (offset @"flags" ptr)
-       <*> peek (offset @"imageType" ptr)
-       <*> peek (offset @"format" ptr)
-       <*> peek (offset @"extent" ptr)
-       <*> peek (offset @"mipLevels" ptr)
-       <*> peek (offset @"arrayLayers" ptr)
-       <*> peek (offset @"samples" ptr)
-       <*> peek (offset @"tiling" ptr)
-       <*> peek (offset @"usage" ptr)
-       <*> peek (offset @"sharingMode" ptr)
-       <*> peek (offset @"queueFamilyIndexCount" ptr)
-       <*> peek (offset @"pQueueFamilyIndices" ptr)
-       <*> peek (offset @"initialLayout" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"sType" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pNext" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"flags" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"imageType" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"format" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"extent" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"mipLevels" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"arrayLayers" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"samples" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"tiling" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"usage" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"sharingMode" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"queueFamilyIndexCount" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pQueueFamilyIndices" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"initialLayout" ptr)
 
   poke ptr val = do
     pokeField @"sType" ptr val

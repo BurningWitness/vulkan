@@ -35,9 +35,9 @@ instance Storable VkSubpassBeginInfoKHR where
 
   peek ptr = 
     VkSubpassBeginInfoKHR
-       <$> peek (offset @"sType" ptr)
-       <*> peek (offset @"pNext" ptr)
-       <*> peek (offset @"contents" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"sType" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pNext" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"contents" ptr)
 
   poke ptr val = do
     pokeField @"sType" ptr val

@@ -37,10 +37,10 @@ instance Storable VkAccelerationStructureCreateInfoNV where
 
   peek ptr = 
     VkAccelerationStructureCreateInfoNV
-       <$> peek (offset @"sType" ptr)
-       <*> peek (offset @"pNext" ptr)
-       <*> peek (offset @"compactedSize" ptr)
-       <*> peek (offset @"info" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"sType" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"pNext" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"compactedSize" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"info" ptr)
 
   poke ptr val = do
     pokeField @"sType" ptr val

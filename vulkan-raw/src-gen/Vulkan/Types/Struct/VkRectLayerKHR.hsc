@@ -35,9 +35,9 @@ instance Storable VkRectLayerKHR where
 
   peek ptr = 
     VkRectLayerKHR
-       <$> peek (offset @"offset" ptr)
-       <*> peek (offset @"extent" ptr)
-       <*> peek (offset @"layer" ptr)
+       <$> peek (Foreign.Storable.Offset.offset @"offset" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"extent" ptr)
+       <*> peek (Foreign.Storable.Offset.offset @"layer" ptr)
 
   poke ptr val = do
     pokeField @"offset" ptr val
