@@ -32,8 +32,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkImageDrmFormatModifierExplicitCreateInfoEXT"
          }
 
 instance Storable VkImageDrmFormatModifierExplicitCreateInfoEXT where
-  sizeOf    _ = #{size      struct VkImageDrmFormatModifierExplicitCreateInfoEXT}
-  alignment _ = #{alignment struct VkImageDrmFormatModifierExplicitCreateInfoEXT}
+  sizeOf    _ = #{size      VkImageDrmFormatModifierExplicitCreateInfoEXT}
+  alignment _ = #{alignment VkImageDrmFormatModifierExplicitCreateInfoEXT}
 
   peek ptr = 
     VkImageDrmFormatModifierExplicitCreateInfoEXT
@@ -51,19 +51,19 @@ instance Storable VkImageDrmFormatModifierExplicitCreateInfoEXT where
     pokeField @"pPlaneLayouts" ptr val
 
 instance Offset "sType" VkImageDrmFormatModifierExplicitCreateInfoEXT where
-  rawOffset = #{offset struct VkImageDrmFormatModifierExplicitCreateInfoEXT, sType}
+  rawOffset = #{offset VkImageDrmFormatModifierExplicitCreateInfoEXT, sType}
 
 instance Offset "pNext" VkImageDrmFormatModifierExplicitCreateInfoEXT where
-  rawOffset = #{offset struct VkImageDrmFormatModifierExplicitCreateInfoEXT, pNext}
+  rawOffset = #{offset VkImageDrmFormatModifierExplicitCreateInfoEXT, pNext}
 
 instance Offset "drmFormatModifier" VkImageDrmFormatModifierExplicitCreateInfoEXT where
-  rawOffset = #{offset struct VkImageDrmFormatModifierExplicitCreateInfoEXT, drmFormatModifier}
+  rawOffset = #{offset VkImageDrmFormatModifierExplicitCreateInfoEXT, drmFormatModifier}
 
 instance Offset "drmFormatModifierPlaneCount" VkImageDrmFormatModifierExplicitCreateInfoEXT where
-  rawOffset = #{offset struct VkImageDrmFormatModifierExplicitCreateInfoEXT, drmFormatModifierPlaneCount}
+  rawOffset = #{offset VkImageDrmFormatModifierExplicitCreateInfoEXT, drmFormatModifierPlaneCount}
 
 instance Offset "pPlaneLayouts" VkImageDrmFormatModifierExplicitCreateInfoEXT where
-  rawOffset = #{offset struct VkImageDrmFormatModifierExplicitCreateInfoEXT, pPlaneLayouts}
+  rawOffset = #{offset VkImageDrmFormatModifierExplicitCreateInfoEXT, pPlaneLayouts}
 
 #else
 

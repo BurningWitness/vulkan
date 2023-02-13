@@ -29,8 +29,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkPhysicalDeviceSubpassShadingPropertiesHUAWEI
          }
 
 instance Storable VkPhysicalDeviceSubpassShadingPropertiesHUAWEI where
-  sizeOf    _ = #{size      struct VkPhysicalDeviceSubpassShadingPropertiesHUAWEI}
-  alignment _ = #{alignment struct VkPhysicalDeviceSubpassShadingPropertiesHUAWEI}
+  sizeOf    _ = #{size      VkPhysicalDeviceSubpassShadingPropertiesHUAWEI}
+  alignment _ = #{alignment VkPhysicalDeviceSubpassShadingPropertiesHUAWEI}
 
   peek ptr = 
     VkPhysicalDeviceSubpassShadingPropertiesHUAWEI
@@ -44,13 +44,13 @@ instance Storable VkPhysicalDeviceSubpassShadingPropertiesHUAWEI where
     pokeField @"maxSubpassShadingWorkgroupSizeAspectRatio" ptr val
 
 instance Offset "sType" VkPhysicalDeviceSubpassShadingPropertiesHUAWEI where
-  rawOffset = #{offset struct VkPhysicalDeviceSubpassShadingPropertiesHUAWEI, sType}
+  rawOffset = #{offset VkPhysicalDeviceSubpassShadingPropertiesHUAWEI, sType}
 
 instance Offset "pNext" VkPhysicalDeviceSubpassShadingPropertiesHUAWEI where
-  rawOffset = #{offset struct VkPhysicalDeviceSubpassShadingPropertiesHUAWEI, pNext}
+  rawOffset = #{offset VkPhysicalDeviceSubpassShadingPropertiesHUAWEI, pNext}
 
 instance Offset "maxSubpassShadingWorkgroupSizeAspectRatio" VkPhysicalDeviceSubpassShadingPropertiesHUAWEI where
-  rawOffset = #{offset struct VkPhysicalDeviceSubpassShadingPropertiesHUAWEI, maxSubpassShadingWorkgroupSizeAspectRatio}
+  rawOffset = #{offset VkPhysicalDeviceSubpassShadingPropertiesHUAWEI, maxSubpassShadingWorkgroupSizeAspectRatio}
 
 #else
 

@@ -34,8 +34,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkPhysicalDeviceRayTracingPipelineFeaturesKHR"
          }
 
 instance Storable VkPhysicalDeviceRayTracingPipelineFeaturesKHR where
-  sizeOf    _ = #{size      struct VkPhysicalDeviceRayTracingPipelineFeaturesKHR}
-  alignment _ = #{alignment struct VkPhysicalDeviceRayTracingPipelineFeaturesKHR}
+  sizeOf    _ = #{size      VkPhysicalDeviceRayTracingPipelineFeaturesKHR}
+  alignment _ = #{alignment VkPhysicalDeviceRayTracingPipelineFeaturesKHR}
 
   peek ptr = 
     VkPhysicalDeviceRayTracingPipelineFeaturesKHR
@@ -57,25 +57,25 @@ instance Storable VkPhysicalDeviceRayTracingPipelineFeaturesKHR where
     pokeField @"rayTraversalPrimitiveCulling" ptr val
 
 instance Offset "sType" VkPhysicalDeviceRayTracingPipelineFeaturesKHR where
-  rawOffset = #{offset struct VkPhysicalDeviceRayTracingPipelineFeaturesKHR, sType}
+  rawOffset = #{offset VkPhysicalDeviceRayTracingPipelineFeaturesKHR, sType}
 
 instance Offset "pNext" VkPhysicalDeviceRayTracingPipelineFeaturesKHR where
-  rawOffset = #{offset struct VkPhysicalDeviceRayTracingPipelineFeaturesKHR, pNext}
+  rawOffset = #{offset VkPhysicalDeviceRayTracingPipelineFeaturesKHR, pNext}
 
 instance Offset "rayTracingPipeline" VkPhysicalDeviceRayTracingPipelineFeaturesKHR where
-  rawOffset = #{offset struct VkPhysicalDeviceRayTracingPipelineFeaturesKHR, rayTracingPipeline}
+  rawOffset = #{offset VkPhysicalDeviceRayTracingPipelineFeaturesKHR, rayTracingPipeline}
 
 instance Offset "rayTracingPipelineShaderGroupHandleCaptureReplay" VkPhysicalDeviceRayTracingPipelineFeaturesKHR where
-  rawOffset = #{offset struct VkPhysicalDeviceRayTracingPipelineFeaturesKHR, rayTracingPipelineShaderGroupHandleCaptureReplay}
+  rawOffset = #{offset VkPhysicalDeviceRayTracingPipelineFeaturesKHR, rayTracingPipelineShaderGroupHandleCaptureReplay}
 
 instance Offset "rayTracingPipelineShaderGroupHandleCaptureReplayMixed" VkPhysicalDeviceRayTracingPipelineFeaturesKHR where
-  rawOffset = #{offset struct VkPhysicalDeviceRayTracingPipelineFeaturesKHR, rayTracingPipelineShaderGroupHandleCaptureReplayMixed}
+  rawOffset = #{offset VkPhysicalDeviceRayTracingPipelineFeaturesKHR, rayTracingPipelineShaderGroupHandleCaptureReplayMixed}
 
 instance Offset "rayTracingPipelineTraceRaysIndirect" VkPhysicalDeviceRayTracingPipelineFeaturesKHR where
-  rawOffset = #{offset struct VkPhysicalDeviceRayTracingPipelineFeaturesKHR, rayTracingPipelineTraceRaysIndirect}
+  rawOffset = #{offset VkPhysicalDeviceRayTracingPipelineFeaturesKHR, rayTracingPipelineTraceRaysIndirect}
 
 instance Offset "rayTraversalPrimitiveCulling" VkPhysicalDeviceRayTracingPipelineFeaturesKHR where
-  rawOffset = #{offset struct VkPhysicalDeviceRayTracingPipelineFeaturesKHR, rayTraversalPrimitiveCulling}
+  rawOffset = #{offset VkPhysicalDeviceRayTracingPipelineFeaturesKHR, rayTraversalPrimitiveCulling}
 
 #else
 

@@ -30,8 +30,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkExternalMemoryImageCreateInfo" #-} VkExterna
          }
 
 instance Storable VkExternalMemoryImageCreateInfo where
-  sizeOf    _ = #{size      struct VkExternalMemoryImageCreateInfo}
-  alignment _ = #{alignment struct VkExternalMemoryImageCreateInfo}
+  sizeOf    _ = #{size      VkExternalMemoryImageCreateInfo}
+  alignment _ = #{alignment VkExternalMemoryImageCreateInfo}
 
   peek ptr = 
     VkExternalMemoryImageCreateInfo
@@ -45,13 +45,13 @@ instance Storable VkExternalMemoryImageCreateInfo where
     pokeField @"handleTypes" ptr val
 
 instance Offset "sType" VkExternalMemoryImageCreateInfo where
-  rawOffset = #{offset struct VkExternalMemoryImageCreateInfo, sType}
+  rawOffset = #{offset VkExternalMemoryImageCreateInfo, sType}
 
 instance Offset "pNext" VkExternalMemoryImageCreateInfo where
-  rawOffset = #{offset struct VkExternalMemoryImageCreateInfo, pNext}
+  rawOffset = #{offset VkExternalMemoryImageCreateInfo, pNext}
 
 instance Offset "handleTypes" VkExternalMemoryImageCreateInfo where
-  rawOffset = #{offset struct VkExternalMemoryImageCreateInfo, handleTypes}
+  rawOffset = #{offset VkExternalMemoryImageCreateInfo, handleTypes}
 
 #else
 

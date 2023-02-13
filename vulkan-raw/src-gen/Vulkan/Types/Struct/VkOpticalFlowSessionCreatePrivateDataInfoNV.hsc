@@ -31,8 +31,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkOpticalFlowSessionCreatePrivateDataInfoNV" #
          }
 
 instance Storable VkOpticalFlowSessionCreatePrivateDataInfoNV where
-  sizeOf    _ = #{size      struct VkOpticalFlowSessionCreatePrivateDataInfoNV}
-  alignment _ = #{alignment struct VkOpticalFlowSessionCreatePrivateDataInfoNV}
+  sizeOf    _ = #{size      VkOpticalFlowSessionCreatePrivateDataInfoNV}
+  alignment _ = #{alignment VkOpticalFlowSessionCreatePrivateDataInfoNV}
 
   peek ptr = 
     VkOpticalFlowSessionCreatePrivateDataInfoNV
@@ -50,19 +50,19 @@ instance Storable VkOpticalFlowSessionCreatePrivateDataInfoNV where
     pokeField @"pPrivateData" ptr val
 
 instance Offset "sType" VkOpticalFlowSessionCreatePrivateDataInfoNV where
-  rawOffset = #{offset struct VkOpticalFlowSessionCreatePrivateDataInfoNV, sType}
+  rawOffset = #{offset VkOpticalFlowSessionCreatePrivateDataInfoNV, sType}
 
 instance Offset "pNext" VkOpticalFlowSessionCreatePrivateDataInfoNV where
-  rawOffset = #{offset struct VkOpticalFlowSessionCreatePrivateDataInfoNV, pNext}
+  rawOffset = #{offset VkOpticalFlowSessionCreatePrivateDataInfoNV, pNext}
 
 instance Offset "id" VkOpticalFlowSessionCreatePrivateDataInfoNV where
-  rawOffset = #{offset struct VkOpticalFlowSessionCreatePrivateDataInfoNV, id}
+  rawOffset = #{offset VkOpticalFlowSessionCreatePrivateDataInfoNV, id}
 
 instance Offset "size" VkOpticalFlowSessionCreatePrivateDataInfoNV where
-  rawOffset = #{offset struct VkOpticalFlowSessionCreatePrivateDataInfoNV, size}
+  rawOffset = #{offset VkOpticalFlowSessionCreatePrivateDataInfoNV, size}
 
 instance Offset "pPrivateData" VkOpticalFlowSessionCreatePrivateDataInfoNV where
-  rawOffset = #{offset struct VkOpticalFlowSessionCreatePrivateDataInfoNV, pPrivateData}
+  rawOffset = #{offset VkOpticalFlowSessionCreatePrivateDataInfoNV, pPrivateData}
 
 #else
 

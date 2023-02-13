@@ -30,8 +30,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkDeviceDiagnosticsConfigCreateInfoNV" #-} VkD
          }
 
 instance Storable VkDeviceDiagnosticsConfigCreateInfoNV where
-  sizeOf    _ = #{size      struct VkDeviceDiagnosticsConfigCreateInfoNV}
-  alignment _ = #{alignment struct VkDeviceDiagnosticsConfigCreateInfoNV}
+  sizeOf    _ = #{size      VkDeviceDiagnosticsConfigCreateInfoNV}
+  alignment _ = #{alignment VkDeviceDiagnosticsConfigCreateInfoNV}
 
   peek ptr = 
     VkDeviceDiagnosticsConfigCreateInfoNV
@@ -45,13 +45,13 @@ instance Storable VkDeviceDiagnosticsConfigCreateInfoNV where
     pokeField @"flags" ptr val
 
 instance Offset "sType" VkDeviceDiagnosticsConfigCreateInfoNV where
-  rawOffset = #{offset struct VkDeviceDiagnosticsConfigCreateInfoNV, sType}
+  rawOffset = #{offset VkDeviceDiagnosticsConfigCreateInfoNV, sType}
 
 instance Offset "pNext" VkDeviceDiagnosticsConfigCreateInfoNV where
-  rawOffset = #{offset struct VkDeviceDiagnosticsConfigCreateInfoNV, pNext}
+  rawOffset = #{offset VkDeviceDiagnosticsConfigCreateInfoNV, pNext}
 
 instance Offset "flags" VkDeviceDiagnosticsConfigCreateInfoNV where
-  rawOffset = #{offset struct VkDeviceDiagnosticsConfigCreateInfoNV, flags}
+  rawOffset = #{offset VkDeviceDiagnosticsConfigCreateInfoNV, flags}
 
 #else
 

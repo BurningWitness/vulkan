@@ -35,8 +35,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkRayTracingShaderGroupCreateInfoNV" #-} VkRay
          }
 
 instance Storable VkRayTracingShaderGroupCreateInfoNV where
-  sizeOf    _ = #{size      struct VkRayTracingShaderGroupCreateInfoNV}
-  alignment _ = #{alignment struct VkRayTracingShaderGroupCreateInfoNV}
+  sizeOf    _ = #{size      VkRayTracingShaderGroupCreateInfoNV}
+  alignment _ = #{alignment VkRayTracingShaderGroupCreateInfoNV}
 
   peek ptr = 
     VkRayTracingShaderGroupCreateInfoNV
@@ -58,25 +58,25 @@ instance Storable VkRayTracingShaderGroupCreateInfoNV where
     pokeField @"intersectionShader" ptr val
 
 instance Offset "sType" VkRayTracingShaderGroupCreateInfoNV where
-  rawOffset = #{offset struct VkRayTracingShaderGroupCreateInfoNV, sType}
+  rawOffset = #{offset VkRayTracingShaderGroupCreateInfoNV, sType}
 
 instance Offset "pNext" VkRayTracingShaderGroupCreateInfoNV where
-  rawOffset = #{offset struct VkRayTracingShaderGroupCreateInfoNV, pNext}
+  rawOffset = #{offset VkRayTracingShaderGroupCreateInfoNV, pNext}
 
 instance Offset "type_" VkRayTracingShaderGroupCreateInfoNV where
-  rawOffset = #{offset struct VkRayTracingShaderGroupCreateInfoNV, type}
+  rawOffset = #{offset VkRayTracingShaderGroupCreateInfoNV, type}
 
 instance Offset "generalShader" VkRayTracingShaderGroupCreateInfoNV where
-  rawOffset = #{offset struct VkRayTracingShaderGroupCreateInfoNV, generalShader}
+  rawOffset = #{offset VkRayTracingShaderGroupCreateInfoNV, generalShader}
 
 instance Offset "closestHitShader" VkRayTracingShaderGroupCreateInfoNV where
-  rawOffset = #{offset struct VkRayTracingShaderGroupCreateInfoNV, closestHitShader}
+  rawOffset = #{offset VkRayTracingShaderGroupCreateInfoNV, closestHitShader}
 
 instance Offset "anyHitShader" VkRayTracingShaderGroupCreateInfoNV where
-  rawOffset = #{offset struct VkRayTracingShaderGroupCreateInfoNV, anyHitShader}
+  rawOffset = #{offset VkRayTracingShaderGroupCreateInfoNV, anyHitShader}
 
 instance Offset "intersectionShader" VkRayTracingShaderGroupCreateInfoNV where
-  rawOffset = #{offset struct VkRayTracingShaderGroupCreateInfoNV, intersectionShader}
+  rawOffset = #{offset VkRayTracingShaderGroupCreateInfoNV, intersectionShader}
 
 instance Offset "type" VkRayTracingShaderGroupCreateInfoNV where
   rawOffset = rawOffset @"type_" @VkRayTracingShaderGroupCreateInfoNV

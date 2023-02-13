@@ -30,8 +30,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkPhysicalDeviceSamplerYcbcrConversionFeatures
          }
 
 instance Storable VkPhysicalDeviceSamplerYcbcrConversionFeatures where
-  sizeOf    _ = #{size      struct VkPhysicalDeviceSamplerYcbcrConversionFeatures}
-  alignment _ = #{alignment struct VkPhysicalDeviceSamplerYcbcrConversionFeatures}
+  sizeOf    _ = #{size      VkPhysicalDeviceSamplerYcbcrConversionFeatures}
+  alignment _ = #{alignment VkPhysicalDeviceSamplerYcbcrConversionFeatures}
 
   peek ptr = 
     VkPhysicalDeviceSamplerYcbcrConversionFeatures
@@ -45,13 +45,13 @@ instance Storable VkPhysicalDeviceSamplerYcbcrConversionFeatures where
     pokeField @"samplerYcbcrConversion" ptr val
 
 instance Offset "sType" VkPhysicalDeviceSamplerYcbcrConversionFeatures where
-  rawOffset = #{offset struct VkPhysicalDeviceSamplerYcbcrConversionFeatures, sType}
+  rawOffset = #{offset VkPhysicalDeviceSamplerYcbcrConversionFeatures, sType}
 
 instance Offset "pNext" VkPhysicalDeviceSamplerYcbcrConversionFeatures where
-  rawOffset = #{offset struct VkPhysicalDeviceSamplerYcbcrConversionFeatures, pNext}
+  rawOffset = #{offset VkPhysicalDeviceSamplerYcbcrConversionFeatures, pNext}
 
 instance Offset "samplerYcbcrConversion" VkPhysicalDeviceSamplerYcbcrConversionFeatures where
-  rawOffset = #{offset struct VkPhysicalDeviceSamplerYcbcrConversionFeatures, samplerYcbcrConversion}
+  rawOffset = #{offset VkPhysicalDeviceSamplerYcbcrConversionFeatures, samplerYcbcrConversion}
 
 #else
 

@@ -30,8 +30,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkSamplerReductionModeCreateInfo" #-} VkSample
          }
 
 instance Storable VkSamplerReductionModeCreateInfo where
-  sizeOf    _ = #{size      struct VkSamplerReductionModeCreateInfo}
-  alignment _ = #{alignment struct VkSamplerReductionModeCreateInfo}
+  sizeOf    _ = #{size      VkSamplerReductionModeCreateInfo}
+  alignment _ = #{alignment VkSamplerReductionModeCreateInfo}
 
   peek ptr = 
     VkSamplerReductionModeCreateInfo
@@ -45,13 +45,13 @@ instance Storable VkSamplerReductionModeCreateInfo where
     pokeField @"reductionMode" ptr val
 
 instance Offset "sType" VkSamplerReductionModeCreateInfo where
-  rawOffset = #{offset struct VkSamplerReductionModeCreateInfo, sType}
+  rawOffset = #{offset VkSamplerReductionModeCreateInfo, sType}
 
 instance Offset "pNext" VkSamplerReductionModeCreateInfo where
-  rawOffset = #{offset struct VkSamplerReductionModeCreateInfo, pNext}
+  rawOffset = #{offset VkSamplerReductionModeCreateInfo, pNext}
 
 instance Offset "reductionMode" VkSamplerReductionModeCreateInfo where
-  rawOffset = #{offset struct VkSamplerReductionModeCreateInfo, reductionMode}
+  rawOffset = #{offset VkSamplerReductionModeCreateInfo, reductionMode}
 
 #else
 

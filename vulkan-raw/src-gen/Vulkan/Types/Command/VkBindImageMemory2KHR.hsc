@@ -1,3 +1,7 @@
+{-# LANGUAGE CApiFFI #-}
+{-# LANGUAGE CPP #-}
+{-# LANGUAGE MagicHash #-}
+
 #include <vulkan/vulkan.h>
 
 #if VK_KHR_bind_memory2
@@ -10,17 +14,18 @@ import GHC.Ptr
 import Vulkan.Types.Enum.VkResult
 import Vulkan.Types.Handle
 import Vulkan.Types.Struct.VkBindImageMemoryInfo
-import Vulkan.Types.Command.VkBindImageMemory2
 import Vulkan.Types.VkFun
 
 
 
-type VkBindImageMemory2KHR = VkBindImageMemory2
+type VkBindImageMemory2KHR =
+          VkDevice -- ^ device
+       -> #{type uint32_t} -- ^ bindInfoCount
+       -> Ptr VkBindImageMemoryInfo -- ^ pBindInfos
+       -> IO VkResult
 
-vkFunBindImageMemory2KHR
-  :: VkFun VkBindImageMemory2KHR
-vkFunBindImageMemory2KHR = vkFunBindImageMemory2
-
+vkFunBindImageMemory2KHR :: VkFun VkBindImageMemory2KHR
+vkFunBindImageMemory2KHR = VkFun (Ptr ("vkBindImageMemory2KHR\0"##))
 
 #else
 

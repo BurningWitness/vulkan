@@ -29,8 +29,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkPerformanceMarkerInfoINTEL" #-} VkPerformanc
          }
 
 instance Storable VkPerformanceMarkerInfoINTEL where
-  sizeOf    _ = #{size      struct VkPerformanceMarkerInfoINTEL}
-  alignment _ = #{alignment struct VkPerformanceMarkerInfoINTEL}
+  sizeOf    _ = #{size      VkPerformanceMarkerInfoINTEL}
+  alignment _ = #{alignment VkPerformanceMarkerInfoINTEL}
 
   peek ptr = 
     VkPerformanceMarkerInfoINTEL
@@ -44,13 +44,13 @@ instance Storable VkPerformanceMarkerInfoINTEL where
     pokeField @"marker" ptr val
 
 instance Offset "sType" VkPerformanceMarkerInfoINTEL where
-  rawOffset = #{offset struct VkPerformanceMarkerInfoINTEL, sType}
+  rawOffset = #{offset VkPerformanceMarkerInfoINTEL, sType}
 
 instance Offset "pNext" VkPerformanceMarkerInfoINTEL where
-  rawOffset = #{offset struct VkPerformanceMarkerInfoINTEL, pNext}
+  rawOffset = #{offset VkPerformanceMarkerInfoINTEL, pNext}
 
 instance Offset "marker" VkPerformanceMarkerInfoINTEL where
-  rawOffset = #{offset struct VkPerformanceMarkerInfoINTEL, marker}
+  rawOffset = #{offset VkPerformanceMarkerInfoINTEL, marker}
 
 #else
 

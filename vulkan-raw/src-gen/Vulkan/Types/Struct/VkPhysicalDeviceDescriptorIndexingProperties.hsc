@@ -52,8 +52,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkPhysicalDeviceDescriptorIndexingProperties" 
          }
 
 instance Storable VkPhysicalDeviceDescriptorIndexingProperties where
-  sizeOf    _ = #{size      struct VkPhysicalDeviceDescriptorIndexingProperties}
-  alignment _ = #{alignment struct VkPhysicalDeviceDescriptorIndexingProperties}
+  sizeOf    _ = #{size      VkPhysicalDeviceDescriptorIndexingProperties}
+  alignment _ = #{alignment VkPhysicalDeviceDescriptorIndexingProperties}
 
   peek ptr = 
     VkPhysicalDeviceDescriptorIndexingProperties
@@ -111,79 +111,79 @@ instance Storable VkPhysicalDeviceDescriptorIndexingProperties where
     pokeField @"maxDescriptorSetUpdateAfterBindInputAttachments" ptr val
 
 instance Offset "sType" VkPhysicalDeviceDescriptorIndexingProperties where
-  rawOffset = #{offset struct VkPhysicalDeviceDescriptorIndexingProperties, sType}
+  rawOffset = #{offset VkPhysicalDeviceDescriptorIndexingProperties, sType}
 
 instance Offset "pNext" VkPhysicalDeviceDescriptorIndexingProperties where
-  rawOffset = #{offset struct VkPhysicalDeviceDescriptorIndexingProperties, pNext}
+  rawOffset = #{offset VkPhysicalDeviceDescriptorIndexingProperties, pNext}
 
 instance Offset "maxUpdateAfterBindDescriptorsInAllPools" VkPhysicalDeviceDescriptorIndexingProperties where
-  rawOffset = #{offset struct VkPhysicalDeviceDescriptorIndexingProperties, maxUpdateAfterBindDescriptorsInAllPools}
+  rawOffset = #{offset VkPhysicalDeviceDescriptorIndexingProperties, maxUpdateAfterBindDescriptorsInAllPools}
 
 instance Offset "shaderUniformBufferArrayNonUniformIndexingNative" VkPhysicalDeviceDescriptorIndexingProperties where
-  rawOffset = #{offset struct VkPhysicalDeviceDescriptorIndexingProperties, shaderUniformBufferArrayNonUniformIndexingNative}
+  rawOffset = #{offset VkPhysicalDeviceDescriptorIndexingProperties, shaderUniformBufferArrayNonUniformIndexingNative}
 
 instance Offset "shaderSampledImageArrayNonUniformIndexingNative" VkPhysicalDeviceDescriptorIndexingProperties where
-  rawOffset = #{offset struct VkPhysicalDeviceDescriptorIndexingProperties, shaderSampledImageArrayNonUniformIndexingNative}
+  rawOffset = #{offset VkPhysicalDeviceDescriptorIndexingProperties, shaderSampledImageArrayNonUniformIndexingNative}
 
 instance Offset "shaderStorageBufferArrayNonUniformIndexingNative" VkPhysicalDeviceDescriptorIndexingProperties where
-  rawOffset = #{offset struct VkPhysicalDeviceDescriptorIndexingProperties, shaderStorageBufferArrayNonUniformIndexingNative}
+  rawOffset = #{offset VkPhysicalDeviceDescriptorIndexingProperties, shaderStorageBufferArrayNonUniformIndexingNative}
 
 instance Offset "shaderStorageImageArrayNonUniformIndexingNative" VkPhysicalDeviceDescriptorIndexingProperties where
-  rawOffset = #{offset struct VkPhysicalDeviceDescriptorIndexingProperties, shaderStorageImageArrayNonUniformIndexingNative}
+  rawOffset = #{offset VkPhysicalDeviceDescriptorIndexingProperties, shaderStorageImageArrayNonUniformIndexingNative}
 
 instance Offset "shaderInputAttachmentArrayNonUniformIndexingNative" VkPhysicalDeviceDescriptorIndexingProperties where
-  rawOffset = #{offset struct VkPhysicalDeviceDescriptorIndexingProperties, shaderInputAttachmentArrayNonUniformIndexingNative}
+  rawOffset = #{offset VkPhysicalDeviceDescriptorIndexingProperties, shaderInputAttachmentArrayNonUniformIndexingNative}
 
 instance Offset "robustBufferAccessUpdateAfterBind" VkPhysicalDeviceDescriptorIndexingProperties where
-  rawOffset = #{offset struct VkPhysicalDeviceDescriptorIndexingProperties, robustBufferAccessUpdateAfterBind}
+  rawOffset = #{offset VkPhysicalDeviceDescriptorIndexingProperties, robustBufferAccessUpdateAfterBind}
 
 instance Offset "quadDivergentImplicitLod" VkPhysicalDeviceDescriptorIndexingProperties where
-  rawOffset = #{offset struct VkPhysicalDeviceDescriptorIndexingProperties, quadDivergentImplicitLod}
+  rawOffset = #{offset VkPhysicalDeviceDescriptorIndexingProperties, quadDivergentImplicitLod}
 
 instance Offset "maxPerStageDescriptorUpdateAfterBindSamplers" VkPhysicalDeviceDescriptorIndexingProperties where
-  rawOffset = #{offset struct VkPhysicalDeviceDescriptorIndexingProperties, maxPerStageDescriptorUpdateAfterBindSamplers}
+  rawOffset = #{offset VkPhysicalDeviceDescriptorIndexingProperties, maxPerStageDescriptorUpdateAfterBindSamplers}
 
 instance Offset "maxPerStageDescriptorUpdateAfterBindUniformBuffers" VkPhysicalDeviceDescriptorIndexingProperties where
-  rawOffset = #{offset struct VkPhysicalDeviceDescriptorIndexingProperties, maxPerStageDescriptorUpdateAfterBindUniformBuffers}
+  rawOffset = #{offset VkPhysicalDeviceDescriptorIndexingProperties, maxPerStageDescriptorUpdateAfterBindUniformBuffers}
 
 instance Offset "maxPerStageDescriptorUpdateAfterBindStorageBuffers" VkPhysicalDeviceDescriptorIndexingProperties where
-  rawOffset = #{offset struct VkPhysicalDeviceDescriptorIndexingProperties, maxPerStageDescriptorUpdateAfterBindStorageBuffers}
+  rawOffset = #{offset VkPhysicalDeviceDescriptorIndexingProperties, maxPerStageDescriptorUpdateAfterBindStorageBuffers}
 
 instance Offset "maxPerStageDescriptorUpdateAfterBindSampledImages" VkPhysicalDeviceDescriptorIndexingProperties where
-  rawOffset = #{offset struct VkPhysicalDeviceDescriptorIndexingProperties, maxPerStageDescriptorUpdateAfterBindSampledImages}
+  rawOffset = #{offset VkPhysicalDeviceDescriptorIndexingProperties, maxPerStageDescriptorUpdateAfterBindSampledImages}
 
 instance Offset "maxPerStageDescriptorUpdateAfterBindStorageImages" VkPhysicalDeviceDescriptorIndexingProperties where
-  rawOffset = #{offset struct VkPhysicalDeviceDescriptorIndexingProperties, maxPerStageDescriptorUpdateAfterBindStorageImages}
+  rawOffset = #{offset VkPhysicalDeviceDescriptorIndexingProperties, maxPerStageDescriptorUpdateAfterBindStorageImages}
 
 instance Offset "maxPerStageDescriptorUpdateAfterBindInputAttachments" VkPhysicalDeviceDescriptorIndexingProperties where
-  rawOffset = #{offset struct VkPhysicalDeviceDescriptorIndexingProperties, maxPerStageDescriptorUpdateAfterBindInputAttachments}
+  rawOffset = #{offset VkPhysicalDeviceDescriptorIndexingProperties, maxPerStageDescriptorUpdateAfterBindInputAttachments}
 
 instance Offset "maxPerStageUpdateAfterBindResources" VkPhysicalDeviceDescriptorIndexingProperties where
-  rawOffset = #{offset struct VkPhysicalDeviceDescriptorIndexingProperties, maxPerStageUpdateAfterBindResources}
+  rawOffset = #{offset VkPhysicalDeviceDescriptorIndexingProperties, maxPerStageUpdateAfterBindResources}
 
 instance Offset "maxDescriptorSetUpdateAfterBindSamplers" VkPhysicalDeviceDescriptorIndexingProperties where
-  rawOffset = #{offset struct VkPhysicalDeviceDescriptorIndexingProperties, maxDescriptorSetUpdateAfterBindSamplers}
+  rawOffset = #{offset VkPhysicalDeviceDescriptorIndexingProperties, maxDescriptorSetUpdateAfterBindSamplers}
 
 instance Offset "maxDescriptorSetUpdateAfterBindUniformBuffers" VkPhysicalDeviceDescriptorIndexingProperties where
-  rawOffset = #{offset struct VkPhysicalDeviceDescriptorIndexingProperties, maxDescriptorSetUpdateAfterBindUniformBuffers}
+  rawOffset = #{offset VkPhysicalDeviceDescriptorIndexingProperties, maxDescriptorSetUpdateAfterBindUniformBuffers}
 
 instance Offset "maxDescriptorSetUpdateAfterBindUniformBuffersDynamic" VkPhysicalDeviceDescriptorIndexingProperties where
-  rawOffset = #{offset struct VkPhysicalDeviceDescriptorIndexingProperties, maxDescriptorSetUpdateAfterBindUniformBuffersDynamic}
+  rawOffset = #{offset VkPhysicalDeviceDescriptorIndexingProperties, maxDescriptorSetUpdateAfterBindUniformBuffersDynamic}
 
 instance Offset "maxDescriptorSetUpdateAfterBindStorageBuffers" VkPhysicalDeviceDescriptorIndexingProperties where
-  rawOffset = #{offset struct VkPhysicalDeviceDescriptorIndexingProperties, maxDescriptorSetUpdateAfterBindStorageBuffers}
+  rawOffset = #{offset VkPhysicalDeviceDescriptorIndexingProperties, maxDescriptorSetUpdateAfterBindStorageBuffers}
 
 instance Offset "maxDescriptorSetUpdateAfterBindStorageBuffersDynamic" VkPhysicalDeviceDescriptorIndexingProperties where
-  rawOffset = #{offset struct VkPhysicalDeviceDescriptorIndexingProperties, maxDescriptorSetUpdateAfterBindStorageBuffersDynamic}
+  rawOffset = #{offset VkPhysicalDeviceDescriptorIndexingProperties, maxDescriptorSetUpdateAfterBindStorageBuffersDynamic}
 
 instance Offset "maxDescriptorSetUpdateAfterBindSampledImages" VkPhysicalDeviceDescriptorIndexingProperties where
-  rawOffset = #{offset struct VkPhysicalDeviceDescriptorIndexingProperties, maxDescriptorSetUpdateAfterBindSampledImages}
+  rawOffset = #{offset VkPhysicalDeviceDescriptorIndexingProperties, maxDescriptorSetUpdateAfterBindSampledImages}
 
 instance Offset "maxDescriptorSetUpdateAfterBindStorageImages" VkPhysicalDeviceDescriptorIndexingProperties where
-  rawOffset = #{offset struct VkPhysicalDeviceDescriptorIndexingProperties, maxDescriptorSetUpdateAfterBindStorageImages}
+  rawOffset = #{offset VkPhysicalDeviceDescriptorIndexingProperties, maxDescriptorSetUpdateAfterBindStorageImages}
 
 instance Offset "maxDescriptorSetUpdateAfterBindInputAttachments" VkPhysicalDeviceDescriptorIndexingProperties where
-  rawOffset = #{offset struct VkPhysicalDeviceDescriptorIndexingProperties, maxDescriptorSetUpdateAfterBindInputAttachments}
+  rawOffset = #{offset VkPhysicalDeviceDescriptorIndexingProperties, maxDescriptorSetUpdateAfterBindInputAttachments}
 
 #else
 

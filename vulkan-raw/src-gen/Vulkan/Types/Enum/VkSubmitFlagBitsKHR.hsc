@@ -1,14 +1,14 @@
 {-# LANGUAGE CPP #-}
+{-# LANGUAGE PatternSynonyms #-}
 
 #include <vulkan/vulkan.h>
 
 module Vulkan.Types.Enum.VkSubmitFlagBitsKHR where
 
-import Data.Int
-import Vulkan.Types.Enum.VkSubmitFlagBits
+import Vulkan.Types.Base
 
 
 
 #if VK_KHR_synchronization2
-type VkSubmitFlagBitsKHR = VkSubmitFlagBits
+type VkSubmitFlagBitsKHR = VkFlags
 #endif

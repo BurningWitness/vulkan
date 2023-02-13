@@ -30,8 +30,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkCalibratedTimestampInfoEXT" #-} VkCalibrated
          }
 
 instance Storable VkCalibratedTimestampInfoEXT where
-  sizeOf    _ = #{size      struct VkCalibratedTimestampInfoEXT}
-  alignment _ = #{alignment struct VkCalibratedTimestampInfoEXT}
+  sizeOf    _ = #{size      VkCalibratedTimestampInfoEXT}
+  alignment _ = #{alignment VkCalibratedTimestampInfoEXT}
 
   peek ptr = 
     VkCalibratedTimestampInfoEXT
@@ -45,13 +45,13 @@ instance Storable VkCalibratedTimestampInfoEXT where
     pokeField @"timeDomain" ptr val
 
 instance Offset "sType" VkCalibratedTimestampInfoEXT where
-  rawOffset = #{offset struct VkCalibratedTimestampInfoEXT, sType}
+  rawOffset = #{offset VkCalibratedTimestampInfoEXT, sType}
 
 instance Offset "pNext" VkCalibratedTimestampInfoEXT where
-  rawOffset = #{offset struct VkCalibratedTimestampInfoEXT, pNext}
+  rawOffset = #{offset VkCalibratedTimestampInfoEXT, pNext}
 
 instance Offset "timeDomain" VkCalibratedTimestampInfoEXT where
-  rawOffset = #{offset struct VkCalibratedTimestampInfoEXT, timeDomain}
+  rawOffset = #{offset VkCalibratedTimestampInfoEXT, timeDomain}
 
 #else
 

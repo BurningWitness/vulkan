@@ -34,8 +34,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkPhysicalDeviceAccelerationStructureFeaturesK
          }
 
 instance Storable VkPhysicalDeviceAccelerationStructureFeaturesKHR where
-  sizeOf    _ = #{size      struct VkPhysicalDeviceAccelerationStructureFeaturesKHR}
-  alignment _ = #{alignment struct VkPhysicalDeviceAccelerationStructureFeaturesKHR}
+  sizeOf    _ = #{size      VkPhysicalDeviceAccelerationStructureFeaturesKHR}
+  alignment _ = #{alignment VkPhysicalDeviceAccelerationStructureFeaturesKHR}
 
   peek ptr = 
     VkPhysicalDeviceAccelerationStructureFeaturesKHR
@@ -57,25 +57,25 @@ instance Storable VkPhysicalDeviceAccelerationStructureFeaturesKHR where
     pokeField @"descriptorBindingAccelerationStructureUpdateAfterBind" ptr val
 
 instance Offset "sType" VkPhysicalDeviceAccelerationStructureFeaturesKHR where
-  rawOffset = #{offset struct VkPhysicalDeviceAccelerationStructureFeaturesKHR, sType}
+  rawOffset = #{offset VkPhysicalDeviceAccelerationStructureFeaturesKHR, sType}
 
 instance Offset "pNext" VkPhysicalDeviceAccelerationStructureFeaturesKHR where
-  rawOffset = #{offset struct VkPhysicalDeviceAccelerationStructureFeaturesKHR, pNext}
+  rawOffset = #{offset VkPhysicalDeviceAccelerationStructureFeaturesKHR, pNext}
 
 instance Offset "accelerationStructure" VkPhysicalDeviceAccelerationStructureFeaturesKHR where
-  rawOffset = #{offset struct VkPhysicalDeviceAccelerationStructureFeaturesKHR, accelerationStructure}
+  rawOffset = #{offset VkPhysicalDeviceAccelerationStructureFeaturesKHR, accelerationStructure}
 
 instance Offset "accelerationStructureCaptureReplay" VkPhysicalDeviceAccelerationStructureFeaturesKHR where
-  rawOffset = #{offset struct VkPhysicalDeviceAccelerationStructureFeaturesKHR, accelerationStructureCaptureReplay}
+  rawOffset = #{offset VkPhysicalDeviceAccelerationStructureFeaturesKHR, accelerationStructureCaptureReplay}
 
 instance Offset "accelerationStructureIndirectBuild" VkPhysicalDeviceAccelerationStructureFeaturesKHR where
-  rawOffset = #{offset struct VkPhysicalDeviceAccelerationStructureFeaturesKHR, accelerationStructureIndirectBuild}
+  rawOffset = #{offset VkPhysicalDeviceAccelerationStructureFeaturesKHR, accelerationStructureIndirectBuild}
 
 instance Offset "accelerationStructureHostCommands" VkPhysicalDeviceAccelerationStructureFeaturesKHR where
-  rawOffset = #{offset struct VkPhysicalDeviceAccelerationStructureFeaturesKHR, accelerationStructureHostCommands}
+  rawOffset = #{offset VkPhysicalDeviceAccelerationStructureFeaturesKHR, accelerationStructureHostCommands}
 
 instance Offset "descriptorBindingAccelerationStructureUpdateAfterBind" VkPhysicalDeviceAccelerationStructureFeaturesKHR where
-  rawOffset = #{offset struct VkPhysicalDeviceAccelerationStructureFeaturesKHR, descriptorBindingAccelerationStructureUpdateAfterBind}
+  rawOffset = #{offset VkPhysicalDeviceAccelerationStructureFeaturesKHR, descriptorBindingAccelerationStructureUpdateAfterBind}
 
 #else
 

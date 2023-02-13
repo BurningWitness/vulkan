@@ -33,8 +33,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkWin32SurfaceCreateInfoKHR" #-} VkWin32Surfac
          }
 
 instance Storable VkWin32SurfaceCreateInfoKHR where
-  sizeOf    _ = #{size      struct VkWin32SurfaceCreateInfoKHR}
-  alignment _ = #{alignment struct VkWin32SurfaceCreateInfoKHR}
+  sizeOf    _ = #{size      VkWin32SurfaceCreateInfoKHR}
+  alignment _ = #{alignment VkWin32SurfaceCreateInfoKHR}
 
   peek ptr = 
     VkWin32SurfaceCreateInfoKHR
@@ -52,19 +52,19 @@ instance Storable VkWin32SurfaceCreateInfoKHR where
     pokeField @"hwnd" ptr val
 
 instance Offset "sType" VkWin32SurfaceCreateInfoKHR where
-  rawOffset = #{offset struct VkWin32SurfaceCreateInfoKHR, sType}
+  rawOffset = #{offset VkWin32SurfaceCreateInfoKHR, sType}
 
 instance Offset "pNext" VkWin32SurfaceCreateInfoKHR where
-  rawOffset = #{offset struct VkWin32SurfaceCreateInfoKHR, pNext}
+  rawOffset = #{offset VkWin32SurfaceCreateInfoKHR, pNext}
 
 instance Offset "flags" VkWin32SurfaceCreateInfoKHR where
-  rawOffset = #{offset struct VkWin32SurfaceCreateInfoKHR, flags}
+  rawOffset = #{offset VkWin32SurfaceCreateInfoKHR, flags}
 
 instance Offset "hinstance" VkWin32SurfaceCreateInfoKHR where
-  rawOffset = #{offset struct VkWin32SurfaceCreateInfoKHR, hinstance}
+  rawOffset = #{offset VkWin32SurfaceCreateInfoKHR, hinstance}
 
 instance Offset "hwnd" VkWin32SurfaceCreateInfoKHR where
-  rawOffset = #{offset struct VkWin32SurfaceCreateInfoKHR, hwnd}
+  rawOffset = #{offset VkWin32SurfaceCreateInfoKHR, hwnd}
 
 #else
 

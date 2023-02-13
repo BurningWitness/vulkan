@@ -26,8 +26,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkRenderPassCreationFeedbackInfoEXT" #-} VkRen
          }
 
 instance Storable VkRenderPassCreationFeedbackInfoEXT where
-  sizeOf    _ = #{size      struct VkRenderPassCreationFeedbackInfoEXT}
-  alignment _ = #{alignment struct VkRenderPassCreationFeedbackInfoEXT}
+  sizeOf    _ = #{size      VkRenderPassCreationFeedbackInfoEXT}
+  alignment _ = #{alignment VkRenderPassCreationFeedbackInfoEXT}
 
   peek ptr = 
     VkRenderPassCreationFeedbackInfoEXT
@@ -38,7 +38,7 @@ instance Storable VkRenderPassCreationFeedbackInfoEXT where
     pokeField @"postMergeSubpassCount" ptr val
 
 instance Offset "postMergeSubpassCount" VkRenderPassCreationFeedbackInfoEXT where
-  rawOffset = #{offset struct VkRenderPassCreationFeedbackInfoEXT, postMergeSubpassCount}
+  rawOffset = #{offset VkRenderPassCreationFeedbackInfoEXT, postMergeSubpassCount}
 
 #else
 

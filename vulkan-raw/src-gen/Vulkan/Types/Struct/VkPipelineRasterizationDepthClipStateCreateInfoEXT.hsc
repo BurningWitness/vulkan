@@ -32,8 +32,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkPipelineRasterizationDepthClipStateCreateInf
          }
 
 instance Storable VkPipelineRasterizationDepthClipStateCreateInfoEXT where
-  sizeOf    _ = #{size      struct VkPipelineRasterizationDepthClipStateCreateInfoEXT}
-  alignment _ = #{alignment struct VkPipelineRasterizationDepthClipStateCreateInfoEXT}
+  sizeOf    _ = #{size      VkPipelineRasterizationDepthClipStateCreateInfoEXT}
+  alignment _ = #{alignment VkPipelineRasterizationDepthClipStateCreateInfoEXT}
 
   peek ptr = 
     VkPipelineRasterizationDepthClipStateCreateInfoEXT
@@ -49,16 +49,16 @@ instance Storable VkPipelineRasterizationDepthClipStateCreateInfoEXT where
     pokeField @"depthClipEnable" ptr val
 
 instance Offset "sType" VkPipelineRasterizationDepthClipStateCreateInfoEXT where
-  rawOffset = #{offset struct VkPipelineRasterizationDepthClipStateCreateInfoEXT, sType}
+  rawOffset = #{offset VkPipelineRasterizationDepthClipStateCreateInfoEXT, sType}
 
 instance Offset "pNext" VkPipelineRasterizationDepthClipStateCreateInfoEXT where
-  rawOffset = #{offset struct VkPipelineRasterizationDepthClipStateCreateInfoEXT, pNext}
+  rawOffset = #{offset VkPipelineRasterizationDepthClipStateCreateInfoEXT, pNext}
 
 instance Offset "flags" VkPipelineRasterizationDepthClipStateCreateInfoEXT where
-  rawOffset = #{offset struct VkPipelineRasterizationDepthClipStateCreateInfoEXT, flags}
+  rawOffset = #{offset VkPipelineRasterizationDepthClipStateCreateInfoEXT, flags}
 
 instance Offset "depthClipEnable" VkPipelineRasterizationDepthClipStateCreateInfoEXT where
-  rawOffset = #{offset struct VkPipelineRasterizationDepthClipStateCreateInfoEXT, depthClipEnable}
+  rawOffset = #{offset VkPipelineRasterizationDepthClipStateCreateInfoEXT, depthClipEnable}
 
 #else
 

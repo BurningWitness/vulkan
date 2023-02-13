@@ -1,9 +1,84 @@
+{-# LANGUAGE DataKinds #-}
+{-# LANGUAGE DuplicateRecordFields #-}
+{-# LANGUAGE MultiParamTypeClasses #-}
+#if __GLASGOW_HASKELL__ >= 902
+{-# LANGUAGE NoFieldSelectors #-}
+#endif
+{-# LANGUAGE TypeApplications #-}
+
 #include <vulkan/vulkan.h>
+
+#if VK_EXT_tooling_info
 
 module Vulkan.Types.Struct.VkPhysicalDeviceToolPropertiesEXT where
 
-import Vulkan.Types.Struct.VkPhysicalDeviceToolProperties
+import Data.Int
+import Data.Word
+import Foreign.Ptr
+import Foreign.Storable
+import Foreign.Storable.Offset
+import Vulkan.Types.Enum.VkStructureType
+import Vulkan.Types.Enum.VkToolPurposeFlags
 
 
 
-type VkPhysicalDeviceToolPropertiesEXT = VkPhysicalDeviceToolProperties
+data {-# CTYPE "vulkan/vulkan.h" "VkPhysicalDeviceToolPropertiesEXT" #-} VkPhysicalDeviceToolPropertiesEXT =
+       VkPhysicalDeviceToolPropertiesEXT
+         { sType :: VkStructureType
+         , pNext :: Ptr ()
+         , name :: #{type char}
+         , version :: #{type char}
+         , purposes :: VkToolPurposeFlags
+         , description :: #{type char}
+         , layer :: #{type char}
+         }
+
+instance Storable VkPhysicalDeviceToolPropertiesEXT where
+  sizeOf    _ = #{size      VkPhysicalDeviceToolPropertiesEXT}
+  alignment _ = #{alignment VkPhysicalDeviceToolPropertiesEXT}
+
+  peek ptr = 
+    VkPhysicalDeviceToolPropertiesEXT
+       <$> peek (offset @"sType" ptr)
+       <*> peek (offset @"pNext" ptr)
+       <*> peek (offset @"name" ptr)
+       <*> peek (offset @"version" ptr)
+       <*> peek (offset @"purposes" ptr)
+       <*> peek (offset @"description" ptr)
+       <*> peek (offset @"layer" ptr)
+
+  poke ptr val = do
+    pokeField @"sType" ptr val
+    pokeField @"pNext" ptr val
+    pokeField @"name" ptr val
+    pokeField @"version" ptr val
+    pokeField @"purposes" ptr val
+    pokeField @"description" ptr val
+    pokeField @"layer" ptr val
+
+instance Offset "sType" VkPhysicalDeviceToolPropertiesEXT where
+  rawOffset = #{offset VkPhysicalDeviceToolPropertiesEXT, sType}
+
+instance Offset "pNext" VkPhysicalDeviceToolPropertiesEXT where
+  rawOffset = #{offset VkPhysicalDeviceToolPropertiesEXT, pNext}
+
+instance Offset "name" VkPhysicalDeviceToolPropertiesEXT where
+  rawOffset = #{offset VkPhysicalDeviceToolPropertiesEXT, name}
+
+instance Offset "version" VkPhysicalDeviceToolPropertiesEXT where
+  rawOffset = #{offset VkPhysicalDeviceToolPropertiesEXT, version}
+
+instance Offset "purposes" VkPhysicalDeviceToolPropertiesEXT where
+  rawOffset = #{offset VkPhysicalDeviceToolPropertiesEXT, purposes}
+
+instance Offset "description" VkPhysicalDeviceToolPropertiesEXT where
+  rawOffset = #{offset VkPhysicalDeviceToolPropertiesEXT, description}
+
+instance Offset "layer" VkPhysicalDeviceToolPropertiesEXT where
+  rawOffset = #{offset VkPhysicalDeviceToolPropertiesEXT, layer}
+
+#else
+
+module Vulkan.Types.Struct.VkPhysicalDeviceToolPropertiesEXT where
+
+#endif

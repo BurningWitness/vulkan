@@ -39,8 +39,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkPhysicalDeviceTransformFeedbackPropertiesEXT
          }
 
 instance Storable VkPhysicalDeviceTransformFeedbackPropertiesEXT where
-  sizeOf    _ = #{size      struct VkPhysicalDeviceTransformFeedbackPropertiesEXT}
-  alignment _ = #{alignment struct VkPhysicalDeviceTransformFeedbackPropertiesEXT}
+  sizeOf    _ = #{size      VkPhysicalDeviceTransformFeedbackPropertiesEXT}
+  alignment _ = #{alignment VkPhysicalDeviceTransformFeedbackPropertiesEXT}
 
   peek ptr = 
     VkPhysicalDeviceTransformFeedbackPropertiesEXT
@@ -72,40 +72,40 @@ instance Storable VkPhysicalDeviceTransformFeedbackPropertiesEXT where
     pokeField @"transformFeedbackDraw" ptr val
 
 instance Offset "sType" VkPhysicalDeviceTransformFeedbackPropertiesEXT where
-  rawOffset = #{offset struct VkPhysicalDeviceTransformFeedbackPropertiesEXT, sType}
+  rawOffset = #{offset VkPhysicalDeviceTransformFeedbackPropertiesEXT, sType}
 
 instance Offset "pNext" VkPhysicalDeviceTransformFeedbackPropertiesEXT where
-  rawOffset = #{offset struct VkPhysicalDeviceTransformFeedbackPropertiesEXT, pNext}
+  rawOffset = #{offset VkPhysicalDeviceTransformFeedbackPropertiesEXT, pNext}
 
 instance Offset "maxTransformFeedbackStreams" VkPhysicalDeviceTransformFeedbackPropertiesEXT where
-  rawOffset = #{offset struct VkPhysicalDeviceTransformFeedbackPropertiesEXT, maxTransformFeedbackStreams}
+  rawOffset = #{offset VkPhysicalDeviceTransformFeedbackPropertiesEXT, maxTransformFeedbackStreams}
 
 instance Offset "maxTransformFeedbackBuffers" VkPhysicalDeviceTransformFeedbackPropertiesEXT where
-  rawOffset = #{offset struct VkPhysicalDeviceTransformFeedbackPropertiesEXT, maxTransformFeedbackBuffers}
+  rawOffset = #{offset VkPhysicalDeviceTransformFeedbackPropertiesEXT, maxTransformFeedbackBuffers}
 
 instance Offset "maxTransformFeedbackBufferSize" VkPhysicalDeviceTransformFeedbackPropertiesEXT where
-  rawOffset = #{offset struct VkPhysicalDeviceTransformFeedbackPropertiesEXT, maxTransformFeedbackBufferSize}
+  rawOffset = #{offset VkPhysicalDeviceTransformFeedbackPropertiesEXT, maxTransformFeedbackBufferSize}
 
 instance Offset "maxTransformFeedbackStreamDataSize" VkPhysicalDeviceTransformFeedbackPropertiesEXT where
-  rawOffset = #{offset struct VkPhysicalDeviceTransformFeedbackPropertiesEXT, maxTransformFeedbackStreamDataSize}
+  rawOffset = #{offset VkPhysicalDeviceTransformFeedbackPropertiesEXT, maxTransformFeedbackStreamDataSize}
 
 instance Offset "maxTransformFeedbackBufferDataSize" VkPhysicalDeviceTransformFeedbackPropertiesEXT where
-  rawOffset = #{offset struct VkPhysicalDeviceTransformFeedbackPropertiesEXT, maxTransformFeedbackBufferDataSize}
+  rawOffset = #{offset VkPhysicalDeviceTransformFeedbackPropertiesEXT, maxTransformFeedbackBufferDataSize}
 
 instance Offset "maxTransformFeedbackBufferDataStride" VkPhysicalDeviceTransformFeedbackPropertiesEXT where
-  rawOffset = #{offset struct VkPhysicalDeviceTransformFeedbackPropertiesEXT, maxTransformFeedbackBufferDataStride}
+  rawOffset = #{offset VkPhysicalDeviceTransformFeedbackPropertiesEXT, maxTransformFeedbackBufferDataStride}
 
 instance Offset "transformFeedbackQueries" VkPhysicalDeviceTransformFeedbackPropertiesEXT where
-  rawOffset = #{offset struct VkPhysicalDeviceTransformFeedbackPropertiesEXT, transformFeedbackQueries}
+  rawOffset = #{offset VkPhysicalDeviceTransformFeedbackPropertiesEXT, transformFeedbackQueries}
 
 instance Offset "transformFeedbackStreamsLinesTriangles" VkPhysicalDeviceTransformFeedbackPropertiesEXT where
-  rawOffset = #{offset struct VkPhysicalDeviceTransformFeedbackPropertiesEXT, transformFeedbackStreamsLinesTriangles}
+  rawOffset = #{offset VkPhysicalDeviceTransformFeedbackPropertiesEXT, transformFeedbackStreamsLinesTriangles}
 
 instance Offset "transformFeedbackRasterizationStreamSelect" VkPhysicalDeviceTransformFeedbackPropertiesEXT where
-  rawOffset = #{offset struct VkPhysicalDeviceTransformFeedbackPropertiesEXT, transformFeedbackRasterizationStreamSelect}
+  rawOffset = #{offset VkPhysicalDeviceTransformFeedbackPropertiesEXT, transformFeedbackRasterizationStreamSelect}
 
 instance Offset "transformFeedbackDraw" VkPhysicalDeviceTransformFeedbackPropertiesEXT where
-  rawOffset = #{offset struct VkPhysicalDeviceTransformFeedbackPropertiesEXT, transformFeedbackDraw}
+  rawOffset = #{offset VkPhysicalDeviceTransformFeedbackPropertiesEXT, transformFeedbackDraw}
 
 #else
 

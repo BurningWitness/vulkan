@@ -29,8 +29,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkDrmFormatModifierProperties2EXT" #-} VkDrmFo
          }
 
 instance Storable VkDrmFormatModifierProperties2EXT where
-  sizeOf    _ = #{size      struct VkDrmFormatModifierProperties2EXT}
-  alignment _ = #{alignment struct VkDrmFormatModifierProperties2EXT}
+  sizeOf    _ = #{size      VkDrmFormatModifierProperties2EXT}
+  alignment _ = #{alignment VkDrmFormatModifierProperties2EXT}
 
   peek ptr = 
     VkDrmFormatModifierProperties2EXT
@@ -44,13 +44,13 @@ instance Storable VkDrmFormatModifierProperties2EXT where
     pokeField @"drmFormatModifierTilingFeatures" ptr val
 
 instance Offset "drmFormatModifier" VkDrmFormatModifierProperties2EXT where
-  rawOffset = #{offset struct VkDrmFormatModifierProperties2EXT, drmFormatModifier}
+  rawOffset = #{offset VkDrmFormatModifierProperties2EXT, drmFormatModifier}
 
 instance Offset "drmFormatModifierPlaneCount" VkDrmFormatModifierProperties2EXT where
-  rawOffset = #{offset struct VkDrmFormatModifierProperties2EXT, drmFormatModifierPlaneCount}
+  rawOffset = #{offset VkDrmFormatModifierProperties2EXT, drmFormatModifierPlaneCount}
 
 instance Offset "drmFormatModifierTilingFeatures" VkDrmFormatModifierProperties2EXT where
-  rawOffset = #{offset struct VkDrmFormatModifierProperties2EXT, drmFormatModifierTilingFeatures}
+  rawOffset = #{offset VkDrmFormatModifierProperties2EXT, drmFormatModifierTilingFeatures}
 
 #else
 

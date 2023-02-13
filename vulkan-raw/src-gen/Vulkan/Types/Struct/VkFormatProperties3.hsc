@@ -32,8 +32,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkFormatProperties3" #-} VkFormatProperties3 =
          }
 
 instance Storable VkFormatProperties3 where
-  sizeOf    _ = #{size      struct VkFormatProperties3}
-  alignment _ = #{alignment struct VkFormatProperties3}
+  sizeOf    _ = #{size      VkFormatProperties3}
+  alignment _ = #{alignment VkFormatProperties3}
 
   peek ptr = 
     VkFormatProperties3
@@ -51,19 +51,19 @@ instance Storable VkFormatProperties3 where
     pokeField @"bufferFeatures" ptr val
 
 instance Offset "sType" VkFormatProperties3 where
-  rawOffset = #{offset struct VkFormatProperties3, sType}
+  rawOffset = #{offset VkFormatProperties3, sType}
 
 instance Offset "pNext" VkFormatProperties3 where
-  rawOffset = #{offset struct VkFormatProperties3, pNext}
+  rawOffset = #{offset VkFormatProperties3, pNext}
 
 instance Offset "linearTilingFeatures" VkFormatProperties3 where
-  rawOffset = #{offset struct VkFormatProperties3, linearTilingFeatures}
+  rawOffset = #{offset VkFormatProperties3, linearTilingFeatures}
 
 instance Offset "optimalTilingFeatures" VkFormatProperties3 where
-  rawOffset = #{offset struct VkFormatProperties3, optimalTilingFeatures}
+  rawOffset = #{offset VkFormatProperties3, optimalTilingFeatures}
 
 instance Offset "bufferFeatures" VkFormatProperties3 where
-  rawOffset = #{offset struct VkFormatProperties3, bufferFeatures}
+  rawOffset = #{offset VkFormatProperties3, bufferFeatures}
 
 #else
 

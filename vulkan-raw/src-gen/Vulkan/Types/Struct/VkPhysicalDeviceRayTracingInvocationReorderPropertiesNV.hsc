@@ -30,8 +30,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkPhysicalDeviceRayTracingInvocationReorderPro
          }
 
 instance Storable VkPhysicalDeviceRayTracingInvocationReorderPropertiesNV where
-  sizeOf    _ = #{size      struct VkPhysicalDeviceRayTracingInvocationReorderPropertiesNV}
-  alignment _ = #{alignment struct VkPhysicalDeviceRayTracingInvocationReorderPropertiesNV}
+  sizeOf    _ = #{size      VkPhysicalDeviceRayTracingInvocationReorderPropertiesNV}
+  alignment _ = #{alignment VkPhysicalDeviceRayTracingInvocationReorderPropertiesNV}
 
   peek ptr = 
     VkPhysicalDeviceRayTracingInvocationReorderPropertiesNV
@@ -45,13 +45,13 @@ instance Storable VkPhysicalDeviceRayTracingInvocationReorderPropertiesNV where
     pokeField @"rayTracingInvocationReorderReorderingHint" ptr val
 
 instance Offset "sType" VkPhysicalDeviceRayTracingInvocationReorderPropertiesNV where
-  rawOffset = #{offset struct VkPhysicalDeviceRayTracingInvocationReorderPropertiesNV, sType}
+  rawOffset = #{offset VkPhysicalDeviceRayTracingInvocationReorderPropertiesNV, sType}
 
 instance Offset "pNext" VkPhysicalDeviceRayTracingInvocationReorderPropertiesNV where
-  rawOffset = #{offset struct VkPhysicalDeviceRayTracingInvocationReorderPropertiesNV, pNext}
+  rawOffset = #{offset VkPhysicalDeviceRayTracingInvocationReorderPropertiesNV, pNext}
 
 instance Offset "rayTracingInvocationReorderReorderingHint" VkPhysicalDeviceRayTracingInvocationReorderPropertiesNV where
-  rawOffset = #{offset struct VkPhysicalDeviceRayTracingInvocationReorderPropertiesNV, rayTracingInvocationReorderReorderingHint}
+  rawOffset = #{offset VkPhysicalDeviceRayTracingInvocationReorderPropertiesNV, rayTracingInvocationReorderReorderingHint}
 
 #else
 

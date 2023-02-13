@@ -21,5 +21,5 @@ pattern VK_SURFACE_COUNTER_VBLANK_BIT_EXT = 1
 #if VK_EXT_display_surface_counter
 -- | Backwards-compatible alias containing a typo
 pattern VK_SURFACE_COUNTER_VBLANK_EXT :: (Eq a, Num a) => a
-pattern VK_SURFACE_COUNTER_VBLANK_EXT = VK_SURFACE_COUNTER_VBLANK_BIT_EXT
+pattern VK_SURFACE_COUNTER_VBLANK_EXT = 1
 #endif

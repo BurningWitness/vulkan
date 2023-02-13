@@ -29,8 +29,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkQueueFamilyProperties" #-} VkQueueFamilyProp
          }
 
 instance Storable VkQueueFamilyProperties where
-  sizeOf    _ = #{size      struct VkQueueFamilyProperties}
-  alignment _ = #{alignment struct VkQueueFamilyProperties}
+  sizeOf    _ = #{size      VkQueueFamilyProperties}
+  alignment _ = #{alignment VkQueueFamilyProperties}
 
   peek ptr = 
     VkQueueFamilyProperties
@@ -46,13 +46,13 @@ instance Storable VkQueueFamilyProperties where
     pokeField @"minImageTransferGranularity" ptr val
 
 instance Offset "queueFlags" VkQueueFamilyProperties where
-  rawOffset = #{offset struct VkQueueFamilyProperties, queueFlags}
+  rawOffset = #{offset VkQueueFamilyProperties, queueFlags}
 
 instance Offset "queueCount" VkQueueFamilyProperties where
-  rawOffset = #{offset struct VkQueueFamilyProperties, queueCount}
+  rawOffset = #{offset VkQueueFamilyProperties, queueCount}
 
 instance Offset "timestampValidBits" VkQueueFamilyProperties where
-  rawOffset = #{offset struct VkQueueFamilyProperties, timestampValidBits}
+  rawOffset = #{offset VkQueueFamilyProperties, timestampValidBits}
 
 instance Offset "minImageTransferGranularity" VkQueueFamilyProperties where
-  rawOffset = #{offset struct VkQueueFamilyProperties, minImageTransferGranularity}
+  rawOffset = #{offset VkQueueFamilyProperties, minImageTransferGranularity}

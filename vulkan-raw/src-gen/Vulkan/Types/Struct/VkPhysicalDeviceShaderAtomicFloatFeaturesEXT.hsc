@@ -41,8 +41,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkPhysicalDeviceShaderAtomicFloatFeaturesEXT" 
          }
 
 instance Storable VkPhysicalDeviceShaderAtomicFloatFeaturesEXT where
-  sizeOf    _ = #{size      struct VkPhysicalDeviceShaderAtomicFloatFeaturesEXT}
-  alignment _ = #{alignment struct VkPhysicalDeviceShaderAtomicFloatFeaturesEXT}
+  sizeOf    _ = #{size      VkPhysicalDeviceShaderAtomicFloatFeaturesEXT}
+  alignment _ = #{alignment VkPhysicalDeviceShaderAtomicFloatFeaturesEXT}
 
   peek ptr = 
     VkPhysicalDeviceShaderAtomicFloatFeaturesEXT
@@ -78,46 +78,46 @@ instance Storable VkPhysicalDeviceShaderAtomicFloatFeaturesEXT where
     pokeField @"sparseImageFloat32AtomicAdd" ptr val
 
 instance Offset "sType" VkPhysicalDeviceShaderAtomicFloatFeaturesEXT where
-  rawOffset = #{offset struct VkPhysicalDeviceShaderAtomicFloatFeaturesEXT, sType}
+  rawOffset = #{offset VkPhysicalDeviceShaderAtomicFloatFeaturesEXT, sType}
 
 instance Offset "pNext" VkPhysicalDeviceShaderAtomicFloatFeaturesEXT where
-  rawOffset = #{offset struct VkPhysicalDeviceShaderAtomicFloatFeaturesEXT, pNext}
+  rawOffset = #{offset VkPhysicalDeviceShaderAtomicFloatFeaturesEXT, pNext}
 
 instance Offset "shaderBufferFloat32Atomics" VkPhysicalDeviceShaderAtomicFloatFeaturesEXT where
-  rawOffset = #{offset struct VkPhysicalDeviceShaderAtomicFloatFeaturesEXT, shaderBufferFloat32Atomics}
+  rawOffset = #{offset VkPhysicalDeviceShaderAtomicFloatFeaturesEXT, shaderBufferFloat32Atomics}
 
 instance Offset "shaderBufferFloat32AtomicAdd" VkPhysicalDeviceShaderAtomicFloatFeaturesEXT where
-  rawOffset = #{offset struct VkPhysicalDeviceShaderAtomicFloatFeaturesEXT, shaderBufferFloat32AtomicAdd}
+  rawOffset = #{offset VkPhysicalDeviceShaderAtomicFloatFeaturesEXT, shaderBufferFloat32AtomicAdd}
 
 instance Offset "shaderBufferFloat64Atomics" VkPhysicalDeviceShaderAtomicFloatFeaturesEXT where
-  rawOffset = #{offset struct VkPhysicalDeviceShaderAtomicFloatFeaturesEXT, shaderBufferFloat64Atomics}
+  rawOffset = #{offset VkPhysicalDeviceShaderAtomicFloatFeaturesEXT, shaderBufferFloat64Atomics}
 
 instance Offset "shaderBufferFloat64AtomicAdd" VkPhysicalDeviceShaderAtomicFloatFeaturesEXT where
-  rawOffset = #{offset struct VkPhysicalDeviceShaderAtomicFloatFeaturesEXT, shaderBufferFloat64AtomicAdd}
+  rawOffset = #{offset VkPhysicalDeviceShaderAtomicFloatFeaturesEXT, shaderBufferFloat64AtomicAdd}
 
 instance Offset "shaderSharedFloat32Atomics" VkPhysicalDeviceShaderAtomicFloatFeaturesEXT where
-  rawOffset = #{offset struct VkPhysicalDeviceShaderAtomicFloatFeaturesEXT, shaderSharedFloat32Atomics}
+  rawOffset = #{offset VkPhysicalDeviceShaderAtomicFloatFeaturesEXT, shaderSharedFloat32Atomics}
 
 instance Offset "shaderSharedFloat32AtomicAdd" VkPhysicalDeviceShaderAtomicFloatFeaturesEXT where
-  rawOffset = #{offset struct VkPhysicalDeviceShaderAtomicFloatFeaturesEXT, shaderSharedFloat32AtomicAdd}
+  rawOffset = #{offset VkPhysicalDeviceShaderAtomicFloatFeaturesEXT, shaderSharedFloat32AtomicAdd}
 
 instance Offset "shaderSharedFloat64Atomics" VkPhysicalDeviceShaderAtomicFloatFeaturesEXT where
-  rawOffset = #{offset struct VkPhysicalDeviceShaderAtomicFloatFeaturesEXT, shaderSharedFloat64Atomics}
+  rawOffset = #{offset VkPhysicalDeviceShaderAtomicFloatFeaturesEXT, shaderSharedFloat64Atomics}
 
 instance Offset "shaderSharedFloat64AtomicAdd" VkPhysicalDeviceShaderAtomicFloatFeaturesEXT where
-  rawOffset = #{offset struct VkPhysicalDeviceShaderAtomicFloatFeaturesEXT, shaderSharedFloat64AtomicAdd}
+  rawOffset = #{offset VkPhysicalDeviceShaderAtomicFloatFeaturesEXT, shaderSharedFloat64AtomicAdd}
 
 instance Offset "shaderImageFloat32Atomics" VkPhysicalDeviceShaderAtomicFloatFeaturesEXT where
-  rawOffset = #{offset struct VkPhysicalDeviceShaderAtomicFloatFeaturesEXT, shaderImageFloat32Atomics}
+  rawOffset = #{offset VkPhysicalDeviceShaderAtomicFloatFeaturesEXT, shaderImageFloat32Atomics}
 
 instance Offset "shaderImageFloat32AtomicAdd" VkPhysicalDeviceShaderAtomicFloatFeaturesEXT where
-  rawOffset = #{offset struct VkPhysicalDeviceShaderAtomicFloatFeaturesEXT, shaderImageFloat32AtomicAdd}
+  rawOffset = #{offset VkPhysicalDeviceShaderAtomicFloatFeaturesEXT, shaderImageFloat32AtomicAdd}
 
 instance Offset "sparseImageFloat32Atomics" VkPhysicalDeviceShaderAtomicFloatFeaturesEXT where
-  rawOffset = #{offset struct VkPhysicalDeviceShaderAtomicFloatFeaturesEXT, sparseImageFloat32Atomics}
+  rawOffset = #{offset VkPhysicalDeviceShaderAtomicFloatFeaturesEXT, sparseImageFloat32Atomics}
 
 instance Offset "sparseImageFloat32AtomicAdd" VkPhysicalDeviceShaderAtomicFloatFeaturesEXT where
-  rawOffset = #{offset struct VkPhysicalDeviceShaderAtomicFloatFeaturesEXT, sparseImageFloat32AtomicAdd}
+  rawOffset = #{offset VkPhysicalDeviceShaderAtomicFloatFeaturesEXT, sparseImageFloat32AtomicAdd}
 
 #else
 

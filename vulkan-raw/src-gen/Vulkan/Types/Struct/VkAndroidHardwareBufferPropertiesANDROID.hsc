@@ -31,8 +31,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkAndroidHardwareBufferPropertiesANDROID" #-} 
          }
 
 instance Storable VkAndroidHardwareBufferPropertiesANDROID where
-  sizeOf    _ = #{size      struct VkAndroidHardwareBufferPropertiesANDROID}
-  alignment _ = #{alignment struct VkAndroidHardwareBufferPropertiesANDROID}
+  sizeOf    _ = #{size      VkAndroidHardwareBufferPropertiesANDROID}
+  alignment _ = #{alignment VkAndroidHardwareBufferPropertiesANDROID}
 
   peek ptr = 
     VkAndroidHardwareBufferPropertiesANDROID
@@ -48,16 +48,16 @@ instance Storable VkAndroidHardwareBufferPropertiesANDROID where
     pokeField @"memoryTypeBits" ptr val
 
 instance Offset "sType" VkAndroidHardwareBufferPropertiesANDROID where
-  rawOffset = #{offset struct VkAndroidHardwareBufferPropertiesANDROID, sType}
+  rawOffset = #{offset VkAndroidHardwareBufferPropertiesANDROID, sType}
 
 instance Offset "pNext" VkAndroidHardwareBufferPropertiesANDROID where
-  rawOffset = #{offset struct VkAndroidHardwareBufferPropertiesANDROID, pNext}
+  rawOffset = #{offset VkAndroidHardwareBufferPropertiesANDROID, pNext}
 
 instance Offset "allocationSize" VkAndroidHardwareBufferPropertiesANDROID where
-  rawOffset = #{offset struct VkAndroidHardwareBufferPropertiesANDROID, allocationSize}
+  rawOffset = #{offset VkAndroidHardwareBufferPropertiesANDROID, allocationSize}
 
 instance Offset "memoryTypeBits" VkAndroidHardwareBufferPropertiesANDROID where
-  rawOffset = #{offset struct VkAndroidHardwareBufferPropertiesANDROID, memoryTypeBits}
+  rawOffset = #{offset VkAndroidHardwareBufferPropertiesANDROID, memoryTypeBits}
 
 #else
 

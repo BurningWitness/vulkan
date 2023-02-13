@@ -31,8 +31,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkPhysicalDeviceBorderColorSwizzleFeaturesEXT"
          }
 
 instance Storable VkPhysicalDeviceBorderColorSwizzleFeaturesEXT where
-  sizeOf    _ = #{size      struct VkPhysicalDeviceBorderColorSwizzleFeaturesEXT}
-  alignment _ = #{alignment struct VkPhysicalDeviceBorderColorSwizzleFeaturesEXT}
+  sizeOf    _ = #{size      VkPhysicalDeviceBorderColorSwizzleFeaturesEXT}
+  alignment _ = #{alignment VkPhysicalDeviceBorderColorSwizzleFeaturesEXT}
 
   peek ptr = 
     VkPhysicalDeviceBorderColorSwizzleFeaturesEXT
@@ -48,16 +48,16 @@ instance Storable VkPhysicalDeviceBorderColorSwizzleFeaturesEXT where
     pokeField @"borderColorSwizzleFromImage" ptr val
 
 instance Offset "sType" VkPhysicalDeviceBorderColorSwizzleFeaturesEXT where
-  rawOffset = #{offset struct VkPhysicalDeviceBorderColorSwizzleFeaturesEXT, sType}
+  rawOffset = #{offset VkPhysicalDeviceBorderColorSwizzleFeaturesEXT, sType}
 
 instance Offset "pNext" VkPhysicalDeviceBorderColorSwizzleFeaturesEXT where
-  rawOffset = #{offset struct VkPhysicalDeviceBorderColorSwizzleFeaturesEXT, pNext}
+  rawOffset = #{offset VkPhysicalDeviceBorderColorSwizzleFeaturesEXT, pNext}
 
 instance Offset "borderColorSwizzle" VkPhysicalDeviceBorderColorSwizzleFeaturesEXT where
-  rawOffset = #{offset struct VkPhysicalDeviceBorderColorSwizzleFeaturesEXT, borderColorSwizzle}
+  rawOffset = #{offset VkPhysicalDeviceBorderColorSwizzleFeaturesEXT, borderColorSwizzle}
 
 instance Offset "borderColorSwizzleFromImage" VkPhysicalDeviceBorderColorSwizzleFeaturesEXT where
-  rawOffset = #{offset struct VkPhysicalDeviceBorderColorSwizzleFeaturesEXT, borderColorSwizzleFromImage}
+  rawOffset = #{offset VkPhysicalDeviceBorderColorSwizzleFeaturesEXT, borderColorSwizzleFromImage}
 
 #else
 

@@ -34,8 +34,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkBindVideoSessionMemoryInfoKHR" #-} VkBindVid
          }
 
 instance Storable VkBindVideoSessionMemoryInfoKHR where
-  sizeOf    _ = #{size      struct VkBindVideoSessionMemoryInfoKHR}
-  alignment _ = #{alignment struct VkBindVideoSessionMemoryInfoKHR}
+  sizeOf    _ = #{size      VkBindVideoSessionMemoryInfoKHR}
+  alignment _ = #{alignment VkBindVideoSessionMemoryInfoKHR}
 
   peek ptr = 
     VkBindVideoSessionMemoryInfoKHR
@@ -55,22 +55,22 @@ instance Storable VkBindVideoSessionMemoryInfoKHR where
     pokeField @"memorySize" ptr val
 
 instance Offset "sType" VkBindVideoSessionMemoryInfoKHR where
-  rawOffset = #{offset struct VkBindVideoSessionMemoryInfoKHR, sType}
+  rawOffset = #{offset VkBindVideoSessionMemoryInfoKHR, sType}
 
 instance Offset "pNext" VkBindVideoSessionMemoryInfoKHR where
-  rawOffset = #{offset struct VkBindVideoSessionMemoryInfoKHR, pNext}
+  rawOffset = #{offset VkBindVideoSessionMemoryInfoKHR, pNext}
 
 instance Offset "memoryBindIndex" VkBindVideoSessionMemoryInfoKHR where
-  rawOffset = #{offset struct VkBindVideoSessionMemoryInfoKHR, memoryBindIndex}
+  rawOffset = #{offset VkBindVideoSessionMemoryInfoKHR, memoryBindIndex}
 
 instance Offset "memory" VkBindVideoSessionMemoryInfoKHR where
-  rawOffset = #{offset struct VkBindVideoSessionMemoryInfoKHR, memory}
+  rawOffset = #{offset VkBindVideoSessionMemoryInfoKHR, memory}
 
 instance Offset "memoryOffset" VkBindVideoSessionMemoryInfoKHR where
-  rawOffset = #{offset struct VkBindVideoSessionMemoryInfoKHR, memoryOffset}
+  rawOffset = #{offset VkBindVideoSessionMemoryInfoKHR, memoryOffset}
 
 instance Offset "memorySize" VkBindVideoSessionMemoryInfoKHR where
-  rawOffset = #{offset struct VkBindVideoSessionMemoryInfoKHR, memorySize}
+  rawOffset = #{offset VkBindVideoSessionMemoryInfoKHR, memorySize}
 
 #else
 

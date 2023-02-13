@@ -29,8 +29,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkOpaqueCaptureDescriptorDataCreateInfoEXT" #-
          }
 
 instance Storable VkOpaqueCaptureDescriptorDataCreateInfoEXT where
-  sizeOf    _ = #{size      struct VkOpaqueCaptureDescriptorDataCreateInfoEXT}
-  alignment _ = #{alignment struct VkOpaqueCaptureDescriptorDataCreateInfoEXT}
+  sizeOf    _ = #{size      VkOpaqueCaptureDescriptorDataCreateInfoEXT}
+  alignment _ = #{alignment VkOpaqueCaptureDescriptorDataCreateInfoEXT}
 
   peek ptr = 
     VkOpaqueCaptureDescriptorDataCreateInfoEXT
@@ -44,13 +44,13 @@ instance Storable VkOpaqueCaptureDescriptorDataCreateInfoEXT where
     pokeField @"opaqueCaptureDescriptorData" ptr val
 
 instance Offset "sType" VkOpaqueCaptureDescriptorDataCreateInfoEXT where
-  rawOffset = #{offset struct VkOpaqueCaptureDescriptorDataCreateInfoEXT, sType}
+  rawOffset = #{offset VkOpaqueCaptureDescriptorDataCreateInfoEXT, sType}
 
 instance Offset "pNext" VkOpaqueCaptureDescriptorDataCreateInfoEXT where
-  rawOffset = #{offset struct VkOpaqueCaptureDescriptorDataCreateInfoEXT, pNext}
+  rawOffset = #{offset VkOpaqueCaptureDescriptorDataCreateInfoEXT, pNext}
 
 instance Offset "opaqueCaptureDescriptorData" VkOpaqueCaptureDescriptorDataCreateInfoEXT where
-  rawOffset = #{offset struct VkOpaqueCaptureDescriptorDataCreateInfoEXT, opaqueCaptureDescriptorData}
+  rawOffset = #{offset VkOpaqueCaptureDescriptorDataCreateInfoEXT, opaqueCaptureDescriptorData}
 
 #else
 

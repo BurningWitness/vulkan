@@ -41,8 +41,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkCuLaunchInfoNVX" #-} VkCuLaunchInfoNVX =
          }
 
 instance Storable VkCuLaunchInfoNVX where
-  sizeOf    _ = #{size      struct VkCuLaunchInfoNVX}
-  alignment _ = #{alignment struct VkCuLaunchInfoNVX}
+  sizeOf    _ = #{size      VkCuLaunchInfoNVX}
+  alignment _ = #{alignment VkCuLaunchInfoNVX}
 
   peek ptr = 
     VkCuLaunchInfoNVX
@@ -78,46 +78,46 @@ instance Storable VkCuLaunchInfoNVX where
     pokeField @"pExtras" ptr val
 
 instance Offset "sType" VkCuLaunchInfoNVX where
-  rawOffset = #{offset struct VkCuLaunchInfoNVX, sType}
+  rawOffset = #{offset VkCuLaunchInfoNVX, sType}
 
 instance Offset "pNext" VkCuLaunchInfoNVX where
-  rawOffset = #{offset struct VkCuLaunchInfoNVX, pNext}
+  rawOffset = #{offset VkCuLaunchInfoNVX, pNext}
 
 instance Offset "function" VkCuLaunchInfoNVX where
-  rawOffset = #{offset struct VkCuLaunchInfoNVX, function}
+  rawOffset = #{offset VkCuLaunchInfoNVX, function}
 
 instance Offset "gridDimX" VkCuLaunchInfoNVX where
-  rawOffset = #{offset struct VkCuLaunchInfoNVX, gridDimX}
+  rawOffset = #{offset VkCuLaunchInfoNVX, gridDimX}
 
 instance Offset "gridDimY" VkCuLaunchInfoNVX where
-  rawOffset = #{offset struct VkCuLaunchInfoNVX, gridDimY}
+  rawOffset = #{offset VkCuLaunchInfoNVX, gridDimY}
 
 instance Offset "gridDimZ" VkCuLaunchInfoNVX where
-  rawOffset = #{offset struct VkCuLaunchInfoNVX, gridDimZ}
+  rawOffset = #{offset VkCuLaunchInfoNVX, gridDimZ}
 
 instance Offset "blockDimX" VkCuLaunchInfoNVX where
-  rawOffset = #{offset struct VkCuLaunchInfoNVX, blockDimX}
+  rawOffset = #{offset VkCuLaunchInfoNVX, blockDimX}
 
 instance Offset "blockDimY" VkCuLaunchInfoNVX where
-  rawOffset = #{offset struct VkCuLaunchInfoNVX, blockDimY}
+  rawOffset = #{offset VkCuLaunchInfoNVX, blockDimY}
 
 instance Offset "blockDimZ" VkCuLaunchInfoNVX where
-  rawOffset = #{offset struct VkCuLaunchInfoNVX, blockDimZ}
+  rawOffset = #{offset VkCuLaunchInfoNVX, blockDimZ}
 
 instance Offset "sharedMemBytes" VkCuLaunchInfoNVX where
-  rawOffset = #{offset struct VkCuLaunchInfoNVX, sharedMemBytes}
+  rawOffset = #{offset VkCuLaunchInfoNVX, sharedMemBytes}
 
 instance Offset "paramCount" VkCuLaunchInfoNVX where
-  rawOffset = #{offset struct VkCuLaunchInfoNVX, paramCount}
+  rawOffset = #{offset VkCuLaunchInfoNVX, paramCount}
 
 instance Offset "pParams" VkCuLaunchInfoNVX where
-  rawOffset = #{offset struct VkCuLaunchInfoNVX, pParams}
+  rawOffset = #{offset VkCuLaunchInfoNVX, pParams}
 
 instance Offset "extraCount" VkCuLaunchInfoNVX where
-  rawOffset = #{offset struct VkCuLaunchInfoNVX, extraCount}
+  rawOffset = #{offset VkCuLaunchInfoNVX, extraCount}
 
 instance Offset "pExtras" VkCuLaunchInfoNVX where
-  rawOffset = #{offset struct VkCuLaunchInfoNVX, pExtras}
+  rawOffset = #{offset VkCuLaunchInfoNVX, pExtras}
 
 #else
 

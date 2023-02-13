@@ -48,8 +48,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkPhysicalDeviceFragmentShadingRatePropertiesK
          }
 
 instance Storable VkPhysicalDeviceFragmentShadingRatePropertiesKHR where
-  sizeOf    _ = #{size      struct VkPhysicalDeviceFragmentShadingRatePropertiesKHR}
-  alignment _ = #{alignment struct VkPhysicalDeviceFragmentShadingRatePropertiesKHR}
+  sizeOf    _ = #{size      VkPhysicalDeviceFragmentShadingRatePropertiesKHR}
+  alignment _ = #{alignment VkPhysicalDeviceFragmentShadingRatePropertiesKHR}
 
   peek ptr = 
     VkPhysicalDeviceFragmentShadingRatePropertiesKHR
@@ -95,61 +95,61 @@ instance Storable VkPhysicalDeviceFragmentShadingRatePropertiesKHR where
     pokeField @"fragmentShadingRateStrictMultiplyCombiner" ptr val
 
 instance Offset "sType" VkPhysicalDeviceFragmentShadingRatePropertiesKHR where
-  rawOffset = #{offset struct VkPhysicalDeviceFragmentShadingRatePropertiesKHR, sType}
+  rawOffset = #{offset VkPhysicalDeviceFragmentShadingRatePropertiesKHR, sType}
 
 instance Offset "pNext" VkPhysicalDeviceFragmentShadingRatePropertiesKHR where
-  rawOffset = #{offset struct VkPhysicalDeviceFragmentShadingRatePropertiesKHR, pNext}
+  rawOffset = #{offset VkPhysicalDeviceFragmentShadingRatePropertiesKHR, pNext}
 
 instance Offset "minFragmentShadingRateAttachmentTexelSize" VkPhysicalDeviceFragmentShadingRatePropertiesKHR where
-  rawOffset = #{offset struct VkPhysicalDeviceFragmentShadingRatePropertiesKHR, minFragmentShadingRateAttachmentTexelSize}
+  rawOffset = #{offset VkPhysicalDeviceFragmentShadingRatePropertiesKHR, minFragmentShadingRateAttachmentTexelSize}
 
 instance Offset "maxFragmentShadingRateAttachmentTexelSize" VkPhysicalDeviceFragmentShadingRatePropertiesKHR where
-  rawOffset = #{offset struct VkPhysicalDeviceFragmentShadingRatePropertiesKHR, maxFragmentShadingRateAttachmentTexelSize}
+  rawOffset = #{offset VkPhysicalDeviceFragmentShadingRatePropertiesKHR, maxFragmentShadingRateAttachmentTexelSize}
 
 instance Offset "maxFragmentShadingRateAttachmentTexelSizeAspectRatio" VkPhysicalDeviceFragmentShadingRatePropertiesKHR where
-  rawOffset = #{offset struct VkPhysicalDeviceFragmentShadingRatePropertiesKHR, maxFragmentShadingRateAttachmentTexelSizeAspectRatio}
+  rawOffset = #{offset VkPhysicalDeviceFragmentShadingRatePropertiesKHR, maxFragmentShadingRateAttachmentTexelSizeAspectRatio}
 
 instance Offset "primitiveFragmentShadingRateWithMultipleViewports" VkPhysicalDeviceFragmentShadingRatePropertiesKHR where
-  rawOffset = #{offset struct VkPhysicalDeviceFragmentShadingRatePropertiesKHR, primitiveFragmentShadingRateWithMultipleViewports}
+  rawOffset = #{offset VkPhysicalDeviceFragmentShadingRatePropertiesKHR, primitiveFragmentShadingRateWithMultipleViewports}
 
 instance Offset "layeredShadingRateAttachments" VkPhysicalDeviceFragmentShadingRatePropertiesKHR where
-  rawOffset = #{offset struct VkPhysicalDeviceFragmentShadingRatePropertiesKHR, layeredShadingRateAttachments}
+  rawOffset = #{offset VkPhysicalDeviceFragmentShadingRatePropertiesKHR, layeredShadingRateAttachments}
 
 instance Offset "fragmentShadingRateNonTrivialCombinerOps" VkPhysicalDeviceFragmentShadingRatePropertiesKHR where
-  rawOffset = #{offset struct VkPhysicalDeviceFragmentShadingRatePropertiesKHR, fragmentShadingRateNonTrivialCombinerOps}
+  rawOffset = #{offset VkPhysicalDeviceFragmentShadingRatePropertiesKHR, fragmentShadingRateNonTrivialCombinerOps}
 
 instance Offset "maxFragmentSize" VkPhysicalDeviceFragmentShadingRatePropertiesKHR where
-  rawOffset = #{offset struct VkPhysicalDeviceFragmentShadingRatePropertiesKHR, maxFragmentSize}
+  rawOffset = #{offset VkPhysicalDeviceFragmentShadingRatePropertiesKHR, maxFragmentSize}
 
 instance Offset "maxFragmentSizeAspectRatio" VkPhysicalDeviceFragmentShadingRatePropertiesKHR where
-  rawOffset = #{offset struct VkPhysicalDeviceFragmentShadingRatePropertiesKHR, maxFragmentSizeAspectRatio}
+  rawOffset = #{offset VkPhysicalDeviceFragmentShadingRatePropertiesKHR, maxFragmentSizeAspectRatio}
 
 instance Offset "maxFragmentShadingRateCoverageSamples" VkPhysicalDeviceFragmentShadingRatePropertiesKHR where
-  rawOffset = #{offset struct VkPhysicalDeviceFragmentShadingRatePropertiesKHR, maxFragmentShadingRateCoverageSamples}
+  rawOffset = #{offset VkPhysicalDeviceFragmentShadingRatePropertiesKHR, maxFragmentShadingRateCoverageSamples}
 
 instance Offset "maxFragmentShadingRateRasterizationSamples" VkPhysicalDeviceFragmentShadingRatePropertiesKHR where
-  rawOffset = #{offset struct VkPhysicalDeviceFragmentShadingRatePropertiesKHR, maxFragmentShadingRateRasterizationSamples}
+  rawOffset = #{offset VkPhysicalDeviceFragmentShadingRatePropertiesKHR, maxFragmentShadingRateRasterizationSamples}
 
 instance Offset "fragmentShadingRateWithShaderDepthStencilWrites" VkPhysicalDeviceFragmentShadingRatePropertiesKHR where
-  rawOffset = #{offset struct VkPhysicalDeviceFragmentShadingRatePropertiesKHR, fragmentShadingRateWithShaderDepthStencilWrites}
+  rawOffset = #{offset VkPhysicalDeviceFragmentShadingRatePropertiesKHR, fragmentShadingRateWithShaderDepthStencilWrites}
 
 instance Offset "fragmentShadingRateWithSampleMask" VkPhysicalDeviceFragmentShadingRatePropertiesKHR where
-  rawOffset = #{offset struct VkPhysicalDeviceFragmentShadingRatePropertiesKHR, fragmentShadingRateWithSampleMask}
+  rawOffset = #{offset VkPhysicalDeviceFragmentShadingRatePropertiesKHR, fragmentShadingRateWithSampleMask}
 
 instance Offset "fragmentShadingRateWithShaderSampleMask" VkPhysicalDeviceFragmentShadingRatePropertiesKHR where
-  rawOffset = #{offset struct VkPhysicalDeviceFragmentShadingRatePropertiesKHR, fragmentShadingRateWithShaderSampleMask}
+  rawOffset = #{offset VkPhysicalDeviceFragmentShadingRatePropertiesKHR, fragmentShadingRateWithShaderSampleMask}
 
 instance Offset "fragmentShadingRateWithConservativeRasterization" VkPhysicalDeviceFragmentShadingRatePropertiesKHR where
-  rawOffset = #{offset struct VkPhysicalDeviceFragmentShadingRatePropertiesKHR, fragmentShadingRateWithConservativeRasterization}
+  rawOffset = #{offset VkPhysicalDeviceFragmentShadingRatePropertiesKHR, fragmentShadingRateWithConservativeRasterization}
 
 instance Offset "fragmentShadingRateWithFragmentShaderInterlock" VkPhysicalDeviceFragmentShadingRatePropertiesKHR where
-  rawOffset = #{offset struct VkPhysicalDeviceFragmentShadingRatePropertiesKHR, fragmentShadingRateWithFragmentShaderInterlock}
+  rawOffset = #{offset VkPhysicalDeviceFragmentShadingRatePropertiesKHR, fragmentShadingRateWithFragmentShaderInterlock}
 
 instance Offset "fragmentShadingRateWithCustomSampleLocations" VkPhysicalDeviceFragmentShadingRatePropertiesKHR where
-  rawOffset = #{offset struct VkPhysicalDeviceFragmentShadingRatePropertiesKHR, fragmentShadingRateWithCustomSampleLocations}
+  rawOffset = #{offset VkPhysicalDeviceFragmentShadingRatePropertiesKHR, fragmentShadingRateWithCustomSampleLocations}
 
 instance Offset "fragmentShadingRateStrictMultiplyCombiner" VkPhysicalDeviceFragmentShadingRatePropertiesKHR where
-  rawOffset = #{offset struct VkPhysicalDeviceFragmentShadingRatePropertiesKHR, fragmentShadingRateStrictMultiplyCombiner}
+  rawOffset = #{offset VkPhysicalDeviceFragmentShadingRatePropertiesKHR, fragmentShadingRateStrictMultiplyCombiner}
 
 #else
 

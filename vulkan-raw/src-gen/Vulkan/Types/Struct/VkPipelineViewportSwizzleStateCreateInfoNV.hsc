@@ -33,8 +33,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkPipelineViewportSwizzleStateCreateInfoNV" #-
          }
 
 instance Storable VkPipelineViewportSwizzleStateCreateInfoNV where
-  sizeOf    _ = #{size      struct VkPipelineViewportSwizzleStateCreateInfoNV}
-  alignment _ = #{alignment struct VkPipelineViewportSwizzleStateCreateInfoNV}
+  sizeOf    _ = #{size      VkPipelineViewportSwizzleStateCreateInfoNV}
+  alignment _ = #{alignment VkPipelineViewportSwizzleStateCreateInfoNV}
 
   peek ptr = 
     VkPipelineViewportSwizzleStateCreateInfoNV
@@ -52,19 +52,19 @@ instance Storable VkPipelineViewportSwizzleStateCreateInfoNV where
     pokeField @"pViewportSwizzles" ptr val
 
 instance Offset "sType" VkPipelineViewportSwizzleStateCreateInfoNV where
-  rawOffset = #{offset struct VkPipelineViewportSwizzleStateCreateInfoNV, sType}
+  rawOffset = #{offset VkPipelineViewportSwizzleStateCreateInfoNV, sType}
 
 instance Offset "pNext" VkPipelineViewportSwizzleStateCreateInfoNV where
-  rawOffset = #{offset struct VkPipelineViewportSwizzleStateCreateInfoNV, pNext}
+  rawOffset = #{offset VkPipelineViewportSwizzleStateCreateInfoNV, pNext}
 
 instance Offset "flags" VkPipelineViewportSwizzleStateCreateInfoNV where
-  rawOffset = #{offset struct VkPipelineViewportSwizzleStateCreateInfoNV, flags}
+  rawOffset = #{offset VkPipelineViewportSwizzleStateCreateInfoNV, flags}
 
 instance Offset "viewportCount" VkPipelineViewportSwizzleStateCreateInfoNV where
-  rawOffset = #{offset struct VkPipelineViewportSwizzleStateCreateInfoNV, viewportCount}
+  rawOffset = #{offset VkPipelineViewportSwizzleStateCreateInfoNV, viewportCount}
 
 instance Offset "pViewportSwizzles" VkPipelineViewportSwizzleStateCreateInfoNV where
-  rawOffset = #{offset struct VkPipelineViewportSwizzleStateCreateInfoNV, pViewportSwizzles}
+  rawOffset = #{offset VkPipelineViewportSwizzleStateCreateInfoNV, pViewportSwizzles}
 
 #else
 

@@ -29,8 +29,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkPhysicalDeviceTimelineSemaphoreProperties" #
          }
 
 instance Storable VkPhysicalDeviceTimelineSemaphoreProperties where
-  sizeOf    _ = #{size      struct VkPhysicalDeviceTimelineSemaphoreProperties}
-  alignment _ = #{alignment struct VkPhysicalDeviceTimelineSemaphoreProperties}
+  sizeOf    _ = #{size      VkPhysicalDeviceTimelineSemaphoreProperties}
+  alignment _ = #{alignment VkPhysicalDeviceTimelineSemaphoreProperties}
 
   peek ptr = 
     VkPhysicalDeviceTimelineSemaphoreProperties
@@ -44,13 +44,13 @@ instance Storable VkPhysicalDeviceTimelineSemaphoreProperties where
     pokeField @"maxTimelineSemaphoreValueDifference" ptr val
 
 instance Offset "sType" VkPhysicalDeviceTimelineSemaphoreProperties where
-  rawOffset = #{offset struct VkPhysicalDeviceTimelineSemaphoreProperties, sType}
+  rawOffset = #{offset VkPhysicalDeviceTimelineSemaphoreProperties, sType}
 
 instance Offset "pNext" VkPhysicalDeviceTimelineSemaphoreProperties where
-  rawOffset = #{offset struct VkPhysicalDeviceTimelineSemaphoreProperties, pNext}
+  rawOffset = #{offset VkPhysicalDeviceTimelineSemaphoreProperties, pNext}
 
 instance Offset "maxTimelineSemaphoreValueDifference" VkPhysicalDeviceTimelineSemaphoreProperties where
-  rawOffset = #{offset struct VkPhysicalDeviceTimelineSemaphoreProperties, maxTimelineSemaphoreValueDifference}
+  rawOffset = #{offset VkPhysicalDeviceTimelineSemaphoreProperties, maxTimelineSemaphoreValueDifference}
 
 #else
 

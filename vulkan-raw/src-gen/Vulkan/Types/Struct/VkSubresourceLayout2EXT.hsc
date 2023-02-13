@@ -30,8 +30,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkSubresourceLayout2EXT" #-} VkSubresourceLayo
          }
 
 instance Storable VkSubresourceLayout2EXT where
-  sizeOf    _ = #{size      struct VkSubresourceLayout2EXT}
-  alignment _ = #{alignment struct VkSubresourceLayout2EXT}
+  sizeOf    _ = #{size      VkSubresourceLayout2EXT}
+  alignment _ = #{alignment VkSubresourceLayout2EXT}
 
   peek ptr = 
     VkSubresourceLayout2EXT
@@ -45,13 +45,13 @@ instance Storable VkSubresourceLayout2EXT where
     pokeField @"subresourceLayout" ptr val
 
 instance Offset "sType" VkSubresourceLayout2EXT where
-  rawOffset = #{offset struct VkSubresourceLayout2EXT, sType}
+  rawOffset = #{offset VkSubresourceLayout2EXT, sType}
 
 instance Offset "pNext" VkSubresourceLayout2EXT where
-  rawOffset = #{offset struct VkSubresourceLayout2EXT, pNext}
+  rawOffset = #{offset VkSubresourceLayout2EXT, pNext}
 
 instance Offset "subresourceLayout" VkSubresourceLayout2EXT where
-  rawOffset = #{offset struct VkSubresourceLayout2EXT, subresourceLayout}
+  rawOffset = #{offset VkSubresourceLayout2EXT, subresourceLayout}
 
 #else
 

@@ -1,3 +1,7 @@
+{-# LANGUAGE CApiFFI #-}
+{-# LANGUAGE CPP #-}
+{-# LANGUAGE MagicHash #-}
+
 #include <vulkan/vulkan.h>
 
 #if VK_KHR_timeline_semaphore
@@ -10,17 +14,18 @@ import GHC.Ptr
 import Vulkan.Types.Enum.VkResult
 import Vulkan.Types.Handle
 import Vulkan.Types.Struct.VkSemaphoreWaitInfo
-import Vulkan.Types.Command.VkWaitSemaphores
 import Vulkan.Types.VkFun
 
 
 
-type VkWaitSemaphoresKHR = VkWaitSemaphores
+type VkWaitSemaphoresKHR =
+          VkDevice -- ^ device
+       -> Ptr VkSemaphoreWaitInfo -- ^ pWaitInfo
+       -> #{type uint64_t} -- ^ timeout
+       -> IO VkResult
 
-vkFunWaitSemaphoresKHR
-  :: VkFun VkWaitSemaphoresKHR
-vkFunWaitSemaphoresKHR = vkFunWaitSemaphores
-
+vkFunWaitSemaphoresKHR :: VkFun VkWaitSemaphoresKHR
+vkFunWaitSemaphoresKHR = VkFun (Ptr ("vkWaitSemaphoresKHR\0"##))
 
 #else
 

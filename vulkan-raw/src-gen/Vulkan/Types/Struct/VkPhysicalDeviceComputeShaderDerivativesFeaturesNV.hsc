@@ -31,8 +31,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkPhysicalDeviceComputeShaderDerivativesFeatur
          }
 
 instance Storable VkPhysicalDeviceComputeShaderDerivativesFeaturesNV where
-  sizeOf    _ = #{size      struct VkPhysicalDeviceComputeShaderDerivativesFeaturesNV}
-  alignment _ = #{alignment struct VkPhysicalDeviceComputeShaderDerivativesFeaturesNV}
+  sizeOf    _ = #{size      VkPhysicalDeviceComputeShaderDerivativesFeaturesNV}
+  alignment _ = #{alignment VkPhysicalDeviceComputeShaderDerivativesFeaturesNV}
 
   peek ptr = 
     VkPhysicalDeviceComputeShaderDerivativesFeaturesNV
@@ -48,16 +48,16 @@ instance Storable VkPhysicalDeviceComputeShaderDerivativesFeaturesNV where
     pokeField @"computeDerivativeGroupLinear" ptr val
 
 instance Offset "sType" VkPhysicalDeviceComputeShaderDerivativesFeaturesNV where
-  rawOffset = #{offset struct VkPhysicalDeviceComputeShaderDerivativesFeaturesNV, sType}
+  rawOffset = #{offset VkPhysicalDeviceComputeShaderDerivativesFeaturesNV, sType}
 
 instance Offset "pNext" VkPhysicalDeviceComputeShaderDerivativesFeaturesNV where
-  rawOffset = #{offset struct VkPhysicalDeviceComputeShaderDerivativesFeaturesNV, pNext}
+  rawOffset = #{offset VkPhysicalDeviceComputeShaderDerivativesFeaturesNV, pNext}
 
 instance Offset "computeDerivativeGroupQuads" VkPhysicalDeviceComputeShaderDerivativesFeaturesNV where
-  rawOffset = #{offset struct VkPhysicalDeviceComputeShaderDerivativesFeaturesNV, computeDerivativeGroupQuads}
+  rawOffset = #{offset VkPhysicalDeviceComputeShaderDerivativesFeaturesNV, computeDerivativeGroupQuads}
 
 instance Offset "computeDerivativeGroupLinear" VkPhysicalDeviceComputeShaderDerivativesFeaturesNV where
-  rawOffset = #{offset struct VkPhysicalDeviceComputeShaderDerivativesFeaturesNV, computeDerivativeGroupLinear}
+  rawOffset = #{offset VkPhysicalDeviceComputeShaderDerivativesFeaturesNV, computeDerivativeGroupLinear}
 
 #else
 

@@ -31,8 +31,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkSwapchainPresentModesCreateInfoEXT" #-} VkSw
          }
 
 instance Storable VkSwapchainPresentModesCreateInfoEXT where
-  sizeOf    _ = #{size      struct VkSwapchainPresentModesCreateInfoEXT}
-  alignment _ = #{alignment struct VkSwapchainPresentModesCreateInfoEXT}
+  sizeOf    _ = #{size      VkSwapchainPresentModesCreateInfoEXT}
+  alignment _ = #{alignment VkSwapchainPresentModesCreateInfoEXT}
 
   peek ptr = 
     VkSwapchainPresentModesCreateInfoEXT
@@ -48,16 +48,16 @@ instance Storable VkSwapchainPresentModesCreateInfoEXT where
     pokeField @"pPresentModes" ptr val
 
 instance Offset "sType" VkSwapchainPresentModesCreateInfoEXT where
-  rawOffset = #{offset struct VkSwapchainPresentModesCreateInfoEXT, sType}
+  rawOffset = #{offset VkSwapchainPresentModesCreateInfoEXT, sType}
 
 instance Offset "pNext" VkSwapchainPresentModesCreateInfoEXT where
-  rawOffset = #{offset struct VkSwapchainPresentModesCreateInfoEXT, pNext}
+  rawOffset = #{offset VkSwapchainPresentModesCreateInfoEXT, pNext}
 
 instance Offset "presentModeCount" VkSwapchainPresentModesCreateInfoEXT where
-  rawOffset = #{offset struct VkSwapchainPresentModesCreateInfoEXT, presentModeCount}
+  rawOffset = #{offset VkSwapchainPresentModesCreateInfoEXT, presentModeCount}
 
 instance Offset "pPresentModes" VkSwapchainPresentModesCreateInfoEXT where
-  rawOffset = #{offset struct VkSwapchainPresentModesCreateInfoEXT, pPresentModes}
+  rawOffset = #{offset VkSwapchainPresentModesCreateInfoEXT, pPresentModes}
 
 #else
 

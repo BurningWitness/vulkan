@@ -29,8 +29,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkSparseImageFormatProperties" #-} VkSparseIma
          }
 
 instance Storable VkSparseImageFormatProperties where
-  sizeOf    _ = #{size      struct VkSparseImageFormatProperties}
-  alignment _ = #{alignment struct VkSparseImageFormatProperties}
+  sizeOf    _ = #{size      VkSparseImageFormatProperties}
+  alignment _ = #{alignment VkSparseImageFormatProperties}
 
   peek ptr = 
     VkSparseImageFormatProperties
@@ -44,10 +44,10 @@ instance Storable VkSparseImageFormatProperties where
     pokeField @"flags" ptr val
 
 instance Offset "aspectMask" VkSparseImageFormatProperties where
-  rawOffset = #{offset struct VkSparseImageFormatProperties, aspectMask}
+  rawOffset = #{offset VkSparseImageFormatProperties, aspectMask}
 
 instance Offset "imageGranularity" VkSparseImageFormatProperties where
-  rawOffset = #{offset struct VkSparseImageFormatProperties, imageGranularity}
+  rawOffset = #{offset VkSparseImageFormatProperties, imageGranularity}
 
 instance Offset "flags" VkSparseImageFormatProperties where
-  rawOffset = #{offset struct VkSparseImageFormatProperties, flags}
+  rawOffset = #{offset VkSparseImageFormatProperties, flags}

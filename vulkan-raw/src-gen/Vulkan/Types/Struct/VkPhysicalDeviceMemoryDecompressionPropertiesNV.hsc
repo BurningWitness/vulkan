@@ -31,8 +31,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkPhysicalDeviceMemoryDecompressionPropertiesN
          }
 
 instance Storable VkPhysicalDeviceMemoryDecompressionPropertiesNV where
-  sizeOf    _ = #{size      struct VkPhysicalDeviceMemoryDecompressionPropertiesNV}
-  alignment _ = #{alignment struct VkPhysicalDeviceMemoryDecompressionPropertiesNV}
+  sizeOf    _ = #{size      VkPhysicalDeviceMemoryDecompressionPropertiesNV}
+  alignment _ = #{alignment VkPhysicalDeviceMemoryDecompressionPropertiesNV}
 
   peek ptr = 
     VkPhysicalDeviceMemoryDecompressionPropertiesNV
@@ -48,16 +48,16 @@ instance Storable VkPhysicalDeviceMemoryDecompressionPropertiesNV where
     pokeField @"maxDecompressionIndirectCount" ptr val
 
 instance Offset "sType" VkPhysicalDeviceMemoryDecompressionPropertiesNV where
-  rawOffset = #{offset struct VkPhysicalDeviceMemoryDecompressionPropertiesNV, sType}
+  rawOffset = #{offset VkPhysicalDeviceMemoryDecompressionPropertiesNV, sType}
 
 instance Offset "pNext" VkPhysicalDeviceMemoryDecompressionPropertiesNV where
-  rawOffset = #{offset struct VkPhysicalDeviceMemoryDecompressionPropertiesNV, pNext}
+  rawOffset = #{offset VkPhysicalDeviceMemoryDecompressionPropertiesNV, pNext}
 
 instance Offset "decompressionMethods" VkPhysicalDeviceMemoryDecompressionPropertiesNV where
-  rawOffset = #{offset struct VkPhysicalDeviceMemoryDecompressionPropertiesNV, decompressionMethods}
+  rawOffset = #{offset VkPhysicalDeviceMemoryDecompressionPropertiesNV, decompressionMethods}
 
 instance Offset "maxDecompressionIndirectCount" VkPhysicalDeviceMemoryDecompressionPropertiesNV where
-  rawOffset = #{offset struct VkPhysicalDeviceMemoryDecompressionPropertiesNV, maxDecompressionIndirectCount}
+  rawOffset = #{offset VkPhysicalDeviceMemoryDecompressionPropertiesNV, maxDecompressionIndirectCount}
 
 #else
 

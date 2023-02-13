@@ -32,8 +32,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkPhysicalDeviceMultiviewFeatures" #-} VkPhysi
          }
 
 instance Storable VkPhysicalDeviceMultiviewFeatures where
-  sizeOf    _ = #{size      struct VkPhysicalDeviceMultiviewFeatures}
-  alignment _ = #{alignment struct VkPhysicalDeviceMultiviewFeatures}
+  sizeOf    _ = #{size      VkPhysicalDeviceMultiviewFeatures}
+  alignment _ = #{alignment VkPhysicalDeviceMultiviewFeatures}
 
   peek ptr = 
     VkPhysicalDeviceMultiviewFeatures
@@ -51,19 +51,19 @@ instance Storable VkPhysicalDeviceMultiviewFeatures where
     pokeField @"multiviewTessellationShader" ptr val
 
 instance Offset "sType" VkPhysicalDeviceMultiviewFeatures where
-  rawOffset = #{offset struct VkPhysicalDeviceMultiviewFeatures, sType}
+  rawOffset = #{offset VkPhysicalDeviceMultiviewFeatures, sType}
 
 instance Offset "pNext" VkPhysicalDeviceMultiviewFeatures where
-  rawOffset = #{offset struct VkPhysicalDeviceMultiviewFeatures, pNext}
+  rawOffset = #{offset VkPhysicalDeviceMultiviewFeatures, pNext}
 
 instance Offset "multiview" VkPhysicalDeviceMultiviewFeatures where
-  rawOffset = #{offset struct VkPhysicalDeviceMultiviewFeatures, multiview}
+  rawOffset = #{offset VkPhysicalDeviceMultiviewFeatures, multiview}
 
 instance Offset "multiviewGeometryShader" VkPhysicalDeviceMultiviewFeatures where
-  rawOffset = #{offset struct VkPhysicalDeviceMultiviewFeatures, multiviewGeometryShader}
+  rawOffset = #{offset VkPhysicalDeviceMultiviewFeatures, multiviewGeometryShader}
 
 instance Offset "multiviewTessellationShader" VkPhysicalDeviceMultiviewFeatures where
-  rawOffset = #{offset struct VkPhysicalDeviceMultiviewFeatures, multiviewTessellationShader}
+  rawOffset = #{offset VkPhysicalDeviceMultiviewFeatures, multiviewTessellationShader}
 
 #else
 

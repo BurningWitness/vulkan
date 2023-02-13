@@ -30,8 +30,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkPhysicalDeviceExternalSemaphoreInfo" #-} VkP
          }
 
 instance Storable VkPhysicalDeviceExternalSemaphoreInfo where
-  sizeOf    _ = #{size      struct VkPhysicalDeviceExternalSemaphoreInfo}
-  alignment _ = #{alignment struct VkPhysicalDeviceExternalSemaphoreInfo}
+  sizeOf    _ = #{size      VkPhysicalDeviceExternalSemaphoreInfo}
+  alignment _ = #{alignment VkPhysicalDeviceExternalSemaphoreInfo}
 
   peek ptr = 
     VkPhysicalDeviceExternalSemaphoreInfo
@@ -45,13 +45,13 @@ instance Storable VkPhysicalDeviceExternalSemaphoreInfo where
     pokeField @"handleType" ptr val
 
 instance Offset "sType" VkPhysicalDeviceExternalSemaphoreInfo where
-  rawOffset = #{offset struct VkPhysicalDeviceExternalSemaphoreInfo, sType}
+  rawOffset = #{offset VkPhysicalDeviceExternalSemaphoreInfo, sType}
 
 instance Offset "pNext" VkPhysicalDeviceExternalSemaphoreInfo where
-  rawOffset = #{offset struct VkPhysicalDeviceExternalSemaphoreInfo, pNext}
+  rawOffset = #{offset VkPhysicalDeviceExternalSemaphoreInfo, pNext}
 
 instance Offset "handleType" VkPhysicalDeviceExternalSemaphoreInfo where
-  rawOffset = #{offset struct VkPhysicalDeviceExternalSemaphoreInfo, handleType}
+  rawOffset = #{offset VkPhysicalDeviceExternalSemaphoreInfo, handleType}
 
 #else
 

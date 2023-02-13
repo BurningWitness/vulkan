@@ -32,8 +32,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkPhysicalDeviceVulkanMemoryModelFeatures" #-}
          }
 
 instance Storable VkPhysicalDeviceVulkanMemoryModelFeatures where
-  sizeOf    _ = #{size      struct VkPhysicalDeviceVulkanMemoryModelFeatures}
-  alignment _ = #{alignment struct VkPhysicalDeviceVulkanMemoryModelFeatures}
+  sizeOf    _ = #{size      VkPhysicalDeviceVulkanMemoryModelFeatures}
+  alignment _ = #{alignment VkPhysicalDeviceVulkanMemoryModelFeatures}
 
   peek ptr = 
     VkPhysicalDeviceVulkanMemoryModelFeatures
@@ -51,19 +51,19 @@ instance Storable VkPhysicalDeviceVulkanMemoryModelFeatures where
     pokeField @"vulkanMemoryModelAvailabilityVisibilityChains" ptr val
 
 instance Offset "sType" VkPhysicalDeviceVulkanMemoryModelFeatures where
-  rawOffset = #{offset struct VkPhysicalDeviceVulkanMemoryModelFeatures, sType}
+  rawOffset = #{offset VkPhysicalDeviceVulkanMemoryModelFeatures, sType}
 
 instance Offset "pNext" VkPhysicalDeviceVulkanMemoryModelFeatures where
-  rawOffset = #{offset struct VkPhysicalDeviceVulkanMemoryModelFeatures, pNext}
+  rawOffset = #{offset VkPhysicalDeviceVulkanMemoryModelFeatures, pNext}
 
 instance Offset "vulkanMemoryModel" VkPhysicalDeviceVulkanMemoryModelFeatures where
-  rawOffset = #{offset struct VkPhysicalDeviceVulkanMemoryModelFeatures, vulkanMemoryModel}
+  rawOffset = #{offset VkPhysicalDeviceVulkanMemoryModelFeatures, vulkanMemoryModel}
 
 instance Offset "vulkanMemoryModelDeviceScope" VkPhysicalDeviceVulkanMemoryModelFeatures where
-  rawOffset = #{offset struct VkPhysicalDeviceVulkanMemoryModelFeatures, vulkanMemoryModelDeviceScope}
+  rawOffset = #{offset VkPhysicalDeviceVulkanMemoryModelFeatures, vulkanMemoryModelDeviceScope}
 
 instance Offset "vulkanMemoryModelAvailabilityVisibilityChains" VkPhysicalDeviceVulkanMemoryModelFeatures where
-  rawOffset = #{offset struct VkPhysicalDeviceVulkanMemoryModelFeatures, vulkanMemoryModelAvailabilityVisibilityChains}
+  rawOffset = #{offset VkPhysicalDeviceVulkanMemoryModelFeatures, vulkanMemoryModelAvailabilityVisibilityChains}
 
 #else
 

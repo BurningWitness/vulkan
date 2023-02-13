@@ -30,8 +30,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkPhysicalDeviceColorWriteEnableFeaturesEXT" #
          }
 
 instance Storable VkPhysicalDeviceColorWriteEnableFeaturesEXT where
-  sizeOf    _ = #{size      struct VkPhysicalDeviceColorWriteEnableFeaturesEXT}
-  alignment _ = #{alignment struct VkPhysicalDeviceColorWriteEnableFeaturesEXT}
+  sizeOf    _ = #{size      VkPhysicalDeviceColorWriteEnableFeaturesEXT}
+  alignment _ = #{alignment VkPhysicalDeviceColorWriteEnableFeaturesEXT}
 
   peek ptr = 
     VkPhysicalDeviceColorWriteEnableFeaturesEXT
@@ -45,13 +45,13 @@ instance Storable VkPhysicalDeviceColorWriteEnableFeaturesEXT where
     pokeField @"colorWriteEnable" ptr val
 
 instance Offset "sType" VkPhysicalDeviceColorWriteEnableFeaturesEXT where
-  rawOffset = #{offset struct VkPhysicalDeviceColorWriteEnableFeaturesEXT, sType}
+  rawOffset = #{offset VkPhysicalDeviceColorWriteEnableFeaturesEXT, sType}
 
 instance Offset "pNext" VkPhysicalDeviceColorWriteEnableFeaturesEXT where
-  rawOffset = #{offset struct VkPhysicalDeviceColorWriteEnableFeaturesEXT, pNext}
+  rawOffset = #{offset VkPhysicalDeviceColorWriteEnableFeaturesEXT, pNext}
 
 instance Offset "colorWriteEnable" VkPhysicalDeviceColorWriteEnableFeaturesEXT where
-  rawOffset = #{offset struct VkPhysicalDeviceColorWriteEnableFeaturesEXT, colorWriteEnable}
+  rawOffset = #{offset VkPhysicalDeviceColorWriteEnableFeaturesEXT, colorWriteEnable}
 
 #else
 

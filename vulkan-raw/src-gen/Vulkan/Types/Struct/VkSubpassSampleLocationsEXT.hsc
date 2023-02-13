@@ -28,8 +28,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkSubpassSampleLocationsEXT" #-} VkSubpassSamp
          }
 
 instance Storable VkSubpassSampleLocationsEXT where
-  sizeOf    _ = #{size      struct VkSubpassSampleLocationsEXT}
-  alignment _ = #{alignment struct VkSubpassSampleLocationsEXT}
+  sizeOf    _ = #{size      VkSubpassSampleLocationsEXT}
+  alignment _ = #{alignment VkSubpassSampleLocationsEXT}
 
   peek ptr = 
     VkSubpassSampleLocationsEXT
@@ -41,10 +41,10 @@ instance Storable VkSubpassSampleLocationsEXT where
     pokeField @"sampleLocationsInfo" ptr val
 
 instance Offset "subpassIndex" VkSubpassSampleLocationsEXT where
-  rawOffset = #{offset struct VkSubpassSampleLocationsEXT, subpassIndex}
+  rawOffset = #{offset VkSubpassSampleLocationsEXT, subpassIndex}
 
 instance Offset "sampleLocationsInfo" VkSubpassSampleLocationsEXT where
-  rawOffset = #{offset struct VkSubpassSampleLocationsEXT, sampleLocationsInfo}
+  rawOffset = #{offset VkSubpassSampleLocationsEXT, sampleLocationsInfo}
 
 #else
 

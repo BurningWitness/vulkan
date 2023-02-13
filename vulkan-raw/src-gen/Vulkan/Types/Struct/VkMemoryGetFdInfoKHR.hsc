@@ -32,8 +32,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkMemoryGetFdInfoKHR" #-} VkMemoryGetFdInfoKHR
          }
 
 instance Storable VkMemoryGetFdInfoKHR where
-  sizeOf    _ = #{size      struct VkMemoryGetFdInfoKHR}
-  alignment _ = #{alignment struct VkMemoryGetFdInfoKHR}
+  sizeOf    _ = #{size      VkMemoryGetFdInfoKHR}
+  alignment _ = #{alignment VkMemoryGetFdInfoKHR}
 
   peek ptr = 
     VkMemoryGetFdInfoKHR
@@ -49,16 +49,16 @@ instance Storable VkMemoryGetFdInfoKHR where
     pokeField @"handleType" ptr val
 
 instance Offset "sType" VkMemoryGetFdInfoKHR where
-  rawOffset = #{offset struct VkMemoryGetFdInfoKHR, sType}
+  rawOffset = #{offset VkMemoryGetFdInfoKHR, sType}
 
 instance Offset "pNext" VkMemoryGetFdInfoKHR where
-  rawOffset = #{offset struct VkMemoryGetFdInfoKHR, pNext}
+  rawOffset = #{offset VkMemoryGetFdInfoKHR, pNext}
 
 instance Offset "memory" VkMemoryGetFdInfoKHR where
-  rawOffset = #{offset struct VkMemoryGetFdInfoKHR, memory}
+  rawOffset = #{offset VkMemoryGetFdInfoKHR, memory}
 
 instance Offset "handleType" VkMemoryGetFdInfoKHR where
-  rawOffset = #{offset struct VkMemoryGetFdInfoKHR, handleType}
+  rawOffset = #{offset VkMemoryGetFdInfoKHR, handleType}
 
 #else
 

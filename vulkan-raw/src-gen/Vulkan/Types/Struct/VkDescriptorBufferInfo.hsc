@@ -28,8 +28,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkDescriptorBufferInfo" #-} VkDescriptorBuffer
          }
 
 instance Storable VkDescriptorBufferInfo where
-  sizeOf    _ = #{size      struct VkDescriptorBufferInfo}
-  alignment _ = #{alignment struct VkDescriptorBufferInfo}
+  sizeOf    _ = #{size      VkDescriptorBufferInfo}
+  alignment _ = #{alignment VkDescriptorBufferInfo}
 
   peek ptr = 
     VkDescriptorBufferInfo
@@ -43,10 +43,10 @@ instance Storable VkDescriptorBufferInfo where
     pokeField @"range" ptr val
 
 instance Offset "buffer" VkDescriptorBufferInfo where
-  rawOffset = #{offset struct VkDescriptorBufferInfo, buffer}
+  rawOffset = #{offset VkDescriptorBufferInfo, buffer}
 
 instance Offset "offset" VkDescriptorBufferInfo where
-  rawOffset = #{offset struct VkDescriptorBufferInfo, offset}
+  rawOffset = #{offset VkDescriptorBufferInfo, offset}
 
 instance Offset "range" VkDescriptorBufferInfo where
-  rawOffset = #{offset struct VkDescriptorBufferInfo, range}
+  rawOffset = #{offset VkDescriptorBufferInfo, range}

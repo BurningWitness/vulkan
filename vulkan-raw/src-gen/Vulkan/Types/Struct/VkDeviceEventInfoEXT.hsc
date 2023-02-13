@@ -30,8 +30,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkDeviceEventInfoEXT" #-} VkDeviceEventInfoEXT
          }
 
 instance Storable VkDeviceEventInfoEXT where
-  sizeOf    _ = #{size      struct VkDeviceEventInfoEXT}
-  alignment _ = #{alignment struct VkDeviceEventInfoEXT}
+  sizeOf    _ = #{size      VkDeviceEventInfoEXT}
+  alignment _ = #{alignment VkDeviceEventInfoEXT}
 
   peek ptr = 
     VkDeviceEventInfoEXT
@@ -45,13 +45,13 @@ instance Storable VkDeviceEventInfoEXT where
     pokeField @"deviceEvent" ptr val
 
 instance Offset "sType" VkDeviceEventInfoEXT where
-  rawOffset = #{offset struct VkDeviceEventInfoEXT, sType}
+  rawOffset = #{offset VkDeviceEventInfoEXT, sType}
 
 instance Offset "pNext" VkDeviceEventInfoEXT where
-  rawOffset = #{offset struct VkDeviceEventInfoEXT, pNext}
+  rawOffset = #{offset VkDeviceEventInfoEXT, pNext}
 
 instance Offset "deviceEvent" VkDeviceEventInfoEXT where
-  rawOffset = #{offset struct VkDeviceEventInfoEXT, deviceEvent}
+  rawOffset = #{offset VkDeviceEventInfoEXT, deviceEvent}
 
 #else
 

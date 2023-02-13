@@ -37,8 +37,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkPhysicalDeviceDeviceGeneratedCommandsPropert
          }
 
 instance Storable VkPhysicalDeviceDeviceGeneratedCommandsPropertiesNV where
-  sizeOf    _ = #{size      struct VkPhysicalDeviceDeviceGeneratedCommandsPropertiesNV}
-  alignment _ = #{alignment struct VkPhysicalDeviceDeviceGeneratedCommandsPropertiesNV}
+  sizeOf    _ = #{size      VkPhysicalDeviceDeviceGeneratedCommandsPropertiesNV}
+  alignment _ = #{alignment VkPhysicalDeviceDeviceGeneratedCommandsPropertiesNV}
 
   peek ptr = 
     VkPhysicalDeviceDeviceGeneratedCommandsPropertiesNV
@@ -68,37 +68,37 @@ instance Storable VkPhysicalDeviceDeviceGeneratedCommandsPropertiesNV where
     pokeField @"minIndirectCommandsBufferOffsetAlignment" ptr val
 
 instance Offset "sType" VkPhysicalDeviceDeviceGeneratedCommandsPropertiesNV where
-  rawOffset = #{offset struct VkPhysicalDeviceDeviceGeneratedCommandsPropertiesNV, sType}
+  rawOffset = #{offset VkPhysicalDeviceDeviceGeneratedCommandsPropertiesNV, sType}
 
 instance Offset "pNext" VkPhysicalDeviceDeviceGeneratedCommandsPropertiesNV where
-  rawOffset = #{offset struct VkPhysicalDeviceDeviceGeneratedCommandsPropertiesNV, pNext}
+  rawOffset = #{offset VkPhysicalDeviceDeviceGeneratedCommandsPropertiesNV, pNext}
 
 instance Offset "maxGraphicsShaderGroupCount" VkPhysicalDeviceDeviceGeneratedCommandsPropertiesNV where
-  rawOffset = #{offset struct VkPhysicalDeviceDeviceGeneratedCommandsPropertiesNV, maxGraphicsShaderGroupCount}
+  rawOffset = #{offset VkPhysicalDeviceDeviceGeneratedCommandsPropertiesNV, maxGraphicsShaderGroupCount}
 
 instance Offset "maxIndirectSequenceCount" VkPhysicalDeviceDeviceGeneratedCommandsPropertiesNV where
-  rawOffset = #{offset struct VkPhysicalDeviceDeviceGeneratedCommandsPropertiesNV, maxIndirectSequenceCount}
+  rawOffset = #{offset VkPhysicalDeviceDeviceGeneratedCommandsPropertiesNV, maxIndirectSequenceCount}
 
 instance Offset "maxIndirectCommandsTokenCount" VkPhysicalDeviceDeviceGeneratedCommandsPropertiesNV where
-  rawOffset = #{offset struct VkPhysicalDeviceDeviceGeneratedCommandsPropertiesNV, maxIndirectCommandsTokenCount}
+  rawOffset = #{offset VkPhysicalDeviceDeviceGeneratedCommandsPropertiesNV, maxIndirectCommandsTokenCount}
 
 instance Offset "maxIndirectCommandsStreamCount" VkPhysicalDeviceDeviceGeneratedCommandsPropertiesNV where
-  rawOffset = #{offset struct VkPhysicalDeviceDeviceGeneratedCommandsPropertiesNV, maxIndirectCommandsStreamCount}
+  rawOffset = #{offset VkPhysicalDeviceDeviceGeneratedCommandsPropertiesNV, maxIndirectCommandsStreamCount}
 
 instance Offset "maxIndirectCommandsTokenOffset" VkPhysicalDeviceDeviceGeneratedCommandsPropertiesNV where
-  rawOffset = #{offset struct VkPhysicalDeviceDeviceGeneratedCommandsPropertiesNV, maxIndirectCommandsTokenOffset}
+  rawOffset = #{offset VkPhysicalDeviceDeviceGeneratedCommandsPropertiesNV, maxIndirectCommandsTokenOffset}
 
 instance Offset "maxIndirectCommandsStreamStride" VkPhysicalDeviceDeviceGeneratedCommandsPropertiesNV where
-  rawOffset = #{offset struct VkPhysicalDeviceDeviceGeneratedCommandsPropertiesNV, maxIndirectCommandsStreamStride}
+  rawOffset = #{offset VkPhysicalDeviceDeviceGeneratedCommandsPropertiesNV, maxIndirectCommandsStreamStride}
 
 instance Offset "minSequencesCountBufferOffsetAlignment" VkPhysicalDeviceDeviceGeneratedCommandsPropertiesNV where
-  rawOffset = #{offset struct VkPhysicalDeviceDeviceGeneratedCommandsPropertiesNV, minSequencesCountBufferOffsetAlignment}
+  rawOffset = #{offset VkPhysicalDeviceDeviceGeneratedCommandsPropertiesNV, minSequencesCountBufferOffsetAlignment}
 
 instance Offset "minSequencesIndexBufferOffsetAlignment" VkPhysicalDeviceDeviceGeneratedCommandsPropertiesNV where
-  rawOffset = #{offset struct VkPhysicalDeviceDeviceGeneratedCommandsPropertiesNV, minSequencesIndexBufferOffsetAlignment}
+  rawOffset = #{offset VkPhysicalDeviceDeviceGeneratedCommandsPropertiesNV, minSequencesIndexBufferOffsetAlignment}
 
 instance Offset "minIndirectCommandsBufferOffsetAlignment" VkPhysicalDeviceDeviceGeneratedCommandsPropertiesNV where
-  rawOffset = #{offset struct VkPhysicalDeviceDeviceGeneratedCommandsPropertiesNV, minIndirectCommandsBufferOffsetAlignment}
+  rawOffset = #{offset VkPhysicalDeviceDeviceGeneratedCommandsPropertiesNV, minIndirectCommandsBufferOffsetAlignment}
 
 #else
 

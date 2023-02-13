@@ -31,8 +31,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkSubpassShadingPipelineCreateInfoHUAWEI" #-} 
          }
 
 instance Storable VkSubpassShadingPipelineCreateInfoHUAWEI where
-  sizeOf    _ = #{size      struct VkSubpassShadingPipelineCreateInfoHUAWEI}
-  alignment _ = #{alignment struct VkSubpassShadingPipelineCreateInfoHUAWEI}
+  sizeOf    _ = #{size      VkSubpassShadingPipelineCreateInfoHUAWEI}
+  alignment _ = #{alignment VkSubpassShadingPipelineCreateInfoHUAWEI}
 
   peek ptr = 
     VkSubpassShadingPipelineCreateInfoHUAWEI
@@ -48,16 +48,16 @@ instance Storable VkSubpassShadingPipelineCreateInfoHUAWEI where
     pokeField @"subpass" ptr val
 
 instance Offset "sType" VkSubpassShadingPipelineCreateInfoHUAWEI where
-  rawOffset = #{offset struct VkSubpassShadingPipelineCreateInfoHUAWEI, sType}
+  rawOffset = #{offset VkSubpassShadingPipelineCreateInfoHUAWEI, sType}
 
 instance Offset "pNext" VkSubpassShadingPipelineCreateInfoHUAWEI where
-  rawOffset = #{offset struct VkSubpassShadingPipelineCreateInfoHUAWEI, pNext}
+  rawOffset = #{offset VkSubpassShadingPipelineCreateInfoHUAWEI, pNext}
 
 instance Offset "renderPass" VkSubpassShadingPipelineCreateInfoHUAWEI where
-  rawOffset = #{offset struct VkSubpassShadingPipelineCreateInfoHUAWEI, renderPass}
+  rawOffset = #{offset VkSubpassShadingPipelineCreateInfoHUAWEI, renderPass}
 
 instance Offset "subpass" VkSubpassShadingPipelineCreateInfoHUAWEI where
-  rawOffset = #{offset struct VkSubpassShadingPipelineCreateInfoHUAWEI, subpass}
+  rawOffset = #{offset VkSubpassShadingPipelineCreateInfoHUAWEI, subpass}
 
 #else
 

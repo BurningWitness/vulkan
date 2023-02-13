@@ -30,8 +30,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkDeviceQueueGlobalPriorityCreateInfoKHR" #-} 
          }
 
 instance Storable VkDeviceQueueGlobalPriorityCreateInfoKHR where
-  sizeOf    _ = #{size      struct VkDeviceQueueGlobalPriorityCreateInfoKHR}
-  alignment _ = #{alignment struct VkDeviceQueueGlobalPriorityCreateInfoKHR}
+  sizeOf    _ = #{size      VkDeviceQueueGlobalPriorityCreateInfoKHR}
+  alignment _ = #{alignment VkDeviceQueueGlobalPriorityCreateInfoKHR}
 
   peek ptr = 
     VkDeviceQueueGlobalPriorityCreateInfoKHR
@@ -45,13 +45,13 @@ instance Storable VkDeviceQueueGlobalPriorityCreateInfoKHR where
     pokeField @"globalPriority" ptr val
 
 instance Offset "sType" VkDeviceQueueGlobalPriorityCreateInfoKHR where
-  rawOffset = #{offset struct VkDeviceQueueGlobalPriorityCreateInfoKHR, sType}
+  rawOffset = #{offset VkDeviceQueueGlobalPriorityCreateInfoKHR, sType}
 
 instance Offset "pNext" VkDeviceQueueGlobalPriorityCreateInfoKHR where
-  rawOffset = #{offset struct VkDeviceQueueGlobalPriorityCreateInfoKHR, pNext}
+  rawOffset = #{offset VkDeviceQueueGlobalPriorityCreateInfoKHR, pNext}
 
 instance Offset "globalPriority" VkDeviceQueueGlobalPriorityCreateInfoKHR where
-  rawOffset = #{offset struct VkDeviceQueueGlobalPriorityCreateInfoKHR, globalPriority}
+  rawOffset = #{offset VkDeviceQueueGlobalPriorityCreateInfoKHR, globalPriority}
 
 #else
 

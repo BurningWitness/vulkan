@@ -29,8 +29,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkPhysicalDeviceVertexAttributeDivisorProperti
          }
 
 instance Storable VkPhysicalDeviceVertexAttributeDivisorPropertiesEXT where
-  sizeOf    _ = #{size      struct VkPhysicalDeviceVertexAttributeDivisorPropertiesEXT}
-  alignment _ = #{alignment struct VkPhysicalDeviceVertexAttributeDivisorPropertiesEXT}
+  sizeOf    _ = #{size      VkPhysicalDeviceVertexAttributeDivisorPropertiesEXT}
+  alignment _ = #{alignment VkPhysicalDeviceVertexAttributeDivisorPropertiesEXT}
 
   peek ptr = 
     VkPhysicalDeviceVertexAttributeDivisorPropertiesEXT
@@ -44,13 +44,13 @@ instance Storable VkPhysicalDeviceVertexAttributeDivisorPropertiesEXT where
     pokeField @"maxVertexAttribDivisor" ptr val
 
 instance Offset "sType" VkPhysicalDeviceVertexAttributeDivisorPropertiesEXT where
-  rawOffset = #{offset struct VkPhysicalDeviceVertexAttributeDivisorPropertiesEXT, sType}
+  rawOffset = #{offset VkPhysicalDeviceVertexAttributeDivisorPropertiesEXT, sType}
 
 instance Offset "pNext" VkPhysicalDeviceVertexAttributeDivisorPropertiesEXT where
-  rawOffset = #{offset struct VkPhysicalDeviceVertexAttributeDivisorPropertiesEXT, pNext}
+  rawOffset = #{offset VkPhysicalDeviceVertexAttributeDivisorPropertiesEXT, pNext}
 
 instance Offset "maxVertexAttribDivisor" VkPhysicalDeviceVertexAttributeDivisorPropertiesEXT where
-  rawOffset = #{offset struct VkPhysicalDeviceVertexAttributeDivisorPropertiesEXT, maxVertexAttribDivisor}
+  rawOffset = #{offset VkPhysicalDeviceVertexAttributeDivisorPropertiesEXT, maxVertexAttribDivisor}
 
 #else
 

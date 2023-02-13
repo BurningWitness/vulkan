@@ -34,8 +34,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkInstanceCreateInfo" #-} VkInstanceCreateInfo
          }
 
 instance Storable VkInstanceCreateInfo where
-  sizeOf    _ = #{size      struct VkInstanceCreateInfo}
-  alignment _ = #{alignment struct VkInstanceCreateInfo}
+  sizeOf    _ = #{size      VkInstanceCreateInfo}
+  alignment _ = #{alignment VkInstanceCreateInfo}
 
   peek ptr = 
     VkInstanceCreateInfo
@@ -59,25 +59,25 @@ instance Storable VkInstanceCreateInfo where
     pokeField @"ppEnabledExtensionNames" ptr val
 
 instance Offset "sType" VkInstanceCreateInfo where
-  rawOffset = #{offset struct VkInstanceCreateInfo, sType}
+  rawOffset = #{offset VkInstanceCreateInfo, sType}
 
 instance Offset "pNext" VkInstanceCreateInfo where
-  rawOffset = #{offset struct VkInstanceCreateInfo, pNext}
+  rawOffset = #{offset VkInstanceCreateInfo, pNext}
 
 instance Offset "flags" VkInstanceCreateInfo where
-  rawOffset = #{offset struct VkInstanceCreateInfo, flags}
+  rawOffset = #{offset VkInstanceCreateInfo, flags}
 
 instance Offset "pApplicationInfo" VkInstanceCreateInfo where
-  rawOffset = #{offset struct VkInstanceCreateInfo, pApplicationInfo}
+  rawOffset = #{offset VkInstanceCreateInfo, pApplicationInfo}
 
 instance Offset "enabledLayerCount" VkInstanceCreateInfo where
-  rawOffset = #{offset struct VkInstanceCreateInfo, enabledLayerCount}
+  rawOffset = #{offset VkInstanceCreateInfo, enabledLayerCount}
 
 instance Offset "ppEnabledLayerNames" VkInstanceCreateInfo where
-  rawOffset = #{offset struct VkInstanceCreateInfo, ppEnabledLayerNames}
+  rawOffset = #{offset VkInstanceCreateInfo, ppEnabledLayerNames}
 
 instance Offset "enabledExtensionCount" VkInstanceCreateInfo where
-  rawOffset = #{offset struct VkInstanceCreateInfo, enabledExtensionCount}
+  rawOffset = #{offset VkInstanceCreateInfo, enabledExtensionCount}
 
 instance Offset "ppEnabledExtensionNames" VkInstanceCreateInfo where
-  rawOffset = #{offset struct VkInstanceCreateInfo, ppEnabledExtensionNames}
+  rawOffset = #{offset VkInstanceCreateInfo, ppEnabledExtensionNames}

@@ -30,8 +30,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkCuModuleCreateInfoNVX" #-} VkCuModuleCreateI
          }
 
 instance Storable VkCuModuleCreateInfoNVX where
-  sizeOf    _ = #{size      struct VkCuModuleCreateInfoNVX}
-  alignment _ = #{alignment struct VkCuModuleCreateInfoNVX}
+  sizeOf    _ = #{size      VkCuModuleCreateInfoNVX}
+  alignment _ = #{alignment VkCuModuleCreateInfoNVX}
 
   peek ptr = 
     VkCuModuleCreateInfoNVX
@@ -47,16 +47,16 @@ instance Storable VkCuModuleCreateInfoNVX where
     pokeField @"pData" ptr val
 
 instance Offset "sType" VkCuModuleCreateInfoNVX where
-  rawOffset = #{offset struct VkCuModuleCreateInfoNVX, sType}
+  rawOffset = #{offset VkCuModuleCreateInfoNVX, sType}
 
 instance Offset "pNext" VkCuModuleCreateInfoNVX where
-  rawOffset = #{offset struct VkCuModuleCreateInfoNVX, pNext}
+  rawOffset = #{offset VkCuModuleCreateInfoNVX, pNext}
 
 instance Offset "dataSize" VkCuModuleCreateInfoNVX where
-  rawOffset = #{offset struct VkCuModuleCreateInfoNVX, dataSize}
+  rawOffset = #{offset VkCuModuleCreateInfoNVX, dataSize}
 
 instance Offset "pData" VkCuModuleCreateInfoNVX where
-  rawOffset = #{offset struct VkCuModuleCreateInfoNVX, pData}
+  rawOffset = #{offset VkCuModuleCreateInfoNVX, pData}
 
 #else
 

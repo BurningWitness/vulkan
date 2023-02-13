@@ -30,8 +30,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkRenderPassCreationControlEXT" #-} VkRenderPa
          }
 
 instance Storable VkRenderPassCreationControlEXT where
-  sizeOf    _ = #{size      struct VkRenderPassCreationControlEXT}
-  alignment _ = #{alignment struct VkRenderPassCreationControlEXT}
+  sizeOf    _ = #{size      VkRenderPassCreationControlEXT}
+  alignment _ = #{alignment VkRenderPassCreationControlEXT}
 
   peek ptr = 
     VkRenderPassCreationControlEXT
@@ -45,13 +45,13 @@ instance Storable VkRenderPassCreationControlEXT where
     pokeField @"disallowMerging" ptr val
 
 instance Offset "sType" VkRenderPassCreationControlEXT where
-  rawOffset = #{offset struct VkRenderPassCreationControlEXT, sType}
+  rawOffset = #{offset VkRenderPassCreationControlEXT, sType}
 
 instance Offset "pNext" VkRenderPassCreationControlEXT where
-  rawOffset = #{offset struct VkRenderPassCreationControlEXT, pNext}
+  rawOffset = #{offset VkRenderPassCreationControlEXT, pNext}
 
 instance Offset "disallowMerging" VkRenderPassCreationControlEXT where
-  rawOffset = #{offset struct VkRenderPassCreationControlEXT, disallowMerging}
+  rawOffset = #{offset VkRenderPassCreationControlEXT, disallowMerging}
 
 #else
 

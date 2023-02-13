@@ -30,8 +30,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkImageStencilUsageCreateInfo" #-} VkImageSten
          }
 
 instance Storable VkImageStencilUsageCreateInfo where
-  sizeOf    _ = #{size      struct VkImageStencilUsageCreateInfo}
-  alignment _ = #{alignment struct VkImageStencilUsageCreateInfo}
+  sizeOf    _ = #{size      VkImageStencilUsageCreateInfo}
+  alignment _ = #{alignment VkImageStencilUsageCreateInfo}
 
   peek ptr = 
     VkImageStencilUsageCreateInfo
@@ -45,13 +45,13 @@ instance Storable VkImageStencilUsageCreateInfo where
     pokeField @"stencilUsage" ptr val
 
 instance Offset "sType" VkImageStencilUsageCreateInfo where
-  rawOffset = #{offset struct VkImageStencilUsageCreateInfo, sType}
+  rawOffset = #{offset VkImageStencilUsageCreateInfo, sType}
 
 instance Offset "pNext" VkImageStencilUsageCreateInfo where
-  rawOffset = #{offset struct VkImageStencilUsageCreateInfo, pNext}
+  rawOffset = #{offset VkImageStencilUsageCreateInfo, pNext}
 
 instance Offset "stencilUsage" VkImageStencilUsageCreateInfo where
-  rawOffset = #{offset struct VkImageStencilUsageCreateInfo, stencilUsage}
+  rawOffset = #{offset VkImageStencilUsageCreateInfo, stencilUsage}
 
 #else
 

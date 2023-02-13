@@ -44,8 +44,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkPhysicalDeviceVulkan13Features" #-} VkPhysic
          }
 
 instance Storable VkPhysicalDeviceVulkan13Features where
-  sizeOf    _ = #{size      struct VkPhysicalDeviceVulkan13Features}
-  alignment _ = #{alignment struct VkPhysicalDeviceVulkan13Features}
+  sizeOf    _ = #{size      VkPhysicalDeviceVulkan13Features}
+  alignment _ = #{alignment VkPhysicalDeviceVulkan13Features}
 
   peek ptr = 
     VkPhysicalDeviceVulkan13Features
@@ -87,55 +87,55 @@ instance Storable VkPhysicalDeviceVulkan13Features where
     pokeField @"maintenance4" ptr val
 
 instance Offset "sType" VkPhysicalDeviceVulkan13Features where
-  rawOffset = #{offset struct VkPhysicalDeviceVulkan13Features, sType}
+  rawOffset = #{offset VkPhysicalDeviceVulkan13Features, sType}
 
 instance Offset "pNext" VkPhysicalDeviceVulkan13Features where
-  rawOffset = #{offset struct VkPhysicalDeviceVulkan13Features, pNext}
+  rawOffset = #{offset VkPhysicalDeviceVulkan13Features, pNext}
 
 instance Offset "robustImageAccess" VkPhysicalDeviceVulkan13Features where
-  rawOffset = #{offset struct VkPhysicalDeviceVulkan13Features, robustImageAccess}
+  rawOffset = #{offset VkPhysicalDeviceVulkan13Features, robustImageAccess}
 
 instance Offset "inlineUniformBlock" VkPhysicalDeviceVulkan13Features where
-  rawOffset = #{offset struct VkPhysicalDeviceVulkan13Features, inlineUniformBlock}
+  rawOffset = #{offset VkPhysicalDeviceVulkan13Features, inlineUniformBlock}
 
 instance Offset "descriptorBindingInlineUniformBlockUpdateAfterBind" VkPhysicalDeviceVulkan13Features where
-  rawOffset = #{offset struct VkPhysicalDeviceVulkan13Features, descriptorBindingInlineUniformBlockUpdateAfterBind}
+  rawOffset = #{offset VkPhysicalDeviceVulkan13Features, descriptorBindingInlineUniformBlockUpdateAfterBind}
 
 instance Offset "pipelineCreationCacheControl" VkPhysicalDeviceVulkan13Features where
-  rawOffset = #{offset struct VkPhysicalDeviceVulkan13Features, pipelineCreationCacheControl}
+  rawOffset = #{offset VkPhysicalDeviceVulkan13Features, pipelineCreationCacheControl}
 
 instance Offset "privateData" VkPhysicalDeviceVulkan13Features where
-  rawOffset = #{offset struct VkPhysicalDeviceVulkan13Features, privateData}
+  rawOffset = #{offset VkPhysicalDeviceVulkan13Features, privateData}
 
 instance Offset "shaderDemoteToHelperInvocation" VkPhysicalDeviceVulkan13Features where
-  rawOffset = #{offset struct VkPhysicalDeviceVulkan13Features, shaderDemoteToHelperInvocation}
+  rawOffset = #{offset VkPhysicalDeviceVulkan13Features, shaderDemoteToHelperInvocation}
 
 instance Offset "shaderTerminateInvocation" VkPhysicalDeviceVulkan13Features where
-  rawOffset = #{offset struct VkPhysicalDeviceVulkan13Features, shaderTerminateInvocation}
+  rawOffset = #{offset VkPhysicalDeviceVulkan13Features, shaderTerminateInvocation}
 
 instance Offset "subgroupSizeControl" VkPhysicalDeviceVulkan13Features where
-  rawOffset = #{offset struct VkPhysicalDeviceVulkan13Features, subgroupSizeControl}
+  rawOffset = #{offset VkPhysicalDeviceVulkan13Features, subgroupSizeControl}
 
 instance Offset "computeFullSubgroups" VkPhysicalDeviceVulkan13Features where
-  rawOffset = #{offset struct VkPhysicalDeviceVulkan13Features, computeFullSubgroups}
+  rawOffset = #{offset VkPhysicalDeviceVulkan13Features, computeFullSubgroups}
 
 instance Offset "synchronization2" VkPhysicalDeviceVulkan13Features where
-  rawOffset = #{offset struct VkPhysicalDeviceVulkan13Features, synchronization2}
+  rawOffset = #{offset VkPhysicalDeviceVulkan13Features, synchronization2}
 
 instance Offset "textureCompressionASTC_HDR" VkPhysicalDeviceVulkan13Features where
-  rawOffset = #{offset struct VkPhysicalDeviceVulkan13Features, textureCompressionASTC_HDR}
+  rawOffset = #{offset VkPhysicalDeviceVulkan13Features, textureCompressionASTC_HDR}
 
 instance Offset "shaderZeroInitializeWorkgroupMemory" VkPhysicalDeviceVulkan13Features where
-  rawOffset = #{offset struct VkPhysicalDeviceVulkan13Features, shaderZeroInitializeWorkgroupMemory}
+  rawOffset = #{offset VkPhysicalDeviceVulkan13Features, shaderZeroInitializeWorkgroupMemory}
 
 instance Offset "dynamicRendering" VkPhysicalDeviceVulkan13Features where
-  rawOffset = #{offset struct VkPhysicalDeviceVulkan13Features, dynamicRendering}
+  rawOffset = #{offset VkPhysicalDeviceVulkan13Features, dynamicRendering}
 
 instance Offset "shaderIntegerDotProduct" VkPhysicalDeviceVulkan13Features where
-  rawOffset = #{offset struct VkPhysicalDeviceVulkan13Features, shaderIntegerDotProduct}
+  rawOffset = #{offset VkPhysicalDeviceVulkan13Features, shaderIntegerDotProduct}
 
 instance Offset "maintenance4" VkPhysicalDeviceVulkan13Features where
-  rawOffset = #{offset struct VkPhysicalDeviceVulkan13Features, maintenance4}
+  rawOffset = #{offset VkPhysicalDeviceVulkan13Features, maintenance4}
 
 #else
 

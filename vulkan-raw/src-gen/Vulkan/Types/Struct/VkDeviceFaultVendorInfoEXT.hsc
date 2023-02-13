@@ -28,8 +28,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkDeviceFaultVendorInfoEXT" #-} VkDeviceFaultV
          }
 
 instance Storable VkDeviceFaultVendorInfoEXT where
-  sizeOf    _ = #{size      struct VkDeviceFaultVendorInfoEXT}
-  alignment _ = #{alignment struct VkDeviceFaultVendorInfoEXT}
+  sizeOf    _ = #{size      VkDeviceFaultVendorInfoEXT}
+  alignment _ = #{alignment VkDeviceFaultVendorInfoEXT}
 
   peek ptr = 
     VkDeviceFaultVendorInfoEXT
@@ -43,13 +43,13 @@ instance Storable VkDeviceFaultVendorInfoEXT where
     pokeField @"vendorFaultData" ptr val
 
 instance Offset "description" VkDeviceFaultVendorInfoEXT where
-  rawOffset = #{offset struct VkDeviceFaultVendorInfoEXT, description}
+  rawOffset = #{offset VkDeviceFaultVendorInfoEXT, description}
 
 instance Offset "vendorFaultCode" VkDeviceFaultVendorInfoEXT where
-  rawOffset = #{offset struct VkDeviceFaultVendorInfoEXT, vendorFaultCode}
+  rawOffset = #{offset VkDeviceFaultVendorInfoEXT, vendorFaultCode}
 
 instance Offset "vendorFaultData" VkDeviceFaultVendorInfoEXT where
-  rawOffset = #{offset struct VkDeviceFaultVendorInfoEXT, vendorFaultData}
+  rawOffset = #{offset VkDeviceFaultVendorInfoEXT, vendorFaultData}
 
 #else
 

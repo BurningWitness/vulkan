@@ -1,3 +1,7 @@
+{-# LANGUAGE CApiFFI #-}
+{-# LANGUAGE CPP #-}
+{-# LANGUAGE MagicHash #-}
+
 #include <vulkan/vulkan.h>
 
 #if VK_KHR_sampler_ycbcr_conversion
@@ -9,17 +13,18 @@ import Data.Word
 import GHC.Ptr
 import Vulkan.Types.Handle
 import Vulkan.Types.Struct.VkAllocationCallbacks
-import Vulkan.Types.Command.VkDestroySamplerYcbcrConversion
 import Vulkan.Types.VkFun
 
 
 
-type VkDestroySamplerYcbcrConversionKHR = VkDestroySamplerYcbcrConversion
+type VkDestroySamplerYcbcrConversionKHR =
+          VkDevice -- ^ device
+       -> VkSamplerYcbcrConversion -- ^ ycbcrConversion
+       -> Ptr VkAllocationCallbacks -- ^ pAllocator
+       -> IO ()
 
-vkFunDestroySamplerYcbcrConversionKHR
-  :: VkFun VkDestroySamplerYcbcrConversionKHR
-vkFunDestroySamplerYcbcrConversionKHR = vkFunDestroySamplerYcbcrConversion
-
+vkFunDestroySamplerYcbcrConversionKHR :: VkFun VkDestroySamplerYcbcrConversionKHR
+vkFunDestroySamplerYcbcrConversionKHR = VkFun (Ptr ("vkDestroySamplerYcbcrConversionKHR\0"##))
 
 #else
 

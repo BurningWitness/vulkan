@@ -30,8 +30,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkDescriptorSetVariableDescriptorCountAllocate
          }
 
 instance Storable VkDescriptorSetVariableDescriptorCountAllocateInfo where
-  sizeOf    _ = #{size      struct VkDescriptorSetVariableDescriptorCountAllocateInfo}
-  alignment _ = #{alignment struct VkDescriptorSetVariableDescriptorCountAllocateInfo}
+  sizeOf    _ = #{size      VkDescriptorSetVariableDescriptorCountAllocateInfo}
+  alignment _ = #{alignment VkDescriptorSetVariableDescriptorCountAllocateInfo}
 
   peek ptr = 
     VkDescriptorSetVariableDescriptorCountAllocateInfo
@@ -47,16 +47,16 @@ instance Storable VkDescriptorSetVariableDescriptorCountAllocateInfo where
     pokeField @"pDescriptorCounts" ptr val
 
 instance Offset "sType" VkDescriptorSetVariableDescriptorCountAllocateInfo where
-  rawOffset = #{offset struct VkDescriptorSetVariableDescriptorCountAllocateInfo, sType}
+  rawOffset = #{offset VkDescriptorSetVariableDescriptorCountAllocateInfo, sType}
 
 instance Offset "pNext" VkDescriptorSetVariableDescriptorCountAllocateInfo where
-  rawOffset = #{offset struct VkDescriptorSetVariableDescriptorCountAllocateInfo, pNext}
+  rawOffset = #{offset VkDescriptorSetVariableDescriptorCountAllocateInfo, pNext}
 
 instance Offset "descriptorSetCount" VkDescriptorSetVariableDescriptorCountAllocateInfo where
-  rawOffset = #{offset struct VkDescriptorSetVariableDescriptorCountAllocateInfo, descriptorSetCount}
+  rawOffset = #{offset VkDescriptorSetVariableDescriptorCountAllocateInfo, descriptorSetCount}
 
 instance Offset "pDescriptorCounts" VkDescriptorSetVariableDescriptorCountAllocateInfo where
-  rawOffset = #{offset struct VkDescriptorSetVariableDescriptorCountAllocateInfo, pDescriptorCounts}
+  rawOffset = #{offset VkDescriptorSetVariableDescriptorCountAllocateInfo, pDescriptorCounts}
 
 #else
 

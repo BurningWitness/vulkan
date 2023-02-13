@@ -35,8 +35,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkVideoEncodeRateControlInfoKHR" #-} VkVideoEn
          }
 
 instance Storable VkVideoEncodeRateControlInfoKHR where
-  sizeOf    _ = #{size      struct VkVideoEncodeRateControlInfoKHR}
-  alignment _ = #{alignment struct VkVideoEncodeRateControlInfoKHR}
+  sizeOf    _ = #{size      VkVideoEncodeRateControlInfoKHR}
+  alignment _ = #{alignment VkVideoEncodeRateControlInfoKHR}
 
   peek ptr = 
     VkVideoEncodeRateControlInfoKHR
@@ -56,22 +56,22 @@ instance Storable VkVideoEncodeRateControlInfoKHR where
     pokeField @"pLayerConfigs" ptr val
 
 instance Offset "sType" VkVideoEncodeRateControlInfoKHR where
-  rawOffset = #{offset struct VkVideoEncodeRateControlInfoKHR, sType}
+  rawOffset = #{offset VkVideoEncodeRateControlInfoKHR, sType}
 
 instance Offset "pNext" VkVideoEncodeRateControlInfoKHR where
-  rawOffset = #{offset struct VkVideoEncodeRateControlInfoKHR, pNext}
+  rawOffset = #{offset VkVideoEncodeRateControlInfoKHR, pNext}
 
 instance Offset "flags" VkVideoEncodeRateControlInfoKHR where
-  rawOffset = #{offset struct VkVideoEncodeRateControlInfoKHR, flags}
+  rawOffset = #{offset VkVideoEncodeRateControlInfoKHR, flags}
 
 instance Offset "rateControlMode" VkVideoEncodeRateControlInfoKHR where
-  rawOffset = #{offset struct VkVideoEncodeRateControlInfoKHR, rateControlMode}
+  rawOffset = #{offset VkVideoEncodeRateControlInfoKHR, rateControlMode}
 
 instance Offset "layerCount" VkVideoEncodeRateControlInfoKHR where
-  rawOffset = #{offset struct VkVideoEncodeRateControlInfoKHR, layerCount}
+  rawOffset = #{offset VkVideoEncodeRateControlInfoKHR, layerCount}
 
 instance Offset "pLayerConfigs" VkVideoEncodeRateControlInfoKHR where
-  rawOffset = #{offset struct VkVideoEncodeRateControlInfoKHR, pLayerConfigs}
+  rawOffset = #{offset VkVideoEncodeRateControlInfoKHR, pLayerConfigs}
 
 #else
 

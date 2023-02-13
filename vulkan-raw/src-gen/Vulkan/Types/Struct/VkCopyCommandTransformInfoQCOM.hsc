@@ -30,8 +30,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkCopyCommandTransformInfoQCOM" #-} VkCopyComm
          }
 
 instance Storable VkCopyCommandTransformInfoQCOM where
-  sizeOf    _ = #{size      struct VkCopyCommandTransformInfoQCOM}
-  alignment _ = #{alignment struct VkCopyCommandTransformInfoQCOM}
+  sizeOf    _ = #{size      VkCopyCommandTransformInfoQCOM}
+  alignment _ = #{alignment VkCopyCommandTransformInfoQCOM}
 
   peek ptr = 
     VkCopyCommandTransformInfoQCOM
@@ -45,13 +45,13 @@ instance Storable VkCopyCommandTransformInfoQCOM where
     pokeField @"transform" ptr val
 
 instance Offset "sType" VkCopyCommandTransformInfoQCOM where
-  rawOffset = #{offset struct VkCopyCommandTransformInfoQCOM, sType}
+  rawOffset = #{offset VkCopyCommandTransformInfoQCOM, sType}
 
 instance Offset "pNext" VkCopyCommandTransformInfoQCOM where
-  rawOffset = #{offset struct VkCopyCommandTransformInfoQCOM, pNext}
+  rawOffset = #{offset VkCopyCommandTransformInfoQCOM, pNext}
 
 instance Offset "transform" VkCopyCommandTransformInfoQCOM where
-  rawOffset = #{offset struct VkCopyCommandTransformInfoQCOM, transform}
+  rawOffset = #{offset VkCopyCommandTransformInfoQCOM, transform}
 
 #else
 

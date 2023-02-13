@@ -62,8 +62,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkPhysicalDeviceDescriptorBufferPropertiesEXT"
          }
 
 instance Storable VkPhysicalDeviceDescriptorBufferPropertiesEXT where
-  sizeOf    _ = #{size      struct VkPhysicalDeviceDescriptorBufferPropertiesEXT}
-  alignment _ = #{alignment struct VkPhysicalDeviceDescriptorBufferPropertiesEXT}
+  sizeOf    _ = #{size      VkPhysicalDeviceDescriptorBufferPropertiesEXT}
+  alignment _ = #{alignment VkPhysicalDeviceDescriptorBufferPropertiesEXT}
 
   peek ptr = 
     VkPhysicalDeviceDescriptorBufferPropertiesEXT
@@ -141,109 +141,109 @@ instance Storable VkPhysicalDeviceDescriptorBufferPropertiesEXT where
     pokeField @"descriptorBufferAddressSpaceSize" ptr val
 
 instance Offset "sType" VkPhysicalDeviceDescriptorBufferPropertiesEXT where
-  rawOffset = #{offset struct VkPhysicalDeviceDescriptorBufferPropertiesEXT, sType}
+  rawOffset = #{offset VkPhysicalDeviceDescriptorBufferPropertiesEXT, sType}
 
 instance Offset "pNext" VkPhysicalDeviceDescriptorBufferPropertiesEXT where
-  rawOffset = #{offset struct VkPhysicalDeviceDescriptorBufferPropertiesEXT, pNext}
+  rawOffset = #{offset VkPhysicalDeviceDescriptorBufferPropertiesEXT, pNext}
 
 instance Offset "combinedImageSamplerDescriptorSingleArray" VkPhysicalDeviceDescriptorBufferPropertiesEXT where
-  rawOffset = #{offset struct VkPhysicalDeviceDescriptorBufferPropertiesEXT, combinedImageSamplerDescriptorSingleArray}
+  rawOffset = #{offset VkPhysicalDeviceDescriptorBufferPropertiesEXT, combinedImageSamplerDescriptorSingleArray}
 
 instance Offset "bufferlessPushDescriptors" VkPhysicalDeviceDescriptorBufferPropertiesEXT where
-  rawOffset = #{offset struct VkPhysicalDeviceDescriptorBufferPropertiesEXT, bufferlessPushDescriptors}
+  rawOffset = #{offset VkPhysicalDeviceDescriptorBufferPropertiesEXT, bufferlessPushDescriptors}
 
 instance Offset "allowSamplerImageViewPostSubmitCreation" VkPhysicalDeviceDescriptorBufferPropertiesEXT where
-  rawOffset = #{offset struct VkPhysicalDeviceDescriptorBufferPropertiesEXT, allowSamplerImageViewPostSubmitCreation}
+  rawOffset = #{offset VkPhysicalDeviceDescriptorBufferPropertiesEXT, allowSamplerImageViewPostSubmitCreation}
 
 instance Offset "descriptorBufferOffsetAlignment" VkPhysicalDeviceDescriptorBufferPropertiesEXT where
-  rawOffset = #{offset struct VkPhysicalDeviceDescriptorBufferPropertiesEXT, descriptorBufferOffsetAlignment}
+  rawOffset = #{offset VkPhysicalDeviceDescriptorBufferPropertiesEXT, descriptorBufferOffsetAlignment}
 
 instance Offset "maxDescriptorBufferBindings" VkPhysicalDeviceDescriptorBufferPropertiesEXT where
-  rawOffset = #{offset struct VkPhysicalDeviceDescriptorBufferPropertiesEXT, maxDescriptorBufferBindings}
+  rawOffset = #{offset VkPhysicalDeviceDescriptorBufferPropertiesEXT, maxDescriptorBufferBindings}
 
 instance Offset "maxResourceDescriptorBufferBindings" VkPhysicalDeviceDescriptorBufferPropertiesEXT where
-  rawOffset = #{offset struct VkPhysicalDeviceDescriptorBufferPropertiesEXT, maxResourceDescriptorBufferBindings}
+  rawOffset = #{offset VkPhysicalDeviceDescriptorBufferPropertiesEXT, maxResourceDescriptorBufferBindings}
 
 instance Offset "maxSamplerDescriptorBufferBindings" VkPhysicalDeviceDescriptorBufferPropertiesEXT where
-  rawOffset = #{offset struct VkPhysicalDeviceDescriptorBufferPropertiesEXT, maxSamplerDescriptorBufferBindings}
+  rawOffset = #{offset VkPhysicalDeviceDescriptorBufferPropertiesEXT, maxSamplerDescriptorBufferBindings}
 
 instance Offset "maxEmbeddedImmutableSamplerBindings" VkPhysicalDeviceDescriptorBufferPropertiesEXT where
-  rawOffset = #{offset struct VkPhysicalDeviceDescriptorBufferPropertiesEXT, maxEmbeddedImmutableSamplerBindings}
+  rawOffset = #{offset VkPhysicalDeviceDescriptorBufferPropertiesEXT, maxEmbeddedImmutableSamplerBindings}
 
 instance Offset "maxEmbeddedImmutableSamplers" VkPhysicalDeviceDescriptorBufferPropertiesEXT where
-  rawOffset = #{offset struct VkPhysicalDeviceDescriptorBufferPropertiesEXT, maxEmbeddedImmutableSamplers}
+  rawOffset = #{offset VkPhysicalDeviceDescriptorBufferPropertiesEXT, maxEmbeddedImmutableSamplers}
 
 instance Offset "bufferCaptureReplayDescriptorDataSize" VkPhysicalDeviceDescriptorBufferPropertiesEXT where
-  rawOffset = #{offset struct VkPhysicalDeviceDescriptorBufferPropertiesEXT, bufferCaptureReplayDescriptorDataSize}
+  rawOffset = #{offset VkPhysicalDeviceDescriptorBufferPropertiesEXT, bufferCaptureReplayDescriptorDataSize}
 
 instance Offset "imageCaptureReplayDescriptorDataSize" VkPhysicalDeviceDescriptorBufferPropertiesEXT where
-  rawOffset = #{offset struct VkPhysicalDeviceDescriptorBufferPropertiesEXT, imageCaptureReplayDescriptorDataSize}
+  rawOffset = #{offset VkPhysicalDeviceDescriptorBufferPropertiesEXT, imageCaptureReplayDescriptorDataSize}
 
 instance Offset "imageViewCaptureReplayDescriptorDataSize" VkPhysicalDeviceDescriptorBufferPropertiesEXT where
-  rawOffset = #{offset struct VkPhysicalDeviceDescriptorBufferPropertiesEXT, imageViewCaptureReplayDescriptorDataSize}
+  rawOffset = #{offset VkPhysicalDeviceDescriptorBufferPropertiesEXT, imageViewCaptureReplayDescriptorDataSize}
 
 instance Offset "samplerCaptureReplayDescriptorDataSize" VkPhysicalDeviceDescriptorBufferPropertiesEXT where
-  rawOffset = #{offset struct VkPhysicalDeviceDescriptorBufferPropertiesEXT, samplerCaptureReplayDescriptorDataSize}
+  rawOffset = #{offset VkPhysicalDeviceDescriptorBufferPropertiesEXT, samplerCaptureReplayDescriptorDataSize}
 
 instance Offset "accelerationStructureCaptureReplayDescriptorDataSize" VkPhysicalDeviceDescriptorBufferPropertiesEXT where
-  rawOffset = #{offset struct VkPhysicalDeviceDescriptorBufferPropertiesEXT, accelerationStructureCaptureReplayDescriptorDataSize}
+  rawOffset = #{offset VkPhysicalDeviceDescriptorBufferPropertiesEXT, accelerationStructureCaptureReplayDescriptorDataSize}
 
 instance Offset "samplerDescriptorSize" VkPhysicalDeviceDescriptorBufferPropertiesEXT where
-  rawOffset = #{offset struct VkPhysicalDeviceDescriptorBufferPropertiesEXT, samplerDescriptorSize}
+  rawOffset = #{offset VkPhysicalDeviceDescriptorBufferPropertiesEXT, samplerDescriptorSize}
 
 instance Offset "combinedImageSamplerDescriptorSize" VkPhysicalDeviceDescriptorBufferPropertiesEXT where
-  rawOffset = #{offset struct VkPhysicalDeviceDescriptorBufferPropertiesEXT, combinedImageSamplerDescriptorSize}
+  rawOffset = #{offset VkPhysicalDeviceDescriptorBufferPropertiesEXT, combinedImageSamplerDescriptorSize}
 
 instance Offset "sampledImageDescriptorSize" VkPhysicalDeviceDescriptorBufferPropertiesEXT where
-  rawOffset = #{offset struct VkPhysicalDeviceDescriptorBufferPropertiesEXT, sampledImageDescriptorSize}
+  rawOffset = #{offset VkPhysicalDeviceDescriptorBufferPropertiesEXT, sampledImageDescriptorSize}
 
 instance Offset "storageImageDescriptorSize" VkPhysicalDeviceDescriptorBufferPropertiesEXT where
-  rawOffset = #{offset struct VkPhysicalDeviceDescriptorBufferPropertiesEXT, storageImageDescriptorSize}
+  rawOffset = #{offset VkPhysicalDeviceDescriptorBufferPropertiesEXT, storageImageDescriptorSize}
 
 instance Offset "uniformTexelBufferDescriptorSize" VkPhysicalDeviceDescriptorBufferPropertiesEXT where
-  rawOffset = #{offset struct VkPhysicalDeviceDescriptorBufferPropertiesEXT, uniformTexelBufferDescriptorSize}
+  rawOffset = #{offset VkPhysicalDeviceDescriptorBufferPropertiesEXT, uniformTexelBufferDescriptorSize}
 
 instance Offset "robustUniformTexelBufferDescriptorSize" VkPhysicalDeviceDescriptorBufferPropertiesEXT where
-  rawOffset = #{offset struct VkPhysicalDeviceDescriptorBufferPropertiesEXT, robustUniformTexelBufferDescriptorSize}
+  rawOffset = #{offset VkPhysicalDeviceDescriptorBufferPropertiesEXT, robustUniformTexelBufferDescriptorSize}
 
 instance Offset "storageTexelBufferDescriptorSize" VkPhysicalDeviceDescriptorBufferPropertiesEXT where
-  rawOffset = #{offset struct VkPhysicalDeviceDescriptorBufferPropertiesEXT, storageTexelBufferDescriptorSize}
+  rawOffset = #{offset VkPhysicalDeviceDescriptorBufferPropertiesEXT, storageTexelBufferDescriptorSize}
 
 instance Offset "robustStorageTexelBufferDescriptorSize" VkPhysicalDeviceDescriptorBufferPropertiesEXT where
-  rawOffset = #{offset struct VkPhysicalDeviceDescriptorBufferPropertiesEXT, robustStorageTexelBufferDescriptorSize}
+  rawOffset = #{offset VkPhysicalDeviceDescriptorBufferPropertiesEXT, robustStorageTexelBufferDescriptorSize}
 
 instance Offset "uniformBufferDescriptorSize" VkPhysicalDeviceDescriptorBufferPropertiesEXT where
-  rawOffset = #{offset struct VkPhysicalDeviceDescriptorBufferPropertiesEXT, uniformBufferDescriptorSize}
+  rawOffset = #{offset VkPhysicalDeviceDescriptorBufferPropertiesEXT, uniformBufferDescriptorSize}
 
 instance Offset "robustUniformBufferDescriptorSize" VkPhysicalDeviceDescriptorBufferPropertiesEXT where
-  rawOffset = #{offset struct VkPhysicalDeviceDescriptorBufferPropertiesEXT, robustUniformBufferDescriptorSize}
+  rawOffset = #{offset VkPhysicalDeviceDescriptorBufferPropertiesEXT, robustUniformBufferDescriptorSize}
 
 instance Offset "storageBufferDescriptorSize" VkPhysicalDeviceDescriptorBufferPropertiesEXT where
-  rawOffset = #{offset struct VkPhysicalDeviceDescriptorBufferPropertiesEXT, storageBufferDescriptorSize}
+  rawOffset = #{offset VkPhysicalDeviceDescriptorBufferPropertiesEXT, storageBufferDescriptorSize}
 
 instance Offset "robustStorageBufferDescriptorSize" VkPhysicalDeviceDescriptorBufferPropertiesEXT where
-  rawOffset = #{offset struct VkPhysicalDeviceDescriptorBufferPropertiesEXT, robustStorageBufferDescriptorSize}
+  rawOffset = #{offset VkPhysicalDeviceDescriptorBufferPropertiesEXT, robustStorageBufferDescriptorSize}
 
 instance Offset "inputAttachmentDescriptorSize" VkPhysicalDeviceDescriptorBufferPropertiesEXT where
-  rawOffset = #{offset struct VkPhysicalDeviceDescriptorBufferPropertiesEXT, inputAttachmentDescriptorSize}
+  rawOffset = #{offset VkPhysicalDeviceDescriptorBufferPropertiesEXT, inputAttachmentDescriptorSize}
 
 instance Offset "accelerationStructureDescriptorSize" VkPhysicalDeviceDescriptorBufferPropertiesEXT where
-  rawOffset = #{offset struct VkPhysicalDeviceDescriptorBufferPropertiesEXT, accelerationStructureDescriptorSize}
+  rawOffset = #{offset VkPhysicalDeviceDescriptorBufferPropertiesEXT, accelerationStructureDescriptorSize}
 
 instance Offset "maxSamplerDescriptorBufferRange" VkPhysicalDeviceDescriptorBufferPropertiesEXT where
-  rawOffset = #{offset struct VkPhysicalDeviceDescriptorBufferPropertiesEXT, maxSamplerDescriptorBufferRange}
+  rawOffset = #{offset VkPhysicalDeviceDescriptorBufferPropertiesEXT, maxSamplerDescriptorBufferRange}
 
 instance Offset "maxResourceDescriptorBufferRange" VkPhysicalDeviceDescriptorBufferPropertiesEXT where
-  rawOffset = #{offset struct VkPhysicalDeviceDescriptorBufferPropertiesEXT, maxResourceDescriptorBufferRange}
+  rawOffset = #{offset VkPhysicalDeviceDescriptorBufferPropertiesEXT, maxResourceDescriptorBufferRange}
 
 instance Offset "samplerDescriptorBufferAddressSpaceSize" VkPhysicalDeviceDescriptorBufferPropertiesEXT where
-  rawOffset = #{offset struct VkPhysicalDeviceDescriptorBufferPropertiesEXT, samplerDescriptorBufferAddressSpaceSize}
+  rawOffset = #{offset VkPhysicalDeviceDescriptorBufferPropertiesEXT, samplerDescriptorBufferAddressSpaceSize}
 
 instance Offset "resourceDescriptorBufferAddressSpaceSize" VkPhysicalDeviceDescriptorBufferPropertiesEXT where
-  rawOffset = #{offset struct VkPhysicalDeviceDescriptorBufferPropertiesEXT, resourceDescriptorBufferAddressSpaceSize}
+  rawOffset = #{offset VkPhysicalDeviceDescriptorBufferPropertiesEXT, resourceDescriptorBufferAddressSpaceSize}
 
 instance Offset "descriptorBufferAddressSpaceSize" VkPhysicalDeviceDescriptorBufferPropertiesEXT where
-  rawOffset = #{offset struct VkPhysicalDeviceDescriptorBufferPropertiesEXT, descriptorBufferAddressSpaceSize}
+  rawOffset = #{offset VkPhysicalDeviceDescriptorBufferPropertiesEXT, descriptorBufferAddressSpaceSize}
 
 #else
 

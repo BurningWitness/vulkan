@@ -59,8 +59,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkPhysicalDeviceShaderIntegerDotProductPropert
          }
 
 instance Storable VkPhysicalDeviceShaderIntegerDotProductProperties where
-  sizeOf    _ = #{size      struct VkPhysicalDeviceShaderIntegerDotProductProperties}
-  alignment _ = #{alignment struct VkPhysicalDeviceShaderIntegerDotProductProperties}
+  sizeOf    _ = #{size      VkPhysicalDeviceShaderIntegerDotProductProperties}
+  alignment _ = #{alignment VkPhysicalDeviceShaderIntegerDotProductProperties}
 
   peek ptr = 
     VkPhysicalDeviceShaderIntegerDotProductProperties
@@ -132,100 +132,100 @@ instance Storable VkPhysicalDeviceShaderIntegerDotProductProperties where
     pokeField @"integerDotProductAccumulatingSaturating64BitMixedSignednessAccelerated" ptr val
 
 instance Offset "sType" VkPhysicalDeviceShaderIntegerDotProductProperties where
-  rawOffset = #{offset struct VkPhysicalDeviceShaderIntegerDotProductProperties, sType}
+  rawOffset = #{offset VkPhysicalDeviceShaderIntegerDotProductProperties, sType}
 
 instance Offset "pNext" VkPhysicalDeviceShaderIntegerDotProductProperties where
-  rawOffset = #{offset struct VkPhysicalDeviceShaderIntegerDotProductProperties, pNext}
+  rawOffset = #{offset VkPhysicalDeviceShaderIntegerDotProductProperties, pNext}
 
 instance Offset "integerDotProduct8BitUnsignedAccelerated" VkPhysicalDeviceShaderIntegerDotProductProperties where
-  rawOffset = #{offset struct VkPhysicalDeviceShaderIntegerDotProductProperties, integerDotProduct8BitUnsignedAccelerated}
+  rawOffset = #{offset VkPhysicalDeviceShaderIntegerDotProductProperties, integerDotProduct8BitUnsignedAccelerated}
 
 instance Offset "integerDotProduct8BitSignedAccelerated" VkPhysicalDeviceShaderIntegerDotProductProperties where
-  rawOffset = #{offset struct VkPhysicalDeviceShaderIntegerDotProductProperties, integerDotProduct8BitSignedAccelerated}
+  rawOffset = #{offset VkPhysicalDeviceShaderIntegerDotProductProperties, integerDotProduct8BitSignedAccelerated}
 
 instance Offset "integerDotProduct8BitMixedSignednessAccelerated" VkPhysicalDeviceShaderIntegerDotProductProperties where
-  rawOffset = #{offset struct VkPhysicalDeviceShaderIntegerDotProductProperties, integerDotProduct8BitMixedSignednessAccelerated}
+  rawOffset = #{offset VkPhysicalDeviceShaderIntegerDotProductProperties, integerDotProduct8BitMixedSignednessAccelerated}
 
 instance Offset "integerDotProduct4x8BitPackedUnsignedAccelerated" VkPhysicalDeviceShaderIntegerDotProductProperties where
-  rawOffset = #{offset struct VkPhysicalDeviceShaderIntegerDotProductProperties, integerDotProduct4x8BitPackedUnsignedAccelerated}
+  rawOffset = #{offset VkPhysicalDeviceShaderIntegerDotProductProperties, integerDotProduct4x8BitPackedUnsignedAccelerated}
 
 instance Offset "integerDotProduct4x8BitPackedSignedAccelerated" VkPhysicalDeviceShaderIntegerDotProductProperties where
-  rawOffset = #{offset struct VkPhysicalDeviceShaderIntegerDotProductProperties, integerDotProduct4x8BitPackedSignedAccelerated}
+  rawOffset = #{offset VkPhysicalDeviceShaderIntegerDotProductProperties, integerDotProduct4x8BitPackedSignedAccelerated}
 
 instance Offset "integerDotProduct4x8BitPackedMixedSignednessAccelerated" VkPhysicalDeviceShaderIntegerDotProductProperties where
-  rawOffset = #{offset struct VkPhysicalDeviceShaderIntegerDotProductProperties, integerDotProduct4x8BitPackedMixedSignednessAccelerated}
+  rawOffset = #{offset VkPhysicalDeviceShaderIntegerDotProductProperties, integerDotProduct4x8BitPackedMixedSignednessAccelerated}
 
 instance Offset "integerDotProduct16BitUnsignedAccelerated" VkPhysicalDeviceShaderIntegerDotProductProperties where
-  rawOffset = #{offset struct VkPhysicalDeviceShaderIntegerDotProductProperties, integerDotProduct16BitUnsignedAccelerated}
+  rawOffset = #{offset VkPhysicalDeviceShaderIntegerDotProductProperties, integerDotProduct16BitUnsignedAccelerated}
 
 instance Offset "integerDotProduct16BitSignedAccelerated" VkPhysicalDeviceShaderIntegerDotProductProperties where
-  rawOffset = #{offset struct VkPhysicalDeviceShaderIntegerDotProductProperties, integerDotProduct16BitSignedAccelerated}
+  rawOffset = #{offset VkPhysicalDeviceShaderIntegerDotProductProperties, integerDotProduct16BitSignedAccelerated}
 
 instance Offset "integerDotProduct16BitMixedSignednessAccelerated" VkPhysicalDeviceShaderIntegerDotProductProperties where
-  rawOffset = #{offset struct VkPhysicalDeviceShaderIntegerDotProductProperties, integerDotProduct16BitMixedSignednessAccelerated}
+  rawOffset = #{offset VkPhysicalDeviceShaderIntegerDotProductProperties, integerDotProduct16BitMixedSignednessAccelerated}
 
 instance Offset "integerDotProduct32BitUnsignedAccelerated" VkPhysicalDeviceShaderIntegerDotProductProperties where
-  rawOffset = #{offset struct VkPhysicalDeviceShaderIntegerDotProductProperties, integerDotProduct32BitUnsignedAccelerated}
+  rawOffset = #{offset VkPhysicalDeviceShaderIntegerDotProductProperties, integerDotProduct32BitUnsignedAccelerated}
 
 instance Offset "integerDotProduct32BitSignedAccelerated" VkPhysicalDeviceShaderIntegerDotProductProperties where
-  rawOffset = #{offset struct VkPhysicalDeviceShaderIntegerDotProductProperties, integerDotProduct32BitSignedAccelerated}
+  rawOffset = #{offset VkPhysicalDeviceShaderIntegerDotProductProperties, integerDotProduct32BitSignedAccelerated}
 
 instance Offset "integerDotProduct32BitMixedSignednessAccelerated" VkPhysicalDeviceShaderIntegerDotProductProperties where
-  rawOffset = #{offset struct VkPhysicalDeviceShaderIntegerDotProductProperties, integerDotProduct32BitMixedSignednessAccelerated}
+  rawOffset = #{offset VkPhysicalDeviceShaderIntegerDotProductProperties, integerDotProduct32BitMixedSignednessAccelerated}
 
 instance Offset "integerDotProduct64BitUnsignedAccelerated" VkPhysicalDeviceShaderIntegerDotProductProperties where
-  rawOffset = #{offset struct VkPhysicalDeviceShaderIntegerDotProductProperties, integerDotProduct64BitUnsignedAccelerated}
+  rawOffset = #{offset VkPhysicalDeviceShaderIntegerDotProductProperties, integerDotProduct64BitUnsignedAccelerated}
 
 instance Offset "integerDotProduct64BitSignedAccelerated" VkPhysicalDeviceShaderIntegerDotProductProperties where
-  rawOffset = #{offset struct VkPhysicalDeviceShaderIntegerDotProductProperties, integerDotProduct64BitSignedAccelerated}
+  rawOffset = #{offset VkPhysicalDeviceShaderIntegerDotProductProperties, integerDotProduct64BitSignedAccelerated}
 
 instance Offset "integerDotProduct64BitMixedSignednessAccelerated" VkPhysicalDeviceShaderIntegerDotProductProperties where
-  rawOffset = #{offset struct VkPhysicalDeviceShaderIntegerDotProductProperties, integerDotProduct64BitMixedSignednessAccelerated}
+  rawOffset = #{offset VkPhysicalDeviceShaderIntegerDotProductProperties, integerDotProduct64BitMixedSignednessAccelerated}
 
 instance Offset "integerDotProductAccumulatingSaturating8BitUnsignedAccelerated" VkPhysicalDeviceShaderIntegerDotProductProperties where
-  rawOffset = #{offset struct VkPhysicalDeviceShaderIntegerDotProductProperties, integerDotProductAccumulatingSaturating8BitUnsignedAccelerated}
+  rawOffset = #{offset VkPhysicalDeviceShaderIntegerDotProductProperties, integerDotProductAccumulatingSaturating8BitUnsignedAccelerated}
 
 instance Offset "integerDotProductAccumulatingSaturating8BitSignedAccelerated" VkPhysicalDeviceShaderIntegerDotProductProperties where
-  rawOffset = #{offset struct VkPhysicalDeviceShaderIntegerDotProductProperties, integerDotProductAccumulatingSaturating8BitSignedAccelerated}
+  rawOffset = #{offset VkPhysicalDeviceShaderIntegerDotProductProperties, integerDotProductAccumulatingSaturating8BitSignedAccelerated}
 
 instance Offset "integerDotProductAccumulatingSaturating8BitMixedSignednessAccelerated" VkPhysicalDeviceShaderIntegerDotProductProperties where
-  rawOffset = #{offset struct VkPhysicalDeviceShaderIntegerDotProductProperties, integerDotProductAccumulatingSaturating8BitMixedSignednessAccelerated}
+  rawOffset = #{offset VkPhysicalDeviceShaderIntegerDotProductProperties, integerDotProductAccumulatingSaturating8BitMixedSignednessAccelerated}
 
 instance Offset "integerDotProductAccumulatingSaturating4x8BitPackedUnsignedAccelerated" VkPhysicalDeviceShaderIntegerDotProductProperties where
-  rawOffset = #{offset struct VkPhysicalDeviceShaderIntegerDotProductProperties, integerDotProductAccumulatingSaturating4x8BitPackedUnsignedAccelerated}
+  rawOffset = #{offset VkPhysicalDeviceShaderIntegerDotProductProperties, integerDotProductAccumulatingSaturating4x8BitPackedUnsignedAccelerated}
 
 instance Offset "integerDotProductAccumulatingSaturating4x8BitPackedSignedAccelerated" VkPhysicalDeviceShaderIntegerDotProductProperties where
-  rawOffset = #{offset struct VkPhysicalDeviceShaderIntegerDotProductProperties, integerDotProductAccumulatingSaturating4x8BitPackedSignedAccelerated}
+  rawOffset = #{offset VkPhysicalDeviceShaderIntegerDotProductProperties, integerDotProductAccumulatingSaturating4x8BitPackedSignedAccelerated}
 
 instance Offset "integerDotProductAccumulatingSaturating4x8BitPackedMixedSignednessAccelerated" VkPhysicalDeviceShaderIntegerDotProductProperties where
-  rawOffset = #{offset struct VkPhysicalDeviceShaderIntegerDotProductProperties, integerDotProductAccumulatingSaturating4x8BitPackedMixedSignednessAccelerated}
+  rawOffset = #{offset VkPhysicalDeviceShaderIntegerDotProductProperties, integerDotProductAccumulatingSaturating4x8BitPackedMixedSignednessAccelerated}
 
 instance Offset "integerDotProductAccumulatingSaturating16BitUnsignedAccelerated" VkPhysicalDeviceShaderIntegerDotProductProperties where
-  rawOffset = #{offset struct VkPhysicalDeviceShaderIntegerDotProductProperties, integerDotProductAccumulatingSaturating16BitUnsignedAccelerated}
+  rawOffset = #{offset VkPhysicalDeviceShaderIntegerDotProductProperties, integerDotProductAccumulatingSaturating16BitUnsignedAccelerated}
 
 instance Offset "integerDotProductAccumulatingSaturating16BitSignedAccelerated" VkPhysicalDeviceShaderIntegerDotProductProperties where
-  rawOffset = #{offset struct VkPhysicalDeviceShaderIntegerDotProductProperties, integerDotProductAccumulatingSaturating16BitSignedAccelerated}
+  rawOffset = #{offset VkPhysicalDeviceShaderIntegerDotProductProperties, integerDotProductAccumulatingSaturating16BitSignedAccelerated}
 
 instance Offset "integerDotProductAccumulatingSaturating16BitMixedSignednessAccelerated" VkPhysicalDeviceShaderIntegerDotProductProperties where
-  rawOffset = #{offset struct VkPhysicalDeviceShaderIntegerDotProductProperties, integerDotProductAccumulatingSaturating16BitMixedSignednessAccelerated}
+  rawOffset = #{offset VkPhysicalDeviceShaderIntegerDotProductProperties, integerDotProductAccumulatingSaturating16BitMixedSignednessAccelerated}
 
 instance Offset "integerDotProductAccumulatingSaturating32BitUnsignedAccelerated" VkPhysicalDeviceShaderIntegerDotProductProperties where
-  rawOffset = #{offset struct VkPhysicalDeviceShaderIntegerDotProductProperties, integerDotProductAccumulatingSaturating32BitUnsignedAccelerated}
+  rawOffset = #{offset VkPhysicalDeviceShaderIntegerDotProductProperties, integerDotProductAccumulatingSaturating32BitUnsignedAccelerated}
 
 instance Offset "integerDotProductAccumulatingSaturating32BitSignedAccelerated" VkPhysicalDeviceShaderIntegerDotProductProperties where
-  rawOffset = #{offset struct VkPhysicalDeviceShaderIntegerDotProductProperties, integerDotProductAccumulatingSaturating32BitSignedAccelerated}
+  rawOffset = #{offset VkPhysicalDeviceShaderIntegerDotProductProperties, integerDotProductAccumulatingSaturating32BitSignedAccelerated}
 
 instance Offset "integerDotProductAccumulatingSaturating32BitMixedSignednessAccelerated" VkPhysicalDeviceShaderIntegerDotProductProperties where
-  rawOffset = #{offset struct VkPhysicalDeviceShaderIntegerDotProductProperties, integerDotProductAccumulatingSaturating32BitMixedSignednessAccelerated}
+  rawOffset = #{offset VkPhysicalDeviceShaderIntegerDotProductProperties, integerDotProductAccumulatingSaturating32BitMixedSignednessAccelerated}
 
 instance Offset "integerDotProductAccumulatingSaturating64BitUnsignedAccelerated" VkPhysicalDeviceShaderIntegerDotProductProperties where
-  rawOffset = #{offset struct VkPhysicalDeviceShaderIntegerDotProductProperties, integerDotProductAccumulatingSaturating64BitUnsignedAccelerated}
+  rawOffset = #{offset VkPhysicalDeviceShaderIntegerDotProductProperties, integerDotProductAccumulatingSaturating64BitUnsignedAccelerated}
 
 instance Offset "integerDotProductAccumulatingSaturating64BitSignedAccelerated" VkPhysicalDeviceShaderIntegerDotProductProperties where
-  rawOffset = #{offset struct VkPhysicalDeviceShaderIntegerDotProductProperties, integerDotProductAccumulatingSaturating64BitSignedAccelerated}
+  rawOffset = #{offset VkPhysicalDeviceShaderIntegerDotProductProperties, integerDotProductAccumulatingSaturating64BitSignedAccelerated}
 
 instance Offset "integerDotProductAccumulatingSaturating64BitMixedSignednessAccelerated" VkPhysicalDeviceShaderIntegerDotProductProperties where
-  rawOffset = #{offset struct VkPhysicalDeviceShaderIntegerDotProductProperties, integerDotProductAccumulatingSaturating64BitMixedSignednessAccelerated}
+  rawOffset = #{offset VkPhysicalDeviceShaderIntegerDotProductProperties, integerDotProductAccumulatingSaturating64BitMixedSignednessAccelerated}
 
 #else
 

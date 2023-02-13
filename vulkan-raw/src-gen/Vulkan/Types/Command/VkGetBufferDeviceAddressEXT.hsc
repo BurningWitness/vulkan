@@ -1,3 +1,7 @@
+{-# LANGUAGE CApiFFI #-}
+{-# LANGUAGE CPP #-}
+{-# LANGUAGE MagicHash #-}
+
 #include <vulkan/vulkan.h>
 
 #if VK_EXT_buffer_device_address
@@ -10,17 +14,17 @@ import GHC.Ptr
 import Vulkan.Types.Base
 import Vulkan.Types.Handle
 import Vulkan.Types.Struct.VkBufferDeviceAddressInfo
-import Vulkan.Types.Command.VkGetBufferDeviceAddress
 import Vulkan.Types.VkFun
 
 
 
-type VkGetBufferDeviceAddressEXT = VkGetBufferDeviceAddress
+type VkGetBufferDeviceAddressEXT =
+          VkDevice -- ^ device
+       -> Ptr VkBufferDeviceAddressInfo -- ^ pInfo
+       -> IO VkDeviceAddress
 
-vkFunGetBufferDeviceAddressEXT
-  :: VkFun VkGetBufferDeviceAddressEXT
-vkFunGetBufferDeviceAddressEXT = vkFunGetBufferDeviceAddress
-
+vkFunGetBufferDeviceAddressEXT :: VkFun VkGetBufferDeviceAddressEXT
+vkFunGetBufferDeviceAddressEXT = VkFun (Ptr ("vkGetBufferDeviceAddressEXT\0"##))
 
 #else
 

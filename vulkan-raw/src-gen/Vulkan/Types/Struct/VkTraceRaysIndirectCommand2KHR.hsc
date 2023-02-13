@@ -40,8 +40,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkTraceRaysIndirectCommand2KHR" #-} VkTraceRay
          }
 
 instance Storable VkTraceRaysIndirectCommand2KHR where
-  sizeOf    _ = #{size      struct VkTraceRaysIndirectCommand2KHR}
-  alignment _ = #{alignment struct VkTraceRaysIndirectCommand2KHR}
+  sizeOf    _ = #{size      VkTraceRaysIndirectCommand2KHR}
+  alignment _ = #{alignment VkTraceRaysIndirectCommand2KHR}
 
   peek ptr = 
     VkTraceRaysIndirectCommand2KHR
@@ -77,46 +77,46 @@ instance Storable VkTraceRaysIndirectCommand2KHR where
     pokeField @"depth" ptr val
 
 instance Offset "raygenShaderRecordAddress" VkTraceRaysIndirectCommand2KHR where
-  rawOffset = #{offset struct VkTraceRaysIndirectCommand2KHR, raygenShaderRecordAddress}
+  rawOffset = #{offset VkTraceRaysIndirectCommand2KHR, raygenShaderRecordAddress}
 
 instance Offset "raygenShaderRecordSize" VkTraceRaysIndirectCommand2KHR where
-  rawOffset = #{offset struct VkTraceRaysIndirectCommand2KHR, raygenShaderRecordSize}
+  rawOffset = #{offset VkTraceRaysIndirectCommand2KHR, raygenShaderRecordSize}
 
 instance Offset "missShaderBindingTableAddress" VkTraceRaysIndirectCommand2KHR where
-  rawOffset = #{offset struct VkTraceRaysIndirectCommand2KHR, missShaderBindingTableAddress}
+  rawOffset = #{offset VkTraceRaysIndirectCommand2KHR, missShaderBindingTableAddress}
 
 instance Offset "missShaderBindingTableSize" VkTraceRaysIndirectCommand2KHR where
-  rawOffset = #{offset struct VkTraceRaysIndirectCommand2KHR, missShaderBindingTableSize}
+  rawOffset = #{offset VkTraceRaysIndirectCommand2KHR, missShaderBindingTableSize}
 
 instance Offset "missShaderBindingTableStride" VkTraceRaysIndirectCommand2KHR where
-  rawOffset = #{offset struct VkTraceRaysIndirectCommand2KHR, missShaderBindingTableStride}
+  rawOffset = #{offset VkTraceRaysIndirectCommand2KHR, missShaderBindingTableStride}
 
 instance Offset "hitShaderBindingTableAddress" VkTraceRaysIndirectCommand2KHR where
-  rawOffset = #{offset struct VkTraceRaysIndirectCommand2KHR, hitShaderBindingTableAddress}
+  rawOffset = #{offset VkTraceRaysIndirectCommand2KHR, hitShaderBindingTableAddress}
 
 instance Offset "hitShaderBindingTableSize" VkTraceRaysIndirectCommand2KHR where
-  rawOffset = #{offset struct VkTraceRaysIndirectCommand2KHR, hitShaderBindingTableSize}
+  rawOffset = #{offset VkTraceRaysIndirectCommand2KHR, hitShaderBindingTableSize}
 
 instance Offset "hitShaderBindingTableStride" VkTraceRaysIndirectCommand2KHR where
-  rawOffset = #{offset struct VkTraceRaysIndirectCommand2KHR, hitShaderBindingTableStride}
+  rawOffset = #{offset VkTraceRaysIndirectCommand2KHR, hitShaderBindingTableStride}
 
 instance Offset "callableShaderBindingTableAddress" VkTraceRaysIndirectCommand2KHR where
-  rawOffset = #{offset struct VkTraceRaysIndirectCommand2KHR, callableShaderBindingTableAddress}
+  rawOffset = #{offset VkTraceRaysIndirectCommand2KHR, callableShaderBindingTableAddress}
 
 instance Offset "callableShaderBindingTableSize" VkTraceRaysIndirectCommand2KHR where
-  rawOffset = #{offset struct VkTraceRaysIndirectCommand2KHR, callableShaderBindingTableSize}
+  rawOffset = #{offset VkTraceRaysIndirectCommand2KHR, callableShaderBindingTableSize}
 
 instance Offset "callableShaderBindingTableStride" VkTraceRaysIndirectCommand2KHR where
-  rawOffset = #{offset struct VkTraceRaysIndirectCommand2KHR, callableShaderBindingTableStride}
+  rawOffset = #{offset VkTraceRaysIndirectCommand2KHR, callableShaderBindingTableStride}
 
 instance Offset "width" VkTraceRaysIndirectCommand2KHR where
-  rawOffset = #{offset struct VkTraceRaysIndirectCommand2KHR, width}
+  rawOffset = #{offset VkTraceRaysIndirectCommand2KHR, width}
 
 instance Offset "height" VkTraceRaysIndirectCommand2KHR where
-  rawOffset = #{offset struct VkTraceRaysIndirectCommand2KHR, height}
+  rawOffset = #{offset VkTraceRaysIndirectCommand2KHR, height}
 
 instance Offset "depth" VkTraceRaysIndirectCommand2KHR where
-  rawOffset = #{offset struct VkTraceRaysIndirectCommand2KHR, depth}
+  rawOffset = #{offset VkTraceRaysIndirectCommand2KHR, depth}
 
 #else
 

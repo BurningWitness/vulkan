@@ -30,8 +30,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkRayTracingPipelineInterfaceCreateInfoKHR" #-
          }
 
 instance Storable VkRayTracingPipelineInterfaceCreateInfoKHR where
-  sizeOf    _ = #{size      struct VkRayTracingPipelineInterfaceCreateInfoKHR}
-  alignment _ = #{alignment struct VkRayTracingPipelineInterfaceCreateInfoKHR}
+  sizeOf    _ = #{size      VkRayTracingPipelineInterfaceCreateInfoKHR}
+  alignment _ = #{alignment VkRayTracingPipelineInterfaceCreateInfoKHR}
 
   peek ptr = 
     VkRayTracingPipelineInterfaceCreateInfoKHR
@@ -47,16 +47,16 @@ instance Storable VkRayTracingPipelineInterfaceCreateInfoKHR where
     pokeField @"maxPipelineRayHitAttributeSize" ptr val
 
 instance Offset "sType" VkRayTracingPipelineInterfaceCreateInfoKHR where
-  rawOffset = #{offset struct VkRayTracingPipelineInterfaceCreateInfoKHR, sType}
+  rawOffset = #{offset VkRayTracingPipelineInterfaceCreateInfoKHR, sType}
 
 instance Offset "pNext" VkRayTracingPipelineInterfaceCreateInfoKHR where
-  rawOffset = #{offset struct VkRayTracingPipelineInterfaceCreateInfoKHR, pNext}
+  rawOffset = #{offset VkRayTracingPipelineInterfaceCreateInfoKHR, pNext}
 
 instance Offset "maxPipelineRayPayloadSize" VkRayTracingPipelineInterfaceCreateInfoKHR where
-  rawOffset = #{offset struct VkRayTracingPipelineInterfaceCreateInfoKHR, maxPipelineRayPayloadSize}
+  rawOffset = #{offset VkRayTracingPipelineInterfaceCreateInfoKHR, maxPipelineRayPayloadSize}
 
 instance Offset "maxPipelineRayHitAttributeSize" VkRayTracingPipelineInterfaceCreateInfoKHR where
-  rawOffset = #{offset struct VkRayTracingPipelineInterfaceCreateInfoKHR, maxPipelineRayHitAttributeSize}
+  rawOffset = #{offset VkRayTracingPipelineInterfaceCreateInfoKHR, maxPipelineRayHitAttributeSize}
 
 #else
 

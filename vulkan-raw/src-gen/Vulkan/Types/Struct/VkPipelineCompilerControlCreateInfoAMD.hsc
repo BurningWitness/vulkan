@@ -30,8 +30,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkPipelineCompilerControlCreateInfoAMD" #-} Vk
          }
 
 instance Storable VkPipelineCompilerControlCreateInfoAMD where
-  sizeOf    _ = #{size      struct VkPipelineCompilerControlCreateInfoAMD}
-  alignment _ = #{alignment struct VkPipelineCompilerControlCreateInfoAMD}
+  sizeOf    _ = #{size      VkPipelineCompilerControlCreateInfoAMD}
+  alignment _ = #{alignment VkPipelineCompilerControlCreateInfoAMD}
 
   peek ptr = 
     VkPipelineCompilerControlCreateInfoAMD
@@ -45,13 +45,13 @@ instance Storable VkPipelineCompilerControlCreateInfoAMD where
     pokeField @"compilerControlFlags" ptr val
 
 instance Offset "sType" VkPipelineCompilerControlCreateInfoAMD where
-  rawOffset = #{offset struct VkPipelineCompilerControlCreateInfoAMD, sType}
+  rawOffset = #{offset VkPipelineCompilerControlCreateInfoAMD, sType}
 
 instance Offset "pNext" VkPipelineCompilerControlCreateInfoAMD where
-  rawOffset = #{offset struct VkPipelineCompilerControlCreateInfoAMD, pNext}
+  rawOffset = #{offset VkPipelineCompilerControlCreateInfoAMD, pNext}
 
 instance Offset "compilerControlFlags" VkPipelineCompilerControlCreateInfoAMD where
-  rawOffset = #{offset struct VkPipelineCompilerControlCreateInfoAMD, compilerControlFlags}
+  rawOffset = #{offset VkPipelineCompilerControlCreateInfoAMD, compilerControlFlags}
 
 #else
 

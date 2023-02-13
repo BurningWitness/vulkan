@@ -36,8 +36,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkPhysicalDeviceRayTracingPropertiesNV" #-} Vk
          }
 
 instance Storable VkPhysicalDeviceRayTracingPropertiesNV where
-  sizeOf    _ = #{size      struct VkPhysicalDeviceRayTracingPropertiesNV}
-  alignment _ = #{alignment struct VkPhysicalDeviceRayTracingPropertiesNV}
+  sizeOf    _ = #{size      VkPhysicalDeviceRayTracingPropertiesNV}
+  alignment _ = #{alignment VkPhysicalDeviceRayTracingPropertiesNV}
 
   peek ptr = 
     VkPhysicalDeviceRayTracingPropertiesNV
@@ -65,34 +65,34 @@ instance Storable VkPhysicalDeviceRayTracingPropertiesNV where
     pokeField @"maxDescriptorSetAccelerationStructures" ptr val
 
 instance Offset "sType" VkPhysicalDeviceRayTracingPropertiesNV where
-  rawOffset = #{offset struct VkPhysicalDeviceRayTracingPropertiesNV, sType}
+  rawOffset = #{offset VkPhysicalDeviceRayTracingPropertiesNV, sType}
 
 instance Offset "pNext" VkPhysicalDeviceRayTracingPropertiesNV where
-  rawOffset = #{offset struct VkPhysicalDeviceRayTracingPropertiesNV, pNext}
+  rawOffset = #{offset VkPhysicalDeviceRayTracingPropertiesNV, pNext}
 
 instance Offset "shaderGroupHandleSize" VkPhysicalDeviceRayTracingPropertiesNV where
-  rawOffset = #{offset struct VkPhysicalDeviceRayTracingPropertiesNV, shaderGroupHandleSize}
+  rawOffset = #{offset VkPhysicalDeviceRayTracingPropertiesNV, shaderGroupHandleSize}
 
 instance Offset "maxRecursionDepth" VkPhysicalDeviceRayTracingPropertiesNV where
-  rawOffset = #{offset struct VkPhysicalDeviceRayTracingPropertiesNV, maxRecursionDepth}
+  rawOffset = #{offset VkPhysicalDeviceRayTracingPropertiesNV, maxRecursionDepth}
 
 instance Offset "maxShaderGroupStride" VkPhysicalDeviceRayTracingPropertiesNV where
-  rawOffset = #{offset struct VkPhysicalDeviceRayTracingPropertiesNV, maxShaderGroupStride}
+  rawOffset = #{offset VkPhysicalDeviceRayTracingPropertiesNV, maxShaderGroupStride}
 
 instance Offset "shaderGroupBaseAlignment" VkPhysicalDeviceRayTracingPropertiesNV where
-  rawOffset = #{offset struct VkPhysicalDeviceRayTracingPropertiesNV, shaderGroupBaseAlignment}
+  rawOffset = #{offset VkPhysicalDeviceRayTracingPropertiesNV, shaderGroupBaseAlignment}
 
 instance Offset "maxGeometryCount" VkPhysicalDeviceRayTracingPropertiesNV where
-  rawOffset = #{offset struct VkPhysicalDeviceRayTracingPropertiesNV, maxGeometryCount}
+  rawOffset = #{offset VkPhysicalDeviceRayTracingPropertiesNV, maxGeometryCount}
 
 instance Offset "maxInstanceCount" VkPhysicalDeviceRayTracingPropertiesNV where
-  rawOffset = #{offset struct VkPhysicalDeviceRayTracingPropertiesNV, maxInstanceCount}
+  rawOffset = #{offset VkPhysicalDeviceRayTracingPropertiesNV, maxInstanceCount}
 
 instance Offset "maxTriangleCount" VkPhysicalDeviceRayTracingPropertiesNV where
-  rawOffset = #{offset struct VkPhysicalDeviceRayTracingPropertiesNV, maxTriangleCount}
+  rawOffset = #{offset VkPhysicalDeviceRayTracingPropertiesNV, maxTriangleCount}
 
 instance Offset "maxDescriptorSetAccelerationStructures" VkPhysicalDeviceRayTracingPropertiesNV where
-  rawOffset = #{offset struct VkPhysicalDeviceRayTracingPropertiesNV, maxDescriptorSetAccelerationStructures}
+  rawOffset = #{offset VkPhysicalDeviceRayTracingPropertiesNV, maxDescriptorSetAccelerationStructures}
 
 #else
 

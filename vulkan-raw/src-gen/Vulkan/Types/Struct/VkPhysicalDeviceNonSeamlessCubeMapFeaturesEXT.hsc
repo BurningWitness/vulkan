@@ -30,8 +30,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkPhysicalDeviceNonSeamlessCubeMapFeaturesEXT"
          }
 
 instance Storable VkPhysicalDeviceNonSeamlessCubeMapFeaturesEXT where
-  sizeOf    _ = #{size      struct VkPhysicalDeviceNonSeamlessCubeMapFeaturesEXT}
-  alignment _ = #{alignment struct VkPhysicalDeviceNonSeamlessCubeMapFeaturesEXT}
+  sizeOf    _ = #{size      VkPhysicalDeviceNonSeamlessCubeMapFeaturesEXT}
+  alignment _ = #{alignment VkPhysicalDeviceNonSeamlessCubeMapFeaturesEXT}
 
   peek ptr = 
     VkPhysicalDeviceNonSeamlessCubeMapFeaturesEXT
@@ -45,13 +45,13 @@ instance Storable VkPhysicalDeviceNonSeamlessCubeMapFeaturesEXT where
     pokeField @"nonSeamlessCubeMap" ptr val
 
 instance Offset "sType" VkPhysicalDeviceNonSeamlessCubeMapFeaturesEXT where
-  rawOffset = #{offset struct VkPhysicalDeviceNonSeamlessCubeMapFeaturesEXT, sType}
+  rawOffset = #{offset VkPhysicalDeviceNonSeamlessCubeMapFeaturesEXT, sType}
 
 instance Offset "pNext" VkPhysicalDeviceNonSeamlessCubeMapFeaturesEXT where
-  rawOffset = #{offset struct VkPhysicalDeviceNonSeamlessCubeMapFeaturesEXT, pNext}
+  rawOffset = #{offset VkPhysicalDeviceNonSeamlessCubeMapFeaturesEXT, pNext}
 
 instance Offset "nonSeamlessCubeMap" VkPhysicalDeviceNonSeamlessCubeMapFeaturesEXT where
-  rawOffset = #{offset struct VkPhysicalDeviceNonSeamlessCubeMapFeaturesEXT, nonSeamlessCubeMap}
+  rawOffset = #{offset VkPhysicalDeviceNonSeamlessCubeMapFeaturesEXT, nonSeamlessCubeMap}
 
 #else
 

@@ -36,8 +36,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkPhysicalDeviceAccelerationStructurePropertie
          }
 
 instance Storable VkPhysicalDeviceAccelerationStructurePropertiesKHR where
-  sizeOf    _ = #{size      struct VkPhysicalDeviceAccelerationStructurePropertiesKHR}
-  alignment _ = #{alignment struct VkPhysicalDeviceAccelerationStructurePropertiesKHR}
+  sizeOf    _ = #{size      VkPhysicalDeviceAccelerationStructurePropertiesKHR}
+  alignment _ = #{alignment VkPhysicalDeviceAccelerationStructurePropertiesKHR}
 
   peek ptr = 
     VkPhysicalDeviceAccelerationStructurePropertiesKHR
@@ -65,34 +65,34 @@ instance Storable VkPhysicalDeviceAccelerationStructurePropertiesKHR where
     pokeField @"minAccelerationStructureScratchOffsetAlignment" ptr val
 
 instance Offset "sType" VkPhysicalDeviceAccelerationStructurePropertiesKHR where
-  rawOffset = #{offset struct VkPhysicalDeviceAccelerationStructurePropertiesKHR, sType}
+  rawOffset = #{offset VkPhysicalDeviceAccelerationStructurePropertiesKHR, sType}
 
 instance Offset "pNext" VkPhysicalDeviceAccelerationStructurePropertiesKHR where
-  rawOffset = #{offset struct VkPhysicalDeviceAccelerationStructurePropertiesKHR, pNext}
+  rawOffset = #{offset VkPhysicalDeviceAccelerationStructurePropertiesKHR, pNext}
 
 instance Offset "maxGeometryCount" VkPhysicalDeviceAccelerationStructurePropertiesKHR where
-  rawOffset = #{offset struct VkPhysicalDeviceAccelerationStructurePropertiesKHR, maxGeometryCount}
+  rawOffset = #{offset VkPhysicalDeviceAccelerationStructurePropertiesKHR, maxGeometryCount}
 
 instance Offset "maxInstanceCount" VkPhysicalDeviceAccelerationStructurePropertiesKHR where
-  rawOffset = #{offset struct VkPhysicalDeviceAccelerationStructurePropertiesKHR, maxInstanceCount}
+  rawOffset = #{offset VkPhysicalDeviceAccelerationStructurePropertiesKHR, maxInstanceCount}
 
 instance Offset "maxPrimitiveCount" VkPhysicalDeviceAccelerationStructurePropertiesKHR where
-  rawOffset = #{offset struct VkPhysicalDeviceAccelerationStructurePropertiesKHR, maxPrimitiveCount}
+  rawOffset = #{offset VkPhysicalDeviceAccelerationStructurePropertiesKHR, maxPrimitiveCount}
 
 instance Offset "maxPerStageDescriptorAccelerationStructures" VkPhysicalDeviceAccelerationStructurePropertiesKHR where
-  rawOffset = #{offset struct VkPhysicalDeviceAccelerationStructurePropertiesKHR, maxPerStageDescriptorAccelerationStructures}
+  rawOffset = #{offset VkPhysicalDeviceAccelerationStructurePropertiesKHR, maxPerStageDescriptorAccelerationStructures}
 
 instance Offset "maxPerStageDescriptorUpdateAfterBindAccelerationStructures" VkPhysicalDeviceAccelerationStructurePropertiesKHR where
-  rawOffset = #{offset struct VkPhysicalDeviceAccelerationStructurePropertiesKHR, maxPerStageDescriptorUpdateAfterBindAccelerationStructures}
+  rawOffset = #{offset VkPhysicalDeviceAccelerationStructurePropertiesKHR, maxPerStageDescriptorUpdateAfterBindAccelerationStructures}
 
 instance Offset "maxDescriptorSetAccelerationStructures" VkPhysicalDeviceAccelerationStructurePropertiesKHR where
-  rawOffset = #{offset struct VkPhysicalDeviceAccelerationStructurePropertiesKHR, maxDescriptorSetAccelerationStructures}
+  rawOffset = #{offset VkPhysicalDeviceAccelerationStructurePropertiesKHR, maxDescriptorSetAccelerationStructures}
 
 instance Offset "maxDescriptorSetUpdateAfterBindAccelerationStructures" VkPhysicalDeviceAccelerationStructurePropertiesKHR where
-  rawOffset = #{offset struct VkPhysicalDeviceAccelerationStructurePropertiesKHR, maxDescriptorSetUpdateAfterBindAccelerationStructures}
+  rawOffset = #{offset VkPhysicalDeviceAccelerationStructurePropertiesKHR, maxDescriptorSetUpdateAfterBindAccelerationStructures}
 
 instance Offset "minAccelerationStructureScratchOffsetAlignment" VkPhysicalDeviceAccelerationStructurePropertiesKHR where
-  rawOffset = #{offset struct VkPhysicalDeviceAccelerationStructurePropertiesKHR, minAccelerationStructureScratchOffsetAlignment}
+  rawOffset = #{offset VkPhysicalDeviceAccelerationStructurePropertiesKHR, minAccelerationStructureScratchOffsetAlignment}
 
 #else
 

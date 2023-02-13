@@ -30,8 +30,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkPhysicalDeviceImageViewMinLodFeaturesEXT" #-
          }
 
 instance Storable VkPhysicalDeviceImageViewMinLodFeaturesEXT where
-  sizeOf    _ = #{size      struct VkPhysicalDeviceImageViewMinLodFeaturesEXT}
-  alignment _ = #{alignment struct VkPhysicalDeviceImageViewMinLodFeaturesEXT}
+  sizeOf    _ = #{size      VkPhysicalDeviceImageViewMinLodFeaturesEXT}
+  alignment _ = #{alignment VkPhysicalDeviceImageViewMinLodFeaturesEXT}
 
   peek ptr = 
     VkPhysicalDeviceImageViewMinLodFeaturesEXT
@@ -45,13 +45,13 @@ instance Storable VkPhysicalDeviceImageViewMinLodFeaturesEXT where
     pokeField @"minLod" ptr val
 
 instance Offset "sType" VkPhysicalDeviceImageViewMinLodFeaturesEXT where
-  rawOffset = #{offset struct VkPhysicalDeviceImageViewMinLodFeaturesEXT, sType}
+  rawOffset = #{offset VkPhysicalDeviceImageViewMinLodFeaturesEXT, sType}
 
 instance Offset "pNext" VkPhysicalDeviceImageViewMinLodFeaturesEXT where
-  rawOffset = #{offset struct VkPhysicalDeviceImageViewMinLodFeaturesEXT, pNext}
+  rawOffset = #{offset VkPhysicalDeviceImageViewMinLodFeaturesEXT, pNext}
 
 instance Offset "minLod" VkPhysicalDeviceImageViewMinLodFeaturesEXT where
-  rawOffset = #{offset struct VkPhysicalDeviceImageViewMinLodFeaturesEXT, minLod}
+  rawOffset = #{offset VkPhysicalDeviceImageViewMinLodFeaturesEXT, minLod}
 
 #else
 

@@ -32,8 +32,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkPipelineCreationFeedbackCreateInfo" #-} VkPi
          }
 
 instance Storable VkPipelineCreationFeedbackCreateInfo where
-  sizeOf    _ = #{size      struct VkPipelineCreationFeedbackCreateInfo}
-  alignment _ = #{alignment struct VkPipelineCreationFeedbackCreateInfo}
+  sizeOf    _ = #{size      VkPipelineCreationFeedbackCreateInfo}
+  alignment _ = #{alignment VkPipelineCreationFeedbackCreateInfo}
 
   peek ptr = 
     VkPipelineCreationFeedbackCreateInfo
@@ -51,19 +51,19 @@ instance Storable VkPipelineCreationFeedbackCreateInfo where
     pokeField @"pPipelineStageCreationFeedbacks" ptr val
 
 instance Offset "sType" VkPipelineCreationFeedbackCreateInfo where
-  rawOffset = #{offset struct VkPipelineCreationFeedbackCreateInfo, sType}
+  rawOffset = #{offset VkPipelineCreationFeedbackCreateInfo, sType}
 
 instance Offset "pNext" VkPipelineCreationFeedbackCreateInfo where
-  rawOffset = #{offset struct VkPipelineCreationFeedbackCreateInfo, pNext}
+  rawOffset = #{offset VkPipelineCreationFeedbackCreateInfo, pNext}
 
 instance Offset "pPipelineCreationFeedback" VkPipelineCreationFeedbackCreateInfo where
-  rawOffset = #{offset struct VkPipelineCreationFeedbackCreateInfo, pPipelineCreationFeedback}
+  rawOffset = #{offset VkPipelineCreationFeedbackCreateInfo, pPipelineCreationFeedback}
 
 instance Offset "pipelineStageCreationFeedbackCount" VkPipelineCreationFeedbackCreateInfo where
-  rawOffset = #{offset struct VkPipelineCreationFeedbackCreateInfo, pipelineStageCreationFeedbackCount}
+  rawOffset = #{offset VkPipelineCreationFeedbackCreateInfo, pipelineStageCreationFeedbackCount}
 
 instance Offset "pPipelineStageCreationFeedbacks" VkPipelineCreationFeedbackCreateInfo where
-  rawOffset = #{offset struct VkPipelineCreationFeedbackCreateInfo, pPipelineStageCreationFeedbacks}
+  rawOffset = #{offset VkPipelineCreationFeedbackCreateInfo, pPipelineStageCreationFeedbacks}
 
 #else
 

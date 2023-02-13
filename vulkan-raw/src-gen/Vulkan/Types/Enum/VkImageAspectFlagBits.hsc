@@ -45,17 +45,17 @@ pattern VK_IMAGE_ASPECT_NONE = 0
 
 #if VK_KHR_sampler_ycbcr_conversion
 pattern VK_IMAGE_ASPECT_PLANE_0_BIT_KHR :: (Eq a, Num a) => a
-pattern VK_IMAGE_ASPECT_PLANE_0_BIT_KHR = VK_IMAGE_ASPECT_PLANE_0_BIT
+pattern VK_IMAGE_ASPECT_PLANE_0_BIT_KHR = 16
 #endif
 
 #if VK_KHR_sampler_ycbcr_conversion
 pattern VK_IMAGE_ASPECT_PLANE_1_BIT_KHR :: (Eq a, Num a) => a
-pattern VK_IMAGE_ASPECT_PLANE_1_BIT_KHR = VK_IMAGE_ASPECT_PLANE_1_BIT
+pattern VK_IMAGE_ASPECT_PLANE_1_BIT_KHR = 32
 #endif
 
 #if VK_KHR_sampler_ycbcr_conversion
 pattern VK_IMAGE_ASPECT_PLANE_2_BIT_KHR :: (Eq a, Num a) => a
-pattern VK_IMAGE_ASPECT_PLANE_2_BIT_KHR = VK_IMAGE_ASPECT_PLANE_2_BIT
+pattern VK_IMAGE_ASPECT_PLANE_2_BIT_KHR = 64
 #endif
 
 #if VK_EXT_image_drm_format_modifier
@@ -80,5 +80,5 @@ pattern VK_IMAGE_ASPECT_MEMORY_PLANE_3_BIT_EXT = 1024
 
 #if VK_KHR_maintenance4
 pattern VK_IMAGE_ASPECT_NONE_KHR :: (Eq a, Num a) => a
-pattern VK_IMAGE_ASPECT_NONE_KHR = VK_IMAGE_ASPECT_NONE
+pattern VK_IMAGE_ASPECT_NONE_KHR = 0
 #endif

@@ -1,3 +1,7 @@
+{-# LANGUAGE CApiFFI #-}
+{-# LANGUAGE CPP #-}
+{-# LANGUAGE MagicHash #-}
+
 #include <vulkan/vulkan.h>
 
 #if VK_KHR_timeline_semaphore
@@ -10,17 +14,17 @@ import GHC.Ptr
 import Vulkan.Types.Enum.VkResult
 import Vulkan.Types.Handle
 import Vulkan.Types.Struct.VkSemaphoreSignalInfo
-import Vulkan.Types.Command.VkSignalSemaphore
 import Vulkan.Types.VkFun
 
 
 
-type VkSignalSemaphoreKHR = VkSignalSemaphore
+type VkSignalSemaphoreKHR =
+          VkDevice -- ^ device
+       -> Ptr VkSemaphoreSignalInfo -- ^ pSignalInfo
+       -> IO VkResult
 
-vkFunSignalSemaphoreKHR
-  :: VkFun VkSignalSemaphoreKHR
-vkFunSignalSemaphoreKHR = vkFunSignalSemaphore
-
+vkFunSignalSemaphoreKHR :: VkFun VkSignalSemaphoreKHR
+vkFunSignalSemaphoreKHR = VkFun (Ptr ("vkSignalSemaphoreKHR\0"##))
 
 #else
 

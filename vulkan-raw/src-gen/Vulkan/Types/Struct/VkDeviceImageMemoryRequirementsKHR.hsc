@@ -1,9 +1,67 @@
+{-# LANGUAGE DataKinds #-}
+{-# LANGUAGE DuplicateRecordFields #-}
+{-# LANGUAGE MultiParamTypeClasses #-}
+#if __GLASGOW_HASKELL__ >= 902
+{-# LANGUAGE NoFieldSelectors #-}
+#endif
+{-# LANGUAGE TypeApplications #-}
+
 #include <vulkan/vulkan.h>
+
+#if VK_KHR_maintenance4
 
 module Vulkan.Types.Struct.VkDeviceImageMemoryRequirementsKHR where
 
-import Vulkan.Types.Struct.VkDeviceImageMemoryRequirements
+import Data.Int
+import Data.Word
+import Foreign.Ptr
+import Foreign.Storable
+import Foreign.Storable.Offset
+import Vulkan.Types.Enum.VkImageAspectFlagBits
+import Vulkan.Types.Enum.VkStructureType
+import Vulkan.Types.Struct.VkImageCreateInfo
 
 
 
-type VkDeviceImageMemoryRequirementsKHR = VkDeviceImageMemoryRequirements
+data {-# CTYPE "vulkan/vulkan.h" "VkDeviceImageMemoryRequirementsKHR" #-} VkDeviceImageMemoryRequirementsKHR =
+       VkDeviceImageMemoryRequirementsKHR
+         { sType :: VkStructureType
+         , pNext :: Ptr ()
+         , pCreateInfo :: Ptr VkImageCreateInfo
+         , planeAspect :: VkImageAspectFlagBits
+         }
+
+instance Storable VkDeviceImageMemoryRequirementsKHR where
+  sizeOf    _ = #{size      VkDeviceImageMemoryRequirementsKHR}
+  alignment _ = #{alignment VkDeviceImageMemoryRequirementsKHR}
+
+  peek ptr = 
+    VkDeviceImageMemoryRequirementsKHR
+       <$> peek (offset @"sType" ptr)
+       <*> peek (offset @"pNext" ptr)
+       <*> peek (offset @"pCreateInfo" ptr)
+       <*> peek (offset @"planeAspect" ptr)
+
+  poke ptr val = do
+    pokeField @"sType" ptr val
+    pokeField @"pNext" ptr val
+    pokeField @"pCreateInfo" ptr val
+    pokeField @"planeAspect" ptr val
+
+instance Offset "sType" VkDeviceImageMemoryRequirementsKHR where
+  rawOffset = #{offset VkDeviceImageMemoryRequirementsKHR, sType}
+
+instance Offset "pNext" VkDeviceImageMemoryRequirementsKHR where
+  rawOffset = #{offset VkDeviceImageMemoryRequirementsKHR, pNext}
+
+instance Offset "pCreateInfo" VkDeviceImageMemoryRequirementsKHR where
+  rawOffset = #{offset VkDeviceImageMemoryRequirementsKHR, pCreateInfo}
+
+instance Offset "planeAspect" VkDeviceImageMemoryRequirementsKHR where
+  rawOffset = #{offset VkDeviceImageMemoryRequirementsKHR, planeAspect}
+
+#else
+
+module Vulkan.Types.Struct.VkDeviceImageMemoryRequirementsKHR where
+
+#endif

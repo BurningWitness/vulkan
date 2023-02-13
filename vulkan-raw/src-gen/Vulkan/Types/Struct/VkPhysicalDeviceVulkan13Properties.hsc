@@ -75,8 +75,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkPhysicalDeviceVulkan13Properties" #-} VkPhys
          }
 
 instance Storable VkPhysicalDeviceVulkan13Properties where
-  sizeOf    _ = #{size      struct VkPhysicalDeviceVulkan13Properties}
-  alignment _ = #{alignment struct VkPhysicalDeviceVulkan13Properties}
+  sizeOf    _ = #{size      VkPhysicalDeviceVulkan13Properties}
+  alignment _ = #{alignment VkPhysicalDeviceVulkan13Properties}
 
   peek ptr = 
     VkPhysicalDeviceVulkan13Properties
@@ -178,145 +178,145 @@ instance Storable VkPhysicalDeviceVulkan13Properties where
     pokeField @"maxBufferSize" ptr val
 
 instance Offset "sType" VkPhysicalDeviceVulkan13Properties where
-  rawOffset = #{offset struct VkPhysicalDeviceVulkan13Properties, sType}
+  rawOffset = #{offset VkPhysicalDeviceVulkan13Properties, sType}
 
 instance Offset "pNext" VkPhysicalDeviceVulkan13Properties where
-  rawOffset = #{offset struct VkPhysicalDeviceVulkan13Properties, pNext}
+  rawOffset = #{offset VkPhysicalDeviceVulkan13Properties, pNext}
 
 instance Offset "minSubgroupSize" VkPhysicalDeviceVulkan13Properties where
-  rawOffset = #{offset struct VkPhysicalDeviceVulkan13Properties, minSubgroupSize}
+  rawOffset = #{offset VkPhysicalDeviceVulkan13Properties, minSubgroupSize}
 
 instance Offset "maxSubgroupSize" VkPhysicalDeviceVulkan13Properties where
-  rawOffset = #{offset struct VkPhysicalDeviceVulkan13Properties, maxSubgroupSize}
+  rawOffset = #{offset VkPhysicalDeviceVulkan13Properties, maxSubgroupSize}
 
 instance Offset "maxComputeWorkgroupSubgroups" VkPhysicalDeviceVulkan13Properties where
-  rawOffset = #{offset struct VkPhysicalDeviceVulkan13Properties, maxComputeWorkgroupSubgroups}
+  rawOffset = #{offset VkPhysicalDeviceVulkan13Properties, maxComputeWorkgroupSubgroups}
 
 instance Offset "requiredSubgroupSizeStages" VkPhysicalDeviceVulkan13Properties where
-  rawOffset = #{offset struct VkPhysicalDeviceVulkan13Properties, requiredSubgroupSizeStages}
+  rawOffset = #{offset VkPhysicalDeviceVulkan13Properties, requiredSubgroupSizeStages}
 
 instance Offset "maxInlineUniformBlockSize" VkPhysicalDeviceVulkan13Properties where
-  rawOffset = #{offset struct VkPhysicalDeviceVulkan13Properties, maxInlineUniformBlockSize}
+  rawOffset = #{offset VkPhysicalDeviceVulkan13Properties, maxInlineUniformBlockSize}
 
 instance Offset "maxPerStageDescriptorInlineUniformBlocks" VkPhysicalDeviceVulkan13Properties where
-  rawOffset = #{offset struct VkPhysicalDeviceVulkan13Properties, maxPerStageDescriptorInlineUniformBlocks}
+  rawOffset = #{offset VkPhysicalDeviceVulkan13Properties, maxPerStageDescriptorInlineUniformBlocks}
 
 instance Offset "maxPerStageDescriptorUpdateAfterBindInlineUniformBlocks" VkPhysicalDeviceVulkan13Properties where
-  rawOffset = #{offset struct VkPhysicalDeviceVulkan13Properties, maxPerStageDescriptorUpdateAfterBindInlineUniformBlocks}
+  rawOffset = #{offset VkPhysicalDeviceVulkan13Properties, maxPerStageDescriptorUpdateAfterBindInlineUniformBlocks}
 
 instance Offset "maxDescriptorSetInlineUniformBlocks" VkPhysicalDeviceVulkan13Properties where
-  rawOffset = #{offset struct VkPhysicalDeviceVulkan13Properties, maxDescriptorSetInlineUniformBlocks}
+  rawOffset = #{offset VkPhysicalDeviceVulkan13Properties, maxDescriptorSetInlineUniformBlocks}
 
 instance Offset "maxDescriptorSetUpdateAfterBindInlineUniformBlocks" VkPhysicalDeviceVulkan13Properties where
-  rawOffset = #{offset struct VkPhysicalDeviceVulkan13Properties, maxDescriptorSetUpdateAfterBindInlineUniformBlocks}
+  rawOffset = #{offset VkPhysicalDeviceVulkan13Properties, maxDescriptorSetUpdateAfterBindInlineUniformBlocks}
 
 instance Offset "maxInlineUniformTotalSize" VkPhysicalDeviceVulkan13Properties where
-  rawOffset = #{offset struct VkPhysicalDeviceVulkan13Properties, maxInlineUniformTotalSize}
+  rawOffset = #{offset VkPhysicalDeviceVulkan13Properties, maxInlineUniformTotalSize}
 
 instance Offset "integerDotProduct8BitUnsignedAccelerated" VkPhysicalDeviceVulkan13Properties where
-  rawOffset = #{offset struct VkPhysicalDeviceVulkan13Properties, integerDotProduct8BitUnsignedAccelerated}
+  rawOffset = #{offset VkPhysicalDeviceVulkan13Properties, integerDotProduct8BitUnsignedAccelerated}
 
 instance Offset "integerDotProduct8BitSignedAccelerated" VkPhysicalDeviceVulkan13Properties where
-  rawOffset = #{offset struct VkPhysicalDeviceVulkan13Properties, integerDotProduct8BitSignedAccelerated}
+  rawOffset = #{offset VkPhysicalDeviceVulkan13Properties, integerDotProduct8BitSignedAccelerated}
 
 instance Offset "integerDotProduct8BitMixedSignednessAccelerated" VkPhysicalDeviceVulkan13Properties where
-  rawOffset = #{offset struct VkPhysicalDeviceVulkan13Properties, integerDotProduct8BitMixedSignednessAccelerated}
+  rawOffset = #{offset VkPhysicalDeviceVulkan13Properties, integerDotProduct8BitMixedSignednessAccelerated}
 
 instance Offset "integerDotProduct4x8BitPackedUnsignedAccelerated" VkPhysicalDeviceVulkan13Properties where
-  rawOffset = #{offset struct VkPhysicalDeviceVulkan13Properties, integerDotProduct4x8BitPackedUnsignedAccelerated}
+  rawOffset = #{offset VkPhysicalDeviceVulkan13Properties, integerDotProduct4x8BitPackedUnsignedAccelerated}
 
 instance Offset "integerDotProduct4x8BitPackedSignedAccelerated" VkPhysicalDeviceVulkan13Properties where
-  rawOffset = #{offset struct VkPhysicalDeviceVulkan13Properties, integerDotProduct4x8BitPackedSignedAccelerated}
+  rawOffset = #{offset VkPhysicalDeviceVulkan13Properties, integerDotProduct4x8BitPackedSignedAccelerated}
 
 instance Offset "integerDotProduct4x8BitPackedMixedSignednessAccelerated" VkPhysicalDeviceVulkan13Properties where
-  rawOffset = #{offset struct VkPhysicalDeviceVulkan13Properties, integerDotProduct4x8BitPackedMixedSignednessAccelerated}
+  rawOffset = #{offset VkPhysicalDeviceVulkan13Properties, integerDotProduct4x8BitPackedMixedSignednessAccelerated}
 
 instance Offset "integerDotProduct16BitUnsignedAccelerated" VkPhysicalDeviceVulkan13Properties where
-  rawOffset = #{offset struct VkPhysicalDeviceVulkan13Properties, integerDotProduct16BitUnsignedAccelerated}
+  rawOffset = #{offset VkPhysicalDeviceVulkan13Properties, integerDotProduct16BitUnsignedAccelerated}
 
 instance Offset "integerDotProduct16BitSignedAccelerated" VkPhysicalDeviceVulkan13Properties where
-  rawOffset = #{offset struct VkPhysicalDeviceVulkan13Properties, integerDotProduct16BitSignedAccelerated}
+  rawOffset = #{offset VkPhysicalDeviceVulkan13Properties, integerDotProduct16BitSignedAccelerated}
 
 instance Offset "integerDotProduct16BitMixedSignednessAccelerated" VkPhysicalDeviceVulkan13Properties where
-  rawOffset = #{offset struct VkPhysicalDeviceVulkan13Properties, integerDotProduct16BitMixedSignednessAccelerated}
+  rawOffset = #{offset VkPhysicalDeviceVulkan13Properties, integerDotProduct16BitMixedSignednessAccelerated}
 
 instance Offset "integerDotProduct32BitUnsignedAccelerated" VkPhysicalDeviceVulkan13Properties where
-  rawOffset = #{offset struct VkPhysicalDeviceVulkan13Properties, integerDotProduct32BitUnsignedAccelerated}
+  rawOffset = #{offset VkPhysicalDeviceVulkan13Properties, integerDotProduct32BitUnsignedAccelerated}
 
 instance Offset "integerDotProduct32BitSignedAccelerated" VkPhysicalDeviceVulkan13Properties where
-  rawOffset = #{offset struct VkPhysicalDeviceVulkan13Properties, integerDotProduct32BitSignedAccelerated}
+  rawOffset = #{offset VkPhysicalDeviceVulkan13Properties, integerDotProduct32BitSignedAccelerated}
 
 instance Offset "integerDotProduct32BitMixedSignednessAccelerated" VkPhysicalDeviceVulkan13Properties where
-  rawOffset = #{offset struct VkPhysicalDeviceVulkan13Properties, integerDotProduct32BitMixedSignednessAccelerated}
+  rawOffset = #{offset VkPhysicalDeviceVulkan13Properties, integerDotProduct32BitMixedSignednessAccelerated}
 
 instance Offset "integerDotProduct64BitUnsignedAccelerated" VkPhysicalDeviceVulkan13Properties where
-  rawOffset = #{offset struct VkPhysicalDeviceVulkan13Properties, integerDotProduct64BitUnsignedAccelerated}
+  rawOffset = #{offset VkPhysicalDeviceVulkan13Properties, integerDotProduct64BitUnsignedAccelerated}
 
 instance Offset "integerDotProduct64BitSignedAccelerated" VkPhysicalDeviceVulkan13Properties where
-  rawOffset = #{offset struct VkPhysicalDeviceVulkan13Properties, integerDotProduct64BitSignedAccelerated}
+  rawOffset = #{offset VkPhysicalDeviceVulkan13Properties, integerDotProduct64BitSignedAccelerated}
 
 instance Offset "integerDotProduct64BitMixedSignednessAccelerated" VkPhysicalDeviceVulkan13Properties where
-  rawOffset = #{offset struct VkPhysicalDeviceVulkan13Properties, integerDotProduct64BitMixedSignednessAccelerated}
+  rawOffset = #{offset VkPhysicalDeviceVulkan13Properties, integerDotProduct64BitMixedSignednessAccelerated}
 
 instance Offset "integerDotProductAccumulatingSaturating8BitUnsignedAccelerated" VkPhysicalDeviceVulkan13Properties where
-  rawOffset = #{offset struct VkPhysicalDeviceVulkan13Properties, integerDotProductAccumulatingSaturating8BitUnsignedAccelerated}
+  rawOffset = #{offset VkPhysicalDeviceVulkan13Properties, integerDotProductAccumulatingSaturating8BitUnsignedAccelerated}
 
 instance Offset "integerDotProductAccumulatingSaturating8BitSignedAccelerated" VkPhysicalDeviceVulkan13Properties where
-  rawOffset = #{offset struct VkPhysicalDeviceVulkan13Properties, integerDotProductAccumulatingSaturating8BitSignedAccelerated}
+  rawOffset = #{offset VkPhysicalDeviceVulkan13Properties, integerDotProductAccumulatingSaturating8BitSignedAccelerated}
 
 instance Offset "integerDotProductAccumulatingSaturating8BitMixedSignednessAccelerated" VkPhysicalDeviceVulkan13Properties where
-  rawOffset = #{offset struct VkPhysicalDeviceVulkan13Properties, integerDotProductAccumulatingSaturating8BitMixedSignednessAccelerated}
+  rawOffset = #{offset VkPhysicalDeviceVulkan13Properties, integerDotProductAccumulatingSaturating8BitMixedSignednessAccelerated}
 
 instance Offset "integerDotProductAccumulatingSaturating4x8BitPackedUnsignedAccelerated" VkPhysicalDeviceVulkan13Properties where
-  rawOffset = #{offset struct VkPhysicalDeviceVulkan13Properties, integerDotProductAccumulatingSaturating4x8BitPackedUnsignedAccelerated}
+  rawOffset = #{offset VkPhysicalDeviceVulkan13Properties, integerDotProductAccumulatingSaturating4x8BitPackedUnsignedAccelerated}
 
 instance Offset "integerDotProductAccumulatingSaturating4x8BitPackedSignedAccelerated" VkPhysicalDeviceVulkan13Properties where
-  rawOffset = #{offset struct VkPhysicalDeviceVulkan13Properties, integerDotProductAccumulatingSaturating4x8BitPackedSignedAccelerated}
+  rawOffset = #{offset VkPhysicalDeviceVulkan13Properties, integerDotProductAccumulatingSaturating4x8BitPackedSignedAccelerated}
 
 instance Offset "integerDotProductAccumulatingSaturating4x8BitPackedMixedSignednessAccelerated" VkPhysicalDeviceVulkan13Properties where
-  rawOffset = #{offset struct VkPhysicalDeviceVulkan13Properties, integerDotProductAccumulatingSaturating4x8BitPackedMixedSignednessAccelerated}
+  rawOffset = #{offset VkPhysicalDeviceVulkan13Properties, integerDotProductAccumulatingSaturating4x8BitPackedMixedSignednessAccelerated}
 
 instance Offset "integerDotProductAccumulatingSaturating16BitUnsignedAccelerated" VkPhysicalDeviceVulkan13Properties where
-  rawOffset = #{offset struct VkPhysicalDeviceVulkan13Properties, integerDotProductAccumulatingSaturating16BitUnsignedAccelerated}
+  rawOffset = #{offset VkPhysicalDeviceVulkan13Properties, integerDotProductAccumulatingSaturating16BitUnsignedAccelerated}
 
 instance Offset "integerDotProductAccumulatingSaturating16BitSignedAccelerated" VkPhysicalDeviceVulkan13Properties where
-  rawOffset = #{offset struct VkPhysicalDeviceVulkan13Properties, integerDotProductAccumulatingSaturating16BitSignedAccelerated}
+  rawOffset = #{offset VkPhysicalDeviceVulkan13Properties, integerDotProductAccumulatingSaturating16BitSignedAccelerated}
 
 instance Offset "integerDotProductAccumulatingSaturating16BitMixedSignednessAccelerated" VkPhysicalDeviceVulkan13Properties where
-  rawOffset = #{offset struct VkPhysicalDeviceVulkan13Properties, integerDotProductAccumulatingSaturating16BitMixedSignednessAccelerated}
+  rawOffset = #{offset VkPhysicalDeviceVulkan13Properties, integerDotProductAccumulatingSaturating16BitMixedSignednessAccelerated}
 
 instance Offset "integerDotProductAccumulatingSaturating32BitUnsignedAccelerated" VkPhysicalDeviceVulkan13Properties where
-  rawOffset = #{offset struct VkPhysicalDeviceVulkan13Properties, integerDotProductAccumulatingSaturating32BitUnsignedAccelerated}
+  rawOffset = #{offset VkPhysicalDeviceVulkan13Properties, integerDotProductAccumulatingSaturating32BitUnsignedAccelerated}
 
 instance Offset "integerDotProductAccumulatingSaturating32BitSignedAccelerated" VkPhysicalDeviceVulkan13Properties where
-  rawOffset = #{offset struct VkPhysicalDeviceVulkan13Properties, integerDotProductAccumulatingSaturating32BitSignedAccelerated}
+  rawOffset = #{offset VkPhysicalDeviceVulkan13Properties, integerDotProductAccumulatingSaturating32BitSignedAccelerated}
 
 instance Offset "integerDotProductAccumulatingSaturating32BitMixedSignednessAccelerated" VkPhysicalDeviceVulkan13Properties where
-  rawOffset = #{offset struct VkPhysicalDeviceVulkan13Properties, integerDotProductAccumulatingSaturating32BitMixedSignednessAccelerated}
+  rawOffset = #{offset VkPhysicalDeviceVulkan13Properties, integerDotProductAccumulatingSaturating32BitMixedSignednessAccelerated}
 
 instance Offset "integerDotProductAccumulatingSaturating64BitUnsignedAccelerated" VkPhysicalDeviceVulkan13Properties where
-  rawOffset = #{offset struct VkPhysicalDeviceVulkan13Properties, integerDotProductAccumulatingSaturating64BitUnsignedAccelerated}
+  rawOffset = #{offset VkPhysicalDeviceVulkan13Properties, integerDotProductAccumulatingSaturating64BitUnsignedAccelerated}
 
 instance Offset "integerDotProductAccumulatingSaturating64BitSignedAccelerated" VkPhysicalDeviceVulkan13Properties where
-  rawOffset = #{offset struct VkPhysicalDeviceVulkan13Properties, integerDotProductAccumulatingSaturating64BitSignedAccelerated}
+  rawOffset = #{offset VkPhysicalDeviceVulkan13Properties, integerDotProductAccumulatingSaturating64BitSignedAccelerated}
 
 instance Offset "integerDotProductAccumulatingSaturating64BitMixedSignednessAccelerated" VkPhysicalDeviceVulkan13Properties where
-  rawOffset = #{offset struct VkPhysicalDeviceVulkan13Properties, integerDotProductAccumulatingSaturating64BitMixedSignednessAccelerated}
+  rawOffset = #{offset VkPhysicalDeviceVulkan13Properties, integerDotProductAccumulatingSaturating64BitMixedSignednessAccelerated}
 
 instance Offset "storageTexelBufferOffsetAlignmentBytes" VkPhysicalDeviceVulkan13Properties where
-  rawOffset = #{offset struct VkPhysicalDeviceVulkan13Properties, storageTexelBufferOffsetAlignmentBytes}
+  rawOffset = #{offset VkPhysicalDeviceVulkan13Properties, storageTexelBufferOffsetAlignmentBytes}
 
 instance Offset "storageTexelBufferOffsetSingleTexelAlignment" VkPhysicalDeviceVulkan13Properties where
-  rawOffset = #{offset struct VkPhysicalDeviceVulkan13Properties, storageTexelBufferOffsetSingleTexelAlignment}
+  rawOffset = #{offset VkPhysicalDeviceVulkan13Properties, storageTexelBufferOffsetSingleTexelAlignment}
 
 instance Offset "uniformTexelBufferOffsetAlignmentBytes" VkPhysicalDeviceVulkan13Properties where
-  rawOffset = #{offset struct VkPhysicalDeviceVulkan13Properties, uniformTexelBufferOffsetAlignmentBytes}
+  rawOffset = #{offset VkPhysicalDeviceVulkan13Properties, uniformTexelBufferOffsetAlignmentBytes}
 
 instance Offset "uniformTexelBufferOffsetSingleTexelAlignment" VkPhysicalDeviceVulkan13Properties where
-  rawOffset = #{offset struct VkPhysicalDeviceVulkan13Properties, uniformTexelBufferOffsetSingleTexelAlignment}
+  rawOffset = #{offset VkPhysicalDeviceVulkan13Properties, uniformTexelBufferOffsetSingleTexelAlignment}
 
 instance Offset "maxBufferSize" VkPhysicalDeviceVulkan13Properties where
-  rawOffset = #{offset struct VkPhysicalDeviceVulkan13Properties, maxBufferSize}
+  rawOffset = #{offset VkPhysicalDeviceVulkan13Properties, maxBufferSize}
 
 #else
 

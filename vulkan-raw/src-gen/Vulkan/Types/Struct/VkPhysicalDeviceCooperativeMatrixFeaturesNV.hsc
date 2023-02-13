@@ -31,8 +31,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkPhysicalDeviceCooperativeMatrixFeaturesNV" #
          }
 
 instance Storable VkPhysicalDeviceCooperativeMatrixFeaturesNV where
-  sizeOf    _ = #{size      struct VkPhysicalDeviceCooperativeMatrixFeaturesNV}
-  alignment _ = #{alignment struct VkPhysicalDeviceCooperativeMatrixFeaturesNV}
+  sizeOf    _ = #{size      VkPhysicalDeviceCooperativeMatrixFeaturesNV}
+  alignment _ = #{alignment VkPhysicalDeviceCooperativeMatrixFeaturesNV}
 
   peek ptr = 
     VkPhysicalDeviceCooperativeMatrixFeaturesNV
@@ -48,16 +48,16 @@ instance Storable VkPhysicalDeviceCooperativeMatrixFeaturesNV where
     pokeField @"cooperativeMatrixRobustBufferAccess" ptr val
 
 instance Offset "sType" VkPhysicalDeviceCooperativeMatrixFeaturesNV where
-  rawOffset = #{offset struct VkPhysicalDeviceCooperativeMatrixFeaturesNV, sType}
+  rawOffset = #{offset VkPhysicalDeviceCooperativeMatrixFeaturesNV, sType}
 
 instance Offset "pNext" VkPhysicalDeviceCooperativeMatrixFeaturesNV where
-  rawOffset = #{offset struct VkPhysicalDeviceCooperativeMatrixFeaturesNV, pNext}
+  rawOffset = #{offset VkPhysicalDeviceCooperativeMatrixFeaturesNV, pNext}
 
 instance Offset "cooperativeMatrix" VkPhysicalDeviceCooperativeMatrixFeaturesNV where
-  rawOffset = #{offset struct VkPhysicalDeviceCooperativeMatrixFeaturesNV, cooperativeMatrix}
+  rawOffset = #{offset VkPhysicalDeviceCooperativeMatrixFeaturesNV, cooperativeMatrix}
 
 instance Offset "cooperativeMatrixRobustBufferAccess" VkPhysicalDeviceCooperativeMatrixFeaturesNV where
-  rawOffset = #{offset struct VkPhysicalDeviceCooperativeMatrixFeaturesNV, cooperativeMatrixRobustBufferAccess}
+  rawOffset = #{offset VkPhysicalDeviceCooperativeMatrixFeaturesNV, cooperativeMatrixRobustBufferAccess}
 
 #else
 

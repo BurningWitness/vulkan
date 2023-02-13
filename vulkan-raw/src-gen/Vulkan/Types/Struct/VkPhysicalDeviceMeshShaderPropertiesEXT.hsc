@@ -57,8 +57,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkPhysicalDeviceMeshShaderPropertiesEXT" #-} V
          }
 
 instance Storable VkPhysicalDeviceMeshShaderPropertiesEXT where
-  sizeOf    _ = #{size      struct VkPhysicalDeviceMeshShaderPropertiesEXT}
-  alignment _ = #{alignment struct VkPhysicalDeviceMeshShaderPropertiesEXT}
+  sizeOf    _ = #{size      VkPhysicalDeviceMeshShaderPropertiesEXT}
+  alignment _ = #{alignment VkPhysicalDeviceMeshShaderPropertiesEXT}
 
   peek ptr = 
     VkPhysicalDeviceMeshShaderPropertiesEXT
@@ -126,94 +126,94 @@ instance Storable VkPhysicalDeviceMeshShaderPropertiesEXT where
     pokeField @"prefersCompactPrimitiveOutput" ptr val
 
 instance Offset "sType" VkPhysicalDeviceMeshShaderPropertiesEXT where
-  rawOffset = #{offset struct VkPhysicalDeviceMeshShaderPropertiesEXT, sType}
+  rawOffset = #{offset VkPhysicalDeviceMeshShaderPropertiesEXT, sType}
 
 instance Offset "pNext" VkPhysicalDeviceMeshShaderPropertiesEXT where
-  rawOffset = #{offset struct VkPhysicalDeviceMeshShaderPropertiesEXT, pNext}
+  rawOffset = #{offset VkPhysicalDeviceMeshShaderPropertiesEXT, pNext}
 
 instance Offset "maxTaskWorkGroupTotalCount" VkPhysicalDeviceMeshShaderPropertiesEXT where
-  rawOffset = #{offset struct VkPhysicalDeviceMeshShaderPropertiesEXT, maxTaskWorkGroupTotalCount}
+  rawOffset = #{offset VkPhysicalDeviceMeshShaderPropertiesEXT, maxTaskWorkGroupTotalCount}
 
 instance Offset "maxTaskWorkGroupCount" VkPhysicalDeviceMeshShaderPropertiesEXT where
-  rawOffset = #{offset struct VkPhysicalDeviceMeshShaderPropertiesEXT, maxTaskWorkGroupCount}
+  rawOffset = #{offset VkPhysicalDeviceMeshShaderPropertiesEXT, maxTaskWorkGroupCount}
 
 instance Offset "maxTaskWorkGroupInvocations" VkPhysicalDeviceMeshShaderPropertiesEXT where
-  rawOffset = #{offset struct VkPhysicalDeviceMeshShaderPropertiesEXT, maxTaskWorkGroupInvocations}
+  rawOffset = #{offset VkPhysicalDeviceMeshShaderPropertiesEXT, maxTaskWorkGroupInvocations}
 
 instance Offset "maxTaskWorkGroupSize" VkPhysicalDeviceMeshShaderPropertiesEXT where
-  rawOffset = #{offset struct VkPhysicalDeviceMeshShaderPropertiesEXT, maxTaskWorkGroupSize}
+  rawOffset = #{offset VkPhysicalDeviceMeshShaderPropertiesEXT, maxTaskWorkGroupSize}
 
 instance Offset "maxTaskPayloadSize" VkPhysicalDeviceMeshShaderPropertiesEXT where
-  rawOffset = #{offset struct VkPhysicalDeviceMeshShaderPropertiesEXT, maxTaskPayloadSize}
+  rawOffset = #{offset VkPhysicalDeviceMeshShaderPropertiesEXT, maxTaskPayloadSize}
 
 instance Offset "maxTaskSharedMemorySize" VkPhysicalDeviceMeshShaderPropertiesEXT where
-  rawOffset = #{offset struct VkPhysicalDeviceMeshShaderPropertiesEXT, maxTaskSharedMemorySize}
+  rawOffset = #{offset VkPhysicalDeviceMeshShaderPropertiesEXT, maxTaskSharedMemorySize}
 
 instance Offset "maxTaskPayloadAndSharedMemorySize" VkPhysicalDeviceMeshShaderPropertiesEXT where
-  rawOffset = #{offset struct VkPhysicalDeviceMeshShaderPropertiesEXT, maxTaskPayloadAndSharedMemorySize}
+  rawOffset = #{offset VkPhysicalDeviceMeshShaderPropertiesEXT, maxTaskPayloadAndSharedMemorySize}
 
 instance Offset "maxMeshWorkGroupTotalCount" VkPhysicalDeviceMeshShaderPropertiesEXT where
-  rawOffset = #{offset struct VkPhysicalDeviceMeshShaderPropertiesEXT, maxMeshWorkGroupTotalCount}
+  rawOffset = #{offset VkPhysicalDeviceMeshShaderPropertiesEXT, maxMeshWorkGroupTotalCount}
 
 instance Offset "maxMeshWorkGroupCount" VkPhysicalDeviceMeshShaderPropertiesEXT where
-  rawOffset = #{offset struct VkPhysicalDeviceMeshShaderPropertiesEXT, maxMeshWorkGroupCount}
+  rawOffset = #{offset VkPhysicalDeviceMeshShaderPropertiesEXT, maxMeshWorkGroupCount}
 
 instance Offset "maxMeshWorkGroupInvocations" VkPhysicalDeviceMeshShaderPropertiesEXT where
-  rawOffset = #{offset struct VkPhysicalDeviceMeshShaderPropertiesEXT, maxMeshWorkGroupInvocations}
+  rawOffset = #{offset VkPhysicalDeviceMeshShaderPropertiesEXT, maxMeshWorkGroupInvocations}
 
 instance Offset "maxMeshWorkGroupSize" VkPhysicalDeviceMeshShaderPropertiesEXT where
-  rawOffset = #{offset struct VkPhysicalDeviceMeshShaderPropertiesEXT, maxMeshWorkGroupSize}
+  rawOffset = #{offset VkPhysicalDeviceMeshShaderPropertiesEXT, maxMeshWorkGroupSize}
 
 instance Offset "maxMeshSharedMemorySize" VkPhysicalDeviceMeshShaderPropertiesEXT where
-  rawOffset = #{offset struct VkPhysicalDeviceMeshShaderPropertiesEXT, maxMeshSharedMemorySize}
+  rawOffset = #{offset VkPhysicalDeviceMeshShaderPropertiesEXT, maxMeshSharedMemorySize}
 
 instance Offset "maxMeshPayloadAndSharedMemorySize" VkPhysicalDeviceMeshShaderPropertiesEXT where
-  rawOffset = #{offset struct VkPhysicalDeviceMeshShaderPropertiesEXT, maxMeshPayloadAndSharedMemorySize}
+  rawOffset = #{offset VkPhysicalDeviceMeshShaderPropertiesEXT, maxMeshPayloadAndSharedMemorySize}
 
 instance Offset "maxMeshOutputMemorySize" VkPhysicalDeviceMeshShaderPropertiesEXT where
-  rawOffset = #{offset struct VkPhysicalDeviceMeshShaderPropertiesEXT, maxMeshOutputMemorySize}
+  rawOffset = #{offset VkPhysicalDeviceMeshShaderPropertiesEXT, maxMeshOutputMemorySize}
 
 instance Offset "maxMeshPayloadAndOutputMemorySize" VkPhysicalDeviceMeshShaderPropertiesEXT where
-  rawOffset = #{offset struct VkPhysicalDeviceMeshShaderPropertiesEXT, maxMeshPayloadAndOutputMemorySize}
+  rawOffset = #{offset VkPhysicalDeviceMeshShaderPropertiesEXT, maxMeshPayloadAndOutputMemorySize}
 
 instance Offset "maxMeshOutputComponents" VkPhysicalDeviceMeshShaderPropertiesEXT where
-  rawOffset = #{offset struct VkPhysicalDeviceMeshShaderPropertiesEXT, maxMeshOutputComponents}
+  rawOffset = #{offset VkPhysicalDeviceMeshShaderPropertiesEXT, maxMeshOutputComponents}
 
 instance Offset "maxMeshOutputVertices" VkPhysicalDeviceMeshShaderPropertiesEXT where
-  rawOffset = #{offset struct VkPhysicalDeviceMeshShaderPropertiesEXT, maxMeshOutputVertices}
+  rawOffset = #{offset VkPhysicalDeviceMeshShaderPropertiesEXT, maxMeshOutputVertices}
 
 instance Offset "maxMeshOutputPrimitives" VkPhysicalDeviceMeshShaderPropertiesEXT where
-  rawOffset = #{offset struct VkPhysicalDeviceMeshShaderPropertiesEXT, maxMeshOutputPrimitives}
+  rawOffset = #{offset VkPhysicalDeviceMeshShaderPropertiesEXT, maxMeshOutputPrimitives}
 
 instance Offset "maxMeshOutputLayers" VkPhysicalDeviceMeshShaderPropertiesEXT where
-  rawOffset = #{offset struct VkPhysicalDeviceMeshShaderPropertiesEXT, maxMeshOutputLayers}
+  rawOffset = #{offset VkPhysicalDeviceMeshShaderPropertiesEXT, maxMeshOutputLayers}
 
 instance Offset "maxMeshMultiviewViewCount" VkPhysicalDeviceMeshShaderPropertiesEXT where
-  rawOffset = #{offset struct VkPhysicalDeviceMeshShaderPropertiesEXT, maxMeshMultiviewViewCount}
+  rawOffset = #{offset VkPhysicalDeviceMeshShaderPropertiesEXT, maxMeshMultiviewViewCount}
 
 instance Offset "meshOutputPerVertexGranularity" VkPhysicalDeviceMeshShaderPropertiesEXT where
-  rawOffset = #{offset struct VkPhysicalDeviceMeshShaderPropertiesEXT, meshOutputPerVertexGranularity}
+  rawOffset = #{offset VkPhysicalDeviceMeshShaderPropertiesEXT, meshOutputPerVertexGranularity}
 
 instance Offset "meshOutputPerPrimitiveGranularity" VkPhysicalDeviceMeshShaderPropertiesEXT where
-  rawOffset = #{offset struct VkPhysicalDeviceMeshShaderPropertiesEXT, meshOutputPerPrimitiveGranularity}
+  rawOffset = #{offset VkPhysicalDeviceMeshShaderPropertiesEXT, meshOutputPerPrimitiveGranularity}
 
 instance Offset "maxPreferredTaskWorkGroupInvocations" VkPhysicalDeviceMeshShaderPropertiesEXT where
-  rawOffset = #{offset struct VkPhysicalDeviceMeshShaderPropertiesEXT, maxPreferredTaskWorkGroupInvocations}
+  rawOffset = #{offset VkPhysicalDeviceMeshShaderPropertiesEXT, maxPreferredTaskWorkGroupInvocations}
 
 instance Offset "maxPreferredMeshWorkGroupInvocations" VkPhysicalDeviceMeshShaderPropertiesEXT where
-  rawOffset = #{offset struct VkPhysicalDeviceMeshShaderPropertiesEXT, maxPreferredMeshWorkGroupInvocations}
+  rawOffset = #{offset VkPhysicalDeviceMeshShaderPropertiesEXT, maxPreferredMeshWorkGroupInvocations}
 
 instance Offset "prefersLocalInvocationVertexOutput" VkPhysicalDeviceMeshShaderPropertiesEXT where
-  rawOffset = #{offset struct VkPhysicalDeviceMeshShaderPropertiesEXT, prefersLocalInvocationVertexOutput}
+  rawOffset = #{offset VkPhysicalDeviceMeshShaderPropertiesEXT, prefersLocalInvocationVertexOutput}
 
 instance Offset "prefersLocalInvocationPrimitiveOutput" VkPhysicalDeviceMeshShaderPropertiesEXT where
-  rawOffset = #{offset struct VkPhysicalDeviceMeshShaderPropertiesEXT, prefersLocalInvocationPrimitiveOutput}
+  rawOffset = #{offset VkPhysicalDeviceMeshShaderPropertiesEXT, prefersLocalInvocationPrimitiveOutput}
 
 instance Offset "prefersCompactVertexOutput" VkPhysicalDeviceMeshShaderPropertiesEXT where
-  rawOffset = #{offset struct VkPhysicalDeviceMeshShaderPropertiesEXT, prefersCompactVertexOutput}
+  rawOffset = #{offset VkPhysicalDeviceMeshShaderPropertiesEXT, prefersCompactVertexOutput}
 
 instance Offset "prefersCompactPrimitiveOutput" VkPhysicalDeviceMeshShaderPropertiesEXT where
-  rawOffset = #{offset struct VkPhysicalDeviceMeshShaderPropertiesEXT, prefersCompactPrimitiveOutput}
+  rawOffset = #{offset VkPhysicalDeviceMeshShaderPropertiesEXT, prefersCompactPrimitiveOutput}
 
 #else
 

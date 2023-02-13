@@ -33,8 +33,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkVideoSessionParametersCreateInfoKHR" #-} VkV
          }
 
 instance Storable VkVideoSessionParametersCreateInfoKHR where
-  sizeOf    _ = #{size      struct VkVideoSessionParametersCreateInfoKHR}
-  alignment _ = #{alignment struct VkVideoSessionParametersCreateInfoKHR}
+  sizeOf    _ = #{size      VkVideoSessionParametersCreateInfoKHR}
+  alignment _ = #{alignment VkVideoSessionParametersCreateInfoKHR}
 
   peek ptr = 
     VkVideoSessionParametersCreateInfoKHR
@@ -52,19 +52,19 @@ instance Storable VkVideoSessionParametersCreateInfoKHR where
     pokeField @"videoSession" ptr val
 
 instance Offset "sType" VkVideoSessionParametersCreateInfoKHR where
-  rawOffset = #{offset struct VkVideoSessionParametersCreateInfoKHR, sType}
+  rawOffset = #{offset VkVideoSessionParametersCreateInfoKHR, sType}
 
 instance Offset "pNext" VkVideoSessionParametersCreateInfoKHR where
-  rawOffset = #{offset struct VkVideoSessionParametersCreateInfoKHR, pNext}
+  rawOffset = #{offset VkVideoSessionParametersCreateInfoKHR, pNext}
 
 instance Offset "flags" VkVideoSessionParametersCreateInfoKHR where
-  rawOffset = #{offset struct VkVideoSessionParametersCreateInfoKHR, flags}
+  rawOffset = #{offset VkVideoSessionParametersCreateInfoKHR, flags}
 
 instance Offset "videoSessionParametersTemplate" VkVideoSessionParametersCreateInfoKHR where
-  rawOffset = #{offset struct VkVideoSessionParametersCreateInfoKHR, videoSessionParametersTemplate}
+  rawOffset = #{offset VkVideoSessionParametersCreateInfoKHR, videoSessionParametersTemplate}
 
 instance Offset "videoSession" VkVideoSessionParametersCreateInfoKHR where
-  rawOffset = #{offset struct VkVideoSessionParametersCreateInfoKHR, videoSession}
+  rawOffset = #{offset VkVideoSessionParametersCreateInfoKHR, videoSession}
 
 #else
 

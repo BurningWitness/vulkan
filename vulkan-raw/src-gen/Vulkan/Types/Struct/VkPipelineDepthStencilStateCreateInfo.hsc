@@ -40,8 +40,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkPipelineDepthStencilStateCreateInfo" #-} VkP
          }
 
 instance Storable VkPipelineDepthStencilStateCreateInfo where
-  sizeOf    _ = #{size      struct VkPipelineDepthStencilStateCreateInfo}
-  alignment _ = #{alignment struct VkPipelineDepthStencilStateCreateInfo}
+  sizeOf    _ = #{size      VkPipelineDepthStencilStateCreateInfo}
+  alignment _ = #{alignment VkPipelineDepthStencilStateCreateInfo}
 
   peek ptr = 
     VkPipelineDepthStencilStateCreateInfo
@@ -73,37 +73,37 @@ instance Storable VkPipelineDepthStencilStateCreateInfo where
     pokeField @"maxDepthBounds" ptr val
 
 instance Offset "sType" VkPipelineDepthStencilStateCreateInfo where
-  rawOffset = #{offset struct VkPipelineDepthStencilStateCreateInfo, sType}
+  rawOffset = #{offset VkPipelineDepthStencilStateCreateInfo, sType}
 
 instance Offset "pNext" VkPipelineDepthStencilStateCreateInfo where
-  rawOffset = #{offset struct VkPipelineDepthStencilStateCreateInfo, pNext}
+  rawOffset = #{offset VkPipelineDepthStencilStateCreateInfo, pNext}
 
 instance Offset "flags" VkPipelineDepthStencilStateCreateInfo where
-  rawOffset = #{offset struct VkPipelineDepthStencilStateCreateInfo, flags}
+  rawOffset = #{offset VkPipelineDepthStencilStateCreateInfo, flags}
 
 instance Offset "depthTestEnable" VkPipelineDepthStencilStateCreateInfo where
-  rawOffset = #{offset struct VkPipelineDepthStencilStateCreateInfo, depthTestEnable}
+  rawOffset = #{offset VkPipelineDepthStencilStateCreateInfo, depthTestEnable}
 
 instance Offset "depthWriteEnable" VkPipelineDepthStencilStateCreateInfo where
-  rawOffset = #{offset struct VkPipelineDepthStencilStateCreateInfo, depthWriteEnable}
+  rawOffset = #{offset VkPipelineDepthStencilStateCreateInfo, depthWriteEnable}
 
 instance Offset "depthCompareOp" VkPipelineDepthStencilStateCreateInfo where
-  rawOffset = #{offset struct VkPipelineDepthStencilStateCreateInfo, depthCompareOp}
+  rawOffset = #{offset VkPipelineDepthStencilStateCreateInfo, depthCompareOp}
 
 instance Offset "depthBoundsTestEnable" VkPipelineDepthStencilStateCreateInfo where
-  rawOffset = #{offset struct VkPipelineDepthStencilStateCreateInfo, depthBoundsTestEnable}
+  rawOffset = #{offset VkPipelineDepthStencilStateCreateInfo, depthBoundsTestEnable}
 
 instance Offset "stencilTestEnable" VkPipelineDepthStencilStateCreateInfo where
-  rawOffset = #{offset struct VkPipelineDepthStencilStateCreateInfo, stencilTestEnable}
+  rawOffset = #{offset VkPipelineDepthStencilStateCreateInfo, stencilTestEnable}
 
 instance Offset "front" VkPipelineDepthStencilStateCreateInfo where
-  rawOffset = #{offset struct VkPipelineDepthStencilStateCreateInfo, front}
+  rawOffset = #{offset VkPipelineDepthStencilStateCreateInfo, front}
 
 instance Offset "back" VkPipelineDepthStencilStateCreateInfo where
-  rawOffset = #{offset struct VkPipelineDepthStencilStateCreateInfo, back}
+  rawOffset = #{offset VkPipelineDepthStencilStateCreateInfo, back}
 
 instance Offset "minDepthBounds" VkPipelineDepthStencilStateCreateInfo where
-  rawOffset = #{offset struct VkPipelineDepthStencilStateCreateInfo, minDepthBounds}
+  rawOffset = #{offset VkPipelineDepthStencilStateCreateInfo, minDepthBounds}
 
 instance Offset "maxDepthBounds" VkPipelineDepthStencilStateCreateInfo where
-  rawOffset = #{offset struct VkPipelineDepthStencilStateCreateInfo, maxDepthBounds}
+  rawOffset = #{offset VkPipelineDepthStencilStateCreateInfo, maxDepthBounds}

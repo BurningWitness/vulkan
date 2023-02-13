@@ -35,8 +35,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkImageConstraintsInfoFUCHSIA" #-} VkImageCons
          }
 
 instance Storable VkImageConstraintsInfoFUCHSIA where
-  sizeOf    _ = #{size      struct VkImageConstraintsInfoFUCHSIA}
-  alignment _ = #{alignment struct VkImageConstraintsInfoFUCHSIA}
+  sizeOf    _ = #{size      VkImageConstraintsInfoFUCHSIA}
+  alignment _ = #{alignment VkImageConstraintsInfoFUCHSIA}
 
   peek ptr = 
     VkImageConstraintsInfoFUCHSIA
@@ -56,22 +56,22 @@ instance Storable VkImageConstraintsInfoFUCHSIA where
     pokeField @"flags" ptr val
 
 instance Offset "sType" VkImageConstraintsInfoFUCHSIA where
-  rawOffset = #{offset struct VkImageConstraintsInfoFUCHSIA, sType}
+  rawOffset = #{offset VkImageConstraintsInfoFUCHSIA, sType}
 
 instance Offset "pNext" VkImageConstraintsInfoFUCHSIA where
-  rawOffset = #{offset struct VkImageConstraintsInfoFUCHSIA, pNext}
+  rawOffset = #{offset VkImageConstraintsInfoFUCHSIA, pNext}
 
 instance Offset "formatConstraintsCount" VkImageConstraintsInfoFUCHSIA where
-  rawOffset = #{offset struct VkImageConstraintsInfoFUCHSIA, formatConstraintsCount}
+  rawOffset = #{offset VkImageConstraintsInfoFUCHSIA, formatConstraintsCount}
 
 instance Offset "pFormatConstraints" VkImageConstraintsInfoFUCHSIA where
-  rawOffset = #{offset struct VkImageConstraintsInfoFUCHSIA, pFormatConstraints}
+  rawOffset = #{offset VkImageConstraintsInfoFUCHSIA, pFormatConstraints}
 
 instance Offset "bufferCollectionConstraints" VkImageConstraintsInfoFUCHSIA where
-  rawOffset = #{offset struct VkImageConstraintsInfoFUCHSIA, bufferCollectionConstraints}
+  rawOffset = #{offset VkImageConstraintsInfoFUCHSIA, bufferCollectionConstraints}
 
 instance Offset "flags" VkImageConstraintsInfoFUCHSIA where
-  rawOffset = #{offset struct VkImageConstraintsInfoFUCHSIA, flags}
+  rawOffset = #{offset VkImageConstraintsInfoFUCHSIA, flags}
 
 #else
 

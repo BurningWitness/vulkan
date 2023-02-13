@@ -79,8 +79,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkPhysicalDeviceFeatures" #-} VkPhysicalDevice
          }
 
 instance Storable VkPhysicalDeviceFeatures where
-  sizeOf    _ = #{size      struct VkPhysicalDeviceFeatures}
-  alignment _ = #{alignment struct VkPhysicalDeviceFeatures}
+  sizeOf    _ = #{size      VkPhysicalDeviceFeatures}
+  alignment _ = #{alignment VkPhysicalDeviceFeatures}
 
   peek ptr = 
     VkPhysicalDeviceFeatures
@@ -198,166 +198,166 @@ instance Storable VkPhysicalDeviceFeatures where
     pokeField @"inheritedQueries" ptr val
 
 instance Offset "robustBufferAccess" VkPhysicalDeviceFeatures where
-  rawOffset = #{offset struct VkPhysicalDeviceFeatures, robustBufferAccess}
+  rawOffset = #{offset VkPhysicalDeviceFeatures, robustBufferAccess}
 
 instance Offset "fullDrawIndexUint32" VkPhysicalDeviceFeatures where
-  rawOffset = #{offset struct VkPhysicalDeviceFeatures, fullDrawIndexUint32}
+  rawOffset = #{offset VkPhysicalDeviceFeatures, fullDrawIndexUint32}
 
 instance Offset "imageCubeArray" VkPhysicalDeviceFeatures where
-  rawOffset = #{offset struct VkPhysicalDeviceFeatures, imageCubeArray}
+  rawOffset = #{offset VkPhysicalDeviceFeatures, imageCubeArray}
 
 instance Offset "independentBlend" VkPhysicalDeviceFeatures where
-  rawOffset = #{offset struct VkPhysicalDeviceFeatures, independentBlend}
+  rawOffset = #{offset VkPhysicalDeviceFeatures, independentBlend}
 
 instance Offset "geometryShader" VkPhysicalDeviceFeatures where
-  rawOffset = #{offset struct VkPhysicalDeviceFeatures, geometryShader}
+  rawOffset = #{offset VkPhysicalDeviceFeatures, geometryShader}
 
 instance Offset "tessellationShader" VkPhysicalDeviceFeatures where
-  rawOffset = #{offset struct VkPhysicalDeviceFeatures, tessellationShader}
+  rawOffset = #{offset VkPhysicalDeviceFeatures, tessellationShader}
 
 instance Offset "sampleRateShading" VkPhysicalDeviceFeatures where
-  rawOffset = #{offset struct VkPhysicalDeviceFeatures, sampleRateShading}
+  rawOffset = #{offset VkPhysicalDeviceFeatures, sampleRateShading}
 
 instance Offset "dualSrcBlend" VkPhysicalDeviceFeatures where
-  rawOffset = #{offset struct VkPhysicalDeviceFeatures, dualSrcBlend}
+  rawOffset = #{offset VkPhysicalDeviceFeatures, dualSrcBlend}
 
 instance Offset "logicOp" VkPhysicalDeviceFeatures where
-  rawOffset = #{offset struct VkPhysicalDeviceFeatures, logicOp}
+  rawOffset = #{offset VkPhysicalDeviceFeatures, logicOp}
 
 instance Offset "multiDrawIndirect" VkPhysicalDeviceFeatures where
-  rawOffset = #{offset struct VkPhysicalDeviceFeatures, multiDrawIndirect}
+  rawOffset = #{offset VkPhysicalDeviceFeatures, multiDrawIndirect}
 
 instance Offset "drawIndirectFirstInstance" VkPhysicalDeviceFeatures where
-  rawOffset = #{offset struct VkPhysicalDeviceFeatures, drawIndirectFirstInstance}
+  rawOffset = #{offset VkPhysicalDeviceFeatures, drawIndirectFirstInstance}
 
 instance Offset "depthClamp" VkPhysicalDeviceFeatures where
-  rawOffset = #{offset struct VkPhysicalDeviceFeatures, depthClamp}
+  rawOffset = #{offset VkPhysicalDeviceFeatures, depthClamp}
 
 instance Offset "depthBiasClamp" VkPhysicalDeviceFeatures where
-  rawOffset = #{offset struct VkPhysicalDeviceFeatures, depthBiasClamp}
+  rawOffset = #{offset VkPhysicalDeviceFeatures, depthBiasClamp}
 
 instance Offset "fillModeNonSolid" VkPhysicalDeviceFeatures where
-  rawOffset = #{offset struct VkPhysicalDeviceFeatures, fillModeNonSolid}
+  rawOffset = #{offset VkPhysicalDeviceFeatures, fillModeNonSolid}
 
 instance Offset "depthBounds" VkPhysicalDeviceFeatures where
-  rawOffset = #{offset struct VkPhysicalDeviceFeatures, depthBounds}
+  rawOffset = #{offset VkPhysicalDeviceFeatures, depthBounds}
 
 instance Offset "wideLines" VkPhysicalDeviceFeatures where
-  rawOffset = #{offset struct VkPhysicalDeviceFeatures, wideLines}
+  rawOffset = #{offset VkPhysicalDeviceFeatures, wideLines}
 
 instance Offset "largePoints" VkPhysicalDeviceFeatures where
-  rawOffset = #{offset struct VkPhysicalDeviceFeatures, largePoints}
+  rawOffset = #{offset VkPhysicalDeviceFeatures, largePoints}
 
 instance Offset "alphaToOne" VkPhysicalDeviceFeatures where
-  rawOffset = #{offset struct VkPhysicalDeviceFeatures, alphaToOne}
+  rawOffset = #{offset VkPhysicalDeviceFeatures, alphaToOne}
 
 instance Offset "multiViewport" VkPhysicalDeviceFeatures where
-  rawOffset = #{offset struct VkPhysicalDeviceFeatures, multiViewport}
+  rawOffset = #{offset VkPhysicalDeviceFeatures, multiViewport}
 
 instance Offset "samplerAnisotropy" VkPhysicalDeviceFeatures where
-  rawOffset = #{offset struct VkPhysicalDeviceFeatures, samplerAnisotropy}
+  rawOffset = #{offset VkPhysicalDeviceFeatures, samplerAnisotropy}
 
 instance Offset "textureCompressionETC2" VkPhysicalDeviceFeatures where
-  rawOffset = #{offset struct VkPhysicalDeviceFeatures, textureCompressionETC2}
+  rawOffset = #{offset VkPhysicalDeviceFeatures, textureCompressionETC2}
 
 instance Offset "textureCompressionASTC_LDR" VkPhysicalDeviceFeatures where
-  rawOffset = #{offset struct VkPhysicalDeviceFeatures, textureCompressionASTC_LDR}
+  rawOffset = #{offset VkPhysicalDeviceFeatures, textureCompressionASTC_LDR}
 
 instance Offset "textureCompressionBC" VkPhysicalDeviceFeatures where
-  rawOffset = #{offset struct VkPhysicalDeviceFeatures, textureCompressionBC}
+  rawOffset = #{offset VkPhysicalDeviceFeatures, textureCompressionBC}
 
 instance Offset "occlusionQueryPrecise" VkPhysicalDeviceFeatures where
-  rawOffset = #{offset struct VkPhysicalDeviceFeatures, occlusionQueryPrecise}
+  rawOffset = #{offset VkPhysicalDeviceFeatures, occlusionQueryPrecise}
 
 instance Offset "pipelineStatisticsQuery" VkPhysicalDeviceFeatures where
-  rawOffset = #{offset struct VkPhysicalDeviceFeatures, pipelineStatisticsQuery}
+  rawOffset = #{offset VkPhysicalDeviceFeatures, pipelineStatisticsQuery}
 
 instance Offset "vertexPipelineStoresAndAtomics" VkPhysicalDeviceFeatures where
-  rawOffset = #{offset struct VkPhysicalDeviceFeatures, vertexPipelineStoresAndAtomics}
+  rawOffset = #{offset VkPhysicalDeviceFeatures, vertexPipelineStoresAndAtomics}
 
 instance Offset "fragmentStoresAndAtomics" VkPhysicalDeviceFeatures where
-  rawOffset = #{offset struct VkPhysicalDeviceFeatures, fragmentStoresAndAtomics}
+  rawOffset = #{offset VkPhysicalDeviceFeatures, fragmentStoresAndAtomics}
 
 instance Offset "shaderTessellationAndGeometryPointSize" VkPhysicalDeviceFeatures where
-  rawOffset = #{offset struct VkPhysicalDeviceFeatures, shaderTessellationAndGeometryPointSize}
+  rawOffset = #{offset VkPhysicalDeviceFeatures, shaderTessellationAndGeometryPointSize}
 
 instance Offset "shaderImageGatherExtended" VkPhysicalDeviceFeatures where
-  rawOffset = #{offset struct VkPhysicalDeviceFeatures, shaderImageGatherExtended}
+  rawOffset = #{offset VkPhysicalDeviceFeatures, shaderImageGatherExtended}
 
 instance Offset "shaderStorageImageExtendedFormats" VkPhysicalDeviceFeatures where
-  rawOffset = #{offset struct VkPhysicalDeviceFeatures, shaderStorageImageExtendedFormats}
+  rawOffset = #{offset VkPhysicalDeviceFeatures, shaderStorageImageExtendedFormats}
 
 instance Offset "shaderStorageImageMultisample" VkPhysicalDeviceFeatures where
-  rawOffset = #{offset struct VkPhysicalDeviceFeatures, shaderStorageImageMultisample}
+  rawOffset = #{offset VkPhysicalDeviceFeatures, shaderStorageImageMultisample}
 
 instance Offset "shaderStorageImageReadWithoutFormat" VkPhysicalDeviceFeatures where
-  rawOffset = #{offset struct VkPhysicalDeviceFeatures, shaderStorageImageReadWithoutFormat}
+  rawOffset = #{offset VkPhysicalDeviceFeatures, shaderStorageImageReadWithoutFormat}
 
 instance Offset "shaderStorageImageWriteWithoutFormat" VkPhysicalDeviceFeatures where
-  rawOffset = #{offset struct VkPhysicalDeviceFeatures, shaderStorageImageWriteWithoutFormat}
+  rawOffset = #{offset VkPhysicalDeviceFeatures, shaderStorageImageWriteWithoutFormat}
 
 instance Offset "shaderUniformBufferArrayDynamicIndexing" VkPhysicalDeviceFeatures where
-  rawOffset = #{offset struct VkPhysicalDeviceFeatures, shaderUniformBufferArrayDynamicIndexing}
+  rawOffset = #{offset VkPhysicalDeviceFeatures, shaderUniformBufferArrayDynamicIndexing}
 
 instance Offset "shaderSampledImageArrayDynamicIndexing" VkPhysicalDeviceFeatures where
-  rawOffset = #{offset struct VkPhysicalDeviceFeatures, shaderSampledImageArrayDynamicIndexing}
+  rawOffset = #{offset VkPhysicalDeviceFeatures, shaderSampledImageArrayDynamicIndexing}
 
 instance Offset "shaderStorageBufferArrayDynamicIndexing" VkPhysicalDeviceFeatures where
-  rawOffset = #{offset struct VkPhysicalDeviceFeatures, shaderStorageBufferArrayDynamicIndexing}
+  rawOffset = #{offset VkPhysicalDeviceFeatures, shaderStorageBufferArrayDynamicIndexing}
 
 instance Offset "shaderStorageImageArrayDynamicIndexing" VkPhysicalDeviceFeatures where
-  rawOffset = #{offset struct VkPhysicalDeviceFeatures, shaderStorageImageArrayDynamicIndexing}
+  rawOffset = #{offset VkPhysicalDeviceFeatures, shaderStorageImageArrayDynamicIndexing}
 
 instance Offset "shaderClipDistance" VkPhysicalDeviceFeatures where
-  rawOffset = #{offset struct VkPhysicalDeviceFeatures, shaderClipDistance}
+  rawOffset = #{offset VkPhysicalDeviceFeatures, shaderClipDistance}
 
 instance Offset "shaderCullDistance" VkPhysicalDeviceFeatures where
-  rawOffset = #{offset struct VkPhysicalDeviceFeatures, shaderCullDistance}
+  rawOffset = #{offset VkPhysicalDeviceFeatures, shaderCullDistance}
 
 instance Offset "shaderFloat64" VkPhysicalDeviceFeatures where
-  rawOffset = #{offset struct VkPhysicalDeviceFeatures, shaderFloat64}
+  rawOffset = #{offset VkPhysicalDeviceFeatures, shaderFloat64}
 
 instance Offset "shaderInt64" VkPhysicalDeviceFeatures where
-  rawOffset = #{offset struct VkPhysicalDeviceFeatures, shaderInt64}
+  rawOffset = #{offset VkPhysicalDeviceFeatures, shaderInt64}
 
 instance Offset "shaderInt16" VkPhysicalDeviceFeatures where
-  rawOffset = #{offset struct VkPhysicalDeviceFeatures, shaderInt16}
+  rawOffset = #{offset VkPhysicalDeviceFeatures, shaderInt16}
 
 instance Offset "shaderResourceResidency" VkPhysicalDeviceFeatures where
-  rawOffset = #{offset struct VkPhysicalDeviceFeatures, shaderResourceResidency}
+  rawOffset = #{offset VkPhysicalDeviceFeatures, shaderResourceResidency}
 
 instance Offset "shaderResourceMinLod" VkPhysicalDeviceFeatures where
-  rawOffset = #{offset struct VkPhysicalDeviceFeatures, shaderResourceMinLod}
+  rawOffset = #{offset VkPhysicalDeviceFeatures, shaderResourceMinLod}
 
 instance Offset "sparseBinding" VkPhysicalDeviceFeatures where
-  rawOffset = #{offset struct VkPhysicalDeviceFeatures, sparseBinding}
+  rawOffset = #{offset VkPhysicalDeviceFeatures, sparseBinding}
 
 instance Offset "sparseResidencyBuffer" VkPhysicalDeviceFeatures where
-  rawOffset = #{offset struct VkPhysicalDeviceFeatures, sparseResidencyBuffer}
+  rawOffset = #{offset VkPhysicalDeviceFeatures, sparseResidencyBuffer}
 
 instance Offset "sparseResidencyImage2D" VkPhysicalDeviceFeatures where
-  rawOffset = #{offset struct VkPhysicalDeviceFeatures, sparseResidencyImage2D}
+  rawOffset = #{offset VkPhysicalDeviceFeatures, sparseResidencyImage2D}
 
 instance Offset "sparseResidencyImage3D" VkPhysicalDeviceFeatures where
-  rawOffset = #{offset struct VkPhysicalDeviceFeatures, sparseResidencyImage3D}
+  rawOffset = #{offset VkPhysicalDeviceFeatures, sparseResidencyImage3D}
 
 instance Offset "sparseResidency2Samples" VkPhysicalDeviceFeatures where
-  rawOffset = #{offset struct VkPhysicalDeviceFeatures, sparseResidency2Samples}
+  rawOffset = #{offset VkPhysicalDeviceFeatures, sparseResidency2Samples}
 
 instance Offset "sparseResidency4Samples" VkPhysicalDeviceFeatures where
-  rawOffset = #{offset struct VkPhysicalDeviceFeatures, sparseResidency4Samples}
+  rawOffset = #{offset VkPhysicalDeviceFeatures, sparseResidency4Samples}
 
 instance Offset "sparseResidency8Samples" VkPhysicalDeviceFeatures where
-  rawOffset = #{offset struct VkPhysicalDeviceFeatures, sparseResidency8Samples}
+  rawOffset = #{offset VkPhysicalDeviceFeatures, sparseResidency8Samples}
 
 instance Offset "sparseResidency16Samples" VkPhysicalDeviceFeatures where
-  rawOffset = #{offset struct VkPhysicalDeviceFeatures, sparseResidency16Samples}
+  rawOffset = #{offset VkPhysicalDeviceFeatures, sparseResidency16Samples}
 
 instance Offset "sparseResidencyAliased" VkPhysicalDeviceFeatures where
-  rawOffset = #{offset struct VkPhysicalDeviceFeatures, sparseResidencyAliased}
+  rawOffset = #{offset VkPhysicalDeviceFeatures, sparseResidencyAliased}
 
 instance Offset "variableMultisampleRate" VkPhysicalDeviceFeatures where
-  rawOffset = #{offset struct VkPhysicalDeviceFeatures, variableMultisampleRate}
+  rawOffset = #{offset VkPhysicalDeviceFeatures, variableMultisampleRate}
 
 instance Offset "inheritedQueries" VkPhysicalDeviceFeatures where
-  rawOffset = #{offset struct VkPhysicalDeviceFeatures, inheritedQueries}
+  rawOffset = #{offset VkPhysicalDeviceFeatures, inheritedQueries}

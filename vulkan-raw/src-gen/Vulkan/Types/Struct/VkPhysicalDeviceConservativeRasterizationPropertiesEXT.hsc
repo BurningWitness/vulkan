@@ -38,8 +38,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkPhysicalDeviceConservativeRasterizationPrope
          }
 
 instance Storable VkPhysicalDeviceConservativeRasterizationPropertiesEXT where
-  sizeOf    _ = #{size      struct VkPhysicalDeviceConservativeRasterizationPropertiesEXT}
-  alignment _ = #{alignment struct VkPhysicalDeviceConservativeRasterizationPropertiesEXT}
+  sizeOf    _ = #{size      VkPhysicalDeviceConservativeRasterizationPropertiesEXT}
+  alignment _ = #{alignment VkPhysicalDeviceConservativeRasterizationPropertiesEXT}
 
   peek ptr = 
     VkPhysicalDeviceConservativeRasterizationPropertiesEXT
@@ -69,37 +69,37 @@ instance Storable VkPhysicalDeviceConservativeRasterizationPropertiesEXT where
     pokeField @"conservativeRasterizationPostDepthCoverage" ptr val
 
 instance Offset "sType" VkPhysicalDeviceConservativeRasterizationPropertiesEXT where
-  rawOffset = #{offset struct VkPhysicalDeviceConservativeRasterizationPropertiesEXT, sType}
+  rawOffset = #{offset VkPhysicalDeviceConservativeRasterizationPropertiesEXT, sType}
 
 instance Offset "pNext" VkPhysicalDeviceConservativeRasterizationPropertiesEXT where
-  rawOffset = #{offset struct VkPhysicalDeviceConservativeRasterizationPropertiesEXT, pNext}
+  rawOffset = #{offset VkPhysicalDeviceConservativeRasterizationPropertiesEXT, pNext}
 
 instance Offset "primitiveOverestimationSize" VkPhysicalDeviceConservativeRasterizationPropertiesEXT where
-  rawOffset = #{offset struct VkPhysicalDeviceConservativeRasterizationPropertiesEXT, primitiveOverestimationSize}
+  rawOffset = #{offset VkPhysicalDeviceConservativeRasterizationPropertiesEXT, primitiveOverestimationSize}
 
 instance Offset "maxExtraPrimitiveOverestimationSize" VkPhysicalDeviceConservativeRasterizationPropertiesEXT where
-  rawOffset = #{offset struct VkPhysicalDeviceConservativeRasterizationPropertiesEXT, maxExtraPrimitiveOverestimationSize}
+  rawOffset = #{offset VkPhysicalDeviceConservativeRasterizationPropertiesEXT, maxExtraPrimitiveOverestimationSize}
 
 instance Offset "extraPrimitiveOverestimationSizeGranularity" VkPhysicalDeviceConservativeRasterizationPropertiesEXT where
-  rawOffset = #{offset struct VkPhysicalDeviceConservativeRasterizationPropertiesEXT, extraPrimitiveOverestimationSizeGranularity}
+  rawOffset = #{offset VkPhysicalDeviceConservativeRasterizationPropertiesEXT, extraPrimitiveOverestimationSizeGranularity}
 
 instance Offset "primitiveUnderestimation" VkPhysicalDeviceConservativeRasterizationPropertiesEXT where
-  rawOffset = #{offset struct VkPhysicalDeviceConservativeRasterizationPropertiesEXT, primitiveUnderestimation}
+  rawOffset = #{offset VkPhysicalDeviceConservativeRasterizationPropertiesEXT, primitiveUnderestimation}
 
 instance Offset "conservativePointAndLineRasterization" VkPhysicalDeviceConservativeRasterizationPropertiesEXT where
-  rawOffset = #{offset struct VkPhysicalDeviceConservativeRasterizationPropertiesEXT, conservativePointAndLineRasterization}
+  rawOffset = #{offset VkPhysicalDeviceConservativeRasterizationPropertiesEXT, conservativePointAndLineRasterization}
 
 instance Offset "degenerateTrianglesRasterized" VkPhysicalDeviceConservativeRasterizationPropertiesEXT where
-  rawOffset = #{offset struct VkPhysicalDeviceConservativeRasterizationPropertiesEXT, degenerateTrianglesRasterized}
+  rawOffset = #{offset VkPhysicalDeviceConservativeRasterizationPropertiesEXT, degenerateTrianglesRasterized}
 
 instance Offset "degenerateLinesRasterized" VkPhysicalDeviceConservativeRasterizationPropertiesEXT where
-  rawOffset = #{offset struct VkPhysicalDeviceConservativeRasterizationPropertiesEXT, degenerateLinesRasterized}
+  rawOffset = #{offset VkPhysicalDeviceConservativeRasterizationPropertiesEXT, degenerateLinesRasterized}
 
 instance Offset "fullyCoveredFragmentShaderInputVariable" VkPhysicalDeviceConservativeRasterizationPropertiesEXT where
-  rawOffset = #{offset struct VkPhysicalDeviceConservativeRasterizationPropertiesEXT, fullyCoveredFragmentShaderInputVariable}
+  rawOffset = #{offset VkPhysicalDeviceConservativeRasterizationPropertiesEXT, fullyCoveredFragmentShaderInputVariable}
 
 instance Offset "conservativeRasterizationPostDepthCoverage" VkPhysicalDeviceConservativeRasterizationPropertiesEXT where
-  rawOffset = #{offset struct VkPhysicalDeviceConservativeRasterizationPropertiesEXT, conservativeRasterizationPostDepthCoverage}
+  rawOffset = #{offset VkPhysicalDeviceConservativeRasterizationPropertiesEXT, conservativeRasterizationPostDepthCoverage}
 
 #else
 

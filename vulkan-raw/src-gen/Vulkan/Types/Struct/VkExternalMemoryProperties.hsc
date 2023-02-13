@@ -30,8 +30,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkExternalMemoryProperties" #-} VkExternalMemo
          }
 
 instance Storable VkExternalMemoryProperties where
-  sizeOf    _ = #{size      struct VkExternalMemoryProperties}
-  alignment _ = #{alignment struct VkExternalMemoryProperties}
+  sizeOf    _ = #{size      VkExternalMemoryProperties}
+  alignment _ = #{alignment VkExternalMemoryProperties}
 
   peek ptr = 
     VkExternalMemoryProperties
@@ -45,13 +45,13 @@ instance Storable VkExternalMemoryProperties where
     pokeField @"compatibleHandleTypes" ptr val
 
 instance Offset "externalMemoryFeatures" VkExternalMemoryProperties where
-  rawOffset = #{offset struct VkExternalMemoryProperties, externalMemoryFeatures}
+  rawOffset = #{offset VkExternalMemoryProperties, externalMemoryFeatures}
 
 instance Offset "exportFromImportedHandleTypes" VkExternalMemoryProperties where
-  rawOffset = #{offset struct VkExternalMemoryProperties, exportFromImportedHandleTypes}
+  rawOffset = #{offset VkExternalMemoryProperties, exportFromImportedHandleTypes}
 
 instance Offset "compatibleHandleTypes" VkExternalMemoryProperties where
-  rawOffset = #{offset struct VkExternalMemoryProperties, compatibleHandleTypes}
+  rawOffset = #{offset VkExternalMemoryProperties, compatibleHandleTypes}
 
 #else
 

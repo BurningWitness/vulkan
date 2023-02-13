@@ -27,8 +27,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkViewportWScalingNV" #-} VkViewportWScalingNV
          }
 
 instance Storable VkViewportWScalingNV where
-  sizeOf    _ = #{size      struct VkViewportWScalingNV}
-  alignment _ = #{alignment struct VkViewportWScalingNV}
+  sizeOf    _ = #{size      VkViewportWScalingNV}
+  alignment _ = #{alignment VkViewportWScalingNV}
 
   peek ptr = 
     VkViewportWScalingNV
@@ -40,10 +40,10 @@ instance Storable VkViewportWScalingNV where
     pokeField @"ycoeff" ptr val
 
 instance Offset "xcoeff" VkViewportWScalingNV where
-  rawOffset = #{offset struct VkViewportWScalingNV, xcoeff}
+  rawOffset = #{offset VkViewportWScalingNV, xcoeff}
 
 instance Offset "ycoeff" VkViewportWScalingNV where
-  rawOffset = #{offset struct VkViewportWScalingNV, ycoeff}
+  rawOffset = #{offset VkViewportWScalingNV, ycoeff}
 
 #else
 

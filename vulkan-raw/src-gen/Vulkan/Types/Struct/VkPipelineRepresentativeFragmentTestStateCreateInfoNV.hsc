@@ -30,8 +30,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkPipelineRepresentativeFragmentTestStateCreat
          }
 
 instance Storable VkPipelineRepresentativeFragmentTestStateCreateInfoNV where
-  sizeOf    _ = #{size      struct VkPipelineRepresentativeFragmentTestStateCreateInfoNV}
-  alignment _ = #{alignment struct VkPipelineRepresentativeFragmentTestStateCreateInfoNV}
+  sizeOf    _ = #{size      VkPipelineRepresentativeFragmentTestStateCreateInfoNV}
+  alignment _ = #{alignment VkPipelineRepresentativeFragmentTestStateCreateInfoNV}
 
   peek ptr = 
     VkPipelineRepresentativeFragmentTestStateCreateInfoNV
@@ -45,13 +45,13 @@ instance Storable VkPipelineRepresentativeFragmentTestStateCreateInfoNV where
     pokeField @"representativeFragmentTestEnable" ptr val
 
 instance Offset "sType" VkPipelineRepresentativeFragmentTestStateCreateInfoNV where
-  rawOffset = #{offset struct VkPipelineRepresentativeFragmentTestStateCreateInfoNV, sType}
+  rawOffset = #{offset VkPipelineRepresentativeFragmentTestStateCreateInfoNV, sType}
 
 instance Offset "pNext" VkPipelineRepresentativeFragmentTestStateCreateInfoNV where
-  rawOffset = #{offset struct VkPipelineRepresentativeFragmentTestStateCreateInfoNV, pNext}
+  rawOffset = #{offset VkPipelineRepresentativeFragmentTestStateCreateInfoNV, pNext}
 
 instance Offset "representativeFragmentTestEnable" VkPipelineRepresentativeFragmentTestStateCreateInfoNV where
-  rawOffset = #{offset struct VkPipelineRepresentativeFragmentTestStateCreateInfoNV, representativeFragmentTestEnable}
+  rawOffset = #{offset VkPipelineRepresentativeFragmentTestStateCreateInfoNV, representativeFragmentTestEnable}
 
 #else
 

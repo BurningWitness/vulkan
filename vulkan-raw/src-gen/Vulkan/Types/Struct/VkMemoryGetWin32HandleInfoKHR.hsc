@@ -32,8 +32,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkMemoryGetWin32HandleInfoKHR" #-} VkMemoryGet
          }
 
 instance Storable VkMemoryGetWin32HandleInfoKHR where
-  sizeOf    _ = #{size      struct VkMemoryGetWin32HandleInfoKHR}
-  alignment _ = #{alignment struct VkMemoryGetWin32HandleInfoKHR}
+  sizeOf    _ = #{size      VkMemoryGetWin32HandleInfoKHR}
+  alignment _ = #{alignment VkMemoryGetWin32HandleInfoKHR}
 
   peek ptr = 
     VkMemoryGetWin32HandleInfoKHR
@@ -49,16 +49,16 @@ instance Storable VkMemoryGetWin32HandleInfoKHR where
     pokeField @"handleType" ptr val
 
 instance Offset "sType" VkMemoryGetWin32HandleInfoKHR where
-  rawOffset = #{offset struct VkMemoryGetWin32HandleInfoKHR, sType}
+  rawOffset = #{offset VkMemoryGetWin32HandleInfoKHR, sType}
 
 instance Offset "pNext" VkMemoryGetWin32HandleInfoKHR where
-  rawOffset = #{offset struct VkMemoryGetWin32HandleInfoKHR, pNext}
+  rawOffset = #{offset VkMemoryGetWin32HandleInfoKHR, pNext}
 
 instance Offset "memory" VkMemoryGetWin32HandleInfoKHR where
-  rawOffset = #{offset struct VkMemoryGetWin32HandleInfoKHR, memory}
+  rawOffset = #{offset VkMemoryGetWin32HandleInfoKHR, memory}
 
 instance Offset "handleType" VkMemoryGetWin32HandleInfoKHR where
-  rawOffset = #{offset struct VkMemoryGetWin32HandleInfoKHR, handleType}
+  rawOffset = #{offset VkMemoryGetWin32HandleInfoKHR, handleType}
 
 #else
 

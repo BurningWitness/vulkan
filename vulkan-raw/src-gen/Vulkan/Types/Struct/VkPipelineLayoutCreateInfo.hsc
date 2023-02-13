@@ -34,8 +34,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkPipelineLayoutCreateInfo" #-} VkPipelineLayo
          }
 
 instance Storable VkPipelineLayoutCreateInfo where
-  sizeOf    _ = #{size      struct VkPipelineLayoutCreateInfo}
-  alignment _ = #{alignment struct VkPipelineLayoutCreateInfo}
+  sizeOf    _ = #{size      VkPipelineLayoutCreateInfo}
+  alignment _ = #{alignment VkPipelineLayoutCreateInfo}
 
   peek ptr = 
     VkPipelineLayoutCreateInfo
@@ -57,22 +57,22 @@ instance Storable VkPipelineLayoutCreateInfo where
     pokeField @"pPushConstantRanges" ptr val
 
 instance Offset "sType" VkPipelineLayoutCreateInfo where
-  rawOffset = #{offset struct VkPipelineLayoutCreateInfo, sType}
+  rawOffset = #{offset VkPipelineLayoutCreateInfo, sType}
 
 instance Offset "pNext" VkPipelineLayoutCreateInfo where
-  rawOffset = #{offset struct VkPipelineLayoutCreateInfo, pNext}
+  rawOffset = #{offset VkPipelineLayoutCreateInfo, pNext}
 
 instance Offset "flags" VkPipelineLayoutCreateInfo where
-  rawOffset = #{offset struct VkPipelineLayoutCreateInfo, flags}
+  rawOffset = #{offset VkPipelineLayoutCreateInfo, flags}
 
 instance Offset "setLayoutCount" VkPipelineLayoutCreateInfo where
-  rawOffset = #{offset struct VkPipelineLayoutCreateInfo, setLayoutCount}
+  rawOffset = #{offset VkPipelineLayoutCreateInfo, setLayoutCount}
 
 instance Offset "pSetLayouts" VkPipelineLayoutCreateInfo where
-  rawOffset = #{offset struct VkPipelineLayoutCreateInfo, pSetLayouts}
+  rawOffset = #{offset VkPipelineLayoutCreateInfo, pSetLayouts}
 
 instance Offset "pushConstantRangeCount" VkPipelineLayoutCreateInfo where
-  rawOffset = #{offset struct VkPipelineLayoutCreateInfo, pushConstantRangeCount}
+  rawOffset = #{offset VkPipelineLayoutCreateInfo, pushConstantRangeCount}
 
 instance Offset "pPushConstantRanges" VkPipelineLayoutCreateInfo where
-  rawOffset = #{offset struct VkPipelineLayoutCreateInfo, pPushConstantRanges}
+  rawOffset = #{offset VkPipelineLayoutCreateInfo, pPushConstantRanges}

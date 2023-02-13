@@ -32,8 +32,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkPipelineFragmentShadingRateStateCreateInfoKH
          }
 
 instance Storable VkPipelineFragmentShadingRateStateCreateInfoKHR where
-  sizeOf    _ = #{size      struct VkPipelineFragmentShadingRateStateCreateInfoKHR}
-  alignment _ = #{alignment struct VkPipelineFragmentShadingRateStateCreateInfoKHR}
+  sizeOf    _ = #{size      VkPipelineFragmentShadingRateStateCreateInfoKHR}
+  alignment _ = #{alignment VkPipelineFragmentShadingRateStateCreateInfoKHR}
 
   peek ptr = 
     VkPipelineFragmentShadingRateStateCreateInfoKHR
@@ -49,16 +49,16 @@ instance Storable VkPipelineFragmentShadingRateStateCreateInfoKHR where
     pokeField @"combinerOps" ptr val
 
 instance Offset "sType" VkPipelineFragmentShadingRateStateCreateInfoKHR where
-  rawOffset = #{offset struct VkPipelineFragmentShadingRateStateCreateInfoKHR, sType}
+  rawOffset = #{offset VkPipelineFragmentShadingRateStateCreateInfoKHR, sType}
 
 instance Offset "pNext" VkPipelineFragmentShadingRateStateCreateInfoKHR where
-  rawOffset = #{offset struct VkPipelineFragmentShadingRateStateCreateInfoKHR, pNext}
+  rawOffset = #{offset VkPipelineFragmentShadingRateStateCreateInfoKHR, pNext}
 
 instance Offset "fragmentSize" VkPipelineFragmentShadingRateStateCreateInfoKHR where
-  rawOffset = #{offset struct VkPipelineFragmentShadingRateStateCreateInfoKHR, fragmentSize}
+  rawOffset = #{offset VkPipelineFragmentShadingRateStateCreateInfoKHR, fragmentSize}
 
 instance Offset "combinerOps" VkPipelineFragmentShadingRateStateCreateInfoKHR where
-  rawOffset = #{offset struct VkPipelineFragmentShadingRateStateCreateInfoKHR, combinerOps}
+  rawOffset = #{offset VkPipelineFragmentShadingRateStateCreateInfoKHR, combinerOps}
 
 #else
 

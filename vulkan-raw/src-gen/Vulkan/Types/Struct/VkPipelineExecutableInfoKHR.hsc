@@ -31,8 +31,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkPipelineExecutableInfoKHR" #-} VkPipelineExe
          }
 
 instance Storable VkPipelineExecutableInfoKHR where
-  sizeOf    _ = #{size      struct VkPipelineExecutableInfoKHR}
-  alignment _ = #{alignment struct VkPipelineExecutableInfoKHR}
+  sizeOf    _ = #{size      VkPipelineExecutableInfoKHR}
+  alignment _ = #{alignment VkPipelineExecutableInfoKHR}
 
   peek ptr = 
     VkPipelineExecutableInfoKHR
@@ -48,16 +48,16 @@ instance Storable VkPipelineExecutableInfoKHR where
     pokeField @"executableIndex" ptr val
 
 instance Offset "sType" VkPipelineExecutableInfoKHR where
-  rawOffset = #{offset struct VkPipelineExecutableInfoKHR, sType}
+  rawOffset = #{offset VkPipelineExecutableInfoKHR, sType}
 
 instance Offset "pNext" VkPipelineExecutableInfoKHR where
-  rawOffset = #{offset struct VkPipelineExecutableInfoKHR, pNext}
+  rawOffset = #{offset VkPipelineExecutableInfoKHR, pNext}
 
 instance Offset "pipeline" VkPipelineExecutableInfoKHR where
-  rawOffset = #{offset struct VkPipelineExecutableInfoKHR, pipeline}
+  rawOffset = #{offset VkPipelineExecutableInfoKHR, pipeline}
 
 instance Offset "executableIndex" VkPipelineExecutableInfoKHR where
-  rawOffset = #{offset struct VkPipelineExecutableInfoKHR, executableIndex}
+  rawOffset = #{offset VkPipelineExecutableInfoKHR, executableIndex}
 
 #else
 

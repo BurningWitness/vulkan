@@ -30,8 +30,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkDebugUtilsLabelEXT" #-} VkDebugUtilsLabelEXT
          }
 
 instance Storable VkDebugUtilsLabelEXT where
-  sizeOf    _ = #{size      struct VkDebugUtilsLabelEXT}
-  alignment _ = #{alignment struct VkDebugUtilsLabelEXT}
+  sizeOf    _ = #{size      VkDebugUtilsLabelEXT}
+  alignment _ = #{alignment VkDebugUtilsLabelEXT}
 
   peek ptr = 
     VkDebugUtilsLabelEXT
@@ -47,16 +47,16 @@ instance Storable VkDebugUtilsLabelEXT where
     pokeField @"color" ptr val
 
 instance Offset "sType" VkDebugUtilsLabelEXT where
-  rawOffset = #{offset struct VkDebugUtilsLabelEXT, sType}
+  rawOffset = #{offset VkDebugUtilsLabelEXT, sType}
 
 instance Offset "pNext" VkDebugUtilsLabelEXT where
-  rawOffset = #{offset struct VkDebugUtilsLabelEXT, pNext}
+  rawOffset = #{offset VkDebugUtilsLabelEXT, pNext}
 
 instance Offset "pLabelName" VkDebugUtilsLabelEXT where
-  rawOffset = #{offset struct VkDebugUtilsLabelEXT, pLabelName}
+  rawOffset = #{offset VkDebugUtilsLabelEXT, pLabelName}
 
 instance Offset "color" VkDebugUtilsLabelEXT where
-  rawOffset = #{offset struct VkDebugUtilsLabelEXT, color}
+  rawOffset = #{offset VkDebugUtilsLabelEXT, color}
 
 #else
 

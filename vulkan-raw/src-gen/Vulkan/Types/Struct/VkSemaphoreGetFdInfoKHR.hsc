@@ -32,8 +32,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkSemaphoreGetFdInfoKHR" #-} VkSemaphoreGetFdI
          }
 
 instance Storable VkSemaphoreGetFdInfoKHR where
-  sizeOf    _ = #{size      struct VkSemaphoreGetFdInfoKHR}
-  alignment _ = #{alignment struct VkSemaphoreGetFdInfoKHR}
+  sizeOf    _ = #{size      VkSemaphoreGetFdInfoKHR}
+  alignment _ = #{alignment VkSemaphoreGetFdInfoKHR}
 
   peek ptr = 
     VkSemaphoreGetFdInfoKHR
@@ -49,16 +49,16 @@ instance Storable VkSemaphoreGetFdInfoKHR where
     pokeField @"handleType" ptr val
 
 instance Offset "sType" VkSemaphoreGetFdInfoKHR where
-  rawOffset = #{offset struct VkSemaphoreGetFdInfoKHR, sType}
+  rawOffset = #{offset VkSemaphoreGetFdInfoKHR, sType}
 
 instance Offset "pNext" VkSemaphoreGetFdInfoKHR where
-  rawOffset = #{offset struct VkSemaphoreGetFdInfoKHR, pNext}
+  rawOffset = #{offset VkSemaphoreGetFdInfoKHR, pNext}
 
 instance Offset "semaphore" VkSemaphoreGetFdInfoKHR where
-  rawOffset = #{offset struct VkSemaphoreGetFdInfoKHR, semaphore}
+  rawOffset = #{offset VkSemaphoreGetFdInfoKHR, semaphore}
 
 instance Offset "handleType" VkSemaphoreGetFdInfoKHR where
-  rawOffset = #{offset struct VkSemaphoreGetFdInfoKHR, handleType}
+  rawOffset = #{offset VkSemaphoreGetFdInfoKHR, handleType}
 
 #else
 

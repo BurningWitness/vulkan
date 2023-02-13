@@ -28,8 +28,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkDisplayModeParametersKHR" #-} VkDisplayModeP
          }
 
 instance Storable VkDisplayModeParametersKHR where
-  sizeOf    _ = #{size      struct VkDisplayModeParametersKHR}
-  alignment _ = #{alignment struct VkDisplayModeParametersKHR}
+  sizeOf    _ = #{size      VkDisplayModeParametersKHR}
+  alignment _ = #{alignment VkDisplayModeParametersKHR}
 
   peek ptr = 
     VkDisplayModeParametersKHR
@@ -41,10 +41,10 @@ instance Storable VkDisplayModeParametersKHR where
     pokeField @"refreshRate" ptr val
 
 instance Offset "visibleRegion" VkDisplayModeParametersKHR where
-  rawOffset = #{offset struct VkDisplayModeParametersKHR, visibleRegion}
+  rawOffset = #{offset VkDisplayModeParametersKHR, visibleRegion}
 
 instance Offset "refreshRate" VkDisplayModeParametersKHR where
-  rawOffset = #{offset struct VkDisplayModeParametersKHR, refreshRate}
+  rawOffset = #{offset VkDisplayModeParametersKHR, refreshRate}
 
 #else
 

@@ -30,8 +30,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkRenderPassCreationFeedbackCreateInfoEXT" #-}
          }
 
 instance Storable VkRenderPassCreationFeedbackCreateInfoEXT where
-  sizeOf    _ = #{size      struct VkRenderPassCreationFeedbackCreateInfoEXT}
-  alignment _ = #{alignment struct VkRenderPassCreationFeedbackCreateInfoEXT}
+  sizeOf    _ = #{size      VkRenderPassCreationFeedbackCreateInfoEXT}
+  alignment _ = #{alignment VkRenderPassCreationFeedbackCreateInfoEXT}
 
   peek ptr = 
     VkRenderPassCreationFeedbackCreateInfoEXT
@@ -45,13 +45,13 @@ instance Storable VkRenderPassCreationFeedbackCreateInfoEXT where
     pokeField @"pRenderPassFeedback" ptr val
 
 instance Offset "sType" VkRenderPassCreationFeedbackCreateInfoEXT where
-  rawOffset = #{offset struct VkRenderPassCreationFeedbackCreateInfoEXT, sType}
+  rawOffset = #{offset VkRenderPassCreationFeedbackCreateInfoEXT, sType}
 
 instance Offset "pNext" VkRenderPassCreationFeedbackCreateInfoEXT where
-  rawOffset = #{offset struct VkRenderPassCreationFeedbackCreateInfoEXT, pNext}
+  rawOffset = #{offset VkRenderPassCreationFeedbackCreateInfoEXT, pNext}
 
 instance Offset "pRenderPassFeedback" VkRenderPassCreationFeedbackCreateInfoEXT where
-  rawOffset = #{offset struct VkRenderPassCreationFeedbackCreateInfoEXT, pRenderPassFeedback}
+  rawOffset = #{offset VkRenderPassCreationFeedbackCreateInfoEXT, pRenderPassFeedback}
 
 #else
 

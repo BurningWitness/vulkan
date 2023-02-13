@@ -32,8 +32,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkImagePipeSurfaceCreateInfoFUCHSIA" #-} VkIma
          }
 
 instance Storable VkImagePipeSurfaceCreateInfoFUCHSIA where
-  sizeOf    _ = #{size      struct VkImagePipeSurfaceCreateInfoFUCHSIA}
-  alignment _ = #{alignment struct VkImagePipeSurfaceCreateInfoFUCHSIA}
+  sizeOf    _ = #{size      VkImagePipeSurfaceCreateInfoFUCHSIA}
+  alignment _ = #{alignment VkImagePipeSurfaceCreateInfoFUCHSIA}
 
   peek ptr = 
     VkImagePipeSurfaceCreateInfoFUCHSIA
@@ -49,16 +49,16 @@ instance Storable VkImagePipeSurfaceCreateInfoFUCHSIA where
     pokeField @"imagePipeHandle" ptr val
 
 instance Offset "sType" VkImagePipeSurfaceCreateInfoFUCHSIA where
-  rawOffset = #{offset struct VkImagePipeSurfaceCreateInfoFUCHSIA, sType}
+  rawOffset = #{offset VkImagePipeSurfaceCreateInfoFUCHSIA, sType}
 
 instance Offset "pNext" VkImagePipeSurfaceCreateInfoFUCHSIA where
-  rawOffset = #{offset struct VkImagePipeSurfaceCreateInfoFUCHSIA, pNext}
+  rawOffset = #{offset VkImagePipeSurfaceCreateInfoFUCHSIA, pNext}
 
 instance Offset "flags" VkImagePipeSurfaceCreateInfoFUCHSIA where
-  rawOffset = #{offset struct VkImagePipeSurfaceCreateInfoFUCHSIA, flags}
+  rawOffset = #{offset VkImagePipeSurfaceCreateInfoFUCHSIA, flags}
 
 instance Offset "imagePipeHandle" VkImagePipeSurfaceCreateInfoFUCHSIA where
-  rawOffset = #{offset struct VkImagePipeSurfaceCreateInfoFUCHSIA, imagePipeHandle}
+  rawOffset = #{offset VkImagePipeSurfaceCreateInfoFUCHSIA, imagePipeHandle}
 
 #else
 

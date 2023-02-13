@@ -41,8 +41,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkVideoCapabilitiesKHR" #-} VkVideoCapabilitie
          }
 
 instance Storable VkVideoCapabilitiesKHR where
-  sizeOf    _ = #{size      struct VkVideoCapabilitiesKHR}
-  alignment _ = #{alignment struct VkVideoCapabilitiesKHR}
+  sizeOf    _ = #{size      VkVideoCapabilitiesKHR}
+  alignment _ = #{alignment VkVideoCapabilitiesKHR}
 
   peek ptr = 
     VkVideoCapabilitiesKHR
@@ -72,37 +72,37 @@ instance Storable VkVideoCapabilitiesKHR where
     pokeField @"stdHeaderVersion" ptr val
 
 instance Offset "sType" VkVideoCapabilitiesKHR where
-  rawOffset = #{offset struct VkVideoCapabilitiesKHR, sType}
+  rawOffset = #{offset VkVideoCapabilitiesKHR, sType}
 
 instance Offset "pNext" VkVideoCapabilitiesKHR where
-  rawOffset = #{offset struct VkVideoCapabilitiesKHR, pNext}
+  rawOffset = #{offset VkVideoCapabilitiesKHR, pNext}
 
 instance Offset "flags" VkVideoCapabilitiesKHR where
-  rawOffset = #{offset struct VkVideoCapabilitiesKHR, flags}
+  rawOffset = #{offset VkVideoCapabilitiesKHR, flags}
 
 instance Offset "minBitstreamBufferOffsetAlignment" VkVideoCapabilitiesKHR where
-  rawOffset = #{offset struct VkVideoCapabilitiesKHR, minBitstreamBufferOffsetAlignment}
+  rawOffset = #{offset VkVideoCapabilitiesKHR, minBitstreamBufferOffsetAlignment}
 
 instance Offset "minBitstreamBufferSizeAlignment" VkVideoCapabilitiesKHR where
-  rawOffset = #{offset struct VkVideoCapabilitiesKHR, minBitstreamBufferSizeAlignment}
+  rawOffset = #{offset VkVideoCapabilitiesKHR, minBitstreamBufferSizeAlignment}
 
 instance Offset "pictureAccessGranularity" VkVideoCapabilitiesKHR where
-  rawOffset = #{offset struct VkVideoCapabilitiesKHR, pictureAccessGranularity}
+  rawOffset = #{offset VkVideoCapabilitiesKHR, pictureAccessGranularity}
 
 instance Offset "minCodedExtent" VkVideoCapabilitiesKHR where
-  rawOffset = #{offset struct VkVideoCapabilitiesKHR, minCodedExtent}
+  rawOffset = #{offset VkVideoCapabilitiesKHR, minCodedExtent}
 
 instance Offset "maxCodedExtent" VkVideoCapabilitiesKHR where
-  rawOffset = #{offset struct VkVideoCapabilitiesKHR, maxCodedExtent}
+  rawOffset = #{offset VkVideoCapabilitiesKHR, maxCodedExtent}
 
 instance Offset "maxDpbSlots" VkVideoCapabilitiesKHR where
-  rawOffset = #{offset struct VkVideoCapabilitiesKHR, maxDpbSlots}
+  rawOffset = #{offset VkVideoCapabilitiesKHR, maxDpbSlots}
 
 instance Offset "maxActiveReferencePictures" VkVideoCapabilitiesKHR where
-  rawOffset = #{offset struct VkVideoCapabilitiesKHR, maxActiveReferencePictures}
+  rawOffset = #{offset VkVideoCapabilitiesKHR, maxActiveReferencePictures}
 
 instance Offset "stdHeaderVersion" VkVideoCapabilitiesKHR where
-  rawOffset = #{offset struct VkVideoCapabilitiesKHR, stdHeaderVersion}
+  rawOffset = #{offset VkVideoCapabilitiesKHR, stdHeaderVersion}
 
 #else
 

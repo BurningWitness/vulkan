@@ -32,8 +32,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkExportMetalBufferInfoEXT" #-} VkExportMetalB
          }
 
 instance Storable VkExportMetalBufferInfoEXT where
-  sizeOf    _ = #{size      struct VkExportMetalBufferInfoEXT}
-  alignment _ = #{alignment struct VkExportMetalBufferInfoEXT}
+  sizeOf    _ = #{size      VkExportMetalBufferInfoEXT}
+  alignment _ = #{alignment VkExportMetalBufferInfoEXT}
 
   peek ptr = 
     VkExportMetalBufferInfoEXT
@@ -49,16 +49,16 @@ instance Storable VkExportMetalBufferInfoEXT where
     pokeField @"mtlBuffer" ptr val
 
 instance Offset "sType" VkExportMetalBufferInfoEXT where
-  rawOffset = #{offset struct VkExportMetalBufferInfoEXT, sType}
+  rawOffset = #{offset VkExportMetalBufferInfoEXT, sType}
 
 instance Offset "pNext" VkExportMetalBufferInfoEXT where
-  rawOffset = #{offset struct VkExportMetalBufferInfoEXT, pNext}
+  rawOffset = #{offset VkExportMetalBufferInfoEXT, pNext}
 
 instance Offset "memory" VkExportMetalBufferInfoEXT where
-  rawOffset = #{offset struct VkExportMetalBufferInfoEXT, memory}
+  rawOffset = #{offset VkExportMetalBufferInfoEXT, memory}
 
 instance Offset "mtlBuffer" VkExportMetalBufferInfoEXT where
-  rawOffset = #{offset struct VkExportMetalBufferInfoEXT, mtlBuffer}
+  rawOffset = #{offset VkExportMetalBufferInfoEXT, mtlBuffer}
 
 #else
 

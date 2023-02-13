@@ -29,8 +29,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkPipelineTessellationStateCreateInfo" #-} VkP
          }
 
 instance Storable VkPipelineTessellationStateCreateInfo where
-  sizeOf    _ = #{size      struct VkPipelineTessellationStateCreateInfo}
-  alignment _ = #{alignment struct VkPipelineTessellationStateCreateInfo}
+  sizeOf    _ = #{size      VkPipelineTessellationStateCreateInfo}
+  alignment _ = #{alignment VkPipelineTessellationStateCreateInfo}
 
   peek ptr = 
     VkPipelineTessellationStateCreateInfo
@@ -46,13 +46,13 @@ instance Storable VkPipelineTessellationStateCreateInfo where
     pokeField @"patchControlPoints" ptr val
 
 instance Offset "sType" VkPipelineTessellationStateCreateInfo where
-  rawOffset = #{offset struct VkPipelineTessellationStateCreateInfo, sType}
+  rawOffset = #{offset VkPipelineTessellationStateCreateInfo, sType}
 
 instance Offset "pNext" VkPipelineTessellationStateCreateInfo where
-  rawOffset = #{offset struct VkPipelineTessellationStateCreateInfo, pNext}
+  rawOffset = #{offset VkPipelineTessellationStateCreateInfo, pNext}
 
 instance Offset "flags" VkPipelineTessellationStateCreateInfo where
-  rawOffset = #{offset struct VkPipelineTessellationStateCreateInfo, flags}
+  rawOffset = #{offset VkPipelineTessellationStateCreateInfo, flags}
 
 instance Offset "patchControlPoints" VkPipelineTessellationStateCreateInfo where
-  rawOffset = #{offset struct VkPipelineTessellationStateCreateInfo, patchControlPoints}
+  rawOffset = #{offset VkPipelineTessellationStateCreateInfo, patchControlPoints}

@@ -39,8 +39,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkPhysicalDeviceImageFormatInfo2" #-} VkPhysic
          }
 
 instance Storable VkPhysicalDeviceImageFormatInfo2 where
-  sizeOf    _ = #{size      struct VkPhysicalDeviceImageFormatInfo2}
-  alignment _ = #{alignment struct VkPhysicalDeviceImageFormatInfo2}
+  sizeOf    _ = #{size      VkPhysicalDeviceImageFormatInfo2}
+  alignment _ = #{alignment VkPhysicalDeviceImageFormatInfo2}
 
   peek ptr = 
     VkPhysicalDeviceImageFormatInfo2
@@ -62,25 +62,25 @@ instance Storable VkPhysicalDeviceImageFormatInfo2 where
     pokeField @"flags" ptr val
 
 instance Offset "sType" VkPhysicalDeviceImageFormatInfo2 where
-  rawOffset = #{offset struct VkPhysicalDeviceImageFormatInfo2, sType}
+  rawOffset = #{offset VkPhysicalDeviceImageFormatInfo2, sType}
 
 instance Offset "pNext" VkPhysicalDeviceImageFormatInfo2 where
-  rawOffset = #{offset struct VkPhysicalDeviceImageFormatInfo2, pNext}
+  rawOffset = #{offset VkPhysicalDeviceImageFormatInfo2, pNext}
 
 instance Offset "format" VkPhysicalDeviceImageFormatInfo2 where
-  rawOffset = #{offset struct VkPhysicalDeviceImageFormatInfo2, format}
+  rawOffset = #{offset VkPhysicalDeviceImageFormatInfo2, format}
 
 instance Offset "type_" VkPhysicalDeviceImageFormatInfo2 where
-  rawOffset = #{offset struct VkPhysicalDeviceImageFormatInfo2, type}
+  rawOffset = #{offset VkPhysicalDeviceImageFormatInfo2, type}
 
 instance Offset "tiling" VkPhysicalDeviceImageFormatInfo2 where
-  rawOffset = #{offset struct VkPhysicalDeviceImageFormatInfo2, tiling}
+  rawOffset = #{offset VkPhysicalDeviceImageFormatInfo2, tiling}
 
 instance Offset "usage" VkPhysicalDeviceImageFormatInfo2 where
-  rawOffset = #{offset struct VkPhysicalDeviceImageFormatInfo2, usage}
+  rawOffset = #{offset VkPhysicalDeviceImageFormatInfo2, usage}
 
 instance Offset "flags" VkPhysicalDeviceImageFormatInfo2 where
-  rawOffset = #{offset struct VkPhysicalDeviceImageFormatInfo2, flags}
+  rawOffset = #{offset VkPhysicalDeviceImageFormatInfo2, flags}
 
 instance Offset "type" VkPhysicalDeviceImageFormatInfo2 where
   rawOffset = rawOffset @"type_" @VkPhysicalDeviceImageFormatInfo2

@@ -33,8 +33,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkSubpassDependency" #-} VkSubpassDependency =
          }
 
 instance Storable VkSubpassDependency where
-  sizeOf    _ = #{size      struct VkSubpassDependency}
-  alignment _ = #{alignment struct VkSubpassDependency}
+  sizeOf    _ = #{size      VkSubpassDependency}
+  alignment _ = #{alignment VkSubpassDependency}
 
   peek ptr = 
     VkSubpassDependency
@@ -56,22 +56,22 @@ instance Storable VkSubpassDependency where
     pokeField @"dependencyFlags" ptr val
 
 instance Offset "srcSubpass" VkSubpassDependency where
-  rawOffset = #{offset struct VkSubpassDependency, srcSubpass}
+  rawOffset = #{offset VkSubpassDependency, srcSubpass}
 
 instance Offset "dstSubpass" VkSubpassDependency where
-  rawOffset = #{offset struct VkSubpassDependency, dstSubpass}
+  rawOffset = #{offset VkSubpassDependency, dstSubpass}
 
 instance Offset "srcStageMask" VkSubpassDependency where
-  rawOffset = #{offset struct VkSubpassDependency, srcStageMask}
+  rawOffset = #{offset VkSubpassDependency, srcStageMask}
 
 instance Offset "dstStageMask" VkSubpassDependency where
-  rawOffset = #{offset struct VkSubpassDependency, dstStageMask}
+  rawOffset = #{offset VkSubpassDependency, dstStageMask}
 
 instance Offset "srcAccessMask" VkSubpassDependency where
-  rawOffset = #{offset struct VkSubpassDependency, srcAccessMask}
+  rawOffset = #{offset VkSubpassDependency, srcAccessMask}
 
 instance Offset "dstAccessMask" VkSubpassDependency where
-  rawOffset = #{offset struct VkSubpassDependency, dstAccessMask}
+  rawOffset = #{offset VkSubpassDependency, dstAccessMask}
 
 instance Offset "dependencyFlags" VkSubpassDependency where
-  rawOffset = #{offset struct VkSubpassDependency, dependencyFlags}
+  rawOffset = #{offset VkSubpassDependency, dependencyFlags}

@@ -32,8 +32,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkPipelineInputAssemblyStateCreateInfo" #-} Vk
          }
 
 instance Storable VkPipelineInputAssemblyStateCreateInfo where
-  sizeOf    _ = #{size      struct VkPipelineInputAssemblyStateCreateInfo}
-  alignment _ = #{alignment struct VkPipelineInputAssemblyStateCreateInfo}
+  sizeOf    _ = #{size      VkPipelineInputAssemblyStateCreateInfo}
+  alignment _ = #{alignment VkPipelineInputAssemblyStateCreateInfo}
 
   peek ptr = 
     VkPipelineInputAssemblyStateCreateInfo
@@ -51,16 +51,16 @@ instance Storable VkPipelineInputAssemblyStateCreateInfo where
     pokeField @"primitiveRestartEnable" ptr val
 
 instance Offset "sType" VkPipelineInputAssemblyStateCreateInfo where
-  rawOffset = #{offset struct VkPipelineInputAssemblyStateCreateInfo, sType}
+  rawOffset = #{offset VkPipelineInputAssemblyStateCreateInfo, sType}
 
 instance Offset "pNext" VkPipelineInputAssemblyStateCreateInfo where
-  rawOffset = #{offset struct VkPipelineInputAssemblyStateCreateInfo, pNext}
+  rawOffset = #{offset VkPipelineInputAssemblyStateCreateInfo, pNext}
 
 instance Offset "flags" VkPipelineInputAssemblyStateCreateInfo where
-  rawOffset = #{offset struct VkPipelineInputAssemblyStateCreateInfo, flags}
+  rawOffset = #{offset VkPipelineInputAssemblyStateCreateInfo, flags}
 
 instance Offset "topology" VkPipelineInputAssemblyStateCreateInfo where
-  rawOffset = #{offset struct VkPipelineInputAssemblyStateCreateInfo, topology}
+  rawOffset = #{offset VkPipelineInputAssemblyStateCreateInfo, topology}
 
 instance Offset "primitiveRestartEnable" VkPipelineInputAssemblyStateCreateInfo where
-  rawOffset = #{offset struct VkPipelineInputAssemblyStateCreateInfo, primitiveRestartEnable}
+  rawOffset = #{offset VkPipelineInputAssemblyStateCreateInfo, primitiveRestartEnable}

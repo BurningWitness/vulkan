@@ -31,8 +31,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkPhysicalDeviceImage2DViewOf3DFeaturesEXT" #-
          }
 
 instance Storable VkPhysicalDeviceImage2DViewOf3DFeaturesEXT where
-  sizeOf    _ = #{size      struct VkPhysicalDeviceImage2DViewOf3DFeaturesEXT}
-  alignment _ = #{alignment struct VkPhysicalDeviceImage2DViewOf3DFeaturesEXT}
+  sizeOf    _ = #{size      VkPhysicalDeviceImage2DViewOf3DFeaturesEXT}
+  alignment _ = #{alignment VkPhysicalDeviceImage2DViewOf3DFeaturesEXT}
 
   peek ptr = 
     VkPhysicalDeviceImage2DViewOf3DFeaturesEXT
@@ -48,16 +48,16 @@ instance Storable VkPhysicalDeviceImage2DViewOf3DFeaturesEXT where
     pokeField @"sampler2DViewOf3D" ptr val
 
 instance Offset "sType" VkPhysicalDeviceImage2DViewOf3DFeaturesEXT where
-  rawOffset = #{offset struct VkPhysicalDeviceImage2DViewOf3DFeaturesEXT, sType}
+  rawOffset = #{offset VkPhysicalDeviceImage2DViewOf3DFeaturesEXT, sType}
 
 instance Offset "pNext" VkPhysicalDeviceImage2DViewOf3DFeaturesEXT where
-  rawOffset = #{offset struct VkPhysicalDeviceImage2DViewOf3DFeaturesEXT, pNext}
+  rawOffset = #{offset VkPhysicalDeviceImage2DViewOf3DFeaturesEXT, pNext}
 
 instance Offset "image2DViewOf3D" VkPhysicalDeviceImage2DViewOf3DFeaturesEXT where
-  rawOffset = #{offset struct VkPhysicalDeviceImage2DViewOf3DFeaturesEXT, image2DViewOf3D}
+  rawOffset = #{offset VkPhysicalDeviceImage2DViewOf3DFeaturesEXT, image2DViewOf3D}
 
 instance Offset "sampler2DViewOf3D" VkPhysicalDeviceImage2DViewOf3DFeaturesEXT where
-  rawOffset = #{offset struct VkPhysicalDeviceImage2DViewOf3DFeaturesEXT, sampler2DViewOf3D}
+  rawOffset = #{offset VkPhysicalDeviceImage2DViewOf3DFeaturesEXT, sampler2DViewOf3D}
 
 #else
 

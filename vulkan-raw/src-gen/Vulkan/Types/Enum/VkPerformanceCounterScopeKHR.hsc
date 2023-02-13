@@ -31,17 +31,17 @@ pattern VK_PERFORMANCE_COUNTER_SCOPE_COMMAND_KHR = 2
 #if VK_KHR_performance_query
 -- | Backwards-compatible alias containing a typo
 pattern VK_QUERY_SCOPE_COMMAND_BUFFER_KHR :: (Eq a, Num a) => a
-pattern VK_QUERY_SCOPE_COMMAND_BUFFER_KHR = VK_PERFORMANCE_COUNTER_SCOPE_COMMAND_BUFFER_KHR
+pattern VK_QUERY_SCOPE_COMMAND_BUFFER_KHR = 0
 #endif
 
 #if VK_KHR_performance_query
 -- | Backwards-compatible alias containing a typo
 pattern VK_QUERY_SCOPE_RENDER_PASS_KHR :: (Eq a, Num a) => a
-pattern VK_QUERY_SCOPE_RENDER_PASS_KHR = VK_PERFORMANCE_COUNTER_SCOPE_RENDER_PASS_KHR
+pattern VK_QUERY_SCOPE_RENDER_PASS_KHR = 1
 #endif
 
 #if VK_KHR_performance_query
 -- | Backwards-compatible alias containing a typo
 pattern VK_QUERY_SCOPE_COMMAND_KHR :: (Eq a, Num a) => a
-pattern VK_QUERY_SCOPE_COMMAND_KHR = VK_PERFORMANCE_COUNTER_SCOPE_COMMAND_KHR
+pattern VK_QUERY_SCOPE_COMMAND_KHR = 2
 #endif

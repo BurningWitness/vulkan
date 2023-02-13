@@ -1,3 +1,7 @@
+{-# LANGUAGE CApiFFI #-}
+{-# LANGUAGE CPP #-}
+{-# LANGUAGE MagicHash #-}
+
 #include <vulkan/vulkan.h>
 
 #if VK_EXT_extended_dynamic_state
@@ -9,17 +13,17 @@ import Data.Word
 import GHC.Ptr
 import Vulkan.Types.Base
 import Vulkan.Types.Handle
-import Vulkan.Types.Command.VkCmdSetDepthWriteEnable
 import Vulkan.Types.VkFun
 
 
 
-type VkCmdSetDepthWriteEnableEXT = VkCmdSetDepthWriteEnable
+type VkCmdSetDepthWriteEnableEXT =
+          VkCommandBuffer -- ^ commandBuffer
+       -> VkBool32 -- ^ depthWriteEnable
+       -> IO ()
 
-vkFunCmdSetDepthWriteEnableEXT
-  :: VkFun VkCmdSetDepthWriteEnableEXT
-vkFunCmdSetDepthWriteEnableEXT = vkFunCmdSetDepthWriteEnable
-
+vkFunCmdSetDepthWriteEnableEXT :: VkFun VkCmdSetDepthWriteEnableEXT
+vkFunCmdSetDepthWriteEnableEXT = VkFun (Ptr ("vkCmdSetDepthWriteEnableEXT\0"##))
 
 #else
 

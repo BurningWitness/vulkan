@@ -30,8 +30,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkPhysicalDeviceDedicatedAllocationImageAliasi
          }
 
 instance Storable VkPhysicalDeviceDedicatedAllocationImageAliasingFeaturesNV where
-  sizeOf    _ = #{size      struct VkPhysicalDeviceDedicatedAllocationImageAliasingFeaturesNV}
-  alignment _ = #{alignment struct VkPhysicalDeviceDedicatedAllocationImageAliasingFeaturesNV}
+  sizeOf    _ = #{size      VkPhysicalDeviceDedicatedAllocationImageAliasingFeaturesNV}
+  alignment _ = #{alignment VkPhysicalDeviceDedicatedAllocationImageAliasingFeaturesNV}
 
   peek ptr = 
     VkPhysicalDeviceDedicatedAllocationImageAliasingFeaturesNV
@@ -45,13 +45,13 @@ instance Storable VkPhysicalDeviceDedicatedAllocationImageAliasingFeaturesNV whe
     pokeField @"dedicatedAllocationImageAliasing" ptr val
 
 instance Offset "sType" VkPhysicalDeviceDedicatedAllocationImageAliasingFeaturesNV where
-  rawOffset = #{offset struct VkPhysicalDeviceDedicatedAllocationImageAliasingFeaturesNV, sType}
+  rawOffset = #{offset VkPhysicalDeviceDedicatedAllocationImageAliasingFeaturesNV, sType}
 
 instance Offset "pNext" VkPhysicalDeviceDedicatedAllocationImageAliasingFeaturesNV where
-  rawOffset = #{offset struct VkPhysicalDeviceDedicatedAllocationImageAliasingFeaturesNV, pNext}
+  rawOffset = #{offset VkPhysicalDeviceDedicatedAllocationImageAliasingFeaturesNV, pNext}
 
 instance Offset "dedicatedAllocationImageAliasing" VkPhysicalDeviceDedicatedAllocationImageAliasingFeaturesNV where
-  rawOffset = #{offset struct VkPhysicalDeviceDedicatedAllocationImageAliasingFeaturesNV, dedicatedAllocationImageAliasing}
+  rawOffset = #{offset VkPhysicalDeviceDedicatedAllocationImageAliasingFeaturesNV, dedicatedAllocationImageAliasing}
 
 #else
 

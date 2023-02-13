@@ -30,8 +30,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkWriteDescriptorSetInlineUniformBlock" #-} Vk
          }
 
 instance Storable VkWriteDescriptorSetInlineUniformBlock where
-  sizeOf    _ = #{size      struct VkWriteDescriptorSetInlineUniformBlock}
-  alignment _ = #{alignment struct VkWriteDescriptorSetInlineUniformBlock}
+  sizeOf    _ = #{size      VkWriteDescriptorSetInlineUniformBlock}
+  alignment _ = #{alignment VkWriteDescriptorSetInlineUniformBlock}
 
   peek ptr = 
     VkWriteDescriptorSetInlineUniformBlock
@@ -47,16 +47,16 @@ instance Storable VkWriteDescriptorSetInlineUniformBlock where
     pokeField @"pData" ptr val
 
 instance Offset "sType" VkWriteDescriptorSetInlineUniformBlock where
-  rawOffset = #{offset struct VkWriteDescriptorSetInlineUniformBlock, sType}
+  rawOffset = #{offset VkWriteDescriptorSetInlineUniformBlock, sType}
 
 instance Offset "pNext" VkWriteDescriptorSetInlineUniformBlock where
-  rawOffset = #{offset struct VkWriteDescriptorSetInlineUniformBlock, pNext}
+  rawOffset = #{offset VkWriteDescriptorSetInlineUniformBlock, pNext}
 
 instance Offset "dataSize" VkWriteDescriptorSetInlineUniformBlock where
-  rawOffset = #{offset struct VkWriteDescriptorSetInlineUniformBlock, dataSize}
+  rawOffset = #{offset VkWriteDescriptorSetInlineUniformBlock, dataSize}
 
 instance Offset "pData" VkWriteDescriptorSetInlineUniformBlock where
-  rawOffset = #{offset struct VkWriteDescriptorSetInlineUniformBlock, pData}
+  rawOffset = #{offset VkWriteDescriptorSetInlineUniformBlock, pData}
 
 #else
 

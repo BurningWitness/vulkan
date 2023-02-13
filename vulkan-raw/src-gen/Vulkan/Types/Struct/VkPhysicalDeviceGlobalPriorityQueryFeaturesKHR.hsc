@@ -30,8 +30,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkPhysicalDeviceGlobalPriorityQueryFeaturesKHR
          }
 
 instance Storable VkPhysicalDeviceGlobalPriorityQueryFeaturesKHR where
-  sizeOf    _ = #{size      struct VkPhysicalDeviceGlobalPriorityQueryFeaturesKHR}
-  alignment _ = #{alignment struct VkPhysicalDeviceGlobalPriorityQueryFeaturesKHR}
+  sizeOf    _ = #{size      VkPhysicalDeviceGlobalPriorityQueryFeaturesKHR}
+  alignment _ = #{alignment VkPhysicalDeviceGlobalPriorityQueryFeaturesKHR}
 
   peek ptr = 
     VkPhysicalDeviceGlobalPriorityQueryFeaturesKHR
@@ -45,13 +45,13 @@ instance Storable VkPhysicalDeviceGlobalPriorityQueryFeaturesKHR where
     pokeField @"globalPriorityQuery" ptr val
 
 instance Offset "sType" VkPhysicalDeviceGlobalPriorityQueryFeaturesKHR where
-  rawOffset = #{offset struct VkPhysicalDeviceGlobalPriorityQueryFeaturesKHR, sType}
+  rawOffset = #{offset VkPhysicalDeviceGlobalPriorityQueryFeaturesKHR, sType}
 
 instance Offset "pNext" VkPhysicalDeviceGlobalPriorityQueryFeaturesKHR where
-  rawOffset = #{offset struct VkPhysicalDeviceGlobalPriorityQueryFeaturesKHR, pNext}
+  rawOffset = #{offset VkPhysicalDeviceGlobalPriorityQueryFeaturesKHR, pNext}
 
 instance Offset "globalPriorityQuery" VkPhysicalDeviceGlobalPriorityQueryFeaturesKHR where
-  rawOffset = #{offset struct VkPhysicalDeviceGlobalPriorityQueryFeaturesKHR, globalPriorityQuery}
+  rawOffset = #{offset VkPhysicalDeviceGlobalPriorityQueryFeaturesKHR, globalPriorityQuery}
 
 #else
 

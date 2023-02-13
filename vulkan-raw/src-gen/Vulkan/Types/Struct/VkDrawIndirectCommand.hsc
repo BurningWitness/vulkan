@@ -27,8 +27,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkDrawIndirectCommand" #-} VkDrawIndirectComma
          }
 
 instance Storable VkDrawIndirectCommand where
-  sizeOf    _ = #{size      struct VkDrawIndirectCommand}
-  alignment _ = #{alignment struct VkDrawIndirectCommand}
+  sizeOf    _ = #{size      VkDrawIndirectCommand}
+  alignment _ = #{alignment VkDrawIndirectCommand}
 
   peek ptr = 
     VkDrawIndirectCommand
@@ -44,13 +44,13 @@ instance Storable VkDrawIndirectCommand where
     pokeField @"firstInstance" ptr val
 
 instance Offset "vertexCount" VkDrawIndirectCommand where
-  rawOffset = #{offset struct VkDrawIndirectCommand, vertexCount}
+  rawOffset = #{offset VkDrawIndirectCommand, vertexCount}
 
 instance Offset "instanceCount" VkDrawIndirectCommand where
-  rawOffset = #{offset struct VkDrawIndirectCommand, instanceCount}
+  rawOffset = #{offset VkDrawIndirectCommand, instanceCount}
 
 instance Offset "firstVertex" VkDrawIndirectCommand where
-  rawOffset = #{offset struct VkDrawIndirectCommand, firstVertex}
+  rawOffset = #{offset VkDrawIndirectCommand, firstVertex}
 
 instance Offset "firstInstance" VkDrawIndirectCommand where
-  rawOffset = #{offset struct VkDrawIndirectCommand, firstInstance}
+  rawOffset = #{offset VkDrawIndirectCommand, firstInstance}

@@ -31,8 +31,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkPhysicalDevice4444FormatsFeaturesEXT" #-} Vk
          }
 
 instance Storable VkPhysicalDevice4444FormatsFeaturesEXT where
-  sizeOf    _ = #{size      struct VkPhysicalDevice4444FormatsFeaturesEXT}
-  alignment _ = #{alignment struct VkPhysicalDevice4444FormatsFeaturesEXT}
+  sizeOf    _ = #{size      VkPhysicalDevice4444FormatsFeaturesEXT}
+  alignment _ = #{alignment VkPhysicalDevice4444FormatsFeaturesEXT}
 
   peek ptr = 
     VkPhysicalDevice4444FormatsFeaturesEXT
@@ -48,16 +48,16 @@ instance Storable VkPhysicalDevice4444FormatsFeaturesEXT where
     pokeField @"formatA4B4G4R4" ptr val
 
 instance Offset "sType" VkPhysicalDevice4444FormatsFeaturesEXT where
-  rawOffset = #{offset struct VkPhysicalDevice4444FormatsFeaturesEXT, sType}
+  rawOffset = #{offset VkPhysicalDevice4444FormatsFeaturesEXT, sType}
 
 instance Offset "pNext" VkPhysicalDevice4444FormatsFeaturesEXT where
-  rawOffset = #{offset struct VkPhysicalDevice4444FormatsFeaturesEXT, pNext}
+  rawOffset = #{offset VkPhysicalDevice4444FormatsFeaturesEXT, pNext}
 
 instance Offset "formatA4R4G4B4" VkPhysicalDevice4444FormatsFeaturesEXT where
-  rawOffset = #{offset struct VkPhysicalDevice4444FormatsFeaturesEXT, formatA4R4G4B4}
+  rawOffset = #{offset VkPhysicalDevice4444FormatsFeaturesEXT, formatA4R4G4B4}
 
 instance Offset "formatA4B4G4R4" VkPhysicalDevice4444FormatsFeaturesEXT where
-  rawOffset = #{offset struct VkPhysicalDevice4444FormatsFeaturesEXT, formatA4B4G4R4}
+  rawOffset = #{offset VkPhysicalDevice4444FormatsFeaturesEXT, formatA4B4G4R4}
 
 #else
 

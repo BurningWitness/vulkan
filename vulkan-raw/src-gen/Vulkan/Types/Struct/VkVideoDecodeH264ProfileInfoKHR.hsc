@@ -32,8 +32,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkVideoDecodeH264ProfileInfoKHR" #-} VkVideoDe
          }
 
 instance Storable VkVideoDecodeH264ProfileInfoKHR where
-  sizeOf    _ = #{size      struct VkVideoDecodeH264ProfileInfoKHR}
-  alignment _ = #{alignment struct VkVideoDecodeH264ProfileInfoKHR}
+  sizeOf    _ = #{size      VkVideoDecodeH264ProfileInfoKHR}
+  alignment _ = #{alignment VkVideoDecodeH264ProfileInfoKHR}
 
   peek ptr = 
     VkVideoDecodeH264ProfileInfoKHR
@@ -49,16 +49,16 @@ instance Storable VkVideoDecodeH264ProfileInfoKHR where
     pokeField @"pictureLayout" ptr val
 
 instance Offset "sType" VkVideoDecodeH264ProfileInfoKHR where
-  rawOffset = #{offset struct VkVideoDecodeH264ProfileInfoKHR, sType}
+  rawOffset = #{offset VkVideoDecodeH264ProfileInfoKHR, sType}
 
 instance Offset "pNext" VkVideoDecodeH264ProfileInfoKHR where
-  rawOffset = #{offset struct VkVideoDecodeH264ProfileInfoKHR, pNext}
+  rawOffset = #{offset VkVideoDecodeH264ProfileInfoKHR, pNext}
 
 instance Offset "stdProfileIdc" VkVideoDecodeH264ProfileInfoKHR where
-  rawOffset = #{offset struct VkVideoDecodeH264ProfileInfoKHR, stdProfileIdc}
+  rawOffset = #{offset VkVideoDecodeH264ProfileInfoKHR, stdProfileIdc}
 
 instance Offset "pictureLayout" VkVideoDecodeH264ProfileInfoKHR where
-  rawOffset = #{offset struct VkVideoDecodeH264ProfileInfoKHR, pictureLayout}
+  rawOffset = #{offset VkVideoDecodeH264ProfileInfoKHR, pictureLayout}
 
 #else
 

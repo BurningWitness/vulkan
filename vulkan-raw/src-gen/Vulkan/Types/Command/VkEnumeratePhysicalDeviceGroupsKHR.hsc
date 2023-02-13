@@ -1,3 +1,7 @@
+{-# LANGUAGE CApiFFI #-}
+{-# LANGUAGE CPP #-}
+{-# LANGUAGE MagicHash #-}
+
 #include <vulkan/vulkan.h>
 
 #if VK_KHR_device_group_creation
@@ -10,17 +14,18 @@ import GHC.Ptr
 import Vulkan.Types.Enum.VkResult
 import Vulkan.Types.Handle
 import Vulkan.Types.Struct.VkPhysicalDeviceGroupProperties
-import Vulkan.Types.Command.VkEnumeratePhysicalDeviceGroups
 import Vulkan.Types.VkFun
 
 
 
-type VkEnumeratePhysicalDeviceGroupsKHR = VkEnumeratePhysicalDeviceGroups
+type VkEnumeratePhysicalDeviceGroupsKHR =
+          VkInstance -- ^ instance
+       -> Ptr #{type uint32_t} -- ^ pPhysicalDeviceGroupCount
+       -> Ptr VkPhysicalDeviceGroupProperties -- ^ pPhysicalDeviceGroupProperties
+       -> IO VkResult
 
-vkFunEnumeratePhysicalDeviceGroupsKHR
-  :: VkFun VkEnumeratePhysicalDeviceGroupsKHR
-vkFunEnumeratePhysicalDeviceGroupsKHR = vkFunEnumeratePhysicalDeviceGroups
-
+vkFunEnumeratePhysicalDeviceGroupsKHR :: VkFun VkEnumeratePhysicalDeviceGroupsKHR
+vkFunEnumeratePhysicalDeviceGroupsKHR = VkFun (Ptr ("vkEnumeratePhysicalDeviceGroupsKHR\0"##))
 
 #else
 

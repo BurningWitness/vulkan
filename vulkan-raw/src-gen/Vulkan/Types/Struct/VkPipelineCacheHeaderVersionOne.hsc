@@ -29,8 +29,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkPipelineCacheHeaderVersionOne" #-} VkPipelin
          }
 
 instance Storable VkPipelineCacheHeaderVersionOne where
-  sizeOf    _ = #{size      struct VkPipelineCacheHeaderVersionOne}
-  alignment _ = #{alignment struct VkPipelineCacheHeaderVersionOne}
+  sizeOf    _ = #{size      VkPipelineCacheHeaderVersionOne}
+  alignment _ = #{alignment VkPipelineCacheHeaderVersionOne}
 
   peek ptr = 
     VkPipelineCacheHeaderVersionOne
@@ -48,16 +48,16 @@ instance Storable VkPipelineCacheHeaderVersionOne where
     pokeField @"pipelineCacheUUID" ptr val
 
 instance Offset "headerSize" VkPipelineCacheHeaderVersionOne where
-  rawOffset = #{offset struct VkPipelineCacheHeaderVersionOne, headerSize}
+  rawOffset = #{offset VkPipelineCacheHeaderVersionOne, headerSize}
 
 instance Offset "headerVersion" VkPipelineCacheHeaderVersionOne where
-  rawOffset = #{offset struct VkPipelineCacheHeaderVersionOne, headerVersion}
+  rawOffset = #{offset VkPipelineCacheHeaderVersionOne, headerVersion}
 
 instance Offset "vendorID" VkPipelineCacheHeaderVersionOne where
-  rawOffset = #{offset struct VkPipelineCacheHeaderVersionOne, vendorID}
+  rawOffset = #{offset VkPipelineCacheHeaderVersionOne, vendorID}
 
 instance Offset "deviceID" VkPipelineCacheHeaderVersionOne where
-  rawOffset = #{offset struct VkPipelineCacheHeaderVersionOne, deviceID}
+  rawOffset = #{offset VkPipelineCacheHeaderVersionOne, deviceID}
 
 instance Offset "pipelineCacheUUID" VkPipelineCacheHeaderVersionOne where
-  rawOffset = #{offset struct VkPipelineCacheHeaderVersionOne, pipelineCacheUUID}
+  rawOffset = #{offset VkPipelineCacheHeaderVersionOne, pipelineCacheUUID}

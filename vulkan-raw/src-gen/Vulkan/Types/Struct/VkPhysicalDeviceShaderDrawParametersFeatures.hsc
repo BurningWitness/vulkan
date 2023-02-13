@@ -30,8 +30,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkPhysicalDeviceShaderDrawParametersFeatures" 
          }
 
 instance Storable VkPhysicalDeviceShaderDrawParametersFeatures where
-  sizeOf    _ = #{size      struct VkPhysicalDeviceShaderDrawParametersFeatures}
-  alignment _ = #{alignment struct VkPhysicalDeviceShaderDrawParametersFeatures}
+  sizeOf    _ = #{size      VkPhysicalDeviceShaderDrawParametersFeatures}
+  alignment _ = #{alignment VkPhysicalDeviceShaderDrawParametersFeatures}
 
   peek ptr = 
     VkPhysicalDeviceShaderDrawParametersFeatures
@@ -45,13 +45,13 @@ instance Storable VkPhysicalDeviceShaderDrawParametersFeatures where
     pokeField @"shaderDrawParameters" ptr val
 
 instance Offset "sType" VkPhysicalDeviceShaderDrawParametersFeatures where
-  rawOffset = #{offset struct VkPhysicalDeviceShaderDrawParametersFeatures, sType}
+  rawOffset = #{offset VkPhysicalDeviceShaderDrawParametersFeatures, sType}
 
 instance Offset "pNext" VkPhysicalDeviceShaderDrawParametersFeatures where
-  rawOffset = #{offset struct VkPhysicalDeviceShaderDrawParametersFeatures, pNext}
+  rawOffset = #{offset VkPhysicalDeviceShaderDrawParametersFeatures, pNext}
 
 instance Offset "shaderDrawParameters" VkPhysicalDeviceShaderDrawParametersFeatures where
-  rawOffset = #{offset struct VkPhysicalDeviceShaderDrawParametersFeatures, shaderDrawParameters}
+  rawOffset = #{offset VkPhysicalDeviceShaderDrawParametersFeatures, shaderDrawParameters}
 
 #else
 

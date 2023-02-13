@@ -33,8 +33,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkPhysicalDeviceImageDrmFormatModifierInfoEXT"
          }
 
 instance Storable VkPhysicalDeviceImageDrmFormatModifierInfoEXT where
-  sizeOf    _ = #{size      struct VkPhysicalDeviceImageDrmFormatModifierInfoEXT}
-  alignment _ = #{alignment struct VkPhysicalDeviceImageDrmFormatModifierInfoEXT}
+  sizeOf    _ = #{size      VkPhysicalDeviceImageDrmFormatModifierInfoEXT}
+  alignment _ = #{alignment VkPhysicalDeviceImageDrmFormatModifierInfoEXT}
 
   peek ptr = 
     VkPhysicalDeviceImageDrmFormatModifierInfoEXT
@@ -54,22 +54,22 @@ instance Storable VkPhysicalDeviceImageDrmFormatModifierInfoEXT where
     pokeField @"pQueueFamilyIndices" ptr val
 
 instance Offset "sType" VkPhysicalDeviceImageDrmFormatModifierInfoEXT where
-  rawOffset = #{offset struct VkPhysicalDeviceImageDrmFormatModifierInfoEXT, sType}
+  rawOffset = #{offset VkPhysicalDeviceImageDrmFormatModifierInfoEXT, sType}
 
 instance Offset "pNext" VkPhysicalDeviceImageDrmFormatModifierInfoEXT where
-  rawOffset = #{offset struct VkPhysicalDeviceImageDrmFormatModifierInfoEXT, pNext}
+  rawOffset = #{offset VkPhysicalDeviceImageDrmFormatModifierInfoEXT, pNext}
 
 instance Offset "drmFormatModifier" VkPhysicalDeviceImageDrmFormatModifierInfoEXT where
-  rawOffset = #{offset struct VkPhysicalDeviceImageDrmFormatModifierInfoEXT, drmFormatModifier}
+  rawOffset = #{offset VkPhysicalDeviceImageDrmFormatModifierInfoEXT, drmFormatModifier}
 
 instance Offset "sharingMode" VkPhysicalDeviceImageDrmFormatModifierInfoEXT where
-  rawOffset = #{offset struct VkPhysicalDeviceImageDrmFormatModifierInfoEXT, sharingMode}
+  rawOffset = #{offset VkPhysicalDeviceImageDrmFormatModifierInfoEXT, sharingMode}
 
 instance Offset "queueFamilyIndexCount" VkPhysicalDeviceImageDrmFormatModifierInfoEXT where
-  rawOffset = #{offset struct VkPhysicalDeviceImageDrmFormatModifierInfoEXT, queueFamilyIndexCount}
+  rawOffset = #{offset VkPhysicalDeviceImageDrmFormatModifierInfoEXT, queueFamilyIndexCount}
 
 instance Offset "pQueueFamilyIndices" VkPhysicalDeviceImageDrmFormatModifierInfoEXT where
-  rawOffset = #{offset struct VkPhysicalDeviceImageDrmFormatModifierInfoEXT, pQueueFamilyIndices}
+  rawOffset = #{offset VkPhysicalDeviceImageDrmFormatModifierInfoEXT, pQueueFamilyIndices}
 
 #else
 

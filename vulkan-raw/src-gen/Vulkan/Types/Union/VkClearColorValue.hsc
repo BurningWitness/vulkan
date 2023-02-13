@@ -26,8 +26,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkClearColorValue" #-} VkClearColorValue =
          }
 
 instance Storable VkClearColorValue where
-  sizeOf    _ = #{size      union VkClearColorValue}
-  alignment _ = #{alignment union VkClearColorValue}
+  sizeOf    _ = #{size      VkClearColorValue}
+  alignment _ = #{alignment VkClearColorValue}
 
   peek ptr = 
     VkClearColorValue
@@ -41,10 +41,10 @@ instance Storable VkClearColorValue where
     pokeField @"uint32" ptr val
 
 instance Offset "float32" VkClearColorValue where
-  rawOffset = #{offset union VkClearColorValue, float32}
+  rawOffset = #{offset VkClearColorValue, float32}
 
 instance Offset "int32" VkClearColorValue where
-  rawOffset = #{offset union VkClearColorValue, int32}
+  rawOffset = #{offset VkClearColorValue, int32}
 
 instance Offset "uint32" VkClearColorValue where
-  rawOffset = #{offset union VkClearColorValue, uint32}
+  rawOffset = #{offset VkClearColorValue, uint32}

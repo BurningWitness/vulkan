@@ -1,3 +1,7 @@
+{-# LANGUAGE CApiFFI #-}
+{-# LANGUAGE CPP #-}
+{-# LANGUAGE MagicHash #-}
+
 #include <vulkan/vulkan.h>
 
 #if VK_KHR_external_memory_capabilities
@@ -10,17 +14,18 @@ import GHC.Ptr
 import Vulkan.Types.Handle
 import Vulkan.Types.Struct.VkExternalBufferProperties
 import Vulkan.Types.Struct.VkPhysicalDeviceExternalBufferInfo
-import Vulkan.Types.Command.VkGetPhysicalDeviceExternalBufferProperties
 import Vulkan.Types.VkFun
 
 
 
-type VkGetPhysicalDeviceExternalBufferPropertiesKHR = VkGetPhysicalDeviceExternalBufferProperties
+type VkGetPhysicalDeviceExternalBufferPropertiesKHR =
+          VkPhysicalDevice -- ^ physicalDevice
+       -> Ptr VkPhysicalDeviceExternalBufferInfo -- ^ pExternalBufferInfo
+       -> Ptr VkExternalBufferProperties -- ^ pExternalBufferProperties
+       -> IO ()
 
-vkFunGetPhysicalDeviceExternalBufferPropertiesKHR
-  :: VkFun VkGetPhysicalDeviceExternalBufferPropertiesKHR
-vkFunGetPhysicalDeviceExternalBufferPropertiesKHR = vkFunGetPhysicalDeviceExternalBufferProperties
-
+vkFunGetPhysicalDeviceExternalBufferPropertiesKHR :: VkFun VkGetPhysicalDeviceExternalBufferPropertiesKHR
+vkFunGetPhysicalDeviceExternalBufferPropertiesKHR = VkFun (Ptr ("vkGetPhysicalDeviceExternalBufferPropertiesKHR\0"##))
 
 #else
 

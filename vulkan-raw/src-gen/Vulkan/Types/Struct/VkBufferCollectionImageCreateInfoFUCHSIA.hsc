@@ -31,8 +31,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkBufferCollectionImageCreateInfoFUCHSIA" #-} 
          }
 
 instance Storable VkBufferCollectionImageCreateInfoFUCHSIA where
-  sizeOf    _ = #{size      struct VkBufferCollectionImageCreateInfoFUCHSIA}
-  alignment _ = #{alignment struct VkBufferCollectionImageCreateInfoFUCHSIA}
+  sizeOf    _ = #{size      VkBufferCollectionImageCreateInfoFUCHSIA}
+  alignment _ = #{alignment VkBufferCollectionImageCreateInfoFUCHSIA}
 
   peek ptr = 
     VkBufferCollectionImageCreateInfoFUCHSIA
@@ -48,16 +48,16 @@ instance Storable VkBufferCollectionImageCreateInfoFUCHSIA where
     pokeField @"index" ptr val
 
 instance Offset "sType" VkBufferCollectionImageCreateInfoFUCHSIA where
-  rawOffset = #{offset struct VkBufferCollectionImageCreateInfoFUCHSIA, sType}
+  rawOffset = #{offset VkBufferCollectionImageCreateInfoFUCHSIA, sType}
 
 instance Offset "pNext" VkBufferCollectionImageCreateInfoFUCHSIA where
-  rawOffset = #{offset struct VkBufferCollectionImageCreateInfoFUCHSIA, pNext}
+  rawOffset = #{offset VkBufferCollectionImageCreateInfoFUCHSIA, pNext}
 
 instance Offset "collection" VkBufferCollectionImageCreateInfoFUCHSIA where
-  rawOffset = #{offset struct VkBufferCollectionImageCreateInfoFUCHSIA, collection}
+  rawOffset = #{offset VkBufferCollectionImageCreateInfoFUCHSIA, collection}
 
 instance Offset "index" VkBufferCollectionImageCreateInfoFUCHSIA where
-  rawOffset = #{offset struct VkBufferCollectionImageCreateInfoFUCHSIA, index}
+  rawOffset = #{offset VkBufferCollectionImageCreateInfoFUCHSIA, index}
 
 #else
 

@@ -35,8 +35,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkCopyMemoryToImageIndirectCommandNV" #-} VkCo
          }
 
 instance Storable VkCopyMemoryToImageIndirectCommandNV where
-  sizeOf    _ = #{size      struct VkCopyMemoryToImageIndirectCommandNV}
-  alignment _ = #{alignment struct VkCopyMemoryToImageIndirectCommandNV}
+  sizeOf    _ = #{size      VkCopyMemoryToImageIndirectCommandNV}
+  alignment _ = #{alignment VkCopyMemoryToImageIndirectCommandNV}
 
   peek ptr = 
     VkCopyMemoryToImageIndirectCommandNV
@@ -56,22 +56,22 @@ instance Storable VkCopyMemoryToImageIndirectCommandNV where
     pokeField @"imageExtent" ptr val
 
 instance Offset "srcAddress" VkCopyMemoryToImageIndirectCommandNV where
-  rawOffset = #{offset struct VkCopyMemoryToImageIndirectCommandNV, srcAddress}
+  rawOffset = #{offset VkCopyMemoryToImageIndirectCommandNV, srcAddress}
 
 instance Offset "bufferRowLength" VkCopyMemoryToImageIndirectCommandNV where
-  rawOffset = #{offset struct VkCopyMemoryToImageIndirectCommandNV, bufferRowLength}
+  rawOffset = #{offset VkCopyMemoryToImageIndirectCommandNV, bufferRowLength}
 
 instance Offset "bufferImageHeight" VkCopyMemoryToImageIndirectCommandNV where
-  rawOffset = #{offset struct VkCopyMemoryToImageIndirectCommandNV, bufferImageHeight}
+  rawOffset = #{offset VkCopyMemoryToImageIndirectCommandNV, bufferImageHeight}
 
 instance Offset "imageSubresource" VkCopyMemoryToImageIndirectCommandNV where
-  rawOffset = #{offset struct VkCopyMemoryToImageIndirectCommandNV, imageSubresource}
+  rawOffset = #{offset VkCopyMemoryToImageIndirectCommandNV, imageSubresource}
 
 instance Offset "imageOffset" VkCopyMemoryToImageIndirectCommandNV where
-  rawOffset = #{offset struct VkCopyMemoryToImageIndirectCommandNV, imageOffset}
+  rawOffset = #{offset VkCopyMemoryToImageIndirectCommandNV, imageOffset}
 
 instance Offset "imageExtent" VkCopyMemoryToImageIndirectCommandNV where
-  rawOffset = #{offset struct VkCopyMemoryToImageIndirectCommandNV, imageExtent}
+  rawOffset = #{offset VkCopyMemoryToImageIndirectCommandNV, imageExtent}
 
 #else
 

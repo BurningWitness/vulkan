@@ -31,8 +31,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkPhysicalDeviceRayTracingMotionBlurFeaturesNV
          }
 
 instance Storable VkPhysicalDeviceRayTracingMotionBlurFeaturesNV where
-  sizeOf    _ = #{size      struct VkPhysicalDeviceRayTracingMotionBlurFeaturesNV}
-  alignment _ = #{alignment struct VkPhysicalDeviceRayTracingMotionBlurFeaturesNV}
+  sizeOf    _ = #{size      VkPhysicalDeviceRayTracingMotionBlurFeaturesNV}
+  alignment _ = #{alignment VkPhysicalDeviceRayTracingMotionBlurFeaturesNV}
 
   peek ptr = 
     VkPhysicalDeviceRayTracingMotionBlurFeaturesNV
@@ -48,16 +48,16 @@ instance Storable VkPhysicalDeviceRayTracingMotionBlurFeaturesNV where
     pokeField @"rayTracingMotionBlurPipelineTraceRaysIndirect" ptr val
 
 instance Offset "sType" VkPhysicalDeviceRayTracingMotionBlurFeaturesNV where
-  rawOffset = #{offset struct VkPhysicalDeviceRayTracingMotionBlurFeaturesNV, sType}
+  rawOffset = #{offset VkPhysicalDeviceRayTracingMotionBlurFeaturesNV, sType}
 
 instance Offset "pNext" VkPhysicalDeviceRayTracingMotionBlurFeaturesNV where
-  rawOffset = #{offset struct VkPhysicalDeviceRayTracingMotionBlurFeaturesNV, pNext}
+  rawOffset = #{offset VkPhysicalDeviceRayTracingMotionBlurFeaturesNV, pNext}
 
 instance Offset "rayTracingMotionBlur" VkPhysicalDeviceRayTracingMotionBlurFeaturesNV where
-  rawOffset = #{offset struct VkPhysicalDeviceRayTracingMotionBlurFeaturesNV, rayTracingMotionBlur}
+  rawOffset = #{offset VkPhysicalDeviceRayTracingMotionBlurFeaturesNV, rayTracingMotionBlur}
 
 instance Offset "rayTracingMotionBlurPipelineTraceRaysIndirect" VkPhysicalDeviceRayTracingMotionBlurFeaturesNV where
-  rawOffset = #{offset struct VkPhysicalDeviceRayTracingMotionBlurFeaturesNV, rayTracingMotionBlurPipelineTraceRaysIndirect}
+  rawOffset = #{offset VkPhysicalDeviceRayTracingMotionBlurFeaturesNV, rayTracingMotionBlurPipelineTraceRaysIndirect}
 
 #else
 

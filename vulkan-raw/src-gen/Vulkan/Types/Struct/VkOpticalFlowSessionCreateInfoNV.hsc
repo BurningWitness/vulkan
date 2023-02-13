@@ -41,8 +41,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkOpticalFlowSessionCreateInfoNV" #-} VkOptica
          }
 
 instance Storable VkOpticalFlowSessionCreateInfoNV where
-  sizeOf    _ = #{size      struct VkOpticalFlowSessionCreateInfoNV}
-  alignment _ = #{alignment struct VkOpticalFlowSessionCreateInfoNV}
+  sizeOf    _ = #{size      VkOpticalFlowSessionCreateInfoNV}
+  alignment _ = #{alignment VkOpticalFlowSessionCreateInfoNV}
 
   peek ptr = 
     VkOpticalFlowSessionCreateInfoNV
@@ -72,37 +72,37 @@ instance Storable VkOpticalFlowSessionCreateInfoNV where
     pokeField @"flags" ptr val
 
 instance Offset "sType" VkOpticalFlowSessionCreateInfoNV where
-  rawOffset = #{offset struct VkOpticalFlowSessionCreateInfoNV, sType}
+  rawOffset = #{offset VkOpticalFlowSessionCreateInfoNV, sType}
 
 instance Offset "pNext" VkOpticalFlowSessionCreateInfoNV where
-  rawOffset = #{offset struct VkOpticalFlowSessionCreateInfoNV, pNext}
+  rawOffset = #{offset VkOpticalFlowSessionCreateInfoNV, pNext}
 
 instance Offset "width" VkOpticalFlowSessionCreateInfoNV where
-  rawOffset = #{offset struct VkOpticalFlowSessionCreateInfoNV, width}
+  rawOffset = #{offset VkOpticalFlowSessionCreateInfoNV, width}
 
 instance Offset "height" VkOpticalFlowSessionCreateInfoNV where
-  rawOffset = #{offset struct VkOpticalFlowSessionCreateInfoNV, height}
+  rawOffset = #{offset VkOpticalFlowSessionCreateInfoNV, height}
 
 instance Offset "imageFormat" VkOpticalFlowSessionCreateInfoNV where
-  rawOffset = #{offset struct VkOpticalFlowSessionCreateInfoNV, imageFormat}
+  rawOffset = #{offset VkOpticalFlowSessionCreateInfoNV, imageFormat}
 
 instance Offset "flowVectorFormat" VkOpticalFlowSessionCreateInfoNV where
-  rawOffset = #{offset struct VkOpticalFlowSessionCreateInfoNV, flowVectorFormat}
+  rawOffset = #{offset VkOpticalFlowSessionCreateInfoNV, flowVectorFormat}
 
 instance Offset "costFormat" VkOpticalFlowSessionCreateInfoNV where
-  rawOffset = #{offset struct VkOpticalFlowSessionCreateInfoNV, costFormat}
+  rawOffset = #{offset VkOpticalFlowSessionCreateInfoNV, costFormat}
 
 instance Offset "outputGridSize" VkOpticalFlowSessionCreateInfoNV where
-  rawOffset = #{offset struct VkOpticalFlowSessionCreateInfoNV, outputGridSize}
+  rawOffset = #{offset VkOpticalFlowSessionCreateInfoNV, outputGridSize}
 
 instance Offset "hintGridSize" VkOpticalFlowSessionCreateInfoNV where
-  rawOffset = #{offset struct VkOpticalFlowSessionCreateInfoNV, hintGridSize}
+  rawOffset = #{offset VkOpticalFlowSessionCreateInfoNV, hintGridSize}
 
 instance Offset "performanceLevel" VkOpticalFlowSessionCreateInfoNV where
-  rawOffset = #{offset struct VkOpticalFlowSessionCreateInfoNV, performanceLevel}
+  rawOffset = #{offset VkOpticalFlowSessionCreateInfoNV, performanceLevel}
 
 instance Offset "flags" VkOpticalFlowSessionCreateInfoNV where
-  rawOffset = #{offset struct VkOpticalFlowSessionCreateInfoNV, flags}
+  rawOffset = #{offset VkOpticalFlowSessionCreateInfoNV, flags}
 
 #else
 

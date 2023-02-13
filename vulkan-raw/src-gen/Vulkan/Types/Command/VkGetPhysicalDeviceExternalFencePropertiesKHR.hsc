@@ -1,3 +1,7 @@
+{-# LANGUAGE CApiFFI #-}
+{-# LANGUAGE CPP #-}
+{-# LANGUAGE MagicHash #-}
+
 #include <vulkan/vulkan.h>
 
 #if VK_KHR_external_fence_capabilities
@@ -10,17 +14,18 @@ import GHC.Ptr
 import Vulkan.Types.Handle
 import Vulkan.Types.Struct.VkExternalFenceProperties
 import Vulkan.Types.Struct.VkPhysicalDeviceExternalFenceInfo
-import Vulkan.Types.Command.VkGetPhysicalDeviceExternalFenceProperties
 import Vulkan.Types.VkFun
 
 
 
-type VkGetPhysicalDeviceExternalFencePropertiesKHR = VkGetPhysicalDeviceExternalFenceProperties
+type VkGetPhysicalDeviceExternalFencePropertiesKHR =
+          VkPhysicalDevice -- ^ physicalDevice
+       -> Ptr VkPhysicalDeviceExternalFenceInfo -- ^ pExternalFenceInfo
+       -> Ptr VkExternalFenceProperties -- ^ pExternalFenceProperties
+       -> IO ()
 
-vkFunGetPhysicalDeviceExternalFencePropertiesKHR
-  :: VkFun VkGetPhysicalDeviceExternalFencePropertiesKHR
-vkFunGetPhysicalDeviceExternalFencePropertiesKHR = vkFunGetPhysicalDeviceExternalFenceProperties
-
+vkFunGetPhysicalDeviceExternalFencePropertiesKHR :: VkFun VkGetPhysicalDeviceExternalFencePropertiesKHR
+vkFunGetPhysicalDeviceExternalFencePropertiesKHR = VkFun (Ptr ("vkGetPhysicalDeviceExternalFencePropertiesKHR\0"##))
 
 #else
 

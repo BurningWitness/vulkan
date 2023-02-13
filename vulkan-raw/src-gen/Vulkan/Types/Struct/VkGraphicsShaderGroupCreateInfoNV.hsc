@@ -35,8 +35,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkGraphicsShaderGroupCreateInfoNV" #-} VkGraph
          }
 
 instance Storable VkGraphicsShaderGroupCreateInfoNV where
-  sizeOf    _ = #{size      struct VkGraphicsShaderGroupCreateInfoNV}
-  alignment _ = #{alignment struct VkGraphicsShaderGroupCreateInfoNV}
+  sizeOf    _ = #{size      VkGraphicsShaderGroupCreateInfoNV}
+  alignment _ = #{alignment VkGraphicsShaderGroupCreateInfoNV}
 
   peek ptr = 
     VkGraphicsShaderGroupCreateInfoNV
@@ -56,22 +56,22 @@ instance Storable VkGraphicsShaderGroupCreateInfoNV where
     pokeField @"pTessellationState" ptr val
 
 instance Offset "sType" VkGraphicsShaderGroupCreateInfoNV where
-  rawOffset = #{offset struct VkGraphicsShaderGroupCreateInfoNV, sType}
+  rawOffset = #{offset VkGraphicsShaderGroupCreateInfoNV, sType}
 
 instance Offset "pNext" VkGraphicsShaderGroupCreateInfoNV where
-  rawOffset = #{offset struct VkGraphicsShaderGroupCreateInfoNV, pNext}
+  rawOffset = #{offset VkGraphicsShaderGroupCreateInfoNV, pNext}
 
 instance Offset "stageCount" VkGraphicsShaderGroupCreateInfoNV where
-  rawOffset = #{offset struct VkGraphicsShaderGroupCreateInfoNV, stageCount}
+  rawOffset = #{offset VkGraphicsShaderGroupCreateInfoNV, stageCount}
 
 instance Offset "pStages" VkGraphicsShaderGroupCreateInfoNV where
-  rawOffset = #{offset struct VkGraphicsShaderGroupCreateInfoNV, pStages}
+  rawOffset = #{offset VkGraphicsShaderGroupCreateInfoNV, pStages}
 
 instance Offset "pVertexInputState" VkGraphicsShaderGroupCreateInfoNV where
-  rawOffset = #{offset struct VkGraphicsShaderGroupCreateInfoNV, pVertexInputState}
+  rawOffset = #{offset VkGraphicsShaderGroupCreateInfoNV, pVertexInputState}
 
 instance Offset "pTessellationState" VkGraphicsShaderGroupCreateInfoNV where
-  rawOffset = #{offset struct VkGraphicsShaderGroupCreateInfoNV, pTessellationState}
+  rawOffset = #{offset VkGraphicsShaderGroupCreateInfoNV, pTessellationState}
 
 #else
 

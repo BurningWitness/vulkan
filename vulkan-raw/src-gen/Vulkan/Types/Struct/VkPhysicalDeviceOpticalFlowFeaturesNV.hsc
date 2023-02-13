@@ -30,8 +30,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkPhysicalDeviceOpticalFlowFeaturesNV" #-} VkP
          }
 
 instance Storable VkPhysicalDeviceOpticalFlowFeaturesNV where
-  sizeOf    _ = #{size      struct VkPhysicalDeviceOpticalFlowFeaturesNV}
-  alignment _ = #{alignment struct VkPhysicalDeviceOpticalFlowFeaturesNV}
+  sizeOf    _ = #{size      VkPhysicalDeviceOpticalFlowFeaturesNV}
+  alignment _ = #{alignment VkPhysicalDeviceOpticalFlowFeaturesNV}
 
   peek ptr = 
     VkPhysicalDeviceOpticalFlowFeaturesNV
@@ -45,13 +45,13 @@ instance Storable VkPhysicalDeviceOpticalFlowFeaturesNV where
     pokeField @"opticalFlow" ptr val
 
 instance Offset "sType" VkPhysicalDeviceOpticalFlowFeaturesNV where
-  rawOffset = #{offset struct VkPhysicalDeviceOpticalFlowFeaturesNV, sType}
+  rawOffset = #{offset VkPhysicalDeviceOpticalFlowFeaturesNV, sType}
 
 instance Offset "pNext" VkPhysicalDeviceOpticalFlowFeaturesNV where
-  rawOffset = #{offset struct VkPhysicalDeviceOpticalFlowFeaturesNV, pNext}
+  rawOffset = #{offset VkPhysicalDeviceOpticalFlowFeaturesNV, pNext}
 
 instance Offset "opticalFlow" VkPhysicalDeviceOpticalFlowFeaturesNV where
-  rawOffset = #{offset struct VkPhysicalDeviceOpticalFlowFeaturesNV, opticalFlow}
+  rawOffset = #{offset VkPhysicalDeviceOpticalFlowFeaturesNV, opticalFlow}
 
 #else
 

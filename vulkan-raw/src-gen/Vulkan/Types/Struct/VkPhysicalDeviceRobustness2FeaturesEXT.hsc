@@ -32,8 +32,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkPhysicalDeviceRobustness2FeaturesEXT" #-} Vk
          }
 
 instance Storable VkPhysicalDeviceRobustness2FeaturesEXT where
-  sizeOf    _ = #{size      struct VkPhysicalDeviceRobustness2FeaturesEXT}
-  alignment _ = #{alignment struct VkPhysicalDeviceRobustness2FeaturesEXT}
+  sizeOf    _ = #{size      VkPhysicalDeviceRobustness2FeaturesEXT}
+  alignment _ = #{alignment VkPhysicalDeviceRobustness2FeaturesEXT}
 
   peek ptr = 
     VkPhysicalDeviceRobustness2FeaturesEXT
@@ -51,19 +51,19 @@ instance Storable VkPhysicalDeviceRobustness2FeaturesEXT where
     pokeField @"nullDescriptor" ptr val
 
 instance Offset "sType" VkPhysicalDeviceRobustness2FeaturesEXT where
-  rawOffset = #{offset struct VkPhysicalDeviceRobustness2FeaturesEXT, sType}
+  rawOffset = #{offset VkPhysicalDeviceRobustness2FeaturesEXT, sType}
 
 instance Offset "pNext" VkPhysicalDeviceRobustness2FeaturesEXT where
-  rawOffset = #{offset struct VkPhysicalDeviceRobustness2FeaturesEXT, pNext}
+  rawOffset = #{offset VkPhysicalDeviceRobustness2FeaturesEXT, pNext}
 
 instance Offset "robustBufferAccess2" VkPhysicalDeviceRobustness2FeaturesEXT where
-  rawOffset = #{offset struct VkPhysicalDeviceRobustness2FeaturesEXT, robustBufferAccess2}
+  rawOffset = #{offset VkPhysicalDeviceRobustness2FeaturesEXT, robustBufferAccess2}
 
 instance Offset "robustImageAccess2" VkPhysicalDeviceRobustness2FeaturesEXT where
-  rawOffset = #{offset struct VkPhysicalDeviceRobustness2FeaturesEXT, robustImageAccess2}
+  rawOffset = #{offset VkPhysicalDeviceRobustness2FeaturesEXT, robustImageAccess2}
 
 instance Offset "nullDescriptor" VkPhysicalDeviceRobustness2FeaturesEXT where
-  rawOffset = #{offset struct VkPhysicalDeviceRobustness2FeaturesEXT, nullDescriptor}
+  rawOffset = #{offset VkPhysicalDeviceRobustness2FeaturesEXT, nullDescriptor}
 
 #else
 

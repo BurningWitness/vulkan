@@ -30,8 +30,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkSamplerCaptureDescriptorDataInfoEXT" #-} VkS
          }
 
 instance Storable VkSamplerCaptureDescriptorDataInfoEXT where
-  sizeOf    _ = #{size      struct VkSamplerCaptureDescriptorDataInfoEXT}
-  alignment _ = #{alignment struct VkSamplerCaptureDescriptorDataInfoEXT}
+  sizeOf    _ = #{size      VkSamplerCaptureDescriptorDataInfoEXT}
+  alignment _ = #{alignment VkSamplerCaptureDescriptorDataInfoEXT}
 
   peek ptr = 
     VkSamplerCaptureDescriptorDataInfoEXT
@@ -45,13 +45,13 @@ instance Storable VkSamplerCaptureDescriptorDataInfoEXT where
     pokeField @"sampler" ptr val
 
 instance Offset "sType" VkSamplerCaptureDescriptorDataInfoEXT where
-  rawOffset = #{offset struct VkSamplerCaptureDescriptorDataInfoEXT, sType}
+  rawOffset = #{offset VkSamplerCaptureDescriptorDataInfoEXT, sType}
 
 instance Offset "pNext" VkSamplerCaptureDescriptorDataInfoEXT where
-  rawOffset = #{offset struct VkSamplerCaptureDescriptorDataInfoEXT, pNext}
+  rawOffset = #{offset VkSamplerCaptureDescriptorDataInfoEXT, pNext}
 
 instance Offset "sampler" VkSamplerCaptureDescriptorDataInfoEXT where
-  rawOffset = #{offset struct VkSamplerCaptureDescriptorDataInfoEXT, sampler}
+  rawOffset = #{offset VkSamplerCaptureDescriptorDataInfoEXT, sampler}
 
 #else
 

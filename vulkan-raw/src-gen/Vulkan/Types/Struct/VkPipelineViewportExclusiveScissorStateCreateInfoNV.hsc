@@ -31,8 +31,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkPipelineViewportExclusiveScissorStateCreateI
          }
 
 instance Storable VkPipelineViewportExclusiveScissorStateCreateInfoNV where
-  sizeOf    _ = #{size      struct VkPipelineViewportExclusiveScissorStateCreateInfoNV}
-  alignment _ = #{alignment struct VkPipelineViewportExclusiveScissorStateCreateInfoNV}
+  sizeOf    _ = #{size      VkPipelineViewportExclusiveScissorStateCreateInfoNV}
+  alignment _ = #{alignment VkPipelineViewportExclusiveScissorStateCreateInfoNV}
 
   peek ptr = 
     VkPipelineViewportExclusiveScissorStateCreateInfoNV
@@ -48,16 +48,16 @@ instance Storable VkPipelineViewportExclusiveScissorStateCreateInfoNV where
     pokeField @"pExclusiveScissors" ptr val
 
 instance Offset "sType" VkPipelineViewportExclusiveScissorStateCreateInfoNV where
-  rawOffset = #{offset struct VkPipelineViewportExclusiveScissorStateCreateInfoNV, sType}
+  rawOffset = #{offset VkPipelineViewportExclusiveScissorStateCreateInfoNV, sType}
 
 instance Offset "pNext" VkPipelineViewportExclusiveScissorStateCreateInfoNV where
-  rawOffset = #{offset struct VkPipelineViewportExclusiveScissorStateCreateInfoNV, pNext}
+  rawOffset = #{offset VkPipelineViewportExclusiveScissorStateCreateInfoNV, pNext}
 
 instance Offset "exclusiveScissorCount" VkPipelineViewportExclusiveScissorStateCreateInfoNV where
-  rawOffset = #{offset struct VkPipelineViewportExclusiveScissorStateCreateInfoNV, exclusiveScissorCount}
+  rawOffset = #{offset VkPipelineViewportExclusiveScissorStateCreateInfoNV, exclusiveScissorCount}
 
 instance Offset "pExclusiveScissors" VkPipelineViewportExclusiveScissorStateCreateInfoNV where
-  rawOffset = #{offset struct VkPipelineViewportExclusiveScissorStateCreateInfoNV, pExclusiveScissors}
+  rawOffset = #{offset VkPipelineViewportExclusiveScissorStateCreateInfoNV, pExclusiveScissors}
 
 #else
 

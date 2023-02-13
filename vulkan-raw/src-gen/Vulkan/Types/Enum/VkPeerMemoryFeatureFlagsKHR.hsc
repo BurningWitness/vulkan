@@ -1,14 +1,14 @@
 {-# LANGUAGE CPP #-}
+{-# LANGUAGE PatternSynonyms #-}
 
 #include <vulkan/vulkan.h>
 
 module Vulkan.Types.Enum.VkPeerMemoryFeatureFlagsKHR where
 
-import Data.Int
-import Vulkan.Types.Enum.VkPeerMemoryFeatureFlags
+import Vulkan.Types.Base
 
 
 
 #if VK_KHR_device_group
-type VkPeerMemoryFeatureFlagsKHR = VkPeerMemoryFeatureFlags
+type VkPeerMemoryFeatureFlagsKHR = VkFlags
 #endif

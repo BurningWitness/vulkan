@@ -30,8 +30,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkExternalBufferProperties" #-} VkExternalBuff
          }
 
 instance Storable VkExternalBufferProperties where
-  sizeOf    _ = #{size      struct VkExternalBufferProperties}
-  alignment _ = #{alignment struct VkExternalBufferProperties}
+  sizeOf    _ = #{size      VkExternalBufferProperties}
+  alignment _ = #{alignment VkExternalBufferProperties}
 
   peek ptr = 
     VkExternalBufferProperties
@@ -45,13 +45,13 @@ instance Storable VkExternalBufferProperties where
     pokeField @"externalMemoryProperties" ptr val
 
 instance Offset "sType" VkExternalBufferProperties where
-  rawOffset = #{offset struct VkExternalBufferProperties, sType}
+  rawOffset = #{offset VkExternalBufferProperties, sType}
 
 instance Offset "pNext" VkExternalBufferProperties where
-  rawOffset = #{offset struct VkExternalBufferProperties, pNext}
+  rawOffset = #{offset VkExternalBufferProperties, pNext}
 
 instance Offset "externalMemoryProperties" VkExternalBufferProperties where
-  rawOffset = #{offset struct VkExternalBufferProperties, externalMemoryProperties}
+  rawOffset = #{offset VkExternalBufferProperties, externalMemoryProperties}
 
 #else
 

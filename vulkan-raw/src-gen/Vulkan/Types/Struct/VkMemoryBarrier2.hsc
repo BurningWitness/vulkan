@@ -34,8 +34,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkMemoryBarrier2" #-} VkMemoryBarrier2 =
          }
 
 instance Storable VkMemoryBarrier2 where
-  sizeOf    _ = #{size      struct VkMemoryBarrier2}
-  alignment _ = #{alignment struct VkMemoryBarrier2}
+  sizeOf    _ = #{size      VkMemoryBarrier2}
+  alignment _ = #{alignment VkMemoryBarrier2}
 
   peek ptr = 
     VkMemoryBarrier2
@@ -55,22 +55,22 @@ instance Storable VkMemoryBarrier2 where
     pokeField @"dstAccessMask" ptr val
 
 instance Offset "sType" VkMemoryBarrier2 where
-  rawOffset = #{offset struct VkMemoryBarrier2, sType}
+  rawOffset = #{offset VkMemoryBarrier2, sType}
 
 instance Offset "pNext" VkMemoryBarrier2 where
-  rawOffset = #{offset struct VkMemoryBarrier2, pNext}
+  rawOffset = #{offset VkMemoryBarrier2, pNext}
 
 instance Offset "srcStageMask" VkMemoryBarrier2 where
-  rawOffset = #{offset struct VkMemoryBarrier2, srcStageMask}
+  rawOffset = #{offset VkMemoryBarrier2, srcStageMask}
 
 instance Offset "srcAccessMask" VkMemoryBarrier2 where
-  rawOffset = #{offset struct VkMemoryBarrier2, srcAccessMask}
+  rawOffset = #{offset VkMemoryBarrier2, srcAccessMask}
 
 instance Offset "dstStageMask" VkMemoryBarrier2 where
-  rawOffset = #{offset struct VkMemoryBarrier2, dstStageMask}
+  rawOffset = #{offset VkMemoryBarrier2, dstStageMask}
 
 instance Offset "dstAccessMask" VkMemoryBarrier2 where
-  rawOffset = #{offset struct VkMemoryBarrier2, dstAccessMask}
+  rawOffset = #{offset VkMemoryBarrier2, dstAccessMask}
 
 #else
 

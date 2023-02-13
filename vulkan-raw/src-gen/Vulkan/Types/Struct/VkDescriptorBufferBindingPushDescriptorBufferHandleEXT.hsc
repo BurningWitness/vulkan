@@ -30,8 +30,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkDescriptorBufferBindingPushDescriptorBufferH
          }
 
 instance Storable VkDescriptorBufferBindingPushDescriptorBufferHandleEXT where
-  sizeOf    _ = #{size      struct VkDescriptorBufferBindingPushDescriptorBufferHandleEXT}
-  alignment _ = #{alignment struct VkDescriptorBufferBindingPushDescriptorBufferHandleEXT}
+  sizeOf    _ = #{size      VkDescriptorBufferBindingPushDescriptorBufferHandleEXT}
+  alignment _ = #{alignment VkDescriptorBufferBindingPushDescriptorBufferHandleEXT}
 
   peek ptr = 
     VkDescriptorBufferBindingPushDescriptorBufferHandleEXT
@@ -45,13 +45,13 @@ instance Storable VkDescriptorBufferBindingPushDescriptorBufferHandleEXT where
     pokeField @"buffer" ptr val
 
 instance Offset "sType" VkDescriptorBufferBindingPushDescriptorBufferHandleEXT where
-  rawOffset = #{offset struct VkDescriptorBufferBindingPushDescriptorBufferHandleEXT, sType}
+  rawOffset = #{offset VkDescriptorBufferBindingPushDescriptorBufferHandleEXT, sType}
 
 instance Offset "pNext" VkDescriptorBufferBindingPushDescriptorBufferHandleEXT where
-  rawOffset = #{offset struct VkDescriptorBufferBindingPushDescriptorBufferHandleEXT, pNext}
+  rawOffset = #{offset VkDescriptorBufferBindingPushDescriptorBufferHandleEXT, pNext}
 
 instance Offset "buffer" VkDescriptorBufferBindingPushDescriptorBufferHandleEXT where
-  rawOffset = #{offset struct VkDescriptorBufferBindingPushDescriptorBufferHandleEXT, buffer}
+  rawOffset = #{offset VkDescriptorBufferBindingPushDescriptorBufferHandleEXT, buffer}
 
 #else
 

@@ -37,8 +37,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkDisplayPlaneCapabilitiesKHR" #-} VkDisplayPl
          }
 
 instance Storable VkDisplayPlaneCapabilitiesKHR where
-  sizeOf    _ = #{size      struct VkDisplayPlaneCapabilitiesKHR}
-  alignment _ = #{alignment struct VkDisplayPlaneCapabilitiesKHR}
+  sizeOf    _ = #{size      VkDisplayPlaneCapabilitiesKHR}
+  alignment _ = #{alignment VkDisplayPlaneCapabilitiesKHR}
 
   peek ptr = 
     VkDisplayPlaneCapabilitiesKHR
@@ -64,31 +64,31 @@ instance Storable VkDisplayPlaneCapabilitiesKHR where
     pokeField @"maxDstExtent" ptr val
 
 instance Offset "supportedAlpha" VkDisplayPlaneCapabilitiesKHR where
-  rawOffset = #{offset struct VkDisplayPlaneCapabilitiesKHR, supportedAlpha}
+  rawOffset = #{offset VkDisplayPlaneCapabilitiesKHR, supportedAlpha}
 
 instance Offset "minSrcPosition" VkDisplayPlaneCapabilitiesKHR where
-  rawOffset = #{offset struct VkDisplayPlaneCapabilitiesKHR, minSrcPosition}
+  rawOffset = #{offset VkDisplayPlaneCapabilitiesKHR, minSrcPosition}
 
 instance Offset "maxSrcPosition" VkDisplayPlaneCapabilitiesKHR where
-  rawOffset = #{offset struct VkDisplayPlaneCapabilitiesKHR, maxSrcPosition}
+  rawOffset = #{offset VkDisplayPlaneCapabilitiesKHR, maxSrcPosition}
 
 instance Offset "minSrcExtent" VkDisplayPlaneCapabilitiesKHR where
-  rawOffset = #{offset struct VkDisplayPlaneCapabilitiesKHR, minSrcExtent}
+  rawOffset = #{offset VkDisplayPlaneCapabilitiesKHR, minSrcExtent}
 
 instance Offset "maxSrcExtent" VkDisplayPlaneCapabilitiesKHR where
-  rawOffset = #{offset struct VkDisplayPlaneCapabilitiesKHR, maxSrcExtent}
+  rawOffset = #{offset VkDisplayPlaneCapabilitiesKHR, maxSrcExtent}
 
 instance Offset "minDstPosition" VkDisplayPlaneCapabilitiesKHR where
-  rawOffset = #{offset struct VkDisplayPlaneCapabilitiesKHR, minDstPosition}
+  rawOffset = #{offset VkDisplayPlaneCapabilitiesKHR, minDstPosition}
 
 instance Offset "maxDstPosition" VkDisplayPlaneCapabilitiesKHR where
-  rawOffset = #{offset struct VkDisplayPlaneCapabilitiesKHR, maxDstPosition}
+  rawOffset = #{offset VkDisplayPlaneCapabilitiesKHR, maxDstPosition}
 
 instance Offset "minDstExtent" VkDisplayPlaneCapabilitiesKHR where
-  rawOffset = #{offset struct VkDisplayPlaneCapabilitiesKHR, minDstExtent}
+  rawOffset = #{offset VkDisplayPlaneCapabilitiesKHR, minDstExtent}
 
 instance Offset "maxDstExtent" VkDisplayPlaneCapabilitiesKHR where
-  rawOffset = #{offset struct VkDisplayPlaneCapabilitiesKHR, maxDstExtent}
+  rawOffset = #{offset VkDisplayPlaneCapabilitiesKHR, maxDstExtent}
 
 #else
 

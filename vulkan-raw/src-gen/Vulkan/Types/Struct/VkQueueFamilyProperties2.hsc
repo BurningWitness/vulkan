@@ -30,8 +30,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkQueueFamilyProperties2" #-} VkQueueFamilyPro
          }
 
 instance Storable VkQueueFamilyProperties2 where
-  sizeOf    _ = #{size      struct VkQueueFamilyProperties2}
-  alignment _ = #{alignment struct VkQueueFamilyProperties2}
+  sizeOf    _ = #{size      VkQueueFamilyProperties2}
+  alignment _ = #{alignment VkQueueFamilyProperties2}
 
   peek ptr = 
     VkQueueFamilyProperties2
@@ -45,13 +45,13 @@ instance Storable VkQueueFamilyProperties2 where
     pokeField @"queueFamilyProperties" ptr val
 
 instance Offset "sType" VkQueueFamilyProperties2 where
-  rawOffset = #{offset struct VkQueueFamilyProperties2, sType}
+  rawOffset = #{offset VkQueueFamilyProperties2, sType}
 
 instance Offset "pNext" VkQueueFamilyProperties2 where
-  rawOffset = #{offset struct VkQueueFamilyProperties2, pNext}
+  rawOffset = #{offset VkQueueFamilyProperties2, pNext}
 
 instance Offset "queueFamilyProperties" VkQueueFamilyProperties2 where
-  rawOffset = #{offset struct VkQueueFamilyProperties2, queueFamilyProperties}
+  rawOffset = #{offset VkQueueFamilyProperties2, queueFamilyProperties}
 
 #else
 

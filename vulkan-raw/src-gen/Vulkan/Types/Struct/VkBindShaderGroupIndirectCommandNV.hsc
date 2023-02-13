@@ -26,8 +26,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkBindShaderGroupIndirectCommandNV" #-} VkBind
          }
 
 instance Storable VkBindShaderGroupIndirectCommandNV where
-  sizeOf    _ = #{size      struct VkBindShaderGroupIndirectCommandNV}
-  alignment _ = #{alignment struct VkBindShaderGroupIndirectCommandNV}
+  sizeOf    _ = #{size      VkBindShaderGroupIndirectCommandNV}
+  alignment _ = #{alignment VkBindShaderGroupIndirectCommandNV}
 
   peek ptr = 
     VkBindShaderGroupIndirectCommandNV
@@ -38,7 +38,7 @@ instance Storable VkBindShaderGroupIndirectCommandNV where
     pokeField @"groupIndex" ptr val
 
 instance Offset "groupIndex" VkBindShaderGroupIndirectCommandNV where
-  rawOffset = #{offset struct VkBindShaderGroupIndirectCommandNV, groupIndex}
+  rawOffset = #{offset VkBindShaderGroupIndirectCommandNV, groupIndex}
 
 #else
 

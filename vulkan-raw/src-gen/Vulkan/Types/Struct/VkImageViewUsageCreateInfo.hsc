@@ -30,8 +30,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkImageViewUsageCreateInfo" #-} VkImageViewUsa
          }
 
 instance Storable VkImageViewUsageCreateInfo where
-  sizeOf    _ = #{size      struct VkImageViewUsageCreateInfo}
-  alignment _ = #{alignment struct VkImageViewUsageCreateInfo}
+  sizeOf    _ = #{size      VkImageViewUsageCreateInfo}
+  alignment _ = #{alignment VkImageViewUsageCreateInfo}
 
   peek ptr = 
     VkImageViewUsageCreateInfo
@@ -45,13 +45,13 @@ instance Storable VkImageViewUsageCreateInfo where
     pokeField @"usage" ptr val
 
 instance Offset "sType" VkImageViewUsageCreateInfo where
-  rawOffset = #{offset struct VkImageViewUsageCreateInfo, sType}
+  rawOffset = #{offset VkImageViewUsageCreateInfo, sType}
 
 instance Offset "pNext" VkImageViewUsageCreateInfo where
-  rawOffset = #{offset struct VkImageViewUsageCreateInfo, pNext}
+  rawOffset = #{offset VkImageViewUsageCreateInfo, pNext}
 
 instance Offset "usage" VkImageViewUsageCreateInfo where
-  rawOffset = #{offset struct VkImageViewUsageCreateInfo, usage}
+  rawOffset = #{offset VkImageViewUsageCreateInfo, usage}
 
 #else
 

@@ -30,8 +30,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkSwapchainDisplayNativeHdrCreateInfoAMD" #-} 
          }
 
 instance Storable VkSwapchainDisplayNativeHdrCreateInfoAMD where
-  sizeOf    _ = #{size      struct VkSwapchainDisplayNativeHdrCreateInfoAMD}
-  alignment _ = #{alignment struct VkSwapchainDisplayNativeHdrCreateInfoAMD}
+  sizeOf    _ = #{size      VkSwapchainDisplayNativeHdrCreateInfoAMD}
+  alignment _ = #{alignment VkSwapchainDisplayNativeHdrCreateInfoAMD}
 
   peek ptr = 
     VkSwapchainDisplayNativeHdrCreateInfoAMD
@@ -45,13 +45,13 @@ instance Storable VkSwapchainDisplayNativeHdrCreateInfoAMD where
     pokeField @"localDimmingEnable" ptr val
 
 instance Offset "sType" VkSwapchainDisplayNativeHdrCreateInfoAMD where
-  rawOffset = #{offset struct VkSwapchainDisplayNativeHdrCreateInfoAMD, sType}
+  rawOffset = #{offset VkSwapchainDisplayNativeHdrCreateInfoAMD, sType}
 
 instance Offset "pNext" VkSwapchainDisplayNativeHdrCreateInfoAMD where
-  rawOffset = #{offset struct VkSwapchainDisplayNativeHdrCreateInfoAMD, pNext}
+  rawOffset = #{offset VkSwapchainDisplayNativeHdrCreateInfoAMD, pNext}
 
 instance Offset "localDimmingEnable" VkSwapchainDisplayNativeHdrCreateInfoAMD where
-  rawOffset = #{offset struct VkSwapchainDisplayNativeHdrCreateInfoAMD, localDimmingEnable}
+  rawOffset = #{offset VkSwapchainDisplayNativeHdrCreateInfoAMD, localDimmingEnable}
 
 #else
 

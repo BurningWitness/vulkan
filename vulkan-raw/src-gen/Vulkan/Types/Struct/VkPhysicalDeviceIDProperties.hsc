@@ -34,8 +34,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkPhysicalDeviceIDProperties" #-} VkPhysicalDe
          }
 
 instance Storable VkPhysicalDeviceIDProperties where
-  sizeOf    _ = #{size      struct VkPhysicalDeviceIDProperties}
-  alignment _ = #{alignment struct VkPhysicalDeviceIDProperties}
+  sizeOf    _ = #{size      VkPhysicalDeviceIDProperties}
+  alignment _ = #{alignment VkPhysicalDeviceIDProperties}
 
   peek ptr = 
     VkPhysicalDeviceIDProperties
@@ -57,25 +57,25 @@ instance Storable VkPhysicalDeviceIDProperties where
     pokeField @"deviceLUIDValid" ptr val
 
 instance Offset "sType" VkPhysicalDeviceIDProperties where
-  rawOffset = #{offset struct VkPhysicalDeviceIDProperties, sType}
+  rawOffset = #{offset VkPhysicalDeviceIDProperties, sType}
 
 instance Offset "pNext" VkPhysicalDeviceIDProperties where
-  rawOffset = #{offset struct VkPhysicalDeviceIDProperties, pNext}
+  rawOffset = #{offset VkPhysicalDeviceIDProperties, pNext}
 
 instance Offset "deviceUUID" VkPhysicalDeviceIDProperties where
-  rawOffset = #{offset struct VkPhysicalDeviceIDProperties, deviceUUID}
+  rawOffset = #{offset VkPhysicalDeviceIDProperties, deviceUUID}
 
 instance Offset "driverUUID" VkPhysicalDeviceIDProperties where
-  rawOffset = #{offset struct VkPhysicalDeviceIDProperties, driverUUID}
+  rawOffset = #{offset VkPhysicalDeviceIDProperties, driverUUID}
 
 instance Offset "deviceLUID" VkPhysicalDeviceIDProperties where
-  rawOffset = #{offset struct VkPhysicalDeviceIDProperties, deviceLUID}
+  rawOffset = #{offset VkPhysicalDeviceIDProperties, deviceLUID}
 
 instance Offset "deviceNodeMask" VkPhysicalDeviceIDProperties where
-  rawOffset = #{offset struct VkPhysicalDeviceIDProperties, deviceNodeMask}
+  rawOffset = #{offset VkPhysicalDeviceIDProperties, deviceNodeMask}
 
 instance Offset "deviceLUIDValid" VkPhysicalDeviceIDProperties where
-  rawOffset = #{offset struct VkPhysicalDeviceIDProperties, deviceLUIDValid}
+  rawOffset = #{offset VkPhysicalDeviceIDProperties, deviceLUIDValid}
 
 #else
 

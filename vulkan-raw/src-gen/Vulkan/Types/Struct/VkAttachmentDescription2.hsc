@@ -43,8 +43,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkAttachmentDescription2" #-} VkAttachmentDesc
          }
 
 instance Storable VkAttachmentDescription2 where
-  sizeOf    _ = #{size      struct VkAttachmentDescription2}
-  alignment _ = #{alignment struct VkAttachmentDescription2}
+  sizeOf    _ = #{size      VkAttachmentDescription2}
+  alignment _ = #{alignment VkAttachmentDescription2}
 
   peek ptr = 
     VkAttachmentDescription2
@@ -74,37 +74,37 @@ instance Storable VkAttachmentDescription2 where
     pokeField @"finalLayout" ptr val
 
 instance Offset "sType" VkAttachmentDescription2 where
-  rawOffset = #{offset struct VkAttachmentDescription2, sType}
+  rawOffset = #{offset VkAttachmentDescription2, sType}
 
 instance Offset "pNext" VkAttachmentDescription2 where
-  rawOffset = #{offset struct VkAttachmentDescription2, pNext}
+  rawOffset = #{offset VkAttachmentDescription2, pNext}
 
 instance Offset "flags" VkAttachmentDescription2 where
-  rawOffset = #{offset struct VkAttachmentDescription2, flags}
+  rawOffset = #{offset VkAttachmentDescription2, flags}
 
 instance Offset "format" VkAttachmentDescription2 where
-  rawOffset = #{offset struct VkAttachmentDescription2, format}
+  rawOffset = #{offset VkAttachmentDescription2, format}
 
 instance Offset "samples" VkAttachmentDescription2 where
-  rawOffset = #{offset struct VkAttachmentDescription2, samples}
+  rawOffset = #{offset VkAttachmentDescription2, samples}
 
 instance Offset "loadOp" VkAttachmentDescription2 where
-  rawOffset = #{offset struct VkAttachmentDescription2, loadOp}
+  rawOffset = #{offset VkAttachmentDescription2, loadOp}
 
 instance Offset "storeOp" VkAttachmentDescription2 where
-  rawOffset = #{offset struct VkAttachmentDescription2, storeOp}
+  rawOffset = #{offset VkAttachmentDescription2, storeOp}
 
 instance Offset "stencilLoadOp" VkAttachmentDescription2 where
-  rawOffset = #{offset struct VkAttachmentDescription2, stencilLoadOp}
+  rawOffset = #{offset VkAttachmentDescription2, stencilLoadOp}
 
 instance Offset "stencilStoreOp" VkAttachmentDescription2 where
-  rawOffset = #{offset struct VkAttachmentDescription2, stencilStoreOp}
+  rawOffset = #{offset VkAttachmentDescription2, stencilStoreOp}
 
 instance Offset "initialLayout" VkAttachmentDescription2 where
-  rawOffset = #{offset struct VkAttachmentDescription2, initialLayout}
+  rawOffset = #{offset VkAttachmentDescription2, initialLayout}
 
 instance Offset "finalLayout" VkAttachmentDescription2 where
-  rawOffset = #{offset struct VkAttachmentDescription2, finalLayout}
+  rawOffset = #{offset VkAttachmentDescription2, finalLayout}
 
 #else
 

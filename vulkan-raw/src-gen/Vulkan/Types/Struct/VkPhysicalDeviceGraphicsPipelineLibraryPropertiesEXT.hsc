@@ -31,8 +31,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkPhysicalDeviceGraphicsPipelineLibraryPropert
          }
 
 instance Storable VkPhysicalDeviceGraphicsPipelineLibraryPropertiesEXT where
-  sizeOf    _ = #{size      struct VkPhysicalDeviceGraphicsPipelineLibraryPropertiesEXT}
-  alignment _ = #{alignment struct VkPhysicalDeviceGraphicsPipelineLibraryPropertiesEXT}
+  sizeOf    _ = #{size      VkPhysicalDeviceGraphicsPipelineLibraryPropertiesEXT}
+  alignment _ = #{alignment VkPhysicalDeviceGraphicsPipelineLibraryPropertiesEXT}
 
   peek ptr = 
     VkPhysicalDeviceGraphicsPipelineLibraryPropertiesEXT
@@ -48,16 +48,16 @@ instance Storable VkPhysicalDeviceGraphicsPipelineLibraryPropertiesEXT where
     pokeField @"graphicsPipelineLibraryIndependentInterpolationDecoration" ptr val
 
 instance Offset "sType" VkPhysicalDeviceGraphicsPipelineLibraryPropertiesEXT where
-  rawOffset = #{offset struct VkPhysicalDeviceGraphicsPipelineLibraryPropertiesEXT, sType}
+  rawOffset = #{offset VkPhysicalDeviceGraphicsPipelineLibraryPropertiesEXT, sType}
 
 instance Offset "pNext" VkPhysicalDeviceGraphicsPipelineLibraryPropertiesEXT where
-  rawOffset = #{offset struct VkPhysicalDeviceGraphicsPipelineLibraryPropertiesEXT, pNext}
+  rawOffset = #{offset VkPhysicalDeviceGraphicsPipelineLibraryPropertiesEXT, pNext}
 
 instance Offset "graphicsPipelineLibraryFastLinking" VkPhysicalDeviceGraphicsPipelineLibraryPropertiesEXT where
-  rawOffset = #{offset struct VkPhysicalDeviceGraphicsPipelineLibraryPropertiesEXT, graphicsPipelineLibraryFastLinking}
+  rawOffset = #{offset VkPhysicalDeviceGraphicsPipelineLibraryPropertiesEXT, graphicsPipelineLibraryFastLinking}
 
 instance Offset "graphicsPipelineLibraryIndependentInterpolationDecoration" VkPhysicalDeviceGraphicsPipelineLibraryPropertiesEXT where
-  rawOffset = #{offset struct VkPhysicalDeviceGraphicsPipelineLibraryPropertiesEXT, graphicsPipelineLibraryIndependentInterpolationDecoration}
+  rawOffset = #{offset VkPhysicalDeviceGraphicsPipelineLibraryPropertiesEXT, graphicsPipelineLibraryIndependentInterpolationDecoration}
 
 #else
 

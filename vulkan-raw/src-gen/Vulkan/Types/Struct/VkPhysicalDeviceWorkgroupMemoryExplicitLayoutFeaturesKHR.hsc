@@ -33,8 +33,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkPhysicalDeviceWorkgroupMemoryExplicitLayoutF
          }
 
 instance Storable VkPhysicalDeviceWorkgroupMemoryExplicitLayoutFeaturesKHR where
-  sizeOf    _ = #{size      struct VkPhysicalDeviceWorkgroupMemoryExplicitLayoutFeaturesKHR}
-  alignment _ = #{alignment struct VkPhysicalDeviceWorkgroupMemoryExplicitLayoutFeaturesKHR}
+  sizeOf    _ = #{size      VkPhysicalDeviceWorkgroupMemoryExplicitLayoutFeaturesKHR}
+  alignment _ = #{alignment VkPhysicalDeviceWorkgroupMemoryExplicitLayoutFeaturesKHR}
 
   peek ptr = 
     VkPhysicalDeviceWorkgroupMemoryExplicitLayoutFeaturesKHR
@@ -54,22 +54,22 @@ instance Storable VkPhysicalDeviceWorkgroupMemoryExplicitLayoutFeaturesKHR where
     pokeField @"workgroupMemoryExplicitLayout16BitAccess" ptr val
 
 instance Offset "sType" VkPhysicalDeviceWorkgroupMemoryExplicitLayoutFeaturesKHR where
-  rawOffset = #{offset struct VkPhysicalDeviceWorkgroupMemoryExplicitLayoutFeaturesKHR, sType}
+  rawOffset = #{offset VkPhysicalDeviceWorkgroupMemoryExplicitLayoutFeaturesKHR, sType}
 
 instance Offset "pNext" VkPhysicalDeviceWorkgroupMemoryExplicitLayoutFeaturesKHR where
-  rawOffset = #{offset struct VkPhysicalDeviceWorkgroupMemoryExplicitLayoutFeaturesKHR, pNext}
+  rawOffset = #{offset VkPhysicalDeviceWorkgroupMemoryExplicitLayoutFeaturesKHR, pNext}
 
 instance Offset "workgroupMemoryExplicitLayout" VkPhysicalDeviceWorkgroupMemoryExplicitLayoutFeaturesKHR where
-  rawOffset = #{offset struct VkPhysicalDeviceWorkgroupMemoryExplicitLayoutFeaturesKHR, workgroupMemoryExplicitLayout}
+  rawOffset = #{offset VkPhysicalDeviceWorkgroupMemoryExplicitLayoutFeaturesKHR, workgroupMemoryExplicitLayout}
 
 instance Offset "workgroupMemoryExplicitLayoutScalarBlockLayout" VkPhysicalDeviceWorkgroupMemoryExplicitLayoutFeaturesKHR where
-  rawOffset = #{offset struct VkPhysicalDeviceWorkgroupMemoryExplicitLayoutFeaturesKHR, workgroupMemoryExplicitLayoutScalarBlockLayout}
+  rawOffset = #{offset VkPhysicalDeviceWorkgroupMemoryExplicitLayoutFeaturesKHR, workgroupMemoryExplicitLayoutScalarBlockLayout}
 
 instance Offset "workgroupMemoryExplicitLayout8BitAccess" VkPhysicalDeviceWorkgroupMemoryExplicitLayoutFeaturesKHR where
-  rawOffset = #{offset struct VkPhysicalDeviceWorkgroupMemoryExplicitLayoutFeaturesKHR, workgroupMemoryExplicitLayout8BitAccess}
+  rawOffset = #{offset VkPhysicalDeviceWorkgroupMemoryExplicitLayoutFeaturesKHR, workgroupMemoryExplicitLayout8BitAccess}
 
 instance Offset "workgroupMemoryExplicitLayout16BitAccess" VkPhysicalDeviceWorkgroupMemoryExplicitLayoutFeaturesKHR where
-  rawOffset = #{offset struct VkPhysicalDeviceWorkgroupMemoryExplicitLayoutFeaturesKHR, workgroupMemoryExplicitLayout16BitAccess}
+  rawOffset = #{offset VkPhysicalDeviceWorkgroupMemoryExplicitLayoutFeaturesKHR, workgroupMemoryExplicitLayout16BitAccess}
 
 #else
 

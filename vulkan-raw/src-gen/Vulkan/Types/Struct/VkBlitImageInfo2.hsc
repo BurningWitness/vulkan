@@ -39,8 +39,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkBlitImageInfo2" #-} VkBlitImageInfo2 =
          }
 
 instance Storable VkBlitImageInfo2 where
-  sizeOf    _ = #{size      struct VkBlitImageInfo2}
-  alignment _ = #{alignment struct VkBlitImageInfo2}
+  sizeOf    _ = #{size      VkBlitImageInfo2}
+  alignment _ = #{alignment VkBlitImageInfo2}
 
   peek ptr = 
     VkBlitImageInfo2
@@ -66,31 +66,31 @@ instance Storable VkBlitImageInfo2 where
     pokeField @"filter" ptr val
 
 instance Offset "sType" VkBlitImageInfo2 where
-  rawOffset = #{offset struct VkBlitImageInfo2, sType}
+  rawOffset = #{offset VkBlitImageInfo2, sType}
 
 instance Offset "pNext" VkBlitImageInfo2 where
-  rawOffset = #{offset struct VkBlitImageInfo2, pNext}
+  rawOffset = #{offset VkBlitImageInfo2, pNext}
 
 instance Offset "srcImage" VkBlitImageInfo2 where
-  rawOffset = #{offset struct VkBlitImageInfo2, srcImage}
+  rawOffset = #{offset VkBlitImageInfo2, srcImage}
 
 instance Offset "srcImageLayout" VkBlitImageInfo2 where
-  rawOffset = #{offset struct VkBlitImageInfo2, srcImageLayout}
+  rawOffset = #{offset VkBlitImageInfo2, srcImageLayout}
 
 instance Offset "dstImage" VkBlitImageInfo2 where
-  rawOffset = #{offset struct VkBlitImageInfo2, dstImage}
+  rawOffset = #{offset VkBlitImageInfo2, dstImage}
 
 instance Offset "dstImageLayout" VkBlitImageInfo2 where
-  rawOffset = #{offset struct VkBlitImageInfo2, dstImageLayout}
+  rawOffset = #{offset VkBlitImageInfo2, dstImageLayout}
 
 instance Offset "regionCount" VkBlitImageInfo2 where
-  rawOffset = #{offset struct VkBlitImageInfo2, regionCount}
+  rawOffset = #{offset VkBlitImageInfo2, regionCount}
 
 instance Offset "pRegions" VkBlitImageInfo2 where
-  rawOffset = #{offset struct VkBlitImageInfo2, pRegions}
+  rawOffset = #{offset VkBlitImageInfo2, pRegions}
 
 instance Offset "filter" VkBlitImageInfo2 where
-  rawOffset = #{offset struct VkBlitImageInfo2, filter}
+  rawOffset = #{offset VkBlitImageInfo2, filter}
 
 #else
 

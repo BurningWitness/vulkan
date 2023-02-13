@@ -42,8 +42,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkSubpassDescription2" #-} VkSubpassDescriptio
          }
 
 instance Storable VkSubpassDescription2 where
-  sizeOf    _ = #{size      struct VkSubpassDescription2}
-  alignment _ = #{alignment struct VkSubpassDescription2}
+  sizeOf    _ = #{size      VkSubpassDescription2}
+  alignment _ = #{alignment VkSubpassDescription2}
 
   peek ptr = 
     VkSubpassDescription2
@@ -77,43 +77,43 @@ instance Storable VkSubpassDescription2 where
     pokeField @"pPreserveAttachments" ptr val
 
 instance Offset "sType" VkSubpassDescription2 where
-  rawOffset = #{offset struct VkSubpassDescription2, sType}
+  rawOffset = #{offset VkSubpassDescription2, sType}
 
 instance Offset "pNext" VkSubpassDescription2 where
-  rawOffset = #{offset struct VkSubpassDescription2, pNext}
+  rawOffset = #{offset VkSubpassDescription2, pNext}
 
 instance Offset "flags" VkSubpassDescription2 where
-  rawOffset = #{offset struct VkSubpassDescription2, flags}
+  rawOffset = #{offset VkSubpassDescription2, flags}
 
 instance Offset "pipelineBindPoint" VkSubpassDescription2 where
-  rawOffset = #{offset struct VkSubpassDescription2, pipelineBindPoint}
+  rawOffset = #{offset VkSubpassDescription2, pipelineBindPoint}
 
 instance Offset "viewMask" VkSubpassDescription2 where
-  rawOffset = #{offset struct VkSubpassDescription2, viewMask}
+  rawOffset = #{offset VkSubpassDescription2, viewMask}
 
 instance Offset "inputAttachmentCount" VkSubpassDescription2 where
-  rawOffset = #{offset struct VkSubpassDescription2, inputAttachmentCount}
+  rawOffset = #{offset VkSubpassDescription2, inputAttachmentCount}
 
 instance Offset "pInputAttachments" VkSubpassDescription2 where
-  rawOffset = #{offset struct VkSubpassDescription2, pInputAttachments}
+  rawOffset = #{offset VkSubpassDescription2, pInputAttachments}
 
 instance Offset "colorAttachmentCount" VkSubpassDescription2 where
-  rawOffset = #{offset struct VkSubpassDescription2, colorAttachmentCount}
+  rawOffset = #{offset VkSubpassDescription2, colorAttachmentCount}
 
 instance Offset "pColorAttachments" VkSubpassDescription2 where
-  rawOffset = #{offset struct VkSubpassDescription2, pColorAttachments}
+  rawOffset = #{offset VkSubpassDescription2, pColorAttachments}
 
 instance Offset "pResolveAttachments" VkSubpassDescription2 where
-  rawOffset = #{offset struct VkSubpassDescription2, pResolveAttachments}
+  rawOffset = #{offset VkSubpassDescription2, pResolveAttachments}
 
 instance Offset "pDepthStencilAttachment" VkSubpassDescription2 where
-  rawOffset = #{offset struct VkSubpassDescription2, pDepthStencilAttachment}
+  rawOffset = #{offset VkSubpassDescription2, pDepthStencilAttachment}
 
 instance Offset "preserveAttachmentCount" VkSubpassDescription2 where
-  rawOffset = #{offset struct VkSubpassDescription2, preserveAttachmentCount}
+  rawOffset = #{offset VkSubpassDescription2, preserveAttachmentCount}
 
 instance Offset "pPreserveAttachments" VkSubpassDescription2 where
-  rawOffset = #{offset struct VkSubpassDescription2, pPreserveAttachments}
+  rawOffset = #{offset VkSubpassDescription2, pPreserveAttachments}
 
 #else
 

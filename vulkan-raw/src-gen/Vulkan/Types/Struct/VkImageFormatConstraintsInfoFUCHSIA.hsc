@@ -38,8 +38,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkImageFormatConstraintsInfoFUCHSIA" #-} VkIma
          }
 
 instance Storable VkImageFormatConstraintsInfoFUCHSIA where
-  sizeOf    _ = #{size      struct VkImageFormatConstraintsInfoFUCHSIA}
-  alignment _ = #{alignment struct VkImageFormatConstraintsInfoFUCHSIA}
+  sizeOf    _ = #{size      VkImageFormatConstraintsInfoFUCHSIA}
+  alignment _ = #{alignment VkImageFormatConstraintsInfoFUCHSIA}
 
   peek ptr = 
     VkImageFormatConstraintsInfoFUCHSIA
@@ -63,28 +63,28 @@ instance Storable VkImageFormatConstraintsInfoFUCHSIA where
     pokeField @"pColorSpaces" ptr val
 
 instance Offset "sType" VkImageFormatConstraintsInfoFUCHSIA where
-  rawOffset = #{offset struct VkImageFormatConstraintsInfoFUCHSIA, sType}
+  rawOffset = #{offset VkImageFormatConstraintsInfoFUCHSIA, sType}
 
 instance Offset "pNext" VkImageFormatConstraintsInfoFUCHSIA where
-  rawOffset = #{offset struct VkImageFormatConstraintsInfoFUCHSIA, pNext}
+  rawOffset = #{offset VkImageFormatConstraintsInfoFUCHSIA, pNext}
 
 instance Offset "imageCreateInfo" VkImageFormatConstraintsInfoFUCHSIA where
-  rawOffset = #{offset struct VkImageFormatConstraintsInfoFUCHSIA, imageCreateInfo}
+  rawOffset = #{offset VkImageFormatConstraintsInfoFUCHSIA, imageCreateInfo}
 
 instance Offset "requiredFormatFeatures" VkImageFormatConstraintsInfoFUCHSIA where
-  rawOffset = #{offset struct VkImageFormatConstraintsInfoFUCHSIA, requiredFormatFeatures}
+  rawOffset = #{offset VkImageFormatConstraintsInfoFUCHSIA, requiredFormatFeatures}
 
 instance Offset "flags" VkImageFormatConstraintsInfoFUCHSIA where
-  rawOffset = #{offset struct VkImageFormatConstraintsInfoFUCHSIA, flags}
+  rawOffset = #{offset VkImageFormatConstraintsInfoFUCHSIA, flags}
 
 instance Offset "sysmemPixelFormat" VkImageFormatConstraintsInfoFUCHSIA where
-  rawOffset = #{offset struct VkImageFormatConstraintsInfoFUCHSIA, sysmemPixelFormat}
+  rawOffset = #{offset VkImageFormatConstraintsInfoFUCHSIA, sysmemPixelFormat}
 
 instance Offset "colorSpaceCount" VkImageFormatConstraintsInfoFUCHSIA where
-  rawOffset = #{offset struct VkImageFormatConstraintsInfoFUCHSIA, colorSpaceCount}
+  rawOffset = #{offset VkImageFormatConstraintsInfoFUCHSIA, colorSpaceCount}
 
 instance Offset "pColorSpaces" VkImageFormatConstraintsInfoFUCHSIA where
-  rawOffset = #{offset struct VkImageFormatConstraintsInfoFUCHSIA, pColorSpaces}
+  rawOffset = #{offset VkImageFormatConstraintsInfoFUCHSIA, pColorSpaces}
 
 #else
 

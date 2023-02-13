@@ -42,8 +42,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkVideoSessionCreateInfoKHR" #-} VkVideoSessio
          }
 
 instance Storable VkVideoSessionCreateInfoKHR where
-  sizeOf    _ = #{size      struct VkVideoSessionCreateInfoKHR}
-  alignment _ = #{alignment struct VkVideoSessionCreateInfoKHR}
+  sizeOf    _ = #{size      VkVideoSessionCreateInfoKHR}
+  alignment _ = #{alignment VkVideoSessionCreateInfoKHR}
 
   peek ptr = 
     VkVideoSessionCreateInfoKHR
@@ -73,37 +73,37 @@ instance Storable VkVideoSessionCreateInfoKHR where
     pokeField @"pStdHeaderVersion" ptr val
 
 instance Offset "sType" VkVideoSessionCreateInfoKHR where
-  rawOffset = #{offset struct VkVideoSessionCreateInfoKHR, sType}
+  rawOffset = #{offset VkVideoSessionCreateInfoKHR, sType}
 
 instance Offset "pNext" VkVideoSessionCreateInfoKHR where
-  rawOffset = #{offset struct VkVideoSessionCreateInfoKHR, pNext}
+  rawOffset = #{offset VkVideoSessionCreateInfoKHR, pNext}
 
 instance Offset "queueFamilyIndex" VkVideoSessionCreateInfoKHR where
-  rawOffset = #{offset struct VkVideoSessionCreateInfoKHR, queueFamilyIndex}
+  rawOffset = #{offset VkVideoSessionCreateInfoKHR, queueFamilyIndex}
 
 instance Offset "flags" VkVideoSessionCreateInfoKHR where
-  rawOffset = #{offset struct VkVideoSessionCreateInfoKHR, flags}
+  rawOffset = #{offset VkVideoSessionCreateInfoKHR, flags}
 
 instance Offset "pVideoProfile" VkVideoSessionCreateInfoKHR where
-  rawOffset = #{offset struct VkVideoSessionCreateInfoKHR, pVideoProfile}
+  rawOffset = #{offset VkVideoSessionCreateInfoKHR, pVideoProfile}
 
 instance Offset "pictureFormat" VkVideoSessionCreateInfoKHR where
-  rawOffset = #{offset struct VkVideoSessionCreateInfoKHR, pictureFormat}
+  rawOffset = #{offset VkVideoSessionCreateInfoKHR, pictureFormat}
 
 instance Offset "maxCodedExtent" VkVideoSessionCreateInfoKHR where
-  rawOffset = #{offset struct VkVideoSessionCreateInfoKHR, maxCodedExtent}
+  rawOffset = #{offset VkVideoSessionCreateInfoKHR, maxCodedExtent}
 
 instance Offset "referencePictureFormat" VkVideoSessionCreateInfoKHR where
-  rawOffset = #{offset struct VkVideoSessionCreateInfoKHR, referencePictureFormat}
+  rawOffset = #{offset VkVideoSessionCreateInfoKHR, referencePictureFormat}
 
 instance Offset "maxDpbSlots" VkVideoSessionCreateInfoKHR where
-  rawOffset = #{offset struct VkVideoSessionCreateInfoKHR, maxDpbSlots}
+  rawOffset = #{offset VkVideoSessionCreateInfoKHR, maxDpbSlots}
 
 instance Offset "maxActiveReferencePictures" VkVideoSessionCreateInfoKHR where
-  rawOffset = #{offset struct VkVideoSessionCreateInfoKHR, maxActiveReferencePictures}
+  rawOffset = #{offset VkVideoSessionCreateInfoKHR, maxActiveReferencePictures}
 
 instance Offset "pStdHeaderVersion" VkVideoSessionCreateInfoKHR where
-  rawOffset = #{offset struct VkVideoSessionCreateInfoKHR, pStdHeaderVersion}
+  rawOffset = #{offset VkVideoSessionCreateInfoKHR, pStdHeaderVersion}
 
 #else
 

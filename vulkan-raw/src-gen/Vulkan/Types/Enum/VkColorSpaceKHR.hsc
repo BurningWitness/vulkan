@@ -21,7 +21,7 @@ pattern VK_COLOR_SPACE_SRGB_NONLINEAR_KHR = 0
 #if VK_KHR_surface
 -- | Backwards-compatible alias containing a typo
 pattern VK_COLORSPACE_SRGB_NONLINEAR_KHR :: (Eq a, Num a) => a
-pattern VK_COLORSPACE_SRGB_NONLINEAR_KHR = VK_COLOR_SPACE_SRGB_NONLINEAR_KHR
+pattern VK_COLORSPACE_SRGB_NONLINEAR_KHR = 0
 #endif
 
 #if VK_EXT_swapchain_colorspace
@@ -97,7 +97,7 @@ pattern VK_COLOR_SPACE_EXTENDED_SRGB_NONLINEAR_EXT = 1000104014
 #if VK_EXT_swapchain_colorspace
 -- | Backwards-compatible alias containing a typo
 pattern VK_COLOR_SPACE_DCI_P3_LINEAR_EXT :: (Eq a, Num a) => a
-pattern VK_COLOR_SPACE_DCI_P3_LINEAR_EXT = VK_COLOR_SPACE_DISPLAY_P3_LINEAR_EXT
+pattern VK_COLOR_SPACE_DCI_P3_LINEAR_EXT = 1000104003
 #endif
 
 #if VK_AMD_display_native_hdr

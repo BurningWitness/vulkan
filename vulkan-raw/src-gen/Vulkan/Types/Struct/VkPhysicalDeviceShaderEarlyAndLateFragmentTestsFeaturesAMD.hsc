@@ -30,8 +30,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkPhysicalDeviceShaderEarlyAndLateFragmentTest
          }
 
 instance Storable VkPhysicalDeviceShaderEarlyAndLateFragmentTestsFeaturesAMD where
-  sizeOf    _ = #{size      struct VkPhysicalDeviceShaderEarlyAndLateFragmentTestsFeaturesAMD}
-  alignment _ = #{alignment struct VkPhysicalDeviceShaderEarlyAndLateFragmentTestsFeaturesAMD}
+  sizeOf    _ = #{size      VkPhysicalDeviceShaderEarlyAndLateFragmentTestsFeaturesAMD}
+  alignment _ = #{alignment VkPhysicalDeviceShaderEarlyAndLateFragmentTestsFeaturesAMD}
 
   peek ptr = 
     VkPhysicalDeviceShaderEarlyAndLateFragmentTestsFeaturesAMD
@@ -45,13 +45,13 @@ instance Storable VkPhysicalDeviceShaderEarlyAndLateFragmentTestsFeaturesAMD whe
     pokeField @"shaderEarlyAndLateFragmentTests" ptr val
 
 instance Offset "sType" VkPhysicalDeviceShaderEarlyAndLateFragmentTestsFeaturesAMD where
-  rawOffset = #{offset struct VkPhysicalDeviceShaderEarlyAndLateFragmentTestsFeaturesAMD, sType}
+  rawOffset = #{offset VkPhysicalDeviceShaderEarlyAndLateFragmentTestsFeaturesAMD, sType}
 
 instance Offset "pNext" VkPhysicalDeviceShaderEarlyAndLateFragmentTestsFeaturesAMD where
-  rawOffset = #{offset struct VkPhysicalDeviceShaderEarlyAndLateFragmentTestsFeaturesAMD, pNext}
+  rawOffset = #{offset VkPhysicalDeviceShaderEarlyAndLateFragmentTestsFeaturesAMD, pNext}
 
 instance Offset "shaderEarlyAndLateFragmentTests" VkPhysicalDeviceShaderEarlyAndLateFragmentTestsFeaturesAMD where
-  rawOffset = #{offset struct VkPhysicalDeviceShaderEarlyAndLateFragmentTestsFeaturesAMD, shaderEarlyAndLateFragmentTests}
+  rawOffset = #{offset VkPhysicalDeviceShaderEarlyAndLateFragmentTestsFeaturesAMD, shaderEarlyAndLateFragmentTests}
 
 #else
 

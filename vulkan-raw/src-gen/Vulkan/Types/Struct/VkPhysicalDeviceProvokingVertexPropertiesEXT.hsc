@@ -31,8 +31,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkPhysicalDeviceProvokingVertexPropertiesEXT" 
          }
 
 instance Storable VkPhysicalDeviceProvokingVertexPropertiesEXT where
-  sizeOf    _ = #{size      struct VkPhysicalDeviceProvokingVertexPropertiesEXT}
-  alignment _ = #{alignment struct VkPhysicalDeviceProvokingVertexPropertiesEXT}
+  sizeOf    _ = #{size      VkPhysicalDeviceProvokingVertexPropertiesEXT}
+  alignment _ = #{alignment VkPhysicalDeviceProvokingVertexPropertiesEXT}
 
   peek ptr = 
     VkPhysicalDeviceProvokingVertexPropertiesEXT
@@ -48,16 +48,16 @@ instance Storable VkPhysicalDeviceProvokingVertexPropertiesEXT where
     pokeField @"transformFeedbackPreservesTriangleFanProvokingVertex" ptr val
 
 instance Offset "sType" VkPhysicalDeviceProvokingVertexPropertiesEXT where
-  rawOffset = #{offset struct VkPhysicalDeviceProvokingVertexPropertiesEXT, sType}
+  rawOffset = #{offset VkPhysicalDeviceProvokingVertexPropertiesEXT, sType}
 
 instance Offset "pNext" VkPhysicalDeviceProvokingVertexPropertiesEXT where
-  rawOffset = #{offset struct VkPhysicalDeviceProvokingVertexPropertiesEXT, pNext}
+  rawOffset = #{offset VkPhysicalDeviceProvokingVertexPropertiesEXT, pNext}
 
 instance Offset "provokingVertexModePerPipeline" VkPhysicalDeviceProvokingVertexPropertiesEXT where
-  rawOffset = #{offset struct VkPhysicalDeviceProvokingVertexPropertiesEXT, provokingVertexModePerPipeline}
+  rawOffset = #{offset VkPhysicalDeviceProvokingVertexPropertiesEXT, provokingVertexModePerPipeline}
 
 instance Offset "transformFeedbackPreservesTriangleFanProvokingVertex" VkPhysicalDeviceProvokingVertexPropertiesEXT where
-  rawOffset = #{offset struct VkPhysicalDeviceProvokingVertexPropertiesEXT, transformFeedbackPreservesTriangleFanProvokingVertex}
+  rawOffset = #{offset VkPhysicalDeviceProvokingVertexPropertiesEXT, transformFeedbackPreservesTriangleFanProvokingVertex}
 
 #else
 

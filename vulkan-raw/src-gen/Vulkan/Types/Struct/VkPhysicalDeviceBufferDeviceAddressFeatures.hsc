@@ -32,8 +32,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkPhysicalDeviceBufferDeviceAddressFeatures" #
          }
 
 instance Storable VkPhysicalDeviceBufferDeviceAddressFeatures where
-  sizeOf    _ = #{size      struct VkPhysicalDeviceBufferDeviceAddressFeatures}
-  alignment _ = #{alignment struct VkPhysicalDeviceBufferDeviceAddressFeatures}
+  sizeOf    _ = #{size      VkPhysicalDeviceBufferDeviceAddressFeatures}
+  alignment _ = #{alignment VkPhysicalDeviceBufferDeviceAddressFeatures}
 
   peek ptr = 
     VkPhysicalDeviceBufferDeviceAddressFeatures
@@ -51,19 +51,19 @@ instance Storable VkPhysicalDeviceBufferDeviceAddressFeatures where
     pokeField @"bufferDeviceAddressMultiDevice" ptr val
 
 instance Offset "sType" VkPhysicalDeviceBufferDeviceAddressFeatures where
-  rawOffset = #{offset struct VkPhysicalDeviceBufferDeviceAddressFeatures, sType}
+  rawOffset = #{offset VkPhysicalDeviceBufferDeviceAddressFeatures, sType}
 
 instance Offset "pNext" VkPhysicalDeviceBufferDeviceAddressFeatures where
-  rawOffset = #{offset struct VkPhysicalDeviceBufferDeviceAddressFeatures, pNext}
+  rawOffset = #{offset VkPhysicalDeviceBufferDeviceAddressFeatures, pNext}
 
 instance Offset "bufferDeviceAddress" VkPhysicalDeviceBufferDeviceAddressFeatures where
-  rawOffset = #{offset struct VkPhysicalDeviceBufferDeviceAddressFeatures, bufferDeviceAddress}
+  rawOffset = #{offset VkPhysicalDeviceBufferDeviceAddressFeatures, bufferDeviceAddress}
 
 instance Offset "bufferDeviceAddressCaptureReplay" VkPhysicalDeviceBufferDeviceAddressFeatures where
-  rawOffset = #{offset struct VkPhysicalDeviceBufferDeviceAddressFeatures, bufferDeviceAddressCaptureReplay}
+  rawOffset = #{offset VkPhysicalDeviceBufferDeviceAddressFeatures, bufferDeviceAddressCaptureReplay}
 
 instance Offset "bufferDeviceAddressMultiDevice" VkPhysicalDeviceBufferDeviceAddressFeatures where
-  rawOffset = #{offset struct VkPhysicalDeviceBufferDeviceAddressFeatures, bufferDeviceAddressMultiDevice}
+  rawOffset = #{offset VkPhysicalDeviceBufferDeviceAddressFeatures, bufferDeviceAddressMultiDevice}
 
 #else
 

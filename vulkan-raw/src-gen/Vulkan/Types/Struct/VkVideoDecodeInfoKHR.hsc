@@ -41,8 +41,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkVideoDecodeInfoKHR" #-} VkVideoDecodeInfoKHR
          }
 
 instance Storable VkVideoDecodeInfoKHR where
-  sizeOf    _ = #{size      struct VkVideoDecodeInfoKHR}
-  alignment _ = #{alignment struct VkVideoDecodeInfoKHR}
+  sizeOf    _ = #{size      VkVideoDecodeInfoKHR}
+  alignment _ = #{alignment VkVideoDecodeInfoKHR}
 
   peek ptr = 
     VkVideoDecodeInfoKHR
@@ -70,34 +70,34 @@ instance Storable VkVideoDecodeInfoKHR where
     pokeField @"pReferenceSlots" ptr val
 
 instance Offset "sType" VkVideoDecodeInfoKHR where
-  rawOffset = #{offset struct VkVideoDecodeInfoKHR, sType}
+  rawOffset = #{offset VkVideoDecodeInfoKHR, sType}
 
 instance Offset "pNext" VkVideoDecodeInfoKHR where
-  rawOffset = #{offset struct VkVideoDecodeInfoKHR, pNext}
+  rawOffset = #{offset VkVideoDecodeInfoKHR, pNext}
 
 instance Offset "flags" VkVideoDecodeInfoKHR where
-  rawOffset = #{offset struct VkVideoDecodeInfoKHR, flags}
+  rawOffset = #{offset VkVideoDecodeInfoKHR, flags}
 
 instance Offset "srcBuffer" VkVideoDecodeInfoKHR where
-  rawOffset = #{offset struct VkVideoDecodeInfoKHR, srcBuffer}
+  rawOffset = #{offset VkVideoDecodeInfoKHR, srcBuffer}
 
 instance Offset "srcBufferOffset" VkVideoDecodeInfoKHR where
-  rawOffset = #{offset struct VkVideoDecodeInfoKHR, srcBufferOffset}
+  rawOffset = #{offset VkVideoDecodeInfoKHR, srcBufferOffset}
 
 instance Offset "srcBufferRange" VkVideoDecodeInfoKHR where
-  rawOffset = #{offset struct VkVideoDecodeInfoKHR, srcBufferRange}
+  rawOffset = #{offset VkVideoDecodeInfoKHR, srcBufferRange}
 
 instance Offset "dstPictureResource" VkVideoDecodeInfoKHR where
-  rawOffset = #{offset struct VkVideoDecodeInfoKHR, dstPictureResource}
+  rawOffset = #{offset VkVideoDecodeInfoKHR, dstPictureResource}
 
 instance Offset "pSetupReferenceSlot" VkVideoDecodeInfoKHR where
-  rawOffset = #{offset struct VkVideoDecodeInfoKHR, pSetupReferenceSlot}
+  rawOffset = #{offset VkVideoDecodeInfoKHR, pSetupReferenceSlot}
 
 instance Offset "referenceSlotCount" VkVideoDecodeInfoKHR where
-  rawOffset = #{offset struct VkVideoDecodeInfoKHR, referenceSlotCount}
+  rawOffset = #{offset VkVideoDecodeInfoKHR, referenceSlotCount}
 
 instance Offset "pReferenceSlots" VkVideoDecodeInfoKHR where
-  rawOffset = #{offset struct VkVideoDecodeInfoKHR, pReferenceSlots}
+  rawOffset = #{offset VkVideoDecodeInfoKHR, pReferenceSlots}
 
 #else
 

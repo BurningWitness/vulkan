@@ -31,8 +31,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkCoarseSampleOrderCustomNV" #-} VkCoarseSampl
          }
 
 instance Storable VkCoarseSampleOrderCustomNV where
-  sizeOf    _ = #{size      struct VkCoarseSampleOrderCustomNV}
-  alignment _ = #{alignment struct VkCoarseSampleOrderCustomNV}
+  sizeOf    _ = #{size      VkCoarseSampleOrderCustomNV}
+  alignment _ = #{alignment VkCoarseSampleOrderCustomNV}
 
   peek ptr = 
     VkCoarseSampleOrderCustomNV
@@ -48,16 +48,16 @@ instance Storable VkCoarseSampleOrderCustomNV where
     pokeField @"pSampleLocations" ptr val
 
 instance Offset "shadingRate" VkCoarseSampleOrderCustomNV where
-  rawOffset = #{offset struct VkCoarseSampleOrderCustomNV, shadingRate}
+  rawOffset = #{offset VkCoarseSampleOrderCustomNV, shadingRate}
 
 instance Offset "sampleCount" VkCoarseSampleOrderCustomNV where
-  rawOffset = #{offset struct VkCoarseSampleOrderCustomNV, sampleCount}
+  rawOffset = #{offset VkCoarseSampleOrderCustomNV, sampleCount}
 
 instance Offset "sampleLocationCount" VkCoarseSampleOrderCustomNV where
-  rawOffset = #{offset struct VkCoarseSampleOrderCustomNV, sampleLocationCount}
+  rawOffset = #{offset VkCoarseSampleOrderCustomNV, sampleLocationCount}
 
 instance Offset "pSampleLocations" VkCoarseSampleOrderCustomNV where
-  rawOffset = #{offset struct VkCoarseSampleOrderCustomNV, pSampleLocations}
+  rawOffset = #{offset VkCoarseSampleOrderCustomNV, pSampleLocations}
 
 #else
 

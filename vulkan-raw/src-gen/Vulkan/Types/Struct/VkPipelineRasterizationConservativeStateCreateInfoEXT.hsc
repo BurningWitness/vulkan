@@ -33,8 +33,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkPipelineRasterizationConservativeStateCreate
          }
 
 instance Storable VkPipelineRasterizationConservativeStateCreateInfoEXT where
-  sizeOf    _ = #{size      struct VkPipelineRasterizationConservativeStateCreateInfoEXT}
-  alignment _ = #{alignment struct VkPipelineRasterizationConservativeStateCreateInfoEXT}
+  sizeOf    _ = #{size      VkPipelineRasterizationConservativeStateCreateInfoEXT}
+  alignment _ = #{alignment VkPipelineRasterizationConservativeStateCreateInfoEXT}
 
   peek ptr = 
     VkPipelineRasterizationConservativeStateCreateInfoEXT
@@ -52,19 +52,19 @@ instance Storable VkPipelineRasterizationConservativeStateCreateInfoEXT where
     pokeField @"extraPrimitiveOverestimationSize" ptr val
 
 instance Offset "sType" VkPipelineRasterizationConservativeStateCreateInfoEXT where
-  rawOffset = #{offset struct VkPipelineRasterizationConservativeStateCreateInfoEXT, sType}
+  rawOffset = #{offset VkPipelineRasterizationConservativeStateCreateInfoEXT, sType}
 
 instance Offset "pNext" VkPipelineRasterizationConservativeStateCreateInfoEXT where
-  rawOffset = #{offset struct VkPipelineRasterizationConservativeStateCreateInfoEXT, pNext}
+  rawOffset = #{offset VkPipelineRasterizationConservativeStateCreateInfoEXT, pNext}
 
 instance Offset "flags" VkPipelineRasterizationConservativeStateCreateInfoEXT where
-  rawOffset = #{offset struct VkPipelineRasterizationConservativeStateCreateInfoEXT, flags}
+  rawOffset = #{offset VkPipelineRasterizationConservativeStateCreateInfoEXT, flags}
 
 instance Offset "conservativeRasterizationMode" VkPipelineRasterizationConservativeStateCreateInfoEXT where
-  rawOffset = #{offset struct VkPipelineRasterizationConservativeStateCreateInfoEXT, conservativeRasterizationMode}
+  rawOffset = #{offset VkPipelineRasterizationConservativeStateCreateInfoEXT, conservativeRasterizationMode}
 
 instance Offset "extraPrimitiveOverestimationSize" VkPipelineRasterizationConservativeStateCreateInfoEXT where
-  rawOffset = #{offset struct VkPipelineRasterizationConservativeStateCreateInfoEXT, extraPrimitiveOverestimationSize}
+  rawOffset = #{offset VkPipelineRasterizationConservativeStateCreateInfoEXT, extraPrimitiveOverestimationSize}
 
 #else
 

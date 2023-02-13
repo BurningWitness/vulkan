@@ -34,8 +34,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkPhysicalDeviceMeshShaderFeaturesEXT" #-} VkP
          }
 
 instance Storable VkPhysicalDeviceMeshShaderFeaturesEXT where
-  sizeOf    _ = #{size      struct VkPhysicalDeviceMeshShaderFeaturesEXT}
-  alignment _ = #{alignment struct VkPhysicalDeviceMeshShaderFeaturesEXT}
+  sizeOf    _ = #{size      VkPhysicalDeviceMeshShaderFeaturesEXT}
+  alignment _ = #{alignment VkPhysicalDeviceMeshShaderFeaturesEXT}
 
   peek ptr = 
     VkPhysicalDeviceMeshShaderFeaturesEXT
@@ -57,25 +57,25 @@ instance Storable VkPhysicalDeviceMeshShaderFeaturesEXT where
     pokeField @"meshShaderQueries" ptr val
 
 instance Offset "sType" VkPhysicalDeviceMeshShaderFeaturesEXT where
-  rawOffset = #{offset struct VkPhysicalDeviceMeshShaderFeaturesEXT, sType}
+  rawOffset = #{offset VkPhysicalDeviceMeshShaderFeaturesEXT, sType}
 
 instance Offset "pNext" VkPhysicalDeviceMeshShaderFeaturesEXT where
-  rawOffset = #{offset struct VkPhysicalDeviceMeshShaderFeaturesEXT, pNext}
+  rawOffset = #{offset VkPhysicalDeviceMeshShaderFeaturesEXT, pNext}
 
 instance Offset "taskShader" VkPhysicalDeviceMeshShaderFeaturesEXT where
-  rawOffset = #{offset struct VkPhysicalDeviceMeshShaderFeaturesEXT, taskShader}
+  rawOffset = #{offset VkPhysicalDeviceMeshShaderFeaturesEXT, taskShader}
 
 instance Offset "meshShader" VkPhysicalDeviceMeshShaderFeaturesEXT where
-  rawOffset = #{offset struct VkPhysicalDeviceMeshShaderFeaturesEXT, meshShader}
+  rawOffset = #{offset VkPhysicalDeviceMeshShaderFeaturesEXT, meshShader}
 
 instance Offset "multiviewMeshShader" VkPhysicalDeviceMeshShaderFeaturesEXT where
-  rawOffset = #{offset struct VkPhysicalDeviceMeshShaderFeaturesEXT, multiviewMeshShader}
+  rawOffset = #{offset VkPhysicalDeviceMeshShaderFeaturesEXT, multiviewMeshShader}
 
 instance Offset "primitiveFragmentShadingRateMeshShader" VkPhysicalDeviceMeshShaderFeaturesEXT where
-  rawOffset = #{offset struct VkPhysicalDeviceMeshShaderFeaturesEXT, primitiveFragmentShadingRateMeshShader}
+  rawOffset = #{offset VkPhysicalDeviceMeshShaderFeaturesEXT, primitiveFragmentShadingRateMeshShader}
 
 instance Offset "meshShaderQueries" VkPhysicalDeviceMeshShaderFeaturesEXT where
-  rawOffset = #{offset struct VkPhysicalDeviceMeshShaderFeaturesEXT, meshShaderQueries}
+  rawOffset = #{offset VkPhysicalDeviceMeshShaderFeaturesEXT, meshShaderQueries}
 
 #else
 

@@ -32,8 +32,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkImportMetalTextureInfoEXT" #-} VkImportMetal
          }
 
 instance Storable VkImportMetalTextureInfoEXT where
-  sizeOf    _ = #{size      struct VkImportMetalTextureInfoEXT}
-  alignment _ = #{alignment struct VkImportMetalTextureInfoEXT}
+  sizeOf    _ = #{size      VkImportMetalTextureInfoEXT}
+  alignment _ = #{alignment VkImportMetalTextureInfoEXT}
 
   peek ptr = 
     VkImportMetalTextureInfoEXT
@@ -49,16 +49,16 @@ instance Storable VkImportMetalTextureInfoEXT where
     pokeField @"mtlTexture" ptr val
 
 instance Offset "sType" VkImportMetalTextureInfoEXT where
-  rawOffset = #{offset struct VkImportMetalTextureInfoEXT, sType}
+  rawOffset = #{offset VkImportMetalTextureInfoEXT, sType}
 
 instance Offset "pNext" VkImportMetalTextureInfoEXT where
-  rawOffset = #{offset struct VkImportMetalTextureInfoEXT, pNext}
+  rawOffset = #{offset VkImportMetalTextureInfoEXT, pNext}
 
 instance Offset "plane" VkImportMetalTextureInfoEXT where
-  rawOffset = #{offset struct VkImportMetalTextureInfoEXT, plane}
+  rawOffset = #{offset VkImportMetalTextureInfoEXT, plane}
 
 instance Offset "mtlTexture" VkImportMetalTextureInfoEXT where
-  rawOffset = #{offset struct VkImportMetalTextureInfoEXT, mtlTexture}
+  rawOffset = #{offset VkImportMetalTextureInfoEXT, mtlTexture}
 
 #else
 

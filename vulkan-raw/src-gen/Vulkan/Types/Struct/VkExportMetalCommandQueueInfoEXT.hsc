@@ -32,8 +32,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkExportMetalCommandQueueInfoEXT" #-} VkExport
          }
 
 instance Storable VkExportMetalCommandQueueInfoEXT where
-  sizeOf    _ = #{size      struct VkExportMetalCommandQueueInfoEXT}
-  alignment _ = #{alignment struct VkExportMetalCommandQueueInfoEXT}
+  sizeOf    _ = #{size      VkExportMetalCommandQueueInfoEXT}
+  alignment _ = #{alignment VkExportMetalCommandQueueInfoEXT}
 
   peek ptr = 
     VkExportMetalCommandQueueInfoEXT
@@ -49,16 +49,16 @@ instance Storable VkExportMetalCommandQueueInfoEXT where
     pokeField @"mtlCommandQueue" ptr val
 
 instance Offset "sType" VkExportMetalCommandQueueInfoEXT where
-  rawOffset = #{offset struct VkExportMetalCommandQueueInfoEXT, sType}
+  rawOffset = #{offset VkExportMetalCommandQueueInfoEXT, sType}
 
 instance Offset "pNext" VkExportMetalCommandQueueInfoEXT where
-  rawOffset = #{offset struct VkExportMetalCommandQueueInfoEXT, pNext}
+  rawOffset = #{offset VkExportMetalCommandQueueInfoEXT, pNext}
 
 instance Offset "queue" VkExportMetalCommandQueueInfoEXT where
-  rawOffset = #{offset struct VkExportMetalCommandQueueInfoEXT, queue}
+  rawOffset = #{offset VkExportMetalCommandQueueInfoEXT, queue}
 
 instance Offset "mtlCommandQueue" VkExportMetalCommandQueueInfoEXT where
-  rawOffset = #{offset struct VkExportMetalCommandQueueInfoEXT, mtlCommandQueue}
+  rawOffset = #{offset VkExportMetalCommandQueueInfoEXT, mtlCommandQueue}
 
 #else
 

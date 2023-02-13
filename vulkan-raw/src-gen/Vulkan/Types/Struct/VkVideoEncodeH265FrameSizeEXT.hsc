@@ -28,8 +28,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkVideoEncodeH265FrameSizeEXT" #-} VkVideoEnco
          }
 
 instance Storable VkVideoEncodeH265FrameSizeEXT where
-  sizeOf    _ = #{size      struct VkVideoEncodeH265FrameSizeEXT}
-  alignment _ = #{alignment struct VkVideoEncodeH265FrameSizeEXT}
+  sizeOf    _ = #{size      VkVideoEncodeH265FrameSizeEXT}
+  alignment _ = #{alignment VkVideoEncodeH265FrameSizeEXT}
 
   peek ptr = 
     VkVideoEncodeH265FrameSizeEXT
@@ -43,13 +43,13 @@ instance Storable VkVideoEncodeH265FrameSizeEXT where
     pokeField @"frameBSize" ptr val
 
 instance Offset "frameISize" VkVideoEncodeH265FrameSizeEXT where
-  rawOffset = #{offset struct VkVideoEncodeH265FrameSizeEXT, frameISize}
+  rawOffset = #{offset VkVideoEncodeH265FrameSizeEXT, frameISize}
 
 instance Offset "framePSize" VkVideoEncodeH265FrameSizeEXT where
-  rawOffset = #{offset struct VkVideoEncodeH265FrameSizeEXT, framePSize}
+  rawOffset = #{offset VkVideoEncodeH265FrameSizeEXT, framePSize}
 
 instance Offset "frameBSize" VkVideoEncodeH265FrameSizeEXT where
-  rawOffset = #{offset struct VkVideoEncodeH265FrameSizeEXT, frameBSize}
+  rawOffset = #{offset VkVideoEncodeH265FrameSizeEXT, frameBSize}
 
 #else
 

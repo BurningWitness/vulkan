@@ -30,8 +30,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkPhysicalDevicePresentBarrierFeaturesNV" #-} 
          }
 
 instance Storable VkPhysicalDevicePresentBarrierFeaturesNV where
-  sizeOf    _ = #{size      struct VkPhysicalDevicePresentBarrierFeaturesNV}
-  alignment _ = #{alignment struct VkPhysicalDevicePresentBarrierFeaturesNV}
+  sizeOf    _ = #{size      VkPhysicalDevicePresentBarrierFeaturesNV}
+  alignment _ = #{alignment VkPhysicalDevicePresentBarrierFeaturesNV}
 
   peek ptr = 
     VkPhysicalDevicePresentBarrierFeaturesNV
@@ -45,13 +45,13 @@ instance Storable VkPhysicalDevicePresentBarrierFeaturesNV where
     pokeField @"presentBarrier" ptr val
 
 instance Offset "sType" VkPhysicalDevicePresentBarrierFeaturesNV where
-  rawOffset = #{offset struct VkPhysicalDevicePresentBarrierFeaturesNV, sType}
+  rawOffset = #{offset VkPhysicalDevicePresentBarrierFeaturesNV, sType}
 
 instance Offset "pNext" VkPhysicalDevicePresentBarrierFeaturesNV where
-  rawOffset = #{offset struct VkPhysicalDevicePresentBarrierFeaturesNV, pNext}
+  rawOffset = #{offset VkPhysicalDevicePresentBarrierFeaturesNV, pNext}
 
 instance Offset "presentBarrier" VkPhysicalDevicePresentBarrierFeaturesNV where
-  rawOffset = #{offset struct VkPhysicalDevicePresentBarrierFeaturesNV, presentBarrier}
+  rawOffset = #{offset VkPhysicalDevicePresentBarrierFeaturesNV, presentBarrier}
 
 #else
 

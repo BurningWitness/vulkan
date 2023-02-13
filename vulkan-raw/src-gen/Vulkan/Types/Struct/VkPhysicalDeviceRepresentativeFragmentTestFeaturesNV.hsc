@@ -30,8 +30,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkPhysicalDeviceRepresentativeFragmentTestFeat
          }
 
 instance Storable VkPhysicalDeviceRepresentativeFragmentTestFeaturesNV where
-  sizeOf    _ = #{size      struct VkPhysicalDeviceRepresentativeFragmentTestFeaturesNV}
-  alignment _ = #{alignment struct VkPhysicalDeviceRepresentativeFragmentTestFeaturesNV}
+  sizeOf    _ = #{size      VkPhysicalDeviceRepresentativeFragmentTestFeaturesNV}
+  alignment _ = #{alignment VkPhysicalDeviceRepresentativeFragmentTestFeaturesNV}
 
   peek ptr = 
     VkPhysicalDeviceRepresentativeFragmentTestFeaturesNV
@@ -45,13 +45,13 @@ instance Storable VkPhysicalDeviceRepresentativeFragmentTestFeaturesNV where
     pokeField @"representativeFragmentTest" ptr val
 
 instance Offset "sType" VkPhysicalDeviceRepresentativeFragmentTestFeaturesNV where
-  rawOffset = #{offset struct VkPhysicalDeviceRepresentativeFragmentTestFeaturesNV, sType}
+  rawOffset = #{offset VkPhysicalDeviceRepresentativeFragmentTestFeaturesNV, sType}
 
 instance Offset "pNext" VkPhysicalDeviceRepresentativeFragmentTestFeaturesNV where
-  rawOffset = #{offset struct VkPhysicalDeviceRepresentativeFragmentTestFeaturesNV, pNext}
+  rawOffset = #{offset VkPhysicalDeviceRepresentativeFragmentTestFeaturesNV, pNext}
 
 instance Offset "representativeFragmentTest" VkPhysicalDeviceRepresentativeFragmentTestFeaturesNV where
-  rawOffset = #{offset struct VkPhysicalDeviceRepresentativeFragmentTestFeaturesNV, representativeFragmentTest}
+  rawOffset = #{offset VkPhysicalDeviceRepresentativeFragmentTestFeaturesNV, representativeFragmentTest}
 
 #else
 

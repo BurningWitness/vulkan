@@ -29,8 +29,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkExternalFormatANDROID" #-} VkExternalFormatA
          }
 
 instance Storable VkExternalFormatANDROID where
-  sizeOf    _ = #{size      struct VkExternalFormatANDROID}
-  alignment _ = #{alignment struct VkExternalFormatANDROID}
+  sizeOf    _ = #{size      VkExternalFormatANDROID}
+  alignment _ = #{alignment VkExternalFormatANDROID}
 
   peek ptr = 
     VkExternalFormatANDROID
@@ -44,13 +44,13 @@ instance Storable VkExternalFormatANDROID where
     pokeField @"externalFormat" ptr val
 
 instance Offset "sType" VkExternalFormatANDROID where
-  rawOffset = #{offset struct VkExternalFormatANDROID, sType}
+  rawOffset = #{offset VkExternalFormatANDROID, sType}
 
 instance Offset "pNext" VkExternalFormatANDROID where
-  rawOffset = #{offset struct VkExternalFormatANDROID, pNext}
+  rawOffset = #{offset VkExternalFormatANDROID, pNext}
 
 instance Offset "externalFormat" VkExternalFormatANDROID where
-  rawOffset = #{offset struct VkExternalFormatANDROID, externalFormat}
+  rawOffset = #{offset VkExternalFormatANDROID, externalFormat}
 
 #else
 

@@ -34,8 +34,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkVideoEncodeH265RateControlInfoEXT" #-} VkVid
          }
 
 instance Storable VkVideoEncodeH265RateControlInfoEXT where
-  sizeOf    _ = #{size      struct VkVideoEncodeH265RateControlInfoEXT}
-  alignment _ = #{alignment struct VkVideoEncodeH265RateControlInfoEXT}
+  sizeOf    _ = #{size      VkVideoEncodeH265RateControlInfoEXT}
+  alignment _ = #{alignment VkVideoEncodeH265RateControlInfoEXT}
 
   peek ptr = 
     VkVideoEncodeH265RateControlInfoEXT
@@ -57,25 +57,25 @@ instance Storable VkVideoEncodeH265RateControlInfoEXT where
     pokeField @"subLayerCount" ptr val
 
 instance Offset "sType" VkVideoEncodeH265RateControlInfoEXT where
-  rawOffset = #{offset struct VkVideoEncodeH265RateControlInfoEXT, sType}
+  rawOffset = #{offset VkVideoEncodeH265RateControlInfoEXT, sType}
 
 instance Offset "pNext" VkVideoEncodeH265RateControlInfoEXT where
-  rawOffset = #{offset struct VkVideoEncodeH265RateControlInfoEXT, pNext}
+  rawOffset = #{offset VkVideoEncodeH265RateControlInfoEXT, pNext}
 
 instance Offset "gopFrameCount" VkVideoEncodeH265RateControlInfoEXT where
-  rawOffset = #{offset struct VkVideoEncodeH265RateControlInfoEXT, gopFrameCount}
+  rawOffset = #{offset VkVideoEncodeH265RateControlInfoEXT, gopFrameCount}
 
 instance Offset "idrPeriod" VkVideoEncodeH265RateControlInfoEXT where
-  rawOffset = #{offset struct VkVideoEncodeH265RateControlInfoEXT, idrPeriod}
+  rawOffset = #{offset VkVideoEncodeH265RateControlInfoEXT, idrPeriod}
 
 instance Offset "consecutiveBFrameCount" VkVideoEncodeH265RateControlInfoEXT where
-  rawOffset = #{offset struct VkVideoEncodeH265RateControlInfoEXT, consecutiveBFrameCount}
+  rawOffset = #{offset VkVideoEncodeH265RateControlInfoEXT, consecutiveBFrameCount}
 
 instance Offset "rateControlStructure" VkVideoEncodeH265RateControlInfoEXT where
-  rawOffset = #{offset struct VkVideoEncodeH265RateControlInfoEXT, rateControlStructure}
+  rawOffset = #{offset VkVideoEncodeH265RateControlInfoEXT, rateControlStructure}
 
 instance Offset "subLayerCount" VkVideoEncodeH265RateControlInfoEXT where
-  rawOffset = #{offset struct VkVideoEncodeH265RateControlInfoEXT, subLayerCount}
+  rawOffset = #{offset VkVideoEncodeH265RateControlInfoEXT, subLayerCount}
 
 #else
 

@@ -30,8 +30,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkPhysicalDevicePipelineExecutablePropertiesFe
          }
 
 instance Storable VkPhysicalDevicePipelineExecutablePropertiesFeaturesKHR where
-  sizeOf    _ = #{size      struct VkPhysicalDevicePipelineExecutablePropertiesFeaturesKHR}
-  alignment _ = #{alignment struct VkPhysicalDevicePipelineExecutablePropertiesFeaturesKHR}
+  sizeOf    _ = #{size      VkPhysicalDevicePipelineExecutablePropertiesFeaturesKHR}
+  alignment _ = #{alignment VkPhysicalDevicePipelineExecutablePropertiesFeaturesKHR}
 
   peek ptr = 
     VkPhysicalDevicePipelineExecutablePropertiesFeaturesKHR
@@ -45,13 +45,13 @@ instance Storable VkPhysicalDevicePipelineExecutablePropertiesFeaturesKHR where
     pokeField @"pipelineExecutableInfo" ptr val
 
 instance Offset "sType" VkPhysicalDevicePipelineExecutablePropertiesFeaturesKHR where
-  rawOffset = #{offset struct VkPhysicalDevicePipelineExecutablePropertiesFeaturesKHR, sType}
+  rawOffset = #{offset VkPhysicalDevicePipelineExecutablePropertiesFeaturesKHR, sType}
 
 instance Offset "pNext" VkPhysicalDevicePipelineExecutablePropertiesFeaturesKHR where
-  rawOffset = #{offset struct VkPhysicalDevicePipelineExecutablePropertiesFeaturesKHR, pNext}
+  rawOffset = #{offset VkPhysicalDevicePipelineExecutablePropertiesFeaturesKHR, pNext}
 
 instance Offset "pipelineExecutableInfo" VkPhysicalDevicePipelineExecutablePropertiesFeaturesKHR where
-  rawOffset = #{offset struct VkPhysicalDevicePipelineExecutablePropertiesFeaturesKHR, pipelineExecutableInfo}
+  rawOffset = #{offset VkPhysicalDevicePipelineExecutablePropertiesFeaturesKHR, pipelineExecutableInfo}
 
 #else
 

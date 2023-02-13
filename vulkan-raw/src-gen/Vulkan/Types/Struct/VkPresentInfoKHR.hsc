@@ -36,8 +36,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkPresentInfoKHR" #-} VkPresentInfoKHR =
          }
 
 instance Storable VkPresentInfoKHR where
-  sizeOf    _ = #{size      struct VkPresentInfoKHR}
-  alignment _ = #{alignment struct VkPresentInfoKHR}
+  sizeOf    _ = #{size      VkPresentInfoKHR}
+  alignment _ = #{alignment VkPresentInfoKHR}
 
   peek ptr = 
     VkPresentInfoKHR
@@ -61,28 +61,28 @@ instance Storable VkPresentInfoKHR where
     pokeField @"pResults" ptr val
 
 instance Offset "sType" VkPresentInfoKHR where
-  rawOffset = #{offset struct VkPresentInfoKHR, sType}
+  rawOffset = #{offset VkPresentInfoKHR, sType}
 
 instance Offset "pNext" VkPresentInfoKHR where
-  rawOffset = #{offset struct VkPresentInfoKHR, pNext}
+  rawOffset = #{offset VkPresentInfoKHR, pNext}
 
 instance Offset "waitSemaphoreCount" VkPresentInfoKHR where
-  rawOffset = #{offset struct VkPresentInfoKHR, waitSemaphoreCount}
+  rawOffset = #{offset VkPresentInfoKHR, waitSemaphoreCount}
 
 instance Offset "pWaitSemaphores" VkPresentInfoKHR where
-  rawOffset = #{offset struct VkPresentInfoKHR, pWaitSemaphores}
+  rawOffset = #{offset VkPresentInfoKHR, pWaitSemaphores}
 
 instance Offset "swapchainCount" VkPresentInfoKHR where
-  rawOffset = #{offset struct VkPresentInfoKHR, swapchainCount}
+  rawOffset = #{offset VkPresentInfoKHR, swapchainCount}
 
 instance Offset "pSwapchains" VkPresentInfoKHR where
-  rawOffset = #{offset struct VkPresentInfoKHR, pSwapchains}
+  rawOffset = #{offset VkPresentInfoKHR, pSwapchains}
 
 instance Offset "pImageIndices" VkPresentInfoKHR where
-  rawOffset = #{offset struct VkPresentInfoKHR, pImageIndices}
+  rawOffset = #{offset VkPresentInfoKHR, pImageIndices}
 
 instance Offset "pResults" VkPresentInfoKHR where
-  rawOffset = #{offset struct VkPresentInfoKHR, pResults}
+  rawOffset = #{offset VkPresentInfoKHR, pResults}
 
 #else
 

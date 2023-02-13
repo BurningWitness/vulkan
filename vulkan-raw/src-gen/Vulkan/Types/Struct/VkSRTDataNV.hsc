@@ -41,8 +41,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkSRTDataNV" #-} VkSRTDataNV =
          }
 
 instance Storable VkSRTDataNV where
-  sizeOf    _ = #{size      struct VkSRTDataNV}
-  alignment _ = #{alignment struct VkSRTDataNV}
+  sizeOf    _ = #{size      VkSRTDataNV}
+  alignment _ = #{alignment VkSRTDataNV}
 
   peek ptr = 
     VkSRTDataNV
@@ -82,52 +82,52 @@ instance Storable VkSRTDataNV where
     pokeField @"tz" ptr val
 
 instance Offset "sx" VkSRTDataNV where
-  rawOffset = #{offset struct VkSRTDataNV, sx}
+  rawOffset = #{offset VkSRTDataNV, sx}
 
 instance Offset "a" VkSRTDataNV where
-  rawOffset = #{offset struct VkSRTDataNV, a}
+  rawOffset = #{offset VkSRTDataNV, a}
 
 instance Offset "b" VkSRTDataNV where
-  rawOffset = #{offset struct VkSRTDataNV, b}
+  rawOffset = #{offset VkSRTDataNV, b}
 
 instance Offset "pvx" VkSRTDataNV where
-  rawOffset = #{offset struct VkSRTDataNV, pvx}
+  rawOffset = #{offset VkSRTDataNV, pvx}
 
 instance Offset "sy" VkSRTDataNV where
-  rawOffset = #{offset struct VkSRTDataNV, sy}
+  rawOffset = #{offset VkSRTDataNV, sy}
 
 instance Offset "c" VkSRTDataNV where
-  rawOffset = #{offset struct VkSRTDataNV, c}
+  rawOffset = #{offset VkSRTDataNV, c}
 
 instance Offset "pvy" VkSRTDataNV where
-  rawOffset = #{offset struct VkSRTDataNV, pvy}
+  rawOffset = #{offset VkSRTDataNV, pvy}
 
 instance Offset "sz" VkSRTDataNV where
-  rawOffset = #{offset struct VkSRTDataNV, sz}
+  rawOffset = #{offset VkSRTDataNV, sz}
 
 instance Offset "pvz" VkSRTDataNV where
-  rawOffset = #{offset struct VkSRTDataNV, pvz}
+  rawOffset = #{offset VkSRTDataNV, pvz}
 
 instance Offset "qx" VkSRTDataNV where
-  rawOffset = #{offset struct VkSRTDataNV, qx}
+  rawOffset = #{offset VkSRTDataNV, qx}
 
 instance Offset "qy" VkSRTDataNV where
-  rawOffset = #{offset struct VkSRTDataNV, qy}
+  rawOffset = #{offset VkSRTDataNV, qy}
 
 instance Offset "qz" VkSRTDataNV where
-  rawOffset = #{offset struct VkSRTDataNV, qz}
+  rawOffset = #{offset VkSRTDataNV, qz}
 
 instance Offset "qw" VkSRTDataNV where
-  rawOffset = #{offset struct VkSRTDataNV, qw}
+  rawOffset = #{offset VkSRTDataNV, qw}
 
 instance Offset "tx" VkSRTDataNV where
-  rawOffset = #{offset struct VkSRTDataNV, tx}
+  rawOffset = #{offset VkSRTDataNV, tx}
 
 instance Offset "ty" VkSRTDataNV where
-  rawOffset = #{offset struct VkSRTDataNV, ty}
+  rawOffset = #{offset VkSRTDataNV, ty}
 
 instance Offset "tz" VkSRTDataNV where
-  rawOffset = #{offset struct VkSRTDataNV, tz}
+  rawOffset = #{offset VkSRTDataNV, tz}
 
 #else
 

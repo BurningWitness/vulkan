@@ -44,8 +44,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkPhysicalDevicePortabilitySubsetFeaturesKHR" 
          }
 
 instance Storable VkPhysicalDevicePortabilitySubsetFeaturesKHR where
-  sizeOf    _ = #{size      struct VkPhysicalDevicePortabilitySubsetFeaturesKHR}
-  alignment _ = #{alignment struct VkPhysicalDevicePortabilitySubsetFeaturesKHR}
+  sizeOf    _ = #{size      VkPhysicalDevicePortabilitySubsetFeaturesKHR}
+  alignment _ = #{alignment VkPhysicalDevicePortabilitySubsetFeaturesKHR}
 
   peek ptr = 
     VkPhysicalDevicePortabilitySubsetFeaturesKHR
@@ -87,55 +87,55 @@ instance Storable VkPhysicalDevicePortabilitySubsetFeaturesKHR where
     pokeField @"vertexAttributeAccessBeyondStride" ptr val
 
 instance Offset "sType" VkPhysicalDevicePortabilitySubsetFeaturesKHR where
-  rawOffset = #{offset struct VkPhysicalDevicePortabilitySubsetFeaturesKHR, sType}
+  rawOffset = #{offset VkPhysicalDevicePortabilitySubsetFeaturesKHR, sType}
 
 instance Offset "pNext" VkPhysicalDevicePortabilitySubsetFeaturesKHR where
-  rawOffset = #{offset struct VkPhysicalDevicePortabilitySubsetFeaturesKHR, pNext}
+  rawOffset = #{offset VkPhysicalDevicePortabilitySubsetFeaturesKHR, pNext}
 
 instance Offset "constantAlphaColorBlendFactors" VkPhysicalDevicePortabilitySubsetFeaturesKHR where
-  rawOffset = #{offset struct VkPhysicalDevicePortabilitySubsetFeaturesKHR, constantAlphaColorBlendFactors}
+  rawOffset = #{offset VkPhysicalDevicePortabilitySubsetFeaturesKHR, constantAlphaColorBlendFactors}
 
 instance Offset "events" VkPhysicalDevicePortabilitySubsetFeaturesKHR where
-  rawOffset = #{offset struct VkPhysicalDevicePortabilitySubsetFeaturesKHR, events}
+  rawOffset = #{offset VkPhysicalDevicePortabilitySubsetFeaturesKHR, events}
 
 instance Offset "imageViewFormatReinterpretation" VkPhysicalDevicePortabilitySubsetFeaturesKHR where
-  rawOffset = #{offset struct VkPhysicalDevicePortabilitySubsetFeaturesKHR, imageViewFormatReinterpretation}
+  rawOffset = #{offset VkPhysicalDevicePortabilitySubsetFeaturesKHR, imageViewFormatReinterpretation}
 
 instance Offset "imageViewFormatSwizzle" VkPhysicalDevicePortabilitySubsetFeaturesKHR where
-  rawOffset = #{offset struct VkPhysicalDevicePortabilitySubsetFeaturesKHR, imageViewFormatSwizzle}
+  rawOffset = #{offset VkPhysicalDevicePortabilitySubsetFeaturesKHR, imageViewFormatSwizzle}
 
 instance Offset "imageView2DOn3DImage" VkPhysicalDevicePortabilitySubsetFeaturesKHR where
-  rawOffset = #{offset struct VkPhysicalDevicePortabilitySubsetFeaturesKHR, imageView2DOn3DImage}
+  rawOffset = #{offset VkPhysicalDevicePortabilitySubsetFeaturesKHR, imageView2DOn3DImage}
 
 instance Offset "multisampleArrayImage" VkPhysicalDevicePortabilitySubsetFeaturesKHR where
-  rawOffset = #{offset struct VkPhysicalDevicePortabilitySubsetFeaturesKHR, multisampleArrayImage}
+  rawOffset = #{offset VkPhysicalDevicePortabilitySubsetFeaturesKHR, multisampleArrayImage}
 
 instance Offset "mutableComparisonSamplers" VkPhysicalDevicePortabilitySubsetFeaturesKHR where
-  rawOffset = #{offset struct VkPhysicalDevicePortabilitySubsetFeaturesKHR, mutableComparisonSamplers}
+  rawOffset = #{offset VkPhysicalDevicePortabilitySubsetFeaturesKHR, mutableComparisonSamplers}
 
 instance Offset "pointPolygons" VkPhysicalDevicePortabilitySubsetFeaturesKHR where
-  rawOffset = #{offset struct VkPhysicalDevicePortabilitySubsetFeaturesKHR, pointPolygons}
+  rawOffset = #{offset VkPhysicalDevicePortabilitySubsetFeaturesKHR, pointPolygons}
 
 instance Offset "samplerMipLodBias" VkPhysicalDevicePortabilitySubsetFeaturesKHR where
-  rawOffset = #{offset struct VkPhysicalDevicePortabilitySubsetFeaturesKHR, samplerMipLodBias}
+  rawOffset = #{offset VkPhysicalDevicePortabilitySubsetFeaturesKHR, samplerMipLodBias}
 
 instance Offset "separateStencilMaskRef" VkPhysicalDevicePortabilitySubsetFeaturesKHR where
-  rawOffset = #{offset struct VkPhysicalDevicePortabilitySubsetFeaturesKHR, separateStencilMaskRef}
+  rawOffset = #{offset VkPhysicalDevicePortabilitySubsetFeaturesKHR, separateStencilMaskRef}
 
 instance Offset "shaderSampleRateInterpolationFunctions" VkPhysicalDevicePortabilitySubsetFeaturesKHR where
-  rawOffset = #{offset struct VkPhysicalDevicePortabilitySubsetFeaturesKHR, shaderSampleRateInterpolationFunctions}
+  rawOffset = #{offset VkPhysicalDevicePortabilitySubsetFeaturesKHR, shaderSampleRateInterpolationFunctions}
 
 instance Offset "tessellationIsolines" VkPhysicalDevicePortabilitySubsetFeaturesKHR where
-  rawOffset = #{offset struct VkPhysicalDevicePortabilitySubsetFeaturesKHR, tessellationIsolines}
+  rawOffset = #{offset VkPhysicalDevicePortabilitySubsetFeaturesKHR, tessellationIsolines}
 
 instance Offset "tessellationPointMode" VkPhysicalDevicePortabilitySubsetFeaturesKHR where
-  rawOffset = #{offset struct VkPhysicalDevicePortabilitySubsetFeaturesKHR, tessellationPointMode}
+  rawOffset = #{offset VkPhysicalDevicePortabilitySubsetFeaturesKHR, tessellationPointMode}
 
 instance Offset "triangleFans" VkPhysicalDevicePortabilitySubsetFeaturesKHR where
-  rawOffset = #{offset struct VkPhysicalDevicePortabilitySubsetFeaturesKHR, triangleFans}
+  rawOffset = #{offset VkPhysicalDevicePortabilitySubsetFeaturesKHR, triangleFans}
 
 instance Offset "vertexAttributeAccessBeyondStride" VkPhysicalDevicePortabilitySubsetFeaturesKHR where
-  rawOffset = #{offset struct VkPhysicalDevicePortabilitySubsetFeaturesKHR, vertexAttributeAccessBeyondStride}
+  rawOffset = #{offset VkPhysicalDevicePortabilitySubsetFeaturesKHR, vertexAttributeAccessBeyondStride}
 
 #else
 

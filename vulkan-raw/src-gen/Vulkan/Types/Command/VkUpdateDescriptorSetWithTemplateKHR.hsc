@@ -1,3 +1,7 @@
+{-# LANGUAGE CApiFFI #-}
+{-# LANGUAGE CPP #-}
+{-# LANGUAGE MagicHash #-}
+
 #include <vulkan/vulkan.h>
 
 #if VK_KHR_descriptor_update_template
@@ -8,17 +12,19 @@ import Data.Int
 import Data.Word
 import GHC.Ptr
 import Vulkan.Types.Handle
-import Vulkan.Types.Command.VkUpdateDescriptorSetWithTemplate
 import Vulkan.Types.VkFun
 
 
 
-type VkUpdateDescriptorSetWithTemplateKHR = VkUpdateDescriptorSetWithTemplate
+type VkUpdateDescriptorSetWithTemplateKHR =
+          VkDevice -- ^ device
+       -> VkDescriptorSet -- ^ descriptorSet
+       -> VkDescriptorUpdateTemplate -- ^ descriptorUpdateTemplate
+       -> Ptr () -- ^ pData
+       -> IO ()
 
-vkFunUpdateDescriptorSetWithTemplateKHR
-  :: VkFun VkUpdateDescriptorSetWithTemplateKHR
-vkFunUpdateDescriptorSetWithTemplateKHR = vkFunUpdateDescriptorSetWithTemplate
-
+vkFunUpdateDescriptorSetWithTemplateKHR :: VkFun VkUpdateDescriptorSetWithTemplateKHR
+vkFunUpdateDescriptorSetWithTemplateKHR = VkFun (Ptr ("vkUpdateDescriptorSetWithTemplateKHR\0"##))
 
 #else
 

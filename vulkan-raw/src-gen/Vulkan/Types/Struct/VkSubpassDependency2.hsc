@@ -39,8 +39,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkSubpassDependency2" #-} VkSubpassDependency2
          }
 
 instance Storable VkSubpassDependency2 where
-  sizeOf    _ = #{size      struct VkSubpassDependency2}
-  alignment _ = #{alignment struct VkSubpassDependency2}
+  sizeOf    _ = #{size      VkSubpassDependency2}
+  alignment _ = #{alignment VkSubpassDependency2}
 
   peek ptr = 
     VkSubpassDependency2
@@ -68,34 +68,34 @@ instance Storable VkSubpassDependency2 where
     pokeField @"viewOffset" ptr val
 
 instance Offset "sType" VkSubpassDependency2 where
-  rawOffset = #{offset struct VkSubpassDependency2, sType}
+  rawOffset = #{offset VkSubpassDependency2, sType}
 
 instance Offset "pNext" VkSubpassDependency2 where
-  rawOffset = #{offset struct VkSubpassDependency2, pNext}
+  rawOffset = #{offset VkSubpassDependency2, pNext}
 
 instance Offset "srcSubpass" VkSubpassDependency2 where
-  rawOffset = #{offset struct VkSubpassDependency2, srcSubpass}
+  rawOffset = #{offset VkSubpassDependency2, srcSubpass}
 
 instance Offset "dstSubpass" VkSubpassDependency2 where
-  rawOffset = #{offset struct VkSubpassDependency2, dstSubpass}
+  rawOffset = #{offset VkSubpassDependency2, dstSubpass}
 
 instance Offset "srcStageMask" VkSubpassDependency2 where
-  rawOffset = #{offset struct VkSubpassDependency2, srcStageMask}
+  rawOffset = #{offset VkSubpassDependency2, srcStageMask}
 
 instance Offset "dstStageMask" VkSubpassDependency2 where
-  rawOffset = #{offset struct VkSubpassDependency2, dstStageMask}
+  rawOffset = #{offset VkSubpassDependency2, dstStageMask}
 
 instance Offset "srcAccessMask" VkSubpassDependency2 where
-  rawOffset = #{offset struct VkSubpassDependency2, srcAccessMask}
+  rawOffset = #{offset VkSubpassDependency2, srcAccessMask}
 
 instance Offset "dstAccessMask" VkSubpassDependency2 where
-  rawOffset = #{offset struct VkSubpassDependency2, dstAccessMask}
+  rawOffset = #{offset VkSubpassDependency2, dstAccessMask}
 
 instance Offset "dependencyFlags" VkSubpassDependency2 where
-  rawOffset = #{offset struct VkSubpassDependency2, dependencyFlags}
+  rawOffset = #{offset VkSubpassDependency2, dependencyFlags}
 
 instance Offset "viewOffset" VkSubpassDependency2 where
-  rawOffset = #{offset struct VkSubpassDependency2, viewOffset}
+  rawOffset = #{offset VkSubpassDependency2, viewOffset}
 
 #else
 

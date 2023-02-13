@@ -39,8 +39,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkPhysicalDeviceSparseImageFormatInfo2" #-} Vk
          }
 
 instance Storable VkPhysicalDeviceSparseImageFormatInfo2 where
-  sizeOf    _ = #{size      struct VkPhysicalDeviceSparseImageFormatInfo2}
-  alignment _ = #{alignment struct VkPhysicalDeviceSparseImageFormatInfo2}
+  sizeOf    _ = #{size      VkPhysicalDeviceSparseImageFormatInfo2}
+  alignment _ = #{alignment VkPhysicalDeviceSparseImageFormatInfo2}
 
   peek ptr = 
     VkPhysicalDeviceSparseImageFormatInfo2
@@ -62,25 +62,25 @@ instance Storable VkPhysicalDeviceSparseImageFormatInfo2 where
     pokeField @"tiling" ptr val
 
 instance Offset "sType" VkPhysicalDeviceSparseImageFormatInfo2 where
-  rawOffset = #{offset struct VkPhysicalDeviceSparseImageFormatInfo2, sType}
+  rawOffset = #{offset VkPhysicalDeviceSparseImageFormatInfo2, sType}
 
 instance Offset "pNext" VkPhysicalDeviceSparseImageFormatInfo2 where
-  rawOffset = #{offset struct VkPhysicalDeviceSparseImageFormatInfo2, pNext}
+  rawOffset = #{offset VkPhysicalDeviceSparseImageFormatInfo2, pNext}
 
 instance Offset "format" VkPhysicalDeviceSparseImageFormatInfo2 where
-  rawOffset = #{offset struct VkPhysicalDeviceSparseImageFormatInfo2, format}
+  rawOffset = #{offset VkPhysicalDeviceSparseImageFormatInfo2, format}
 
 instance Offset "type_" VkPhysicalDeviceSparseImageFormatInfo2 where
-  rawOffset = #{offset struct VkPhysicalDeviceSparseImageFormatInfo2, type}
+  rawOffset = #{offset VkPhysicalDeviceSparseImageFormatInfo2, type}
 
 instance Offset "samples" VkPhysicalDeviceSparseImageFormatInfo2 where
-  rawOffset = #{offset struct VkPhysicalDeviceSparseImageFormatInfo2, samples}
+  rawOffset = #{offset VkPhysicalDeviceSparseImageFormatInfo2, samples}
 
 instance Offset "usage" VkPhysicalDeviceSparseImageFormatInfo2 where
-  rawOffset = #{offset struct VkPhysicalDeviceSparseImageFormatInfo2, usage}
+  rawOffset = #{offset VkPhysicalDeviceSparseImageFormatInfo2, usage}
 
 instance Offset "tiling" VkPhysicalDeviceSparseImageFormatInfo2 where
-  rawOffset = #{offset struct VkPhysicalDeviceSparseImageFormatInfo2, tiling}
+  rawOffset = #{offset VkPhysicalDeviceSparseImageFormatInfo2, tiling}
 
 instance Offset "type" VkPhysicalDeviceSparseImageFormatInfo2 where
   rawOffset = rawOffset @"type_" @VkPhysicalDeviceSparseImageFormatInfo2

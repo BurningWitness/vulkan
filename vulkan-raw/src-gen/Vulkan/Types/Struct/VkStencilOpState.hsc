@@ -32,8 +32,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkStencilOpState" #-} VkStencilOpState =
          }
 
 instance Storable VkStencilOpState where
-  sizeOf    _ = #{size      struct VkStencilOpState}
-  alignment _ = #{alignment struct VkStencilOpState}
+  sizeOf    _ = #{size      VkStencilOpState}
+  alignment _ = #{alignment VkStencilOpState}
 
   peek ptr = 
     VkStencilOpState
@@ -55,22 +55,22 @@ instance Storable VkStencilOpState where
     pokeField @"reference" ptr val
 
 instance Offset "failOp" VkStencilOpState where
-  rawOffset = #{offset struct VkStencilOpState, failOp}
+  rawOffset = #{offset VkStencilOpState, failOp}
 
 instance Offset "passOp" VkStencilOpState where
-  rawOffset = #{offset struct VkStencilOpState, passOp}
+  rawOffset = #{offset VkStencilOpState, passOp}
 
 instance Offset "depthFailOp" VkStencilOpState where
-  rawOffset = #{offset struct VkStencilOpState, depthFailOp}
+  rawOffset = #{offset VkStencilOpState, depthFailOp}
 
 instance Offset "compareOp" VkStencilOpState where
-  rawOffset = #{offset struct VkStencilOpState, compareOp}
+  rawOffset = #{offset VkStencilOpState, compareOp}
 
 instance Offset "compareMask" VkStencilOpState where
-  rawOffset = #{offset struct VkStencilOpState, compareMask}
+  rawOffset = #{offset VkStencilOpState, compareMask}
 
 instance Offset "writeMask" VkStencilOpState where
-  rawOffset = #{offset struct VkStencilOpState, writeMask}
+  rawOffset = #{offset VkStencilOpState, writeMask}
 
 instance Offset "reference" VkStencilOpState where
-  rawOffset = #{offset struct VkStencilOpState, reference}
+  rawOffset = #{offset VkStencilOpState, reference}

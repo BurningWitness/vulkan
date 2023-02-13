@@ -24,7 +24,7 @@ pattern VK_INDEX_TYPE_NONE_KHR = 1000165000
 
 #if VK_NV_ray_tracing
 pattern VK_INDEX_TYPE_NONE_NV :: (Eq a, Num a) => a
-pattern VK_INDEX_TYPE_NONE_NV = VK_INDEX_TYPE_NONE_KHR
+pattern VK_INDEX_TYPE_NONE_NV = 1000165000
 #endif
 
 #if VK_EXT_index_type_uint8

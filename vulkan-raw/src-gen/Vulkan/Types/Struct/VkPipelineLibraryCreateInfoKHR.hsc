@@ -31,8 +31,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkPipelineLibraryCreateInfoKHR" #-} VkPipeline
          }
 
 instance Storable VkPipelineLibraryCreateInfoKHR where
-  sizeOf    _ = #{size      struct VkPipelineLibraryCreateInfoKHR}
-  alignment _ = #{alignment struct VkPipelineLibraryCreateInfoKHR}
+  sizeOf    _ = #{size      VkPipelineLibraryCreateInfoKHR}
+  alignment _ = #{alignment VkPipelineLibraryCreateInfoKHR}
 
   peek ptr = 
     VkPipelineLibraryCreateInfoKHR
@@ -48,16 +48,16 @@ instance Storable VkPipelineLibraryCreateInfoKHR where
     pokeField @"pLibraries" ptr val
 
 instance Offset "sType" VkPipelineLibraryCreateInfoKHR where
-  rawOffset = #{offset struct VkPipelineLibraryCreateInfoKHR, sType}
+  rawOffset = #{offset VkPipelineLibraryCreateInfoKHR, sType}
 
 instance Offset "pNext" VkPipelineLibraryCreateInfoKHR where
-  rawOffset = #{offset struct VkPipelineLibraryCreateInfoKHR, pNext}
+  rawOffset = #{offset VkPipelineLibraryCreateInfoKHR, pNext}
 
 instance Offset "libraryCount" VkPipelineLibraryCreateInfoKHR where
-  rawOffset = #{offset struct VkPipelineLibraryCreateInfoKHR, libraryCount}
+  rawOffset = #{offset VkPipelineLibraryCreateInfoKHR, libraryCount}
 
 instance Offset "pLibraries" VkPipelineLibraryCreateInfoKHR where
-  rawOffset = #{offset struct VkPipelineLibraryCreateInfoKHR, pLibraries}
+  rawOffset = #{offset VkPipelineLibraryCreateInfoKHR, pLibraries}
 
 #else
 

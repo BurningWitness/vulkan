@@ -39,8 +39,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkCooperativeMatrixPropertiesNV" #-} VkCoopera
          }
 
 instance Storable VkCooperativeMatrixPropertiesNV where
-  sizeOf    _ = #{size      struct VkCooperativeMatrixPropertiesNV}
-  alignment _ = #{alignment struct VkCooperativeMatrixPropertiesNV}
+  sizeOf    _ = #{size      VkCooperativeMatrixPropertiesNV}
+  alignment _ = #{alignment VkCooperativeMatrixPropertiesNV}
 
   peek ptr = 
     VkCooperativeMatrixPropertiesNV
@@ -68,34 +68,34 @@ instance Storable VkCooperativeMatrixPropertiesNV where
     pokeField @"scope" ptr val
 
 instance Offset "sType" VkCooperativeMatrixPropertiesNV where
-  rawOffset = #{offset struct VkCooperativeMatrixPropertiesNV, sType}
+  rawOffset = #{offset VkCooperativeMatrixPropertiesNV, sType}
 
 instance Offset "pNext" VkCooperativeMatrixPropertiesNV where
-  rawOffset = #{offset struct VkCooperativeMatrixPropertiesNV, pNext}
+  rawOffset = #{offset VkCooperativeMatrixPropertiesNV, pNext}
 
 instance Offset "mSize" VkCooperativeMatrixPropertiesNV where
-  rawOffset = #{offset struct VkCooperativeMatrixPropertiesNV, MSize}
+  rawOffset = #{offset VkCooperativeMatrixPropertiesNV, MSize}
 
 instance Offset "nSize" VkCooperativeMatrixPropertiesNV where
-  rawOffset = #{offset struct VkCooperativeMatrixPropertiesNV, NSize}
+  rawOffset = #{offset VkCooperativeMatrixPropertiesNV, NSize}
 
 instance Offset "kSize" VkCooperativeMatrixPropertiesNV where
-  rawOffset = #{offset struct VkCooperativeMatrixPropertiesNV, KSize}
+  rawOffset = #{offset VkCooperativeMatrixPropertiesNV, KSize}
 
 instance Offset "aType" VkCooperativeMatrixPropertiesNV where
-  rawOffset = #{offset struct VkCooperativeMatrixPropertiesNV, AType}
+  rawOffset = #{offset VkCooperativeMatrixPropertiesNV, AType}
 
 instance Offset "bType" VkCooperativeMatrixPropertiesNV where
-  rawOffset = #{offset struct VkCooperativeMatrixPropertiesNV, BType}
+  rawOffset = #{offset VkCooperativeMatrixPropertiesNV, BType}
 
 instance Offset "cType" VkCooperativeMatrixPropertiesNV where
-  rawOffset = #{offset struct VkCooperativeMatrixPropertiesNV, CType}
+  rawOffset = #{offset VkCooperativeMatrixPropertiesNV, CType}
 
 instance Offset "dType" VkCooperativeMatrixPropertiesNV where
-  rawOffset = #{offset struct VkCooperativeMatrixPropertiesNV, DType}
+  rawOffset = #{offset VkCooperativeMatrixPropertiesNV, DType}
 
 instance Offset "scope" VkCooperativeMatrixPropertiesNV where
-  rawOffset = #{offset struct VkCooperativeMatrixPropertiesNV, scope}
+  rawOffset = #{offset VkCooperativeMatrixPropertiesNV, scope}
 
 instance Offset "MSize" VkCooperativeMatrixPropertiesNV where
   rawOffset = rawOffset @"mSize" @VkCooperativeMatrixPropertiesNV

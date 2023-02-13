@@ -34,8 +34,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkVideoEncodeUsageInfoKHR" #-} VkVideoEncodeUs
          }
 
 instance Storable VkVideoEncodeUsageInfoKHR where
-  sizeOf    _ = #{size      struct VkVideoEncodeUsageInfoKHR}
-  alignment _ = #{alignment struct VkVideoEncodeUsageInfoKHR}
+  sizeOf    _ = #{size      VkVideoEncodeUsageInfoKHR}
+  alignment _ = #{alignment VkVideoEncodeUsageInfoKHR}
 
   peek ptr = 
     VkVideoEncodeUsageInfoKHR
@@ -53,19 +53,19 @@ instance Storable VkVideoEncodeUsageInfoKHR where
     pokeField @"tuningMode" ptr val
 
 instance Offset "sType" VkVideoEncodeUsageInfoKHR where
-  rawOffset = #{offset struct VkVideoEncodeUsageInfoKHR, sType}
+  rawOffset = #{offset VkVideoEncodeUsageInfoKHR, sType}
 
 instance Offset "pNext" VkVideoEncodeUsageInfoKHR where
-  rawOffset = #{offset struct VkVideoEncodeUsageInfoKHR, pNext}
+  rawOffset = #{offset VkVideoEncodeUsageInfoKHR, pNext}
 
 instance Offset "videoUsageHints" VkVideoEncodeUsageInfoKHR where
-  rawOffset = #{offset struct VkVideoEncodeUsageInfoKHR, videoUsageHints}
+  rawOffset = #{offset VkVideoEncodeUsageInfoKHR, videoUsageHints}
 
 instance Offset "videoContentHints" VkVideoEncodeUsageInfoKHR where
-  rawOffset = #{offset struct VkVideoEncodeUsageInfoKHR, videoContentHints}
+  rawOffset = #{offset VkVideoEncodeUsageInfoKHR, videoContentHints}
 
 instance Offset "tuningMode" VkVideoEncodeUsageInfoKHR where
-  rawOffset = #{offset struct VkVideoEncodeUsageInfoKHR, tuningMode}
+  rawOffset = #{offset VkVideoEncodeUsageInfoKHR, tuningMode}
 
 #else
 

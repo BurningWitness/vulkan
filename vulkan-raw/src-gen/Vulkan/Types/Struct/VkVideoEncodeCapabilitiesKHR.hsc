@@ -36,8 +36,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkVideoEncodeCapabilitiesKHR" #-} VkVideoEncod
          }
 
 instance Storable VkVideoEncodeCapabilitiesKHR where
-  sizeOf    _ = #{size      struct VkVideoEncodeCapabilitiesKHR}
-  alignment _ = #{alignment struct VkVideoEncodeCapabilitiesKHR}
+  sizeOf    _ = #{size      VkVideoEncodeCapabilitiesKHR}
+  alignment _ = #{alignment VkVideoEncodeCapabilitiesKHR}
 
   peek ptr = 
     VkVideoEncodeCapabilitiesKHR
@@ -59,25 +59,25 @@ instance Storable VkVideoEncodeCapabilitiesKHR where
     pokeField @"inputImageDataFillAlignment" ptr val
 
 instance Offset "sType" VkVideoEncodeCapabilitiesKHR where
-  rawOffset = #{offset struct VkVideoEncodeCapabilitiesKHR, sType}
+  rawOffset = #{offset VkVideoEncodeCapabilitiesKHR, sType}
 
 instance Offset "pNext" VkVideoEncodeCapabilitiesKHR where
-  rawOffset = #{offset struct VkVideoEncodeCapabilitiesKHR, pNext}
+  rawOffset = #{offset VkVideoEncodeCapabilitiesKHR, pNext}
 
 instance Offset "flags" VkVideoEncodeCapabilitiesKHR where
-  rawOffset = #{offset struct VkVideoEncodeCapabilitiesKHR, flags}
+  rawOffset = #{offset VkVideoEncodeCapabilitiesKHR, flags}
 
 instance Offset "rateControlModes" VkVideoEncodeCapabilitiesKHR where
-  rawOffset = #{offset struct VkVideoEncodeCapabilitiesKHR, rateControlModes}
+  rawOffset = #{offset VkVideoEncodeCapabilitiesKHR, rateControlModes}
 
 instance Offset "rateControlLayerCount" VkVideoEncodeCapabilitiesKHR where
-  rawOffset = #{offset struct VkVideoEncodeCapabilitiesKHR, rateControlLayerCount}
+  rawOffset = #{offset VkVideoEncodeCapabilitiesKHR, rateControlLayerCount}
 
 instance Offset "qualityLevelCount" VkVideoEncodeCapabilitiesKHR where
-  rawOffset = #{offset struct VkVideoEncodeCapabilitiesKHR, qualityLevelCount}
+  rawOffset = #{offset VkVideoEncodeCapabilitiesKHR, qualityLevelCount}
 
 instance Offset "inputImageDataFillAlignment" VkVideoEncodeCapabilitiesKHR where
-  rawOffset = #{offset struct VkVideoEncodeCapabilitiesKHR, inputImageDataFillAlignment}
+  rawOffset = #{offset VkVideoEncodeCapabilitiesKHR, inputImageDataFillAlignment}
 
 #else
 

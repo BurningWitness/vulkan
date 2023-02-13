@@ -30,8 +30,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkPhysicalDeviceInvocationMaskFeaturesHUAWEI" 
          }
 
 instance Storable VkPhysicalDeviceInvocationMaskFeaturesHUAWEI where
-  sizeOf    _ = #{size      struct VkPhysicalDeviceInvocationMaskFeaturesHUAWEI}
-  alignment _ = #{alignment struct VkPhysicalDeviceInvocationMaskFeaturesHUAWEI}
+  sizeOf    _ = #{size      VkPhysicalDeviceInvocationMaskFeaturesHUAWEI}
+  alignment _ = #{alignment VkPhysicalDeviceInvocationMaskFeaturesHUAWEI}
 
   peek ptr = 
     VkPhysicalDeviceInvocationMaskFeaturesHUAWEI
@@ -45,13 +45,13 @@ instance Storable VkPhysicalDeviceInvocationMaskFeaturesHUAWEI where
     pokeField @"invocationMask" ptr val
 
 instance Offset "sType" VkPhysicalDeviceInvocationMaskFeaturesHUAWEI where
-  rawOffset = #{offset struct VkPhysicalDeviceInvocationMaskFeaturesHUAWEI, sType}
+  rawOffset = #{offset VkPhysicalDeviceInvocationMaskFeaturesHUAWEI, sType}
 
 instance Offset "pNext" VkPhysicalDeviceInvocationMaskFeaturesHUAWEI where
-  rawOffset = #{offset struct VkPhysicalDeviceInvocationMaskFeaturesHUAWEI, pNext}
+  rawOffset = #{offset VkPhysicalDeviceInvocationMaskFeaturesHUAWEI, pNext}
 
 instance Offset "invocationMask" VkPhysicalDeviceInvocationMaskFeaturesHUAWEI where
-  rawOffset = #{offset struct VkPhysicalDeviceInvocationMaskFeaturesHUAWEI, invocationMask}
+  rawOffset = #{offset VkPhysicalDeviceInvocationMaskFeaturesHUAWEI, invocationMask}
 
 #else
 

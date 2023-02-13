@@ -38,8 +38,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkSubmitInfo2" #-} VkSubmitInfo2 =
          }
 
 instance Storable VkSubmitInfo2 where
-  sizeOf    _ = #{size      struct VkSubmitInfo2}
-  alignment _ = #{alignment struct VkSubmitInfo2}
+  sizeOf    _ = #{size      VkSubmitInfo2}
+  alignment _ = #{alignment VkSubmitInfo2}
 
   peek ptr = 
     VkSubmitInfo2
@@ -65,31 +65,31 @@ instance Storable VkSubmitInfo2 where
     pokeField @"pSignalSemaphoreInfos" ptr val
 
 instance Offset "sType" VkSubmitInfo2 where
-  rawOffset = #{offset struct VkSubmitInfo2, sType}
+  rawOffset = #{offset VkSubmitInfo2, sType}
 
 instance Offset "pNext" VkSubmitInfo2 where
-  rawOffset = #{offset struct VkSubmitInfo2, pNext}
+  rawOffset = #{offset VkSubmitInfo2, pNext}
 
 instance Offset "flags" VkSubmitInfo2 where
-  rawOffset = #{offset struct VkSubmitInfo2, flags}
+  rawOffset = #{offset VkSubmitInfo2, flags}
 
 instance Offset "waitSemaphoreInfoCount" VkSubmitInfo2 where
-  rawOffset = #{offset struct VkSubmitInfo2, waitSemaphoreInfoCount}
+  rawOffset = #{offset VkSubmitInfo2, waitSemaphoreInfoCount}
 
 instance Offset "pWaitSemaphoreInfos" VkSubmitInfo2 where
-  rawOffset = #{offset struct VkSubmitInfo2, pWaitSemaphoreInfos}
+  rawOffset = #{offset VkSubmitInfo2, pWaitSemaphoreInfos}
 
 instance Offset "commandBufferInfoCount" VkSubmitInfo2 where
-  rawOffset = #{offset struct VkSubmitInfo2, commandBufferInfoCount}
+  rawOffset = #{offset VkSubmitInfo2, commandBufferInfoCount}
 
 instance Offset "pCommandBufferInfos" VkSubmitInfo2 where
-  rawOffset = #{offset struct VkSubmitInfo2, pCommandBufferInfos}
+  rawOffset = #{offset VkSubmitInfo2, pCommandBufferInfos}
 
 instance Offset "signalSemaphoreInfoCount" VkSubmitInfo2 where
-  rawOffset = #{offset struct VkSubmitInfo2, signalSemaphoreInfoCount}
+  rawOffset = #{offset VkSubmitInfo2, signalSemaphoreInfoCount}
 
 instance Offset "pSignalSemaphoreInfos" VkSubmitInfo2 where
-  rawOffset = #{offset struct VkSubmitInfo2, pSignalSemaphoreInfos}
+  rawOffset = #{offset VkSubmitInfo2, pSignalSemaphoreInfos}
 
 #else
 

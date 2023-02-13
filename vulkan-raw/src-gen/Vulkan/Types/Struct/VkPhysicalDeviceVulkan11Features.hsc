@@ -41,8 +41,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkPhysicalDeviceVulkan11Features" #-} VkPhysic
          }
 
 instance Storable VkPhysicalDeviceVulkan11Features where
-  sizeOf    _ = #{size      struct VkPhysicalDeviceVulkan11Features}
-  alignment _ = #{alignment struct VkPhysicalDeviceVulkan11Features}
+  sizeOf    _ = #{size      VkPhysicalDeviceVulkan11Features}
+  alignment _ = #{alignment VkPhysicalDeviceVulkan11Features}
 
   peek ptr = 
     VkPhysicalDeviceVulkan11Features
@@ -78,46 +78,46 @@ instance Storable VkPhysicalDeviceVulkan11Features where
     pokeField @"shaderDrawParameters" ptr val
 
 instance Offset "sType" VkPhysicalDeviceVulkan11Features where
-  rawOffset = #{offset struct VkPhysicalDeviceVulkan11Features, sType}
+  rawOffset = #{offset VkPhysicalDeviceVulkan11Features, sType}
 
 instance Offset "pNext" VkPhysicalDeviceVulkan11Features where
-  rawOffset = #{offset struct VkPhysicalDeviceVulkan11Features, pNext}
+  rawOffset = #{offset VkPhysicalDeviceVulkan11Features, pNext}
 
 instance Offset "storageBuffer16BitAccess" VkPhysicalDeviceVulkan11Features where
-  rawOffset = #{offset struct VkPhysicalDeviceVulkan11Features, storageBuffer16BitAccess}
+  rawOffset = #{offset VkPhysicalDeviceVulkan11Features, storageBuffer16BitAccess}
 
 instance Offset "uniformAndStorageBuffer16BitAccess" VkPhysicalDeviceVulkan11Features where
-  rawOffset = #{offset struct VkPhysicalDeviceVulkan11Features, uniformAndStorageBuffer16BitAccess}
+  rawOffset = #{offset VkPhysicalDeviceVulkan11Features, uniformAndStorageBuffer16BitAccess}
 
 instance Offset "storagePushConstant16" VkPhysicalDeviceVulkan11Features where
-  rawOffset = #{offset struct VkPhysicalDeviceVulkan11Features, storagePushConstant16}
+  rawOffset = #{offset VkPhysicalDeviceVulkan11Features, storagePushConstant16}
 
 instance Offset "storageInputOutput16" VkPhysicalDeviceVulkan11Features where
-  rawOffset = #{offset struct VkPhysicalDeviceVulkan11Features, storageInputOutput16}
+  rawOffset = #{offset VkPhysicalDeviceVulkan11Features, storageInputOutput16}
 
 instance Offset "multiview" VkPhysicalDeviceVulkan11Features where
-  rawOffset = #{offset struct VkPhysicalDeviceVulkan11Features, multiview}
+  rawOffset = #{offset VkPhysicalDeviceVulkan11Features, multiview}
 
 instance Offset "multiviewGeometryShader" VkPhysicalDeviceVulkan11Features where
-  rawOffset = #{offset struct VkPhysicalDeviceVulkan11Features, multiviewGeometryShader}
+  rawOffset = #{offset VkPhysicalDeviceVulkan11Features, multiviewGeometryShader}
 
 instance Offset "multiviewTessellationShader" VkPhysicalDeviceVulkan11Features where
-  rawOffset = #{offset struct VkPhysicalDeviceVulkan11Features, multiviewTessellationShader}
+  rawOffset = #{offset VkPhysicalDeviceVulkan11Features, multiviewTessellationShader}
 
 instance Offset "variablePointersStorageBuffer" VkPhysicalDeviceVulkan11Features where
-  rawOffset = #{offset struct VkPhysicalDeviceVulkan11Features, variablePointersStorageBuffer}
+  rawOffset = #{offset VkPhysicalDeviceVulkan11Features, variablePointersStorageBuffer}
 
 instance Offset "variablePointers" VkPhysicalDeviceVulkan11Features where
-  rawOffset = #{offset struct VkPhysicalDeviceVulkan11Features, variablePointers}
+  rawOffset = #{offset VkPhysicalDeviceVulkan11Features, variablePointers}
 
 instance Offset "protectedMemory" VkPhysicalDeviceVulkan11Features where
-  rawOffset = #{offset struct VkPhysicalDeviceVulkan11Features, protectedMemory}
+  rawOffset = #{offset VkPhysicalDeviceVulkan11Features, protectedMemory}
 
 instance Offset "samplerYcbcrConversion" VkPhysicalDeviceVulkan11Features where
-  rawOffset = #{offset struct VkPhysicalDeviceVulkan11Features, samplerYcbcrConversion}
+  rawOffset = #{offset VkPhysicalDeviceVulkan11Features, samplerYcbcrConversion}
 
 instance Offset "shaderDrawParameters" VkPhysicalDeviceVulkan11Features where
-  rawOffset = #{offset struct VkPhysicalDeviceVulkan11Features, shaderDrawParameters}
+  rawOffset = #{offset VkPhysicalDeviceVulkan11Features, shaderDrawParameters}
 
 #else
 

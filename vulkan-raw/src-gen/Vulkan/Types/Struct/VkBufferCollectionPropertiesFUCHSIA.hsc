@@ -45,8 +45,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkBufferCollectionPropertiesFUCHSIA" #-} VkBuf
          }
 
 instance Storable VkBufferCollectionPropertiesFUCHSIA where
-  sizeOf    _ = #{size      struct VkBufferCollectionPropertiesFUCHSIA}
-  alignment _ = #{alignment struct VkBufferCollectionPropertiesFUCHSIA}
+  sizeOf    _ = #{size      VkBufferCollectionPropertiesFUCHSIA}
+  alignment _ = #{alignment VkBufferCollectionPropertiesFUCHSIA}
 
   peek ptr = 
     VkBufferCollectionPropertiesFUCHSIA
@@ -80,43 +80,43 @@ instance Storable VkBufferCollectionPropertiesFUCHSIA where
     pokeField @"suggestedYChromaOffset" ptr val
 
 instance Offset "sType" VkBufferCollectionPropertiesFUCHSIA where
-  rawOffset = #{offset struct VkBufferCollectionPropertiesFUCHSIA, sType}
+  rawOffset = #{offset VkBufferCollectionPropertiesFUCHSIA, sType}
 
 instance Offset "pNext" VkBufferCollectionPropertiesFUCHSIA where
-  rawOffset = #{offset struct VkBufferCollectionPropertiesFUCHSIA, pNext}
+  rawOffset = #{offset VkBufferCollectionPropertiesFUCHSIA, pNext}
 
 instance Offset "memoryTypeBits" VkBufferCollectionPropertiesFUCHSIA where
-  rawOffset = #{offset struct VkBufferCollectionPropertiesFUCHSIA, memoryTypeBits}
+  rawOffset = #{offset VkBufferCollectionPropertiesFUCHSIA, memoryTypeBits}
 
 instance Offset "bufferCount" VkBufferCollectionPropertiesFUCHSIA where
-  rawOffset = #{offset struct VkBufferCollectionPropertiesFUCHSIA, bufferCount}
+  rawOffset = #{offset VkBufferCollectionPropertiesFUCHSIA, bufferCount}
 
 instance Offset "createInfoIndex" VkBufferCollectionPropertiesFUCHSIA where
-  rawOffset = #{offset struct VkBufferCollectionPropertiesFUCHSIA, createInfoIndex}
+  rawOffset = #{offset VkBufferCollectionPropertiesFUCHSIA, createInfoIndex}
 
 instance Offset "sysmemPixelFormat" VkBufferCollectionPropertiesFUCHSIA where
-  rawOffset = #{offset struct VkBufferCollectionPropertiesFUCHSIA, sysmemPixelFormat}
+  rawOffset = #{offset VkBufferCollectionPropertiesFUCHSIA, sysmemPixelFormat}
 
 instance Offset "formatFeatures" VkBufferCollectionPropertiesFUCHSIA where
-  rawOffset = #{offset struct VkBufferCollectionPropertiesFUCHSIA, formatFeatures}
+  rawOffset = #{offset VkBufferCollectionPropertiesFUCHSIA, formatFeatures}
 
 instance Offset "sysmemColorSpaceIndex" VkBufferCollectionPropertiesFUCHSIA where
-  rawOffset = #{offset struct VkBufferCollectionPropertiesFUCHSIA, sysmemColorSpaceIndex}
+  rawOffset = #{offset VkBufferCollectionPropertiesFUCHSIA, sysmemColorSpaceIndex}
 
 instance Offset "samplerYcbcrConversionComponents" VkBufferCollectionPropertiesFUCHSIA where
-  rawOffset = #{offset struct VkBufferCollectionPropertiesFUCHSIA, samplerYcbcrConversionComponents}
+  rawOffset = #{offset VkBufferCollectionPropertiesFUCHSIA, samplerYcbcrConversionComponents}
 
 instance Offset "suggestedYcbcrModel" VkBufferCollectionPropertiesFUCHSIA where
-  rawOffset = #{offset struct VkBufferCollectionPropertiesFUCHSIA, suggestedYcbcrModel}
+  rawOffset = #{offset VkBufferCollectionPropertiesFUCHSIA, suggestedYcbcrModel}
 
 instance Offset "suggestedYcbcrRange" VkBufferCollectionPropertiesFUCHSIA where
-  rawOffset = #{offset struct VkBufferCollectionPropertiesFUCHSIA, suggestedYcbcrRange}
+  rawOffset = #{offset VkBufferCollectionPropertiesFUCHSIA, suggestedYcbcrRange}
 
 instance Offset "suggestedXChromaOffset" VkBufferCollectionPropertiesFUCHSIA where
-  rawOffset = #{offset struct VkBufferCollectionPropertiesFUCHSIA, suggestedXChromaOffset}
+  rawOffset = #{offset VkBufferCollectionPropertiesFUCHSIA, suggestedXChromaOffset}
 
 instance Offset "suggestedYChromaOffset" VkBufferCollectionPropertiesFUCHSIA where
-  rawOffset = #{offset struct VkBufferCollectionPropertiesFUCHSIA, suggestedYChromaOffset}
+  rawOffset = #{offset VkBufferCollectionPropertiesFUCHSIA, suggestedYChromaOffset}
 
 #else
 

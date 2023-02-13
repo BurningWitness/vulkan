@@ -30,8 +30,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkQueueFamilyVideoPropertiesKHR" #-} VkQueueFa
          }
 
 instance Storable VkQueueFamilyVideoPropertiesKHR where
-  sizeOf    _ = #{size      struct VkQueueFamilyVideoPropertiesKHR}
-  alignment _ = #{alignment struct VkQueueFamilyVideoPropertiesKHR}
+  sizeOf    _ = #{size      VkQueueFamilyVideoPropertiesKHR}
+  alignment _ = #{alignment VkQueueFamilyVideoPropertiesKHR}
 
   peek ptr = 
     VkQueueFamilyVideoPropertiesKHR
@@ -45,13 +45,13 @@ instance Storable VkQueueFamilyVideoPropertiesKHR where
     pokeField @"videoCodecOperations" ptr val
 
 instance Offset "sType" VkQueueFamilyVideoPropertiesKHR where
-  rawOffset = #{offset struct VkQueueFamilyVideoPropertiesKHR, sType}
+  rawOffset = #{offset VkQueueFamilyVideoPropertiesKHR, sType}
 
 instance Offset "pNext" VkQueueFamilyVideoPropertiesKHR where
-  rawOffset = #{offset struct VkQueueFamilyVideoPropertiesKHR, pNext}
+  rawOffset = #{offset VkQueueFamilyVideoPropertiesKHR, pNext}
 
 instance Offset "videoCodecOperations" VkQueueFamilyVideoPropertiesKHR where
-  rawOffset = #{offset struct VkQueueFamilyVideoPropertiesKHR, videoCodecOperations}
+  rawOffset = #{offset VkQueueFamilyVideoPropertiesKHR, videoCodecOperations}
 
 #else
 

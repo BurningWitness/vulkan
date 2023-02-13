@@ -31,8 +31,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkVideoProfileListInfoKHR" #-} VkVideoProfileL
          }
 
 instance Storable VkVideoProfileListInfoKHR where
-  sizeOf    _ = #{size      struct VkVideoProfileListInfoKHR}
-  alignment _ = #{alignment struct VkVideoProfileListInfoKHR}
+  sizeOf    _ = #{size      VkVideoProfileListInfoKHR}
+  alignment _ = #{alignment VkVideoProfileListInfoKHR}
 
   peek ptr = 
     VkVideoProfileListInfoKHR
@@ -48,16 +48,16 @@ instance Storable VkVideoProfileListInfoKHR where
     pokeField @"pProfiles" ptr val
 
 instance Offset "sType" VkVideoProfileListInfoKHR where
-  rawOffset = #{offset struct VkVideoProfileListInfoKHR, sType}
+  rawOffset = #{offset VkVideoProfileListInfoKHR, sType}
 
 instance Offset "pNext" VkVideoProfileListInfoKHR where
-  rawOffset = #{offset struct VkVideoProfileListInfoKHR, pNext}
+  rawOffset = #{offset VkVideoProfileListInfoKHR, pNext}
 
 instance Offset "profileCount" VkVideoProfileListInfoKHR where
-  rawOffset = #{offset struct VkVideoProfileListInfoKHR, profileCount}
+  rawOffset = #{offset VkVideoProfileListInfoKHR, profileCount}
 
 instance Offset "pProfiles" VkVideoProfileListInfoKHR where
-  rawOffset = #{offset struct VkVideoProfileListInfoKHR, pProfiles}
+  rawOffset = #{offset VkVideoProfileListInfoKHR, pProfiles}
 
 #else
 

@@ -34,8 +34,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkAccelerationStructureGeometryKHR" #-} VkAcce
          }
 
 instance Storable VkAccelerationStructureGeometryKHR where
-  sizeOf    _ = #{size      struct VkAccelerationStructureGeometryKHR}
-  alignment _ = #{alignment struct VkAccelerationStructureGeometryKHR}
+  sizeOf    _ = #{size      VkAccelerationStructureGeometryKHR}
+  alignment _ = #{alignment VkAccelerationStructureGeometryKHR}
 
   peek ptr = 
     VkAccelerationStructureGeometryKHR
@@ -53,19 +53,19 @@ instance Storable VkAccelerationStructureGeometryKHR where
     pokeField @"flags" ptr val
 
 instance Offset "sType" VkAccelerationStructureGeometryKHR where
-  rawOffset = #{offset struct VkAccelerationStructureGeometryKHR, sType}
+  rawOffset = #{offset VkAccelerationStructureGeometryKHR, sType}
 
 instance Offset "pNext" VkAccelerationStructureGeometryKHR where
-  rawOffset = #{offset struct VkAccelerationStructureGeometryKHR, pNext}
+  rawOffset = #{offset VkAccelerationStructureGeometryKHR, pNext}
 
 instance Offset "geometryType" VkAccelerationStructureGeometryKHR where
-  rawOffset = #{offset struct VkAccelerationStructureGeometryKHR, geometryType}
+  rawOffset = #{offset VkAccelerationStructureGeometryKHR, geometryType}
 
 instance Offset "geometry" VkAccelerationStructureGeometryKHR where
-  rawOffset = #{offset struct VkAccelerationStructureGeometryKHR, geometry}
+  rawOffset = #{offset VkAccelerationStructureGeometryKHR, geometry}
 
 instance Offset "flags" VkAccelerationStructureGeometryKHR where
-  rawOffset = #{offset struct VkAccelerationStructureGeometryKHR, flags}
+  rawOffset = #{offset VkAccelerationStructureGeometryKHR, flags}
 
 #else
 

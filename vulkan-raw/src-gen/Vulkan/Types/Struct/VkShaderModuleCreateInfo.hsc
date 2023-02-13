@@ -30,8 +30,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkShaderModuleCreateInfo" #-} VkShaderModuleCr
          }
 
 instance Storable VkShaderModuleCreateInfo where
-  sizeOf    _ = #{size      struct VkShaderModuleCreateInfo}
-  alignment _ = #{alignment struct VkShaderModuleCreateInfo}
+  sizeOf    _ = #{size      VkShaderModuleCreateInfo}
+  alignment _ = #{alignment VkShaderModuleCreateInfo}
 
   peek ptr = 
     VkShaderModuleCreateInfo
@@ -49,16 +49,16 @@ instance Storable VkShaderModuleCreateInfo where
     pokeField @"pCode" ptr val
 
 instance Offset "sType" VkShaderModuleCreateInfo where
-  rawOffset = #{offset struct VkShaderModuleCreateInfo, sType}
+  rawOffset = #{offset VkShaderModuleCreateInfo, sType}
 
 instance Offset "pNext" VkShaderModuleCreateInfo where
-  rawOffset = #{offset struct VkShaderModuleCreateInfo, pNext}
+  rawOffset = #{offset VkShaderModuleCreateInfo, pNext}
 
 instance Offset "flags" VkShaderModuleCreateInfo where
-  rawOffset = #{offset struct VkShaderModuleCreateInfo, flags}
+  rawOffset = #{offset VkShaderModuleCreateInfo, flags}
 
 instance Offset "codeSize" VkShaderModuleCreateInfo where
-  rawOffset = #{offset struct VkShaderModuleCreateInfo, codeSize}
+  rawOffset = #{offset VkShaderModuleCreateInfo, codeSize}
 
 instance Offset "pCode" VkShaderModuleCreateInfo where
-  rawOffset = #{offset struct VkShaderModuleCreateInfo, pCode}
+  rawOffset = #{offset VkShaderModuleCreateInfo, pCode}

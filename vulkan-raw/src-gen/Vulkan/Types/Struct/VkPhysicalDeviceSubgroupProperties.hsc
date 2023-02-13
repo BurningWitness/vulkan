@@ -35,8 +35,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkPhysicalDeviceSubgroupProperties" #-} VkPhys
          }
 
 instance Storable VkPhysicalDeviceSubgroupProperties where
-  sizeOf    _ = #{size      struct VkPhysicalDeviceSubgroupProperties}
-  alignment _ = #{alignment struct VkPhysicalDeviceSubgroupProperties}
+  sizeOf    _ = #{size      VkPhysicalDeviceSubgroupProperties}
+  alignment _ = #{alignment VkPhysicalDeviceSubgroupProperties}
 
   peek ptr = 
     VkPhysicalDeviceSubgroupProperties
@@ -56,22 +56,22 @@ instance Storable VkPhysicalDeviceSubgroupProperties where
     pokeField @"quadOperationsInAllStages" ptr val
 
 instance Offset "sType" VkPhysicalDeviceSubgroupProperties where
-  rawOffset = #{offset struct VkPhysicalDeviceSubgroupProperties, sType}
+  rawOffset = #{offset VkPhysicalDeviceSubgroupProperties, sType}
 
 instance Offset "pNext" VkPhysicalDeviceSubgroupProperties where
-  rawOffset = #{offset struct VkPhysicalDeviceSubgroupProperties, pNext}
+  rawOffset = #{offset VkPhysicalDeviceSubgroupProperties, pNext}
 
 instance Offset "subgroupSize" VkPhysicalDeviceSubgroupProperties where
-  rawOffset = #{offset struct VkPhysicalDeviceSubgroupProperties, subgroupSize}
+  rawOffset = #{offset VkPhysicalDeviceSubgroupProperties, subgroupSize}
 
 instance Offset "supportedStages" VkPhysicalDeviceSubgroupProperties where
-  rawOffset = #{offset struct VkPhysicalDeviceSubgroupProperties, supportedStages}
+  rawOffset = #{offset VkPhysicalDeviceSubgroupProperties, supportedStages}
 
 instance Offset "supportedOperations" VkPhysicalDeviceSubgroupProperties where
-  rawOffset = #{offset struct VkPhysicalDeviceSubgroupProperties, supportedOperations}
+  rawOffset = #{offset VkPhysicalDeviceSubgroupProperties, supportedOperations}
 
 instance Offset "quadOperationsInAllStages" VkPhysicalDeviceSubgroupProperties where
-  rawOffset = #{offset struct VkPhysicalDeviceSubgroupProperties, quadOperationsInAllStages}
+  rawOffset = #{offset VkPhysicalDeviceSubgroupProperties, quadOperationsInAllStages}
 
 #else
 

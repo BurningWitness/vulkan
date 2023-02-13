@@ -32,8 +32,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkReleaseSwapchainImagesInfoEXT" #-} VkRelease
          }
 
 instance Storable VkReleaseSwapchainImagesInfoEXT where
-  sizeOf    _ = #{size      struct VkReleaseSwapchainImagesInfoEXT}
-  alignment _ = #{alignment struct VkReleaseSwapchainImagesInfoEXT}
+  sizeOf    _ = #{size      VkReleaseSwapchainImagesInfoEXT}
+  alignment _ = #{alignment VkReleaseSwapchainImagesInfoEXT}
 
   peek ptr = 
     VkReleaseSwapchainImagesInfoEXT
@@ -51,19 +51,19 @@ instance Storable VkReleaseSwapchainImagesInfoEXT where
     pokeField @"pImageIndices" ptr val
 
 instance Offset "sType" VkReleaseSwapchainImagesInfoEXT where
-  rawOffset = #{offset struct VkReleaseSwapchainImagesInfoEXT, sType}
+  rawOffset = #{offset VkReleaseSwapchainImagesInfoEXT, sType}
 
 instance Offset "pNext" VkReleaseSwapchainImagesInfoEXT where
-  rawOffset = #{offset struct VkReleaseSwapchainImagesInfoEXT, pNext}
+  rawOffset = #{offset VkReleaseSwapchainImagesInfoEXT, pNext}
 
 instance Offset "swapchain" VkReleaseSwapchainImagesInfoEXT where
-  rawOffset = #{offset struct VkReleaseSwapchainImagesInfoEXT, swapchain}
+  rawOffset = #{offset VkReleaseSwapchainImagesInfoEXT, swapchain}
 
 instance Offset "imageIndexCount" VkReleaseSwapchainImagesInfoEXT where
-  rawOffset = #{offset struct VkReleaseSwapchainImagesInfoEXT, imageIndexCount}
+  rawOffset = #{offset VkReleaseSwapchainImagesInfoEXT, imageIndexCount}
 
 instance Offset "pImageIndices" VkReleaseSwapchainImagesInfoEXT where
-  rawOffset = #{offset struct VkReleaseSwapchainImagesInfoEXT, pImageIndices}
+  rawOffset = #{offset VkReleaseSwapchainImagesInfoEXT, pImageIndices}
 
 #else
 

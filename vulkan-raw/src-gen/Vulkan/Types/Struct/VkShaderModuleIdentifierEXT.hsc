@@ -30,8 +30,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkShaderModuleIdentifierEXT" #-} VkShaderModul
          }
 
 instance Storable VkShaderModuleIdentifierEXT where
-  sizeOf    _ = #{size      struct VkShaderModuleIdentifierEXT}
-  alignment _ = #{alignment struct VkShaderModuleIdentifierEXT}
+  sizeOf    _ = #{size      VkShaderModuleIdentifierEXT}
+  alignment _ = #{alignment VkShaderModuleIdentifierEXT}
 
   peek ptr = 
     VkShaderModuleIdentifierEXT
@@ -47,16 +47,16 @@ instance Storable VkShaderModuleIdentifierEXT where
     pokeField @"identifier" ptr val
 
 instance Offset "sType" VkShaderModuleIdentifierEXT where
-  rawOffset = #{offset struct VkShaderModuleIdentifierEXT, sType}
+  rawOffset = #{offset VkShaderModuleIdentifierEXT, sType}
 
 instance Offset "pNext" VkShaderModuleIdentifierEXT where
-  rawOffset = #{offset struct VkShaderModuleIdentifierEXT, pNext}
+  rawOffset = #{offset VkShaderModuleIdentifierEXT, pNext}
 
 instance Offset "identifierSize" VkShaderModuleIdentifierEXT where
-  rawOffset = #{offset struct VkShaderModuleIdentifierEXT, identifierSize}
+  rawOffset = #{offset VkShaderModuleIdentifierEXT, identifierSize}
 
 instance Offset "identifier" VkShaderModuleIdentifierEXT where
-  rawOffset = #{offset struct VkShaderModuleIdentifierEXT, identifier}
+  rawOffset = #{offset VkShaderModuleIdentifierEXT, identifier}
 
 #else
 

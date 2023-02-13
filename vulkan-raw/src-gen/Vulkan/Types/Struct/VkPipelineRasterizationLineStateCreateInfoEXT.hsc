@@ -34,8 +34,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkPipelineRasterizationLineStateCreateInfoEXT"
          }
 
 instance Storable VkPipelineRasterizationLineStateCreateInfoEXT where
-  sizeOf    _ = #{size      struct VkPipelineRasterizationLineStateCreateInfoEXT}
-  alignment _ = #{alignment struct VkPipelineRasterizationLineStateCreateInfoEXT}
+  sizeOf    _ = #{size      VkPipelineRasterizationLineStateCreateInfoEXT}
+  alignment _ = #{alignment VkPipelineRasterizationLineStateCreateInfoEXT}
 
   peek ptr = 
     VkPipelineRasterizationLineStateCreateInfoEXT
@@ -55,22 +55,22 @@ instance Storable VkPipelineRasterizationLineStateCreateInfoEXT where
     pokeField @"lineStipplePattern" ptr val
 
 instance Offset "sType" VkPipelineRasterizationLineStateCreateInfoEXT where
-  rawOffset = #{offset struct VkPipelineRasterizationLineStateCreateInfoEXT, sType}
+  rawOffset = #{offset VkPipelineRasterizationLineStateCreateInfoEXT, sType}
 
 instance Offset "pNext" VkPipelineRasterizationLineStateCreateInfoEXT where
-  rawOffset = #{offset struct VkPipelineRasterizationLineStateCreateInfoEXT, pNext}
+  rawOffset = #{offset VkPipelineRasterizationLineStateCreateInfoEXT, pNext}
 
 instance Offset "lineRasterizationMode" VkPipelineRasterizationLineStateCreateInfoEXT where
-  rawOffset = #{offset struct VkPipelineRasterizationLineStateCreateInfoEXT, lineRasterizationMode}
+  rawOffset = #{offset VkPipelineRasterizationLineStateCreateInfoEXT, lineRasterizationMode}
 
 instance Offset "stippledLineEnable" VkPipelineRasterizationLineStateCreateInfoEXT where
-  rawOffset = #{offset struct VkPipelineRasterizationLineStateCreateInfoEXT, stippledLineEnable}
+  rawOffset = #{offset VkPipelineRasterizationLineStateCreateInfoEXT, stippledLineEnable}
 
 instance Offset "lineStippleFactor" VkPipelineRasterizationLineStateCreateInfoEXT where
-  rawOffset = #{offset struct VkPipelineRasterizationLineStateCreateInfoEXT, lineStippleFactor}
+  rawOffset = #{offset VkPipelineRasterizationLineStateCreateInfoEXT, lineStippleFactor}
 
 instance Offset "lineStipplePattern" VkPipelineRasterizationLineStateCreateInfoEXT where
-  rawOffset = #{offset struct VkPipelineRasterizationLineStateCreateInfoEXT, lineStipplePattern}
+  rawOffset = #{offset VkPipelineRasterizationLineStateCreateInfoEXT, lineStipplePattern}
 
 #else
 

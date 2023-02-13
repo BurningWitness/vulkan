@@ -1,9 +1,66 @@
+{-# LANGUAGE DataKinds #-}
+{-# LANGUAGE DuplicateRecordFields #-}
+{-# LANGUAGE MultiParamTypeClasses #-}
+#if __GLASGOW_HASKELL__ >= 902
+{-# LANGUAGE NoFieldSelectors #-}
+#endif
+{-# LANGUAGE TypeApplications #-}
+
 #include <vulkan/vulkan.h>
+
+#if VK_EXT_global_priority_query
 
 module Vulkan.Types.Struct.VkQueueFamilyGlobalPriorityPropertiesEXT where
 
-import Vulkan.Types.Struct.VkQueueFamilyGlobalPriorityPropertiesKHR
+import Data.Int
+import Data.Word
+import Foreign.Ptr
+import Foreign.Storable
+import Foreign.Storable.Offset
+import Vulkan.Types.Enum.VkQueueGlobalPriorityKHR
+import Vulkan.Types.Enum.VkStructureType
 
 
 
-type VkQueueFamilyGlobalPriorityPropertiesEXT = VkQueueFamilyGlobalPriorityPropertiesKHR
+data {-# CTYPE "vulkan/vulkan.h" "VkQueueFamilyGlobalPriorityPropertiesEXT" #-} VkQueueFamilyGlobalPriorityPropertiesEXT =
+       VkQueueFamilyGlobalPriorityPropertiesEXT
+         { sType :: VkStructureType
+         , pNext :: Ptr ()
+         , priorityCount :: #{type uint32_t}
+         , priorities :: VkQueueGlobalPriorityKHR
+         }
+
+instance Storable VkQueueFamilyGlobalPriorityPropertiesEXT where
+  sizeOf    _ = #{size      VkQueueFamilyGlobalPriorityPropertiesEXT}
+  alignment _ = #{alignment VkQueueFamilyGlobalPriorityPropertiesEXT}
+
+  peek ptr = 
+    VkQueueFamilyGlobalPriorityPropertiesEXT
+       <$> peek (offset @"sType" ptr)
+       <*> peek (offset @"pNext" ptr)
+       <*> peek (offset @"priorityCount" ptr)
+       <*> peek (offset @"priorities" ptr)
+
+  poke ptr val = do
+    pokeField @"sType" ptr val
+    pokeField @"pNext" ptr val
+    pokeField @"priorityCount" ptr val
+    pokeField @"priorities" ptr val
+
+instance Offset "sType" VkQueueFamilyGlobalPriorityPropertiesEXT where
+  rawOffset = #{offset VkQueueFamilyGlobalPriorityPropertiesEXT, sType}
+
+instance Offset "pNext" VkQueueFamilyGlobalPriorityPropertiesEXT where
+  rawOffset = #{offset VkQueueFamilyGlobalPriorityPropertiesEXT, pNext}
+
+instance Offset "priorityCount" VkQueueFamilyGlobalPriorityPropertiesEXT where
+  rawOffset = #{offset VkQueueFamilyGlobalPriorityPropertiesEXT, priorityCount}
+
+instance Offset "priorities" VkQueueFamilyGlobalPriorityPropertiesEXT where
+  rawOffset = #{offset VkQueueFamilyGlobalPriorityPropertiesEXT, priorities}
+
+#else
+
+module Vulkan.Types.Struct.VkQueueFamilyGlobalPriorityPropertiesEXT where
+
+#endif

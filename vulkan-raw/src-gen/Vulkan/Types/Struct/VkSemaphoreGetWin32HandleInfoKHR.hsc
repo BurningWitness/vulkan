@@ -32,8 +32,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkSemaphoreGetWin32HandleInfoKHR" #-} VkSemaph
          }
 
 instance Storable VkSemaphoreGetWin32HandleInfoKHR where
-  sizeOf    _ = #{size      struct VkSemaphoreGetWin32HandleInfoKHR}
-  alignment _ = #{alignment struct VkSemaphoreGetWin32HandleInfoKHR}
+  sizeOf    _ = #{size      VkSemaphoreGetWin32HandleInfoKHR}
+  alignment _ = #{alignment VkSemaphoreGetWin32HandleInfoKHR}
 
   peek ptr = 
     VkSemaphoreGetWin32HandleInfoKHR
@@ -49,16 +49,16 @@ instance Storable VkSemaphoreGetWin32HandleInfoKHR where
     pokeField @"handleType" ptr val
 
 instance Offset "sType" VkSemaphoreGetWin32HandleInfoKHR where
-  rawOffset = #{offset struct VkSemaphoreGetWin32HandleInfoKHR, sType}
+  rawOffset = #{offset VkSemaphoreGetWin32HandleInfoKHR, sType}
 
 instance Offset "pNext" VkSemaphoreGetWin32HandleInfoKHR where
-  rawOffset = #{offset struct VkSemaphoreGetWin32HandleInfoKHR, pNext}
+  rawOffset = #{offset VkSemaphoreGetWin32HandleInfoKHR, pNext}
 
 instance Offset "semaphore" VkSemaphoreGetWin32HandleInfoKHR where
-  rawOffset = #{offset struct VkSemaphoreGetWin32HandleInfoKHR, semaphore}
+  rawOffset = #{offset VkSemaphoreGetWin32HandleInfoKHR, semaphore}
 
 instance Offset "handleType" VkSemaphoreGetWin32HandleInfoKHR where
-  rawOffset = #{offset struct VkSemaphoreGetWin32HandleInfoKHR, handleType}
+  rawOffset = #{offset VkSemaphoreGetWin32HandleInfoKHR, handleType}
 
 #else
 

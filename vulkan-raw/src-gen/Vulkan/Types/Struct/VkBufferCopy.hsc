@@ -27,8 +27,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkBufferCopy" #-} VkBufferCopy =
          }
 
 instance Storable VkBufferCopy where
-  sizeOf    _ = #{size      struct VkBufferCopy}
-  alignment _ = #{alignment struct VkBufferCopy}
+  sizeOf    _ = #{size      VkBufferCopy}
+  alignment _ = #{alignment VkBufferCopy}
 
   peek ptr = 
     VkBufferCopy
@@ -42,10 +42,10 @@ instance Storable VkBufferCopy where
     pokeField @"size" ptr val
 
 instance Offset "srcOffset" VkBufferCopy where
-  rawOffset = #{offset struct VkBufferCopy, srcOffset}
+  rawOffset = #{offset VkBufferCopy, srcOffset}
 
 instance Offset "dstOffset" VkBufferCopy where
-  rawOffset = #{offset struct VkBufferCopy, dstOffset}
+  rawOffset = #{offset VkBufferCopy, dstOffset}
 
 instance Offset "size" VkBufferCopy where
-  rawOffset = #{offset struct VkBufferCopy, size}
+  rawOffset = #{offset VkBufferCopy, size}

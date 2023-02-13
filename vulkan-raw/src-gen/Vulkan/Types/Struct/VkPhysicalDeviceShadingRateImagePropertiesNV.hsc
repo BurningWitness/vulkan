@@ -32,8 +32,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkPhysicalDeviceShadingRateImagePropertiesNV" 
          }
 
 instance Storable VkPhysicalDeviceShadingRateImagePropertiesNV where
-  sizeOf    _ = #{size      struct VkPhysicalDeviceShadingRateImagePropertiesNV}
-  alignment _ = #{alignment struct VkPhysicalDeviceShadingRateImagePropertiesNV}
+  sizeOf    _ = #{size      VkPhysicalDeviceShadingRateImagePropertiesNV}
+  alignment _ = #{alignment VkPhysicalDeviceShadingRateImagePropertiesNV}
 
   peek ptr = 
     VkPhysicalDeviceShadingRateImagePropertiesNV
@@ -51,19 +51,19 @@ instance Storable VkPhysicalDeviceShadingRateImagePropertiesNV where
     pokeField @"shadingRateMaxCoarseSamples" ptr val
 
 instance Offset "sType" VkPhysicalDeviceShadingRateImagePropertiesNV where
-  rawOffset = #{offset struct VkPhysicalDeviceShadingRateImagePropertiesNV, sType}
+  rawOffset = #{offset VkPhysicalDeviceShadingRateImagePropertiesNV, sType}
 
 instance Offset "pNext" VkPhysicalDeviceShadingRateImagePropertiesNV where
-  rawOffset = #{offset struct VkPhysicalDeviceShadingRateImagePropertiesNV, pNext}
+  rawOffset = #{offset VkPhysicalDeviceShadingRateImagePropertiesNV, pNext}
 
 instance Offset "shadingRateTexelSize" VkPhysicalDeviceShadingRateImagePropertiesNV where
-  rawOffset = #{offset struct VkPhysicalDeviceShadingRateImagePropertiesNV, shadingRateTexelSize}
+  rawOffset = #{offset VkPhysicalDeviceShadingRateImagePropertiesNV, shadingRateTexelSize}
 
 instance Offset "shadingRatePaletteSize" VkPhysicalDeviceShadingRateImagePropertiesNV where
-  rawOffset = #{offset struct VkPhysicalDeviceShadingRateImagePropertiesNV, shadingRatePaletteSize}
+  rawOffset = #{offset VkPhysicalDeviceShadingRateImagePropertiesNV, shadingRatePaletteSize}
 
 instance Offset "shadingRateMaxCoarseSamples" VkPhysicalDeviceShadingRateImagePropertiesNV where
-  rawOffset = #{offset struct VkPhysicalDeviceShadingRateImagePropertiesNV, shadingRateMaxCoarseSamples}
+  rawOffset = #{offset VkPhysicalDeviceShadingRateImagePropertiesNV, shadingRateMaxCoarseSamples}
 
 #else
 

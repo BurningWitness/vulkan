@@ -30,8 +30,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkVideoEncodeH265ProfileInfoEXT" #-} VkVideoEn
          }
 
 instance Storable VkVideoEncodeH265ProfileInfoEXT where
-  sizeOf    _ = #{size      struct VkVideoEncodeH265ProfileInfoEXT}
-  alignment _ = #{alignment struct VkVideoEncodeH265ProfileInfoEXT}
+  sizeOf    _ = #{size      VkVideoEncodeH265ProfileInfoEXT}
+  alignment _ = #{alignment VkVideoEncodeH265ProfileInfoEXT}
 
   peek ptr = 
     VkVideoEncodeH265ProfileInfoEXT
@@ -45,13 +45,13 @@ instance Storable VkVideoEncodeH265ProfileInfoEXT where
     pokeField @"stdProfileIdc" ptr val
 
 instance Offset "sType" VkVideoEncodeH265ProfileInfoEXT where
-  rawOffset = #{offset struct VkVideoEncodeH265ProfileInfoEXT, sType}
+  rawOffset = #{offset VkVideoEncodeH265ProfileInfoEXT, sType}
 
 instance Offset "pNext" VkVideoEncodeH265ProfileInfoEXT where
-  rawOffset = #{offset struct VkVideoEncodeH265ProfileInfoEXT, pNext}
+  rawOffset = #{offset VkVideoEncodeH265ProfileInfoEXT, pNext}
 
 instance Offset "stdProfileIdc" VkVideoEncodeH265ProfileInfoEXT where
-  rawOffset = #{offset struct VkVideoEncodeH265ProfileInfoEXT, stdProfileIdc}
+  rawOffset = #{offset VkVideoEncodeH265ProfileInfoEXT, stdProfileIdc}
 
 #else
 

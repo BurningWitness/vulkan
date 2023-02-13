@@ -28,12 +28,12 @@ pattern VK_DEPENDENCY_VIEW_LOCAL_BIT = 2
 
 #if VK_KHR_multiview
 pattern VK_DEPENDENCY_VIEW_LOCAL_BIT_KHR :: (Eq a, Num a) => a
-pattern VK_DEPENDENCY_VIEW_LOCAL_BIT_KHR = VK_DEPENDENCY_VIEW_LOCAL_BIT
+pattern VK_DEPENDENCY_VIEW_LOCAL_BIT_KHR = 2
 #endif
 
 #if VK_KHR_device_group
 pattern VK_DEPENDENCY_DEVICE_GROUP_BIT_KHR :: (Eq a, Num a) => a
-pattern VK_DEPENDENCY_DEVICE_GROUP_BIT_KHR = VK_DEPENDENCY_DEVICE_GROUP_BIT
+pattern VK_DEPENDENCY_DEVICE_GROUP_BIT_KHR = 4
 #endif
 
 #if VK_EXT_attachment_feedback_loop_layout

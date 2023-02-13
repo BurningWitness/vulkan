@@ -1622,9 +1622,14 @@ module Vulkan.Core_1_2
   , pattern VK_PEER_MEMORY_FEATURE_COPY_DST_BIT
   , pattern VK_PEER_MEMORY_FEATURE_GENERIC_SRC_BIT
   , pattern VK_PEER_MEMORY_FEATURE_GENERIC_DST_BIT
+  , pattern VK_PEER_MEMORY_FEATURE_COPY_SRC_BIT_KHR
+  , pattern VK_PEER_MEMORY_FEATURE_COPY_DST_BIT_KHR
+  , pattern VK_PEER_MEMORY_FEATURE_GENERIC_SRC_BIT_KHR
+  , pattern VK_PEER_MEMORY_FEATURE_GENERIC_DST_BIT_KHR
   , VkMemoryAllocateFlags
   , VkMemoryAllocateFlagBits
   , pattern VK_MEMORY_ALLOCATE_DEVICE_MASK_BIT
+  , pattern VK_MEMORY_ALLOCATE_DEVICE_MASK_BIT_KHR
   , VkMemoryAllocateFlagsInfo (..)
   , VkDeviceGroupRenderPassBeginInfo (..)
   , VkDeviceGroupCommandBufferBeginInfo (..)
@@ -1792,12 +1797,16 @@ module Vulkan.Core_1_2
   , VkPointClippingBehavior
   , pattern VK_POINT_CLIPPING_BEHAVIOR_ALL_CLIP_PLANES
   , pattern VK_POINT_CLIPPING_BEHAVIOR_USER_CLIP_PLANES_ONLY
+  , pattern VK_POINT_CLIPPING_BEHAVIOR_ALL_CLIP_PLANES_KHR
+  , pattern VK_POINT_CLIPPING_BEHAVIOR_USER_CLIP_PLANES_ONLY_KHR
   , VkRenderPassInputAttachmentAspectCreateInfo (..)
   , VkInputAttachmentAspectReference (..)
   , VkImageViewUsageCreateInfo (..)
   , VkTessellationDomainOrigin
   , pattern VK_TESSELLATION_DOMAIN_ORIGIN_UPPER_LEFT
   , pattern VK_TESSELLATION_DOMAIN_ORIGIN_LOWER_LEFT
+  , pattern VK_TESSELLATION_DOMAIN_ORIGIN_UPPER_LEFT_KHR
+  , pattern VK_TESSELLATION_DOMAIN_ORIGIN_LOWER_LEFT_KHR
   , VkPipelineTessellationDomainOriginStateCreateInfo (..)
 
   -- | Promoted from VK_KHR_multiview
@@ -1918,12 +1927,21 @@ module Vulkan.Core_1_2
   , pattern VK_SAMPLER_YCBCR_MODEL_CONVERSION_YCBCR_709
   , pattern VK_SAMPLER_YCBCR_MODEL_CONVERSION_YCBCR_601
   , pattern VK_SAMPLER_YCBCR_MODEL_CONVERSION_YCBCR_2020
+  , pattern VK_SAMPLER_YCBCR_MODEL_CONVERSION_RGB_IDENTITY_KHR
+  , pattern VK_SAMPLER_YCBCR_MODEL_CONVERSION_YCBCR_IDENTITY_KHR
+  , pattern VK_SAMPLER_YCBCR_MODEL_CONVERSION_YCBCR_709_KHR
+  , pattern VK_SAMPLER_YCBCR_MODEL_CONVERSION_YCBCR_601_KHR
+  , pattern VK_SAMPLER_YCBCR_MODEL_CONVERSION_YCBCR_2020_KHR
   , VkSamplerYcbcrRange
   , pattern VK_SAMPLER_YCBCR_RANGE_ITU_FULL
   , pattern VK_SAMPLER_YCBCR_RANGE_ITU_NARROW
+  , pattern VK_SAMPLER_YCBCR_RANGE_ITU_FULL_KHR
+  , pattern VK_SAMPLER_YCBCR_RANGE_ITU_NARROW_KHR
   , VkChromaLocation
   , pattern VK_CHROMA_LOCATION_COSITED_EVEN
   , pattern VK_CHROMA_LOCATION_MIDPOINT
+  , pattern VK_CHROMA_LOCATION_COSITED_EVEN_KHR
+  , pattern VK_CHROMA_LOCATION_MIDPOINT_KHR
 
   -- | Promoted from VK_KHR_descriptor_update_template
   , pattern VK_STRUCTURE_TYPE_DESCRIPTOR_UPDATE_TEMPLATE_CREATE_INFO
@@ -1951,6 +1969,7 @@ module Vulkan.Core_1_2
   , VkDescriptorUpdateTemplateCreateFlags
   , VkDescriptorUpdateTemplateType
   , pattern VK_DESCRIPTOR_UPDATE_TEMPLATE_TYPE_DESCRIPTOR_SET
+  , pattern VK_DESCRIPTOR_UPDATE_TEMPLATE_TYPE_DESCRIPTOR_SET_KHR
   , VkDescriptorUpdateTemplateEntry (..)
   , VkDescriptorUpdateTemplateCreateInfo (..)
 
@@ -1970,11 +1989,21 @@ module Vulkan.Core_1_2
   , pattern VK_EXTERNAL_MEMORY_HANDLE_TYPE_D3D11_TEXTURE_KMT_BIT
   , pattern VK_EXTERNAL_MEMORY_HANDLE_TYPE_D3D12_HEAP_BIT
   , pattern VK_EXTERNAL_MEMORY_HANDLE_TYPE_D3D12_RESOURCE_BIT
+  , pattern VK_EXTERNAL_MEMORY_HANDLE_TYPE_OPAQUE_FD_BIT_KHR
+  , pattern VK_EXTERNAL_MEMORY_HANDLE_TYPE_OPAQUE_WIN32_BIT_KHR
+  , pattern VK_EXTERNAL_MEMORY_HANDLE_TYPE_OPAQUE_WIN32_KMT_BIT_KHR
+  , pattern VK_EXTERNAL_MEMORY_HANDLE_TYPE_D3D11_TEXTURE_BIT_KHR
+  , pattern VK_EXTERNAL_MEMORY_HANDLE_TYPE_D3D11_TEXTURE_KMT_BIT_KHR
+  , pattern VK_EXTERNAL_MEMORY_HANDLE_TYPE_D3D12_HEAP_BIT_KHR
+  , pattern VK_EXTERNAL_MEMORY_HANDLE_TYPE_D3D12_RESOURCE_BIT_KHR
   , VkExternalMemoryFeatureFlags
   , VkExternalMemoryFeatureFlagBits
   , pattern VK_EXTERNAL_MEMORY_FEATURE_DEDICATED_ONLY_BIT
   , pattern VK_EXTERNAL_MEMORY_FEATURE_EXPORTABLE_BIT
   , pattern VK_EXTERNAL_MEMORY_FEATURE_IMPORTABLE_BIT
+  , pattern VK_EXTERNAL_MEMORY_FEATURE_DEDICATED_ONLY_BIT_KHR
+  , pattern VK_EXTERNAL_MEMORY_FEATURE_EXPORTABLE_BIT_KHR
+  , pattern VK_EXTERNAL_MEMORY_FEATURE_IMPORTABLE_BIT_KHR
   , VkExternalMemoryProperties (..)
   , VkPhysicalDeviceExternalImageFormatInfo (..)
   , VkExternalImageFormatProperties (..)
@@ -2007,10 +2036,16 @@ module Vulkan.Core_1_2
   , pattern VK_EXTERNAL_FENCE_HANDLE_TYPE_OPAQUE_WIN32_BIT
   , pattern VK_EXTERNAL_FENCE_HANDLE_TYPE_OPAQUE_WIN32_KMT_BIT
   , pattern VK_EXTERNAL_FENCE_HANDLE_TYPE_SYNC_FD_BIT
+  , pattern VK_EXTERNAL_FENCE_HANDLE_TYPE_OPAQUE_FD_BIT_KHR
+  , pattern VK_EXTERNAL_FENCE_HANDLE_TYPE_OPAQUE_WIN32_BIT_KHR
+  , pattern VK_EXTERNAL_FENCE_HANDLE_TYPE_OPAQUE_WIN32_KMT_BIT_KHR
+  , pattern VK_EXTERNAL_FENCE_HANDLE_TYPE_SYNC_FD_BIT_KHR
   , VkExternalFenceFeatureFlags
   , VkExternalFenceFeatureFlagBits
   , pattern VK_EXTERNAL_FENCE_FEATURE_EXPORTABLE_BIT
   , pattern VK_EXTERNAL_FENCE_FEATURE_IMPORTABLE_BIT
+  , pattern VK_EXTERNAL_FENCE_FEATURE_EXPORTABLE_BIT_KHR
+  , pattern VK_EXTERNAL_FENCE_FEATURE_IMPORTABLE_BIT_KHR
   , VkPhysicalDeviceExternalFenceInfo (..)
   , VkExternalFenceProperties (..)
   , VkGetPhysicalDeviceExternalFenceProperties
@@ -2025,6 +2060,7 @@ module Vulkan.Core_1_2
   , VkFenceImportFlags
   , VkFenceImportFlagBits
   , pattern VK_FENCE_IMPORT_TEMPORARY_BIT
+  , pattern VK_FENCE_IMPORT_TEMPORARY_BIT_KHR
   , VkExportFenceCreateInfo (..)
 
   -- | Promoted from VK_KHR_external_semaphore
@@ -2032,6 +2068,7 @@ module Vulkan.Core_1_2
   , VkSemaphoreImportFlags
   , VkSemaphoreImportFlagBits
   , pattern VK_SEMAPHORE_IMPORT_TEMPORARY_BIT
+  , pattern VK_SEMAPHORE_IMPORT_TEMPORARY_BIT_KHR
   , VkExportSemaphoreCreateInfo (..)
 
   -- | Promoted from VK_KHR_external_semaphore_capabilities
@@ -2045,10 +2082,17 @@ module Vulkan.Core_1_2
   , pattern VK_EXTERNAL_SEMAPHORE_HANDLE_TYPE_D3D12_FENCE_BIT
   , pattern VK_EXTERNAL_SEMAPHORE_HANDLE_TYPE_D3D11_FENCE_BIT
   , pattern VK_EXTERNAL_SEMAPHORE_HANDLE_TYPE_SYNC_FD_BIT
+  , pattern VK_EXTERNAL_SEMAPHORE_HANDLE_TYPE_OPAQUE_FD_BIT_KHR
+  , pattern VK_EXTERNAL_SEMAPHORE_HANDLE_TYPE_OPAQUE_WIN32_BIT_KHR
+  , pattern VK_EXTERNAL_SEMAPHORE_HANDLE_TYPE_OPAQUE_WIN32_KMT_BIT_KHR
+  , pattern VK_EXTERNAL_SEMAPHORE_HANDLE_TYPE_D3D12_FENCE_BIT_KHR
+  , pattern VK_EXTERNAL_SEMAPHORE_HANDLE_TYPE_SYNC_FD_BIT_KHR
   , VkExternalSemaphoreFeatureFlags
   , VkExternalSemaphoreFeatureFlagBits
   , pattern VK_EXTERNAL_SEMAPHORE_FEATURE_EXPORTABLE_BIT
   , pattern VK_EXTERNAL_SEMAPHORE_FEATURE_IMPORTABLE_BIT
+  , pattern VK_EXTERNAL_SEMAPHORE_FEATURE_EXPORTABLE_BIT_KHR
+  , pattern VK_EXTERNAL_SEMAPHORE_FEATURE_IMPORTABLE_BIT_KHR
   , VkPhysicalDeviceExternalSemaphoreInfo (..)
   , VkExternalSemaphoreProperties (..)
   , VkGetPhysicalDeviceExternalSemaphoreProperties
@@ -2180,6 +2224,18 @@ module Vulkan.Core_1_2
   , pattern VK_DRIVER_ID_MESA_DOZEN
   , pattern VK_DRIVER_ID_MESA_NVK
   , pattern VK_DRIVER_ID_IMAGINATION_OPEN_SOURCE_MESA
+  , pattern VK_DRIVER_ID_AMD_PROPRIETARY_KHR
+  , pattern VK_DRIVER_ID_AMD_OPEN_SOURCE_KHR
+  , pattern VK_DRIVER_ID_MESA_RADV_KHR
+  , pattern VK_DRIVER_ID_NVIDIA_PROPRIETARY_KHR
+  , pattern VK_DRIVER_ID_INTEL_PROPRIETARY_WINDOWS_KHR
+  , pattern VK_DRIVER_ID_INTEL_OPEN_SOURCE_MESA_KHR
+  , pattern VK_DRIVER_ID_IMAGINATION_PROPRIETARY_KHR
+  , pattern VK_DRIVER_ID_QUALCOMM_PROPRIETARY_KHR
+  , pattern VK_DRIVER_ID_ARM_PROPRIETARY_KHR
+  , pattern VK_DRIVER_ID_GOOGLE_SWIFTSHADER_KHR
+  , pattern VK_DRIVER_ID_GGP_PROPRIETARY_KHR
+  , pattern VK_DRIVER_ID_BROADCOM_PROPRIETARY_KHR
   , VkConformanceVersion (..)
   , VkPhysicalDeviceDriverProperties (..)
 
@@ -2198,6 +2254,9 @@ module Vulkan.Core_1_2
   , pattern VK_SHADER_FLOAT_CONTROLS_INDEPENDENCE_32_BIT_ONLY
   , pattern VK_SHADER_FLOAT_CONTROLS_INDEPENDENCE_ALL
   , pattern VK_SHADER_FLOAT_CONTROLS_INDEPENDENCE_NONE
+  , pattern VK_SHADER_FLOAT_CONTROLS_INDEPENDENCE_32_BIT_ONLY_KHR
+  , pattern VK_SHADER_FLOAT_CONTROLS_INDEPENDENCE_ALL_KHR
+  , pattern VK_SHADER_FLOAT_CONTROLS_INDEPENDENCE_NONE_KHR
 
   -- | Promoted from VK_EXT_descriptor_indexing (extension 162)
   , pattern VK_STRUCTURE_TYPE_DESCRIPTOR_SET_LAYOUT_BINDING_FLAGS_CREATE_INFO
@@ -2218,6 +2277,10 @@ module Vulkan.Core_1_2
   , pattern VK_DESCRIPTOR_BINDING_UPDATE_UNUSED_WHILE_PENDING_BIT
   , pattern VK_DESCRIPTOR_BINDING_PARTIALLY_BOUND_BIT
   , pattern VK_DESCRIPTOR_BINDING_VARIABLE_DESCRIPTOR_COUNT_BIT
+  , pattern VK_DESCRIPTOR_BINDING_UPDATE_AFTER_BIND_BIT_EXT
+  , pattern VK_DESCRIPTOR_BINDING_UPDATE_UNUSED_WHILE_PENDING_BIT_EXT
+  , pattern VK_DESCRIPTOR_BINDING_PARTIALLY_BOUND_BIT_EXT
+  , pattern VK_DESCRIPTOR_BINDING_VARIABLE_DESCRIPTOR_COUNT_BIT_EXT
   , VkDescriptorBindingFlags
 
   -- | Promoted from VK_KHR_depth_stencil_resolve (extension 200)
@@ -2231,6 +2294,11 @@ module Vulkan.Core_1_2
   , pattern VK_RESOLVE_MODE_AVERAGE_BIT
   , pattern VK_RESOLVE_MODE_MIN_BIT
   , pattern VK_RESOLVE_MODE_MAX_BIT
+  , pattern VK_RESOLVE_MODE_NONE_KHR
+  , pattern VK_RESOLVE_MODE_SAMPLE_ZERO_BIT_KHR
+  , pattern VK_RESOLVE_MODE_AVERAGE_BIT_KHR
+  , pattern VK_RESOLVE_MODE_MIN_BIT_KHR
+  , pattern VK_RESOLVE_MODE_MAX_BIT_KHR
   , VkResolveModeFlags
 
   -- | Promoted from VK_EXT_scalar_block_layout (extension 222))
@@ -2251,6 +2319,9 @@ module Vulkan.Core_1_2
   , pattern VK_SAMPLER_REDUCTION_MODE_WEIGHTED_AVERAGE
   , pattern VK_SAMPLER_REDUCTION_MODE_MIN
   , pattern VK_SAMPLER_REDUCTION_MODE_MAX
+  , pattern VK_SAMPLER_REDUCTION_MODE_WEIGHTED_AVERAGE_EXT
+  , pattern VK_SAMPLER_REDUCTION_MODE_MIN_EXT
+  , pattern VK_SAMPLER_REDUCTION_MODE_MAX_EXT
   , VkSamplerReductionModeCreateInfo (..)
   , VkPhysicalDeviceSamplerFilterMinmaxProperties (..)
 
@@ -2311,12 +2382,15 @@ module Vulkan.Core_1_2
   , VkSemaphoreType
   , pattern VK_SEMAPHORE_TYPE_BINARY
   , pattern VK_SEMAPHORE_TYPE_TIMELINE
+  , pattern VK_SEMAPHORE_TYPE_BINARY_KHR
+  , pattern VK_SEMAPHORE_TYPE_TIMELINE_KHR
   , VkPhysicalDeviceTimelineSemaphoreFeatures (..)
   , VkPhysicalDeviceTimelineSemaphoreProperties (..)
   , VkSemaphoreTypeCreateInfo (..)
   , VkTimelineSemaphoreSubmitInfo (..)
   , VkSemaphoreWaitFlagBits
   , pattern VK_SEMAPHORE_WAIT_ANY_BIT
+  , pattern VK_SEMAPHORE_WAIT_ANY_BIT_KHR
   , VkSemaphoreWaitFlags
   , VkSemaphoreWaitInfo (..)
   , VkSemaphoreSignalInfo (..)

@@ -47,8 +47,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkPhysicalDeviceVulkan11Properties" #-} VkPhys
          }
 
 instance Storable VkPhysicalDeviceVulkan11Properties where
-  sizeOf    _ = #{size      struct VkPhysicalDeviceVulkan11Properties}
-  alignment _ = #{alignment struct VkPhysicalDeviceVulkan11Properties}
+  sizeOf    _ = #{size      VkPhysicalDeviceVulkan11Properties}
+  alignment _ = #{alignment VkPhysicalDeviceVulkan11Properties}
 
   peek ptr = 
     VkPhysicalDeviceVulkan11Properties
@@ -90,55 +90,55 @@ instance Storable VkPhysicalDeviceVulkan11Properties where
     pokeField @"maxMemoryAllocationSize" ptr val
 
 instance Offset "sType" VkPhysicalDeviceVulkan11Properties where
-  rawOffset = #{offset struct VkPhysicalDeviceVulkan11Properties, sType}
+  rawOffset = #{offset VkPhysicalDeviceVulkan11Properties, sType}
 
 instance Offset "pNext" VkPhysicalDeviceVulkan11Properties where
-  rawOffset = #{offset struct VkPhysicalDeviceVulkan11Properties, pNext}
+  rawOffset = #{offset VkPhysicalDeviceVulkan11Properties, pNext}
 
 instance Offset "deviceUUID" VkPhysicalDeviceVulkan11Properties where
-  rawOffset = #{offset struct VkPhysicalDeviceVulkan11Properties, deviceUUID}
+  rawOffset = #{offset VkPhysicalDeviceVulkan11Properties, deviceUUID}
 
 instance Offset "driverUUID" VkPhysicalDeviceVulkan11Properties where
-  rawOffset = #{offset struct VkPhysicalDeviceVulkan11Properties, driverUUID}
+  rawOffset = #{offset VkPhysicalDeviceVulkan11Properties, driverUUID}
 
 instance Offset "deviceLUID" VkPhysicalDeviceVulkan11Properties where
-  rawOffset = #{offset struct VkPhysicalDeviceVulkan11Properties, deviceLUID}
+  rawOffset = #{offset VkPhysicalDeviceVulkan11Properties, deviceLUID}
 
 instance Offset "deviceNodeMask" VkPhysicalDeviceVulkan11Properties where
-  rawOffset = #{offset struct VkPhysicalDeviceVulkan11Properties, deviceNodeMask}
+  rawOffset = #{offset VkPhysicalDeviceVulkan11Properties, deviceNodeMask}
 
 instance Offset "deviceLUIDValid" VkPhysicalDeviceVulkan11Properties where
-  rawOffset = #{offset struct VkPhysicalDeviceVulkan11Properties, deviceLUIDValid}
+  rawOffset = #{offset VkPhysicalDeviceVulkan11Properties, deviceLUIDValid}
 
 instance Offset "subgroupSize" VkPhysicalDeviceVulkan11Properties where
-  rawOffset = #{offset struct VkPhysicalDeviceVulkan11Properties, subgroupSize}
+  rawOffset = #{offset VkPhysicalDeviceVulkan11Properties, subgroupSize}
 
 instance Offset "subgroupSupportedStages" VkPhysicalDeviceVulkan11Properties where
-  rawOffset = #{offset struct VkPhysicalDeviceVulkan11Properties, subgroupSupportedStages}
+  rawOffset = #{offset VkPhysicalDeviceVulkan11Properties, subgroupSupportedStages}
 
 instance Offset "subgroupSupportedOperations" VkPhysicalDeviceVulkan11Properties where
-  rawOffset = #{offset struct VkPhysicalDeviceVulkan11Properties, subgroupSupportedOperations}
+  rawOffset = #{offset VkPhysicalDeviceVulkan11Properties, subgroupSupportedOperations}
 
 instance Offset "subgroupQuadOperationsInAllStages" VkPhysicalDeviceVulkan11Properties where
-  rawOffset = #{offset struct VkPhysicalDeviceVulkan11Properties, subgroupQuadOperationsInAllStages}
+  rawOffset = #{offset VkPhysicalDeviceVulkan11Properties, subgroupQuadOperationsInAllStages}
 
 instance Offset "pointClippingBehavior" VkPhysicalDeviceVulkan11Properties where
-  rawOffset = #{offset struct VkPhysicalDeviceVulkan11Properties, pointClippingBehavior}
+  rawOffset = #{offset VkPhysicalDeviceVulkan11Properties, pointClippingBehavior}
 
 instance Offset "maxMultiviewViewCount" VkPhysicalDeviceVulkan11Properties where
-  rawOffset = #{offset struct VkPhysicalDeviceVulkan11Properties, maxMultiviewViewCount}
+  rawOffset = #{offset VkPhysicalDeviceVulkan11Properties, maxMultiviewViewCount}
 
 instance Offset "maxMultiviewInstanceIndex" VkPhysicalDeviceVulkan11Properties where
-  rawOffset = #{offset struct VkPhysicalDeviceVulkan11Properties, maxMultiviewInstanceIndex}
+  rawOffset = #{offset VkPhysicalDeviceVulkan11Properties, maxMultiviewInstanceIndex}
 
 instance Offset "protectedNoFault" VkPhysicalDeviceVulkan11Properties where
-  rawOffset = #{offset struct VkPhysicalDeviceVulkan11Properties, protectedNoFault}
+  rawOffset = #{offset VkPhysicalDeviceVulkan11Properties, protectedNoFault}
 
 instance Offset "maxPerSetDescriptors" VkPhysicalDeviceVulkan11Properties where
-  rawOffset = #{offset struct VkPhysicalDeviceVulkan11Properties, maxPerSetDescriptors}
+  rawOffset = #{offset VkPhysicalDeviceVulkan11Properties, maxPerSetDescriptors}
 
 instance Offset "maxMemoryAllocationSize" VkPhysicalDeviceVulkan11Properties where
-  rawOffset = #{offset struct VkPhysicalDeviceVulkan11Properties, maxMemoryAllocationSize}
+  rawOffset = #{offset VkPhysicalDeviceVulkan11Properties, maxMemoryAllocationSize}
 
 #else
 

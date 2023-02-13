@@ -33,8 +33,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkPipelineExecutablePropertiesKHR" #-} VkPipel
          }
 
 instance Storable VkPipelineExecutablePropertiesKHR where
-  sizeOf    _ = #{size      struct VkPipelineExecutablePropertiesKHR}
-  alignment _ = #{alignment struct VkPipelineExecutablePropertiesKHR}
+  sizeOf    _ = #{size      VkPipelineExecutablePropertiesKHR}
+  alignment _ = #{alignment VkPipelineExecutablePropertiesKHR}
 
   peek ptr = 
     VkPipelineExecutablePropertiesKHR
@@ -54,22 +54,22 @@ instance Storable VkPipelineExecutablePropertiesKHR where
     pokeField @"subgroupSize" ptr val
 
 instance Offset "sType" VkPipelineExecutablePropertiesKHR where
-  rawOffset = #{offset struct VkPipelineExecutablePropertiesKHR, sType}
+  rawOffset = #{offset VkPipelineExecutablePropertiesKHR, sType}
 
 instance Offset "pNext" VkPipelineExecutablePropertiesKHR where
-  rawOffset = #{offset struct VkPipelineExecutablePropertiesKHR, pNext}
+  rawOffset = #{offset VkPipelineExecutablePropertiesKHR, pNext}
 
 instance Offset "stages" VkPipelineExecutablePropertiesKHR where
-  rawOffset = #{offset struct VkPipelineExecutablePropertiesKHR, stages}
+  rawOffset = #{offset VkPipelineExecutablePropertiesKHR, stages}
 
 instance Offset "name" VkPipelineExecutablePropertiesKHR where
-  rawOffset = #{offset struct VkPipelineExecutablePropertiesKHR, name}
+  rawOffset = #{offset VkPipelineExecutablePropertiesKHR, name}
 
 instance Offset "description" VkPipelineExecutablePropertiesKHR where
-  rawOffset = #{offset struct VkPipelineExecutablePropertiesKHR, description}
+  rawOffset = #{offset VkPipelineExecutablePropertiesKHR, description}
 
 instance Offset "subgroupSize" VkPipelineExecutablePropertiesKHR where
-  rawOffset = #{offset struct VkPipelineExecutablePropertiesKHR, subgroupSize}
+  rawOffset = #{offset VkPipelineExecutablePropertiesKHR, subgroupSize}
 
 #else
 

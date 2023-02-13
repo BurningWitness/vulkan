@@ -36,8 +36,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkPipelineCoverageModulationStateCreateInfoNV"
          }
 
 instance Storable VkPipelineCoverageModulationStateCreateInfoNV where
-  sizeOf    _ = #{size      struct VkPipelineCoverageModulationStateCreateInfoNV}
-  alignment _ = #{alignment struct VkPipelineCoverageModulationStateCreateInfoNV}
+  sizeOf    _ = #{size      VkPipelineCoverageModulationStateCreateInfoNV}
+  alignment _ = #{alignment VkPipelineCoverageModulationStateCreateInfoNV}
 
   peek ptr = 
     VkPipelineCoverageModulationStateCreateInfoNV
@@ -59,25 +59,25 @@ instance Storable VkPipelineCoverageModulationStateCreateInfoNV where
     pokeField @"pCoverageModulationTable" ptr val
 
 instance Offset "sType" VkPipelineCoverageModulationStateCreateInfoNV where
-  rawOffset = #{offset struct VkPipelineCoverageModulationStateCreateInfoNV, sType}
+  rawOffset = #{offset VkPipelineCoverageModulationStateCreateInfoNV, sType}
 
 instance Offset "pNext" VkPipelineCoverageModulationStateCreateInfoNV where
-  rawOffset = #{offset struct VkPipelineCoverageModulationStateCreateInfoNV, pNext}
+  rawOffset = #{offset VkPipelineCoverageModulationStateCreateInfoNV, pNext}
 
 instance Offset "flags" VkPipelineCoverageModulationStateCreateInfoNV where
-  rawOffset = #{offset struct VkPipelineCoverageModulationStateCreateInfoNV, flags}
+  rawOffset = #{offset VkPipelineCoverageModulationStateCreateInfoNV, flags}
 
 instance Offset "coverageModulationMode" VkPipelineCoverageModulationStateCreateInfoNV where
-  rawOffset = #{offset struct VkPipelineCoverageModulationStateCreateInfoNV, coverageModulationMode}
+  rawOffset = #{offset VkPipelineCoverageModulationStateCreateInfoNV, coverageModulationMode}
 
 instance Offset "coverageModulationTableEnable" VkPipelineCoverageModulationStateCreateInfoNV where
-  rawOffset = #{offset struct VkPipelineCoverageModulationStateCreateInfoNV, coverageModulationTableEnable}
+  rawOffset = #{offset VkPipelineCoverageModulationStateCreateInfoNV, coverageModulationTableEnable}
 
 instance Offset "coverageModulationTableCount" VkPipelineCoverageModulationStateCreateInfoNV where
-  rawOffset = #{offset struct VkPipelineCoverageModulationStateCreateInfoNV, coverageModulationTableCount}
+  rawOffset = #{offset VkPipelineCoverageModulationStateCreateInfoNV, coverageModulationTableCount}
 
 instance Offset "pCoverageModulationTable" VkPipelineCoverageModulationStateCreateInfoNV where
-  rawOffset = #{offset struct VkPipelineCoverageModulationStateCreateInfoNV, pCoverageModulationTable}
+  rawOffset = #{offset VkPipelineCoverageModulationStateCreateInfoNV, pCoverageModulationTable}
 
 #else
 

@@ -33,8 +33,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkPerformanceCounterDescriptionKHR" #-} VkPerf
          }
 
 instance Storable VkPerformanceCounterDescriptionKHR where
-  sizeOf    _ = #{size      struct VkPerformanceCounterDescriptionKHR}
-  alignment _ = #{alignment struct VkPerformanceCounterDescriptionKHR}
+  sizeOf    _ = #{size      VkPerformanceCounterDescriptionKHR}
+  alignment _ = #{alignment VkPerformanceCounterDescriptionKHR}
 
   peek ptr = 
     VkPerformanceCounterDescriptionKHR
@@ -54,22 +54,22 @@ instance Storable VkPerformanceCounterDescriptionKHR where
     pokeField @"description" ptr val
 
 instance Offset "sType" VkPerformanceCounterDescriptionKHR where
-  rawOffset = #{offset struct VkPerformanceCounterDescriptionKHR, sType}
+  rawOffset = #{offset VkPerformanceCounterDescriptionKHR, sType}
 
 instance Offset "pNext" VkPerformanceCounterDescriptionKHR where
-  rawOffset = #{offset struct VkPerformanceCounterDescriptionKHR, pNext}
+  rawOffset = #{offset VkPerformanceCounterDescriptionKHR, pNext}
 
 instance Offset "flags" VkPerformanceCounterDescriptionKHR where
-  rawOffset = #{offset struct VkPerformanceCounterDescriptionKHR, flags}
+  rawOffset = #{offset VkPerformanceCounterDescriptionKHR, flags}
 
 instance Offset "name" VkPerformanceCounterDescriptionKHR where
-  rawOffset = #{offset struct VkPerformanceCounterDescriptionKHR, name}
+  rawOffset = #{offset VkPerformanceCounterDescriptionKHR, name}
 
 instance Offset "category" VkPerformanceCounterDescriptionKHR where
-  rawOffset = #{offset struct VkPerformanceCounterDescriptionKHR, category}
+  rawOffset = #{offset VkPerformanceCounterDescriptionKHR, category}
 
 instance Offset "description" VkPerformanceCounterDescriptionKHR where
-  rawOffset = #{offset struct VkPerformanceCounterDescriptionKHR, description}
+  rawOffset = #{offset VkPerformanceCounterDescriptionKHR, description}
 
 #else
 

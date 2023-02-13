@@ -30,8 +30,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkPhysicalDevicePipelineCreationCacheControlFe
          }
 
 instance Storable VkPhysicalDevicePipelineCreationCacheControlFeatures where
-  sizeOf    _ = #{size      struct VkPhysicalDevicePipelineCreationCacheControlFeatures}
-  alignment _ = #{alignment struct VkPhysicalDevicePipelineCreationCacheControlFeatures}
+  sizeOf    _ = #{size      VkPhysicalDevicePipelineCreationCacheControlFeatures}
+  alignment _ = #{alignment VkPhysicalDevicePipelineCreationCacheControlFeatures}
 
   peek ptr = 
     VkPhysicalDevicePipelineCreationCacheControlFeatures
@@ -45,13 +45,13 @@ instance Storable VkPhysicalDevicePipelineCreationCacheControlFeatures where
     pokeField @"pipelineCreationCacheControl" ptr val
 
 instance Offset "sType" VkPhysicalDevicePipelineCreationCacheControlFeatures where
-  rawOffset = #{offset struct VkPhysicalDevicePipelineCreationCacheControlFeatures, sType}
+  rawOffset = #{offset VkPhysicalDevicePipelineCreationCacheControlFeatures, sType}
 
 instance Offset "pNext" VkPhysicalDevicePipelineCreationCacheControlFeatures where
-  rawOffset = #{offset struct VkPhysicalDevicePipelineCreationCacheControlFeatures, pNext}
+  rawOffset = #{offset VkPhysicalDevicePipelineCreationCacheControlFeatures, pNext}
 
 instance Offset "pipelineCreationCacheControl" VkPhysicalDevicePipelineCreationCacheControlFeatures where
-  rawOffset = #{offset struct VkPhysicalDevicePipelineCreationCacheControlFeatures, pipelineCreationCacheControl}
+  rawOffset = #{offset VkPhysicalDevicePipelineCreationCacheControlFeatures, pipelineCreationCacheControl}
 
 #else
 

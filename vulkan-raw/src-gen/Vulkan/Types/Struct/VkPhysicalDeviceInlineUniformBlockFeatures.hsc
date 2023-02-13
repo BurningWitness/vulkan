@@ -31,8 +31,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkPhysicalDeviceInlineUniformBlockFeatures" #-
          }
 
 instance Storable VkPhysicalDeviceInlineUniformBlockFeatures where
-  sizeOf    _ = #{size      struct VkPhysicalDeviceInlineUniformBlockFeatures}
-  alignment _ = #{alignment struct VkPhysicalDeviceInlineUniformBlockFeatures}
+  sizeOf    _ = #{size      VkPhysicalDeviceInlineUniformBlockFeatures}
+  alignment _ = #{alignment VkPhysicalDeviceInlineUniformBlockFeatures}
 
   peek ptr = 
     VkPhysicalDeviceInlineUniformBlockFeatures
@@ -48,16 +48,16 @@ instance Storable VkPhysicalDeviceInlineUniformBlockFeatures where
     pokeField @"descriptorBindingInlineUniformBlockUpdateAfterBind" ptr val
 
 instance Offset "sType" VkPhysicalDeviceInlineUniformBlockFeatures where
-  rawOffset = #{offset struct VkPhysicalDeviceInlineUniformBlockFeatures, sType}
+  rawOffset = #{offset VkPhysicalDeviceInlineUniformBlockFeatures, sType}
 
 instance Offset "pNext" VkPhysicalDeviceInlineUniformBlockFeatures where
-  rawOffset = #{offset struct VkPhysicalDeviceInlineUniformBlockFeatures, pNext}
+  rawOffset = #{offset VkPhysicalDeviceInlineUniformBlockFeatures, pNext}
 
 instance Offset "inlineUniformBlock" VkPhysicalDeviceInlineUniformBlockFeatures where
-  rawOffset = #{offset struct VkPhysicalDeviceInlineUniformBlockFeatures, inlineUniformBlock}
+  rawOffset = #{offset VkPhysicalDeviceInlineUniformBlockFeatures, inlineUniformBlock}
 
 instance Offset "descriptorBindingInlineUniformBlockUpdateAfterBind" VkPhysicalDeviceInlineUniformBlockFeatures where
-  rawOffset = #{offset struct VkPhysicalDeviceInlineUniformBlockFeatures, descriptorBindingInlineUniformBlockUpdateAfterBind}
+  rawOffset = #{offset VkPhysicalDeviceInlineUniformBlockFeatures, descriptorBindingInlineUniformBlockUpdateAfterBind}
 
 #else
 

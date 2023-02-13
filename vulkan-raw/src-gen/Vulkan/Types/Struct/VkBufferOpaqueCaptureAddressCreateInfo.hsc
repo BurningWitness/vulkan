@@ -29,8 +29,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkBufferOpaqueCaptureAddressCreateInfo" #-} Vk
          }
 
 instance Storable VkBufferOpaqueCaptureAddressCreateInfo where
-  sizeOf    _ = #{size      struct VkBufferOpaqueCaptureAddressCreateInfo}
-  alignment _ = #{alignment struct VkBufferOpaqueCaptureAddressCreateInfo}
+  sizeOf    _ = #{size      VkBufferOpaqueCaptureAddressCreateInfo}
+  alignment _ = #{alignment VkBufferOpaqueCaptureAddressCreateInfo}
 
   peek ptr = 
     VkBufferOpaqueCaptureAddressCreateInfo
@@ -44,13 +44,13 @@ instance Storable VkBufferOpaqueCaptureAddressCreateInfo where
     pokeField @"opaqueCaptureAddress" ptr val
 
 instance Offset "sType" VkBufferOpaqueCaptureAddressCreateInfo where
-  rawOffset = #{offset struct VkBufferOpaqueCaptureAddressCreateInfo, sType}
+  rawOffset = #{offset VkBufferOpaqueCaptureAddressCreateInfo, sType}
 
 instance Offset "pNext" VkBufferOpaqueCaptureAddressCreateInfo where
-  rawOffset = #{offset struct VkBufferOpaqueCaptureAddressCreateInfo, pNext}
+  rawOffset = #{offset VkBufferOpaqueCaptureAddressCreateInfo, pNext}
 
 instance Offset "opaqueCaptureAddress" VkBufferOpaqueCaptureAddressCreateInfo where
-  rawOffset = #{offset struct VkBufferOpaqueCaptureAddressCreateInfo, opaqueCaptureAddress}
+  rawOffset = #{offset VkBufferOpaqueCaptureAddressCreateInfo, opaqueCaptureAddress}
 
 #else
 

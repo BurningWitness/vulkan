@@ -36,8 +36,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkCommandBufferInheritanceInfo" #-} VkCommandB
          }
 
 instance Storable VkCommandBufferInheritanceInfo where
-  sizeOf    _ = #{size      struct VkCommandBufferInheritanceInfo}
-  alignment _ = #{alignment struct VkCommandBufferInheritanceInfo}
+  sizeOf    _ = #{size      VkCommandBufferInheritanceInfo}
+  alignment _ = #{alignment VkCommandBufferInheritanceInfo}
 
   peek ptr = 
     VkCommandBufferInheritanceInfo
@@ -61,25 +61,25 @@ instance Storable VkCommandBufferInheritanceInfo where
     pokeField @"pipelineStatistics" ptr val
 
 instance Offset "sType" VkCommandBufferInheritanceInfo where
-  rawOffset = #{offset struct VkCommandBufferInheritanceInfo, sType}
+  rawOffset = #{offset VkCommandBufferInheritanceInfo, sType}
 
 instance Offset "pNext" VkCommandBufferInheritanceInfo where
-  rawOffset = #{offset struct VkCommandBufferInheritanceInfo, pNext}
+  rawOffset = #{offset VkCommandBufferInheritanceInfo, pNext}
 
 instance Offset "renderPass" VkCommandBufferInheritanceInfo where
-  rawOffset = #{offset struct VkCommandBufferInheritanceInfo, renderPass}
+  rawOffset = #{offset VkCommandBufferInheritanceInfo, renderPass}
 
 instance Offset "subpass" VkCommandBufferInheritanceInfo where
-  rawOffset = #{offset struct VkCommandBufferInheritanceInfo, subpass}
+  rawOffset = #{offset VkCommandBufferInheritanceInfo, subpass}
 
 instance Offset "framebuffer" VkCommandBufferInheritanceInfo where
-  rawOffset = #{offset struct VkCommandBufferInheritanceInfo, framebuffer}
+  rawOffset = #{offset VkCommandBufferInheritanceInfo, framebuffer}
 
 instance Offset "occlusionQueryEnable" VkCommandBufferInheritanceInfo where
-  rawOffset = #{offset struct VkCommandBufferInheritanceInfo, occlusionQueryEnable}
+  rawOffset = #{offset VkCommandBufferInheritanceInfo, occlusionQueryEnable}
 
 instance Offset "queryFlags" VkCommandBufferInheritanceInfo where
-  rawOffset = #{offset struct VkCommandBufferInheritanceInfo, queryFlags}
+  rawOffset = #{offset VkCommandBufferInheritanceInfo, queryFlags}
 
 instance Offset "pipelineStatistics" VkCommandBufferInheritanceInfo where
-  rawOffset = #{offset struct VkCommandBufferInheritanceInfo, pipelineStatistics}
+  rawOffset = #{offset VkCommandBufferInheritanceInfo, pipelineStatistics}

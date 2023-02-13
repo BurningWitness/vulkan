@@ -29,8 +29,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkCommandPoolCreateInfo" #-} VkCommandPoolCrea
          }
 
 instance Storable VkCommandPoolCreateInfo where
-  sizeOf    _ = #{size      struct VkCommandPoolCreateInfo}
-  alignment _ = #{alignment struct VkCommandPoolCreateInfo}
+  sizeOf    _ = #{size      VkCommandPoolCreateInfo}
+  alignment _ = #{alignment VkCommandPoolCreateInfo}
 
   peek ptr = 
     VkCommandPoolCreateInfo
@@ -46,13 +46,13 @@ instance Storable VkCommandPoolCreateInfo where
     pokeField @"queueFamilyIndex" ptr val
 
 instance Offset "sType" VkCommandPoolCreateInfo where
-  rawOffset = #{offset struct VkCommandPoolCreateInfo, sType}
+  rawOffset = #{offset VkCommandPoolCreateInfo, sType}
 
 instance Offset "pNext" VkCommandPoolCreateInfo where
-  rawOffset = #{offset struct VkCommandPoolCreateInfo, pNext}
+  rawOffset = #{offset VkCommandPoolCreateInfo, pNext}
 
 instance Offset "flags" VkCommandPoolCreateInfo where
-  rawOffset = #{offset struct VkCommandPoolCreateInfo, flags}
+  rawOffset = #{offset VkCommandPoolCreateInfo, flags}
 
 instance Offset "queueFamilyIndex" VkCommandPoolCreateInfo where
-  rawOffset = #{offset struct VkCommandPoolCreateInfo, queueFamilyIndex}
+  rawOffset = #{offset VkCommandPoolCreateInfo, queueFamilyIndex}

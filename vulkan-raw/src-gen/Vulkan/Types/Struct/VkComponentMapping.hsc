@@ -28,8 +28,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkComponentMapping" #-} VkComponentMapping =
          }
 
 instance Storable VkComponentMapping where
-  sizeOf    _ = #{size      struct VkComponentMapping}
-  alignment _ = #{alignment struct VkComponentMapping}
+  sizeOf    _ = #{size      VkComponentMapping}
+  alignment _ = #{alignment VkComponentMapping}
 
   peek ptr = 
     VkComponentMapping
@@ -45,13 +45,13 @@ instance Storable VkComponentMapping where
     pokeField @"a" ptr val
 
 instance Offset "r" VkComponentMapping where
-  rawOffset = #{offset struct VkComponentMapping, r}
+  rawOffset = #{offset VkComponentMapping, r}
 
 instance Offset "g" VkComponentMapping where
-  rawOffset = #{offset struct VkComponentMapping, g}
+  rawOffset = #{offset VkComponentMapping, g}
 
 instance Offset "b" VkComponentMapping where
-  rawOffset = #{offset struct VkComponentMapping, b}
+  rawOffset = #{offset VkComponentMapping, b}
 
 instance Offset "a" VkComponentMapping where
-  rawOffset = #{offset struct VkComponentMapping, a}
+  rawOffset = #{offset VkComponentMapping, a}

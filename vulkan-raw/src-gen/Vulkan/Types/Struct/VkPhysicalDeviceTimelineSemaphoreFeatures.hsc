@@ -30,8 +30,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkPhysicalDeviceTimelineSemaphoreFeatures" #-}
          }
 
 instance Storable VkPhysicalDeviceTimelineSemaphoreFeatures where
-  sizeOf    _ = #{size      struct VkPhysicalDeviceTimelineSemaphoreFeatures}
-  alignment _ = #{alignment struct VkPhysicalDeviceTimelineSemaphoreFeatures}
+  sizeOf    _ = #{size      VkPhysicalDeviceTimelineSemaphoreFeatures}
+  alignment _ = #{alignment VkPhysicalDeviceTimelineSemaphoreFeatures}
 
   peek ptr = 
     VkPhysicalDeviceTimelineSemaphoreFeatures
@@ -45,13 +45,13 @@ instance Storable VkPhysicalDeviceTimelineSemaphoreFeatures where
     pokeField @"timelineSemaphore" ptr val
 
 instance Offset "sType" VkPhysicalDeviceTimelineSemaphoreFeatures where
-  rawOffset = #{offset struct VkPhysicalDeviceTimelineSemaphoreFeatures, sType}
+  rawOffset = #{offset VkPhysicalDeviceTimelineSemaphoreFeatures, sType}
 
 instance Offset "pNext" VkPhysicalDeviceTimelineSemaphoreFeatures where
-  rawOffset = #{offset struct VkPhysicalDeviceTimelineSemaphoreFeatures, pNext}
+  rawOffset = #{offset VkPhysicalDeviceTimelineSemaphoreFeatures, pNext}
 
 instance Offset "timelineSemaphore" VkPhysicalDeviceTimelineSemaphoreFeatures where
-  rawOffset = #{offset struct VkPhysicalDeviceTimelineSemaphoreFeatures, timelineSemaphore}
+  rawOffset = #{offset VkPhysicalDeviceTimelineSemaphoreFeatures, timelineSemaphore}
 
 #else
 

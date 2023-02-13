@@ -30,8 +30,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkPhysicalDeviceImagelessFramebufferFeatures" 
          }
 
 instance Storable VkPhysicalDeviceImagelessFramebufferFeatures where
-  sizeOf    _ = #{size      struct VkPhysicalDeviceImagelessFramebufferFeatures}
-  alignment _ = #{alignment struct VkPhysicalDeviceImagelessFramebufferFeatures}
+  sizeOf    _ = #{size      VkPhysicalDeviceImagelessFramebufferFeatures}
+  alignment _ = #{alignment VkPhysicalDeviceImagelessFramebufferFeatures}
 
   peek ptr = 
     VkPhysicalDeviceImagelessFramebufferFeatures
@@ -45,13 +45,13 @@ instance Storable VkPhysicalDeviceImagelessFramebufferFeatures where
     pokeField @"imagelessFramebuffer" ptr val
 
 instance Offset "sType" VkPhysicalDeviceImagelessFramebufferFeatures where
-  rawOffset = #{offset struct VkPhysicalDeviceImagelessFramebufferFeatures, sType}
+  rawOffset = #{offset VkPhysicalDeviceImagelessFramebufferFeatures, sType}
 
 instance Offset "pNext" VkPhysicalDeviceImagelessFramebufferFeatures where
-  rawOffset = #{offset struct VkPhysicalDeviceImagelessFramebufferFeatures, pNext}
+  rawOffset = #{offset VkPhysicalDeviceImagelessFramebufferFeatures, pNext}
 
 instance Offset "imagelessFramebuffer" VkPhysicalDeviceImagelessFramebufferFeatures where
-  rawOffset = #{offset struct VkPhysicalDeviceImagelessFramebufferFeatures, imagelessFramebuffer}
+  rawOffset = #{offset VkPhysicalDeviceImagelessFramebufferFeatures, imagelessFramebuffer}
 
 #else
 

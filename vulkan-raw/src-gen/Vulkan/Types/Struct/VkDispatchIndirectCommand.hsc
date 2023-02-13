@@ -26,8 +26,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkDispatchIndirectCommand" #-} VkDispatchIndir
          }
 
 instance Storable VkDispatchIndirectCommand where
-  sizeOf    _ = #{size      struct VkDispatchIndirectCommand}
-  alignment _ = #{alignment struct VkDispatchIndirectCommand}
+  sizeOf    _ = #{size      VkDispatchIndirectCommand}
+  alignment _ = #{alignment VkDispatchIndirectCommand}
 
   peek ptr = 
     VkDispatchIndirectCommand
@@ -41,10 +41,10 @@ instance Storable VkDispatchIndirectCommand where
     pokeField @"z" ptr val
 
 instance Offset "x" VkDispatchIndirectCommand where
-  rawOffset = #{offset struct VkDispatchIndirectCommand, x}
+  rawOffset = #{offset VkDispatchIndirectCommand, x}
 
 instance Offset "y" VkDispatchIndirectCommand where
-  rawOffset = #{offset struct VkDispatchIndirectCommand, y}
+  rawOffset = #{offset VkDispatchIndirectCommand, y}
 
 instance Offset "z" VkDispatchIndirectCommand where
-  rawOffset = #{offset struct VkDispatchIndirectCommand, z}
+  rawOffset = #{offset VkDispatchIndirectCommand, z}

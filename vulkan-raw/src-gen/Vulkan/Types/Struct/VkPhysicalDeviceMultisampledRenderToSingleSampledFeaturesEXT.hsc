@@ -30,8 +30,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkPhysicalDeviceMultisampledRenderToSingleSamp
          }
 
 instance Storable VkPhysicalDeviceMultisampledRenderToSingleSampledFeaturesEXT where
-  sizeOf    _ = #{size      struct VkPhysicalDeviceMultisampledRenderToSingleSampledFeaturesEXT}
-  alignment _ = #{alignment struct VkPhysicalDeviceMultisampledRenderToSingleSampledFeaturesEXT}
+  sizeOf    _ = #{size      VkPhysicalDeviceMultisampledRenderToSingleSampledFeaturesEXT}
+  alignment _ = #{alignment VkPhysicalDeviceMultisampledRenderToSingleSampledFeaturesEXT}
 
   peek ptr = 
     VkPhysicalDeviceMultisampledRenderToSingleSampledFeaturesEXT
@@ -45,13 +45,13 @@ instance Storable VkPhysicalDeviceMultisampledRenderToSingleSampledFeaturesEXT w
     pokeField @"multisampledRenderToSingleSampled" ptr val
 
 instance Offset "sType" VkPhysicalDeviceMultisampledRenderToSingleSampledFeaturesEXT where
-  rawOffset = #{offset struct VkPhysicalDeviceMultisampledRenderToSingleSampledFeaturesEXT, sType}
+  rawOffset = #{offset VkPhysicalDeviceMultisampledRenderToSingleSampledFeaturesEXT, sType}
 
 instance Offset "pNext" VkPhysicalDeviceMultisampledRenderToSingleSampledFeaturesEXT where
-  rawOffset = #{offset struct VkPhysicalDeviceMultisampledRenderToSingleSampledFeaturesEXT, pNext}
+  rawOffset = #{offset VkPhysicalDeviceMultisampledRenderToSingleSampledFeaturesEXT, pNext}
 
 instance Offset "multisampledRenderToSingleSampled" VkPhysicalDeviceMultisampledRenderToSingleSampledFeaturesEXT where
-  rawOffset = #{offset struct VkPhysicalDeviceMultisampledRenderToSingleSampledFeaturesEXT, multisampledRenderToSingleSampled}
+  rawOffset = #{offset VkPhysicalDeviceMultisampledRenderToSingleSampledFeaturesEXT, multisampledRenderToSingleSampled}
 
 #else
 

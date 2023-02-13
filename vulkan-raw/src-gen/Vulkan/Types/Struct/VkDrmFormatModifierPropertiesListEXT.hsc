@@ -31,8 +31,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkDrmFormatModifierPropertiesListEXT" #-} VkDr
          }
 
 instance Storable VkDrmFormatModifierPropertiesListEXT where
-  sizeOf    _ = #{size      struct VkDrmFormatModifierPropertiesListEXT}
-  alignment _ = #{alignment struct VkDrmFormatModifierPropertiesListEXT}
+  sizeOf    _ = #{size      VkDrmFormatModifierPropertiesListEXT}
+  alignment _ = #{alignment VkDrmFormatModifierPropertiesListEXT}
 
   peek ptr = 
     VkDrmFormatModifierPropertiesListEXT
@@ -48,16 +48,16 @@ instance Storable VkDrmFormatModifierPropertiesListEXT where
     pokeField @"pDrmFormatModifierProperties" ptr val
 
 instance Offset "sType" VkDrmFormatModifierPropertiesListEXT where
-  rawOffset = #{offset struct VkDrmFormatModifierPropertiesListEXT, sType}
+  rawOffset = #{offset VkDrmFormatModifierPropertiesListEXT, sType}
 
 instance Offset "pNext" VkDrmFormatModifierPropertiesListEXT where
-  rawOffset = #{offset struct VkDrmFormatModifierPropertiesListEXT, pNext}
+  rawOffset = #{offset VkDrmFormatModifierPropertiesListEXT, pNext}
 
 instance Offset "drmFormatModifierCount" VkDrmFormatModifierPropertiesListEXT where
-  rawOffset = #{offset struct VkDrmFormatModifierPropertiesListEXT, drmFormatModifierCount}
+  rawOffset = #{offset VkDrmFormatModifierPropertiesListEXT, drmFormatModifierCount}
 
 instance Offset "pDrmFormatModifierProperties" VkDrmFormatModifierPropertiesListEXT where
-  rawOffset = #{offset struct VkDrmFormatModifierPropertiesListEXT, pDrmFormatModifierProperties}
+  rawOffset = #{offset VkDrmFormatModifierPropertiesListEXT, pDrmFormatModifierProperties}
 
 #else
 

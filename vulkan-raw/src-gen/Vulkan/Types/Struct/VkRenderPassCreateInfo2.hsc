@@ -41,8 +41,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkRenderPassCreateInfo2" #-} VkRenderPassCreat
          }
 
 instance Storable VkRenderPassCreateInfo2 where
-  sizeOf    _ = #{size      struct VkRenderPassCreateInfo2}
-  alignment _ = #{alignment struct VkRenderPassCreateInfo2}
+  sizeOf    _ = #{size      VkRenderPassCreateInfo2}
+  alignment _ = #{alignment VkRenderPassCreateInfo2}
 
   peek ptr = 
     VkRenderPassCreateInfo2
@@ -72,37 +72,37 @@ instance Storable VkRenderPassCreateInfo2 where
     pokeField @"pCorrelatedViewMasks" ptr val
 
 instance Offset "sType" VkRenderPassCreateInfo2 where
-  rawOffset = #{offset struct VkRenderPassCreateInfo2, sType}
+  rawOffset = #{offset VkRenderPassCreateInfo2, sType}
 
 instance Offset "pNext" VkRenderPassCreateInfo2 where
-  rawOffset = #{offset struct VkRenderPassCreateInfo2, pNext}
+  rawOffset = #{offset VkRenderPassCreateInfo2, pNext}
 
 instance Offset "flags" VkRenderPassCreateInfo2 where
-  rawOffset = #{offset struct VkRenderPassCreateInfo2, flags}
+  rawOffset = #{offset VkRenderPassCreateInfo2, flags}
 
 instance Offset "attachmentCount" VkRenderPassCreateInfo2 where
-  rawOffset = #{offset struct VkRenderPassCreateInfo2, attachmentCount}
+  rawOffset = #{offset VkRenderPassCreateInfo2, attachmentCount}
 
 instance Offset "pAttachments" VkRenderPassCreateInfo2 where
-  rawOffset = #{offset struct VkRenderPassCreateInfo2, pAttachments}
+  rawOffset = #{offset VkRenderPassCreateInfo2, pAttachments}
 
 instance Offset "subpassCount" VkRenderPassCreateInfo2 where
-  rawOffset = #{offset struct VkRenderPassCreateInfo2, subpassCount}
+  rawOffset = #{offset VkRenderPassCreateInfo2, subpassCount}
 
 instance Offset "pSubpasses" VkRenderPassCreateInfo2 where
-  rawOffset = #{offset struct VkRenderPassCreateInfo2, pSubpasses}
+  rawOffset = #{offset VkRenderPassCreateInfo2, pSubpasses}
 
 instance Offset "dependencyCount" VkRenderPassCreateInfo2 where
-  rawOffset = #{offset struct VkRenderPassCreateInfo2, dependencyCount}
+  rawOffset = #{offset VkRenderPassCreateInfo2, dependencyCount}
 
 instance Offset "pDependencies" VkRenderPassCreateInfo2 where
-  rawOffset = #{offset struct VkRenderPassCreateInfo2, pDependencies}
+  rawOffset = #{offset VkRenderPassCreateInfo2, pDependencies}
 
 instance Offset "correlatedViewMaskCount" VkRenderPassCreateInfo2 where
-  rawOffset = #{offset struct VkRenderPassCreateInfo2, correlatedViewMaskCount}
+  rawOffset = #{offset VkRenderPassCreateInfo2, correlatedViewMaskCount}
 
 instance Offset "pCorrelatedViewMasks" VkRenderPassCreateInfo2 where
-  rawOffset = #{offset struct VkRenderPassCreateInfo2, pCorrelatedViewMasks}
+  rawOffset = #{offset VkRenderPassCreateInfo2, pCorrelatedViewMasks}
 
 #else
 

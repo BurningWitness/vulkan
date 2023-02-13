@@ -30,8 +30,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkPhysicalDeviceInheritedViewportScissorFeatur
          }
 
 instance Storable VkPhysicalDeviceInheritedViewportScissorFeaturesNV where
-  sizeOf    _ = #{size      struct VkPhysicalDeviceInheritedViewportScissorFeaturesNV}
-  alignment _ = #{alignment struct VkPhysicalDeviceInheritedViewportScissorFeaturesNV}
+  sizeOf    _ = #{size      VkPhysicalDeviceInheritedViewportScissorFeaturesNV}
+  alignment _ = #{alignment VkPhysicalDeviceInheritedViewportScissorFeaturesNV}
 
   peek ptr = 
     VkPhysicalDeviceInheritedViewportScissorFeaturesNV
@@ -45,13 +45,13 @@ instance Storable VkPhysicalDeviceInheritedViewportScissorFeaturesNV where
     pokeField @"inheritedViewportScissor2D" ptr val
 
 instance Offset "sType" VkPhysicalDeviceInheritedViewportScissorFeaturesNV where
-  rawOffset = #{offset struct VkPhysicalDeviceInheritedViewportScissorFeaturesNV, sType}
+  rawOffset = #{offset VkPhysicalDeviceInheritedViewportScissorFeaturesNV, sType}
 
 instance Offset "pNext" VkPhysicalDeviceInheritedViewportScissorFeaturesNV where
-  rawOffset = #{offset struct VkPhysicalDeviceInheritedViewportScissorFeaturesNV, pNext}
+  rawOffset = #{offset VkPhysicalDeviceInheritedViewportScissorFeaturesNV, pNext}
 
 instance Offset "inheritedViewportScissor2D" VkPhysicalDeviceInheritedViewportScissorFeaturesNV where
-  rawOffset = #{offset struct VkPhysicalDeviceInheritedViewportScissorFeaturesNV, inheritedViewportScissor2D}
+  rawOffset = #{offset VkPhysicalDeviceInheritedViewportScissorFeaturesNV, inheritedViewportScissor2D}
 
 #else
 

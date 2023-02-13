@@ -31,8 +31,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkDeviceGroupDeviceCreateInfo" #-} VkDeviceGro
          }
 
 instance Storable VkDeviceGroupDeviceCreateInfo where
-  sizeOf    _ = #{size      struct VkDeviceGroupDeviceCreateInfo}
-  alignment _ = #{alignment struct VkDeviceGroupDeviceCreateInfo}
+  sizeOf    _ = #{size      VkDeviceGroupDeviceCreateInfo}
+  alignment _ = #{alignment VkDeviceGroupDeviceCreateInfo}
 
   peek ptr = 
     VkDeviceGroupDeviceCreateInfo
@@ -48,16 +48,16 @@ instance Storable VkDeviceGroupDeviceCreateInfo where
     pokeField @"pPhysicalDevices" ptr val
 
 instance Offset "sType" VkDeviceGroupDeviceCreateInfo where
-  rawOffset = #{offset struct VkDeviceGroupDeviceCreateInfo, sType}
+  rawOffset = #{offset VkDeviceGroupDeviceCreateInfo, sType}
 
 instance Offset "pNext" VkDeviceGroupDeviceCreateInfo where
-  rawOffset = #{offset struct VkDeviceGroupDeviceCreateInfo, pNext}
+  rawOffset = #{offset VkDeviceGroupDeviceCreateInfo, pNext}
 
 instance Offset "physicalDeviceCount" VkDeviceGroupDeviceCreateInfo where
-  rawOffset = #{offset struct VkDeviceGroupDeviceCreateInfo, physicalDeviceCount}
+  rawOffset = #{offset VkDeviceGroupDeviceCreateInfo, physicalDeviceCount}
 
 instance Offset "pPhysicalDevices" VkDeviceGroupDeviceCreateInfo where
-  rawOffset = #{offset struct VkDeviceGroupDeviceCreateInfo, pPhysicalDevices}
+  rawOffset = #{offset VkDeviceGroupDeviceCreateInfo, pPhysicalDevices}
 
 #else
 

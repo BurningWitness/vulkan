@@ -29,8 +29,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkPipelinePropertiesIdentifierEXT" #-} VkPipel
          }
 
 instance Storable VkPipelinePropertiesIdentifierEXT where
-  sizeOf    _ = #{size      struct VkPipelinePropertiesIdentifierEXT}
-  alignment _ = #{alignment struct VkPipelinePropertiesIdentifierEXT}
+  sizeOf    _ = #{size      VkPipelinePropertiesIdentifierEXT}
+  alignment _ = #{alignment VkPipelinePropertiesIdentifierEXT}
 
   peek ptr = 
     VkPipelinePropertiesIdentifierEXT
@@ -44,13 +44,13 @@ instance Storable VkPipelinePropertiesIdentifierEXT where
     pokeField @"pipelineIdentifier" ptr val
 
 instance Offset "sType" VkPipelinePropertiesIdentifierEXT where
-  rawOffset = #{offset struct VkPipelinePropertiesIdentifierEXT, sType}
+  rawOffset = #{offset VkPipelinePropertiesIdentifierEXT, sType}
 
 instance Offset "pNext" VkPipelinePropertiesIdentifierEXT where
-  rawOffset = #{offset struct VkPipelinePropertiesIdentifierEXT, pNext}
+  rawOffset = #{offset VkPipelinePropertiesIdentifierEXT, pNext}
 
 instance Offset "pipelineIdentifier" VkPipelinePropertiesIdentifierEXT where
-  rawOffset = #{offset struct VkPipelinePropertiesIdentifierEXT, pipelineIdentifier}
+  rawOffset = #{offset VkPipelinePropertiesIdentifierEXT, pipelineIdentifier}
 
 #else
 

@@ -49,8 +49,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkPhysicalDeviceDescriptorIndexingFeatures" #-
          }
 
 instance Storable VkPhysicalDeviceDescriptorIndexingFeatures where
-  sizeOf    _ = #{size      struct VkPhysicalDeviceDescriptorIndexingFeatures}
-  alignment _ = #{alignment struct VkPhysicalDeviceDescriptorIndexingFeatures}
+  sizeOf    _ = #{size      VkPhysicalDeviceDescriptorIndexingFeatures}
+  alignment _ = #{alignment VkPhysicalDeviceDescriptorIndexingFeatures}
 
   peek ptr = 
     VkPhysicalDeviceDescriptorIndexingFeatures
@@ -102,70 +102,70 @@ instance Storable VkPhysicalDeviceDescriptorIndexingFeatures where
     pokeField @"runtimeDescriptorArray" ptr val
 
 instance Offset "sType" VkPhysicalDeviceDescriptorIndexingFeatures where
-  rawOffset = #{offset struct VkPhysicalDeviceDescriptorIndexingFeatures, sType}
+  rawOffset = #{offset VkPhysicalDeviceDescriptorIndexingFeatures, sType}
 
 instance Offset "pNext" VkPhysicalDeviceDescriptorIndexingFeatures where
-  rawOffset = #{offset struct VkPhysicalDeviceDescriptorIndexingFeatures, pNext}
+  rawOffset = #{offset VkPhysicalDeviceDescriptorIndexingFeatures, pNext}
 
 instance Offset "shaderInputAttachmentArrayDynamicIndexing" VkPhysicalDeviceDescriptorIndexingFeatures where
-  rawOffset = #{offset struct VkPhysicalDeviceDescriptorIndexingFeatures, shaderInputAttachmentArrayDynamicIndexing}
+  rawOffset = #{offset VkPhysicalDeviceDescriptorIndexingFeatures, shaderInputAttachmentArrayDynamicIndexing}
 
 instance Offset "shaderUniformTexelBufferArrayDynamicIndexing" VkPhysicalDeviceDescriptorIndexingFeatures where
-  rawOffset = #{offset struct VkPhysicalDeviceDescriptorIndexingFeatures, shaderUniformTexelBufferArrayDynamicIndexing}
+  rawOffset = #{offset VkPhysicalDeviceDescriptorIndexingFeatures, shaderUniformTexelBufferArrayDynamicIndexing}
 
 instance Offset "shaderStorageTexelBufferArrayDynamicIndexing" VkPhysicalDeviceDescriptorIndexingFeatures where
-  rawOffset = #{offset struct VkPhysicalDeviceDescriptorIndexingFeatures, shaderStorageTexelBufferArrayDynamicIndexing}
+  rawOffset = #{offset VkPhysicalDeviceDescriptorIndexingFeatures, shaderStorageTexelBufferArrayDynamicIndexing}
 
 instance Offset "shaderUniformBufferArrayNonUniformIndexing" VkPhysicalDeviceDescriptorIndexingFeatures where
-  rawOffset = #{offset struct VkPhysicalDeviceDescriptorIndexingFeatures, shaderUniformBufferArrayNonUniformIndexing}
+  rawOffset = #{offset VkPhysicalDeviceDescriptorIndexingFeatures, shaderUniformBufferArrayNonUniformIndexing}
 
 instance Offset "shaderSampledImageArrayNonUniformIndexing" VkPhysicalDeviceDescriptorIndexingFeatures where
-  rawOffset = #{offset struct VkPhysicalDeviceDescriptorIndexingFeatures, shaderSampledImageArrayNonUniformIndexing}
+  rawOffset = #{offset VkPhysicalDeviceDescriptorIndexingFeatures, shaderSampledImageArrayNonUniformIndexing}
 
 instance Offset "shaderStorageBufferArrayNonUniformIndexing" VkPhysicalDeviceDescriptorIndexingFeatures where
-  rawOffset = #{offset struct VkPhysicalDeviceDescriptorIndexingFeatures, shaderStorageBufferArrayNonUniformIndexing}
+  rawOffset = #{offset VkPhysicalDeviceDescriptorIndexingFeatures, shaderStorageBufferArrayNonUniformIndexing}
 
 instance Offset "shaderStorageImageArrayNonUniformIndexing" VkPhysicalDeviceDescriptorIndexingFeatures where
-  rawOffset = #{offset struct VkPhysicalDeviceDescriptorIndexingFeatures, shaderStorageImageArrayNonUniformIndexing}
+  rawOffset = #{offset VkPhysicalDeviceDescriptorIndexingFeatures, shaderStorageImageArrayNonUniformIndexing}
 
 instance Offset "shaderInputAttachmentArrayNonUniformIndexing" VkPhysicalDeviceDescriptorIndexingFeatures where
-  rawOffset = #{offset struct VkPhysicalDeviceDescriptorIndexingFeatures, shaderInputAttachmentArrayNonUniformIndexing}
+  rawOffset = #{offset VkPhysicalDeviceDescriptorIndexingFeatures, shaderInputAttachmentArrayNonUniformIndexing}
 
 instance Offset "shaderUniformTexelBufferArrayNonUniformIndexing" VkPhysicalDeviceDescriptorIndexingFeatures where
-  rawOffset = #{offset struct VkPhysicalDeviceDescriptorIndexingFeatures, shaderUniformTexelBufferArrayNonUniformIndexing}
+  rawOffset = #{offset VkPhysicalDeviceDescriptorIndexingFeatures, shaderUniformTexelBufferArrayNonUniformIndexing}
 
 instance Offset "shaderStorageTexelBufferArrayNonUniformIndexing" VkPhysicalDeviceDescriptorIndexingFeatures where
-  rawOffset = #{offset struct VkPhysicalDeviceDescriptorIndexingFeatures, shaderStorageTexelBufferArrayNonUniformIndexing}
+  rawOffset = #{offset VkPhysicalDeviceDescriptorIndexingFeatures, shaderStorageTexelBufferArrayNonUniformIndexing}
 
 instance Offset "descriptorBindingUniformBufferUpdateAfterBind" VkPhysicalDeviceDescriptorIndexingFeatures where
-  rawOffset = #{offset struct VkPhysicalDeviceDescriptorIndexingFeatures, descriptorBindingUniformBufferUpdateAfterBind}
+  rawOffset = #{offset VkPhysicalDeviceDescriptorIndexingFeatures, descriptorBindingUniformBufferUpdateAfterBind}
 
 instance Offset "descriptorBindingSampledImageUpdateAfterBind" VkPhysicalDeviceDescriptorIndexingFeatures where
-  rawOffset = #{offset struct VkPhysicalDeviceDescriptorIndexingFeatures, descriptorBindingSampledImageUpdateAfterBind}
+  rawOffset = #{offset VkPhysicalDeviceDescriptorIndexingFeatures, descriptorBindingSampledImageUpdateAfterBind}
 
 instance Offset "descriptorBindingStorageImageUpdateAfterBind" VkPhysicalDeviceDescriptorIndexingFeatures where
-  rawOffset = #{offset struct VkPhysicalDeviceDescriptorIndexingFeatures, descriptorBindingStorageImageUpdateAfterBind}
+  rawOffset = #{offset VkPhysicalDeviceDescriptorIndexingFeatures, descriptorBindingStorageImageUpdateAfterBind}
 
 instance Offset "descriptorBindingStorageBufferUpdateAfterBind" VkPhysicalDeviceDescriptorIndexingFeatures where
-  rawOffset = #{offset struct VkPhysicalDeviceDescriptorIndexingFeatures, descriptorBindingStorageBufferUpdateAfterBind}
+  rawOffset = #{offset VkPhysicalDeviceDescriptorIndexingFeatures, descriptorBindingStorageBufferUpdateAfterBind}
 
 instance Offset "descriptorBindingUniformTexelBufferUpdateAfterBind" VkPhysicalDeviceDescriptorIndexingFeatures where
-  rawOffset = #{offset struct VkPhysicalDeviceDescriptorIndexingFeatures, descriptorBindingUniformTexelBufferUpdateAfterBind}
+  rawOffset = #{offset VkPhysicalDeviceDescriptorIndexingFeatures, descriptorBindingUniformTexelBufferUpdateAfterBind}
 
 instance Offset "descriptorBindingStorageTexelBufferUpdateAfterBind" VkPhysicalDeviceDescriptorIndexingFeatures where
-  rawOffset = #{offset struct VkPhysicalDeviceDescriptorIndexingFeatures, descriptorBindingStorageTexelBufferUpdateAfterBind}
+  rawOffset = #{offset VkPhysicalDeviceDescriptorIndexingFeatures, descriptorBindingStorageTexelBufferUpdateAfterBind}
 
 instance Offset "descriptorBindingUpdateUnusedWhilePending" VkPhysicalDeviceDescriptorIndexingFeatures where
-  rawOffset = #{offset struct VkPhysicalDeviceDescriptorIndexingFeatures, descriptorBindingUpdateUnusedWhilePending}
+  rawOffset = #{offset VkPhysicalDeviceDescriptorIndexingFeatures, descriptorBindingUpdateUnusedWhilePending}
 
 instance Offset "descriptorBindingPartiallyBound" VkPhysicalDeviceDescriptorIndexingFeatures where
-  rawOffset = #{offset struct VkPhysicalDeviceDescriptorIndexingFeatures, descriptorBindingPartiallyBound}
+  rawOffset = #{offset VkPhysicalDeviceDescriptorIndexingFeatures, descriptorBindingPartiallyBound}
 
 instance Offset "descriptorBindingVariableDescriptorCount" VkPhysicalDeviceDescriptorIndexingFeatures where
-  rawOffset = #{offset struct VkPhysicalDeviceDescriptorIndexingFeatures, descriptorBindingVariableDescriptorCount}
+  rawOffset = #{offset VkPhysicalDeviceDescriptorIndexingFeatures, descriptorBindingVariableDescriptorCount}
 
 instance Offset "runtimeDescriptorArray" VkPhysicalDeviceDescriptorIndexingFeatures where
-  rawOffset = #{offset struct VkPhysicalDeviceDescriptorIndexingFeatures, runtimeDescriptorArray}
+  rawOffset = #{offset VkPhysicalDeviceDescriptorIndexingFeatures, runtimeDescriptorArray}
 
 #else
 

@@ -29,8 +29,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkPhysicalDeviceLineRasterizationPropertiesEXT
          }
 
 instance Storable VkPhysicalDeviceLineRasterizationPropertiesEXT where
-  sizeOf    _ = #{size      struct VkPhysicalDeviceLineRasterizationPropertiesEXT}
-  alignment _ = #{alignment struct VkPhysicalDeviceLineRasterizationPropertiesEXT}
+  sizeOf    _ = #{size      VkPhysicalDeviceLineRasterizationPropertiesEXT}
+  alignment _ = #{alignment VkPhysicalDeviceLineRasterizationPropertiesEXT}
 
   peek ptr = 
     VkPhysicalDeviceLineRasterizationPropertiesEXT
@@ -44,13 +44,13 @@ instance Storable VkPhysicalDeviceLineRasterizationPropertiesEXT where
     pokeField @"lineSubPixelPrecisionBits" ptr val
 
 instance Offset "sType" VkPhysicalDeviceLineRasterizationPropertiesEXT where
-  rawOffset = #{offset struct VkPhysicalDeviceLineRasterizationPropertiesEXT, sType}
+  rawOffset = #{offset VkPhysicalDeviceLineRasterizationPropertiesEXT, sType}
 
 instance Offset "pNext" VkPhysicalDeviceLineRasterizationPropertiesEXT where
-  rawOffset = #{offset struct VkPhysicalDeviceLineRasterizationPropertiesEXT, pNext}
+  rawOffset = #{offset VkPhysicalDeviceLineRasterizationPropertiesEXT, pNext}
 
 instance Offset "lineSubPixelPrecisionBits" VkPhysicalDeviceLineRasterizationPropertiesEXT where
-  rawOffset = #{offset struct VkPhysicalDeviceLineRasterizationPropertiesEXT, lineSubPixelPrecisionBits}
+  rawOffset = #{offset VkPhysicalDeviceLineRasterizationPropertiesEXT, lineSubPixelPrecisionBits}
 
 #else
 

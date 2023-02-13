@@ -30,8 +30,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkMultisamplePropertiesEXT" #-} VkMultisampleP
          }
 
 instance Storable VkMultisamplePropertiesEXT where
-  sizeOf    _ = #{size      struct VkMultisamplePropertiesEXT}
-  alignment _ = #{alignment struct VkMultisamplePropertiesEXT}
+  sizeOf    _ = #{size      VkMultisamplePropertiesEXT}
+  alignment _ = #{alignment VkMultisamplePropertiesEXT}
 
   peek ptr = 
     VkMultisamplePropertiesEXT
@@ -45,13 +45,13 @@ instance Storable VkMultisamplePropertiesEXT where
     pokeField @"maxSampleLocationGridSize" ptr val
 
 instance Offset "sType" VkMultisamplePropertiesEXT where
-  rawOffset = #{offset struct VkMultisamplePropertiesEXT, sType}
+  rawOffset = #{offset VkMultisamplePropertiesEXT, sType}
 
 instance Offset "pNext" VkMultisamplePropertiesEXT where
-  rawOffset = #{offset struct VkMultisamplePropertiesEXT, pNext}
+  rawOffset = #{offset VkMultisamplePropertiesEXT, pNext}
 
 instance Offset "maxSampleLocationGridSize" VkMultisamplePropertiesEXT where
-  rawOffset = #{offset struct VkMultisamplePropertiesEXT, maxSampleLocationGridSize}
+  rawOffset = #{offset VkMultisamplePropertiesEXT, maxSampleLocationGridSize}
 
 #else
 

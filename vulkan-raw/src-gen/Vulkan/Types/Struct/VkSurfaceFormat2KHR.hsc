@@ -30,8 +30,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkSurfaceFormat2KHR" #-} VkSurfaceFormat2KHR =
          }
 
 instance Storable VkSurfaceFormat2KHR where
-  sizeOf    _ = #{size      struct VkSurfaceFormat2KHR}
-  alignment _ = #{alignment struct VkSurfaceFormat2KHR}
+  sizeOf    _ = #{size      VkSurfaceFormat2KHR}
+  alignment _ = #{alignment VkSurfaceFormat2KHR}
 
   peek ptr = 
     VkSurfaceFormat2KHR
@@ -45,13 +45,13 @@ instance Storable VkSurfaceFormat2KHR where
     pokeField @"surfaceFormat" ptr val
 
 instance Offset "sType" VkSurfaceFormat2KHR where
-  rawOffset = #{offset struct VkSurfaceFormat2KHR, sType}
+  rawOffset = #{offset VkSurfaceFormat2KHR, sType}
 
 instance Offset "pNext" VkSurfaceFormat2KHR where
-  rawOffset = #{offset struct VkSurfaceFormat2KHR, pNext}
+  rawOffset = #{offset VkSurfaceFormat2KHR, pNext}
 
 instance Offset "surfaceFormat" VkSurfaceFormat2KHR where
-  rawOffset = #{offset struct VkSurfaceFormat2KHR, surfaceFormat}
+  rawOffset = #{offset VkSurfaceFormat2KHR, surfaceFormat}
 
 #else
 

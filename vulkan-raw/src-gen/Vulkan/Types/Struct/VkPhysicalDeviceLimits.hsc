@@ -131,8 +131,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkPhysicalDeviceLimits" #-} VkPhysicalDeviceLi
          }
 
 instance Storable VkPhysicalDeviceLimits where
-  sizeOf    _ = #{size      struct VkPhysicalDeviceLimits}
-  alignment _ = #{alignment struct VkPhysicalDeviceLimits}
+  sizeOf    _ = #{size      VkPhysicalDeviceLimits}
+  alignment _ = #{alignment VkPhysicalDeviceLimits}
 
   peek ptr = 
     VkPhysicalDeviceLimits
@@ -352,319 +352,319 @@ instance Storable VkPhysicalDeviceLimits where
     pokeField @"nonCoherentAtomSize" ptr val
 
 instance Offset "maxImageDimension1D" VkPhysicalDeviceLimits where
-  rawOffset = #{offset struct VkPhysicalDeviceLimits, maxImageDimension1D}
+  rawOffset = #{offset VkPhysicalDeviceLimits, maxImageDimension1D}
 
 instance Offset "maxImageDimension2D" VkPhysicalDeviceLimits where
-  rawOffset = #{offset struct VkPhysicalDeviceLimits, maxImageDimension2D}
+  rawOffset = #{offset VkPhysicalDeviceLimits, maxImageDimension2D}
 
 instance Offset "maxImageDimension3D" VkPhysicalDeviceLimits where
-  rawOffset = #{offset struct VkPhysicalDeviceLimits, maxImageDimension3D}
+  rawOffset = #{offset VkPhysicalDeviceLimits, maxImageDimension3D}
 
 instance Offset "maxImageDimensionCube" VkPhysicalDeviceLimits where
-  rawOffset = #{offset struct VkPhysicalDeviceLimits, maxImageDimensionCube}
+  rawOffset = #{offset VkPhysicalDeviceLimits, maxImageDimensionCube}
 
 instance Offset "maxImageArrayLayers" VkPhysicalDeviceLimits where
-  rawOffset = #{offset struct VkPhysicalDeviceLimits, maxImageArrayLayers}
+  rawOffset = #{offset VkPhysicalDeviceLimits, maxImageArrayLayers}
 
 instance Offset "maxTexelBufferElements" VkPhysicalDeviceLimits where
-  rawOffset = #{offset struct VkPhysicalDeviceLimits, maxTexelBufferElements}
+  rawOffset = #{offset VkPhysicalDeviceLimits, maxTexelBufferElements}
 
 instance Offset "maxUniformBufferRange" VkPhysicalDeviceLimits where
-  rawOffset = #{offset struct VkPhysicalDeviceLimits, maxUniformBufferRange}
+  rawOffset = #{offset VkPhysicalDeviceLimits, maxUniformBufferRange}
 
 instance Offset "maxStorageBufferRange" VkPhysicalDeviceLimits where
-  rawOffset = #{offset struct VkPhysicalDeviceLimits, maxStorageBufferRange}
+  rawOffset = #{offset VkPhysicalDeviceLimits, maxStorageBufferRange}
 
 instance Offset "maxPushConstantsSize" VkPhysicalDeviceLimits where
-  rawOffset = #{offset struct VkPhysicalDeviceLimits, maxPushConstantsSize}
+  rawOffset = #{offset VkPhysicalDeviceLimits, maxPushConstantsSize}
 
 instance Offset "maxMemoryAllocationCount" VkPhysicalDeviceLimits where
-  rawOffset = #{offset struct VkPhysicalDeviceLimits, maxMemoryAllocationCount}
+  rawOffset = #{offset VkPhysicalDeviceLimits, maxMemoryAllocationCount}
 
 instance Offset "maxSamplerAllocationCount" VkPhysicalDeviceLimits where
-  rawOffset = #{offset struct VkPhysicalDeviceLimits, maxSamplerAllocationCount}
+  rawOffset = #{offset VkPhysicalDeviceLimits, maxSamplerAllocationCount}
 
 instance Offset "bufferImageGranularity" VkPhysicalDeviceLimits where
-  rawOffset = #{offset struct VkPhysicalDeviceLimits, bufferImageGranularity}
+  rawOffset = #{offset VkPhysicalDeviceLimits, bufferImageGranularity}
 
 instance Offset "sparseAddressSpaceSize" VkPhysicalDeviceLimits where
-  rawOffset = #{offset struct VkPhysicalDeviceLimits, sparseAddressSpaceSize}
+  rawOffset = #{offset VkPhysicalDeviceLimits, sparseAddressSpaceSize}
 
 instance Offset "maxBoundDescriptorSets" VkPhysicalDeviceLimits where
-  rawOffset = #{offset struct VkPhysicalDeviceLimits, maxBoundDescriptorSets}
+  rawOffset = #{offset VkPhysicalDeviceLimits, maxBoundDescriptorSets}
 
 instance Offset "maxPerStageDescriptorSamplers" VkPhysicalDeviceLimits where
-  rawOffset = #{offset struct VkPhysicalDeviceLimits, maxPerStageDescriptorSamplers}
+  rawOffset = #{offset VkPhysicalDeviceLimits, maxPerStageDescriptorSamplers}
 
 instance Offset "maxPerStageDescriptorUniformBuffers" VkPhysicalDeviceLimits where
-  rawOffset = #{offset struct VkPhysicalDeviceLimits, maxPerStageDescriptorUniformBuffers}
+  rawOffset = #{offset VkPhysicalDeviceLimits, maxPerStageDescriptorUniformBuffers}
 
 instance Offset "maxPerStageDescriptorStorageBuffers" VkPhysicalDeviceLimits where
-  rawOffset = #{offset struct VkPhysicalDeviceLimits, maxPerStageDescriptorStorageBuffers}
+  rawOffset = #{offset VkPhysicalDeviceLimits, maxPerStageDescriptorStorageBuffers}
 
 instance Offset "maxPerStageDescriptorSampledImages" VkPhysicalDeviceLimits where
-  rawOffset = #{offset struct VkPhysicalDeviceLimits, maxPerStageDescriptorSampledImages}
+  rawOffset = #{offset VkPhysicalDeviceLimits, maxPerStageDescriptorSampledImages}
 
 instance Offset "maxPerStageDescriptorStorageImages" VkPhysicalDeviceLimits where
-  rawOffset = #{offset struct VkPhysicalDeviceLimits, maxPerStageDescriptorStorageImages}
+  rawOffset = #{offset VkPhysicalDeviceLimits, maxPerStageDescriptorStorageImages}
 
 instance Offset "maxPerStageDescriptorInputAttachments" VkPhysicalDeviceLimits where
-  rawOffset = #{offset struct VkPhysicalDeviceLimits, maxPerStageDescriptorInputAttachments}
+  rawOffset = #{offset VkPhysicalDeviceLimits, maxPerStageDescriptorInputAttachments}
 
 instance Offset "maxPerStageResources" VkPhysicalDeviceLimits where
-  rawOffset = #{offset struct VkPhysicalDeviceLimits, maxPerStageResources}
+  rawOffset = #{offset VkPhysicalDeviceLimits, maxPerStageResources}
 
 instance Offset "maxDescriptorSetSamplers" VkPhysicalDeviceLimits where
-  rawOffset = #{offset struct VkPhysicalDeviceLimits, maxDescriptorSetSamplers}
+  rawOffset = #{offset VkPhysicalDeviceLimits, maxDescriptorSetSamplers}
 
 instance Offset "maxDescriptorSetUniformBuffers" VkPhysicalDeviceLimits where
-  rawOffset = #{offset struct VkPhysicalDeviceLimits, maxDescriptorSetUniformBuffers}
+  rawOffset = #{offset VkPhysicalDeviceLimits, maxDescriptorSetUniformBuffers}
 
 instance Offset "maxDescriptorSetUniformBuffersDynamic" VkPhysicalDeviceLimits where
-  rawOffset = #{offset struct VkPhysicalDeviceLimits, maxDescriptorSetUniformBuffersDynamic}
+  rawOffset = #{offset VkPhysicalDeviceLimits, maxDescriptorSetUniformBuffersDynamic}
 
 instance Offset "maxDescriptorSetStorageBuffers" VkPhysicalDeviceLimits where
-  rawOffset = #{offset struct VkPhysicalDeviceLimits, maxDescriptorSetStorageBuffers}
+  rawOffset = #{offset VkPhysicalDeviceLimits, maxDescriptorSetStorageBuffers}
 
 instance Offset "maxDescriptorSetStorageBuffersDynamic" VkPhysicalDeviceLimits where
-  rawOffset = #{offset struct VkPhysicalDeviceLimits, maxDescriptorSetStorageBuffersDynamic}
+  rawOffset = #{offset VkPhysicalDeviceLimits, maxDescriptorSetStorageBuffersDynamic}
 
 instance Offset "maxDescriptorSetSampledImages" VkPhysicalDeviceLimits where
-  rawOffset = #{offset struct VkPhysicalDeviceLimits, maxDescriptorSetSampledImages}
+  rawOffset = #{offset VkPhysicalDeviceLimits, maxDescriptorSetSampledImages}
 
 instance Offset "maxDescriptorSetStorageImages" VkPhysicalDeviceLimits where
-  rawOffset = #{offset struct VkPhysicalDeviceLimits, maxDescriptorSetStorageImages}
+  rawOffset = #{offset VkPhysicalDeviceLimits, maxDescriptorSetStorageImages}
 
 instance Offset "maxDescriptorSetInputAttachments" VkPhysicalDeviceLimits where
-  rawOffset = #{offset struct VkPhysicalDeviceLimits, maxDescriptorSetInputAttachments}
+  rawOffset = #{offset VkPhysicalDeviceLimits, maxDescriptorSetInputAttachments}
 
 instance Offset "maxVertexInputAttributes" VkPhysicalDeviceLimits where
-  rawOffset = #{offset struct VkPhysicalDeviceLimits, maxVertexInputAttributes}
+  rawOffset = #{offset VkPhysicalDeviceLimits, maxVertexInputAttributes}
 
 instance Offset "maxVertexInputBindings" VkPhysicalDeviceLimits where
-  rawOffset = #{offset struct VkPhysicalDeviceLimits, maxVertexInputBindings}
+  rawOffset = #{offset VkPhysicalDeviceLimits, maxVertexInputBindings}
 
 instance Offset "maxVertexInputAttributeOffset" VkPhysicalDeviceLimits where
-  rawOffset = #{offset struct VkPhysicalDeviceLimits, maxVertexInputAttributeOffset}
+  rawOffset = #{offset VkPhysicalDeviceLimits, maxVertexInputAttributeOffset}
 
 instance Offset "maxVertexInputBindingStride" VkPhysicalDeviceLimits where
-  rawOffset = #{offset struct VkPhysicalDeviceLimits, maxVertexInputBindingStride}
+  rawOffset = #{offset VkPhysicalDeviceLimits, maxVertexInputBindingStride}
 
 instance Offset "maxVertexOutputComponents" VkPhysicalDeviceLimits where
-  rawOffset = #{offset struct VkPhysicalDeviceLimits, maxVertexOutputComponents}
+  rawOffset = #{offset VkPhysicalDeviceLimits, maxVertexOutputComponents}
 
 instance Offset "maxTessellationGenerationLevel" VkPhysicalDeviceLimits where
-  rawOffset = #{offset struct VkPhysicalDeviceLimits, maxTessellationGenerationLevel}
+  rawOffset = #{offset VkPhysicalDeviceLimits, maxTessellationGenerationLevel}
 
 instance Offset "maxTessellationPatchSize" VkPhysicalDeviceLimits where
-  rawOffset = #{offset struct VkPhysicalDeviceLimits, maxTessellationPatchSize}
+  rawOffset = #{offset VkPhysicalDeviceLimits, maxTessellationPatchSize}
 
 instance Offset "maxTessellationControlPerVertexInputComponents" VkPhysicalDeviceLimits where
-  rawOffset = #{offset struct VkPhysicalDeviceLimits, maxTessellationControlPerVertexInputComponents}
+  rawOffset = #{offset VkPhysicalDeviceLimits, maxTessellationControlPerVertexInputComponents}
 
 instance Offset "maxTessellationControlPerVertexOutputComponents" VkPhysicalDeviceLimits where
-  rawOffset = #{offset struct VkPhysicalDeviceLimits, maxTessellationControlPerVertexOutputComponents}
+  rawOffset = #{offset VkPhysicalDeviceLimits, maxTessellationControlPerVertexOutputComponents}
 
 instance Offset "maxTessellationControlPerPatchOutputComponents" VkPhysicalDeviceLimits where
-  rawOffset = #{offset struct VkPhysicalDeviceLimits, maxTessellationControlPerPatchOutputComponents}
+  rawOffset = #{offset VkPhysicalDeviceLimits, maxTessellationControlPerPatchOutputComponents}
 
 instance Offset "maxTessellationControlTotalOutputComponents" VkPhysicalDeviceLimits where
-  rawOffset = #{offset struct VkPhysicalDeviceLimits, maxTessellationControlTotalOutputComponents}
+  rawOffset = #{offset VkPhysicalDeviceLimits, maxTessellationControlTotalOutputComponents}
 
 instance Offset "maxTessellationEvaluationInputComponents" VkPhysicalDeviceLimits where
-  rawOffset = #{offset struct VkPhysicalDeviceLimits, maxTessellationEvaluationInputComponents}
+  rawOffset = #{offset VkPhysicalDeviceLimits, maxTessellationEvaluationInputComponents}
 
 instance Offset "maxTessellationEvaluationOutputComponents" VkPhysicalDeviceLimits where
-  rawOffset = #{offset struct VkPhysicalDeviceLimits, maxTessellationEvaluationOutputComponents}
+  rawOffset = #{offset VkPhysicalDeviceLimits, maxTessellationEvaluationOutputComponents}
 
 instance Offset "maxGeometryShaderInvocations" VkPhysicalDeviceLimits where
-  rawOffset = #{offset struct VkPhysicalDeviceLimits, maxGeometryShaderInvocations}
+  rawOffset = #{offset VkPhysicalDeviceLimits, maxGeometryShaderInvocations}
 
 instance Offset "maxGeometryInputComponents" VkPhysicalDeviceLimits where
-  rawOffset = #{offset struct VkPhysicalDeviceLimits, maxGeometryInputComponents}
+  rawOffset = #{offset VkPhysicalDeviceLimits, maxGeometryInputComponents}
 
 instance Offset "maxGeometryOutputComponents" VkPhysicalDeviceLimits where
-  rawOffset = #{offset struct VkPhysicalDeviceLimits, maxGeometryOutputComponents}
+  rawOffset = #{offset VkPhysicalDeviceLimits, maxGeometryOutputComponents}
 
 instance Offset "maxGeometryOutputVertices" VkPhysicalDeviceLimits where
-  rawOffset = #{offset struct VkPhysicalDeviceLimits, maxGeometryOutputVertices}
+  rawOffset = #{offset VkPhysicalDeviceLimits, maxGeometryOutputVertices}
 
 instance Offset "maxGeometryTotalOutputComponents" VkPhysicalDeviceLimits where
-  rawOffset = #{offset struct VkPhysicalDeviceLimits, maxGeometryTotalOutputComponents}
+  rawOffset = #{offset VkPhysicalDeviceLimits, maxGeometryTotalOutputComponents}
 
 instance Offset "maxFragmentInputComponents" VkPhysicalDeviceLimits where
-  rawOffset = #{offset struct VkPhysicalDeviceLimits, maxFragmentInputComponents}
+  rawOffset = #{offset VkPhysicalDeviceLimits, maxFragmentInputComponents}
 
 instance Offset "maxFragmentOutputAttachments" VkPhysicalDeviceLimits where
-  rawOffset = #{offset struct VkPhysicalDeviceLimits, maxFragmentOutputAttachments}
+  rawOffset = #{offset VkPhysicalDeviceLimits, maxFragmentOutputAttachments}
 
 instance Offset "maxFragmentDualSrcAttachments" VkPhysicalDeviceLimits where
-  rawOffset = #{offset struct VkPhysicalDeviceLimits, maxFragmentDualSrcAttachments}
+  rawOffset = #{offset VkPhysicalDeviceLimits, maxFragmentDualSrcAttachments}
 
 instance Offset "maxFragmentCombinedOutputResources" VkPhysicalDeviceLimits where
-  rawOffset = #{offset struct VkPhysicalDeviceLimits, maxFragmentCombinedOutputResources}
+  rawOffset = #{offset VkPhysicalDeviceLimits, maxFragmentCombinedOutputResources}
 
 instance Offset "maxComputeSharedMemorySize" VkPhysicalDeviceLimits where
-  rawOffset = #{offset struct VkPhysicalDeviceLimits, maxComputeSharedMemorySize}
+  rawOffset = #{offset VkPhysicalDeviceLimits, maxComputeSharedMemorySize}
 
 instance Offset "maxComputeWorkGroupCount" VkPhysicalDeviceLimits where
-  rawOffset = #{offset struct VkPhysicalDeviceLimits, maxComputeWorkGroupCount}
+  rawOffset = #{offset VkPhysicalDeviceLimits, maxComputeWorkGroupCount}
 
 instance Offset "maxComputeWorkGroupInvocations" VkPhysicalDeviceLimits where
-  rawOffset = #{offset struct VkPhysicalDeviceLimits, maxComputeWorkGroupInvocations}
+  rawOffset = #{offset VkPhysicalDeviceLimits, maxComputeWorkGroupInvocations}
 
 instance Offset "maxComputeWorkGroupSize" VkPhysicalDeviceLimits where
-  rawOffset = #{offset struct VkPhysicalDeviceLimits, maxComputeWorkGroupSize}
+  rawOffset = #{offset VkPhysicalDeviceLimits, maxComputeWorkGroupSize}
 
 instance Offset "subPixelPrecisionBits" VkPhysicalDeviceLimits where
-  rawOffset = #{offset struct VkPhysicalDeviceLimits, subPixelPrecisionBits}
+  rawOffset = #{offset VkPhysicalDeviceLimits, subPixelPrecisionBits}
 
 instance Offset "subTexelPrecisionBits" VkPhysicalDeviceLimits where
-  rawOffset = #{offset struct VkPhysicalDeviceLimits, subTexelPrecisionBits}
+  rawOffset = #{offset VkPhysicalDeviceLimits, subTexelPrecisionBits}
 
 instance Offset "mipmapPrecisionBits" VkPhysicalDeviceLimits where
-  rawOffset = #{offset struct VkPhysicalDeviceLimits, mipmapPrecisionBits}
+  rawOffset = #{offset VkPhysicalDeviceLimits, mipmapPrecisionBits}
 
 instance Offset "maxDrawIndexedIndexValue" VkPhysicalDeviceLimits where
-  rawOffset = #{offset struct VkPhysicalDeviceLimits, maxDrawIndexedIndexValue}
+  rawOffset = #{offset VkPhysicalDeviceLimits, maxDrawIndexedIndexValue}
 
 instance Offset "maxDrawIndirectCount" VkPhysicalDeviceLimits where
-  rawOffset = #{offset struct VkPhysicalDeviceLimits, maxDrawIndirectCount}
+  rawOffset = #{offset VkPhysicalDeviceLimits, maxDrawIndirectCount}
 
 instance Offset "maxSamplerLodBias" VkPhysicalDeviceLimits where
-  rawOffset = #{offset struct VkPhysicalDeviceLimits, maxSamplerLodBias}
+  rawOffset = #{offset VkPhysicalDeviceLimits, maxSamplerLodBias}
 
 instance Offset "maxSamplerAnisotropy" VkPhysicalDeviceLimits where
-  rawOffset = #{offset struct VkPhysicalDeviceLimits, maxSamplerAnisotropy}
+  rawOffset = #{offset VkPhysicalDeviceLimits, maxSamplerAnisotropy}
 
 instance Offset "maxViewports" VkPhysicalDeviceLimits where
-  rawOffset = #{offset struct VkPhysicalDeviceLimits, maxViewports}
+  rawOffset = #{offset VkPhysicalDeviceLimits, maxViewports}
 
 instance Offset "maxViewportDimensions" VkPhysicalDeviceLimits where
-  rawOffset = #{offset struct VkPhysicalDeviceLimits, maxViewportDimensions}
+  rawOffset = #{offset VkPhysicalDeviceLimits, maxViewportDimensions}
 
 instance Offset "viewportBoundsRange" VkPhysicalDeviceLimits where
-  rawOffset = #{offset struct VkPhysicalDeviceLimits, viewportBoundsRange}
+  rawOffset = #{offset VkPhysicalDeviceLimits, viewportBoundsRange}
 
 instance Offset "viewportSubPixelBits" VkPhysicalDeviceLimits where
-  rawOffset = #{offset struct VkPhysicalDeviceLimits, viewportSubPixelBits}
+  rawOffset = #{offset VkPhysicalDeviceLimits, viewportSubPixelBits}
 
 instance Offset "minMemoryMapAlignment" VkPhysicalDeviceLimits where
-  rawOffset = #{offset struct VkPhysicalDeviceLimits, minMemoryMapAlignment}
+  rawOffset = #{offset VkPhysicalDeviceLimits, minMemoryMapAlignment}
 
 instance Offset "minTexelBufferOffsetAlignment" VkPhysicalDeviceLimits where
-  rawOffset = #{offset struct VkPhysicalDeviceLimits, minTexelBufferOffsetAlignment}
+  rawOffset = #{offset VkPhysicalDeviceLimits, minTexelBufferOffsetAlignment}
 
 instance Offset "minUniformBufferOffsetAlignment" VkPhysicalDeviceLimits where
-  rawOffset = #{offset struct VkPhysicalDeviceLimits, minUniformBufferOffsetAlignment}
+  rawOffset = #{offset VkPhysicalDeviceLimits, minUniformBufferOffsetAlignment}
 
 instance Offset "minStorageBufferOffsetAlignment" VkPhysicalDeviceLimits where
-  rawOffset = #{offset struct VkPhysicalDeviceLimits, minStorageBufferOffsetAlignment}
+  rawOffset = #{offset VkPhysicalDeviceLimits, minStorageBufferOffsetAlignment}
 
 instance Offset "minTexelOffset" VkPhysicalDeviceLimits where
-  rawOffset = #{offset struct VkPhysicalDeviceLimits, minTexelOffset}
+  rawOffset = #{offset VkPhysicalDeviceLimits, minTexelOffset}
 
 instance Offset "maxTexelOffset" VkPhysicalDeviceLimits where
-  rawOffset = #{offset struct VkPhysicalDeviceLimits, maxTexelOffset}
+  rawOffset = #{offset VkPhysicalDeviceLimits, maxTexelOffset}
 
 instance Offset "minTexelGatherOffset" VkPhysicalDeviceLimits where
-  rawOffset = #{offset struct VkPhysicalDeviceLimits, minTexelGatherOffset}
+  rawOffset = #{offset VkPhysicalDeviceLimits, minTexelGatherOffset}
 
 instance Offset "maxTexelGatherOffset" VkPhysicalDeviceLimits where
-  rawOffset = #{offset struct VkPhysicalDeviceLimits, maxTexelGatherOffset}
+  rawOffset = #{offset VkPhysicalDeviceLimits, maxTexelGatherOffset}
 
 instance Offset "minInterpolationOffset" VkPhysicalDeviceLimits where
-  rawOffset = #{offset struct VkPhysicalDeviceLimits, minInterpolationOffset}
+  rawOffset = #{offset VkPhysicalDeviceLimits, minInterpolationOffset}
 
 instance Offset "maxInterpolationOffset" VkPhysicalDeviceLimits where
-  rawOffset = #{offset struct VkPhysicalDeviceLimits, maxInterpolationOffset}
+  rawOffset = #{offset VkPhysicalDeviceLimits, maxInterpolationOffset}
 
 instance Offset "subPixelInterpolationOffsetBits" VkPhysicalDeviceLimits where
-  rawOffset = #{offset struct VkPhysicalDeviceLimits, subPixelInterpolationOffsetBits}
+  rawOffset = #{offset VkPhysicalDeviceLimits, subPixelInterpolationOffsetBits}
 
 instance Offset "maxFramebufferWidth" VkPhysicalDeviceLimits where
-  rawOffset = #{offset struct VkPhysicalDeviceLimits, maxFramebufferWidth}
+  rawOffset = #{offset VkPhysicalDeviceLimits, maxFramebufferWidth}
 
 instance Offset "maxFramebufferHeight" VkPhysicalDeviceLimits where
-  rawOffset = #{offset struct VkPhysicalDeviceLimits, maxFramebufferHeight}
+  rawOffset = #{offset VkPhysicalDeviceLimits, maxFramebufferHeight}
 
 instance Offset "maxFramebufferLayers" VkPhysicalDeviceLimits where
-  rawOffset = #{offset struct VkPhysicalDeviceLimits, maxFramebufferLayers}
+  rawOffset = #{offset VkPhysicalDeviceLimits, maxFramebufferLayers}
 
 instance Offset "framebufferColorSampleCounts" VkPhysicalDeviceLimits where
-  rawOffset = #{offset struct VkPhysicalDeviceLimits, framebufferColorSampleCounts}
+  rawOffset = #{offset VkPhysicalDeviceLimits, framebufferColorSampleCounts}
 
 instance Offset "framebufferDepthSampleCounts" VkPhysicalDeviceLimits where
-  rawOffset = #{offset struct VkPhysicalDeviceLimits, framebufferDepthSampleCounts}
+  rawOffset = #{offset VkPhysicalDeviceLimits, framebufferDepthSampleCounts}
 
 instance Offset "framebufferStencilSampleCounts" VkPhysicalDeviceLimits where
-  rawOffset = #{offset struct VkPhysicalDeviceLimits, framebufferStencilSampleCounts}
+  rawOffset = #{offset VkPhysicalDeviceLimits, framebufferStencilSampleCounts}
 
 instance Offset "framebufferNoAttachmentsSampleCounts" VkPhysicalDeviceLimits where
-  rawOffset = #{offset struct VkPhysicalDeviceLimits, framebufferNoAttachmentsSampleCounts}
+  rawOffset = #{offset VkPhysicalDeviceLimits, framebufferNoAttachmentsSampleCounts}
 
 instance Offset "maxColorAttachments" VkPhysicalDeviceLimits where
-  rawOffset = #{offset struct VkPhysicalDeviceLimits, maxColorAttachments}
+  rawOffset = #{offset VkPhysicalDeviceLimits, maxColorAttachments}
 
 instance Offset "sampledImageColorSampleCounts" VkPhysicalDeviceLimits where
-  rawOffset = #{offset struct VkPhysicalDeviceLimits, sampledImageColorSampleCounts}
+  rawOffset = #{offset VkPhysicalDeviceLimits, sampledImageColorSampleCounts}
 
 instance Offset "sampledImageIntegerSampleCounts" VkPhysicalDeviceLimits where
-  rawOffset = #{offset struct VkPhysicalDeviceLimits, sampledImageIntegerSampleCounts}
+  rawOffset = #{offset VkPhysicalDeviceLimits, sampledImageIntegerSampleCounts}
 
 instance Offset "sampledImageDepthSampleCounts" VkPhysicalDeviceLimits where
-  rawOffset = #{offset struct VkPhysicalDeviceLimits, sampledImageDepthSampleCounts}
+  rawOffset = #{offset VkPhysicalDeviceLimits, sampledImageDepthSampleCounts}
 
 instance Offset "sampledImageStencilSampleCounts" VkPhysicalDeviceLimits where
-  rawOffset = #{offset struct VkPhysicalDeviceLimits, sampledImageStencilSampleCounts}
+  rawOffset = #{offset VkPhysicalDeviceLimits, sampledImageStencilSampleCounts}
 
 instance Offset "storageImageSampleCounts" VkPhysicalDeviceLimits where
-  rawOffset = #{offset struct VkPhysicalDeviceLimits, storageImageSampleCounts}
+  rawOffset = #{offset VkPhysicalDeviceLimits, storageImageSampleCounts}
 
 instance Offset "maxSampleMaskWords" VkPhysicalDeviceLimits where
-  rawOffset = #{offset struct VkPhysicalDeviceLimits, maxSampleMaskWords}
+  rawOffset = #{offset VkPhysicalDeviceLimits, maxSampleMaskWords}
 
 instance Offset "timestampComputeAndGraphics" VkPhysicalDeviceLimits where
-  rawOffset = #{offset struct VkPhysicalDeviceLimits, timestampComputeAndGraphics}
+  rawOffset = #{offset VkPhysicalDeviceLimits, timestampComputeAndGraphics}
 
 instance Offset "timestampPeriod" VkPhysicalDeviceLimits where
-  rawOffset = #{offset struct VkPhysicalDeviceLimits, timestampPeriod}
+  rawOffset = #{offset VkPhysicalDeviceLimits, timestampPeriod}
 
 instance Offset "maxClipDistances" VkPhysicalDeviceLimits where
-  rawOffset = #{offset struct VkPhysicalDeviceLimits, maxClipDistances}
+  rawOffset = #{offset VkPhysicalDeviceLimits, maxClipDistances}
 
 instance Offset "maxCullDistances" VkPhysicalDeviceLimits where
-  rawOffset = #{offset struct VkPhysicalDeviceLimits, maxCullDistances}
+  rawOffset = #{offset VkPhysicalDeviceLimits, maxCullDistances}
 
 instance Offset "maxCombinedClipAndCullDistances" VkPhysicalDeviceLimits where
-  rawOffset = #{offset struct VkPhysicalDeviceLimits, maxCombinedClipAndCullDistances}
+  rawOffset = #{offset VkPhysicalDeviceLimits, maxCombinedClipAndCullDistances}
 
 instance Offset "discreteQueuePriorities" VkPhysicalDeviceLimits where
-  rawOffset = #{offset struct VkPhysicalDeviceLimits, discreteQueuePriorities}
+  rawOffset = #{offset VkPhysicalDeviceLimits, discreteQueuePriorities}
 
 instance Offset "pointSizeRange" VkPhysicalDeviceLimits where
-  rawOffset = #{offset struct VkPhysicalDeviceLimits, pointSizeRange}
+  rawOffset = #{offset VkPhysicalDeviceLimits, pointSizeRange}
 
 instance Offset "lineWidthRange" VkPhysicalDeviceLimits where
-  rawOffset = #{offset struct VkPhysicalDeviceLimits, lineWidthRange}
+  rawOffset = #{offset VkPhysicalDeviceLimits, lineWidthRange}
 
 instance Offset "pointSizeGranularity" VkPhysicalDeviceLimits where
-  rawOffset = #{offset struct VkPhysicalDeviceLimits, pointSizeGranularity}
+  rawOffset = #{offset VkPhysicalDeviceLimits, pointSizeGranularity}
 
 instance Offset "lineWidthGranularity" VkPhysicalDeviceLimits where
-  rawOffset = #{offset struct VkPhysicalDeviceLimits, lineWidthGranularity}
+  rawOffset = #{offset VkPhysicalDeviceLimits, lineWidthGranularity}
 
 instance Offset "strictLines" VkPhysicalDeviceLimits where
-  rawOffset = #{offset struct VkPhysicalDeviceLimits, strictLines}
+  rawOffset = #{offset VkPhysicalDeviceLimits, strictLines}
 
 instance Offset "standardSampleLocations" VkPhysicalDeviceLimits where
-  rawOffset = #{offset struct VkPhysicalDeviceLimits, standardSampleLocations}
+  rawOffset = #{offset VkPhysicalDeviceLimits, standardSampleLocations}
 
 instance Offset "optimalBufferCopyOffsetAlignment" VkPhysicalDeviceLimits where
-  rawOffset = #{offset struct VkPhysicalDeviceLimits, optimalBufferCopyOffsetAlignment}
+  rawOffset = #{offset VkPhysicalDeviceLimits, optimalBufferCopyOffsetAlignment}
 
 instance Offset "optimalBufferCopyRowPitchAlignment" VkPhysicalDeviceLimits where
-  rawOffset = #{offset struct VkPhysicalDeviceLimits, optimalBufferCopyRowPitchAlignment}
+  rawOffset = #{offset VkPhysicalDeviceLimits, optimalBufferCopyRowPitchAlignment}
 
 instance Offset "nonCoherentAtomSize" VkPhysicalDeviceLimits where
-  rawOffset = #{offset struct VkPhysicalDeviceLimits, nonCoherentAtomSize}
+  rawOffset = #{offset VkPhysicalDeviceLimits, nonCoherentAtomSize}

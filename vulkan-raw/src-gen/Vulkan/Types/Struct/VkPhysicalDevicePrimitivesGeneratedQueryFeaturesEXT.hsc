@@ -32,8 +32,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkPhysicalDevicePrimitivesGeneratedQueryFeatur
          }
 
 instance Storable VkPhysicalDevicePrimitivesGeneratedQueryFeaturesEXT where
-  sizeOf    _ = #{size      struct VkPhysicalDevicePrimitivesGeneratedQueryFeaturesEXT}
-  alignment _ = #{alignment struct VkPhysicalDevicePrimitivesGeneratedQueryFeaturesEXT}
+  sizeOf    _ = #{size      VkPhysicalDevicePrimitivesGeneratedQueryFeaturesEXT}
+  alignment _ = #{alignment VkPhysicalDevicePrimitivesGeneratedQueryFeaturesEXT}
 
   peek ptr = 
     VkPhysicalDevicePrimitivesGeneratedQueryFeaturesEXT
@@ -51,19 +51,19 @@ instance Storable VkPhysicalDevicePrimitivesGeneratedQueryFeaturesEXT where
     pokeField @"primitivesGeneratedQueryWithNonZeroStreams" ptr val
 
 instance Offset "sType" VkPhysicalDevicePrimitivesGeneratedQueryFeaturesEXT where
-  rawOffset = #{offset struct VkPhysicalDevicePrimitivesGeneratedQueryFeaturesEXT, sType}
+  rawOffset = #{offset VkPhysicalDevicePrimitivesGeneratedQueryFeaturesEXT, sType}
 
 instance Offset "pNext" VkPhysicalDevicePrimitivesGeneratedQueryFeaturesEXT where
-  rawOffset = #{offset struct VkPhysicalDevicePrimitivesGeneratedQueryFeaturesEXT, pNext}
+  rawOffset = #{offset VkPhysicalDevicePrimitivesGeneratedQueryFeaturesEXT, pNext}
 
 instance Offset "primitivesGeneratedQuery" VkPhysicalDevicePrimitivesGeneratedQueryFeaturesEXT where
-  rawOffset = #{offset struct VkPhysicalDevicePrimitivesGeneratedQueryFeaturesEXT, primitivesGeneratedQuery}
+  rawOffset = #{offset VkPhysicalDevicePrimitivesGeneratedQueryFeaturesEXT, primitivesGeneratedQuery}
 
 instance Offset "primitivesGeneratedQueryWithRasterizerDiscard" VkPhysicalDevicePrimitivesGeneratedQueryFeaturesEXT where
-  rawOffset = #{offset struct VkPhysicalDevicePrimitivesGeneratedQueryFeaturesEXT, primitivesGeneratedQueryWithRasterizerDiscard}
+  rawOffset = #{offset VkPhysicalDevicePrimitivesGeneratedQueryFeaturesEXT, primitivesGeneratedQueryWithRasterizerDiscard}
 
 instance Offset "primitivesGeneratedQueryWithNonZeroStreams" VkPhysicalDevicePrimitivesGeneratedQueryFeaturesEXT where
-  rawOffset = #{offset struct VkPhysicalDevicePrimitivesGeneratedQueryFeaturesEXT, primitivesGeneratedQueryWithNonZeroStreams}
+  rawOffset = #{offset VkPhysicalDevicePrimitivesGeneratedQueryFeaturesEXT, primitivesGeneratedQueryWithNonZeroStreams}
 
 #else
 

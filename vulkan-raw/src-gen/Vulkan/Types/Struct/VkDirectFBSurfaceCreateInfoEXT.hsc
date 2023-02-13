@@ -33,8 +33,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkDirectFBSurfaceCreateInfoEXT" #-} VkDirectFB
          }
 
 instance Storable VkDirectFBSurfaceCreateInfoEXT where
-  sizeOf    _ = #{size      struct VkDirectFBSurfaceCreateInfoEXT}
-  alignment _ = #{alignment struct VkDirectFBSurfaceCreateInfoEXT}
+  sizeOf    _ = #{size      VkDirectFBSurfaceCreateInfoEXT}
+  alignment _ = #{alignment VkDirectFBSurfaceCreateInfoEXT}
 
   peek ptr = 
     VkDirectFBSurfaceCreateInfoEXT
@@ -52,19 +52,19 @@ instance Storable VkDirectFBSurfaceCreateInfoEXT where
     pokeField @"surface" ptr val
 
 instance Offset "sType" VkDirectFBSurfaceCreateInfoEXT where
-  rawOffset = #{offset struct VkDirectFBSurfaceCreateInfoEXT, sType}
+  rawOffset = #{offset VkDirectFBSurfaceCreateInfoEXT, sType}
 
 instance Offset "pNext" VkDirectFBSurfaceCreateInfoEXT where
-  rawOffset = #{offset struct VkDirectFBSurfaceCreateInfoEXT, pNext}
+  rawOffset = #{offset VkDirectFBSurfaceCreateInfoEXT, pNext}
 
 instance Offset "flags" VkDirectFBSurfaceCreateInfoEXT where
-  rawOffset = #{offset struct VkDirectFBSurfaceCreateInfoEXT, flags}
+  rawOffset = #{offset VkDirectFBSurfaceCreateInfoEXT, flags}
 
 instance Offset "dfb" VkDirectFBSurfaceCreateInfoEXT where
-  rawOffset = #{offset struct VkDirectFBSurfaceCreateInfoEXT, dfb}
+  rawOffset = #{offset VkDirectFBSurfaceCreateInfoEXT, dfb}
 
 instance Offset "surface" VkDirectFBSurfaceCreateInfoEXT where
-  rawOffset = #{offset struct VkDirectFBSurfaceCreateInfoEXT, surface}
+  rawOffset = #{offset VkDirectFBSurfaceCreateInfoEXT, surface}
 
 #else
 

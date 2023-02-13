@@ -26,8 +26,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkMemoryType" #-} VkMemoryType =
          }
 
 instance Storable VkMemoryType where
-  sizeOf    _ = #{size      struct VkMemoryType}
-  alignment _ = #{alignment struct VkMemoryType}
+  sizeOf    _ = #{size      VkMemoryType}
+  alignment _ = #{alignment VkMemoryType}
 
   peek ptr = 
     VkMemoryType
@@ -39,7 +39,7 @@ instance Storable VkMemoryType where
     pokeField @"heapIndex" ptr val
 
 instance Offset "propertyFlags" VkMemoryType where
-  rawOffset = #{offset struct VkMemoryType, propertyFlags}
+  rawOffset = #{offset VkMemoryType, propertyFlags}
 
 instance Offset "heapIndex" VkMemoryType where
-  rawOffset = #{offset struct VkMemoryType, heapIndex}
+  rawOffset = #{offset VkMemoryType, heapIndex}

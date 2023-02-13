@@ -30,8 +30,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkPhysicalDeviceMemoryProperties2" #-} VkPhysi
          }
 
 instance Storable VkPhysicalDeviceMemoryProperties2 where
-  sizeOf    _ = #{size      struct VkPhysicalDeviceMemoryProperties2}
-  alignment _ = #{alignment struct VkPhysicalDeviceMemoryProperties2}
+  sizeOf    _ = #{size      VkPhysicalDeviceMemoryProperties2}
+  alignment _ = #{alignment VkPhysicalDeviceMemoryProperties2}
 
   peek ptr = 
     VkPhysicalDeviceMemoryProperties2
@@ -45,13 +45,13 @@ instance Storable VkPhysicalDeviceMemoryProperties2 where
     pokeField @"memoryProperties" ptr val
 
 instance Offset "sType" VkPhysicalDeviceMemoryProperties2 where
-  rawOffset = #{offset struct VkPhysicalDeviceMemoryProperties2, sType}
+  rawOffset = #{offset VkPhysicalDeviceMemoryProperties2, sType}
 
 instance Offset "pNext" VkPhysicalDeviceMemoryProperties2 where
-  rawOffset = #{offset struct VkPhysicalDeviceMemoryProperties2, pNext}
+  rawOffset = #{offset VkPhysicalDeviceMemoryProperties2, pNext}
 
 instance Offset "memoryProperties" VkPhysicalDeviceMemoryProperties2 where
-  rawOffset = #{offset struct VkPhysicalDeviceMemoryProperties2, memoryProperties}
+  rawOffset = #{offset VkPhysicalDeviceMemoryProperties2, memoryProperties}
 
 #else
 

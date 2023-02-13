@@ -30,8 +30,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkPhysicalDeviceDynamicRenderingFeatures" #-} 
          }
 
 instance Storable VkPhysicalDeviceDynamicRenderingFeatures where
-  sizeOf    _ = #{size      struct VkPhysicalDeviceDynamicRenderingFeatures}
-  alignment _ = #{alignment struct VkPhysicalDeviceDynamicRenderingFeatures}
+  sizeOf    _ = #{size      VkPhysicalDeviceDynamicRenderingFeatures}
+  alignment _ = #{alignment VkPhysicalDeviceDynamicRenderingFeatures}
 
   peek ptr = 
     VkPhysicalDeviceDynamicRenderingFeatures
@@ -45,13 +45,13 @@ instance Storable VkPhysicalDeviceDynamicRenderingFeatures where
     pokeField @"dynamicRendering" ptr val
 
 instance Offset "sType" VkPhysicalDeviceDynamicRenderingFeatures where
-  rawOffset = #{offset struct VkPhysicalDeviceDynamicRenderingFeatures, sType}
+  rawOffset = #{offset VkPhysicalDeviceDynamicRenderingFeatures, sType}
 
 instance Offset "pNext" VkPhysicalDeviceDynamicRenderingFeatures where
-  rawOffset = #{offset struct VkPhysicalDeviceDynamicRenderingFeatures, pNext}
+  rawOffset = #{offset VkPhysicalDeviceDynamicRenderingFeatures, pNext}
 
 instance Offset "dynamicRendering" VkPhysicalDeviceDynamicRenderingFeatures where
-  rawOffset = #{offset struct VkPhysicalDeviceDynamicRenderingFeatures, dynamicRendering}
+  rawOffset = #{offset VkPhysicalDeviceDynamicRenderingFeatures, dynamicRendering}
 
 #else
 

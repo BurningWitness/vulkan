@@ -31,8 +31,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkImportMemoryHostPointerInfoEXT" #-} VkImport
          }
 
 instance Storable VkImportMemoryHostPointerInfoEXT where
-  sizeOf    _ = #{size      struct VkImportMemoryHostPointerInfoEXT}
-  alignment _ = #{alignment struct VkImportMemoryHostPointerInfoEXT}
+  sizeOf    _ = #{size      VkImportMemoryHostPointerInfoEXT}
+  alignment _ = #{alignment VkImportMemoryHostPointerInfoEXT}
 
   peek ptr = 
     VkImportMemoryHostPointerInfoEXT
@@ -48,16 +48,16 @@ instance Storable VkImportMemoryHostPointerInfoEXT where
     pokeField @"pHostPointer" ptr val
 
 instance Offset "sType" VkImportMemoryHostPointerInfoEXT where
-  rawOffset = #{offset struct VkImportMemoryHostPointerInfoEXT, sType}
+  rawOffset = #{offset VkImportMemoryHostPointerInfoEXT, sType}
 
 instance Offset "pNext" VkImportMemoryHostPointerInfoEXT where
-  rawOffset = #{offset struct VkImportMemoryHostPointerInfoEXT, pNext}
+  rawOffset = #{offset VkImportMemoryHostPointerInfoEXT, pNext}
 
 instance Offset "handleType" VkImportMemoryHostPointerInfoEXT where
-  rawOffset = #{offset struct VkImportMemoryHostPointerInfoEXT, handleType}
+  rawOffset = #{offset VkImportMemoryHostPointerInfoEXT, handleType}
 
 instance Offset "pHostPointer" VkImportMemoryHostPointerInfoEXT where
-  rawOffset = #{offset struct VkImportMemoryHostPointerInfoEXT, pHostPointer}
+  rawOffset = #{offset VkImportMemoryHostPointerInfoEXT, pHostPointer}
 
 #else
 

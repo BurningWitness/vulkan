@@ -33,8 +33,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkPhysicalDeviceGroupProperties" #-} VkPhysica
          }
 
 instance Storable VkPhysicalDeviceGroupProperties where
-  sizeOf    _ = #{size      struct VkPhysicalDeviceGroupProperties}
-  alignment _ = #{alignment struct VkPhysicalDeviceGroupProperties}
+  sizeOf    _ = #{size      VkPhysicalDeviceGroupProperties}
+  alignment _ = #{alignment VkPhysicalDeviceGroupProperties}
 
   peek ptr = 
     VkPhysicalDeviceGroupProperties
@@ -52,19 +52,19 @@ instance Storable VkPhysicalDeviceGroupProperties where
     pokeField @"subsetAllocation" ptr val
 
 instance Offset "sType" VkPhysicalDeviceGroupProperties where
-  rawOffset = #{offset struct VkPhysicalDeviceGroupProperties, sType}
+  rawOffset = #{offset VkPhysicalDeviceGroupProperties, sType}
 
 instance Offset "pNext" VkPhysicalDeviceGroupProperties where
-  rawOffset = #{offset struct VkPhysicalDeviceGroupProperties, pNext}
+  rawOffset = #{offset VkPhysicalDeviceGroupProperties, pNext}
 
 instance Offset "physicalDeviceCount" VkPhysicalDeviceGroupProperties where
-  rawOffset = #{offset struct VkPhysicalDeviceGroupProperties, physicalDeviceCount}
+  rawOffset = #{offset VkPhysicalDeviceGroupProperties, physicalDeviceCount}
 
 instance Offset "physicalDevices" VkPhysicalDeviceGroupProperties where
-  rawOffset = #{offset struct VkPhysicalDeviceGroupProperties, physicalDevices}
+  rawOffset = #{offset VkPhysicalDeviceGroupProperties, physicalDevices}
 
 instance Offset "subsetAllocation" VkPhysicalDeviceGroupProperties where
-  rawOffset = #{offset struct VkPhysicalDeviceGroupProperties, subsetAllocation}
+  rawOffset = #{offset VkPhysicalDeviceGroupProperties, subsetAllocation}
 
 #else
 

@@ -30,8 +30,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkImageViewCaptureDescriptorDataInfoEXT" #-} V
          }
 
 instance Storable VkImageViewCaptureDescriptorDataInfoEXT where
-  sizeOf    _ = #{size      struct VkImageViewCaptureDescriptorDataInfoEXT}
-  alignment _ = #{alignment struct VkImageViewCaptureDescriptorDataInfoEXT}
+  sizeOf    _ = #{size      VkImageViewCaptureDescriptorDataInfoEXT}
+  alignment _ = #{alignment VkImageViewCaptureDescriptorDataInfoEXT}
 
   peek ptr = 
     VkImageViewCaptureDescriptorDataInfoEXT
@@ -45,13 +45,13 @@ instance Storable VkImageViewCaptureDescriptorDataInfoEXT where
     pokeField @"imageView" ptr val
 
 instance Offset "sType" VkImageViewCaptureDescriptorDataInfoEXT where
-  rawOffset = #{offset struct VkImageViewCaptureDescriptorDataInfoEXT, sType}
+  rawOffset = #{offset VkImageViewCaptureDescriptorDataInfoEXT, sType}
 
 instance Offset "pNext" VkImageViewCaptureDescriptorDataInfoEXT where
-  rawOffset = #{offset struct VkImageViewCaptureDescriptorDataInfoEXT, pNext}
+  rawOffset = #{offset VkImageViewCaptureDescriptorDataInfoEXT, pNext}
 
 instance Offset "imageView" VkImageViewCaptureDescriptorDataInfoEXT where
-  rawOffset = #{offset struct VkImageViewCaptureDescriptorDataInfoEXT, imageView}
+  rawOffset = #{offset VkImageViewCaptureDescriptorDataInfoEXT, imageView}
 
 #else
 

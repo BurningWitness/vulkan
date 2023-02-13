@@ -30,8 +30,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkPhysicalDeviceExternalImageFormatInfo" #-} V
          }
 
 instance Storable VkPhysicalDeviceExternalImageFormatInfo where
-  sizeOf    _ = #{size      struct VkPhysicalDeviceExternalImageFormatInfo}
-  alignment _ = #{alignment struct VkPhysicalDeviceExternalImageFormatInfo}
+  sizeOf    _ = #{size      VkPhysicalDeviceExternalImageFormatInfo}
+  alignment _ = #{alignment VkPhysicalDeviceExternalImageFormatInfo}
 
   peek ptr = 
     VkPhysicalDeviceExternalImageFormatInfo
@@ -45,13 +45,13 @@ instance Storable VkPhysicalDeviceExternalImageFormatInfo where
     pokeField @"handleType" ptr val
 
 instance Offset "sType" VkPhysicalDeviceExternalImageFormatInfo where
-  rawOffset = #{offset struct VkPhysicalDeviceExternalImageFormatInfo, sType}
+  rawOffset = #{offset VkPhysicalDeviceExternalImageFormatInfo, sType}
 
 instance Offset "pNext" VkPhysicalDeviceExternalImageFormatInfo where
-  rawOffset = #{offset struct VkPhysicalDeviceExternalImageFormatInfo, pNext}
+  rawOffset = #{offset VkPhysicalDeviceExternalImageFormatInfo, pNext}
 
 instance Offset "handleType" VkPhysicalDeviceExternalImageFormatInfo where
-  rawOffset = #{offset struct VkPhysicalDeviceExternalImageFormatInfo, handleType}
+  rawOffset = #{offset VkPhysicalDeviceExternalImageFormatInfo, handleType}
 
 #else
 

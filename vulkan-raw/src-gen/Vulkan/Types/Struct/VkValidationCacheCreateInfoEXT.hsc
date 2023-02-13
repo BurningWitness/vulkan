@@ -32,8 +32,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkValidationCacheCreateInfoEXT" #-} VkValidati
          }
 
 instance Storable VkValidationCacheCreateInfoEXT where
-  sizeOf    _ = #{size      struct VkValidationCacheCreateInfoEXT}
-  alignment _ = #{alignment struct VkValidationCacheCreateInfoEXT}
+  sizeOf    _ = #{size      VkValidationCacheCreateInfoEXT}
+  alignment _ = #{alignment VkValidationCacheCreateInfoEXT}
 
   peek ptr = 
     VkValidationCacheCreateInfoEXT
@@ -51,19 +51,19 @@ instance Storable VkValidationCacheCreateInfoEXT where
     pokeField @"pInitialData" ptr val
 
 instance Offset "sType" VkValidationCacheCreateInfoEXT where
-  rawOffset = #{offset struct VkValidationCacheCreateInfoEXT, sType}
+  rawOffset = #{offset VkValidationCacheCreateInfoEXT, sType}
 
 instance Offset "pNext" VkValidationCacheCreateInfoEXT where
-  rawOffset = #{offset struct VkValidationCacheCreateInfoEXT, pNext}
+  rawOffset = #{offset VkValidationCacheCreateInfoEXT, pNext}
 
 instance Offset "flags" VkValidationCacheCreateInfoEXT where
-  rawOffset = #{offset struct VkValidationCacheCreateInfoEXT, flags}
+  rawOffset = #{offset VkValidationCacheCreateInfoEXT, flags}
 
 instance Offset "initialDataSize" VkValidationCacheCreateInfoEXT where
-  rawOffset = #{offset struct VkValidationCacheCreateInfoEXT, initialDataSize}
+  rawOffset = #{offset VkValidationCacheCreateInfoEXT, initialDataSize}
 
 instance Offset "pInitialData" VkValidationCacheCreateInfoEXT where
-  rawOffset = #{offset struct VkValidationCacheCreateInfoEXT, pInitialData}
+  rawOffset = #{offset VkValidationCacheCreateInfoEXT, pInitialData}
 
 #else
 

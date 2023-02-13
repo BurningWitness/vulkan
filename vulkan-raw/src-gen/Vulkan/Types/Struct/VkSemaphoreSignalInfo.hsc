@@ -31,8 +31,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkSemaphoreSignalInfo" #-} VkSemaphoreSignalIn
          }
 
 instance Storable VkSemaphoreSignalInfo where
-  sizeOf    _ = #{size      struct VkSemaphoreSignalInfo}
-  alignment _ = #{alignment struct VkSemaphoreSignalInfo}
+  sizeOf    _ = #{size      VkSemaphoreSignalInfo}
+  alignment _ = #{alignment VkSemaphoreSignalInfo}
 
   peek ptr = 
     VkSemaphoreSignalInfo
@@ -48,16 +48,16 @@ instance Storable VkSemaphoreSignalInfo where
     pokeField @"value" ptr val
 
 instance Offset "sType" VkSemaphoreSignalInfo where
-  rawOffset = #{offset struct VkSemaphoreSignalInfo, sType}
+  rawOffset = #{offset VkSemaphoreSignalInfo, sType}
 
 instance Offset "pNext" VkSemaphoreSignalInfo where
-  rawOffset = #{offset struct VkSemaphoreSignalInfo, pNext}
+  rawOffset = #{offset VkSemaphoreSignalInfo, pNext}
 
 instance Offset "semaphore" VkSemaphoreSignalInfo where
-  rawOffset = #{offset struct VkSemaphoreSignalInfo, semaphore}
+  rawOffset = #{offset VkSemaphoreSignalInfo, semaphore}
 
 instance Offset "value" VkSemaphoreSignalInfo where
-  rawOffset = #{offset struct VkSemaphoreSignalInfo, value}
+  rawOffset = #{offset VkSemaphoreSignalInfo, value}
 
 #else
 

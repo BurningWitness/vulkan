@@ -30,8 +30,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkDeviceMemoryOverallocationCreateInfoAMD" #-}
          }
 
 instance Storable VkDeviceMemoryOverallocationCreateInfoAMD where
-  sizeOf    _ = #{size      struct VkDeviceMemoryOverallocationCreateInfoAMD}
-  alignment _ = #{alignment struct VkDeviceMemoryOverallocationCreateInfoAMD}
+  sizeOf    _ = #{size      VkDeviceMemoryOverallocationCreateInfoAMD}
+  alignment _ = #{alignment VkDeviceMemoryOverallocationCreateInfoAMD}
 
   peek ptr = 
     VkDeviceMemoryOverallocationCreateInfoAMD
@@ -45,13 +45,13 @@ instance Storable VkDeviceMemoryOverallocationCreateInfoAMD where
     pokeField @"overallocationBehavior" ptr val
 
 instance Offset "sType" VkDeviceMemoryOverallocationCreateInfoAMD where
-  rawOffset = #{offset struct VkDeviceMemoryOverallocationCreateInfoAMD, sType}
+  rawOffset = #{offset VkDeviceMemoryOverallocationCreateInfoAMD, sType}
 
 instance Offset "pNext" VkDeviceMemoryOverallocationCreateInfoAMD where
-  rawOffset = #{offset struct VkDeviceMemoryOverallocationCreateInfoAMD, pNext}
+  rawOffset = #{offset VkDeviceMemoryOverallocationCreateInfoAMD, pNext}
 
 instance Offset "overallocationBehavior" VkDeviceMemoryOverallocationCreateInfoAMD where
-  rawOffset = #{offset struct VkDeviceMemoryOverallocationCreateInfoAMD, overallocationBehavior}
+  rawOffset = #{offset VkDeviceMemoryOverallocationCreateInfoAMD, overallocationBehavior}
 
 #else
 

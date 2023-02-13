@@ -30,8 +30,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkSubpassBeginInfo" #-} VkSubpassBeginInfo =
          }
 
 instance Storable VkSubpassBeginInfo where
-  sizeOf    _ = #{size      struct VkSubpassBeginInfo}
-  alignment _ = #{alignment struct VkSubpassBeginInfo}
+  sizeOf    _ = #{size      VkSubpassBeginInfo}
+  alignment _ = #{alignment VkSubpassBeginInfo}
 
   peek ptr = 
     VkSubpassBeginInfo
@@ -45,13 +45,13 @@ instance Storable VkSubpassBeginInfo where
     pokeField @"contents" ptr val
 
 instance Offset "sType" VkSubpassBeginInfo where
-  rawOffset = #{offset struct VkSubpassBeginInfo, sType}
+  rawOffset = #{offset VkSubpassBeginInfo, sType}
 
 instance Offset "pNext" VkSubpassBeginInfo where
-  rawOffset = #{offset struct VkSubpassBeginInfo, pNext}
+  rawOffset = #{offset VkSubpassBeginInfo, pNext}
 
 instance Offset "contents" VkSubpassBeginInfo where
-  rawOffset = #{offset struct VkSubpassBeginInfo, contents}
+  rawOffset = #{offset VkSubpassBeginInfo, contents}
 
 #else
 

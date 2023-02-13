@@ -31,8 +31,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkPhysicalDeviceConditionalRenderingFeaturesEX
          }
 
 instance Storable VkPhysicalDeviceConditionalRenderingFeaturesEXT where
-  sizeOf    _ = #{size      struct VkPhysicalDeviceConditionalRenderingFeaturesEXT}
-  alignment _ = #{alignment struct VkPhysicalDeviceConditionalRenderingFeaturesEXT}
+  sizeOf    _ = #{size      VkPhysicalDeviceConditionalRenderingFeaturesEXT}
+  alignment _ = #{alignment VkPhysicalDeviceConditionalRenderingFeaturesEXT}
 
   peek ptr = 
     VkPhysicalDeviceConditionalRenderingFeaturesEXT
@@ -48,16 +48,16 @@ instance Storable VkPhysicalDeviceConditionalRenderingFeaturesEXT where
     pokeField @"inheritedConditionalRendering" ptr val
 
 instance Offset "sType" VkPhysicalDeviceConditionalRenderingFeaturesEXT where
-  rawOffset = #{offset struct VkPhysicalDeviceConditionalRenderingFeaturesEXT, sType}
+  rawOffset = #{offset VkPhysicalDeviceConditionalRenderingFeaturesEXT, sType}
 
 instance Offset "pNext" VkPhysicalDeviceConditionalRenderingFeaturesEXT where
-  rawOffset = #{offset struct VkPhysicalDeviceConditionalRenderingFeaturesEXT, pNext}
+  rawOffset = #{offset VkPhysicalDeviceConditionalRenderingFeaturesEXT, pNext}
 
 instance Offset "conditionalRendering" VkPhysicalDeviceConditionalRenderingFeaturesEXT where
-  rawOffset = #{offset struct VkPhysicalDeviceConditionalRenderingFeaturesEXT, conditionalRendering}
+  rawOffset = #{offset VkPhysicalDeviceConditionalRenderingFeaturesEXT, conditionalRendering}
 
 instance Offset "inheritedConditionalRendering" VkPhysicalDeviceConditionalRenderingFeaturesEXT where
-  rawOffset = #{offset struct VkPhysicalDeviceConditionalRenderingFeaturesEXT, inheritedConditionalRendering}
+  rawOffset = #{offset VkPhysicalDeviceConditionalRenderingFeaturesEXT, inheritedConditionalRendering}
 
 #else
 

@@ -41,8 +41,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkDebugUtilsMessengerCallbackDataEXT" #-} VkDe
          }
 
 instance Storable VkDebugUtilsMessengerCallbackDataEXT where
-  sizeOf    _ = #{size      struct VkDebugUtilsMessengerCallbackDataEXT}
-  alignment _ = #{alignment struct VkDebugUtilsMessengerCallbackDataEXT}
+  sizeOf    _ = #{size      VkDebugUtilsMessengerCallbackDataEXT}
+  alignment _ = #{alignment VkDebugUtilsMessengerCallbackDataEXT}
 
   peek ptr = 
     VkDebugUtilsMessengerCallbackDataEXT
@@ -74,40 +74,40 @@ instance Storable VkDebugUtilsMessengerCallbackDataEXT where
     pokeField @"pObjects" ptr val
 
 instance Offset "sType" VkDebugUtilsMessengerCallbackDataEXT where
-  rawOffset = #{offset struct VkDebugUtilsMessengerCallbackDataEXT, sType}
+  rawOffset = #{offset VkDebugUtilsMessengerCallbackDataEXT, sType}
 
 instance Offset "pNext" VkDebugUtilsMessengerCallbackDataEXT where
-  rawOffset = #{offset struct VkDebugUtilsMessengerCallbackDataEXT, pNext}
+  rawOffset = #{offset VkDebugUtilsMessengerCallbackDataEXT, pNext}
 
 instance Offset "flags" VkDebugUtilsMessengerCallbackDataEXT where
-  rawOffset = #{offset struct VkDebugUtilsMessengerCallbackDataEXT, flags}
+  rawOffset = #{offset VkDebugUtilsMessengerCallbackDataEXT, flags}
 
 instance Offset "pMessageIdName" VkDebugUtilsMessengerCallbackDataEXT where
-  rawOffset = #{offset struct VkDebugUtilsMessengerCallbackDataEXT, pMessageIdName}
+  rawOffset = #{offset VkDebugUtilsMessengerCallbackDataEXT, pMessageIdName}
 
 instance Offset "messageIdNumber" VkDebugUtilsMessengerCallbackDataEXT where
-  rawOffset = #{offset struct VkDebugUtilsMessengerCallbackDataEXT, messageIdNumber}
+  rawOffset = #{offset VkDebugUtilsMessengerCallbackDataEXT, messageIdNumber}
 
 instance Offset "pMessage" VkDebugUtilsMessengerCallbackDataEXT where
-  rawOffset = #{offset struct VkDebugUtilsMessengerCallbackDataEXT, pMessage}
+  rawOffset = #{offset VkDebugUtilsMessengerCallbackDataEXT, pMessage}
 
 instance Offset "queueLabelCount" VkDebugUtilsMessengerCallbackDataEXT where
-  rawOffset = #{offset struct VkDebugUtilsMessengerCallbackDataEXT, queueLabelCount}
+  rawOffset = #{offset VkDebugUtilsMessengerCallbackDataEXT, queueLabelCount}
 
 instance Offset "pQueueLabels" VkDebugUtilsMessengerCallbackDataEXT where
-  rawOffset = #{offset struct VkDebugUtilsMessengerCallbackDataEXT, pQueueLabels}
+  rawOffset = #{offset VkDebugUtilsMessengerCallbackDataEXT, pQueueLabels}
 
 instance Offset "cmdBufLabelCount" VkDebugUtilsMessengerCallbackDataEXT where
-  rawOffset = #{offset struct VkDebugUtilsMessengerCallbackDataEXT, cmdBufLabelCount}
+  rawOffset = #{offset VkDebugUtilsMessengerCallbackDataEXT, cmdBufLabelCount}
 
 instance Offset "pCmdBufLabels" VkDebugUtilsMessengerCallbackDataEXT where
-  rawOffset = #{offset struct VkDebugUtilsMessengerCallbackDataEXT, pCmdBufLabels}
+  rawOffset = #{offset VkDebugUtilsMessengerCallbackDataEXT, pCmdBufLabels}
 
 instance Offset "objectCount" VkDebugUtilsMessengerCallbackDataEXT where
-  rawOffset = #{offset struct VkDebugUtilsMessengerCallbackDataEXT, objectCount}
+  rawOffset = #{offset VkDebugUtilsMessengerCallbackDataEXT, objectCount}
 
 instance Offset "pObjects" VkDebugUtilsMessengerCallbackDataEXT where
-  rawOffset = #{offset struct VkDebugUtilsMessengerCallbackDataEXT, pObjects}
+  rawOffset = #{offset VkDebugUtilsMessengerCallbackDataEXT, pObjects}
 
 #else
 

@@ -1,9 +1,95 @@
+{-# LANGUAGE DataKinds #-}
+{-# LANGUAGE DuplicateRecordFields #-}
+{-# LANGUAGE MultiParamTypeClasses #-}
+#if __GLASGOW_HASKELL__ >= 902
+{-# LANGUAGE NoFieldSelectors #-}
+#endif
+{-# LANGUAGE TypeApplications #-}
+
 #include <vulkan/vulkan.h>
+
+#if VK_KHR_get_physical_device_properties2
 
 module Vulkan.Types.Struct.VkPhysicalDeviceImageFormatInfo2KHR where
 
-import Vulkan.Types.Struct.VkPhysicalDeviceImageFormatInfo2
+import Data.Int
+import Data.Word
+import Foreign.Ptr
+import Foreign.Storable
+import Foreign.Storable.Offset
+import GHC.Records
+import Vulkan.Types.Enum.VkFormat
+import Vulkan.Types.Enum.VkImageCreateFlags
+import Vulkan.Types.Enum.VkImageTiling
+import Vulkan.Types.Enum.VkImageType
+import Vulkan.Types.Enum.VkImageUsageFlags
+import Vulkan.Types.Enum.VkStructureType
 
 
 
-type VkPhysicalDeviceImageFormatInfo2KHR = VkPhysicalDeviceImageFormatInfo2
+data {-# CTYPE "vulkan/vulkan.h" "VkPhysicalDeviceImageFormatInfo2KHR" #-} VkPhysicalDeviceImageFormatInfo2KHR =
+       VkPhysicalDeviceImageFormatInfo2KHR
+         { sType :: VkStructureType
+         , pNext :: Ptr ()
+         , format :: VkFormat
+         , type_ :: VkImageType
+         , tiling :: VkImageTiling
+         , usage :: VkImageUsageFlags
+         , flags :: VkImageCreateFlags
+         }
+
+instance Storable VkPhysicalDeviceImageFormatInfo2KHR where
+  sizeOf    _ = #{size      VkPhysicalDeviceImageFormatInfo2KHR}
+  alignment _ = #{alignment VkPhysicalDeviceImageFormatInfo2KHR}
+
+  peek ptr = 
+    VkPhysicalDeviceImageFormatInfo2KHR
+       <$> peek (offset @"sType" ptr)
+       <*> peek (offset @"pNext" ptr)
+       <*> peek (offset @"format" ptr)
+       <*> peek (offset @"type" ptr)
+       <*> peek (offset @"tiling" ptr)
+       <*> peek (offset @"usage" ptr)
+       <*> peek (offset @"flags" ptr)
+
+  poke ptr val = do
+    pokeField @"sType" ptr val
+    pokeField @"pNext" ptr val
+    pokeField @"format" ptr val
+    pokeField @"type" ptr val
+    pokeField @"tiling" ptr val
+    pokeField @"usage" ptr val
+    pokeField @"flags" ptr val
+
+instance Offset "sType" VkPhysicalDeviceImageFormatInfo2KHR where
+  rawOffset = #{offset VkPhysicalDeviceImageFormatInfo2KHR, sType}
+
+instance Offset "pNext" VkPhysicalDeviceImageFormatInfo2KHR where
+  rawOffset = #{offset VkPhysicalDeviceImageFormatInfo2KHR, pNext}
+
+instance Offset "format" VkPhysicalDeviceImageFormatInfo2KHR where
+  rawOffset = #{offset VkPhysicalDeviceImageFormatInfo2KHR, format}
+
+instance Offset "type_" VkPhysicalDeviceImageFormatInfo2KHR where
+  rawOffset = #{offset VkPhysicalDeviceImageFormatInfo2KHR, type}
+
+instance Offset "tiling" VkPhysicalDeviceImageFormatInfo2KHR where
+  rawOffset = #{offset VkPhysicalDeviceImageFormatInfo2KHR, tiling}
+
+instance Offset "usage" VkPhysicalDeviceImageFormatInfo2KHR where
+  rawOffset = #{offset VkPhysicalDeviceImageFormatInfo2KHR, usage}
+
+instance Offset "flags" VkPhysicalDeviceImageFormatInfo2KHR where
+  rawOffset = #{offset VkPhysicalDeviceImageFormatInfo2KHR, flags}
+
+instance Offset "type" VkPhysicalDeviceImageFormatInfo2KHR where
+  rawOffset = rawOffset @"type_" @VkPhysicalDeviceImageFormatInfo2KHR
+
+instance HasField "type" VkPhysicalDeviceImageFormatInfo2KHR VkImageType where
+  getField = getField @"type_" @VkPhysicalDeviceImageFormatInfo2KHR
+
+#else
+
+module Vulkan.Types.Struct.VkPhysicalDeviceImageFormatInfo2KHR where
+
+#endif

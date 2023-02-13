@@ -32,8 +32,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkDescriptorPoolCreateInfo" #-} VkDescriptorPo
          }
 
 instance Storable VkDescriptorPoolCreateInfo where
-  sizeOf    _ = #{size      struct VkDescriptorPoolCreateInfo}
-  alignment _ = #{alignment struct VkDescriptorPoolCreateInfo}
+  sizeOf    _ = #{size      VkDescriptorPoolCreateInfo}
+  alignment _ = #{alignment VkDescriptorPoolCreateInfo}
 
   peek ptr = 
     VkDescriptorPoolCreateInfo
@@ -53,19 +53,19 @@ instance Storable VkDescriptorPoolCreateInfo where
     pokeField @"pPoolSizes" ptr val
 
 instance Offset "sType" VkDescriptorPoolCreateInfo where
-  rawOffset = #{offset struct VkDescriptorPoolCreateInfo, sType}
+  rawOffset = #{offset VkDescriptorPoolCreateInfo, sType}
 
 instance Offset "pNext" VkDescriptorPoolCreateInfo where
-  rawOffset = #{offset struct VkDescriptorPoolCreateInfo, pNext}
+  rawOffset = #{offset VkDescriptorPoolCreateInfo, pNext}
 
 instance Offset "flags" VkDescriptorPoolCreateInfo where
-  rawOffset = #{offset struct VkDescriptorPoolCreateInfo, flags}
+  rawOffset = #{offset VkDescriptorPoolCreateInfo, flags}
 
 instance Offset "maxSets" VkDescriptorPoolCreateInfo where
-  rawOffset = #{offset struct VkDescriptorPoolCreateInfo, maxSets}
+  rawOffset = #{offset VkDescriptorPoolCreateInfo, maxSets}
 
 instance Offset "poolSizeCount" VkDescriptorPoolCreateInfo where
-  rawOffset = #{offset struct VkDescriptorPoolCreateInfo, poolSizeCount}
+  rawOffset = #{offset VkDescriptorPoolCreateInfo, poolSizeCount}
 
 instance Offset "pPoolSizes" VkDescriptorPoolCreateInfo where
-  rawOffset = #{offset struct VkDescriptorPoolCreateInfo, pPoolSizes}
+  rawOffset = #{offset VkDescriptorPoolCreateInfo, pPoolSizes}

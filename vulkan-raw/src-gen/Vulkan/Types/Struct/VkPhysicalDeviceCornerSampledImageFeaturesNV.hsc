@@ -30,8 +30,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkPhysicalDeviceCornerSampledImageFeaturesNV" 
          }
 
 instance Storable VkPhysicalDeviceCornerSampledImageFeaturesNV where
-  sizeOf    _ = #{size      struct VkPhysicalDeviceCornerSampledImageFeaturesNV}
-  alignment _ = #{alignment struct VkPhysicalDeviceCornerSampledImageFeaturesNV}
+  sizeOf    _ = #{size      VkPhysicalDeviceCornerSampledImageFeaturesNV}
+  alignment _ = #{alignment VkPhysicalDeviceCornerSampledImageFeaturesNV}
 
   peek ptr = 
     VkPhysicalDeviceCornerSampledImageFeaturesNV
@@ -45,13 +45,13 @@ instance Storable VkPhysicalDeviceCornerSampledImageFeaturesNV where
     pokeField @"cornerSampledImage" ptr val
 
 instance Offset "sType" VkPhysicalDeviceCornerSampledImageFeaturesNV where
-  rawOffset = #{offset struct VkPhysicalDeviceCornerSampledImageFeaturesNV, sType}
+  rawOffset = #{offset VkPhysicalDeviceCornerSampledImageFeaturesNV, sType}
 
 instance Offset "pNext" VkPhysicalDeviceCornerSampledImageFeaturesNV where
-  rawOffset = #{offset struct VkPhysicalDeviceCornerSampledImageFeaturesNV, pNext}
+  rawOffset = #{offset VkPhysicalDeviceCornerSampledImageFeaturesNV, pNext}
 
 instance Offset "cornerSampledImage" VkPhysicalDeviceCornerSampledImageFeaturesNV where
-  rawOffset = #{offset struct VkPhysicalDeviceCornerSampledImageFeaturesNV, cornerSampledImage}
+  rawOffset = #{offset VkPhysicalDeviceCornerSampledImageFeaturesNV, cornerSampledImage}
 
 #else
 

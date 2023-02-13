@@ -30,8 +30,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkPhysicalDeviceExtendedDynamicState3Propertie
          }
 
 instance Storable VkPhysicalDeviceExtendedDynamicState3PropertiesEXT where
-  sizeOf    _ = #{size      struct VkPhysicalDeviceExtendedDynamicState3PropertiesEXT}
-  alignment _ = #{alignment struct VkPhysicalDeviceExtendedDynamicState3PropertiesEXT}
+  sizeOf    _ = #{size      VkPhysicalDeviceExtendedDynamicState3PropertiesEXT}
+  alignment _ = #{alignment VkPhysicalDeviceExtendedDynamicState3PropertiesEXT}
 
   peek ptr = 
     VkPhysicalDeviceExtendedDynamicState3PropertiesEXT
@@ -45,13 +45,13 @@ instance Storable VkPhysicalDeviceExtendedDynamicState3PropertiesEXT where
     pokeField @"dynamicPrimitiveTopologyUnrestricted" ptr val
 
 instance Offset "sType" VkPhysicalDeviceExtendedDynamicState3PropertiesEXT where
-  rawOffset = #{offset struct VkPhysicalDeviceExtendedDynamicState3PropertiesEXT, sType}
+  rawOffset = #{offset VkPhysicalDeviceExtendedDynamicState3PropertiesEXT, sType}
 
 instance Offset "pNext" VkPhysicalDeviceExtendedDynamicState3PropertiesEXT where
-  rawOffset = #{offset struct VkPhysicalDeviceExtendedDynamicState3PropertiesEXT, pNext}
+  rawOffset = #{offset VkPhysicalDeviceExtendedDynamicState3PropertiesEXT, pNext}
 
 instance Offset "dynamicPrimitiveTopologyUnrestricted" VkPhysicalDeviceExtendedDynamicState3PropertiesEXT where
-  rawOffset = #{offset struct VkPhysicalDeviceExtendedDynamicState3PropertiesEXT, dynamicPrimitiveTopologyUnrestricted}
+  rawOffset = #{offset VkPhysicalDeviceExtendedDynamicState3PropertiesEXT, dynamicPrimitiveTopologyUnrestricted}
 
 #else
 

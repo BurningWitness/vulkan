@@ -31,8 +31,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkDescriptorSetBindingReferenceVALVE" #-} VkDe
          }
 
 instance Storable VkDescriptorSetBindingReferenceVALVE where
-  sizeOf    _ = #{size      struct VkDescriptorSetBindingReferenceVALVE}
-  alignment _ = #{alignment struct VkDescriptorSetBindingReferenceVALVE}
+  sizeOf    _ = #{size      VkDescriptorSetBindingReferenceVALVE}
+  alignment _ = #{alignment VkDescriptorSetBindingReferenceVALVE}
 
   peek ptr = 
     VkDescriptorSetBindingReferenceVALVE
@@ -48,16 +48,16 @@ instance Storable VkDescriptorSetBindingReferenceVALVE where
     pokeField @"binding" ptr val
 
 instance Offset "sType" VkDescriptorSetBindingReferenceVALVE where
-  rawOffset = #{offset struct VkDescriptorSetBindingReferenceVALVE, sType}
+  rawOffset = #{offset VkDescriptorSetBindingReferenceVALVE, sType}
 
 instance Offset "pNext" VkDescriptorSetBindingReferenceVALVE where
-  rawOffset = #{offset struct VkDescriptorSetBindingReferenceVALVE, pNext}
+  rawOffset = #{offset VkDescriptorSetBindingReferenceVALVE, pNext}
 
 instance Offset "descriptorSetLayout" VkDescriptorSetBindingReferenceVALVE where
-  rawOffset = #{offset struct VkDescriptorSetBindingReferenceVALVE, descriptorSetLayout}
+  rawOffset = #{offset VkDescriptorSetBindingReferenceVALVE, descriptorSetLayout}
 
 instance Offset "binding" VkDescriptorSetBindingReferenceVALVE where
-  rawOffset = #{offset struct VkDescriptorSetBindingReferenceVALVE, binding}
+  rawOffset = #{offset VkDescriptorSetBindingReferenceVALVE, binding}
 
 #else
 

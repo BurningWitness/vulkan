@@ -35,8 +35,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkBindAccelerationStructureMemoryInfoNV" #-} V
          }
 
 instance Storable VkBindAccelerationStructureMemoryInfoNV where
-  sizeOf    _ = #{size      struct VkBindAccelerationStructureMemoryInfoNV}
-  alignment _ = #{alignment struct VkBindAccelerationStructureMemoryInfoNV}
+  sizeOf    _ = #{size      VkBindAccelerationStructureMemoryInfoNV}
+  alignment _ = #{alignment VkBindAccelerationStructureMemoryInfoNV}
 
   peek ptr = 
     VkBindAccelerationStructureMemoryInfoNV
@@ -58,25 +58,25 @@ instance Storable VkBindAccelerationStructureMemoryInfoNV where
     pokeField @"pDeviceIndices" ptr val
 
 instance Offset "sType" VkBindAccelerationStructureMemoryInfoNV where
-  rawOffset = #{offset struct VkBindAccelerationStructureMemoryInfoNV, sType}
+  rawOffset = #{offset VkBindAccelerationStructureMemoryInfoNV, sType}
 
 instance Offset "pNext" VkBindAccelerationStructureMemoryInfoNV where
-  rawOffset = #{offset struct VkBindAccelerationStructureMemoryInfoNV, pNext}
+  rawOffset = #{offset VkBindAccelerationStructureMemoryInfoNV, pNext}
 
 instance Offset "accelerationStructure" VkBindAccelerationStructureMemoryInfoNV where
-  rawOffset = #{offset struct VkBindAccelerationStructureMemoryInfoNV, accelerationStructure}
+  rawOffset = #{offset VkBindAccelerationStructureMemoryInfoNV, accelerationStructure}
 
 instance Offset "memory" VkBindAccelerationStructureMemoryInfoNV where
-  rawOffset = #{offset struct VkBindAccelerationStructureMemoryInfoNV, memory}
+  rawOffset = #{offset VkBindAccelerationStructureMemoryInfoNV, memory}
 
 instance Offset "memoryOffset" VkBindAccelerationStructureMemoryInfoNV where
-  rawOffset = #{offset struct VkBindAccelerationStructureMemoryInfoNV, memoryOffset}
+  rawOffset = #{offset VkBindAccelerationStructureMemoryInfoNV, memoryOffset}
 
 instance Offset "deviceIndexCount" VkBindAccelerationStructureMemoryInfoNV where
-  rawOffset = #{offset struct VkBindAccelerationStructureMemoryInfoNV, deviceIndexCount}
+  rawOffset = #{offset VkBindAccelerationStructureMemoryInfoNV, deviceIndexCount}
 
 instance Offset "pDeviceIndices" VkBindAccelerationStructureMemoryInfoNV where
-  rawOffset = #{offset struct VkBindAccelerationStructureMemoryInfoNV, pDeviceIndices}
+  rawOffset = #{offset VkBindAccelerationStructureMemoryInfoNV, pDeviceIndices}
 
 #else
 

@@ -32,8 +32,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkDecompressMemoryRegionNV" #-} VkDecompressMe
          }
 
 instance Storable VkDecompressMemoryRegionNV where
-  sizeOf    _ = #{size      struct VkDecompressMemoryRegionNV}
-  alignment _ = #{alignment struct VkDecompressMemoryRegionNV}
+  sizeOf    _ = #{size      VkDecompressMemoryRegionNV}
+  alignment _ = #{alignment VkDecompressMemoryRegionNV}
 
   peek ptr = 
     VkDecompressMemoryRegionNV
@@ -51,19 +51,19 @@ instance Storable VkDecompressMemoryRegionNV where
     pokeField @"decompressionMethod" ptr val
 
 instance Offset "srcAddress" VkDecompressMemoryRegionNV where
-  rawOffset = #{offset struct VkDecompressMemoryRegionNV, srcAddress}
+  rawOffset = #{offset VkDecompressMemoryRegionNV, srcAddress}
 
 instance Offset "dstAddress" VkDecompressMemoryRegionNV where
-  rawOffset = #{offset struct VkDecompressMemoryRegionNV, dstAddress}
+  rawOffset = #{offset VkDecompressMemoryRegionNV, dstAddress}
 
 instance Offset "compressedSize" VkDecompressMemoryRegionNV where
-  rawOffset = #{offset struct VkDecompressMemoryRegionNV, compressedSize}
+  rawOffset = #{offset VkDecompressMemoryRegionNV, compressedSize}
 
 instance Offset "decompressedSize" VkDecompressMemoryRegionNV where
-  rawOffset = #{offset struct VkDecompressMemoryRegionNV, decompressedSize}
+  rawOffset = #{offset VkDecompressMemoryRegionNV, decompressedSize}
 
 instance Offset "decompressionMethod" VkDecompressMemoryRegionNV where
-  rawOffset = #{offset struct VkDecompressMemoryRegionNV, decompressionMethod}
+  rawOffset = #{offset VkDecompressMemoryRegionNV, decompressionMethod}
 
 #else
 

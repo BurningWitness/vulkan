@@ -29,8 +29,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkAccelerationStructureBuildRangeInfoKHR" #-} 
          }
 
 instance Storable VkAccelerationStructureBuildRangeInfoKHR where
-  sizeOf    _ = #{size      struct VkAccelerationStructureBuildRangeInfoKHR}
-  alignment _ = #{alignment struct VkAccelerationStructureBuildRangeInfoKHR}
+  sizeOf    _ = #{size      VkAccelerationStructureBuildRangeInfoKHR}
+  alignment _ = #{alignment VkAccelerationStructureBuildRangeInfoKHR}
 
   peek ptr = 
     VkAccelerationStructureBuildRangeInfoKHR
@@ -46,16 +46,16 @@ instance Storable VkAccelerationStructureBuildRangeInfoKHR where
     pokeField @"transformOffset" ptr val
 
 instance Offset "primitiveCount" VkAccelerationStructureBuildRangeInfoKHR where
-  rawOffset = #{offset struct VkAccelerationStructureBuildRangeInfoKHR, primitiveCount}
+  rawOffset = #{offset VkAccelerationStructureBuildRangeInfoKHR, primitiveCount}
 
 instance Offset "primitiveOffset" VkAccelerationStructureBuildRangeInfoKHR where
-  rawOffset = #{offset struct VkAccelerationStructureBuildRangeInfoKHR, primitiveOffset}
+  rawOffset = #{offset VkAccelerationStructureBuildRangeInfoKHR, primitiveOffset}
 
 instance Offset "firstVertex" VkAccelerationStructureBuildRangeInfoKHR where
-  rawOffset = #{offset struct VkAccelerationStructureBuildRangeInfoKHR, firstVertex}
+  rawOffset = #{offset VkAccelerationStructureBuildRangeInfoKHR, firstVertex}
 
 instance Offset "transformOffset" VkAccelerationStructureBuildRangeInfoKHR where
-  rawOffset = #{offset struct VkAccelerationStructureBuildRangeInfoKHR, transformOffset}
+  rawOffset = #{offset VkAccelerationStructureBuildRangeInfoKHR, transformOffset}
 
 #else
 

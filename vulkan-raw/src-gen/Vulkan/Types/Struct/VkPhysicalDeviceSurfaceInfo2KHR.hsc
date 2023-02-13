@@ -30,8 +30,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkPhysicalDeviceSurfaceInfo2KHR" #-} VkPhysica
          }
 
 instance Storable VkPhysicalDeviceSurfaceInfo2KHR where
-  sizeOf    _ = #{size      struct VkPhysicalDeviceSurfaceInfo2KHR}
-  alignment _ = #{alignment struct VkPhysicalDeviceSurfaceInfo2KHR}
+  sizeOf    _ = #{size      VkPhysicalDeviceSurfaceInfo2KHR}
+  alignment _ = #{alignment VkPhysicalDeviceSurfaceInfo2KHR}
 
   peek ptr = 
     VkPhysicalDeviceSurfaceInfo2KHR
@@ -45,13 +45,13 @@ instance Storable VkPhysicalDeviceSurfaceInfo2KHR where
     pokeField @"surface" ptr val
 
 instance Offset "sType" VkPhysicalDeviceSurfaceInfo2KHR where
-  rawOffset = #{offset struct VkPhysicalDeviceSurfaceInfo2KHR, sType}
+  rawOffset = #{offset VkPhysicalDeviceSurfaceInfo2KHR, sType}
 
 instance Offset "pNext" VkPhysicalDeviceSurfaceInfo2KHR where
-  rawOffset = #{offset struct VkPhysicalDeviceSurfaceInfo2KHR, pNext}
+  rawOffset = #{offset VkPhysicalDeviceSurfaceInfo2KHR, pNext}
 
 instance Offset "surface" VkPhysicalDeviceSurfaceInfo2KHR where
-  rawOffset = #{offset struct VkPhysicalDeviceSurfaceInfo2KHR, surface}
+  rawOffset = #{offset VkPhysicalDeviceSurfaceInfo2KHR, surface}
 
 #else
 

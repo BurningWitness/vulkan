@@ -31,8 +31,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkImageFormatListCreateInfo" #-} VkImageFormat
          }
 
 instance Storable VkImageFormatListCreateInfo where
-  sizeOf    _ = #{size      struct VkImageFormatListCreateInfo}
-  alignment _ = #{alignment struct VkImageFormatListCreateInfo}
+  sizeOf    _ = #{size      VkImageFormatListCreateInfo}
+  alignment _ = #{alignment VkImageFormatListCreateInfo}
 
   peek ptr = 
     VkImageFormatListCreateInfo
@@ -48,16 +48,16 @@ instance Storable VkImageFormatListCreateInfo where
     pokeField @"pViewFormats" ptr val
 
 instance Offset "sType" VkImageFormatListCreateInfo where
-  rawOffset = #{offset struct VkImageFormatListCreateInfo, sType}
+  rawOffset = #{offset VkImageFormatListCreateInfo, sType}
 
 instance Offset "pNext" VkImageFormatListCreateInfo where
-  rawOffset = #{offset struct VkImageFormatListCreateInfo, pNext}
+  rawOffset = #{offset VkImageFormatListCreateInfo, pNext}
 
 instance Offset "viewFormatCount" VkImageFormatListCreateInfo where
-  rawOffset = #{offset struct VkImageFormatListCreateInfo, viewFormatCount}
+  rawOffset = #{offset VkImageFormatListCreateInfo, viewFormatCount}
 
 instance Offset "pViewFormats" VkImageFormatListCreateInfo where
-  rawOffset = #{offset struct VkImageFormatListCreateInfo, pViewFormats}
+  rawOffset = #{offset VkImageFormatListCreateInfo, pViewFormats}
 
 #else
 

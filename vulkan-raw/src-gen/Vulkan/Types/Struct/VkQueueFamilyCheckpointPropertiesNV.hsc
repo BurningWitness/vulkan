@@ -30,8 +30,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkQueueFamilyCheckpointPropertiesNV" #-} VkQue
          }
 
 instance Storable VkQueueFamilyCheckpointPropertiesNV where
-  sizeOf    _ = #{size      struct VkQueueFamilyCheckpointPropertiesNV}
-  alignment _ = #{alignment struct VkQueueFamilyCheckpointPropertiesNV}
+  sizeOf    _ = #{size      VkQueueFamilyCheckpointPropertiesNV}
+  alignment _ = #{alignment VkQueueFamilyCheckpointPropertiesNV}
 
   peek ptr = 
     VkQueueFamilyCheckpointPropertiesNV
@@ -45,13 +45,13 @@ instance Storable VkQueueFamilyCheckpointPropertiesNV where
     pokeField @"checkpointExecutionStageMask" ptr val
 
 instance Offset "sType" VkQueueFamilyCheckpointPropertiesNV where
-  rawOffset = #{offset struct VkQueueFamilyCheckpointPropertiesNV, sType}
+  rawOffset = #{offset VkQueueFamilyCheckpointPropertiesNV, sType}
 
 instance Offset "pNext" VkQueueFamilyCheckpointPropertiesNV where
-  rawOffset = #{offset struct VkQueueFamilyCheckpointPropertiesNV, pNext}
+  rawOffset = #{offset VkQueueFamilyCheckpointPropertiesNV, pNext}
 
 instance Offset "checkpointExecutionStageMask" VkQueueFamilyCheckpointPropertiesNV where
-  rawOffset = #{offset struct VkQueueFamilyCheckpointPropertiesNV, checkpointExecutionStageMask}
+  rawOffset = #{offset VkQueueFamilyCheckpointPropertiesNV, checkpointExecutionStageMask}
 
 #else
 

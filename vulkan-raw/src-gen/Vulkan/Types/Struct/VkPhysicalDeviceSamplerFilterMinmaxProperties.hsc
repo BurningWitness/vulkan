@@ -31,8 +31,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkPhysicalDeviceSamplerFilterMinmaxProperties"
          }
 
 instance Storable VkPhysicalDeviceSamplerFilterMinmaxProperties where
-  sizeOf    _ = #{size      struct VkPhysicalDeviceSamplerFilterMinmaxProperties}
-  alignment _ = #{alignment struct VkPhysicalDeviceSamplerFilterMinmaxProperties}
+  sizeOf    _ = #{size      VkPhysicalDeviceSamplerFilterMinmaxProperties}
+  alignment _ = #{alignment VkPhysicalDeviceSamplerFilterMinmaxProperties}
 
   peek ptr = 
     VkPhysicalDeviceSamplerFilterMinmaxProperties
@@ -48,16 +48,16 @@ instance Storable VkPhysicalDeviceSamplerFilterMinmaxProperties where
     pokeField @"filterMinmaxImageComponentMapping" ptr val
 
 instance Offset "sType" VkPhysicalDeviceSamplerFilterMinmaxProperties where
-  rawOffset = #{offset struct VkPhysicalDeviceSamplerFilterMinmaxProperties, sType}
+  rawOffset = #{offset VkPhysicalDeviceSamplerFilterMinmaxProperties, sType}
 
 instance Offset "pNext" VkPhysicalDeviceSamplerFilterMinmaxProperties where
-  rawOffset = #{offset struct VkPhysicalDeviceSamplerFilterMinmaxProperties, pNext}
+  rawOffset = #{offset VkPhysicalDeviceSamplerFilterMinmaxProperties, pNext}
 
 instance Offset "filterMinmaxSingleComponentFormats" VkPhysicalDeviceSamplerFilterMinmaxProperties where
-  rawOffset = #{offset struct VkPhysicalDeviceSamplerFilterMinmaxProperties, filterMinmaxSingleComponentFormats}
+  rawOffset = #{offset VkPhysicalDeviceSamplerFilterMinmaxProperties, filterMinmaxSingleComponentFormats}
 
 instance Offset "filterMinmaxImageComponentMapping" VkPhysicalDeviceSamplerFilterMinmaxProperties where
-  rawOffset = #{offset struct VkPhysicalDeviceSamplerFilterMinmaxProperties, filterMinmaxImageComponentMapping}
+  rawOffset = #{offset VkPhysicalDeviceSamplerFilterMinmaxProperties, filterMinmaxImageComponentMapping}
 
 #else
 

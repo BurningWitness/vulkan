@@ -34,8 +34,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkPipelineViewportStateCreateInfo" #-} VkPipel
          }
 
 instance Storable VkPipelineViewportStateCreateInfo where
-  sizeOf    _ = #{size      struct VkPipelineViewportStateCreateInfo}
-  alignment _ = #{alignment struct VkPipelineViewportStateCreateInfo}
+  sizeOf    _ = #{size      VkPipelineViewportStateCreateInfo}
+  alignment _ = #{alignment VkPipelineViewportStateCreateInfo}
 
   peek ptr = 
     VkPipelineViewportStateCreateInfo
@@ -57,22 +57,22 @@ instance Storable VkPipelineViewportStateCreateInfo where
     pokeField @"pScissors" ptr val
 
 instance Offset "sType" VkPipelineViewportStateCreateInfo where
-  rawOffset = #{offset struct VkPipelineViewportStateCreateInfo, sType}
+  rawOffset = #{offset VkPipelineViewportStateCreateInfo, sType}
 
 instance Offset "pNext" VkPipelineViewportStateCreateInfo where
-  rawOffset = #{offset struct VkPipelineViewportStateCreateInfo, pNext}
+  rawOffset = #{offset VkPipelineViewportStateCreateInfo, pNext}
 
 instance Offset "flags" VkPipelineViewportStateCreateInfo where
-  rawOffset = #{offset struct VkPipelineViewportStateCreateInfo, flags}
+  rawOffset = #{offset VkPipelineViewportStateCreateInfo, flags}
 
 instance Offset "viewportCount" VkPipelineViewportStateCreateInfo where
-  rawOffset = #{offset struct VkPipelineViewportStateCreateInfo, viewportCount}
+  rawOffset = #{offset VkPipelineViewportStateCreateInfo, viewportCount}
 
 instance Offset "pViewports" VkPipelineViewportStateCreateInfo where
-  rawOffset = #{offset struct VkPipelineViewportStateCreateInfo, pViewports}
+  rawOffset = #{offset VkPipelineViewportStateCreateInfo, pViewports}
 
 instance Offset "scissorCount" VkPipelineViewportStateCreateInfo where
-  rawOffset = #{offset struct VkPipelineViewportStateCreateInfo, scissorCount}
+  rawOffset = #{offset VkPipelineViewportStateCreateInfo, scissorCount}
 
 instance Offset "pScissors" VkPipelineViewportStateCreateInfo where
-  rawOffset = #{offset struct VkPipelineViewportStateCreateInfo, pScissors}
+  rawOffset = #{offset VkPipelineViewportStateCreateInfo, pScissors}

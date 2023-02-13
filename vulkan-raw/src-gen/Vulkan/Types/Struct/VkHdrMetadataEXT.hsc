@@ -37,8 +37,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkHdrMetadataEXT" #-} VkHdrMetadataEXT =
          }
 
 instance Storable VkHdrMetadataEXT where
-  sizeOf    _ = #{size      struct VkHdrMetadataEXT}
-  alignment _ = #{alignment struct VkHdrMetadataEXT}
+  sizeOf    _ = #{size      VkHdrMetadataEXT}
+  alignment _ = #{alignment VkHdrMetadataEXT}
 
   peek ptr = 
     VkHdrMetadataEXT
@@ -66,34 +66,34 @@ instance Storable VkHdrMetadataEXT where
     pokeField @"maxFrameAverageLightLevel" ptr val
 
 instance Offset "sType" VkHdrMetadataEXT where
-  rawOffset = #{offset struct VkHdrMetadataEXT, sType}
+  rawOffset = #{offset VkHdrMetadataEXT, sType}
 
 instance Offset "pNext" VkHdrMetadataEXT where
-  rawOffset = #{offset struct VkHdrMetadataEXT, pNext}
+  rawOffset = #{offset VkHdrMetadataEXT, pNext}
 
 instance Offset "displayPrimaryRed" VkHdrMetadataEXT where
-  rawOffset = #{offset struct VkHdrMetadataEXT, displayPrimaryRed}
+  rawOffset = #{offset VkHdrMetadataEXT, displayPrimaryRed}
 
 instance Offset "displayPrimaryGreen" VkHdrMetadataEXT where
-  rawOffset = #{offset struct VkHdrMetadataEXT, displayPrimaryGreen}
+  rawOffset = #{offset VkHdrMetadataEXT, displayPrimaryGreen}
 
 instance Offset "displayPrimaryBlue" VkHdrMetadataEXT where
-  rawOffset = #{offset struct VkHdrMetadataEXT, displayPrimaryBlue}
+  rawOffset = #{offset VkHdrMetadataEXT, displayPrimaryBlue}
 
 instance Offset "whitePoint" VkHdrMetadataEXT where
-  rawOffset = #{offset struct VkHdrMetadataEXT, whitePoint}
+  rawOffset = #{offset VkHdrMetadataEXT, whitePoint}
 
 instance Offset "maxLuminance" VkHdrMetadataEXT where
-  rawOffset = #{offset struct VkHdrMetadataEXT, maxLuminance}
+  rawOffset = #{offset VkHdrMetadataEXT, maxLuminance}
 
 instance Offset "minLuminance" VkHdrMetadataEXT where
-  rawOffset = #{offset struct VkHdrMetadataEXT, minLuminance}
+  rawOffset = #{offset VkHdrMetadataEXT, minLuminance}
 
 instance Offset "maxContentLightLevel" VkHdrMetadataEXT where
-  rawOffset = #{offset struct VkHdrMetadataEXT, maxContentLightLevel}
+  rawOffset = #{offset VkHdrMetadataEXT, maxContentLightLevel}
 
 instance Offset "maxFrameAverageLightLevel" VkHdrMetadataEXT where
-  rawOffset = #{offset struct VkHdrMetadataEXT, maxFrameAverageLightLevel}
+  rawOffset = #{offset VkHdrMetadataEXT, maxFrameAverageLightLevel}
 
 #else
 

@@ -33,8 +33,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkDebugReportCallbackCreateInfoEXT" #-} VkDebu
          }
 
 instance Storable VkDebugReportCallbackCreateInfoEXT where
-  sizeOf    _ = #{size      struct VkDebugReportCallbackCreateInfoEXT}
-  alignment _ = #{alignment struct VkDebugReportCallbackCreateInfoEXT}
+  sizeOf    _ = #{size      VkDebugReportCallbackCreateInfoEXT}
+  alignment _ = #{alignment VkDebugReportCallbackCreateInfoEXT}
 
   peek ptr = 
     VkDebugReportCallbackCreateInfoEXT
@@ -52,19 +52,19 @@ instance Storable VkDebugReportCallbackCreateInfoEXT where
     pokeField @"pUserData" ptr val
 
 instance Offset "sType" VkDebugReportCallbackCreateInfoEXT where
-  rawOffset = #{offset struct VkDebugReportCallbackCreateInfoEXT, sType}
+  rawOffset = #{offset VkDebugReportCallbackCreateInfoEXT, sType}
 
 instance Offset "pNext" VkDebugReportCallbackCreateInfoEXT where
-  rawOffset = #{offset struct VkDebugReportCallbackCreateInfoEXT, pNext}
+  rawOffset = #{offset VkDebugReportCallbackCreateInfoEXT, pNext}
 
 instance Offset "flags" VkDebugReportCallbackCreateInfoEXT where
-  rawOffset = #{offset struct VkDebugReportCallbackCreateInfoEXT, flags}
+  rawOffset = #{offset VkDebugReportCallbackCreateInfoEXT, flags}
 
 instance Offset "pfnCallback" VkDebugReportCallbackCreateInfoEXT where
-  rawOffset = #{offset struct VkDebugReportCallbackCreateInfoEXT, pfnCallback}
+  rawOffset = #{offset VkDebugReportCallbackCreateInfoEXT, pfnCallback}
 
 instance Offset "pUserData" VkDebugReportCallbackCreateInfoEXT where
-  rawOffset = #{offset struct VkDebugReportCallbackCreateInfoEXT, pUserData}
+  rawOffset = #{offset VkDebugReportCallbackCreateInfoEXT, pUserData}
 
 #else
 

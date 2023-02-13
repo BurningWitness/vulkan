@@ -1,3 +1,7 @@
+{-# LANGUAGE CApiFFI #-}
+{-# LANGUAGE CPP #-}
+{-# LANGUAGE MagicHash #-}
+
 #include <vulkan/vulkan.h>
 
 #if VK_KHR_copy_commands2
@@ -9,17 +13,17 @@ import Data.Word
 import GHC.Ptr
 import Vulkan.Types.Handle
 import Vulkan.Types.Struct.VkCopyBufferInfo2
-import Vulkan.Types.Command.VkCmdCopyBuffer2
 import Vulkan.Types.VkFun
 
 
 
-type VkCmdCopyBuffer2KHR = VkCmdCopyBuffer2
+type VkCmdCopyBuffer2KHR =
+          VkCommandBuffer -- ^ commandBuffer
+       -> Ptr VkCopyBufferInfo2 -- ^ pCopyBufferInfo
+       -> IO ()
 
-vkFunCmdCopyBuffer2KHR
-  :: VkFun VkCmdCopyBuffer2KHR
-vkFunCmdCopyBuffer2KHR = vkFunCmdCopyBuffer2
-
+vkFunCmdCopyBuffer2KHR :: VkFun VkCmdCopyBuffer2KHR
+vkFunCmdCopyBuffer2KHR = VkFun (Ptr ("vkCmdCopyBuffer2KHR\0"##))
 
 #else
 

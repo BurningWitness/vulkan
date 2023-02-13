@@ -32,8 +32,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkVideoEncodeH264SessionParametersCreateInfoEX
          }
 
 instance Storable VkVideoEncodeH264SessionParametersCreateInfoEXT where
-  sizeOf    _ = #{size      struct VkVideoEncodeH264SessionParametersCreateInfoEXT}
-  alignment _ = #{alignment struct VkVideoEncodeH264SessionParametersCreateInfoEXT}
+  sizeOf    _ = #{size      VkVideoEncodeH264SessionParametersCreateInfoEXT}
+  alignment _ = #{alignment VkVideoEncodeH264SessionParametersCreateInfoEXT}
 
   peek ptr = 
     VkVideoEncodeH264SessionParametersCreateInfoEXT
@@ -51,19 +51,19 @@ instance Storable VkVideoEncodeH264SessionParametersCreateInfoEXT where
     pokeField @"pParametersAddInfo" ptr val
 
 instance Offset "sType" VkVideoEncodeH264SessionParametersCreateInfoEXT where
-  rawOffset = #{offset struct VkVideoEncodeH264SessionParametersCreateInfoEXT, sType}
+  rawOffset = #{offset VkVideoEncodeH264SessionParametersCreateInfoEXT, sType}
 
 instance Offset "pNext" VkVideoEncodeH264SessionParametersCreateInfoEXT where
-  rawOffset = #{offset struct VkVideoEncodeH264SessionParametersCreateInfoEXT, pNext}
+  rawOffset = #{offset VkVideoEncodeH264SessionParametersCreateInfoEXT, pNext}
 
 instance Offset "maxStdSPSCount" VkVideoEncodeH264SessionParametersCreateInfoEXT where
-  rawOffset = #{offset struct VkVideoEncodeH264SessionParametersCreateInfoEXT, maxStdSPSCount}
+  rawOffset = #{offset VkVideoEncodeH264SessionParametersCreateInfoEXT, maxStdSPSCount}
 
 instance Offset "maxStdPPSCount" VkVideoEncodeH264SessionParametersCreateInfoEXT where
-  rawOffset = #{offset struct VkVideoEncodeH264SessionParametersCreateInfoEXT, maxStdPPSCount}
+  rawOffset = #{offset VkVideoEncodeH264SessionParametersCreateInfoEXT, maxStdPPSCount}
 
 instance Offset "pParametersAddInfo" VkVideoEncodeH264SessionParametersCreateInfoEXT where
-  rawOffset = #{offset struct VkVideoEncodeH264SessionParametersCreateInfoEXT, pParametersAddInfo}
+  rawOffset = #{offset VkVideoEncodeH264SessionParametersCreateInfoEXT, pParametersAddInfo}
 
 #else
 

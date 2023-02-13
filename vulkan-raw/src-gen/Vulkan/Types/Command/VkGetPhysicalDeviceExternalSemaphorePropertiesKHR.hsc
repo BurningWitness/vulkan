@@ -1,3 +1,7 @@
+{-# LANGUAGE CApiFFI #-}
+{-# LANGUAGE CPP #-}
+{-# LANGUAGE MagicHash #-}
+
 #include <vulkan/vulkan.h>
 
 #if VK_KHR_external_semaphore_capabilities
@@ -10,17 +14,18 @@ import GHC.Ptr
 import Vulkan.Types.Handle
 import Vulkan.Types.Struct.VkExternalSemaphoreProperties
 import Vulkan.Types.Struct.VkPhysicalDeviceExternalSemaphoreInfo
-import Vulkan.Types.Command.VkGetPhysicalDeviceExternalSemaphoreProperties
 import Vulkan.Types.VkFun
 
 
 
-type VkGetPhysicalDeviceExternalSemaphorePropertiesKHR = VkGetPhysicalDeviceExternalSemaphoreProperties
+type VkGetPhysicalDeviceExternalSemaphorePropertiesKHR =
+          VkPhysicalDevice -- ^ physicalDevice
+       -> Ptr VkPhysicalDeviceExternalSemaphoreInfo -- ^ pExternalSemaphoreInfo
+       -> Ptr VkExternalSemaphoreProperties -- ^ pExternalSemaphoreProperties
+       -> IO ()
 
-vkFunGetPhysicalDeviceExternalSemaphorePropertiesKHR
-  :: VkFun VkGetPhysicalDeviceExternalSemaphorePropertiesKHR
-vkFunGetPhysicalDeviceExternalSemaphorePropertiesKHR = vkFunGetPhysicalDeviceExternalSemaphoreProperties
-
+vkFunGetPhysicalDeviceExternalSemaphorePropertiesKHR :: VkFun VkGetPhysicalDeviceExternalSemaphorePropertiesKHR
+vkFunGetPhysicalDeviceExternalSemaphorePropertiesKHR = VkFun (Ptr ("vkGetPhysicalDeviceExternalSemaphorePropertiesKHR\0"##))
 
 #else
 

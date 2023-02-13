@@ -30,8 +30,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkPipelineRasterizationProvokingVertexStateCre
          }
 
 instance Storable VkPipelineRasterizationProvokingVertexStateCreateInfoEXT where
-  sizeOf    _ = #{size      struct VkPipelineRasterizationProvokingVertexStateCreateInfoEXT}
-  alignment _ = #{alignment struct VkPipelineRasterizationProvokingVertexStateCreateInfoEXT}
+  sizeOf    _ = #{size      VkPipelineRasterizationProvokingVertexStateCreateInfoEXT}
+  alignment _ = #{alignment VkPipelineRasterizationProvokingVertexStateCreateInfoEXT}
 
   peek ptr = 
     VkPipelineRasterizationProvokingVertexStateCreateInfoEXT
@@ -45,13 +45,13 @@ instance Storable VkPipelineRasterizationProvokingVertexStateCreateInfoEXT where
     pokeField @"provokingVertexMode" ptr val
 
 instance Offset "sType" VkPipelineRasterizationProvokingVertexStateCreateInfoEXT where
-  rawOffset = #{offset struct VkPipelineRasterizationProvokingVertexStateCreateInfoEXT, sType}
+  rawOffset = #{offset VkPipelineRasterizationProvokingVertexStateCreateInfoEXT, sType}
 
 instance Offset "pNext" VkPipelineRasterizationProvokingVertexStateCreateInfoEXT where
-  rawOffset = #{offset struct VkPipelineRasterizationProvokingVertexStateCreateInfoEXT, pNext}
+  rawOffset = #{offset VkPipelineRasterizationProvokingVertexStateCreateInfoEXT, pNext}
 
 instance Offset "provokingVertexMode" VkPipelineRasterizationProvokingVertexStateCreateInfoEXT where
-  rawOffset = #{offset struct VkPipelineRasterizationProvokingVertexStateCreateInfoEXT, provokingVertexMode}
+  rawOffset = #{offset VkPipelineRasterizationProvokingVertexStateCreateInfoEXT, provokingVertexMode}
 
 #else
 

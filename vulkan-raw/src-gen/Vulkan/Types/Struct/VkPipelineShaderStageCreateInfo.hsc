@@ -36,8 +36,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkPipelineShaderStageCreateInfo" #-} VkPipelin
          }
 
 instance Storable VkPipelineShaderStageCreateInfo where
-  sizeOf    _ = #{size      struct VkPipelineShaderStageCreateInfo}
-  alignment _ = #{alignment struct VkPipelineShaderStageCreateInfo}
+  sizeOf    _ = #{size      VkPipelineShaderStageCreateInfo}
+  alignment _ = #{alignment VkPipelineShaderStageCreateInfo}
 
   peek ptr = 
     VkPipelineShaderStageCreateInfo
@@ -59,25 +59,25 @@ instance Storable VkPipelineShaderStageCreateInfo where
     pokeField @"pSpecializationInfo" ptr val
 
 instance Offset "sType" VkPipelineShaderStageCreateInfo where
-  rawOffset = #{offset struct VkPipelineShaderStageCreateInfo, sType}
+  rawOffset = #{offset VkPipelineShaderStageCreateInfo, sType}
 
 instance Offset "pNext" VkPipelineShaderStageCreateInfo where
-  rawOffset = #{offset struct VkPipelineShaderStageCreateInfo, pNext}
+  rawOffset = #{offset VkPipelineShaderStageCreateInfo, pNext}
 
 instance Offset "flags" VkPipelineShaderStageCreateInfo where
-  rawOffset = #{offset struct VkPipelineShaderStageCreateInfo, flags}
+  rawOffset = #{offset VkPipelineShaderStageCreateInfo, flags}
 
 instance Offset "stage" VkPipelineShaderStageCreateInfo where
-  rawOffset = #{offset struct VkPipelineShaderStageCreateInfo, stage}
+  rawOffset = #{offset VkPipelineShaderStageCreateInfo, stage}
 
 instance Offset "module_" VkPipelineShaderStageCreateInfo where
-  rawOffset = #{offset struct VkPipelineShaderStageCreateInfo, module}
+  rawOffset = #{offset VkPipelineShaderStageCreateInfo, module}
 
 instance Offset "pName" VkPipelineShaderStageCreateInfo where
-  rawOffset = #{offset struct VkPipelineShaderStageCreateInfo, pName}
+  rawOffset = #{offset VkPipelineShaderStageCreateInfo, pName}
 
 instance Offset "pSpecializationInfo" VkPipelineShaderStageCreateInfo where
-  rawOffset = #{offset struct VkPipelineShaderStageCreateInfo, pSpecializationInfo}
+  rawOffset = #{offset VkPipelineShaderStageCreateInfo, pSpecializationInfo}
 
 instance Offset "module" VkPipelineShaderStageCreateInfo where
   rawOffset = rawOffset @"module_" @VkPipelineShaderStageCreateInfo

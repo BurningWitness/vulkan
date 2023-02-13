@@ -30,8 +30,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkPhysicalDeviceFragmentShadingRateEnumsProper
          }
 
 instance Storable VkPhysicalDeviceFragmentShadingRateEnumsPropertiesNV where
-  sizeOf    _ = #{size      struct VkPhysicalDeviceFragmentShadingRateEnumsPropertiesNV}
-  alignment _ = #{alignment struct VkPhysicalDeviceFragmentShadingRateEnumsPropertiesNV}
+  sizeOf    _ = #{size      VkPhysicalDeviceFragmentShadingRateEnumsPropertiesNV}
+  alignment _ = #{alignment VkPhysicalDeviceFragmentShadingRateEnumsPropertiesNV}
 
   peek ptr = 
     VkPhysicalDeviceFragmentShadingRateEnumsPropertiesNV
@@ -45,13 +45,13 @@ instance Storable VkPhysicalDeviceFragmentShadingRateEnumsPropertiesNV where
     pokeField @"maxFragmentShadingRateInvocationCount" ptr val
 
 instance Offset "sType" VkPhysicalDeviceFragmentShadingRateEnumsPropertiesNV where
-  rawOffset = #{offset struct VkPhysicalDeviceFragmentShadingRateEnumsPropertiesNV, sType}
+  rawOffset = #{offset VkPhysicalDeviceFragmentShadingRateEnumsPropertiesNV, sType}
 
 instance Offset "pNext" VkPhysicalDeviceFragmentShadingRateEnumsPropertiesNV where
-  rawOffset = #{offset struct VkPhysicalDeviceFragmentShadingRateEnumsPropertiesNV, pNext}
+  rawOffset = #{offset VkPhysicalDeviceFragmentShadingRateEnumsPropertiesNV, pNext}
 
 instance Offset "maxFragmentShadingRateInvocationCount" VkPhysicalDeviceFragmentShadingRateEnumsPropertiesNV where
-  rawOffset = #{offset struct VkPhysicalDeviceFragmentShadingRateEnumsPropertiesNV, maxFragmentShadingRateInvocationCount}
+  rawOffset = #{offset VkPhysicalDeviceFragmentShadingRateEnumsPropertiesNV, maxFragmentShadingRateInvocationCount}
 
 #else
 

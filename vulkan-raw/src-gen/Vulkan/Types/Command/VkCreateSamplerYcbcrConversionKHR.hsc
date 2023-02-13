@@ -1,3 +1,7 @@
+{-# LANGUAGE CApiFFI #-}
+{-# LANGUAGE CPP #-}
+{-# LANGUAGE MagicHash #-}
+
 #include <vulkan/vulkan.h>
 
 #if VK_KHR_sampler_ycbcr_conversion
@@ -11,17 +15,19 @@ import Vulkan.Types.Enum.VkResult
 import Vulkan.Types.Handle
 import Vulkan.Types.Struct.VkAllocationCallbacks
 import Vulkan.Types.Struct.VkSamplerYcbcrConversionCreateInfo
-import Vulkan.Types.Command.VkCreateSamplerYcbcrConversion
 import Vulkan.Types.VkFun
 
 
 
-type VkCreateSamplerYcbcrConversionKHR = VkCreateSamplerYcbcrConversion
+type VkCreateSamplerYcbcrConversionKHR =
+          VkDevice -- ^ device
+       -> Ptr VkSamplerYcbcrConversionCreateInfo -- ^ pCreateInfo
+       -> Ptr VkAllocationCallbacks -- ^ pAllocator
+       -> Ptr VkSamplerYcbcrConversion -- ^ pYcbcrConversion
+       -> IO VkResult
 
-vkFunCreateSamplerYcbcrConversionKHR
-  :: VkFun VkCreateSamplerYcbcrConversionKHR
-vkFunCreateSamplerYcbcrConversionKHR = vkFunCreateSamplerYcbcrConversion
-
+vkFunCreateSamplerYcbcrConversionKHR :: VkFun VkCreateSamplerYcbcrConversionKHR
+vkFunCreateSamplerYcbcrConversionKHR = VkFun (Ptr ("vkCreateSamplerYcbcrConversionKHR\0"##))
 
 #else
 

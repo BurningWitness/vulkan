@@ -29,8 +29,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkImageViewMinLodCreateInfoEXT" #-} VkImageVie
          }
 
 instance Storable VkImageViewMinLodCreateInfoEXT where
-  sizeOf    _ = #{size      struct VkImageViewMinLodCreateInfoEXT}
-  alignment _ = #{alignment struct VkImageViewMinLodCreateInfoEXT}
+  sizeOf    _ = #{size      VkImageViewMinLodCreateInfoEXT}
+  alignment _ = #{alignment VkImageViewMinLodCreateInfoEXT}
 
   peek ptr = 
     VkImageViewMinLodCreateInfoEXT
@@ -44,13 +44,13 @@ instance Storable VkImageViewMinLodCreateInfoEXT where
     pokeField @"minLod" ptr val
 
 instance Offset "sType" VkImageViewMinLodCreateInfoEXT where
-  rawOffset = #{offset struct VkImageViewMinLodCreateInfoEXT, sType}
+  rawOffset = #{offset VkImageViewMinLodCreateInfoEXT, sType}
 
 instance Offset "pNext" VkImageViewMinLodCreateInfoEXT where
-  rawOffset = #{offset struct VkImageViewMinLodCreateInfoEXT, pNext}
+  rawOffset = #{offset VkImageViewMinLodCreateInfoEXT, pNext}
 
 instance Offset "minLod" VkImageViewMinLodCreateInfoEXT where
-  rawOffset = #{offset struct VkImageViewMinLodCreateInfoEXT, minLod}
+  rawOffset = #{offset VkImageViewMinLodCreateInfoEXT, minLod}
 
 #else
 

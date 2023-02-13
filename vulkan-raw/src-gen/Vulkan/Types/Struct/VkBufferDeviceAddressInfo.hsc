@@ -30,8 +30,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkBufferDeviceAddressInfo" #-} VkBufferDeviceA
          }
 
 instance Storable VkBufferDeviceAddressInfo where
-  sizeOf    _ = #{size      struct VkBufferDeviceAddressInfo}
-  alignment _ = #{alignment struct VkBufferDeviceAddressInfo}
+  sizeOf    _ = #{size      VkBufferDeviceAddressInfo}
+  alignment _ = #{alignment VkBufferDeviceAddressInfo}
 
   peek ptr = 
     VkBufferDeviceAddressInfo
@@ -45,13 +45,13 @@ instance Storable VkBufferDeviceAddressInfo where
     pokeField @"buffer" ptr val
 
 instance Offset "sType" VkBufferDeviceAddressInfo where
-  rawOffset = #{offset struct VkBufferDeviceAddressInfo, sType}
+  rawOffset = #{offset VkBufferDeviceAddressInfo, sType}
 
 instance Offset "pNext" VkBufferDeviceAddressInfo where
-  rawOffset = #{offset struct VkBufferDeviceAddressInfo, pNext}
+  rawOffset = #{offset VkBufferDeviceAddressInfo, pNext}
 
 instance Offset "buffer" VkBufferDeviceAddressInfo where
-  rawOffset = #{offset struct VkBufferDeviceAddressInfo, buffer}
+  rawOffset = #{offset VkBufferDeviceAddressInfo, buffer}
 
 #else
 

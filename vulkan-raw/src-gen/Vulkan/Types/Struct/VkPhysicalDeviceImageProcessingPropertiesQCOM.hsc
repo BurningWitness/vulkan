@@ -33,8 +33,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkPhysicalDeviceImageProcessingPropertiesQCOM"
          }
 
 instance Storable VkPhysicalDeviceImageProcessingPropertiesQCOM where
-  sizeOf    _ = #{size      struct VkPhysicalDeviceImageProcessingPropertiesQCOM}
-  alignment _ = #{alignment struct VkPhysicalDeviceImageProcessingPropertiesQCOM}
+  sizeOf    _ = #{size      VkPhysicalDeviceImageProcessingPropertiesQCOM}
+  alignment _ = #{alignment VkPhysicalDeviceImageProcessingPropertiesQCOM}
 
   peek ptr = 
     VkPhysicalDeviceImageProcessingPropertiesQCOM
@@ -54,22 +54,22 @@ instance Storable VkPhysicalDeviceImageProcessingPropertiesQCOM where
     pokeField @"maxBoxFilterBlockSize" ptr val
 
 instance Offset "sType" VkPhysicalDeviceImageProcessingPropertiesQCOM where
-  rawOffset = #{offset struct VkPhysicalDeviceImageProcessingPropertiesQCOM, sType}
+  rawOffset = #{offset VkPhysicalDeviceImageProcessingPropertiesQCOM, sType}
 
 instance Offset "pNext" VkPhysicalDeviceImageProcessingPropertiesQCOM where
-  rawOffset = #{offset struct VkPhysicalDeviceImageProcessingPropertiesQCOM, pNext}
+  rawOffset = #{offset VkPhysicalDeviceImageProcessingPropertiesQCOM, pNext}
 
 instance Offset "maxWeightFilterPhases" VkPhysicalDeviceImageProcessingPropertiesQCOM where
-  rawOffset = #{offset struct VkPhysicalDeviceImageProcessingPropertiesQCOM, maxWeightFilterPhases}
+  rawOffset = #{offset VkPhysicalDeviceImageProcessingPropertiesQCOM, maxWeightFilterPhases}
 
 instance Offset "maxWeightFilterDimension" VkPhysicalDeviceImageProcessingPropertiesQCOM where
-  rawOffset = #{offset struct VkPhysicalDeviceImageProcessingPropertiesQCOM, maxWeightFilterDimension}
+  rawOffset = #{offset VkPhysicalDeviceImageProcessingPropertiesQCOM, maxWeightFilterDimension}
 
 instance Offset "maxBlockMatchRegion" VkPhysicalDeviceImageProcessingPropertiesQCOM where
-  rawOffset = #{offset struct VkPhysicalDeviceImageProcessingPropertiesQCOM, maxBlockMatchRegion}
+  rawOffset = #{offset VkPhysicalDeviceImageProcessingPropertiesQCOM, maxBlockMatchRegion}
 
 instance Offset "maxBoxFilterBlockSize" VkPhysicalDeviceImageProcessingPropertiesQCOM where
-  rawOffset = #{offset struct VkPhysicalDeviceImageProcessingPropertiesQCOM, maxBoxFilterBlockSize}
+  rawOffset = #{offset VkPhysicalDeviceImageProcessingPropertiesQCOM, maxBoxFilterBlockSize}
 
 #else
 

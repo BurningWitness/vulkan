@@ -31,8 +31,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkPhysicalDeviceClusterCullingShaderProperties
          }
 
 instance Storable VkPhysicalDeviceClusterCullingShaderPropertiesHUAWEI where
-  sizeOf    _ = #{size      struct VkPhysicalDeviceClusterCullingShaderPropertiesHUAWEI}
-  alignment _ = #{alignment struct VkPhysicalDeviceClusterCullingShaderPropertiesHUAWEI}
+  sizeOf    _ = #{size      VkPhysicalDeviceClusterCullingShaderPropertiesHUAWEI}
+  alignment _ = #{alignment VkPhysicalDeviceClusterCullingShaderPropertiesHUAWEI}
 
   peek ptr = 
     VkPhysicalDeviceClusterCullingShaderPropertiesHUAWEI
@@ -50,19 +50,19 @@ instance Storable VkPhysicalDeviceClusterCullingShaderPropertiesHUAWEI where
     pokeField @"maxOutputClusterCount" ptr val
 
 instance Offset "sType" VkPhysicalDeviceClusterCullingShaderPropertiesHUAWEI where
-  rawOffset = #{offset struct VkPhysicalDeviceClusterCullingShaderPropertiesHUAWEI, sType}
+  rawOffset = #{offset VkPhysicalDeviceClusterCullingShaderPropertiesHUAWEI, sType}
 
 instance Offset "pNext" VkPhysicalDeviceClusterCullingShaderPropertiesHUAWEI where
-  rawOffset = #{offset struct VkPhysicalDeviceClusterCullingShaderPropertiesHUAWEI, pNext}
+  rawOffset = #{offset VkPhysicalDeviceClusterCullingShaderPropertiesHUAWEI, pNext}
 
 instance Offset "maxWorkGroupCount" VkPhysicalDeviceClusterCullingShaderPropertiesHUAWEI where
-  rawOffset = #{offset struct VkPhysicalDeviceClusterCullingShaderPropertiesHUAWEI, maxWorkGroupCount}
+  rawOffset = #{offset VkPhysicalDeviceClusterCullingShaderPropertiesHUAWEI, maxWorkGroupCount}
 
 instance Offset "maxWorkGroupSize" VkPhysicalDeviceClusterCullingShaderPropertiesHUAWEI where
-  rawOffset = #{offset struct VkPhysicalDeviceClusterCullingShaderPropertiesHUAWEI, maxWorkGroupSize}
+  rawOffset = #{offset VkPhysicalDeviceClusterCullingShaderPropertiesHUAWEI, maxWorkGroupSize}
 
 instance Offset "maxOutputClusterCount" VkPhysicalDeviceClusterCullingShaderPropertiesHUAWEI where
-  rawOffset = #{offset struct VkPhysicalDeviceClusterCullingShaderPropertiesHUAWEI, maxOutputClusterCount}
+  rawOffset = #{offset VkPhysicalDeviceClusterCullingShaderPropertiesHUAWEI, maxOutputClusterCount}
 
 #else
 

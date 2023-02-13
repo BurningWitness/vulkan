@@ -36,8 +36,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkPipelineColorBlendStateCreateInfo" #-} VkPip
          }
 
 instance Storable VkPipelineColorBlendStateCreateInfo where
-  sizeOf    _ = #{size      struct VkPipelineColorBlendStateCreateInfo}
-  alignment _ = #{alignment struct VkPipelineColorBlendStateCreateInfo}
+  sizeOf    _ = #{size      VkPipelineColorBlendStateCreateInfo}
+  alignment _ = #{alignment VkPipelineColorBlendStateCreateInfo}
 
   peek ptr = 
     VkPipelineColorBlendStateCreateInfo
@@ -61,25 +61,25 @@ instance Storable VkPipelineColorBlendStateCreateInfo where
     pokeField @"blendConstants" ptr val
 
 instance Offset "sType" VkPipelineColorBlendStateCreateInfo where
-  rawOffset = #{offset struct VkPipelineColorBlendStateCreateInfo, sType}
+  rawOffset = #{offset VkPipelineColorBlendStateCreateInfo, sType}
 
 instance Offset "pNext" VkPipelineColorBlendStateCreateInfo where
-  rawOffset = #{offset struct VkPipelineColorBlendStateCreateInfo, pNext}
+  rawOffset = #{offset VkPipelineColorBlendStateCreateInfo, pNext}
 
 instance Offset "flags" VkPipelineColorBlendStateCreateInfo where
-  rawOffset = #{offset struct VkPipelineColorBlendStateCreateInfo, flags}
+  rawOffset = #{offset VkPipelineColorBlendStateCreateInfo, flags}
 
 instance Offset "logicOpEnable" VkPipelineColorBlendStateCreateInfo where
-  rawOffset = #{offset struct VkPipelineColorBlendStateCreateInfo, logicOpEnable}
+  rawOffset = #{offset VkPipelineColorBlendStateCreateInfo, logicOpEnable}
 
 instance Offset "logicOp" VkPipelineColorBlendStateCreateInfo where
-  rawOffset = #{offset struct VkPipelineColorBlendStateCreateInfo, logicOp}
+  rawOffset = #{offset VkPipelineColorBlendStateCreateInfo, logicOp}
 
 instance Offset "attachmentCount" VkPipelineColorBlendStateCreateInfo where
-  rawOffset = #{offset struct VkPipelineColorBlendStateCreateInfo, attachmentCount}
+  rawOffset = #{offset VkPipelineColorBlendStateCreateInfo, attachmentCount}
 
 instance Offset "pAttachments" VkPipelineColorBlendStateCreateInfo where
-  rawOffset = #{offset struct VkPipelineColorBlendStateCreateInfo, pAttachments}
+  rawOffset = #{offset VkPipelineColorBlendStateCreateInfo, pAttachments}
 
 instance Offset "blendConstants" VkPipelineColorBlendStateCreateInfo where
-  rawOffset = #{offset struct VkPipelineColorBlendStateCreateInfo, blendConstants}
+  rawOffset = #{offset VkPipelineColorBlendStateCreateInfo, blendConstants}

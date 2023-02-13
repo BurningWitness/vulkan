@@ -28,8 +28,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkCoarseSampleLocationNV" #-} VkCoarseSampleLo
          }
 
 instance Storable VkCoarseSampleLocationNV where
-  sizeOf    _ = #{size      struct VkCoarseSampleLocationNV}
-  alignment _ = #{alignment struct VkCoarseSampleLocationNV}
+  sizeOf    _ = #{size      VkCoarseSampleLocationNV}
+  alignment _ = #{alignment VkCoarseSampleLocationNV}
 
   peek ptr = 
     VkCoarseSampleLocationNV
@@ -43,13 +43,13 @@ instance Storable VkCoarseSampleLocationNV where
     pokeField @"sample" ptr val
 
 instance Offset "pixelX" VkCoarseSampleLocationNV where
-  rawOffset = #{offset struct VkCoarseSampleLocationNV, pixelX}
+  rawOffset = #{offset VkCoarseSampleLocationNV, pixelX}
 
 instance Offset "pixelY" VkCoarseSampleLocationNV where
-  rawOffset = #{offset struct VkCoarseSampleLocationNV, pixelY}
+  rawOffset = #{offset VkCoarseSampleLocationNV, pixelY}
 
 instance Offset "sample" VkCoarseSampleLocationNV where
-  rawOffset = #{offset struct VkCoarseSampleLocationNV, sample}
+  rawOffset = #{offset VkCoarseSampleLocationNV, sample}
 
 #else
 

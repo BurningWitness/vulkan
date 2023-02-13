@@ -34,8 +34,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkRenderPassSampleLocationsBeginInfoEXT" #-} V
          }
 
 instance Storable VkRenderPassSampleLocationsBeginInfoEXT where
-  sizeOf    _ = #{size      struct VkRenderPassSampleLocationsBeginInfoEXT}
-  alignment _ = #{alignment struct VkRenderPassSampleLocationsBeginInfoEXT}
+  sizeOf    _ = #{size      VkRenderPassSampleLocationsBeginInfoEXT}
+  alignment _ = #{alignment VkRenderPassSampleLocationsBeginInfoEXT}
 
   peek ptr = 
     VkRenderPassSampleLocationsBeginInfoEXT
@@ -55,22 +55,22 @@ instance Storable VkRenderPassSampleLocationsBeginInfoEXT where
     pokeField @"pPostSubpassSampleLocations" ptr val
 
 instance Offset "sType" VkRenderPassSampleLocationsBeginInfoEXT where
-  rawOffset = #{offset struct VkRenderPassSampleLocationsBeginInfoEXT, sType}
+  rawOffset = #{offset VkRenderPassSampleLocationsBeginInfoEXT, sType}
 
 instance Offset "pNext" VkRenderPassSampleLocationsBeginInfoEXT where
-  rawOffset = #{offset struct VkRenderPassSampleLocationsBeginInfoEXT, pNext}
+  rawOffset = #{offset VkRenderPassSampleLocationsBeginInfoEXT, pNext}
 
 instance Offset "attachmentInitialSampleLocationsCount" VkRenderPassSampleLocationsBeginInfoEXT where
-  rawOffset = #{offset struct VkRenderPassSampleLocationsBeginInfoEXT, attachmentInitialSampleLocationsCount}
+  rawOffset = #{offset VkRenderPassSampleLocationsBeginInfoEXT, attachmentInitialSampleLocationsCount}
 
 instance Offset "pAttachmentInitialSampleLocations" VkRenderPassSampleLocationsBeginInfoEXT where
-  rawOffset = #{offset struct VkRenderPassSampleLocationsBeginInfoEXT, pAttachmentInitialSampleLocations}
+  rawOffset = #{offset VkRenderPassSampleLocationsBeginInfoEXT, pAttachmentInitialSampleLocations}
 
 instance Offset "postSubpassSampleLocationsCount" VkRenderPassSampleLocationsBeginInfoEXT where
-  rawOffset = #{offset struct VkRenderPassSampleLocationsBeginInfoEXT, postSubpassSampleLocationsCount}
+  rawOffset = #{offset VkRenderPassSampleLocationsBeginInfoEXT, postSubpassSampleLocationsCount}
 
 instance Offset "pPostSubpassSampleLocations" VkRenderPassSampleLocationsBeginInfoEXT where
-  rawOffset = #{offset struct VkRenderPassSampleLocationsBeginInfoEXT, pPostSubpassSampleLocations}
+  rawOffset = #{offset VkRenderPassSampleLocationsBeginInfoEXT, pPostSubpassSampleLocations}
 
 #else
 

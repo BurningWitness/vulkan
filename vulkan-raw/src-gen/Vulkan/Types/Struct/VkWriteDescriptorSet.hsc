@@ -38,8 +38,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkWriteDescriptorSet" #-} VkWriteDescriptorSet
          }
 
 instance Storable VkWriteDescriptorSet where
-  sizeOf    _ = #{size      struct VkWriteDescriptorSet}
-  alignment _ = #{alignment struct VkWriteDescriptorSet}
+  sizeOf    _ = #{size      VkWriteDescriptorSet}
+  alignment _ = #{alignment VkWriteDescriptorSet}
 
   peek ptr = 
     VkWriteDescriptorSet
@@ -67,31 +67,31 @@ instance Storable VkWriteDescriptorSet where
     pokeField @"pTexelBufferView" ptr val
 
 instance Offset "sType" VkWriteDescriptorSet where
-  rawOffset = #{offset struct VkWriteDescriptorSet, sType}
+  rawOffset = #{offset VkWriteDescriptorSet, sType}
 
 instance Offset "pNext" VkWriteDescriptorSet where
-  rawOffset = #{offset struct VkWriteDescriptorSet, pNext}
+  rawOffset = #{offset VkWriteDescriptorSet, pNext}
 
 instance Offset "dstSet" VkWriteDescriptorSet where
-  rawOffset = #{offset struct VkWriteDescriptorSet, dstSet}
+  rawOffset = #{offset VkWriteDescriptorSet, dstSet}
 
 instance Offset "dstBinding" VkWriteDescriptorSet where
-  rawOffset = #{offset struct VkWriteDescriptorSet, dstBinding}
+  rawOffset = #{offset VkWriteDescriptorSet, dstBinding}
 
 instance Offset "dstArrayElement" VkWriteDescriptorSet where
-  rawOffset = #{offset struct VkWriteDescriptorSet, dstArrayElement}
+  rawOffset = #{offset VkWriteDescriptorSet, dstArrayElement}
 
 instance Offset "descriptorCount" VkWriteDescriptorSet where
-  rawOffset = #{offset struct VkWriteDescriptorSet, descriptorCount}
+  rawOffset = #{offset VkWriteDescriptorSet, descriptorCount}
 
 instance Offset "descriptorType" VkWriteDescriptorSet where
-  rawOffset = #{offset struct VkWriteDescriptorSet, descriptorType}
+  rawOffset = #{offset VkWriteDescriptorSet, descriptorType}
 
 instance Offset "pImageInfo" VkWriteDescriptorSet where
-  rawOffset = #{offset struct VkWriteDescriptorSet, pImageInfo}
+  rawOffset = #{offset VkWriteDescriptorSet, pImageInfo}
 
 instance Offset "pBufferInfo" VkWriteDescriptorSet where
-  rawOffset = #{offset struct VkWriteDescriptorSet, pBufferInfo}
+  rawOffset = #{offset VkWriteDescriptorSet, pBufferInfo}
 
 instance Offset "pTexelBufferView" VkWriteDescriptorSet where
-  rawOffset = #{offset struct VkWriteDescriptorSet, pTexelBufferView}
+  rawOffset = #{offset VkWriteDescriptorSet, pTexelBufferView}

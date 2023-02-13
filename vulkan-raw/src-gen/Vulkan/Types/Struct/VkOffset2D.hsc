@@ -25,8 +25,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkOffset2D" #-} VkOffset2D =
          }
 
 instance Storable VkOffset2D where
-  sizeOf    _ = #{size      struct VkOffset2D}
-  alignment _ = #{alignment struct VkOffset2D}
+  sizeOf    _ = #{size      VkOffset2D}
+  alignment _ = #{alignment VkOffset2D}
 
   peek ptr = 
     VkOffset2D
@@ -38,7 +38,7 @@ instance Storable VkOffset2D where
     pokeField @"y" ptr val
 
 instance Offset "x" VkOffset2D where
-  rawOffset = #{offset struct VkOffset2D, x}
+  rawOffset = #{offset VkOffset2D, x}
 
 instance Offset "y" VkOffset2D where
-  rawOffset = #{offset struct VkOffset2D, y}
+  rawOffset = #{offset VkOffset2D, y}

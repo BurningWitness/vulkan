@@ -29,8 +29,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkDescriptorSetVariableDescriptorCountLayoutSu
          }
 
 instance Storable VkDescriptorSetVariableDescriptorCountLayoutSupport where
-  sizeOf    _ = #{size      struct VkDescriptorSetVariableDescriptorCountLayoutSupport}
-  alignment _ = #{alignment struct VkDescriptorSetVariableDescriptorCountLayoutSupport}
+  sizeOf    _ = #{size      VkDescriptorSetVariableDescriptorCountLayoutSupport}
+  alignment _ = #{alignment VkDescriptorSetVariableDescriptorCountLayoutSupport}
 
   peek ptr = 
     VkDescriptorSetVariableDescriptorCountLayoutSupport
@@ -44,13 +44,13 @@ instance Storable VkDescriptorSetVariableDescriptorCountLayoutSupport where
     pokeField @"maxVariableDescriptorCount" ptr val
 
 instance Offset "sType" VkDescriptorSetVariableDescriptorCountLayoutSupport where
-  rawOffset = #{offset struct VkDescriptorSetVariableDescriptorCountLayoutSupport, sType}
+  rawOffset = #{offset VkDescriptorSetVariableDescriptorCountLayoutSupport, sType}
 
 instance Offset "pNext" VkDescriptorSetVariableDescriptorCountLayoutSupport where
-  rawOffset = #{offset struct VkDescriptorSetVariableDescriptorCountLayoutSupport, pNext}
+  rawOffset = #{offset VkDescriptorSetVariableDescriptorCountLayoutSupport, pNext}
 
 instance Offset "maxVariableDescriptorCount" VkDescriptorSetVariableDescriptorCountLayoutSupport where
-  rawOffset = #{offset struct VkDescriptorSetVariableDescriptorCountLayoutSupport, maxVariableDescriptorCount}
+  rawOffset = #{offset VkDescriptorSetVariableDescriptorCountLayoutSupport, maxVariableDescriptorCount}
 
 #else
 

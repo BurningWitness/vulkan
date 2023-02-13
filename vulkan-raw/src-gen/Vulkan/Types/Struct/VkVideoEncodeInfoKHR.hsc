@@ -43,8 +43,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkVideoEncodeInfoKHR" #-} VkVideoEncodeInfoKHR
          }
 
 instance Storable VkVideoEncodeInfoKHR where
-  sizeOf    _ = #{size      struct VkVideoEncodeInfoKHR}
-  alignment _ = #{alignment struct VkVideoEncodeInfoKHR}
+  sizeOf    _ = #{size      VkVideoEncodeInfoKHR}
+  alignment _ = #{alignment VkVideoEncodeInfoKHR}
 
   peek ptr = 
     VkVideoEncodeInfoKHR
@@ -76,40 +76,40 @@ instance Storable VkVideoEncodeInfoKHR where
     pokeField @"precedingExternallyEncodedBytes" ptr val
 
 instance Offset "sType" VkVideoEncodeInfoKHR where
-  rawOffset = #{offset struct VkVideoEncodeInfoKHR, sType}
+  rawOffset = #{offset VkVideoEncodeInfoKHR, sType}
 
 instance Offset "pNext" VkVideoEncodeInfoKHR where
-  rawOffset = #{offset struct VkVideoEncodeInfoKHR, pNext}
+  rawOffset = #{offset VkVideoEncodeInfoKHR, pNext}
 
 instance Offset "flags" VkVideoEncodeInfoKHR where
-  rawOffset = #{offset struct VkVideoEncodeInfoKHR, flags}
+  rawOffset = #{offset VkVideoEncodeInfoKHR, flags}
 
 instance Offset "qualityLevel" VkVideoEncodeInfoKHR where
-  rawOffset = #{offset struct VkVideoEncodeInfoKHR, qualityLevel}
+  rawOffset = #{offset VkVideoEncodeInfoKHR, qualityLevel}
 
 instance Offset "dstBitstreamBuffer" VkVideoEncodeInfoKHR where
-  rawOffset = #{offset struct VkVideoEncodeInfoKHR, dstBitstreamBuffer}
+  rawOffset = #{offset VkVideoEncodeInfoKHR, dstBitstreamBuffer}
 
 instance Offset "dstBitstreamBufferOffset" VkVideoEncodeInfoKHR where
-  rawOffset = #{offset struct VkVideoEncodeInfoKHR, dstBitstreamBufferOffset}
+  rawOffset = #{offset VkVideoEncodeInfoKHR, dstBitstreamBufferOffset}
 
 instance Offset "dstBitstreamBufferMaxRange" VkVideoEncodeInfoKHR where
-  rawOffset = #{offset struct VkVideoEncodeInfoKHR, dstBitstreamBufferMaxRange}
+  rawOffset = #{offset VkVideoEncodeInfoKHR, dstBitstreamBufferMaxRange}
 
 instance Offset "srcPictureResource" VkVideoEncodeInfoKHR where
-  rawOffset = #{offset struct VkVideoEncodeInfoKHR, srcPictureResource}
+  rawOffset = #{offset VkVideoEncodeInfoKHR, srcPictureResource}
 
 instance Offset "pSetupReferenceSlot" VkVideoEncodeInfoKHR where
-  rawOffset = #{offset struct VkVideoEncodeInfoKHR, pSetupReferenceSlot}
+  rawOffset = #{offset VkVideoEncodeInfoKHR, pSetupReferenceSlot}
 
 instance Offset "referenceSlotCount" VkVideoEncodeInfoKHR where
-  rawOffset = #{offset struct VkVideoEncodeInfoKHR, referenceSlotCount}
+  rawOffset = #{offset VkVideoEncodeInfoKHR, referenceSlotCount}
 
 instance Offset "pReferenceSlots" VkVideoEncodeInfoKHR where
-  rawOffset = #{offset struct VkVideoEncodeInfoKHR, pReferenceSlots}
+  rawOffset = #{offset VkVideoEncodeInfoKHR, pReferenceSlots}
 
 instance Offset "precedingExternallyEncodedBytes" VkVideoEncodeInfoKHR where
-  rawOffset = #{offset struct VkVideoEncodeInfoKHR, precedingExternallyEncodedBytes}
+  rawOffset = #{offset VkVideoEncodeInfoKHR, precedingExternallyEncodedBytes}
 
 #else
 

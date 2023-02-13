@@ -32,8 +32,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkD3D12FenceSubmitInfoKHR" #-} VkD3D12FenceSub
          }
 
 instance Storable VkD3D12FenceSubmitInfoKHR where
-  sizeOf    _ = #{size      struct VkD3D12FenceSubmitInfoKHR}
-  alignment _ = #{alignment struct VkD3D12FenceSubmitInfoKHR}
+  sizeOf    _ = #{size      VkD3D12FenceSubmitInfoKHR}
+  alignment _ = #{alignment VkD3D12FenceSubmitInfoKHR}
 
   peek ptr = 
     VkD3D12FenceSubmitInfoKHR
@@ -53,22 +53,22 @@ instance Storable VkD3D12FenceSubmitInfoKHR where
     pokeField @"pSignalSemaphoreValues" ptr val
 
 instance Offset "sType" VkD3D12FenceSubmitInfoKHR where
-  rawOffset = #{offset struct VkD3D12FenceSubmitInfoKHR, sType}
+  rawOffset = #{offset VkD3D12FenceSubmitInfoKHR, sType}
 
 instance Offset "pNext" VkD3D12FenceSubmitInfoKHR where
-  rawOffset = #{offset struct VkD3D12FenceSubmitInfoKHR, pNext}
+  rawOffset = #{offset VkD3D12FenceSubmitInfoKHR, pNext}
 
 instance Offset "waitSemaphoreValuesCount" VkD3D12FenceSubmitInfoKHR where
-  rawOffset = #{offset struct VkD3D12FenceSubmitInfoKHR, waitSemaphoreValuesCount}
+  rawOffset = #{offset VkD3D12FenceSubmitInfoKHR, waitSemaphoreValuesCount}
 
 instance Offset "pWaitSemaphoreValues" VkD3D12FenceSubmitInfoKHR where
-  rawOffset = #{offset struct VkD3D12FenceSubmitInfoKHR, pWaitSemaphoreValues}
+  rawOffset = #{offset VkD3D12FenceSubmitInfoKHR, pWaitSemaphoreValues}
 
 instance Offset "signalSemaphoreValuesCount" VkD3D12FenceSubmitInfoKHR where
-  rawOffset = #{offset struct VkD3D12FenceSubmitInfoKHR, signalSemaphoreValuesCount}
+  rawOffset = #{offset VkD3D12FenceSubmitInfoKHR, signalSemaphoreValuesCount}
 
 instance Offset "pSignalSemaphoreValues" VkD3D12FenceSubmitInfoKHR where
-  rawOffset = #{offset struct VkD3D12FenceSubmitInfoKHR, pSignalSemaphoreValues}
+  rawOffset = #{offset VkD3D12FenceSubmitInfoKHR, pSignalSemaphoreValues}
 
 #else
 

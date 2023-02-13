@@ -27,8 +27,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkSampleLocationEXT" #-} VkSampleLocationEXT =
          }
 
 instance Storable VkSampleLocationEXT where
-  sizeOf    _ = #{size      struct VkSampleLocationEXT}
-  alignment _ = #{alignment struct VkSampleLocationEXT}
+  sizeOf    _ = #{size      VkSampleLocationEXT}
+  alignment _ = #{alignment VkSampleLocationEXT}
 
   peek ptr = 
     VkSampleLocationEXT
@@ -40,10 +40,10 @@ instance Storable VkSampleLocationEXT where
     pokeField @"y" ptr val
 
 instance Offset "x" VkSampleLocationEXT where
-  rawOffset = #{offset struct VkSampleLocationEXT, x}
+  rawOffset = #{offset VkSampleLocationEXT, x}
 
 instance Offset "y" VkSampleLocationEXT where
-  rawOffset = #{offset struct VkSampleLocationEXT, y}
+  rawOffset = #{offset VkSampleLocationEXT, y}
 
 #else
 

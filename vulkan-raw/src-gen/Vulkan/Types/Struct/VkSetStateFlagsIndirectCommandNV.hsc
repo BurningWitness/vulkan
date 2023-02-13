@@ -27,8 +27,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkSetStateFlagsIndirectCommandNV" #-} VkSetSta
          }
 
 instance Storable VkSetStateFlagsIndirectCommandNV where
-  sizeOf    _ = #{size      struct VkSetStateFlagsIndirectCommandNV}
-  alignment _ = #{alignment struct VkSetStateFlagsIndirectCommandNV}
+  sizeOf    _ = #{size      VkSetStateFlagsIndirectCommandNV}
+  alignment _ = #{alignment VkSetStateFlagsIndirectCommandNV}
 
   peek ptr = 
     VkSetStateFlagsIndirectCommandNV
@@ -39,7 +39,7 @@ instance Storable VkSetStateFlagsIndirectCommandNV where
     pokeField @"data" ptr val
 
 instance Offset "data_" VkSetStateFlagsIndirectCommandNV where
-  rawOffset = #{offset struct VkSetStateFlagsIndirectCommandNV, data}
+  rawOffset = #{offset VkSetStateFlagsIndirectCommandNV, data}
 
 instance Offset "data" VkSetStateFlagsIndirectCommandNV where
   rawOffset = rawOffset @"data_" @VkSetStateFlagsIndirectCommandNV

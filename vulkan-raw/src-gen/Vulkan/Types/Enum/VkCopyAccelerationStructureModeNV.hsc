@@ -1,14 +1,14 @@
 {-# LANGUAGE CPP #-}
+{-# LANGUAGE PatternSynonyms #-}
 
 #include <vulkan/vulkan.h>
 
 module Vulkan.Types.Enum.VkCopyAccelerationStructureModeNV where
 
 import Data.Int
-import Vulkan.Types.Enum.VkCopyAccelerationStructureModeKHR
 
 
 
 #if VK_NV_ray_tracing
-type VkCopyAccelerationStructureModeNV = VkCopyAccelerationStructureModeKHR
+type VkCopyAccelerationStructureModeNV = #{type int}
 #endif

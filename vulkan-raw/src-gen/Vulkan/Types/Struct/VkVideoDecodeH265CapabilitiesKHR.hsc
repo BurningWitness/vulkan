@@ -30,8 +30,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkVideoDecodeH265CapabilitiesKHR" #-} VkVideoD
          }
 
 instance Storable VkVideoDecodeH265CapabilitiesKHR where
-  sizeOf    _ = #{size      struct VkVideoDecodeH265CapabilitiesKHR}
-  alignment _ = #{alignment struct VkVideoDecodeH265CapabilitiesKHR}
+  sizeOf    _ = #{size      VkVideoDecodeH265CapabilitiesKHR}
+  alignment _ = #{alignment VkVideoDecodeH265CapabilitiesKHR}
 
   peek ptr = 
     VkVideoDecodeH265CapabilitiesKHR
@@ -45,13 +45,13 @@ instance Storable VkVideoDecodeH265CapabilitiesKHR where
     pokeField @"maxLevelIdc" ptr val
 
 instance Offset "sType" VkVideoDecodeH265CapabilitiesKHR where
-  rawOffset = #{offset struct VkVideoDecodeH265CapabilitiesKHR, sType}
+  rawOffset = #{offset VkVideoDecodeH265CapabilitiesKHR, sType}
 
 instance Offset "pNext" VkVideoDecodeH265CapabilitiesKHR where
-  rawOffset = #{offset struct VkVideoDecodeH265CapabilitiesKHR, pNext}
+  rawOffset = #{offset VkVideoDecodeH265CapabilitiesKHR, pNext}
 
 instance Offset "maxLevelIdc" VkVideoDecodeH265CapabilitiesKHR where
-  rawOffset = #{offset struct VkVideoDecodeH265CapabilitiesKHR, maxLevelIdc}
+  rawOffset = #{offset VkVideoDecodeH265CapabilitiesKHR, maxLevelIdc}
 
 #else
 

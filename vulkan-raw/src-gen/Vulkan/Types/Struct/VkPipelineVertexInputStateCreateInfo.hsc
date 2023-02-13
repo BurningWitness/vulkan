@@ -34,8 +34,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkPipelineVertexInputStateCreateInfo" #-} VkPi
          }
 
 instance Storable VkPipelineVertexInputStateCreateInfo where
-  sizeOf    _ = #{size      struct VkPipelineVertexInputStateCreateInfo}
-  alignment _ = #{alignment struct VkPipelineVertexInputStateCreateInfo}
+  sizeOf    _ = #{size      VkPipelineVertexInputStateCreateInfo}
+  alignment _ = #{alignment VkPipelineVertexInputStateCreateInfo}
 
   peek ptr = 
     VkPipelineVertexInputStateCreateInfo
@@ -57,22 +57,22 @@ instance Storable VkPipelineVertexInputStateCreateInfo where
     pokeField @"pVertexAttributeDescriptions" ptr val
 
 instance Offset "sType" VkPipelineVertexInputStateCreateInfo where
-  rawOffset = #{offset struct VkPipelineVertexInputStateCreateInfo, sType}
+  rawOffset = #{offset VkPipelineVertexInputStateCreateInfo, sType}
 
 instance Offset "pNext" VkPipelineVertexInputStateCreateInfo where
-  rawOffset = #{offset struct VkPipelineVertexInputStateCreateInfo, pNext}
+  rawOffset = #{offset VkPipelineVertexInputStateCreateInfo, pNext}
 
 instance Offset "flags" VkPipelineVertexInputStateCreateInfo where
-  rawOffset = #{offset struct VkPipelineVertexInputStateCreateInfo, flags}
+  rawOffset = #{offset VkPipelineVertexInputStateCreateInfo, flags}
 
 instance Offset "vertexBindingDescriptionCount" VkPipelineVertexInputStateCreateInfo where
-  rawOffset = #{offset struct VkPipelineVertexInputStateCreateInfo, vertexBindingDescriptionCount}
+  rawOffset = #{offset VkPipelineVertexInputStateCreateInfo, vertexBindingDescriptionCount}
 
 instance Offset "pVertexBindingDescriptions" VkPipelineVertexInputStateCreateInfo where
-  rawOffset = #{offset struct VkPipelineVertexInputStateCreateInfo, pVertexBindingDescriptions}
+  rawOffset = #{offset VkPipelineVertexInputStateCreateInfo, pVertexBindingDescriptions}
 
 instance Offset "vertexAttributeDescriptionCount" VkPipelineVertexInputStateCreateInfo where
-  rawOffset = #{offset struct VkPipelineVertexInputStateCreateInfo, vertexAttributeDescriptionCount}
+  rawOffset = #{offset VkPipelineVertexInputStateCreateInfo, vertexAttributeDescriptionCount}
 
 instance Offset "pVertexAttributeDescriptions" VkPipelineVertexInputStateCreateInfo where
-  rawOffset = #{offset struct VkPipelineVertexInputStateCreateInfo, pVertexAttributeDescriptions}
+  rawOffset = #{offset VkPipelineVertexInputStateCreateInfo, pVertexAttributeDescriptions}

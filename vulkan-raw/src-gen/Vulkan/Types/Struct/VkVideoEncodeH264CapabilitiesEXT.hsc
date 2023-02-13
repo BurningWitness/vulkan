@@ -43,8 +43,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkVideoEncodeH264CapabilitiesEXT" #-} VkVideoE
          }
 
 instance Storable VkVideoEncodeH264CapabilitiesEXT where
-  sizeOf    _ = #{size      struct VkVideoEncodeH264CapabilitiesEXT}
-  alignment _ = #{alignment struct VkVideoEncodeH264CapabilitiesEXT}
+  sizeOf    _ = #{size      VkVideoEncodeH264CapabilitiesEXT}
+  alignment _ = #{alignment VkVideoEncodeH264CapabilitiesEXT}
 
   peek ptr = 
     VkVideoEncodeH264CapabilitiesEXT
@@ -78,43 +78,43 @@ instance Storable VkVideoEncodeH264CapabilitiesEXT where
     pokeField @"log2MaxMvLengthVertical" ptr val
 
 instance Offset "sType" VkVideoEncodeH264CapabilitiesEXT where
-  rawOffset = #{offset struct VkVideoEncodeH264CapabilitiesEXT, sType}
+  rawOffset = #{offset VkVideoEncodeH264CapabilitiesEXT, sType}
 
 instance Offset "pNext" VkVideoEncodeH264CapabilitiesEXT where
-  rawOffset = #{offset struct VkVideoEncodeH264CapabilitiesEXT, pNext}
+  rawOffset = #{offset VkVideoEncodeH264CapabilitiesEXT, pNext}
 
 instance Offset "flags" VkVideoEncodeH264CapabilitiesEXT where
-  rawOffset = #{offset struct VkVideoEncodeH264CapabilitiesEXT, flags}
+  rawOffset = #{offset VkVideoEncodeH264CapabilitiesEXT, flags}
 
 instance Offset "inputModeFlags" VkVideoEncodeH264CapabilitiesEXT where
-  rawOffset = #{offset struct VkVideoEncodeH264CapabilitiesEXT, inputModeFlags}
+  rawOffset = #{offset VkVideoEncodeH264CapabilitiesEXT, inputModeFlags}
 
 instance Offset "outputModeFlags" VkVideoEncodeH264CapabilitiesEXT where
-  rawOffset = #{offset struct VkVideoEncodeH264CapabilitiesEXT, outputModeFlags}
+  rawOffset = #{offset VkVideoEncodeH264CapabilitiesEXT, outputModeFlags}
 
 instance Offset "maxPPictureL0ReferenceCount" VkVideoEncodeH264CapabilitiesEXT where
-  rawOffset = #{offset struct VkVideoEncodeH264CapabilitiesEXT, maxPPictureL0ReferenceCount}
+  rawOffset = #{offset VkVideoEncodeH264CapabilitiesEXT, maxPPictureL0ReferenceCount}
 
 instance Offset "maxBPictureL0ReferenceCount" VkVideoEncodeH264CapabilitiesEXT where
-  rawOffset = #{offset struct VkVideoEncodeH264CapabilitiesEXT, maxBPictureL0ReferenceCount}
+  rawOffset = #{offset VkVideoEncodeH264CapabilitiesEXT, maxBPictureL0ReferenceCount}
 
 instance Offset "maxL1ReferenceCount" VkVideoEncodeH264CapabilitiesEXT where
-  rawOffset = #{offset struct VkVideoEncodeH264CapabilitiesEXT, maxL1ReferenceCount}
+  rawOffset = #{offset VkVideoEncodeH264CapabilitiesEXT, maxL1ReferenceCount}
 
 instance Offset "motionVectorsOverPicBoundariesFlag" VkVideoEncodeH264CapabilitiesEXT where
-  rawOffset = #{offset struct VkVideoEncodeH264CapabilitiesEXT, motionVectorsOverPicBoundariesFlag}
+  rawOffset = #{offset VkVideoEncodeH264CapabilitiesEXT, motionVectorsOverPicBoundariesFlag}
 
 instance Offset "maxBytesPerPicDenom" VkVideoEncodeH264CapabilitiesEXT where
-  rawOffset = #{offset struct VkVideoEncodeH264CapabilitiesEXT, maxBytesPerPicDenom}
+  rawOffset = #{offset VkVideoEncodeH264CapabilitiesEXT, maxBytesPerPicDenom}
 
 instance Offset "maxBitsPerMbDenom" VkVideoEncodeH264CapabilitiesEXT where
-  rawOffset = #{offset struct VkVideoEncodeH264CapabilitiesEXT, maxBitsPerMbDenom}
+  rawOffset = #{offset VkVideoEncodeH264CapabilitiesEXT, maxBitsPerMbDenom}
 
 instance Offset "log2MaxMvLengthHorizontal" VkVideoEncodeH264CapabilitiesEXT where
-  rawOffset = #{offset struct VkVideoEncodeH264CapabilitiesEXT, log2MaxMvLengthHorizontal}
+  rawOffset = #{offset VkVideoEncodeH264CapabilitiesEXT, log2MaxMvLengthHorizontal}
 
 instance Offset "log2MaxMvLengthVertical" VkVideoEncodeH264CapabilitiesEXT where
-  rawOffset = #{offset struct VkVideoEncodeH264CapabilitiesEXT, log2MaxMvLengthVertical}
+  rawOffset = #{offset VkVideoEncodeH264CapabilitiesEXT, log2MaxMvLengthVertical}
 
 #else
 

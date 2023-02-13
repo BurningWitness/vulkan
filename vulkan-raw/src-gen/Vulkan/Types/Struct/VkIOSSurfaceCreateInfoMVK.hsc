@@ -31,8 +31,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkIOSSurfaceCreateInfoMVK" #-} VkIOSSurfaceCre
          }
 
 instance Storable VkIOSSurfaceCreateInfoMVK where
-  sizeOf    _ = #{size      struct VkIOSSurfaceCreateInfoMVK}
-  alignment _ = #{alignment struct VkIOSSurfaceCreateInfoMVK}
+  sizeOf    _ = #{size      VkIOSSurfaceCreateInfoMVK}
+  alignment _ = #{alignment VkIOSSurfaceCreateInfoMVK}
 
   peek ptr = 
     VkIOSSurfaceCreateInfoMVK
@@ -48,16 +48,16 @@ instance Storable VkIOSSurfaceCreateInfoMVK where
     pokeField @"pView" ptr val
 
 instance Offset "sType" VkIOSSurfaceCreateInfoMVK where
-  rawOffset = #{offset struct VkIOSSurfaceCreateInfoMVK, sType}
+  rawOffset = #{offset VkIOSSurfaceCreateInfoMVK, sType}
 
 instance Offset "pNext" VkIOSSurfaceCreateInfoMVK where
-  rawOffset = #{offset struct VkIOSSurfaceCreateInfoMVK, pNext}
+  rawOffset = #{offset VkIOSSurfaceCreateInfoMVK, pNext}
 
 instance Offset "flags" VkIOSSurfaceCreateInfoMVK where
-  rawOffset = #{offset struct VkIOSSurfaceCreateInfoMVK, flags}
+  rawOffset = #{offset VkIOSSurfaceCreateInfoMVK, flags}
 
 instance Offset "pView" VkIOSSurfaceCreateInfoMVK where
-  rawOffset = #{offset struct VkIOSSurfaceCreateInfoMVK, pView}
+  rawOffset = #{offset VkIOSSurfaceCreateInfoMVK, pView}
 
 #else
 

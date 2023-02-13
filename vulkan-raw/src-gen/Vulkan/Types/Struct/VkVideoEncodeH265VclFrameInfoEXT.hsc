@@ -35,8 +35,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkVideoEncodeH265VclFrameInfoEXT" #-} VkVideoE
          }
 
 instance Storable VkVideoEncodeH265VclFrameInfoEXT where
-  sizeOf    _ = #{size      struct VkVideoEncodeH265VclFrameInfoEXT}
-  alignment _ = #{alignment struct VkVideoEncodeH265VclFrameInfoEXT}
+  sizeOf    _ = #{size      VkVideoEncodeH265VclFrameInfoEXT}
+  alignment _ = #{alignment VkVideoEncodeH265VclFrameInfoEXT}
 
   peek ptr = 
     VkVideoEncodeH265VclFrameInfoEXT
@@ -56,22 +56,22 @@ instance Storable VkVideoEncodeH265VclFrameInfoEXT where
     pokeField @"pCurrentPictureInfo" ptr val
 
 instance Offset "sType" VkVideoEncodeH265VclFrameInfoEXT where
-  rawOffset = #{offset struct VkVideoEncodeH265VclFrameInfoEXT, sType}
+  rawOffset = #{offset VkVideoEncodeH265VclFrameInfoEXT, sType}
 
 instance Offset "pNext" VkVideoEncodeH265VclFrameInfoEXT where
-  rawOffset = #{offset struct VkVideoEncodeH265VclFrameInfoEXT, pNext}
+  rawOffset = #{offset VkVideoEncodeH265VclFrameInfoEXT, pNext}
 
 instance Offset "pReferenceFinalLists" VkVideoEncodeH265VclFrameInfoEXT where
-  rawOffset = #{offset struct VkVideoEncodeH265VclFrameInfoEXT, pReferenceFinalLists}
+  rawOffset = #{offset VkVideoEncodeH265VclFrameInfoEXT, pReferenceFinalLists}
 
 instance Offset "naluSliceSegmentEntryCount" VkVideoEncodeH265VclFrameInfoEXT where
-  rawOffset = #{offset struct VkVideoEncodeH265VclFrameInfoEXT, naluSliceSegmentEntryCount}
+  rawOffset = #{offset VkVideoEncodeH265VclFrameInfoEXT, naluSliceSegmentEntryCount}
 
 instance Offset "pNaluSliceSegmentEntries" VkVideoEncodeH265VclFrameInfoEXT where
-  rawOffset = #{offset struct VkVideoEncodeH265VclFrameInfoEXT, pNaluSliceSegmentEntries}
+  rawOffset = #{offset VkVideoEncodeH265VclFrameInfoEXT, pNaluSliceSegmentEntries}
 
 instance Offset "pCurrentPictureInfo" VkVideoEncodeH265VclFrameInfoEXT where
-  rawOffset = #{offset struct VkVideoEncodeH265VclFrameInfoEXT, pCurrentPictureInfo}
+  rawOffset = #{offset VkVideoEncodeH265VclFrameInfoEXT, pCurrentPictureInfo}
 
 #else
 

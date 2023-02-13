@@ -34,8 +34,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkVideoEncodeRateControlLayerInfoKHR" #-} VkVi
          }
 
 instance Storable VkVideoEncodeRateControlLayerInfoKHR where
-  sizeOf    _ = #{size      struct VkVideoEncodeRateControlLayerInfoKHR}
-  alignment _ = #{alignment struct VkVideoEncodeRateControlLayerInfoKHR}
+  sizeOf    _ = #{size      VkVideoEncodeRateControlLayerInfoKHR}
+  alignment _ = #{alignment VkVideoEncodeRateControlLayerInfoKHR}
 
   peek ptr = 
     VkVideoEncodeRateControlLayerInfoKHR
@@ -59,28 +59,28 @@ instance Storable VkVideoEncodeRateControlLayerInfoKHR where
     pokeField @"initialVirtualBufferSizeInMs" ptr val
 
 instance Offset "sType" VkVideoEncodeRateControlLayerInfoKHR where
-  rawOffset = #{offset struct VkVideoEncodeRateControlLayerInfoKHR, sType}
+  rawOffset = #{offset VkVideoEncodeRateControlLayerInfoKHR, sType}
 
 instance Offset "pNext" VkVideoEncodeRateControlLayerInfoKHR where
-  rawOffset = #{offset struct VkVideoEncodeRateControlLayerInfoKHR, pNext}
+  rawOffset = #{offset VkVideoEncodeRateControlLayerInfoKHR, pNext}
 
 instance Offset "averageBitrate" VkVideoEncodeRateControlLayerInfoKHR where
-  rawOffset = #{offset struct VkVideoEncodeRateControlLayerInfoKHR, averageBitrate}
+  rawOffset = #{offset VkVideoEncodeRateControlLayerInfoKHR, averageBitrate}
 
 instance Offset "maxBitrate" VkVideoEncodeRateControlLayerInfoKHR where
-  rawOffset = #{offset struct VkVideoEncodeRateControlLayerInfoKHR, maxBitrate}
+  rawOffset = #{offset VkVideoEncodeRateControlLayerInfoKHR, maxBitrate}
 
 instance Offset "frameRateNumerator" VkVideoEncodeRateControlLayerInfoKHR where
-  rawOffset = #{offset struct VkVideoEncodeRateControlLayerInfoKHR, frameRateNumerator}
+  rawOffset = #{offset VkVideoEncodeRateControlLayerInfoKHR, frameRateNumerator}
 
 instance Offset "frameRateDenominator" VkVideoEncodeRateControlLayerInfoKHR where
-  rawOffset = #{offset struct VkVideoEncodeRateControlLayerInfoKHR, frameRateDenominator}
+  rawOffset = #{offset VkVideoEncodeRateControlLayerInfoKHR, frameRateDenominator}
 
 instance Offset "virtualBufferSizeInMs" VkVideoEncodeRateControlLayerInfoKHR where
-  rawOffset = #{offset struct VkVideoEncodeRateControlLayerInfoKHR, virtualBufferSizeInMs}
+  rawOffset = #{offset VkVideoEncodeRateControlLayerInfoKHR, virtualBufferSizeInMs}
 
 instance Offset "initialVirtualBufferSizeInMs" VkVideoEncodeRateControlLayerInfoKHR where
-  rawOffset = #{offset struct VkVideoEncodeRateControlLayerInfoKHR, initialVirtualBufferSizeInMs}
+  rawOffset = #{offset VkVideoEncodeRateControlLayerInfoKHR, initialVirtualBufferSizeInMs}
 
 #else
 

@@ -30,8 +30,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkPhysicalDeviceCoherentMemoryFeaturesAMD" #-}
          }
 
 instance Storable VkPhysicalDeviceCoherentMemoryFeaturesAMD where
-  sizeOf    _ = #{size      struct VkPhysicalDeviceCoherentMemoryFeaturesAMD}
-  alignment _ = #{alignment struct VkPhysicalDeviceCoherentMemoryFeaturesAMD}
+  sizeOf    _ = #{size      VkPhysicalDeviceCoherentMemoryFeaturesAMD}
+  alignment _ = #{alignment VkPhysicalDeviceCoherentMemoryFeaturesAMD}
 
   peek ptr = 
     VkPhysicalDeviceCoherentMemoryFeaturesAMD
@@ -45,13 +45,13 @@ instance Storable VkPhysicalDeviceCoherentMemoryFeaturesAMD where
     pokeField @"deviceCoherentMemory" ptr val
 
 instance Offset "sType" VkPhysicalDeviceCoherentMemoryFeaturesAMD where
-  rawOffset = #{offset struct VkPhysicalDeviceCoherentMemoryFeaturesAMD, sType}
+  rawOffset = #{offset VkPhysicalDeviceCoherentMemoryFeaturesAMD, sType}
 
 instance Offset "pNext" VkPhysicalDeviceCoherentMemoryFeaturesAMD where
-  rawOffset = #{offset struct VkPhysicalDeviceCoherentMemoryFeaturesAMD, pNext}
+  rawOffset = #{offset VkPhysicalDeviceCoherentMemoryFeaturesAMD, pNext}
 
 instance Offset "deviceCoherentMemory" VkPhysicalDeviceCoherentMemoryFeaturesAMD where
-  rawOffset = #{offset struct VkPhysicalDeviceCoherentMemoryFeaturesAMD, deviceCoherentMemory}
+  rawOffset = #{offset VkPhysicalDeviceCoherentMemoryFeaturesAMD, deviceCoherentMemory}
 
 #else
 

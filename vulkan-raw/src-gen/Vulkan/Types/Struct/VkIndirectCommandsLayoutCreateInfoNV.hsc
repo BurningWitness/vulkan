@@ -37,8 +37,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkIndirectCommandsLayoutCreateInfoNV" #-} VkIn
          }
 
 instance Storable VkIndirectCommandsLayoutCreateInfoNV where
-  sizeOf    _ = #{size      struct VkIndirectCommandsLayoutCreateInfoNV}
-  alignment _ = #{alignment struct VkIndirectCommandsLayoutCreateInfoNV}
+  sizeOf    _ = #{size      VkIndirectCommandsLayoutCreateInfoNV}
+  alignment _ = #{alignment VkIndirectCommandsLayoutCreateInfoNV}
 
   peek ptr = 
     VkIndirectCommandsLayoutCreateInfoNV
@@ -62,28 +62,28 @@ instance Storable VkIndirectCommandsLayoutCreateInfoNV where
     pokeField @"pStreamStrides" ptr val
 
 instance Offset "sType" VkIndirectCommandsLayoutCreateInfoNV where
-  rawOffset = #{offset struct VkIndirectCommandsLayoutCreateInfoNV, sType}
+  rawOffset = #{offset VkIndirectCommandsLayoutCreateInfoNV, sType}
 
 instance Offset "pNext" VkIndirectCommandsLayoutCreateInfoNV where
-  rawOffset = #{offset struct VkIndirectCommandsLayoutCreateInfoNV, pNext}
+  rawOffset = #{offset VkIndirectCommandsLayoutCreateInfoNV, pNext}
 
 instance Offset "flags" VkIndirectCommandsLayoutCreateInfoNV where
-  rawOffset = #{offset struct VkIndirectCommandsLayoutCreateInfoNV, flags}
+  rawOffset = #{offset VkIndirectCommandsLayoutCreateInfoNV, flags}
 
 instance Offset "pipelineBindPoint" VkIndirectCommandsLayoutCreateInfoNV where
-  rawOffset = #{offset struct VkIndirectCommandsLayoutCreateInfoNV, pipelineBindPoint}
+  rawOffset = #{offset VkIndirectCommandsLayoutCreateInfoNV, pipelineBindPoint}
 
 instance Offset "tokenCount" VkIndirectCommandsLayoutCreateInfoNV where
-  rawOffset = #{offset struct VkIndirectCommandsLayoutCreateInfoNV, tokenCount}
+  rawOffset = #{offset VkIndirectCommandsLayoutCreateInfoNV, tokenCount}
 
 instance Offset "pTokens" VkIndirectCommandsLayoutCreateInfoNV where
-  rawOffset = #{offset struct VkIndirectCommandsLayoutCreateInfoNV, pTokens}
+  rawOffset = #{offset VkIndirectCommandsLayoutCreateInfoNV, pTokens}
 
 instance Offset "streamCount" VkIndirectCommandsLayoutCreateInfoNV where
-  rawOffset = #{offset struct VkIndirectCommandsLayoutCreateInfoNV, streamCount}
+  rawOffset = #{offset VkIndirectCommandsLayoutCreateInfoNV, streamCount}
 
 instance Offset "pStreamStrides" VkIndirectCommandsLayoutCreateInfoNV where
-  rawOffset = #{offset struct VkIndirectCommandsLayoutCreateInfoNV, pStreamStrides}
+  rawOffset = #{offset VkIndirectCommandsLayoutCreateInfoNV, pStreamStrides}
 
 #else
 

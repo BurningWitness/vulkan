@@ -1,3 +1,7 @@
+{-# LANGUAGE CApiFFI #-}
+{-# LANGUAGE CPP #-}
+{-# LANGUAGE MagicHash #-}
+
 #include <vulkan/vulkan.h>
 
 #if VK_EXT_extended_dynamic_state
@@ -9,17 +13,18 @@ import Data.Word
 import GHC.Ptr
 import Vulkan.Types.Handle
 import Vulkan.Types.Struct.VkViewport
-import Vulkan.Types.Command.VkCmdSetViewportWithCount
 import Vulkan.Types.VkFun
 
 
 
-type VkCmdSetViewportWithCountEXT = VkCmdSetViewportWithCount
+type VkCmdSetViewportWithCountEXT =
+          VkCommandBuffer -- ^ commandBuffer
+       -> #{type uint32_t} -- ^ viewportCount
+       -> Ptr VkViewport -- ^ pViewports
+       -> IO ()
 
-vkFunCmdSetViewportWithCountEXT
-  :: VkFun VkCmdSetViewportWithCountEXT
-vkFunCmdSetViewportWithCountEXT = vkFunCmdSetViewportWithCount
-
+vkFunCmdSetViewportWithCountEXT :: VkFun VkCmdSetViewportWithCountEXT
+vkFunCmdSetViewportWithCountEXT = VkFun (Ptr ("vkCmdSetViewportWithCountEXT\0"##))
 
 #else
 

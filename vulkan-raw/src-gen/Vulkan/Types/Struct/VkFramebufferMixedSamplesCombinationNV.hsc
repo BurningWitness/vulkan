@@ -35,8 +35,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkFramebufferMixedSamplesCombinationNV" #-} Vk
          }
 
 instance Storable VkFramebufferMixedSamplesCombinationNV where
-  sizeOf    _ = #{size      struct VkFramebufferMixedSamplesCombinationNV}
-  alignment _ = #{alignment struct VkFramebufferMixedSamplesCombinationNV}
+  sizeOf    _ = #{size      VkFramebufferMixedSamplesCombinationNV}
+  alignment _ = #{alignment VkFramebufferMixedSamplesCombinationNV}
 
   peek ptr = 
     VkFramebufferMixedSamplesCombinationNV
@@ -56,22 +56,22 @@ instance Storable VkFramebufferMixedSamplesCombinationNV where
     pokeField @"colorSamples" ptr val
 
 instance Offset "sType" VkFramebufferMixedSamplesCombinationNV where
-  rawOffset = #{offset struct VkFramebufferMixedSamplesCombinationNV, sType}
+  rawOffset = #{offset VkFramebufferMixedSamplesCombinationNV, sType}
 
 instance Offset "pNext" VkFramebufferMixedSamplesCombinationNV where
-  rawOffset = #{offset struct VkFramebufferMixedSamplesCombinationNV, pNext}
+  rawOffset = #{offset VkFramebufferMixedSamplesCombinationNV, pNext}
 
 instance Offset "coverageReductionMode" VkFramebufferMixedSamplesCombinationNV where
-  rawOffset = #{offset struct VkFramebufferMixedSamplesCombinationNV, coverageReductionMode}
+  rawOffset = #{offset VkFramebufferMixedSamplesCombinationNV, coverageReductionMode}
 
 instance Offset "rasterizationSamples" VkFramebufferMixedSamplesCombinationNV where
-  rawOffset = #{offset struct VkFramebufferMixedSamplesCombinationNV, rasterizationSamples}
+  rawOffset = #{offset VkFramebufferMixedSamplesCombinationNV, rasterizationSamples}
 
 instance Offset "depthStencilSamples" VkFramebufferMixedSamplesCombinationNV where
-  rawOffset = #{offset struct VkFramebufferMixedSamplesCombinationNV, depthStencilSamples}
+  rawOffset = #{offset VkFramebufferMixedSamplesCombinationNV, depthStencilSamples}
 
 instance Offset "colorSamples" VkFramebufferMixedSamplesCombinationNV where
-  rawOffset = #{offset struct VkFramebufferMixedSamplesCombinationNV, colorSamples}
+  rawOffset = #{offset VkFramebufferMixedSamplesCombinationNV, colorSamples}
 
 #else
 

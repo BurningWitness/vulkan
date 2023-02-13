@@ -37,8 +37,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkAccelerationStructureInfoNV" #-} VkAccelerat
          }
 
 instance Storable VkAccelerationStructureInfoNV where
-  sizeOf    _ = #{size      struct VkAccelerationStructureInfoNV}
-  alignment _ = #{alignment struct VkAccelerationStructureInfoNV}
+  sizeOf    _ = #{size      VkAccelerationStructureInfoNV}
+  alignment _ = #{alignment VkAccelerationStructureInfoNV}
 
   peek ptr = 
     VkAccelerationStructureInfoNV
@@ -60,25 +60,25 @@ instance Storable VkAccelerationStructureInfoNV where
     pokeField @"pGeometries" ptr val
 
 instance Offset "sType" VkAccelerationStructureInfoNV where
-  rawOffset = #{offset struct VkAccelerationStructureInfoNV, sType}
+  rawOffset = #{offset VkAccelerationStructureInfoNV, sType}
 
 instance Offset "pNext" VkAccelerationStructureInfoNV where
-  rawOffset = #{offset struct VkAccelerationStructureInfoNV, pNext}
+  rawOffset = #{offset VkAccelerationStructureInfoNV, pNext}
 
 instance Offset "type_" VkAccelerationStructureInfoNV where
-  rawOffset = #{offset struct VkAccelerationStructureInfoNV, type}
+  rawOffset = #{offset VkAccelerationStructureInfoNV, type}
 
 instance Offset "flags" VkAccelerationStructureInfoNV where
-  rawOffset = #{offset struct VkAccelerationStructureInfoNV, flags}
+  rawOffset = #{offset VkAccelerationStructureInfoNV, flags}
 
 instance Offset "instanceCount" VkAccelerationStructureInfoNV where
-  rawOffset = #{offset struct VkAccelerationStructureInfoNV, instanceCount}
+  rawOffset = #{offset VkAccelerationStructureInfoNV, instanceCount}
 
 instance Offset "geometryCount" VkAccelerationStructureInfoNV where
-  rawOffset = #{offset struct VkAccelerationStructureInfoNV, geometryCount}
+  rawOffset = #{offset VkAccelerationStructureInfoNV, geometryCount}
 
 instance Offset "pGeometries" VkAccelerationStructureInfoNV where
-  rawOffset = #{offset struct VkAccelerationStructureInfoNV, pGeometries}
+  rawOffset = #{offset VkAccelerationStructureInfoNV, pGeometries}
 
 instance Offset "type" VkAccelerationStructureInfoNV where
   rawOffset = rawOffset @"type_" @VkAccelerationStructureInfoNV

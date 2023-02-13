@@ -35,8 +35,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkPipelineDiscardRectangleStateCreateInfoEXT" 
          }
 
 instance Storable VkPipelineDiscardRectangleStateCreateInfoEXT where
-  sizeOf    _ = #{size      struct VkPipelineDiscardRectangleStateCreateInfoEXT}
-  alignment _ = #{alignment struct VkPipelineDiscardRectangleStateCreateInfoEXT}
+  sizeOf    _ = #{size      VkPipelineDiscardRectangleStateCreateInfoEXT}
+  alignment _ = #{alignment VkPipelineDiscardRectangleStateCreateInfoEXT}
 
   peek ptr = 
     VkPipelineDiscardRectangleStateCreateInfoEXT
@@ -56,22 +56,22 @@ instance Storable VkPipelineDiscardRectangleStateCreateInfoEXT where
     pokeField @"pDiscardRectangles" ptr val
 
 instance Offset "sType" VkPipelineDiscardRectangleStateCreateInfoEXT where
-  rawOffset = #{offset struct VkPipelineDiscardRectangleStateCreateInfoEXT, sType}
+  rawOffset = #{offset VkPipelineDiscardRectangleStateCreateInfoEXT, sType}
 
 instance Offset "pNext" VkPipelineDiscardRectangleStateCreateInfoEXT where
-  rawOffset = #{offset struct VkPipelineDiscardRectangleStateCreateInfoEXT, pNext}
+  rawOffset = #{offset VkPipelineDiscardRectangleStateCreateInfoEXT, pNext}
 
 instance Offset "flags" VkPipelineDiscardRectangleStateCreateInfoEXT where
-  rawOffset = #{offset struct VkPipelineDiscardRectangleStateCreateInfoEXT, flags}
+  rawOffset = #{offset VkPipelineDiscardRectangleStateCreateInfoEXT, flags}
 
 instance Offset "discardRectangleMode" VkPipelineDiscardRectangleStateCreateInfoEXT where
-  rawOffset = #{offset struct VkPipelineDiscardRectangleStateCreateInfoEXT, discardRectangleMode}
+  rawOffset = #{offset VkPipelineDiscardRectangleStateCreateInfoEXT, discardRectangleMode}
 
 instance Offset "discardRectangleCount" VkPipelineDiscardRectangleStateCreateInfoEXT where
-  rawOffset = #{offset struct VkPipelineDiscardRectangleStateCreateInfoEXT, discardRectangleCount}
+  rawOffset = #{offset VkPipelineDiscardRectangleStateCreateInfoEXT, discardRectangleCount}
 
 instance Offset "pDiscardRectangles" VkPipelineDiscardRectangleStateCreateInfoEXT where
-  rawOffset = #{offset struct VkPipelineDiscardRectangleStateCreateInfoEXT, pDiscardRectangles}
+  rawOffset = #{offset VkPipelineDiscardRectangleStateCreateInfoEXT, pDiscardRectangles}
 
 #else
 

@@ -31,8 +31,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkPhysicalDeviceClusterCullingShaderFeaturesHU
          }
 
 instance Storable VkPhysicalDeviceClusterCullingShaderFeaturesHUAWEI where
-  sizeOf    _ = #{size      struct VkPhysicalDeviceClusterCullingShaderFeaturesHUAWEI}
-  alignment _ = #{alignment struct VkPhysicalDeviceClusterCullingShaderFeaturesHUAWEI}
+  sizeOf    _ = #{size      VkPhysicalDeviceClusterCullingShaderFeaturesHUAWEI}
+  alignment _ = #{alignment VkPhysicalDeviceClusterCullingShaderFeaturesHUAWEI}
 
   peek ptr = 
     VkPhysicalDeviceClusterCullingShaderFeaturesHUAWEI
@@ -48,16 +48,16 @@ instance Storable VkPhysicalDeviceClusterCullingShaderFeaturesHUAWEI where
     pokeField @"multiviewClusterCullingShader" ptr val
 
 instance Offset "sType" VkPhysicalDeviceClusterCullingShaderFeaturesHUAWEI where
-  rawOffset = #{offset struct VkPhysicalDeviceClusterCullingShaderFeaturesHUAWEI, sType}
+  rawOffset = #{offset VkPhysicalDeviceClusterCullingShaderFeaturesHUAWEI, sType}
 
 instance Offset "pNext" VkPhysicalDeviceClusterCullingShaderFeaturesHUAWEI where
-  rawOffset = #{offset struct VkPhysicalDeviceClusterCullingShaderFeaturesHUAWEI, pNext}
+  rawOffset = #{offset VkPhysicalDeviceClusterCullingShaderFeaturesHUAWEI, pNext}
 
 instance Offset "clustercullingShader" VkPhysicalDeviceClusterCullingShaderFeaturesHUAWEI where
-  rawOffset = #{offset struct VkPhysicalDeviceClusterCullingShaderFeaturesHUAWEI, clustercullingShader}
+  rawOffset = #{offset VkPhysicalDeviceClusterCullingShaderFeaturesHUAWEI, clustercullingShader}
 
 instance Offset "multiviewClusterCullingShader" VkPhysicalDeviceClusterCullingShaderFeaturesHUAWEI where
-  rawOffset = #{offset struct VkPhysicalDeviceClusterCullingShaderFeaturesHUAWEI, multiviewClusterCullingShader}
+  rawOffset = #{offset VkPhysicalDeviceClusterCullingShaderFeaturesHUAWEI, multiviewClusterCullingShader}
 
 #else
 

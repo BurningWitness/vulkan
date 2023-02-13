@@ -33,8 +33,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkWaylandSurfaceCreateInfoKHR" #-} VkWaylandSu
          }
 
 instance Storable VkWaylandSurfaceCreateInfoKHR where
-  sizeOf    _ = #{size      struct VkWaylandSurfaceCreateInfoKHR}
-  alignment _ = #{alignment struct VkWaylandSurfaceCreateInfoKHR}
+  sizeOf    _ = #{size      VkWaylandSurfaceCreateInfoKHR}
+  alignment _ = #{alignment VkWaylandSurfaceCreateInfoKHR}
 
   peek ptr = 
     VkWaylandSurfaceCreateInfoKHR
@@ -52,19 +52,19 @@ instance Storable VkWaylandSurfaceCreateInfoKHR where
     pokeField @"surface" ptr val
 
 instance Offset "sType" VkWaylandSurfaceCreateInfoKHR where
-  rawOffset = #{offset struct VkWaylandSurfaceCreateInfoKHR, sType}
+  rawOffset = #{offset VkWaylandSurfaceCreateInfoKHR, sType}
 
 instance Offset "pNext" VkWaylandSurfaceCreateInfoKHR where
-  rawOffset = #{offset struct VkWaylandSurfaceCreateInfoKHR, pNext}
+  rawOffset = #{offset VkWaylandSurfaceCreateInfoKHR, pNext}
 
 instance Offset "flags" VkWaylandSurfaceCreateInfoKHR where
-  rawOffset = #{offset struct VkWaylandSurfaceCreateInfoKHR, flags}
+  rawOffset = #{offset VkWaylandSurfaceCreateInfoKHR, flags}
 
 instance Offset "display" VkWaylandSurfaceCreateInfoKHR where
-  rawOffset = #{offset struct VkWaylandSurfaceCreateInfoKHR, display}
+  rawOffset = #{offset VkWaylandSurfaceCreateInfoKHR, display}
 
 instance Offset "surface" VkWaylandSurfaceCreateInfoKHR where
-  rawOffset = #{offset struct VkWaylandSurfaceCreateInfoKHR, surface}
+  rawOffset = #{offset VkWaylandSurfaceCreateInfoKHR, surface}
 
 #else
 

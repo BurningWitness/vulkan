@@ -32,5 +32,5 @@ pattern VK_SAMPLER_ADDRESS_MODE_MIRROR_CLAMP_TO_EDGE = 4
 #if VK_KHR_sampler_mirror_clamp_to_edge
 -- | Alias introduced for consistency with extension suffixing rules
 pattern VK_SAMPLER_ADDRESS_MODE_MIRROR_CLAMP_TO_EDGE_KHR :: (Eq a, Num a) => a
-pattern VK_SAMPLER_ADDRESS_MODE_MIRROR_CLAMP_TO_EDGE_KHR = VK_SAMPLER_ADDRESS_MODE_MIRROR_CLAMP_TO_EDGE
+pattern VK_SAMPLER_ADDRESS_MODE_MIRROR_CLAMP_TO_EDGE_KHR = 4
 #endif

@@ -35,8 +35,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkFramebufferCreateInfo" #-} VkFramebufferCrea
          }
 
 instance Storable VkFramebufferCreateInfo where
-  sizeOf    _ = #{size      struct VkFramebufferCreateInfo}
-  alignment _ = #{alignment struct VkFramebufferCreateInfo}
+  sizeOf    _ = #{size      VkFramebufferCreateInfo}
+  alignment _ = #{alignment VkFramebufferCreateInfo}
 
   peek ptr = 
     VkFramebufferCreateInfo
@@ -62,28 +62,28 @@ instance Storable VkFramebufferCreateInfo where
     pokeField @"layers" ptr val
 
 instance Offset "sType" VkFramebufferCreateInfo where
-  rawOffset = #{offset struct VkFramebufferCreateInfo, sType}
+  rawOffset = #{offset VkFramebufferCreateInfo, sType}
 
 instance Offset "pNext" VkFramebufferCreateInfo where
-  rawOffset = #{offset struct VkFramebufferCreateInfo, pNext}
+  rawOffset = #{offset VkFramebufferCreateInfo, pNext}
 
 instance Offset "flags" VkFramebufferCreateInfo where
-  rawOffset = #{offset struct VkFramebufferCreateInfo, flags}
+  rawOffset = #{offset VkFramebufferCreateInfo, flags}
 
 instance Offset "renderPass" VkFramebufferCreateInfo where
-  rawOffset = #{offset struct VkFramebufferCreateInfo, renderPass}
+  rawOffset = #{offset VkFramebufferCreateInfo, renderPass}
 
 instance Offset "attachmentCount" VkFramebufferCreateInfo where
-  rawOffset = #{offset struct VkFramebufferCreateInfo, attachmentCount}
+  rawOffset = #{offset VkFramebufferCreateInfo, attachmentCount}
 
 instance Offset "pAttachments" VkFramebufferCreateInfo where
-  rawOffset = #{offset struct VkFramebufferCreateInfo, pAttachments}
+  rawOffset = #{offset VkFramebufferCreateInfo, pAttachments}
 
 instance Offset "width" VkFramebufferCreateInfo where
-  rawOffset = #{offset struct VkFramebufferCreateInfo, width}
+  rawOffset = #{offset VkFramebufferCreateInfo, width}
 
 instance Offset "height" VkFramebufferCreateInfo where
-  rawOffset = #{offset struct VkFramebufferCreateInfo, height}
+  rawOffset = #{offset VkFramebufferCreateInfo, height}
 
 instance Offset "layers" VkFramebufferCreateInfo where
-  rawOffset = #{offset struct VkFramebufferCreateInfo, layers}
+  rawOffset = #{offset VkFramebufferCreateInfo, layers}

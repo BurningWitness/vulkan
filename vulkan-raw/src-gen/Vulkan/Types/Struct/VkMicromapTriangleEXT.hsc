@@ -28,8 +28,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkMicromapTriangleEXT" #-} VkMicromapTriangleE
          }
 
 instance Storable VkMicromapTriangleEXT where
-  sizeOf    _ = #{size      struct VkMicromapTriangleEXT}
-  alignment _ = #{alignment struct VkMicromapTriangleEXT}
+  sizeOf    _ = #{size      VkMicromapTriangleEXT}
+  alignment _ = #{alignment VkMicromapTriangleEXT}
 
   peek ptr = 
     VkMicromapTriangleEXT
@@ -43,13 +43,13 @@ instance Storable VkMicromapTriangleEXT where
     pokeField @"format" ptr val
 
 instance Offset "dataOffset" VkMicromapTriangleEXT where
-  rawOffset = #{offset struct VkMicromapTriangleEXT, dataOffset}
+  rawOffset = #{offset VkMicromapTriangleEXT, dataOffset}
 
 instance Offset "subdivisionLevel" VkMicromapTriangleEXT where
-  rawOffset = #{offset struct VkMicromapTriangleEXT, subdivisionLevel}
+  rawOffset = #{offset VkMicromapTriangleEXT, subdivisionLevel}
 
 instance Offset "format" VkMicromapTriangleEXT where
-  rawOffset = #{offset struct VkMicromapTriangleEXT, format}
+  rawOffset = #{offset VkMicromapTriangleEXT, format}
 
 #else
 

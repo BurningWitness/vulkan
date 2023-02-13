@@ -1,3 +1,7 @@
+{-# LANGUAGE CApiFFI #-}
+{-# LANGUAGE CPP #-}
+{-# LANGUAGE MagicHash #-}
+
 #include <vulkan/vulkan.h>
 
 #if VK_KHR_maintenance1
@@ -9,17 +13,18 @@ import Data.Word
 import GHC.Ptr
 import Vulkan.Types.Enum.VkCommandPoolTrimFlags
 import Vulkan.Types.Handle
-import Vulkan.Types.Command.VkTrimCommandPool
 import Vulkan.Types.VkFun
 
 
 
-type VkTrimCommandPoolKHR = VkTrimCommandPool
+type VkTrimCommandPoolKHR =
+          VkDevice -- ^ device
+       -> VkCommandPool -- ^ commandPool
+       -> VkCommandPoolTrimFlags -- ^ flags
+       -> IO ()
 
-vkFunTrimCommandPoolKHR
-  :: VkFun VkTrimCommandPoolKHR
-vkFunTrimCommandPoolKHR = vkFunTrimCommandPool
-
+vkFunTrimCommandPoolKHR :: VkFun VkTrimCommandPoolKHR
+vkFunTrimCommandPoolKHR = VkFun (Ptr ("vkTrimCommandPoolKHR\0"##))
 
 #else
 

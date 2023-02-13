@@ -29,8 +29,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkDeviceGroupCommandBufferBeginInfo" #-} VkDev
          }
 
 instance Storable VkDeviceGroupCommandBufferBeginInfo where
-  sizeOf    _ = #{size      struct VkDeviceGroupCommandBufferBeginInfo}
-  alignment _ = #{alignment struct VkDeviceGroupCommandBufferBeginInfo}
+  sizeOf    _ = #{size      VkDeviceGroupCommandBufferBeginInfo}
+  alignment _ = #{alignment VkDeviceGroupCommandBufferBeginInfo}
 
   peek ptr = 
     VkDeviceGroupCommandBufferBeginInfo
@@ -44,13 +44,13 @@ instance Storable VkDeviceGroupCommandBufferBeginInfo where
     pokeField @"deviceMask" ptr val
 
 instance Offset "sType" VkDeviceGroupCommandBufferBeginInfo where
-  rawOffset = #{offset struct VkDeviceGroupCommandBufferBeginInfo, sType}
+  rawOffset = #{offset VkDeviceGroupCommandBufferBeginInfo, sType}
 
 instance Offset "pNext" VkDeviceGroupCommandBufferBeginInfo where
-  rawOffset = #{offset struct VkDeviceGroupCommandBufferBeginInfo, pNext}
+  rawOffset = #{offset VkDeviceGroupCommandBufferBeginInfo, pNext}
 
 instance Offset "deviceMask" VkDeviceGroupCommandBufferBeginInfo where
-  rawOffset = #{offset struct VkDeviceGroupCommandBufferBeginInfo, deviceMask}
+  rawOffset = #{offset VkDeviceGroupCommandBufferBeginInfo, deviceMask}
 
 #else
 

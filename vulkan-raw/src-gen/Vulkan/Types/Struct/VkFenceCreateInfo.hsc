@@ -28,8 +28,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkFenceCreateInfo" #-} VkFenceCreateInfo =
          }
 
 instance Storable VkFenceCreateInfo where
-  sizeOf    _ = #{size      struct VkFenceCreateInfo}
-  alignment _ = #{alignment struct VkFenceCreateInfo}
+  sizeOf    _ = #{size      VkFenceCreateInfo}
+  alignment _ = #{alignment VkFenceCreateInfo}
 
   peek ptr = 
     VkFenceCreateInfo
@@ -43,10 +43,10 @@ instance Storable VkFenceCreateInfo where
     pokeField @"flags" ptr val
 
 instance Offset "sType" VkFenceCreateInfo where
-  rawOffset = #{offset struct VkFenceCreateInfo, sType}
+  rawOffset = #{offset VkFenceCreateInfo, sType}
 
 instance Offset "pNext" VkFenceCreateInfo where
-  rawOffset = #{offset struct VkFenceCreateInfo, pNext}
+  rawOffset = #{offset VkFenceCreateInfo, pNext}
 
 instance Offset "flags" VkFenceCreateInfo where
-  rawOffset = #{offset struct VkFenceCreateInfo, flags}
+  rawOffset = #{offset VkFenceCreateInfo, flags}

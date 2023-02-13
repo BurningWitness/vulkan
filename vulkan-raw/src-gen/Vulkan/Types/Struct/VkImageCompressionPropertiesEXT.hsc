@@ -32,8 +32,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkImageCompressionPropertiesEXT" #-} VkImageCo
          }
 
 instance Storable VkImageCompressionPropertiesEXT where
-  sizeOf    _ = #{size      struct VkImageCompressionPropertiesEXT}
-  alignment _ = #{alignment struct VkImageCompressionPropertiesEXT}
+  sizeOf    _ = #{size      VkImageCompressionPropertiesEXT}
+  alignment _ = #{alignment VkImageCompressionPropertiesEXT}
 
   peek ptr = 
     VkImageCompressionPropertiesEXT
@@ -49,16 +49,16 @@ instance Storable VkImageCompressionPropertiesEXT where
     pokeField @"imageCompressionFixedRateFlags" ptr val
 
 instance Offset "sType" VkImageCompressionPropertiesEXT where
-  rawOffset = #{offset struct VkImageCompressionPropertiesEXT, sType}
+  rawOffset = #{offset VkImageCompressionPropertiesEXT, sType}
 
 instance Offset "pNext" VkImageCompressionPropertiesEXT where
-  rawOffset = #{offset struct VkImageCompressionPropertiesEXT, pNext}
+  rawOffset = #{offset VkImageCompressionPropertiesEXT, pNext}
 
 instance Offset "imageCompressionFlags" VkImageCompressionPropertiesEXT where
-  rawOffset = #{offset struct VkImageCompressionPropertiesEXT, imageCompressionFlags}
+  rawOffset = #{offset VkImageCompressionPropertiesEXT, imageCompressionFlags}
 
 instance Offset "imageCompressionFixedRateFlags" VkImageCompressionPropertiesEXT where
-  rawOffset = #{offset struct VkImageCompressionPropertiesEXT, imageCompressionFixedRateFlags}
+  rawOffset = #{offset VkImageCompressionPropertiesEXT, imageCompressionFixedRateFlags}
 
 #else
 

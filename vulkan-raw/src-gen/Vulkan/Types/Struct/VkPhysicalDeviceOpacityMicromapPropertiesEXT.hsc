@@ -30,8 +30,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkPhysicalDeviceOpacityMicromapPropertiesEXT" 
          }
 
 instance Storable VkPhysicalDeviceOpacityMicromapPropertiesEXT where
-  sizeOf    _ = #{size      struct VkPhysicalDeviceOpacityMicromapPropertiesEXT}
-  alignment _ = #{alignment struct VkPhysicalDeviceOpacityMicromapPropertiesEXT}
+  sizeOf    _ = #{size      VkPhysicalDeviceOpacityMicromapPropertiesEXT}
+  alignment _ = #{alignment VkPhysicalDeviceOpacityMicromapPropertiesEXT}
 
   peek ptr = 
     VkPhysicalDeviceOpacityMicromapPropertiesEXT
@@ -47,16 +47,16 @@ instance Storable VkPhysicalDeviceOpacityMicromapPropertiesEXT where
     pokeField @"maxOpacity4StateSubdivisionLevel" ptr val
 
 instance Offset "sType" VkPhysicalDeviceOpacityMicromapPropertiesEXT where
-  rawOffset = #{offset struct VkPhysicalDeviceOpacityMicromapPropertiesEXT, sType}
+  rawOffset = #{offset VkPhysicalDeviceOpacityMicromapPropertiesEXT, sType}
 
 instance Offset "pNext" VkPhysicalDeviceOpacityMicromapPropertiesEXT where
-  rawOffset = #{offset struct VkPhysicalDeviceOpacityMicromapPropertiesEXT, pNext}
+  rawOffset = #{offset VkPhysicalDeviceOpacityMicromapPropertiesEXT, pNext}
 
 instance Offset "maxOpacity2StateSubdivisionLevel" VkPhysicalDeviceOpacityMicromapPropertiesEXT where
-  rawOffset = #{offset struct VkPhysicalDeviceOpacityMicromapPropertiesEXT, maxOpacity2StateSubdivisionLevel}
+  rawOffset = #{offset VkPhysicalDeviceOpacityMicromapPropertiesEXT, maxOpacity2StateSubdivisionLevel}
 
 instance Offset "maxOpacity4StateSubdivisionLevel" VkPhysicalDeviceOpacityMicromapPropertiesEXT where
-  rawOffset = #{offset struct VkPhysicalDeviceOpacityMicromapPropertiesEXT, maxOpacity4StateSubdivisionLevel}
+  rawOffset = #{offset VkPhysicalDeviceOpacityMicromapPropertiesEXT, maxOpacity4StateSubdivisionLevel}
 
 #else
 

@@ -36,8 +36,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkBufferCreateInfo" #-} VkBufferCreateInfo =
          }
 
 instance Storable VkBufferCreateInfo where
-  sizeOf    _ = #{size      struct VkBufferCreateInfo}
-  alignment _ = #{alignment struct VkBufferCreateInfo}
+  sizeOf    _ = #{size      VkBufferCreateInfo}
+  alignment _ = #{alignment VkBufferCreateInfo}
 
   peek ptr = 
     VkBufferCreateInfo
@@ -61,25 +61,25 @@ instance Storable VkBufferCreateInfo where
     pokeField @"pQueueFamilyIndices" ptr val
 
 instance Offset "sType" VkBufferCreateInfo where
-  rawOffset = #{offset struct VkBufferCreateInfo, sType}
+  rawOffset = #{offset VkBufferCreateInfo, sType}
 
 instance Offset "pNext" VkBufferCreateInfo where
-  rawOffset = #{offset struct VkBufferCreateInfo, pNext}
+  rawOffset = #{offset VkBufferCreateInfo, pNext}
 
 instance Offset "flags" VkBufferCreateInfo where
-  rawOffset = #{offset struct VkBufferCreateInfo, flags}
+  rawOffset = #{offset VkBufferCreateInfo, flags}
 
 instance Offset "size" VkBufferCreateInfo where
-  rawOffset = #{offset struct VkBufferCreateInfo, size}
+  rawOffset = #{offset VkBufferCreateInfo, size}
 
 instance Offset "usage" VkBufferCreateInfo where
-  rawOffset = #{offset struct VkBufferCreateInfo, usage}
+  rawOffset = #{offset VkBufferCreateInfo, usage}
 
 instance Offset "sharingMode" VkBufferCreateInfo where
-  rawOffset = #{offset struct VkBufferCreateInfo, sharingMode}
+  rawOffset = #{offset VkBufferCreateInfo, sharingMode}
 
 instance Offset "queueFamilyIndexCount" VkBufferCreateInfo where
-  rawOffset = #{offset struct VkBufferCreateInfo, queueFamilyIndexCount}
+  rawOffset = #{offset VkBufferCreateInfo, queueFamilyIndexCount}
 
 instance Offset "pQueueFamilyIndices" VkBufferCreateInfo where
-  rawOffset = #{offset struct VkBufferCreateInfo, pQueueFamilyIndices}
+  rawOffset = #{offset VkBufferCreateInfo, pQueueFamilyIndices}

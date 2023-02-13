@@ -28,8 +28,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkClearAttachment" #-} VkClearAttachment =
          }
 
 instance Storable VkClearAttachment where
-  sizeOf    _ = #{size      struct VkClearAttachment}
-  alignment _ = #{alignment struct VkClearAttachment}
+  sizeOf    _ = #{size      VkClearAttachment}
+  alignment _ = #{alignment VkClearAttachment}
 
   peek ptr = 
     VkClearAttachment
@@ -43,10 +43,10 @@ instance Storable VkClearAttachment where
     pokeField @"clearValue" ptr val
 
 instance Offset "aspectMask" VkClearAttachment where
-  rawOffset = #{offset struct VkClearAttachment, aspectMask}
+  rawOffset = #{offset VkClearAttachment, aspectMask}
 
 instance Offset "colorAttachment" VkClearAttachment where
-  rawOffset = #{offset struct VkClearAttachment, colorAttachment}
+  rawOffset = #{offset VkClearAttachment, colorAttachment}
 
 instance Offset "clearValue" VkClearAttachment where
-  rawOffset = #{offset struct VkClearAttachment, clearValue}
+  rawOffset = #{offset VkClearAttachment, clearValue}

@@ -42,8 +42,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkAndroidHardwareBufferFormatProperties2ANDROI
          }
 
 instance Storable VkAndroidHardwareBufferFormatProperties2ANDROID where
-  sizeOf    _ = #{size      struct VkAndroidHardwareBufferFormatProperties2ANDROID}
-  alignment _ = #{alignment struct VkAndroidHardwareBufferFormatProperties2ANDROID}
+  sizeOf    _ = #{size      VkAndroidHardwareBufferFormatProperties2ANDROID}
+  alignment _ = #{alignment VkAndroidHardwareBufferFormatProperties2ANDROID}
 
   peek ptr = 
     VkAndroidHardwareBufferFormatProperties2ANDROID
@@ -71,34 +71,34 @@ instance Storable VkAndroidHardwareBufferFormatProperties2ANDROID where
     pokeField @"suggestedYChromaOffset" ptr val
 
 instance Offset "sType" VkAndroidHardwareBufferFormatProperties2ANDROID where
-  rawOffset = #{offset struct VkAndroidHardwareBufferFormatProperties2ANDROID, sType}
+  rawOffset = #{offset VkAndroidHardwareBufferFormatProperties2ANDROID, sType}
 
 instance Offset "pNext" VkAndroidHardwareBufferFormatProperties2ANDROID where
-  rawOffset = #{offset struct VkAndroidHardwareBufferFormatProperties2ANDROID, pNext}
+  rawOffset = #{offset VkAndroidHardwareBufferFormatProperties2ANDROID, pNext}
 
 instance Offset "format" VkAndroidHardwareBufferFormatProperties2ANDROID where
-  rawOffset = #{offset struct VkAndroidHardwareBufferFormatProperties2ANDROID, format}
+  rawOffset = #{offset VkAndroidHardwareBufferFormatProperties2ANDROID, format}
 
 instance Offset "externalFormat" VkAndroidHardwareBufferFormatProperties2ANDROID where
-  rawOffset = #{offset struct VkAndroidHardwareBufferFormatProperties2ANDROID, externalFormat}
+  rawOffset = #{offset VkAndroidHardwareBufferFormatProperties2ANDROID, externalFormat}
 
 instance Offset "formatFeatures" VkAndroidHardwareBufferFormatProperties2ANDROID where
-  rawOffset = #{offset struct VkAndroidHardwareBufferFormatProperties2ANDROID, formatFeatures}
+  rawOffset = #{offset VkAndroidHardwareBufferFormatProperties2ANDROID, formatFeatures}
 
 instance Offset "samplerYcbcrConversionComponents" VkAndroidHardwareBufferFormatProperties2ANDROID where
-  rawOffset = #{offset struct VkAndroidHardwareBufferFormatProperties2ANDROID, samplerYcbcrConversionComponents}
+  rawOffset = #{offset VkAndroidHardwareBufferFormatProperties2ANDROID, samplerYcbcrConversionComponents}
 
 instance Offset "suggestedYcbcrModel" VkAndroidHardwareBufferFormatProperties2ANDROID where
-  rawOffset = #{offset struct VkAndroidHardwareBufferFormatProperties2ANDROID, suggestedYcbcrModel}
+  rawOffset = #{offset VkAndroidHardwareBufferFormatProperties2ANDROID, suggestedYcbcrModel}
 
 instance Offset "suggestedYcbcrRange" VkAndroidHardwareBufferFormatProperties2ANDROID where
-  rawOffset = #{offset struct VkAndroidHardwareBufferFormatProperties2ANDROID, suggestedYcbcrRange}
+  rawOffset = #{offset VkAndroidHardwareBufferFormatProperties2ANDROID, suggestedYcbcrRange}
 
 instance Offset "suggestedXChromaOffset" VkAndroidHardwareBufferFormatProperties2ANDROID where
-  rawOffset = #{offset struct VkAndroidHardwareBufferFormatProperties2ANDROID, suggestedXChromaOffset}
+  rawOffset = #{offset VkAndroidHardwareBufferFormatProperties2ANDROID, suggestedXChromaOffset}
 
 instance Offset "suggestedYChromaOffset" VkAndroidHardwareBufferFormatProperties2ANDROID where
-  rawOffset = #{offset struct VkAndroidHardwareBufferFormatProperties2ANDROID, suggestedYChromaOffset}
+  rawOffset = #{offset VkAndroidHardwareBufferFormatProperties2ANDROID, suggestedYChromaOffset}
 
 #else
 

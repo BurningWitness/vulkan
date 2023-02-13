@@ -34,8 +34,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkPipelineExecutableInternalRepresentationKHR"
          }
 
 instance Storable VkPipelineExecutableInternalRepresentationKHR where
-  sizeOf    _ = #{size      struct VkPipelineExecutableInternalRepresentationKHR}
-  alignment _ = #{alignment struct VkPipelineExecutableInternalRepresentationKHR}
+  sizeOf    _ = #{size      VkPipelineExecutableInternalRepresentationKHR}
+  alignment _ = #{alignment VkPipelineExecutableInternalRepresentationKHR}
 
   peek ptr = 
     VkPipelineExecutableInternalRepresentationKHR
@@ -57,25 +57,25 @@ instance Storable VkPipelineExecutableInternalRepresentationKHR where
     pokeField @"pData" ptr val
 
 instance Offset "sType" VkPipelineExecutableInternalRepresentationKHR where
-  rawOffset = #{offset struct VkPipelineExecutableInternalRepresentationKHR, sType}
+  rawOffset = #{offset VkPipelineExecutableInternalRepresentationKHR, sType}
 
 instance Offset "pNext" VkPipelineExecutableInternalRepresentationKHR where
-  rawOffset = #{offset struct VkPipelineExecutableInternalRepresentationKHR, pNext}
+  rawOffset = #{offset VkPipelineExecutableInternalRepresentationKHR, pNext}
 
 instance Offset "name" VkPipelineExecutableInternalRepresentationKHR where
-  rawOffset = #{offset struct VkPipelineExecutableInternalRepresentationKHR, name}
+  rawOffset = #{offset VkPipelineExecutableInternalRepresentationKHR, name}
 
 instance Offset "description" VkPipelineExecutableInternalRepresentationKHR where
-  rawOffset = #{offset struct VkPipelineExecutableInternalRepresentationKHR, description}
+  rawOffset = #{offset VkPipelineExecutableInternalRepresentationKHR, description}
 
 instance Offset "isText" VkPipelineExecutableInternalRepresentationKHR where
-  rawOffset = #{offset struct VkPipelineExecutableInternalRepresentationKHR, isText}
+  rawOffset = #{offset VkPipelineExecutableInternalRepresentationKHR, isText}
 
 instance Offset "dataSize" VkPipelineExecutableInternalRepresentationKHR where
-  rawOffset = #{offset struct VkPipelineExecutableInternalRepresentationKHR, dataSize}
+  rawOffset = #{offset VkPipelineExecutableInternalRepresentationKHR, dataSize}
 
 instance Offset "pData" VkPipelineExecutableInternalRepresentationKHR where
-  rawOffset = #{offset struct VkPipelineExecutableInternalRepresentationKHR, pData}
+  rawOffset = #{offset VkPipelineExecutableInternalRepresentationKHR, pData}
 
 #else
 

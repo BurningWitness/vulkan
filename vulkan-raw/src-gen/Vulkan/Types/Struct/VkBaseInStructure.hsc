@@ -26,8 +26,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkBaseInStructure" #-} VkBaseInStructure =
          }
 
 instance Storable VkBaseInStructure where
-  sizeOf    _ = #{size      struct VkBaseInStructure}
-  alignment _ = #{alignment struct VkBaseInStructure}
+  sizeOf    _ = #{size      VkBaseInStructure}
+  alignment _ = #{alignment VkBaseInStructure}
 
   peek ptr = 
     VkBaseInStructure
@@ -39,7 +39,7 @@ instance Storable VkBaseInStructure where
     pokeField @"pNext" ptr val
 
 instance Offset "sType" VkBaseInStructure where
-  rawOffset = #{offset struct VkBaseInStructure, sType}
+  rawOffset = #{offset VkBaseInStructure, sType}
 
 instance Offset "pNext" VkBaseInStructure where
-  rawOffset = #{offset struct VkBaseInStructure, pNext}
+  rawOffset = #{offset VkBaseInStructure, pNext}

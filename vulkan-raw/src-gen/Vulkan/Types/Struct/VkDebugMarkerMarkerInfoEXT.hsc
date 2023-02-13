@@ -30,8 +30,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkDebugMarkerMarkerInfoEXT" #-} VkDebugMarkerM
          }
 
 instance Storable VkDebugMarkerMarkerInfoEXT where
-  sizeOf    _ = #{size      struct VkDebugMarkerMarkerInfoEXT}
-  alignment _ = #{alignment struct VkDebugMarkerMarkerInfoEXT}
+  sizeOf    _ = #{size      VkDebugMarkerMarkerInfoEXT}
+  alignment _ = #{alignment VkDebugMarkerMarkerInfoEXT}
 
   peek ptr = 
     VkDebugMarkerMarkerInfoEXT
@@ -47,16 +47,16 @@ instance Storable VkDebugMarkerMarkerInfoEXT where
     pokeField @"color" ptr val
 
 instance Offset "sType" VkDebugMarkerMarkerInfoEXT where
-  rawOffset = #{offset struct VkDebugMarkerMarkerInfoEXT, sType}
+  rawOffset = #{offset VkDebugMarkerMarkerInfoEXT, sType}
 
 instance Offset "pNext" VkDebugMarkerMarkerInfoEXT where
-  rawOffset = #{offset struct VkDebugMarkerMarkerInfoEXT, pNext}
+  rawOffset = #{offset VkDebugMarkerMarkerInfoEXT, pNext}
 
 instance Offset "pMarkerName" VkDebugMarkerMarkerInfoEXT where
-  rawOffset = #{offset struct VkDebugMarkerMarkerInfoEXT, pMarkerName}
+  rawOffset = #{offset VkDebugMarkerMarkerInfoEXT, pMarkerName}
 
 instance Offset "color" VkDebugMarkerMarkerInfoEXT where
-  rawOffset = #{offset struct VkDebugMarkerMarkerInfoEXT, color}
+  rawOffset = #{offset VkDebugMarkerMarkerInfoEXT, color}
 
 #else
 

@@ -41,8 +41,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkPhysicalDeviceShaderAtomicFloat2FeaturesEXT"
          }
 
 instance Storable VkPhysicalDeviceShaderAtomicFloat2FeaturesEXT where
-  sizeOf    _ = #{size      struct VkPhysicalDeviceShaderAtomicFloat2FeaturesEXT}
-  alignment _ = #{alignment struct VkPhysicalDeviceShaderAtomicFloat2FeaturesEXT}
+  sizeOf    _ = #{size      VkPhysicalDeviceShaderAtomicFloat2FeaturesEXT}
+  alignment _ = #{alignment VkPhysicalDeviceShaderAtomicFloat2FeaturesEXT}
 
   peek ptr = 
     VkPhysicalDeviceShaderAtomicFloat2FeaturesEXT
@@ -78,46 +78,46 @@ instance Storable VkPhysicalDeviceShaderAtomicFloat2FeaturesEXT where
     pokeField @"sparseImageFloat32AtomicMinMax" ptr val
 
 instance Offset "sType" VkPhysicalDeviceShaderAtomicFloat2FeaturesEXT where
-  rawOffset = #{offset struct VkPhysicalDeviceShaderAtomicFloat2FeaturesEXT, sType}
+  rawOffset = #{offset VkPhysicalDeviceShaderAtomicFloat2FeaturesEXT, sType}
 
 instance Offset "pNext" VkPhysicalDeviceShaderAtomicFloat2FeaturesEXT where
-  rawOffset = #{offset struct VkPhysicalDeviceShaderAtomicFloat2FeaturesEXT, pNext}
+  rawOffset = #{offset VkPhysicalDeviceShaderAtomicFloat2FeaturesEXT, pNext}
 
 instance Offset "shaderBufferFloat16Atomics" VkPhysicalDeviceShaderAtomicFloat2FeaturesEXT where
-  rawOffset = #{offset struct VkPhysicalDeviceShaderAtomicFloat2FeaturesEXT, shaderBufferFloat16Atomics}
+  rawOffset = #{offset VkPhysicalDeviceShaderAtomicFloat2FeaturesEXT, shaderBufferFloat16Atomics}
 
 instance Offset "shaderBufferFloat16AtomicAdd" VkPhysicalDeviceShaderAtomicFloat2FeaturesEXT where
-  rawOffset = #{offset struct VkPhysicalDeviceShaderAtomicFloat2FeaturesEXT, shaderBufferFloat16AtomicAdd}
+  rawOffset = #{offset VkPhysicalDeviceShaderAtomicFloat2FeaturesEXT, shaderBufferFloat16AtomicAdd}
 
 instance Offset "shaderBufferFloat16AtomicMinMax" VkPhysicalDeviceShaderAtomicFloat2FeaturesEXT where
-  rawOffset = #{offset struct VkPhysicalDeviceShaderAtomicFloat2FeaturesEXT, shaderBufferFloat16AtomicMinMax}
+  rawOffset = #{offset VkPhysicalDeviceShaderAtomicFloat2FeaturesEXT, shaderBufferFloat16AtomicMinMax}
 
 instance Offset "shaderBufferFloat32AtomicMinMax" VkPhysicalDeviceShaderAtomicFloat2FeaturesEXT where
-  rawOffset = #{offset struct VkPhysicalDeviceShaderAtomicFloat2FeaturesEXT, shaderBufferFloat32AtomicMinMax}
+  rawOffset = #{offset VkPhysicalDeviceShaderAtomicFloat2FeaturesEXT, shaderBufferFloat32AtomicMinMax}
 
 instance Offset "shaderBufferFloat64AtomicMinMax" VkPhysicalDeviceShaderAtomicFloat2FeaturesEXT where
-  rawOffset = #{offset struct VkPhysicalDeviceShaderAtomicFloat2FeaturesEXT, shaderBufferFloat64AtomicMinMax}
+  rawOffset = #{offset VkPhysicalDeviceShaderAtomicFloat2FeaturesEXT, shaderBufferFloat64AtomicMinMax}
 
 instance Offset "shaderSharedFloat16Atomics" VkPhysicalDeviceShaderAtomicFloat2FeaturesEXT where
-  rawOffset = #{offset struct VkPhysicalDeviceShaderAtomicFloat2FeaturesEXT, shaderSharedFloat16Atomics}
+  rawOffset = #{offset VkPhysicalDeviceShaderAtomicFloat2FeaturesEXT, shaderSharedFloat16Atomics}
 
 instance Offset "shaderSharedFloat16AtomicAdd" VkPhysicalDeviceShaderAtomicFloat2FeaturesEXT where
-  rawOffset = #{offset struct VkPhysicalDeviceShaderAtomicFloat2FeaturesEXT, shaderSharedFloat16AtomicAdd}
+  rawOffset = #{offset VkPhysicalDeviceShaderAtomicFloat2FeaturesEXT, shaderSharedFloat16AtomicAdd}
 
 instance Offset "shaderSharedFloat16AtomicMinMax" VkPhysicalDeviceShaderAtomicFloat2FeaturesEXT where
-  rawOffset = #{offset struct VkPhysicalDeviceShaderAtomicFloat2FeaturesEXT, shaderSharedFloat16AtomicMinMax}
+  rawOffset = #{offset VkPhysicalDeviceShaderAtomicFloat2FeaturesEXT, shaderSharedFloat16AtomicMinMax}
 
 instance Offset "shaderSharedFloat32AtomicMinMax" VkPhysicalDeviceShaderAtomicFloat2FeaturesEXT where
-  rawOffset = #{offset struct VkPhysicalDeviceShaderAtomicFloat2FeaturesEXT, shaderSharedFloat32AtomicMinMax}
+  rawOffset = #{offset VkPhysicalDeviceShaderAtomicFloat2FeaturesEXT, shaderSharedFloat32AtomicMinMax}
 
 instance Offset "shaderSharedFloat64AtomicMinMax" VkPhysicalDeviceShaderAtomicFloat2FeaturesEXT where
-  rawOffset = #{offset struct VkPhysicalDeviceShaderAtomicFloat2FeaturesEXT, shaderSharedFloat64AtomicMinMax}
+  rawOffset = #{offset VkPhysicalDeviceShaderAtomicFloat2FeaturesEXT, shaderSharedFloat64AtomicMinMax}
 
 instance Offset "shaderImageFloat32AtomicMinMax" VkPhysicalDeviceShaderAtomicFloat2FeaturesEXT where
-  rawOffset = #{offset struct VkPhysicalDeviceShaderAtomicFloat2FeaturesEXT, shaderImageFloat32AtomicMinMax}
+  rawOffset = #{offset VkPhysicalDeviceShaderAtomicFloat2FeaturesEXT, shaderImageFloat32AtomicMinMax}
 
 instance Offset "sparseImageFloat32AtomicMinMax" VkPhysicalDeviceShaderAtomicFloat2FeaturesEXT where
-  rawOffset = #{offset struct VkPhysicalDeviceShaderAtomicFloat2FeaturesEXT, sparseImageFloat32AtomicMinMax}
+  rawOffset = #{offset VkPhysicalDeviceShaderAtomicFloat2FeaturesEXT, sparseImageFloat32AtomicMinMax}
 
 #else
 

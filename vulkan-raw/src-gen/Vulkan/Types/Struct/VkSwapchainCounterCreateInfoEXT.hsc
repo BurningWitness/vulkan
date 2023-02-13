@@ -30,8 +30,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkSwapchainCounterCreateInfoEXT" #-} VkSwapcha
          }
 
 instance Storable VkSwapchainCounterCreateInfoEXT where
-  sizeOf    _ = #{size      struct VkSwapchainCounterCreateInfoEXT}
-  alignment _ = #{alignment struct VkSwapchainCounterCreateInfoEXT}
+  sizeOf    _ = #{size      VkSwapchainCounterCreateInfoEXT}
+  alignment _ = #{alignment VkSwapchainCounterCreateInfoEXT}
 
   peek ptr = 
     VkSwapchainCounterCreateInfoEXT
@@ -45,13 +45,13 @@ instance Storable VkSwapchainCounterCreateInfoEXT where
     pokeField @"surfaceCounters" ptr val
 
 instance Offset "sType" VkSwapchainCounterCreateInfoEXT where
-  rawOffset = #{offset struct VkSwapchainCounterCreateInfoEXT, sType}
+  rawOffset = #{offset VkSwapchainCounterCreateInfoEXT, sType}
 
 instance Offset "pNext" VkSwapchainCounterCreateInfoEXT where
-  rawOffset = #{offset struct VkSwapchainCounterCreateInfoEXT, pNext}
+  rawOffset = #{offset VkSwapchainCounterCreateInfoEXT, pNext}
 
 instance Offset "surfaceCounters" VkSwapchainCounterCreateInfoEXT where
-  rawOffset = #{offset struct VkSwapchainCounterCreateInfoEXT, surfaceCounters}
+  rawOffset = #{offset VkSwapchainCounterCreateInfoEXT, surfaceCounters}
 
 #else
 

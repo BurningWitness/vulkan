@@ -30,8 +30,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkPhysicalDevicePointClippingProperties" #-} V
          }
 
 instance Storable VkPhysicalDevicePointClippingProperties where
-  sizeOf    _ = #{size      struct VkPhysicalDevicePointClippingProperties}
-  alignment _ = #{alignment struct VkPhysicalDevicePointClippingProperties}
+  sizeOf    _ = #{size      VkPhysicalDevicePointClippingProperties}
+  alignment _ = #{alignment VkPhysicalDevicePointClippingProperties}
 
   peek ptr = 
     VkPhysicalDevicePointClippingProperties
@@ -45,13 +45,13 @@ instance Storable VkPhysicalDevicePointClippingProperties where
     pokeField @"pointClippingBehavior" ptr val
 
 instance Offset "sType" VkPhysicalDevicePointClippingProperties where
-  rawOffset = #{offset struct VkPhysicalDevicePointClippingProperties, sType}
+  rawOffset = #{offset VkPhysicalDevicePointClippingProperties, sType}
 
 instance Offset "pNext" VkPhysicalDevicePointClippingProperties where
-  rawOffset = #{offset struct VkPhysicalDevicePointClippingProperties, pNext}
+  rawOffset = #{offset VkPhysicalDevicePointClippingProperties, pNext}
 
 instance Offset "pointClippingBehavior" VkPhysicalDevicePointClippingProperties where
-  rawOffset = #{offset struct VkPhysicalDevicePointClippingProperties, pointClippingBehavior}
+  rawOffset = #{offset VkPhysicalDevicePointClippingProperties, pointClippingBehavior}
 
 #else
 

@@ -31,8 +31,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkAccelerationStructureCaptureDescriptorDataIn
          }
 
 instance Storable VkAccelerationStructureCaptureDescriptorDataInfoEXT where
-  sizeOf    _ = #{size      struct VkAccelerationStructureCaptureDescriptorDataInfoEXT}
-  alignment _ = #{alignment struct VkAccelerationStructureCaptureDescriptorDataInfoEXT}
+  sizeOf    _ = #{size      VkAccelerationStructureCaptureDescriptorDataInfoEXT}
+  alignment _ = #{alignment VkAccelerationStructureCaptureDescriptorDataInfoEXT}
 
   peek ptr = 
     VkAccelerationStructureCaptureDescriptorDataInfoEXT
@@ -48,16 +48,16 @@ instance Storable VkAccelerationStructureCaptureDescriptorDataInfoEXT where
     pokeField @"accelerationStructureNV" ptr val
 
 instance Offset "sType" VkAccelerationStructureCaptureDescriptorDataInfoEXT where
-  rawOffset = #{offset struct VkAccelerationStructureCaptureDescriptorDataInfoEXT, sType}
+  rawOffset = #{offset VkAccelerationStructureCaptureDescriptorDataInfoEXT, sType}
 
 instance Offset "pNext" VkAccelerationStructureCaptureDescriptorDataInfoEXT where
-  rawOffset = #{offset struct VkAccelerationStructureCaptureDescriptorDataInfoEXT, pNext}
+  rawOffset = #{offset VkAccelerationStructureCaptureDescriptorDataInfoEXT, pNext}
 
 instance Offset "accelerationStructure" VkAccelerationStructureCaptureDescriptorDataInfoEXT where
-  rawOffset = #{offset struct VkAccelerationStructureCaptureDescriptorDataInfoEXT, accelerationStructure}
+  rawOffset = #{offset VkAccelerationStructureCaptureDescriptorDataInfoEXT, accelerationStructure}
 
 instance Offset "accelerationStructureNV" VkAccelerationStructureCaptureDescriptorDataInfoEXT where
-  rawOffset = #{offset struct VkAccelerationStructureCaptureDescriptorDataInfoEXT, accelerationStructureNV}
+  rawOffset = #{offset VkAccelerationStructureCaptureDescriptorDataInfoEXT, accelerationStructureNV}
 
 #else
 

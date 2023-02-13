@@ -30,8 +30,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkProtectedSubmitInfo" #-} VkProtectedSubmitIn
          }
 
 instance Storable VkProtectedSubmitInfo where
-  sizeOf    _ = #{size      struct VkProtectedSubmitInfo}
-  alignment _ = #{alignment struct VkProtectedSubmitInfo}
+  sizeOf    _ = #{size      VkProtectedSubmitInfo}
+  alignment _ = #{alignment VkProtectedSubmitInfo}
 
   peek ptr = 
     VkProtectedSubmitInfo
@@ -45,13 +45,13 @@ instance Storable VkProtectedSubmitInfo where
     pokeField @"protectedSubmit" ptr val
 
 instance Offset "sType" VkProtectedSubmitInfo where
-  rawOffset = #{offset struct VkProtectedSubmitInfo, sType}
+  rawOffset = #{offset VkProtectedSubmitInfo, sType}
 
 instance Offset "pNext" VkProtectedSubmitInfo where
-  rawOffset = #{offset struct VkProtectedSubmitInfo, pNext}
+  rawOffset = #{offset VkProtectedSubmitInfo, pNext}
 
 instance Offset "protectedSubmit" VkProtectedSubmitInfo where
-  rawOffset = #{offset struct VkProtectedSubmitInfo, protectedSubmit}
+  rawOffset = #{offset VkProtectedSubmitInfo, protectedSubmit}
 
 #else
 

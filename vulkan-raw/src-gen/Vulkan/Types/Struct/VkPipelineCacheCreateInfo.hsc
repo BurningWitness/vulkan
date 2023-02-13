@@ -30,8 +30,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkPipelineCacheCreateInfo" #-} VkPipelineCache
          }
 
 instance Storable VkPipelineCacheCreateInfo where
-  sizeOf    _ = #{size      struct VkPipelineCacheCreateInfo}
-  alignment _ = #{alignment struct VkPipelineCacheCreateInfo}
+  sizeOf    _ = #{size      VkPipelineCacheCreateInfo}
+  alignment _ = #{alignment VkPipelineCacheCreateInfo}
 
   peek ptr = 
     VkPipelineCacheCreateInfo
@@ -49,16 +49,16 @@ instance Storable VkPipelineCacheCreateInfo where
     pokeField @"pInitialData" ptr val
 
 instance Offset "sType" VkPipelineCacheCreateInfo where
-  rawOffset = #{offset struct VkPipelineCacheCreateInfo, sType}
+  rawOffset = #{offset VkPipelineCacheCreateInfo, sType}
 
 instance Offset "pNext" VkPipelineCacheCreateInfo where
-  rawOffset = #{offset struct VkPipelineCacheCreateInfo, pNext}
+  rawOffset = #{offset VkPipelineCacheCreateInfo, pNext}
 
 instance Offset "flags" VkPipelineCacheCreateInfo where
-  rawOffset = #{offset struct VkPipelineCacheCreateInfo, flags}
+  rawOffset = #{offset VkPipelineCacheCreateInfo, flags}
 
 instance Offset "initialDataSize" VkPipelineCacheCreateInfo where
-  rawOffset = #{offset struct VkPipelineCacheCreateInfo, initialDataSize}
+  rawOffset = #{offset VkPipelineCacheCreateInfo, initialDataSize}
 
 instance Offset "pInitialData" VkPipelineCacheCreateInfo where
-  rawOffset = #{offset struct VkPipelineCacheCreateInfo, pInitialData}
+  rawOffset = #{offset VkPipelineCacheCreateInfo, pInitialData}

@@ -35,8 +35,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkVideoEncodeH265EmitPictureParametersInfoEXT"
          }
 
 instance Storable VkVideoEncodeH265EmitPictureParametersInfoEXT where
-  sizeOf    _ = #{size      struct VkVideoEncodeH265EmitPictureParametersInfoEXT}
-  alignment _ = #{alignment struct VkVideoEncodeH265EmitPictureParametersInfoEXT}
+  sizeOf    _ = #{size      VkVideoEncodeH265EmitPictureParametersInfoEXT}
+  alignment _ = #{alignment VkVideoEncodeH265EmitPictureParametersInfoEXT}
 
   peek ptr = 
     VkVideoEncodeH265EmitPictureParametersInfoEXT
@@ -60,28 +60,28 @@ instance Storable VkVideoEncodeH265EmitPictureParametersInfoEXT where
     pokeField @"ppsIdEntries" ptr val
 
 instance Offset "sType" VkVideoEncodeH265EmitPictureParametersInfoEXT where
-  rawOffset = #{offset struct VkVideoEncodeH265EmitPictureParametersInfoEXT, sType}
+  rawOffset = #{offset VkVideoEncodeH265EmitPictureParametersInfoEXT, sType}
 
 instance Offset "pNext" VkVideoEncodeH265EmitPictureParametersInfoEXT where
-  rawOffset = #{offset struct VkVideoEncodeH265EmitPictureParametersInfoEXT, pNext}
+  rawOffset = #{offset VkVideoEncodeH265EmitPictureParametersInfoEXT, pNext}
 
 instance Offset "vpsId" VkVideoEncodeH265EmitPictureParametersInfoEXT where
-  rawOffset = #{offset struct VkVideoEncodeH265EmitPictureParametersInfoEXT, vpsId}
+  rawOffset = #{offset VkVideoEncodeH265EmitPictureParametersInfoEXT, vpsId}
 
 instance Offset "spsId" VkVideoEncodeH265EmitPictureParametersInfoEXT where
-  rawOffset = #{offset struct VkVideoEncodeH265EmitPictureParametersInfoEXT, spsId}
+  rawOffset = #{offset VkVideoEncodeH265EmitPictureParametersInfoEXT, spsId}
 
 instance Offset "emitVpsEnable" VkVideoEncodeH265EmitPictureParametersInfoEXT where
-  rawOffset = #{offset struct VkVideoEncodeH265EmitPictureParametersInfoEXT, emitVpsEnable}
+  rawOffset = #{offset VkVideoEncodeH265EmitPictureParametersInfoEXT, emitVpsEnable}
 
 instance Offset "emitSpsEnable" VkVideoEncodeH265EmitPictureParametersInfoEXT where
-  rawOffset = #{offset struct VkVideoEncodeH265EmitPictureParametersInfoEXT, emitSpsEnable}
+  rawOffset = #{offset VkVideoEncodeH265EmitPictureParametersInfoEXT, emitSpsEnable}
 
 instance Offset "ppsIdEntryCount" VkVideoEncodeH265EmitPictureParametersInfoEXT where
-  rawOffset = #{offset struct VkVideoEncodeH265EmitPictureParametersInfoEXT, ppsIdEntryCount}
+  rawOffset = #{offset VkVideoEncodeH265EmitPictureParametersInfoEXT, ppsIdEntryCount}
 
 instance Offset "ppsIdEntries" VkVideoEncodeH265EmitPictureParametersInfoEXT where
-  rawOffset = #{offset struct VkVideoEncodeH265EmitPictureParametersInfoEXT, ppsIdEntries}
+  rawOffset = #{offset VkVideoEncodeH265EmitPictureParametersInfoEXT, ppsIdEntries}
 
 #else
 

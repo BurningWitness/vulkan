@@ -28,8 +28,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkMicromapUsageEXT" #-} VkMicromapUsageEXT =
          }
 
 instance Storable VkMicromapUsageEXT where
-  sizeOf    _ = #{size      struct VkMicromapUsageEXT}
-  alignment _ = #{alignment struct VkMicromapUsageEXT}
+  sizeOf    _ = #{size      VkMicromapUsageEXT}
+  alignment _ = #{alignment VkMicromapUsageEXT}
 
   peek ptr = 
     VkMicromapUsageEXT
@@ -43,13 +43,13 @@ instance Storable VkMicromapUsageEXT where
     pokeField @"format" ptr val
 
 instance Offset "count" VkMicromapUsageEXT where
-  rawOffset = #{offset struct VkMicromapUsageEXT, count}
+  rawOffset = #{offset VkMicromapUsageEXT, count}
 
 instance Offset "subdivisionLevel" VkMicromapUsageEXT where
-  rawOffset = #{offset struct VkMicromapUsageEXT, subdivisionLevel}
+  rawOffset = #{offset VkMicromapUsageEXT, subdivisionLevel}
 
 instance Offset "format" VkMicromapUsageEXT where
-  rawOffset = #{offset struct VkMicromapUsageEXT, format}
+  rawOffset = #{offset VkMicromapUsageEXT, format}
 
 #else
 

@@ -30,8 +30,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkPastPresentationTimingGOOGLE" #-} VkPastPres
          }
 
 instance Storable VkPastPresentationTimingGOOGLE where
-  sizeOf    _ = #{size      struct VkPastPresentationTimingGOOGLE}
-  alignment _ = #{alignment struct VkPastPresentationTimingGOOGLE}
+  sizeOf    _ = #{size      VkPastPresentationTimingGOOGLE}
+  alignment _ = #{alignment VkPastPresentationTimingGOOGLE}
 
   peek ptr = 
     VkPastPresentationTimingGOOGLE
@@ -49,19 +49,19 @@ instance Storable VkPastPresentationTimingGOOGLE where
     pokeField @"presentMargin" ptr val
 
 instance Offset "presentID" VkPastPresentationTimingGOOGLE where
-  rawOffset = #{offset struct VkPastPresentationTimingGOOGLE, presentID}
+  rawOffset = #{offset VkPastPresentationTimingGOOGLE, presentID}
 
 instance Offset "desiredPresentTime" VkPastPresentationTimingGOOGLE where
-  rawOffset = #{offset struct VkPastPresentationTimingGOOGLE, desiredPresentTime}
+  rawOffset = #{offset VkPastPresentationTimingGOOGLE, desiredPresentTime}
 
 instance Offset "actualPresentTime" VkPastPresentationTimingGOOGLE where
-  rawOffset = #{offset struct VkPastPresentationTimingGOOGLE, actualPresentTime}
+  rawOffset = #{offset VkPastPresentationTimingGOOGLE, actualPresentTime}
 
 instance Offset "earliestPresentTime" VkPastPresentationTimingGOOGLE where
-  rawOffset = #{offset struct VkPastPresentationTimingGOOGLE, earliestPresentTime}
+  rawOffset = #{offset VkPastPresentationTimingGOOGLE, earliestPresentTime}
 
 instance Offset "presentMargin" VkPastPresentationTimingGOOGLE where
-  rawOffset = #{offset struct VkPastPresentationTimingGOOGLE, presentMargin}
+  rawOffset = #{offset VkPastPresentationTimingGOOGLE, presentMargin}
 
 #else
 

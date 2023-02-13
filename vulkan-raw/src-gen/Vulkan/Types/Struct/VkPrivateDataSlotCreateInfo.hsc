@@ -30,8 +30,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkPrivateDataSlotCreateInfo" #-} VkPrivateData
          }
 
 instance Storable VkPrivateDataSlotCreateInfo where
-  sizeOf    _ = #{size      struct VkPrivateDataSlotCreateInfo}
-  alignment _ = #{alignment struct VkPrivateDataSlotCreateInfo}
+  sizeOf    _ = #{size      VkPrivateDataSlotCreateInfo}
+  alignment _ = #{alignment VkPrivateDataSlotCreateInfo}
 
   peek ptr = 
     VkPrivateDataSlotCreateInfo
@@ -45,13 +45,13 @@ instance Storable VkPrivateDataSlotCreateInfo where
     pokeField @"flags" ptr val
 
 instance Offset "sType" VkPrivateDataSlotCreateInfo where
-  rawOffset = #{offset struct VkPrivateDataSlotCreateInfo, sType}
+  rawOffset = #{offset VkPrivateDataSlotCreateInfo, sType}
 
 instance Offset "pNext" VkPrivateDataSlotCreateInfo where
-  rawOffset = #{offset struct VkPrivateDataSlotCreateInfo, pNext}
+  rawOffset = #{offset VkPrivateDataSlotCreateInfo, pNext}
 
 instance Offset "flags" VkPrivateDataSlotCreateInfo where
-  rawOffset = #{offset struct VkPrivateDataSlotCreateInfo, flags}
+  rawOffset = #{offset VkPrivateDataSlotCreateInfo, flags}
 
 #else
 

@@ -1,3 +1,7 @@
+{-# LANGUAGE CApiFFI #-}
+{-# LANGUAGE CPP #-}
+{-# LANGUAGE MagicHash #-}
+
 #include <vulkan/vulkan.h>
 
 #if VK_KHR_get_memory_requirements2
@@ -10,17 +14,18 @@ import GHC.Ptr
 import Vulkan.Types.Handle
 import Vulkan.Types.Struct.VkImageMemoryRequirementsInfo2
 import Vulkan.Types.Struct.VkMemoryRequirements2
-import Vulkan.Types.Command.VkGetImageMemoryRequirements2
 import Vulkan.Types.VkFun
 
 
 
-type VkGetImageMemoryRequirements2KHR = VkGetImageMemoryRequirements2
+type VkGetImageMemoryRequirements2KHR =
+          VkDevice -- ^ device
+       -> Ptr VkImageMemoryRequirementsInfo2 -- ^ pInfo
+       -> Ptr VkMemoryRequirements2 -- ^ pMemoryRequirements
+       -> IO ()
 
-vkFunGetImageMemoryRequirements2KHR
-  :: VkFun VkGetImageMemoryRequirements2KHR
-vkFunGetImageMemoryRequirements2KHR = vkFunGetImageMemoryRequirements2
-
+vkFunGetImageMemoryRequirements2KHR :: VkFun VkGetImageMemoryRequirements2KHR
+vkFunGetImageMemoryRequirements2KHR = VkFun (Ptr ("vkGetImageMemoryRequirements2KHR\0"##))
 
 #else
 

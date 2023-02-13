@@ -30,8 +30,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkBindBufferMemoryDeviceGroupInfo" #-} VkBindB
          }
 
 instance Storable VkBindBufferMemoryDeviceGroupInfo where
-  sizeOf    _ = #{size      struct VkBindBufferMemoryDeviceGroupInfo}
-  alignment _ = #{alignment struct VkBindBufferMemoryDeviceGroupInfo}
+  sizeOf    _ = #{size      VkBindBufferMemoryDeviceGroupInfo}
+  alignment _ = #{alignment VkBindBufferMemoryDeviceGroupInfo}
 
   peek ptr = 
     VkBindBufferMemoryDeviceGroupInfo
@@ -47,16 +47,16 @@ instance Storable VkBindBufferMemoryDeviceGroupInfo where
     pokeField @"pDeviceIndices" ptr val
 
 instance Offset "sType" VkBindBufferMemoryDeviceGroupInfo where
-  rawOffset = #{offset struct VkBindBufferMemoryDeviceGroupInfo, sType}
+  rawOffset = #{offset VkBindBufferMemoryDeviceGroupInfo, sType}
 
 instance Offset "pNext" VkBindBufferMemoryDeviceGroupInfo where
-  rawOffset = #{offset struct VkBindBufferMemoryDeviceGroupInfo, pNext}
+  rawOffset = #{offset VkBindBufferMemoryDeviceGroupInfo, pNext}
 
 instance Offset "deviceIndexCount" VkBindBufferMemoryDeviceGroupInfo where
-  rawOffset = #{offset struct VkBindBufferMemoryDeviceGroupInfo, deviceIndexCount}
+  rawOffset = #{offset VkBindBufferMemoryDeviceGroupInfo, deviceIndexCount}
 
 instance Offset "pDeviceIndices" VkBindBufferMemoryDeviceGroupInfo where
-  rawOffset = #{offset struct VkBindBufferMemoryDeviceGroupInfo, pDeviceIndices}
+  rawOffset = #{offset VkBindBufferMemoryDeviceGroupInfo, pDeviceIndices}
 
 #else
 

@@ -30,8 +30,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkPhysicalDeviceShaderDemoteToHelperInvocation
          }
 
 instance Storable VkPhysicalDeviceShaderDemoteToHelperInvocationFeatures where
-  sizeOf    _ = #{size      struct VkPhysicalDeviceShaderDemoteToHelperInvocationFeatures}
-  alignment _ = #{alignment struct VkPhysicalDeviceShaderDemoteToHelperInvocationFeatures}
+  sizeOf    _ = #{size      VkPhysicalDeviceShaderDemoteToHelperInvocationFeatures}
+  alignment _ = #{alignment VkPhysicalDeviceShaderDemoteToHelperInvocationFeatures}
 
   peek ptr = 
     VkPhysicalDeviceShaderDemoteToHelperInvocationFeatures
@@ -45,13 +45,13 @@ instance Storable VkPhysicalDeviceShaderDemoteToHelperInvocationFeatures where
     pokeField @"shaderDemoteToHelperInvocation" ptr val
 
 instance Offset "sType" VkPhysicalDeviceShaderDemoteToHelperInvocationFeatures where
-  rawOffset = #{offset struct VkPhysicalDeviceShaderDemoteToHelperInvocationFeatures, sType}
+  rawOffset = #{offset VkPhysicalDeviceShaderDemoteToHelperInvocationFeatures, sType}
 
 instance Offset "pNext" VkPhysicalDeviceShaderDemoteToHelperInvocationFeatures where
-  rawOffset = #{offset struct VkPhysicalDeviceShaderDemoteToHelperInvocationFeatures, pNext}
+  rawOffset = #{offset VkPhysicalDeviceShaderDemoteToHelperInvocationFeatures, pNext}
 
 instance Offset "shaderDemoteToHelperInvocation" VkPhysicalDeviceShaderDemoteToHelperInvocationFeatures where
-  rawOffset = #{offset struct VkPhysicalDeviceShaderDemoteToHelperInvocationFeatures, shaderDemoteToHelperInvocation}
+  rawOffset = #{offset VkPhysicalDeviceShaderDemoteToHelperInvocationFeatures, shaderDemoteToHelperInvocation}
 
 #else
 

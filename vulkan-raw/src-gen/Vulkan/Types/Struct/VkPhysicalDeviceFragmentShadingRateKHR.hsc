@@ -32,8 +32,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkPhysicalDeviceFragmentShadingRateKHR" #-} Vk
          }
 
 instance Storable VkPhysicalDeviceFragmentShadingRateKHR where
-  sizeOf    _ = #{size      struct VkPhysicalDeviceFragmentShadingRateKHR}
-  alignment _ = #{alignment struct VkPhysicalDeviceFragmentShadingRateKHR}
+  sizeOf    _ = #{size      VkPhysicalDeviceFragmentShadingRateKHR}
+  alignment _ = #{alignment VkPhysicalDeviceFragmentShadingRateKHR}
 
   peek ptr = 
     VkPhysicalDeviceFragmentShadingRateKHR
@@ -49,16 +49,16 @@ instance Storable VkPhysicalDeviceFragmentShadingRateKHR where
     pokeField @"fragmentSize" ptr val
 
 instance Offset "sType" VkPhysicalDeviceFragmentShadingRateKHR where
-  rawOffset = #{offset struct VkPhysicalDeviceFragmentShadingRateKHR, sType}
+  rawOffset = #{offset VkPhysicalDeviceFragmentShadingRateKHR, sType}
 
 instance Offset "pNext" VkPhysicalDeviceFragmentShadingRateKHR where
-  rawOffset = #{offset struct VkPhysicalDeviceFragmentShadingRateKHR, pNext}
+  rawOffset = #{offset VkPhysicalDeviceFragmentShadingRateKHR, pNext}
 
 instance Offset "sampleCounts" VkPhysicalDeviceFragmentShadingRateKHR where
-  rawOffset = #{offset struct VkPhysicalDeviceFragmentShadingRateKHR, sampleCounts}
+  rawOffset = #{offset VkPhysicalDeviceFragmentShadingRateKHR, sampleCounts}
 
 instance Offset "fragmentSize" VkPhysicalDeviceFragmentShadingRateKHR where
-  rawOffset = #{offset struct VkPhysicalDeviceFragmentShadingRateKHR, fragmentSize}
+  rawOffset = #{offset VkPhysicalDeviceFragmentShadingRateKHR, fragmentSize}
 
 #else
 

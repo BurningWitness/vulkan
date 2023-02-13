@@ -26,8 +26,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkAttachmentReference" #-} VkAttachmentReferen
          }
 
 instance Storable VkAttachmentReference where
-  sizeOf    _ = #{size      struct VkAttachmentReference}
-  alignment _ = #{alignment struct VkAttachmentReference}
+  sizeOf    _ = #{size      VkAttachmentReference}
+  alignment _ = #{alignment VkAttachmentReference}
 
   peek ptr = 
     VkAttachmentReference
@@ -39,7 +39,7 @@ instance Storable VkAttachmentReference where
     pokeField @"layout" ptr val
 
 instance Offset "attachment" VkAttachmentReference where
-  rawOffset = #{offset struct VkAttachmentReference, attachment}
+  rawOffset = #{offset VkAttachmentReference, attachment}
 
 instance Offset "layout" VkAttachmentReference where
-  rawOffset = #{offset struct VkAttachmentReference, layout}
+  rawOffset = #{offset VkAttachmentReference, layout}

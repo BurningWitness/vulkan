@@ -32,8 +32,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkDirectDriverLoadingInfoLUNARG" #-} VkDirectD
          }
 
 instance Storable VkDirectDriverLoadingInfoLUNARG where
-  sizeOf    _ = #{size      struct VkDirectDriverLoadingInfoLUNARG}
-  alignment _ = #{alignment struct VkDirectDriverLoadingInfoLUNARG}
+  sizeOf    _ = #{size      VkDirectDriverLoadingInfoLUNARG}
+  alignment _ = #{alignment VkDirectDriverLoadingInfoLUNARG}
 
   peek ptr = 
     VkDirectDriverLoadingInfoLUNARG
@@ -49,16 +49,16 @@ instance Storable VkDirectDriverLoadingInfoLUNARG where
     pokeField @"pfnGetInstanceProcAddr" ptr val
 
 instance Offset "sType" VkDirectDriverLoadingInfoLUNARG where
-  rawOffset = #{offset struct VkDirectDriverLoadingInfoLUNARG, sType}
+  rawOffset = #{offset VkDirectDriverLoadingInfoLUNARG, sType}
 
 instance Offset "pNext" VkDirectDriverLoadingInfoLUNARG where
-  rawOffset = #{offset struct VkDirectDriverLoadingInfoLUNARG, pNext}
+  rawOffset = #{offset VkDirectDriverLoadingInfoLUNARG, pNext}
 
 instance Offset "flags" VkDirectDriverLoadingInfoLUNARG where
-  rawOffset = #{offset struct VkDirectDriverLoadingInfoLUNARG, flags}
+  rawOffset = #{offset VkDirectDriverLoadingInfoLUNARG, flags}
 
 instance Offset "pfnGetInstanceProcAddr" VkDirectDriverLoadingInfoLUNARG where
-  rawOffset = #{offset struct VkDirectDriverLoadingInfoLUNARG, pfnGetInstanceProcAddr}
+  rawOffset = #{offset VkDirectDriverLoadingInfoLUNARG, pfnGetInstanceProcAddr}
 
 #else
 

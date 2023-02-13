@@ -30,8 +30,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkPhysicalDeviceVertexInputDynamicStateFeature
          }
 
 instance Storable VkPhysicalDeviceVertexInputDynamicStateFeaturesEXT where
-  sizeOf    _ = #{size      struct VkPhysicalDeviceVertexInputDynamicStateFeaturesEXT}
-  alignment _ = #{alignment struct VkPhysicalDeviceVertexInputDynamicStateFeaturesEXT}
+  sizeOf    _ = #{size      VkPhysicalDeviceVertexInputDynamicStateFeaturesEXT}
+  alignment _ = #{alignment VkPhysicalDeviceVertexInputDynamicStateFeaturesEXT}
 
   peek ptr = 
     VkPhysicalDeviceVertexInputDynamicStateFeaturesEXT
@@ -45,13 +45,13 @@ instance Storable VkPhysicalDeviceVertexInputDynamicStateFeaturesEXT where
     pokeField @"vertexInputDynamicState" ptr val
 
 instance Offset "sType" VkPhysicalDeviceVertexInputDynamicStateFeaturesEXT where
-  rawOffset = #{offset struct VkPhysicalDeviceVertexInputDynamicStateFeaturesEXT, sType}
+  rawOffset = #{offset VkPhysicalDeviceVertexInputDynamicStateFeaturesEXT, sType}
 
 instance Offset "pNext" VkPhysicalDeviceVertexInputDynamicStateFeaturesEXT where
-  rawOffset = #{offset struct VkPhysicalDeviceVertexInputDynamicStateFeaturesEXT, pNext}
+  rawOffset = #{offset VkPhysicalDeviceVertexInputDynamicStateFeaturesEXT, pNext}
 
 instance Offset "vertexInputDynamicState" VkPhysicalDeviceVertexInputDynamicStateFeaturesEXT where
-  rawOffset = #{offset struct VkPhysicalDeviceVertexInputDynamicStateFeaturesEXT, vertexInputDynamicState}
+  rawOffset = #{offset VkPhysicalDeviceVertexInputDynamicStateFeaturesEXT, vertexInputDynamicState}
 
 #else
 

@@ -1,3 +1,7 @@
+{-# LANGUAGE CApiFFI #-}
+{-# LANGUAGE CPP #-}
+{-# LANGUAGE MagicHash #-}
+
 #include <vulkan/vulkan.h>
 
 #if VK_KHR_maintenance4
@@ -10,17 +14,18 @@ import GHC.Ptr
 import Vulkan.Types.Handle
 import Vulkan.Types.Struct.VkDeviceBufferMemoryRequirements
 import Vulkan.Types.Struct.VkMemoryRequirements2
-import Vulkan.Types.Command.VkGetDeviceBufferMemoryRequirements
 import Vulkan.Types.VkFun
 
 
 
-type VkGetDeviceBufferMemoryRequirementsKHR = VkGetDeviceBufferMemoryRequirements
+type VkGetDeviceBufferMemoryRequirementsKHR =
+          VkDevice -- ^ device
+       -> Ptr VkDeviceBufferMemoryRequirements -- ^ pInfo
+       -> Ptr VkMemoryRequirements2 -- ^ pMemoryRequirements
+       -> IO ()
 
-vkFunGetDeviceBufferMemoryRequirementsKHR
-  :: VkFun VkGetDeviceBufferMemoryRequirementsKHR
-vkFunGetDeviceBufferMemoryRequirementsKHR = vkFunGetDeviceBufferMemoryRequirements
-
+vkFunGetDeviceBufferMemoryRequirementsKHR :: VkFun VkGetDeviceBufferMemoryRequirementsKHR
+vkFunGetDeviceBufferMemoryRequirementsKHR = VkFun (Ptr ("vkGetDeviceBufferMemoryRequirementsKHR\0"##))
 
 #else
 

@@ -31,8 +31,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkAttachmentDescriptionStencilLayout" #-} VkAt
          }
 
 instance Storable VkAttachmentDescriptionStencilLayout where
-  sizeOf    _ = #{size      struct VkAttachmentDescriptionStencilLayout}
-  alignment _ = #{alignment struct VkAttachmentDescriptionStencilLayout}
+  sizeOf    _ = #{size      VkAttachmentDescriptionStencilLayout}
+  alignment _ = #{alignment VkAttachmentDescriptionStencilLayout}
 
   peek ptr = 
     VkAttachmentDescriptionStencilLayout
@@ -48,16 +48,16 @@ instance Storable VkAttachmentDescriptionStencilLayout where
     pokeField @"stencilFinalLayout" ptr val
 
 instance Offset "sType" VkAttachmentDescriptionStencilLayout where
-  rawOffset = #{offset struct VkAttachmentDescriptionStencilLayout, sType}
+  rawOffset = #{offset VkAttachmentDescriptionStencilLayout, sType}
 
 instance Offset "pNext" VkAttachmentDescriptionStencilLayout where
-  rawOffset = #{offset struct VkAttachmentDescriptionStencilLayout, pNext}
+  rawOffset = #{offset VkAttachmentDescriptionStencilLayout, pNext}
 
 instance Offset "stencilInitialLayout" VkAttachmentDescriptionStencilLayout where
-  rawOffset = #{offset struct VkAttachmentDescriptionStencilLayout, stencilInitialLayout}
+  rawOffset = #{offset VkAttachmentDescriptionStencilLayout, stencilInitialLayout}
 
 instance Offset "stencilFinalLayout" VkAttachmentDescriptionStencilLayout where
-  rawOffset = #{offset struct VkAttachmentDescriptionStencilLayout, stencilFinalLayout}
+  rawOffset = #{offset VkAttachmentDescriptionStencilLayout, stencilFinalLayout}
 
 #else
 

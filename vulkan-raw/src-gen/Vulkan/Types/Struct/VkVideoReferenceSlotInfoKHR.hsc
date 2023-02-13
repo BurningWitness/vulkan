@@ -31,8 +31,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkVideoReferenceSlotInfoKHR" #-} VkVideoRefere
          }
 
 instance Storable VkVideoReferenceSlotInfoKHR where
-  sizeOf    _ = #{size      struct VkVideoReferenceSlotInfoKHR}
-  alignment _ = #{alignment struct VkVideoReferenceSlotInfoKHR}
+  sizeOf    _ = #{size      VkVideoReferenceSlotInfoKHR}
+  alignment _ = #{alignment VkVideoReferenceSlotInfoKHR}
 
   peek ptr = 
     VkVideoReferenceSlotInfoKHR
@@ -48,16 +48,16 @@ instance Storable VkVideoReferenceSlotInfoKHR where
     pokeField @"pPictureResource" ptr val
 
 instance Offset "sType" VkVideoReferenceSlotInfoKHR where
-  rawOffset = #{offset struct VkVideoReferenceSlotInfoKHR, sType}
+  rawOffset = #{offset VkVideoReferenceSlotInfoKHR, sType}
 
 instance Offset "pNext" VkVideoReferenceSlotInfoKHR where
-  rawOffset = #{offset struct VkVideoReferenceSlotInfoKHR, pNext}
+  rawOffset = #{offset VkVideoReferenceSlotInfoKHR, pNext}
 
 instance Offset "slotIndex" VkVideoReferenceSlotInfoKHR where
-  rawOffset = #{offset struct VkVideoReferenceSlotInfoKHR, slotIndex}
+  rawOffset = #{offset VkVideoReferenceSlotInfoKHR, slotIndex}
 
 instance Offset "pPictureResource" VkVideoReferenceSlotInfoKHR where
-  rawOffset = #{offset struct VkVideoReferenceSlotInfoKHR, pPictureResource}
+  rawOffset = #{offset VkVideoReferenceSlotInfoKHR, pPictureResource}
 
 #else
 

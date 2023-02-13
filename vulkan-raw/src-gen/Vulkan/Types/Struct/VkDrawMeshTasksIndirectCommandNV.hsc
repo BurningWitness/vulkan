@@ -27,8 +27,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkDrawMeshTasksIndirectCommandNV" #-} VkDrawMe
          }
 
 instance Storable VkDrawMeshTasksIndirectCommandNV where
-  sizeOf    _ = #{size      struct VkDrawMeshTasksIndirectCommandNV}
-  alignment _ = #{alignment struct VkDrawMeshTasksIndirectCommandNV}
+  sizeOf    _ = #{size      VkDrawMeshTasksIndirectCommandNV}
+  alignment _ = #{alignment VkDrawMeshTasksIndirectCommandNV}
 
   peek ptr = 
     VkDrawMeshTasksIndirectCommandNV
@@ -40,10 +40,10 @@ instance Storable VkDrawMeshTasksIndirectCommandNV where
     pokeField @"firstTask" ptr val
 
 instance Offset "taskCount" VkDrawMeshTasksIndirectCommandNV where
-  rawOffset = #{offset struct VkDrawMeshTasksIndirectCommandNV, taskCount}
+  rawOffset = #{offset VkDrawMeshTasksIndirectCommandNV, taskCount}
 
 instance Offset "firstTask" VkDrawMeshTasksIndirectCommandNV where
-  rawOffset = #{offset struct VkDrawMeshTasksIndirectCommandNV, firstTask}
+  rawOffset = #{offset VkDrawMeshTasksIndirectCommandNV, firstTask}
 
 #else
 

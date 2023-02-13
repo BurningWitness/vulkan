@@ -31,8 +31,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkCommandBufferSubmitInfo" #-} VkCommandBuffer
          }
 
 instance Storable VkCommandBufferSubmitInfo where
-  sizeOf    _ = #{size      struct VkCommandBufferSubmitInfo}
-  alignment _ = #{alignment struct VkCommandBufferSubmitInfo}
+  sizeOf    _ = #{size      VkCommandBufferSubmitInfo}
+  alignment _ = #{alignment VkCommandBufferSubmitInfo}
 
   peek ptr = 
     VkCommandBufferSubmitInfo
@@ -48,16 +48,16 @@ instance Storable VkCommandBufferSubmitInfo where
     pokeField @"deviceMask" ptr val
 
 instance Offset "sType" VkCommandBufferSubmitInfo where
-  rawOffset = #{offset struct VkCommandBufferSubmitInfo, sType}
+  rawOffset = #{offset VkCommandBufferSubmitInfo, sType}
 
 instance Offset "pNext" VkCommandBufferSubmitInfo where
-  rawOffset = #{offset struct VkCommandBufferSubmitInfo, pNext}
+  rawOffset = #{offset VkCommandBufferSubmitInfo, pNext}
 
 instance Offset "commandBuffer" VkCommandBufferSubmitInfo where
-  rawOffset = #{offset struct VkCommandBufferSubmitInfo, commandBuffer}
+  rawOffset = #{offset VkCommandBufferSubmitInfo, commandBuffer}
 
 instance Offset "deviceMask" VkCommandBufferSubmitInfo where
-  rawOffset = #{offset struct VkCommandBufferSubmitInfo, deviceMask}
+  rawOffset = #{offset VkCommandBufferSubmitInfo, deviceMask}
 
 #else
 

@@ -31,8 +31,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkPipelineVertexInputDivisorStateCreateInfoEXT
          }
 
 instance Storable VkPipelineVertexInputDivisorStateCreateInfoEXT where
-  sizeOf    _ = #{size      struct VkPipelineVertexInputDivisorStateCreateInfoEXT}
-  alignment _ = #{alignment struct VkPipelineVertexInputDivisorStateCreateInfoEXT}
+  sizeOf    _ = #{size      VkPipelineVertexInputDivisorStateCreateInfoEXT}
+  alignment _ = #{alignment VkPipelineVertexInputDivisorStateCreateInfoEXT}
 
   peek ptr = 
     VkPipelineVertexInputDivisorStateCreateInfoEXT
@@ -48,16 +48,16 @@ instance Storable VkPipelineVertexInputDivisorStateCreateInfoEXT where
     pokeField @"pVertexBindingDivisors" ptr val
 
 instance Offset "sType" VkPipelineVertexInputDivisorStateCreateInfoEXT where
-  rawOffset = #{offset struct VkPipelineVertexInputDivisorStateCreateInfoEXT, sType}
+  rawOffset = #{offset VkPipelineVertexInputDivisorStateCreateInfoEXT, sType}
 
 instance Offset "pNext" VkPipelineVertexInputDivisorStateCreateInfoEXT where
-  rawOffset = #{offset struct VkPipelineVertexInputDivisorStateCreateInfoEXT, pNext}
+  rawOffset = #{offset VkPipelineVertexInputDivisorStateCreateInfoEXT, pNext}
 
 instance Offset "vertexBindingDivisorCount" VkPipelineVertexInputDivisorStateCreateInfoEXT where
-  rawOffset = #{offset struct VkPipelineVertexInputDivisorStateCreateInfoEXT, vertexBindingDivisorCount}
+  rawOffset = #{offset VkPipelineVertexInputDivisorStateCreateInfoEXT, vertexBindingDivisorCount}
 
 instance Offset "pVertexBindingDivisors" VkPipelineVertexInputDivisorStateCreateInfoEXT where
-  rawOffset = #{offset struct VkPipelineVertexInputDivisorStateCreateInfoEXT, pVertexBindingDivisors}
+  rawOffset = #{offset VkPipelineVertexInputDivisorStateCreateInfoEXT, pVertexBindingDivisors}
 
 #else
 

@@ -27,8 +27,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkVertexInputBindingDescription" #-} VkVertexI
          }
 
 instance Storable VkVertexInputBindingDescription where
-  sizeOf    _ = #{size      struct VkVertexInputBindingDescription}
-  alignment _ = #{alignment struct VkVertexInputBindingDescription}
+  sizeOf    _ = #{size      VkVertexInputBindingDescription}
+  alignment _ = #{alignment VkVertexInputBindingDescription}
 
   peek ptr = 
     VkVertexInputBindingDescription
@@ -42,10 +42,10 @@ instance Storable VkVertexInputBindingDescription where
     pokeField @"inputRate" ptr val
 
 instance Offset "binding" VkVertexInputBindingDescription where
-  rawOffset = #{offset struct VkVertexInputBindingDescription, binding}
+  rawOffset = #{offset VkVertexInputBindingDescription, binding}
 
 instance Offset "stride" VkVertexInputBindingDescription where
-  rawOffset = #{offset struct VkVertexInputBindingDescription, stride}
+  rawOffset = #{offset VkVertexInputBindingDescription, stride}
 
 instance Offset "inputRate" VkVertexInputBindingDescription where
-  rawOffset = #{offset struct VkVertexInputBindingDescription, inputRate}
+  rawOffset = #{offset VkVertexInputBindingDescription, inputRate}

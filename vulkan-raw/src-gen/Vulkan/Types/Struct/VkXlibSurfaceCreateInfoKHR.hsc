@@ -33,8 +33,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkXlibSurfaceCreateInfoKHR" #-} VkXlibSurfaceC
          }
 
 instance Storable VkXlibSurfaceCreateInfoKHR where
-  sizeOf    _ = #{size      struct VkXlibSurfaceCreateInfoKHR}
-  alignment _ = #{alignment struct VkXlibSurfaceCreateInfoKHR}
+  sizeOf    _ = #{size      VkXlibSurfaceCreateInfoKHR}
+  alignment _ = #{alignment VkXlibSurfaceCreateInfoKHR}
 
   peek ptr = 
     VkXlibSurfaceCreateInfoKHR
@@ -52,19 +52,19 @@ instance Storable VkXlibSurfaceCreateInfoKHR where
     pokeField @"window" ptr val
 
 instance Offset "sType" VkXlibSurfaceCreateInfoKHR where
-  rawOffset = #{offset struct VkXlibSurfaceCreateInfoKHR, sType}
+  rawOffset = #{offset VkXlibSurfaceCreateInfoKHR, sType}
 
 instance Offset "pNext" VkXlibSurfaceCreateInfoKHR where
-  rawOffset = #{offset struct VkXlibSurfaceCreateInfoKHR, pNext}
+  rawOffset = #{offset VkXlibSurfaceCreateInfoKHR, pNext}
 
 instance Offset "flags" VkXlibSurfaceCreateInfoKHR where
-  rawOffset = #{offset struct VkXlibSurfaceCreateInfoKHR, flags}
+  rawOffset = #{offset VkXlibSurfaceCreateInfoKHR, flags}
 
 instance Offset "dpy" VkXlibSurfaceCreateInfoKHR where
-  rawOffset = #{offset struct VkXlibSurfaceCreateInfoKHR, dpy}
+  rawOffset = #{offset VkXlibSurfaceCreateInfoKHR, dpy}
 
 instance Offset "window" VkXlibSurfaceCreateInfoKHR where
-  rawOffset = #{offset struct VkXlibSurfaceCreateInfoKHR, window}
+  rawOffset = #{offset VkXlibSurfaceCreateInfoKHR, window}
 
 #else
 

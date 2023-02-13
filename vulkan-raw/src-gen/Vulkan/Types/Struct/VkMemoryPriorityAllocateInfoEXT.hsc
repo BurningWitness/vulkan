@@ -29,8 +29,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkMemoryPriorityAllocateInfoEXT" #-} VkMemoryP
          }
 
 instance Storable VkMemoryPriorityAllocateInfoEXT where
-  sizeOf    _ = #{size      struct VkMemoryPriorityAllocateInfoEXT}
-  alignment _ = #{alignment struct VkMemoryPriorityAllocateInfoEXT}
+  sizeOf    _ = #{size      VkMemoryPriorityAllocateInfoEXT}
+  alignment _ = #{alignment VkMemoryPriorityAllocateInfoEXT}
 
   peek ptr = 
     VkMemoryPriorityAllocateInfoEXT
@@ -44,13 +44,13 @@ instance Storable VkMemoryPriorityAllocateInfoEXT where
     pokeField @"priority" ptr val
 
 instance Offset "sType" VkMemoryPriorityAllocateInfoEXT where
-  rawOffset = #{offset struct VkMemoryPriorityAllocateInfoEXT, sType}
+  rawOffset = #{offset VkMemoryPriorityAllocateInfoEXT, sType}
 
 instance Offset "pNext" VkMemoryPriorityAllocateInfoEXT where
-  rawOffset = #{offset struct VkMemoryPriorityAllocateInfoEXT, pNext}
+  rawOffset = #{offset VkMemoryPriorityAllocateInfoEXT, pNext}
 
 instance Offset "priority" VkMemoryPriorityAllocateInfoEXT where
-  rawOffset = #{offset struct VkMemoryPriorityAllocateInfoEXT, priority}
+  rawOffset = #{offset VkMemoryPriorityAllocateInfoEXT, priority}
 
 #else
 

@@ -29,8 +29,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkPhysicalDeviceSparseProperties" #-} VkPhysic
          }
 
 instance Storable VkPhysicalDeviceSparseProperties where
-  sizeOf    _ = #{size      struct VkPhysicalDeviceSparseProperties}
-  alignment _ = #{alignment struct VkPhysicalDeviceSparseProperties}
+  sizeOf    _ = #{size      VkPhysicalDeviceSparseProperties}
+  alignment _ = #{alignment VkPhysicalDeviceSparseProperties}
 
   peek ptr = 
     VkPhysicalDeviceSparseProperties
@@ -48,16 +48,16 @@ instance Storable VkPhysicalDeviceSparseProperties where
     pokeField @"residencyNonResidentStrict" ptr val
 
 instance Offset "residencyStandard2DBlockShape" VkPhysicalDeviceSparseProperties where
-  rawOffset = #{offset struct VkPhysicalDeviceSparseProperties, residencyStandard2DBlockShape}
+  rawOffset = #{offset VkPhysicalDeviceSparseProperties, residencyStandard2DBlockShape}
 
 instance Offset "residencyStandard2DMultisampleBlockShape" VkPhysicalDeviceSparseProperties where
-  rawOffset = #{offset struct VkPhysicalDeviceSparseProperties, residencyStandard2DMultisampleBlockShape}
+  rawOffset = #{offset VkPhysicalDeviceSparseProperties, residencyStandard2DMultisampleBlockShape}
 
 instance Offset "residencyStandard3DBlockShape" VkPhysicalDeviceSparseProperties where
-  rawOffset = #{offset struct VkPhysicalDeviceSparseProperties, residencyStandard3DBlockShape}
+  rawOffset = #{offset VkPhysicalDeviceSparseProperties, residencyStandard3DBlockShape}
 
 instance Offset "residencyAlignedMipSize" VkPhysicalDeviceSparseProperties where
-  rawOffset = #{offset struct VkPhysicalDeviceSparseProperties, residencyAlignedMipSize}
+  rawOffset = #{offset VkPhysicalDeviceSparseProperties, residencyAlignedMipSize}
 
 instance Offset "residencyNonResidentStrict" VkPhysicalDeviceSparseProperties where
-  rawOffset = #{offset struct VkPhysicalDeviceSparseProperties, residencyNonResidentStrict}
+  rawOffset = #{offset VkPhysicalDeviceSparseProperties, residencyNonResidentStrict}

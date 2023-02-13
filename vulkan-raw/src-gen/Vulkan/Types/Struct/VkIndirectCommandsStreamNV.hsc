@@ -29,8 +29,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkIndirectCommandsStreamNV" #-} VkIndirectComm
          }
 
 instance Storable VkIndirectCommandsStreamNV where
-  sizeOf    _ = #{size      struct VkIndirectCommandsStreamNV}
-  alignment _ = #{alignment struct VkIndirectCommandsStreamNV}
+  sizeOf    _ = #{size      VkIndirectCommandsStreamNV}
+  alignment _ = #{alignment VkIndirectCommandsStreamNV}
 
   peek ptr = 
     VkIndirectCommandsStreamNV
@@ -42,10 +42,10 @@ instance Storable VkIndirectCommandsStreamNV where
     pokeField @"offset" ptr val
 
 instance Offset "buffer" VkIndirectCommandsStreamNV where
-  rawOffset = #{offset struct VkIndirectCommandsStreamNV, buffer}
+  rawOffset = #{offset VkIndirectCommandsStreamNV, buffer}
 
 instance Offset "offset" VkIndirectCommandsStreamNV where
-  rawOffset = #{offset struct VkIndirectCommandsStreamNV, offset}
+  rawOffset = #{offset VkIndirectCommandsStreamNV, offset}
 
 #else
 

@@ -34,8 +34,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkPipelineRobustnessCreateInfoEXT" #-} VkPipel
          }
 
 instance Storable VkPipelineRobustnessCreateInfoEXT where
-  sizeOf    _ = #{size      struct VkPipelineRobustnessCreateInfoEXT}
-  alignment _ = #{alignment struct VkPipelineRobustnessCreateInfoEXT}
+  sizeOf    _ = #{size      VkPipelineRobustnessCreateInfoEXT}
+  alignment _ = #{alignment VkPipelineRobustnessCreateInfoEXT}
 
   peek ptr = 
     VkPipelineRobustnessCreateInfoEXT
@@ -55,22 +55,22 @@ instance Storable VkPipelineRobustnessCreateInfoEXT where
     pokeField @"images" ptr val
 
 instance Offset "sType" VkPipelineRobustnessCreateInfoEXT where
-  rawOffset = #{offset struct VkPipelineRobustnessCreateInfoEXT, sType}
+  rawOffset = #{offset VkPipelineRobustnessCreateInfoEXT, sType}
 
 instance Offset "pNext" VkPipelineRobustnessCreateInfoEXT where
-  rawOffset = #{offset struct VkPipelineRobustnessCreateInfoEXT, pNext}
+  rawOffset = #{offset VkPipelineRobustnessCreateInfoEXT, pNext}
 
 instance Offset "storageBuffers" VkPipelineRobustnessCreateInfoEXT where
-  rawOffset = #{offset struct VkPipelineRobustnessCreateInfoEXT, storageBuffers}
+  rawOffset = #{offset VkPipelineRobustnessCreateInfoEXT, storageBuffers}
 
 instance Offset "uniformBuffers" VkPipelineRobustnessCreateInfoEXT where
-  rawOffset = #{offset struct VkPipelineRobustnessCreateInfoEXT, uniformBuffers}
+  rawOffset = #{offset VkPipelineRobustnessCreateInfoEXT, uniformBuffers}
 
 instance Offset "vertexInputs" VkPipelineRobustnessCreateInfoEXT where
-  rawOffset = #{offset struct VkPipelineRobustnessCreateInfoEXT, vertexInputs}
+  rawOffset = #{offset VkPipelineRobustnessCreateInfoEXT, vertexInputs}
 
 instance Offset "images" VkPipelineRobustnessCreateInfoEXT where
-  rawOffset = #{offset struct VkPipelineRobustnessCreateInfoEXT, images}
+  rawOffset = #{offset VkPipelineRobustnessCreateInfoEXT, images}
 
 #else
 

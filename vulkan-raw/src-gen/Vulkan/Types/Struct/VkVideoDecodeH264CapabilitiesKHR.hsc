@@ -32,8 +32,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkVideoDecodeH264CapabilitiesKHR" #-} VkVideoD
          }
 
 instance Storable VkVideoDecodeH264CapabilitiesKHR where
-  sizeOf    _ = #{size      struct VkVideoDecodeH264CapabilitiesKHR}
-  alignment _ = #{alignment struct VkVideoDecodeH264CapabilitiesKHR}
+  sizeOf    _ = #{size      VkVideoDecodeH264CapabilitiesKHR}
+  alignment _ = #{alignment VkVideoDecodeH264CapabilitiesKHR}
 
   peek ptr = 
     VkVideoDecodeH264CapabilitiesKHR
@@ -49,16 +49,16 @@ instance Storable VkVideoDecodeH264CapabilitiesKHR where
     pokeField @"fieldOffsetGranularity" ptr val
 
 instance Offset "sType" VkVideoDecodeH264CapabilitiesKHR where
-  rawOffset = #{offset struct VkVideoDecodeH264CapabilitiesKHR, sType}
+  rawOffset = #{offset VkVideoDecodeH264CapabilitiesKHR, sType}
 
 instance Offset "pNext" VkVideoDecodeH264CapabilitiesKHR where
-  rawOffset = #{offset struct VkVideoDecodeH264CapabilitiesKHR, pNext}
+  rawOffset = #{offset VkVideoDecodeH264CapabilitiesKHR, pNext}
 
 instance Offset "maxLevelIdc" VkVideoDecodeH264CapabilitiesKHR where
-  rawOffset = #{offset struct VkVideoDecodeH264CapabilitiesKHR, maxLevelIdc}
+  rawOffset = #{offset VkVideoDecodeH264CapabilitiesKHR, maxLevelIdc}
 
 instance Offset "fieldOffsetGranularity" VkVideoDecodeH264CapabilitiesKHR where
-  rawOffset = #{offset struct VkVideoDecodeH264CapabilitiesKHR, fieldOffsetGranularity}
+  rawOffset = #{offset VkVideoDecodeH264CapabilitiesKHR, fieldOffsetGranularity}
 
 #else
 

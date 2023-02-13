@@ -31,8 +31,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkPipelineRasterizationStateStreamCreateInfoEX
          }
 
 instance Storable VkPipelineRasterizationStateStreamCreateInfoEXT where
-  sizeOf    _ = #{size      struct VkPipelineRasterizationStateStreamCreateInfoEXT}
-  alignment _ = #{alignment struct VkPipelineRasterizationStateStreamCreateInfoEXT}
+  sizeOf    _ = #{size      VkPipelineRasterizationStateStreamCreateInfoEXT}
+  alignment _ = #{alignment VkPipelineRasterizationStateStreamCreateInfoEXT}
 
   peek ptr = 
     VkPipelineRasterizationStateStreamCreateInfoEXT
@@ -48,16 +48,16 @@ instance Storable VkPipelineRasterizationStateStreamCreateInfoEXT where
     pokeField @"rasterizationStream" ptr val
 
 instance Offset "sType" VkPipelineRasterizationStateStreamCreateInfoEXT where
-  rawOffset = #{offset struct VkPipelineRasterizationStateStreamCreateInfoEXT, sType}
+  rawOffset = #{offset VkPipelineRasterizationStateStreamCreateInfoEXT, sType}
 
 instance Offset "pNext" VkPipelineRasterizationStateStreamCreateInfoEXT where
-  rawOffset = #{offset struct VkPipelineRasterizationStateStreamCreateInfoEXT, pNext}
+  rawOffset = #{offset VkPipelineRasterizationStateStreamCreateInfoEXT, pNext}
 
 instance Offset "flags" VkPipelineRasterizationStateStreamCreateInfoEXT where
-  rawOffset = #{offset struct VkPipelineRasterizationStateStreamCreateInfoEXT, flags}
+  rawOffset = #{offset VkPipelineRasterizationStateStreamCreateInfoEXT, flags}
 
 instance Offset "rasterizationStream" VkPipelineRasterizationStateStreamCreateInfoEXT where
-  rawOffset = #{offset struct VkPipelineRasterizationStateStreamCreateInfoEXT, rasterizationStream}
+  rawOffset = #{offset VkPipelineRasterizationStateStreamCreateInfoEXT, rasterizationStream}
 
 #else
 

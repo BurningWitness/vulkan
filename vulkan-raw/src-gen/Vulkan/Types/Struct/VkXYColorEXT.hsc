@@ -27,8 +27,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkXYColorEXT" #-} VkXYColorEXT =
          }
 
 instance Storable VkXYColorEXT where
-  sizeOf    _ = #{size      struct VkXYColorEXT}
-  alignment _ = #{alignment struct VkXYColorEXT}
+  sizeOf    _ = #{size      VkXYColorEXT}
+  alignment _ = #{alignment VkXYColorEXT}
 
   peek ptr = 
     VkXYColorEXT
@@ -40,10 +40,10 @@ instance Storable VkXYColorEXT where
     pokeField @"y" ptr val
 
 instance Offset "x" VkXYColorEXT where
-  rawOffset = #{offset struct VkXYColorEXT, x}
+  rawOffset = #{offset VkXYColorEXT, x}
 
 instance Offset "y" VkXYColorEXT where
-  rawOffset = #{offset struct VkXYColorEXT, y}
+  rawOffset = #{offset VkXYColorEXT, y}
 
 #else
 

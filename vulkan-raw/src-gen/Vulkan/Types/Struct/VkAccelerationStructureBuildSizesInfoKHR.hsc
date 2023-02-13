@@ -32,8 +32,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkAccelerationStructureBuildSizesInfoKHR" #-} 
          }
 
 instance Storable VkAccelerationStructureBuildSizesInfoKHR where
-  sizeOf    _ = #{size      struct VkAccelerationStructureBuildSizesInfoKHR}
-  alignment _ = #{alignment struct VkAccelerationStructureBuildSizesInfoKHR}
+  sizeOf    _ = #{size      VkAccelerationStructureBuildSizesInfoKHR}
+  alignment _ = #{alignment VkAccelerationStructureBuildSizesInfoKHR}
 
   peek ptr = 
     VkAccelerationStructureBuildSizesInfoKHR
@@ -51,19 +51,19 @@ instance Storable VkAccelerationStructureBuildSizesInfoKHR where
     pokeField @"buildScratchSize" ptr val
 
 instance Offset "sType" VkAccelerationStructureBuildSizesInfoKHR where
-  rawOffset = #{offset struct VkAccelerationStructureBuildSizesInfoKHR, sType}
+  rawOffset = #{offset VkAccelerationStructureBuildSizesInfoKHR, sType}
 
 instance Offset "pNext" VkAccelerationStructureBuildSizesInfoKHR where
-  rawOffset = #{offset struct VkAccelerationStructureBuildSizesInfoKHR, pNext}
+  rawOffset = #{offset VkAccelerationStructureBuildSizesInfoKHR, pNext}
 
 instance Offset "accelerationStructureSize" VkAccelerationStructureBuildSizesInfoKHR where
-  rawOffset = #{offset struct VkAccelerationStructureBuildSizesInfoKHR, accelerationStructureSize}
+  rawOffset = #{offset VkAccelerationStructureBuildSizesInfoKHR, accelerationStructureSize}
 
 instance Offset "updateScratchSize" VkAccelerationStructureBuildSizesInfoKHR where
-  rawOffset = #{offset struct VkAccelerationStructureBuildSizesInfoKHR, updateScratchSize}
+  rawOffset = #{offset VkAccelerationStructureBuildSizesInfoKHR, updateScratchSize}
 
 instance Offset "buildScratchSize" VkAccelerationStructureBuildSizesInfoKHR where
-  rawOffset = #{offset struct VkAccelerationStructureBuildSizesInfoKHR, buildScratchSize}
+  rawOffset = #{offset VkAccelerationStructureBuildSizesInfoKHR, buildScratchSize}
 
 #else
 

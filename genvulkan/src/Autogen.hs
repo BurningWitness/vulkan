@@ -25,6 +25,7 @@ augments =
   Augments
     { cauterizedStructs = Set.fromList
                             [ "VkAccelerationStructureInstanceKHR"
+                            , "VkAccelerationStructureInstanceNV"
                             , "VkAccelerationStructureSRTMotionInstanceNV"
                             , "VkAccelerationStructureMatrixMotionInstanceNV"
                             ]

@@ -35,8 +35,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkSampleLocationsInfoEXT" #-} VkSampleLocation
          }
 
 instance Storable VkSampleLocationsInfoEXT where
-  sizeOf    _ = #{size      struct VkSampleLocationsInfoEXT}
-  alignment _ = #{alignment struct VkSampleLocationsInfoEXT}
+  sizeOf    _ = #{size      VkSampleLocationsInfoEXT}
+  alignment _ = #{alignment VkSampleLocationsInfoEXT}
 
   peek ptr = 
     VkSampleLocationsInfoEXT
@@ -56,22 +56,22 @@ instance Storable VkSampleLocationsInfoEXT where
     pokeField @"pSampleLocations" ptr val
 
 instance Offset "sType" VkSampleLocationsInfoEXT where
-  rawOffset = #{offset struct VkSampleLocationsInfoEXT, sType}
+  rawOffset = #{offset VkSampleLocationsInfoEXT, sType}
 
 instance Offset "pNext" VkSampleLocationsInfoEXT where
-  rawOffset = #{offset struct VkSampleLocationsInfoEXT, pNext}
+  rawOffset = #{offset VkSampleLocationsInfoEXT, pNext}
 
 instance Offset "sampleLocationsPerPixel" VkSampleLocationsInfoEXT where
-  rawOffset = #{offset struct VkSampleLocationsInfoEXT, sampleLocationsPerPixel}
+  rawOffset = #{offset VkSampleLocationsInfoEXT, sampleLocationsPerPixel}
 
 instance Offset "sampleLocationGridSize" VkSampleLocationsInfoEXT where
-  rawOffset = #{offset struct VkSampleLocationsInfoEXT, sampleLocationGridSize}
+  rawOffset = #{offset VkSampleLocationsInfoEXT, sampleLocationGridSize}
 
 instance Offset "sampleLocationsCount" VkSampleLocationsInfoEXT where
-  rawOffset = #{offset struct VkSampleLocationsInfoEXT, sampleLocationsCount}
+  rawOffset = #{offset VkSampleLocationsInfoEXT, sampleLocationsCount}
 
 instance Offset "pSampleLocations" VkSampleLocationsInfoEXT where
-  rawOffset = #{offset struct VkSampleLocationsInfoEXT, pSampleLocations}
+  rawOffset = #{offset VkSampleLocationsInfoEXT, pSampleLocations}
 
 #else
 

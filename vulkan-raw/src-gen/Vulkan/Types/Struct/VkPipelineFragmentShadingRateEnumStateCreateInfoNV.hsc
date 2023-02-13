@@ -34,8 +34,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkPipelineFragmentShadingRateEnumStateCreateIn
          }
 
 instance Storable VkPipelineFragmentShadingRateEnumStateCreateInfoNV where
-  sizeOf    _ = #{size      struct VkPipelineFragmentShadingRateEnumStateCreateInfoNV}
-  alignment _ = #{alignment struct VkPipelineFragmentShadingRateEnumStateCreateInfoNV}
+  sizeOf    _ = #{size      VkPipelineFragmentShadingRateEnumStateCreateInfoNV}
+  alignment _ = #{alignment VkPipelineFragmentShadingRateEnumStateCreateInfoNV}
 
   peek ptr = 
     VkPipelineFragmentShadingRateEnumStateCreateInfoNV
@@ -53,19 +53,19 @@ instance Storable VkPipelineFragmentShadingRateEnumStateCreateInfoNV where
     pokeField @"combinerOps" ptr val
 
 instance Offset "sType" VkPipelineFragmentShadingRateEnumStateCreateInfoNV where
-  rawOffset = #{offset struct VkPipelineFragmentShadingRateEnumStateCreateInfoNV, sType}
+  rawOffset = #{offset VkPipelineFragmentShadingRateEnumStateCreateInfoNV, sType}
 
 instance Offset "pNext" VkPipelineFragmentShadingRateEnumStateCreateInfoNV where
-  rawOffset = #{offset struct VkPipelineFragmentShadingRateEnumStateCreateInfoNV, pNext}
+  rawOffset = #{offset VkPipelineFragmentShadingRateEnumStateCreateInfoNV, pNext}
 
 instance Offset "shadingRateType" VkPipelineFragmentShadingRateEnumStateCreateInfoNV where
-  rawOffset = #{offset struct VkPipelineFragmentShadingRateEnumStateCreateInfoNV, shadingRateType}
+  rawOffset = #{offset VkPipelineFragmentShadingRateEnumStateCreateInfoNV, shadingRateType}
 
 instance Offset "shadingRate" VkPipelineFragmentShadingRateEnumStateCreateInfoNV where
-  rawOffset = #{offset struct VkPipelineFragmentShadingRateEnumStateCreateInfoNV, shadingRate}
+  rawOffset = #{offset VkPipelineFragmentShadingRateEnumStateCreateInfoNV, shadingRate}
 
 instance Offset "combinerOps" VkPipelineFragmentShadingRateEnumStateCreateInfoNV where
-  rawOffset = #{offset struct VkPipelineFragmentShadingRateEnumStateCreateInfoNV, combinerOps}
+  rawOffset = #{offset VkPipelineFragmentShadingRateEnumStateCreateInfoNV, combinerOps}
 
 #else
 

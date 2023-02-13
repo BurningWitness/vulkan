@@ -29,8 +29,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkInitializePerformanceApiInfoINTEL" #-} VkIni
          }
 
 instance Storable VkInitializePerformanceApiInfoINTEL where
-  sizeOf    _ = #{size      struct VkInitializePerformanceApiInfoINTEL}
-  alignment _ = #{alignment struct VkInitializePerformanceApiInfoINTEL}
+  sizeOf    _ = #{size      VkInitializePerformanceApiInfoINTEL}
+  alignment _ = #{alignment VkInitializePerformanceApiInfoINTEL}
 
   peek ptr = 
     VkInitializePerformanceApiInfoINTEL
@@ -44,13 +44,13 @@ instance Storable VkInitializePerformanceApiInfoINTEL where
     pokeField @"pUserData" ptr val
 
 instance Offset "sType" VkInitializePerformanceApiInfoINTEL where
-  rawOffset = #{offset struct VkInitializePerformanceApiInfoINTEL, sType}
+  rawOffset = #{offset VkInitializePerformanceApiInfoINTEL, sType}
 
 instance Offset "pNext" VkInitializePerformanceApiInfoINTEL where
-  rawOffset = #{offset struct VkInitializePerformanceApiInfoINTEL, pNext}
+  rawOffset = #{offset VkInitializePerformanceApiInfoINTEL, pNext}
 
 instance Offset "pUserData" VkInitializePerformanceApiInfoINTEL where
-  rawOffset = #{offset struct VkInitializePerformanceApiInfoINTEL, pUserData}
+  rawOffset = #{offset VkInitializePerformanceApiInfoINTEL, pUserData}
 
 #else
 

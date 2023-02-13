@@ -33,8 +33,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkPipelineViewportCoarseSampleOrderStateCreate
          }
 
 instance Storable VkPipelineViewportCoarseSampleOrderStateCreateInfoNV where
-  sizeOf    _ = #{size      struct VkPipelineViewportCoarseSampleOrderStateCreateInfoNV}
-  alignment _ = #{alignment struct VkPipelineViewportCoarseSampleOrderStateCreateInfoNV}
+  sizeOf    _ = #{size      VkPipelineViewportCoarseSampleOrderStateCreateInfoNV}
+  alignment _ = #{alignment VkPipelineViewportCoarseSampleOrderStateCreateInfoNV}
 
   peek ptr = 
     VkPipelineViewportCoarseSampleOrderStateCreateInfoNV
@@ -52,19 +52,19 @@ instance Storable VkPipelineViewportCoarseSampleOrderStateCreateInfoNV where
     pokeField @"pCustomSampleOrders" ptr val
 
 instance Offset "sType" VkPipelineViewportCoarseSampleOrderStateCreateInfoNV where
-  rawOffset = #{offset struct VkPipelineViewportCoarseSampleOrderStateCreateInfoNV, sType}
+  rawOffset = #{offset VkPipelineViewportCoarseSampleOrderStateCreateInfoNV, sType}
 
 instance Offset "pNext" VkPipelineViewportCoarseSampleOrderStateCreateInfoNV where
-  rawOffset = #{offset struct VkPipelineViewportCoarseSampleOrderStateCreateInfoNV, pNext}
+  rawOffset = #{offset VkPipelineViewportCoarseSampleOrderStateCreateInfoNV, pNext}
 
 instance Offset "sampleOrderType" VkPipelineViewportCoarseSampleOrderStateCreateInfoNV where
-  rawOffset = #{offset struct VkPipelineViewportCoarseSampleOrderStateCreateInfoNV, sampleOrderType}
+  rawOffset = #{offset VkPipelineViewportCoarseSampleOrderStateCreateInfoNV, sampleOrderType}
 
 instance Offset "customSampleOrderCount" VkPipelineViewportCoarseSampleOrderStateCreateInfoNV where
-  rawOffset = #{offset struct VkPipelineViewportCoarseSampleOrderStateCreateInfoNV, customSampleOrderCount}
+  rawOffset = #{offset VkPipelineViewportCoarseSampleOrderStateCreateInfoNV, customSampleOrderCount}
 
 instance Offset "pCustomSampleOrders" VkPipelineViewportCoarseSampleOrderStateCreateInfoNV where
-  rawOffset = #{offset struct VkPipelineViewportCoarseSampleOrderStateCreateInfoNV, pCustomSampleOrders}
+  rawOffset = #{offset VkPipelineViewportCoarseSampleOrderStateCreateInfoNV, pCustomSampleOrders}
 
 #else
 

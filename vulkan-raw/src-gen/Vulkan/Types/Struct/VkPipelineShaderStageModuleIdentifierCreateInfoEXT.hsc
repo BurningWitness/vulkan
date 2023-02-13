@@ -30,8 +30,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkPipelineShaderStageModuleIdentifierCreateInf
          }
 
 instance Storable VkPipelineShaderStageModuleIdentifierCreateInfoEXT where
-  sizeOf    _ = #{size      struct VkPipelineShaderStageModuleIdentifierCreateInfoEXT}
-  alignment _ = #{alignment struct VkPipelineShaderStageModuleIdentifierCreateInfoEXT}
+  sizeOf    _ = #{size      VkPipelineShaderStageModuleIdentifierCreateInfoEXT}
+  alignment _ = #{alignment VkPipelineShaderStageModuleIdentifierCreateInfoEXT}
 
   peek ptr = 
     VkPipelineShaderStageModuleIdentifierCreateInfoEXT
@@ -47,16 +47,16 @@ instance Storable VkPipelineShaderStageModuleIdentifierCreateInfoEXT where
     pokeField @"pIdentifier" ptr val
 
 instance Offset "sType" VkPipelineShaderStageModuleIdentifierCreateInfoEXT where
-  rawOffset = #{offset struct VkPipelineShaderStageModuleIdentifierCreateInfoEXT, sType}
+  rawOffset = #{offset VkPipelineShaderStageModuleIdentifierCreateInfoEXT, sType}
 
 instance Offset "pNext" VkPipelineShaderStageModuleIdentifierCreateInfoEXT where
-  rawOffset = #{offset struct VkPipelineShaderStageModuleIdentifierCreateInfoEXT, pNext}
+  rawOffset = #{offset VkPipelineShaderStageModuleIdentifierCreateInfoEXT, pNext}
 
 instance Offset "identifierSize" VkPipelineShaderStageModuleIdentifierCreateInfoEXT where
-  rawOffset = #{offset struct VkPipelineShaderStageModuleIdentifierCreateInfoEXT, identifierSize}
+  rawOffset = #{offset VkPipelineShaderStageModuleIdentifierCreateInfoEXT, identifierSize}
 
 instance Offset "pIdentifier" VkPipelineShaderStageModuleIdentifierCreateInfoEXT where
-  rawOffset = #{offset struct VkPipelineShaderStageModuleIdentifierCreateInfoEXT, pIdentifier}
+  rawOffset = #{offset VkPipelineShaderStageModuleIdentifierCreateInfoEXT, pIdentifier}
 
 #else
 

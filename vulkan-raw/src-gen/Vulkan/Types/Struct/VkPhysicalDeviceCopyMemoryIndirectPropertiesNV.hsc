@@ -30,8 +30,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkPhysicalDeviceCopyMemoryIndirectPropertiesNV
          }
 
 instance Storable VkPhysicalDeviceCopyMemoryIndirectPropertiesNV where
-  sizeOf    _ = #{size      struct VkPhysicalDeviceCopyMemoryIndirectPropertiesNV}
-  alignment _ = #{alignment struct VkPhysicalDeviceCopyMemoryIndirectPropertiesNV}
+  sizeOf    _ = #{size      VkPhysicalDeviceCopyMemoryIndirectPropertiesNV}
+  alignment _ = #{alignment VkPhysicalDeviceCopyMemoryIndirectPropertiesNV}
 
   peek ptr = 
     VkPhysicalDeviceCopyMemoryIndirectPropertiesNV
@@ -45,13 +45,13 @@ instance Storable VkPhysicalDeviceCopyMemoryIndirectPropertiesNV where
     pokeField @"supportedQueues" ptr val
 
 instance Offset "sType" VkPhysicalDeviceCopyMemoryIndirectPropertiesNV where
-  rawOffset = #{offset struct VkPhysicalDeviceCopyMemoryIndirectPropertiesNV, sType}
+  rawOffset = #{offset VkPhysicalDeviceCopyMemoryIndirectPropertiesNV, sType}
 
 instance Offset "pNext" VkPhysicalDeviceCopyMemoryIndirectPropertiesNV where
-  rawOffset = #{offset struct VkPhysicalDeviceCopyMemoryIndirectPropertiesNV, pNext}
+  rawOffset = #{offset VkPhysicalDeviceCopyMemoryIndirectPropertiesNV, pNext}
 
 instance Offset "supportedQueues" VkPhysicalDeviceCopyMemoryIndirectPropertiesNV where
-  rawOffset = #{offset struct VkPhysicalDeviceCopyMemoryIndirectPropertiesNV, supportedQueues}
+  rawOffset = #{offset VkPhysicalDeviceCopyMemoryIndirectPropertiesNV, supportedQueues}
 
 #else
 

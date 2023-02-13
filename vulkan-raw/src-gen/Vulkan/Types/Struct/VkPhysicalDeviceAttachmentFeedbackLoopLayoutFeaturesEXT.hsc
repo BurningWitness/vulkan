@@ -30,8 +30,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkPhysicalDeviceAttachmentFeedbackLoopLayoutFe
          }
 
 instance Storable VkPhysicalDeviceAttachmentFeedbackLoopLayoutFeaturesEXT where
-  sizeOf    _ = #{size      struct VkPhysicalDeviceAttachmentFeedbackLoopLayoutFeaturesEXT}
-  alignment _ = #{alignment struct VkPhysicalDeviceAttachmentFeedbackLoopLayoutFeaturesEXT}
+  sizeOf    _ = #{size      VkPhysicalDeviceAttachmentFeedbackLoopLayoutFeaturesEXT}
+  alignment _ = #{alignment VkPhysicalDeviceAttachmentFeedbackLoopLayoutFeaturesEXT}
 
   peek ptr = 
     VkPhysicalDeviceAttachmentFeedbackLoopLayoutFeaturesEXT
@@ -45,13 +45,13 @@ instance Storable VkPhysicalDeviceAttachmentFeedbackLoopLayoutFeaturesEXT where
     pokeField @"attachmentFeedbackLoopLayout" ptr val
 
 instance Offset "sType" VkPhysicalDeviceAttachmentFeedbackLoopLayoutFeaturesEXT where
-  rawOffset = #{offset struct VkPhysicalDeviceAttachmentFeedbackLoopLayoutFeaturesEXT, sType}
+  rawOffset = #{offset VkPhysicalDeviceAttachmentFeedbackLoopLayoutFeaturesEXT, sType}
 
 instance Offset "pNext" VkPhysicalDeviceAttachmentFeedbackLoopLayoutFeaturesEXT where
-  rawOffset = #{offset struct VkPhysicalDeviceAttachmentFeedbackLoopLayoutFeaturesEXT, pNext}
+  rawOffset = #{offset VkPhysicalDeviceAttachmentFeedbackLoopLayoutFeaturesEXT, pNext}
 
 instance Offset "attachmentFeedbackLoopLayout" VkPhysicalDeviceAttachmentFeedbackLoopLayoutFeaturesEXT where
-  rawOffset = #{offset struct VkPhysicalDeviceAttachmentFeedbackLoopLayoutFeaturesEXT, attachmentFeedbackLoopLayout}
+  rawOffset = #{offset VkPhysicalDeviceAttachmentFeedbackLoopLayoutFeaturesEXT, attachmentFeedbackLoopLayout}
 
 #else
 

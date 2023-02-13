@@ -35,8 +35,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkPipelineColorBlendAttachmentState" #-} VkPip
          }
 
 instance Storable VkPipelineColorBlendAttachmentState where
-  sizeOf    _ = #{size      struct VkPipelineColorBlendAttachmentState}
-  alignment _ = #{alignment struct VkPipelineColorBlendAttachmentState}
+  sizeOf    _ = #{size      VkPipelineColorBlendAttachmentState}
+  alignment _ = #{alignment VkPipelineColorBlendAttachmentState}
 
   peek ptr = 
     VkPipelineColorBlendAttachmentState
@@ -60,25 +60,25 @@ instance Storable VkPipelineColorBlendAttachmentState where
     pokeField @"colorWriteMask" ptr val
 
 instance Offset "blendEnable" VkPipelineColorBlendAttachmentState where
-  rawOffset = #{offset struct VkPipelineColorBlendAttachmentState, blendEnable}
+  rawOffset = #{offset VkPipelineColorBlendAttachmentState, blendEnable}
 
 instance Offset "srcColorBlendFactor" VkPipelineColorBlendAttachmentState where
-  rawOffset = #{offset struct VkPipelineColorBlendAttachmentState, srcColorBlendFactor}
+  rawOffset = #{offset VkPipelineColorBlendAttachmentState, srcColorBlendFactor}
 
 instance Offset "dstColorBlendFactor" VkPipelineColorBlendAttachmentState where
-  rawOffset = #{offset struct VkPipelineColorBlendAttachmentState, dstColorBlendFactor}
+  rawOffset = #{offset VkPipelineColorBlendAttachmentState, dstColorBlendFactor}
 
 instance Offset "colorBlendOp" VkPipelineColorBlendAttachmentState where
-  rawOffset = #{offset struct VkPipelineColorBlendAttachmentState, colorBlendOp}
+  rawOffset = #{offset VkPipelineColorBlendAttachmentState, colorBlendOp}
 
 instance Offset "srcAlphaBlendFactor" VkPipelineColorBlendAttachmentState where
-  rawOffset = #{offset struct VkPipelineColorBlendAttachmentState, srcAlphaBlendFactor}
+  rawOffset = #{offset VkPipelineColorBlendAttachmentState, srcAlphaBlendFactor}
 
 instance Offset "dstAlphaBlendFactor" VkPipelineColorBlendAttachmentState where
-  rawOffset = #{offset struct VkPipelineColorBlendAttachmentState, dstAlphaBlendFactor}
+  rawOffset = #{offset VkPipelineColorBlendAttachmentState, dstAlphaBlendFactor}
 
 instance Offset "alphaBlendOp" VkPipelineColorBlendAttachmentState where
-  rawOffset = #{offset struct VkPipelineColorBlendAttachmentState, alphaBlendOp}
+  rawOffset = #{offset VkPipelineColorBlendAttachmentState, alphaBlendOp}
 
 instance Offset "colorWriteMask" VkPipelineColorBlendAttachmentState where
-  rawOffset = #{offset struct VkPipelineColorBlendAttachmentState, colorWriteMask}
+  rawOffset = #{offset VkPipelineColorBlendAttachmentState, colorWriteMask}

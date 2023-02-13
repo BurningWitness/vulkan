@@ -35,8 +35,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkDeviceFaultVendorBinaryHeaderVersionOneEXT" 
          }
 
 instance Storable VkDeviceFaultVendorBinaryHeaderVersionOneEXT where
-  sizeOf    _ = #{size      struct VkDeviceFaultVendorBinaryHeaderVersionOneEXT}
-  alignment _ = #{alignment struct VkDeviceFaultVendorBinaryHeaderVersionOneEXT}
+  sizeOf    _ = #{size      VkDeviceFaultVendorBinaryHeaderVersionOneEXT}
+  alignment _ = #{alignment VkDeviceFaultVendorBinaryHeaderVersionOneEXT}
 
   peek ptr = 
     VkDeviceFaultVendorBinaryHeaderVersionOneEXT
@@ -62,31 +62,31 @@ instance Storable VkDeviceFaultVendorBinaryHeaderVersionOneEXT where
     pokeField @"engineNameOffset" ptr val
 
 instance Offset "headerSize" VkDeviceFaultVendorBinaryHeaderVersionOneEXT where
-  rawOffset = #{offset struct VkDeviceFaultVendorBinaryHeaderVersionOneEXT, headerSize}
+  rawOffset = #{offset VkDeviceFaultVendorBinaryHeaderVersionOneEXT, headerSize}
 
 instance Offset "headerVersion" VkDeviceFaultVendorBinaryHeaderVersionOneEXT where
-  rawOffset = #{offset struct VkDeviceFaultVendorBinaryHeaderVersionOneEXT, headerVersion}
+  rawOffset = #{offset VkDeviceFaultVendorBinaryHeaderVersionOneEXT, headerVersion}
 
 instance Offset "vendorID" VkDeviceFaultVendorBinaryHeaderVersionOneEXT where
-  rawOffset = #{offset struct VkDeviceFaultVendorBinaryHeaderVersionOneEXT, vendorID}
+  rawOffset = #{offset VkDeviceFaultVendorBinaryHeaderVersionOneEXT, vendorID}
 
 instance Offset "deviceID" VkDeviceFaultVendorBinaryHeaderVersionOneEXT where
-  rawOffset = #{offset struct VkDeviceFaultVendorBinaryHeaderVersionOneEXT, deviceID}
+  rawOffset = #{offset VkDeviceFaultVendorBinaryHeaderVersionOneEXT, deviceID}
 
 instance Offset "driverVersion" VkDeviceFaultVendorBinaryHeaderVersionOneEXT where
-  rawOffset = #{offset struct VkDeviceFaultVendorBinaryHeaderVersionOneEXT, driverVersion}
+  rawOffset = #{offset VkDeviceFaultVendorBinaryHeaderVersionOneEXT, driverVersion}
 
 instance Offset "pipelineCacheUUID" VkDeviceFaultVendorBinaryHeaderVersionOneEXT where
-  rawOffset = #{offset struct VkDeviceFaultVendorBinaryHeaderVersionOneEXT, pipelineCacheUUID}
+  rawOffset = #{offset VkDeviceFaultVendorBinaryHeaderVersionOneEXT, pipelineCacheUUID}
 
 instance Offset "applicationNameOffset" VkDeviceFaultVendorBinaryHeaderVersionOneEXT where
-  rawOffset = #{offset struct VkDeviceFaultVendorBinaryHeaderVersionOneEXT, applicationNameOffset}
+  rawOffset = #{offset VkDeviceFaultVendorBinaryHeaderVersionOneEXT, applicationNameOffset}
 
 instance Offset "applicationVersion" VkDeviceFaultVendorBinaryHeaderVersionOneEXT where
-  rawOffset = #{offset struct VkDeviceFaultVendorBinaryHeaderVersionOneEXT, applicationVersion}
+  rawOffset = #{offset VkDeviceFaultVendorBinaryHeaderVersionOneEXT, applicationVersion}
 
 instance Offset "engineNameOffset" VkDeviceFaultVendorBinaryHeaderVersionOneEXT where
-  rawOffset = #{offset struct VkDeviceFaultVendorBinaryHeaderVersionOneEXT, engineNameOffset}
+  rawOffset = #{offset VkDeviceFaultVendorBinaryHeaderVersionOneEXT, engineNameOffset}
 
 #else
 

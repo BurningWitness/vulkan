@@ -30,8 +30,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkPhysicalDeviceSeparateDepthStencilLayoutsFea
          }
 
 instance Storable VkPhysicalDeviceSeparateDepthStencilLayoutsFeatures where
-  sizeOf    _ = #{size      struct VkPhysicalDeviceSeparateDepthStencilLayoutsFeatures}
-  alignment _ = #{alignment struct VkPhysicalDeviceSeparateDepthStencilLayoutsFeatures}
+  sizeOf    _ = #{size      VkPhysicalDeviceSeparateDepthStencilLayoutsFeatures}
+  alignment _ = #{alignment VkPhysicalDeviceSeparateDepthStencilLayoutsFeatures}
 
   peek ptr = 
     VkPhysicalDeviceSeparateDepthStencilLayoutsFeatures
@@ -45,13 +45,13 @@ instance Storable VkPhysicalDeviceSeparateDepthStencilLayoutsFeatures where
     pokeField @"separateDepthStencilLayouts" ptr val
 
 instance Offset "sType" VkPhysicalDeviceSeparateDepthStencilLayoutsFeatures where
-  rawOffset = #{offset struct VkPhysicalDeviceSeparateDepthStencilLayoutsFeatures, sType}
+  rawOffset = #{offset VkPhysicalDeviceSeparateDepthStencilLayoutsFeatures, sType}
 
 instance Offset "pNext" VkPhysicalDeviceSeparateDepthStencilLayoutsFeatures where
-  rawOffset = #{offset struct VkPhysicalDeviceSeparateDepthStencilLayoutsFeatures, pNext}
+  rawOffset = #{offset VkPhysicalDeviceSeparateDepthStencilLayoutsFeatures, pNext}
 
 instance Offset "separateDepthStencilLayouts" VkPhysicalDeviceSeparateDepthStencilLayoutsFeatures where
-  rawOffset = #{offset struct VkPhysicalDeviceSeparateDepthStencilLayoutsFeatures, separateDepthStencilLayouts}
+  rawOffset = #{offset VkPhysicalDeviceSeparateDepthStencilLayoutsFeatures, separateDepthStencilLayouts}
 
 #else
 

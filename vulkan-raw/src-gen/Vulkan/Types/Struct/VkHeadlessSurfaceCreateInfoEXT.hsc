@@ -30,8 +30,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkHeadlessSurfaceCreateInfoEXT" #-} VkHeadless
          }
 
 instance Storable VkHeadlessSurfaceCreateInfoEXT where
-  sizeOf    _ = #{size      struct VkHeadlessSurfaceCreateInfoEXT}
-  alignment _ = #{alignment struct VkHeadlessSurfaceCreateInfoEXT}
+  sizeOf    _ = #{size      VkHeadlessSurfaceCreateInfoEXT}
+  alignment _ = #{alignment VkHeadlessSurfaceCreateInfoEXT}
 
   peek ptr = 
     VkHeadlessSurfaceCreateInfoEXT
@@ -45,13 +45,13 @@ instance Storable VkHeadlessSurfaceCreateInfoEXT where
     pokeField @"flags" ptr val
 
 instance Offset "sType" VkHeadlessSurfaceCreateInfoEXT where
-  rawOffset = #{offset struct VkHeadlessSurfaceCreateInfoEXT, sType}
+  rawOffset = #{offset VkHeadlessSurfaceCreateInfoEXT, sType}
 
 instance Offset "pNext" VkHeadlessSurfaceCreateInfoEXT where
-  rawOffset = #{offset struct VkHeadlessSurfaceCreateInfoEXT, pNext}
+  rawOffset = #{offset VkHeadlessSurfaceCreateInfoEXT, pNext}
 
 instance Offset "flags" VkHeadlessSurfaceCreateInfoEXT where
-  rawOffset = #{offset struct VkHeadlessSurfaceCreateInfoEXT, flags}
+  rawOffset = #{offset VkHeadlessSurfaceCreateInfoEXT, flags}
 
 #else
 

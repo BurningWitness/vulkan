@@ -30,8 +30,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkExportSemaphoreCreateInfo" #-} VkExportSemap
          }
 
 instance Storable VkExportSemaphoreCreateInfo where
-  sizeOf    _ = #{size      struct VkExportSemaphoreCreateInfo}
-  alignment _ = #{alignment struct VkExportSemaphoreCreateInfo}
+  sizeOf    _ = #{size      VkExportSemaphoreCreateInfo}
+  alignment _ = #{alignment VkExportSemaphoreCreateInfo}
 
   peek ptr = 
     VkExportSemaphoreCreateInfo
@@ -45,13 +45,13 @@ instance Storable VkExportSemaphoreCreateInfo where
     pokeField @"handleTypes" ptr val
 
 instance Offset "sType" VkExportSemaphoreCreateInfo where
-  rawOffset = #{offset struct VkExportSemaphoreCreateInfo, sType}
+  rawOffset = #{offset VkExportSemaphoreCreateInfo, sType}
 
 instance Offset "pNext" VkExportSemaphoreCreateInfo where
-  rawOffset = #{offset struct VkExportSemaphoreCreateInfo, pNext}
+  rawOffset = #{offset VkExportSemaphoreCreateInfo, pNext}
 
 instance Offset "handleTypes" VkExportSemaphoreCreateInfo where
-  rawOffset = #{offset struct VkExportSemaphoreCreateInfo, handleTypes}
+  rawOffset = #{offset VkExportSemaphoreCreateInfo, handleTypes}
 
 #else
 

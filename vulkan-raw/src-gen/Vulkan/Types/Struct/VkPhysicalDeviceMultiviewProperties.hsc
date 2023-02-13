@@ -30,8 +30,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkPhysicalDeviceMultiviewProperties" #-} VkPhy
          }
 
 instance Storable VkPhysicalDeviceMultiviewProperties where
-  sizeOf    _ = #{size      struct VkPhysicalDeviceMultiviewProperties}
-  alignment _ = #{alignment struct VkPhysicalDeviceMultiviewProperties}
+  sizeOf    _ = #{size      VkPhysicalDeviceMultiviewProperties}
+  alignment _ = #{alignment VkPhysicalDeviceMultiviewProperties}
 
   peek ptr = 
     VkPhysicalDeviceMultiviewProperties
@@ -47,16 +47,16 @@ instance Storable VkPhysicalDeviceMultiviewProperties where
     pokeField @"maxMultiviewInstanceIndex" ptr val
 
 instance Offset "sType" VkPhysicalDeviceMultiviewProperties where
-  rawOffset = #{offset struct VkPhysicalDeviceMultiviewProperties, sType}
+  rawOffset = #{offset VkPhysicalDeviceMultiviewProperties, sType}
 
 instance Offset "pNext" VkPhysicalDeviceMultiviewProperties where
-  rawOffset = #{offset struct VkPhysicalDeviceMultiviewProperties, pNext}
+  rawOffset = #{offset VkPhysicalDeviceMultiviewProperties, pNext}
 
 instance Offset "maxMultiviewViewCount" VkPhysicalDeviceMultiviewProperties where
-  rawOffset = #{offset struct VkPhysicalDeviceMultiviewProperties, maxMultiviewViewCount}
+  rawOffset = #{offset VkPhysicalDeviceMultiviewProperties, maxMultiviewViewCount}
 
 instance Offset "maxMultiviewInstanceIndex" VkPhysicalDeviceMultiviewProperties where
-  rawOffset = #{offset struct VkPhysicalDeviceMultiviewProperties, maxMultiviewInstanceIndex}
+  rawOffset = #{offset VkPhysicalDeviceMultiviewProperties, maxMultiviewInstanceIndex}
 
 #else
 

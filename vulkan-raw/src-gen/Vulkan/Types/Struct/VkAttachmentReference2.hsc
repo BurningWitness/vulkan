@@ -33,8 +33,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkAttachmentReference2" #-} VkAttachmentRefere
          }
 
 instance Storable VkAttachmentReference2 where
-  sizeOf    _ = #{size      struct VkAttachmentReference2}
-  alignment _ = #{alignment struct VkAttachmentReference2}
+  sizeOf    _ = #{size      VkAttachmentReference2}
+  alignment _ = #{alignment VkAttachmentReference2}
 
   peek ptr = 
     VkAttachmentReference2
@@ -52,19 +52,19 @@ instance Storable VkAttachmentReference2 where
     pokeField @"aspectMask" ptr val
 
 instance Offset "sType" VkAttachmentReference2 where
-  rawOffset = #{offset struct VkAttachmentReference2, sType}
+  rawOffset = #{offset VkAttachmentReference2, sType}
 
 instance Offset "pNext" VkAttachmentReference2 where
-  rawOffset = #{offset struct VkAttachmentReference2, pNext}
+  rawOffset = #{offset VkAttachmentReference2, pNext}
 
 instance Offset "attachment" VkAttachmentReference2 where
-  rawOffset = #{offset struct VkAttachmentReference2, attachment}
+  rawOffset = #{offset VkAttachmentReference2, attachment}
 
 instance Offset "layout" VkAttachmentReference2 where
-  rawOffset = #{offset struct VkAttachmentReference2, layout}
+  rawOffset = #{offset VkAttachmentReference2, layout}
 
 instance Offset "aspectMask" VkAttachmentReference2 where
-  rawOffset = #{offset struct VkAttachmentReference2, aspectMask}
+  rawOffset = #{offset VkAttachmentReference2, aspectMask}
 
 #else
 

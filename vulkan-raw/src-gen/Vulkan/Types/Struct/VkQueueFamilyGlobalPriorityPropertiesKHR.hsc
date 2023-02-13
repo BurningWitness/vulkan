@@ -31,8 +31,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkQueueFamilyGlobalPriorityPropertiesKHR" #-} 
          }
 
 instance Storable VkQueueFamilyGlobalPriorityPropertiesKHR where
-  sizeOf    _ = #{size      struct VkQueueFamilyGlobalPriorityPropertiesKHR}
-  alignment _ = #{alignment struct VkQueueFamilyGlobalPriorityPropertiesKHR}
+  sizeOf    _ = #{size      VkQueueFamilyGlobalPriorityPropertiesKHR}
+  alignment _ = #{alignment VkQueueFamilyGlobalPriorityPropertiesKHR}
 
   peek ptr = 
     VkQueueFamilyGlobalPriorityPropertiesKHR
@@ -48,16 +48,16 @@ instance Storable VkQueueFamilyGlobalPriorityPropertiesKHR where
     pokeField @"priorities" ptr val
 
 instance Offset "sType" VkQueueFamilyGlobalPriorityPropertiesKHR where
-  rawOffset = #{offset struct VkQueueFamilyGlobalPriorityPropertiesKHR, sType}
+  rawOffset = #{offset VkQueueFamilyGlobalPriorityPropertiesKHR, sType}
 
 instance Offset "pNext" VkQueueFamilyGlobalPriorityPropertiesKHR where
-  rawOffset = #{offset struct VkQueueFamilyGlobalPriorityPropertiesKHR, pNext}
+  rawOffset = #{offset VkQueueFamilyGlobalPriorityPropertiesKHR, pNext}
 
 instance Offset "priorityCount" VkQueueFamilyGlobalPriorityPropertiesKHR where
-  rawOffset = #{offset struct VkQueueFamilyGlobalPriorityPropertiesKHR, priorityCount}
+  rawOffset = #{offset VkQueueFamilyGlobalPriorityPropertiesKHR, priorityCount}
 
 instance Offset "priorities" VkQueueFamilyGlobalPriorityPropertiesKHR where
-  rawOffset = #{offset struct VkQueueFamilyGlobalPriorityPropertiesKHR, priorities}
+  rawOffset = #{offset VkQueueFamilyGlobalPriorityPropertiesKHR, priorities}
 
 #else
 

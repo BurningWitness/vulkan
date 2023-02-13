@@ -31,8 +31,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkMultiviewPerViewAttributesInfoNVX" #-} VkMul
          }
 
 instance Storable VkMultiviewPerViewAttributesInfoNVX where
-  sizeOf    _ = #{size      struct VkMultiviewPerViewAttributesInfoNVX}
-  alignment _ = #{alignment struct VkMultiviewPerViewAttributesInfoNVX}
+  sizeOf    _ = #{size      VkMultiviewPerViewAttributesInfoNVX}
+  alignment _ = #{alignment VkMultiviewPerViewAttributesInfoNVX}
 
   peek ptr = 
     VkMultiviewPerViewAttributesInfoNVX
@@ -48,16 +48,16 @@ instance Storable VkMultiviewPerViewAttributesInfoNVX where
     pokeField @"perViewAttributesPositionXOnly" ptr val
 
 instance Offset "sType" VkMultiviewPerViewAttributesInfoNVX where
-  rawOffset = #{offset struct VkMultiviewPerViewAttributesInfoNVX, sType}
+  rawOffset = #{offset VkMultiviewPerViewAttributesInfoNVX, sType}
 
 instance Offset "pNext" VkMultiviewPerViewAttributesInfoNVX where
-  rawOffset = #{offset struct VkMultiviewPerViewAttributesInfoNVX, pNext}
+  rawOffset = #{offset VkMultiviewPerViewAttributesInfoNVX, pNext}
 
 instance Offset "perViewAttributes" VkMultiviewPerViewAttributesInfoNVX where
-  rawOffset = #{offset struct VkMultiviewPerViewAttributesInfoNVX, perViewAttributes}
+  rawOffset = #{offset VkMultiviewPerViewAttributesInfoNVX, perViewAttributes}
 
 instance Offset "perViewAttributesPositionXOnly" VkMultiviewPerViewAttributesInfoNVX where
-  rawOffset = #{offset struct VkMultiviewPerViewAttributesInfoNVX, perViewAttributesPositionXOnly}
+  rawOffset = #{offset VkMultiviewPerViewAttributesInfoNVX, perViewAttributesPositionXOnly}
 
 #else
 

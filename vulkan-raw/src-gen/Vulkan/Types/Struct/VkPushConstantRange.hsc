@@ -27,8 +27,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkPushConstantRange" #-} VkPushConstantRange =
          }
 
 instance Storable VkPushConstantRange where
-  sizeOf    _ = #{size      struct VkPushConstantRange}
-  alignment _ = #{alignment struct VkPushConstantRange}
+  sizeOf    _ = #{size      VkPushConstantRange}
+  alignment _ = #{alignment VkPushConstantRange}
 
   peek ptr = 
     VkPushConstantRange
@@ -42,10 +42,10 @@ instance Storable VkPushConstantRange where
     pokeField @"size" ptr val
 
 instance Offset "stageFlags" VkPushConstantRange where
-  rawOffset = #{offset struct VkPushConstantRange, stageFlags}
+  rawOffset = #{offset VkPushConstantRange, stageFlags}
 
 instance Offset "offset" VkPushConstantRange where
-  rawOffset = #{offset struct VkPushConstantRange, offset}
+  rawOffset = #{offset VkPushConstantRange, offset}
 
 instance Offset "size" VkPushConstantRange where
-  rawOffset = #{offset struct VkPushConstantRange, size}
+  rawOffset = #{offset VkPushConstantRange, size}

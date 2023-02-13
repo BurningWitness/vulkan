@@ -30,8 +30,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkPipelineExecutableStatisticValueKHR" #-} VkP
          }
 
 instance Storable VkPipelineExecutableStatisticValueKHR where
-  sizeOf    _ = #{size      union VkPipelineExecutableStatisticValueKHR}
-  alignment _ = #{alignment union VkPipelineExecutableStatisticValueKHR}
+  sizeOf    _ = #{size      VkPipelineExecutableStatisticValueKHR}
+  alignment _ = #{alignment VkPipelineExecutableStatisticValueKHR}
 
   peek ptr = 
     VkPipelineExecutableStatisticValueKHR
@@ -47,16 +47,16 @@ instance Storable VkPipelineExecutableStatisticValueKHR where
     pokeField @"f64" ptr val
 
 instance Offset "b32" VkPipelineExecutableStatisticValueKHR where
-  rawOffset = #{offset union VkPipelineExecutableStatisticValueKHR, b32}
+  rawOffset = #{offset VkPipelineExecutableStatisticValueKHR, b32}
 
 instance Offset "i64" VkPipelineExecutableStatisticValueKHR where
-  rawOffset = #{offset union VkPipelineExecutableStatisticValueKHR, i64}
+  rawOffset = #{offset VkPipelineExecutableStatisticValueKHR, i64}
 
 instance Offset "u64" VkPipelineExecutableStatisticValueKHR where
-  rawOffset = #{offset union VkPipelineExecutableStatisticValueKHR, u64}
+  rawOffset = #{offset VkPipelineExecutableStatisticValueKHR, u64}
 
 instance Offset "f64" VkPipelineExecutableStatisticValueKHR where
-  rawOffset = #{offset union VkPipelineExecutableStatisticValueKHR, f64}
+  rawOffset = #{offset VkPipelineExecutableStatisticValueKHR, f64}
 
 #else
 

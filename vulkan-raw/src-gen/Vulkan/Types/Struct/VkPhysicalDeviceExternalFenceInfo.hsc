@@ -30,8 +30,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkPhysicalDeviceExternalFenceInfo" #-} VkPhysi
          }
 
 instance Storable VkPhysicalDeviceExternalFenceInfo where
-  sizeOf    _ = #{size      struct VkPhysicalDeviceExternalFenceInfo}
-  alignment _ = #{alignment struct VkPhysicalDeviceExternalFenceInfo}
+  sizeOf    _ = #{size      VkPhysicalDeviceExternalFenceInfo}
+  alignment _ = #{alignment VkPhysicalDeviceExternalFenceInfo}
 
   peek ptr = 
     VkPhysicalDeviceExternalFenceInfo
@@ -45,13 +45,13 @@ instance Storable VkPhysicalDeviceExternalFenceInfo where
     pokeField @"handleType" ptr val
 
 instance Offset "sType" VkPhysicalDeviceExternalFenceInfo where
-  rawOffset = #{offset struct VkPhysicalDeviceExternalFenceInfo, sType}
+  rawOffset = #{offset VkPhysicalDeviceExternalFenceInfo, sType}
 
 instance Offset "pNext" VkPhysicalDeviceExternalFenceInfo where
-  rawOffset = #{offset struct VkPhysicalDeviceExternalFenceInfo, pNext}
+  rawOffset = #{offset VkPhysicalDeviceExternalFenceInfo, pNext}
 
 instance Offset "handleType" VkPhysicalDeviceExternalFenceInfo where
-  rawOffset = #{offset struct VkPhysicalDeviceExternalFenceInfo, handleType}
+  rawOffset = #{offset VkPhysicalDeviceExternalFenceInfo, handleType}
 
 #else
 

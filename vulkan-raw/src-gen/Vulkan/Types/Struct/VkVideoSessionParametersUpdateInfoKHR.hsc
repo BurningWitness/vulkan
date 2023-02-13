@@ -29,8 +29,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkVideoSessionParametersUpdateInfoKHR" #-} VkV
          }
 
 instance Storable VkVideoSessionParametersUpdateInfoKHR where
-  sizeOf    _ = #{size      struct VkVideoSessionParametersUpdateInfoKHR}
-  alignment _ = #{alignment struct VkVideoSessionParametersUpdateInfoKHR}
+  sizeOf    _ = #{size      VkVideoSessionParametersUpdateInfoKHR}
+  alignment _ = #{alignment VkVideoSessionParametersUpdateInfoKHR}
 
   peek ptr = 
     VkVideoSessionParametersUpdateInfoKHR
@@ -44,13 +44,13 @@ instance Storable VkVideoSessionParametersUpdateInfoKHR where
     pokeField @"updateSequenceCount" ptr val
 
 instance Offset "sType" VkVideoSessionParametersUpdateInfoKHR where
-  rawOffset = #{offset struct VkVideoSessionParametersUpdateInfoKHR, sType}
+  rawOffset = #{offset VkVideoSessionParametersUpdateInfoKHR, sType}
 
 instance Offset "pNext" VkVideoSessionParametersUpdateInfoKHR where
-  rawOffset = #{offset struct VkVideoSessionParametersUpdateInfoKHR, pNext}
+  rawOffset = #{offset VkVideoSessionParametersUpdateInfoKHR, pNext}
 
 instance Offset "updateSequenceCount" VkVideoSessionParametersUpdateInfoKHR where
-  rawOffset = #{offset struct VkVideoSessionParametersUpdateInfoKHR, updateSequenceCount}
+  rawOffset = #{offset VkVideoSessionParametersUpdateInfoKHR, updateSequenceCount}
 
 #else
 

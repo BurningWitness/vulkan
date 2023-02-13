@@ -55,8 +55,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkSwapchainCreateInfoKHR" #-} VkSwapchainCreat
          }
 
 instance Storable VkSwapchainCreateInfoKHR where
-  sizeOf    _ = #{size      struct VkSwapchainCreateInfoKHR}
-  alignment _ = #{alignment struct VkSwapchainCreateInfoKHR}
+  sizeOf    _ = #{size      VkSwapchainCreateInfoKHR}
+  alignment _ = #{alignment VkSwapchainCreateInfoKHR}
 
   peek ptr = 
     VkSwapchainCreateInfoKHR
@@ -100,58 +100,58 @@ instance Storable VkSwapchainCreateInfoKHR where
     pokeField @"oldSwapchain" ptr val
 
 instance Offset "sType" VkSwapchainCreateInfoKHR where
-  rawOffset = #{offset struct VkSwapchainCreateInfoKHR, sType}
+  rawOffset = #{offset VkSwapchainCreateInfoKHR, sType}
 
 instance Offset "pNext" VkSwapchainCreateInfoKHR where
-  rawOffset = #{offset struct VkSwapchainCreateInfoKHR, pNext}
+  rawOffset = #{offset VkSwapchainCreateInfoKHR, pNext}
 
 instance Offset "flags" VkSwapchainCreateInfoKHR where
-  rawOffset = #{offset struct VkSwapchainCreateInfoKHR, flags}
+  rawOffset = #{offset VkSwapchainCreateInfoKHR, flags}
 
 instance Offset "surface" VkSwapchainCreateInfoKHR where
-  rawOffset = #{offset struct VkSwapchainCreateInfoKHR, surface}
+  rawOffset = #{offset VkSwapchainCreateInfoKHR, surface}
 
 instance Offset "minImageCount" VkSwapchainCreateInfoKHR where
-  rawOffset = #{offset struct VkSwapchainCreateInfoKHR, minImageCount}
+  rawOffset = #{offset VkSwapchainCreateInfoKHR, minImageCount}
 
 instance Offset "imageFormat" VkSwapchainCreateInfoKHR where
-  rawOffset = #{offset struct VkSwapchainCreateInfoKHR, imageFormat}
+  rawOffset = #{offset VkSwapchainCreateInfoKHR, imageFormat}
 
 instance Offset "imageColorSpace" VkSwapchainCreateInfoKHR where
-  rawOffset = #{offset struct VkSwapchainCreateInfoKHR, imageColorSpace}
+  rawOffset = #{offset VkSwapchainCreateInfoKHR, imageColorSpace}
 
 instance Offset "imageExtent" VkSwapchainCreateInfoKHR where
-  rawOffset = #{offset struct VkSwapchainCreateInfoKHR, imageExtent}
+  rawOffset = #{offset VkSwapchainCreateInfoKHR, imageExtent}
 
 instance Offset "imageArrayLayers" VkSwapchainCreateInfoKHR where
-  rawOffset = #{offset struct VkSwapchainCreateInfoKHR, imageArrayLayers}
+  rawOffset = #{offset VkSwapchainCreateInfoKHR, imageArrayLayers}
 
 instance Offset "imageUsage" VkSwapchainCreateInfoKHR where
-  rawOffset = #{offset struct VkSwapchainCreateInfoKHR, imageUsage}
+  rawOffset = #{offset VkSwapchainCreateInfoKHR, imageUsage}
 
 instance Offset "imageSharingMode" VkSwapchainCreateInfoKHR where
-  rawOffset = #{offset struct VkSwapchainCreateInfoKHR, imageSharingMode}
+  rawOffset = #{offset VkSwapchainCreateInfoKHR, imageSharingMode}
 
 instance Offset "queueFamilyIndexCount" VkSwapchainCreateInfoKHR where
-  rawOffset = #{offset struct VkSwapchainCreateInfoKHR, queueFamilyIndexCount}
+  rawOffset = #{offset VkSwapchainCreateInfoKHR, queueFamilyIndexCount}
 
 instance Offset "pQueueFamilyIndices" VkSwapchainCreateInfoKHR where
-  rawOffset = #{offset struct VkSwapchainCreateInfoKHR, pQueueFamilyIndices}
+  rawOffset = #{offset VkSwapchainCreateInfoKHR, pQueueFamilyIndices}
 
 instance Offset "preTransform" VkSwapchainCreateInfoKHR where
-  rawOffset = #{offset struct VkSwapchainCreateInfoKHR, preTransform}
+  rawOffset = #{offset VkSwapchainCreateInfoKHR, preTransform}
 
 instance Offset "compositeAlpha" VkSwapchainCreateInfoKHR where
-  rawOffset = #{offset struct VkSwapchainCreateInfoKHR, compositeAlpha}
+  rawOffset = #{offset VkSwapchainCreateInfoKHR, compositeAlpha}
 
 instance Offset "presentMode" VkSwapchainCreateInfoKHR where
-  rawOffset = #{offset struct VkSwapchainCreateInfoKHR, presentMode}
+  rawOffset = #{offset VkSwapchainCreateInfoKHR, presentMode}
 
 instance Offset "clipped" VkSwapchainCreateInfoKHR where
-  rawOffset = #{offset struct VkSwapchainCreateInfoKHR, clipped}
+  rawOffset = #{offset VkSwapchainCreateInfoKHR, clipped}
 
 instance Offset "oldSwapchain" VkSwapchainCreateInfoKHR where
-  rawOffset = #{offset struct VkSwapchainCreateInfoKHR, oldSwapchain}
+  rawOffset = #{offset VkSwapchainCreateInfoKHR, oldSwapchain}
 
 #else
 

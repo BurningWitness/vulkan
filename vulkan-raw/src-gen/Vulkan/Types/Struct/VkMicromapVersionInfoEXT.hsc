@@ -29,8 +29,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkMicromapVersionInfoEXT" #-} VkMicromapVersio
          }
 
 instance Storable VkMicromapVersionInfoEXT where
-  sizeOf    _ = #{size      struct VkMicromapVersionInfoEXT}
-  alignment _ = #{alignment struct VkMicromapVersionInfoEXT}
+  sizeOf    _ = #{size      VkMicromapVersionInfoEXT}
+  alignment _ = #{alignment VkMicromapVersionInfoEXT}
 
   peek ptr = 
     VkMicromapVersionInfoEXT
@@ -44,13 +44,13 @@ instance Storable VkMicromapVersionInfoEXT where
     pokeField @"pVersionData" ptr val
 
 instance Offset "sType" VkMicromapVersionInfoEXT where
-  rawOffset = #{offset struct VkMicromapVersionInfoEXT, sType}
+  rawOffset = #{offset VkMicromapVersionInfoEXT, sType}
 
 instance Offset "pNext" VkMicromapVersionInfoEXT where
-  rawOffset = #{offset struct VkMicromapVersionInfoEXT, pNext}
+  rawOffset = #{offset VkMicromapVersionInfoEXT, pNext}
 
 instance Offset "pVersionData" VkMicromapVersionInfoEXT where
-  rawOffset = #{offset struct VkMicromapVersionInfoEXT, pVersionData}
+  rawOffset = #{offset VkMicromapVersionInfoEXT, pVersionData}
 
 #else
 

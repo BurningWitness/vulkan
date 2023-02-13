@@ -30,8 +30,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkPhysicalDeviceFragmentShaderBarycentricPrope
          }
 
 instance Storable VkPhysicalDeviceFragmentShaderBarycentricPropertiesKHR where
-  sizeOf    _ = #{size      struct VkPhysicalDeviceFragmentShaderBarycentricPropertiesKHR}
-  alignment _ = #{alignment struct VkPhysicalDeviceFragmentShaderBarycentricPropertiesKHR}
+  sizeOf    _ = #{size      VkPhysicalDeviceFragmentShaderBarycentricPropertiesKHR}
+  alignment _ = #{alignment VkPhysicalDeviceFragmentShaderBarycentricPropertiesKHR}
 
   peek ptr = 
     VkPhysicalDeviceFragmentShaderBarycentricPropertiesKHR
@@ -45,13 +45,13 @@ instance Storable VkPhysicalDeviceFragmentShaderBarycentricPropertiesKHR where
     pokeField @"triStripVertexOrderIndependentOfProvokingVertex" ptr val
 
 instance Offset "sType" VkPhysicalDeviceFragmentShaderBarycentricPropertiesKHR where
-  rawOffset = #{offset struct VkPhysicalDeviceFragmentShaderBarycentricPropertiesKHR, sType}
+  rawOffset = #{offset VkPhysicalDeviceFragmentShaderBarycentricPropertiesKHR, sType}
 
 instance Offset "pNext" VkPhysicalDeviceFragmentShaderBarycentricPropertiesKHR where
-  rawOffset = #{offset struct VkPhysicalDeviceFragmentShaderBarycentricPropertiesKHR, pNext}
+  rawOffset = #{offset VkPhysicalDeviceFragmentShaderBarycentricPropertiesKHR, pNext}
 
 instance Offset "triStripVertexOrderIndependentOfProvokingVertex" VkPhysicalDeviceFragmentShaderBarycentricPropertiesKHR where
-  rawOffset = #{offset struct VkPhysicalDeviceFragmentShaderBarycentricPropertiesKHR, triStripVertexOrderIndependentOfProvokingVertex}
+  rawOffset = #{offset VkPhysicalDeviceFragmentShaderBarycentricPropertiesKHR, triStripVertexOrderIndependentOfProvokingVertex}
 
 #else
 

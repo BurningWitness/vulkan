@@ -31,8 +31,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkRenderPassInputAttachmentAspectCreateInfo" #
          }
 
 instance Storable VkRenderPassInputAttachmentAspectCreateInfo where
-  sizeOf    _ = #{size      struct VkRenderPassInputAttachmentAspectCreateInfo}
-  alignment _ = #{alignment struct VkRenderPassInputAttachmentAspectCreateInfo}
+  sizeOf    _ = #{size      VkRenderPassInputAttachmentAspectCreateInfo}
+  alignment _ = #{alignment VkRenderPassInputAttachmentAspectCreateInfo}
 
   peek ptr = 
     VkRenderPassInputAttachmentAspectCreateInfo
@@ -48,16 +48,16 @@ instance Storable VkRenderPassInputAttachmentAspectCreateInfo where
     pokeField @"pAspectReferences" ptr val
 
 instance Offset "sType" VkRenderPassInputAttachmentAspectCreateInfo where
-  rawOffset = #{offset struct VkRenderPassInputAttachmentAspectCreateInfo, sType}
+  rawOffset = #{offset VkRenderPassInputAttachmentAspectCreateInfo, sType}
 
 instance Offset "pNext" VkRenderPassInputAttachmentAspectCreateInfo where
-  rawOffset = #{offset struct VkRenderPassInputAttachmentAspectCreateInfo, pNext}
+  rawOffset = #{offset VkRenderPassInputAttachmentAspectCreateInfo, pNext}
 
 instance Offset "aspectReferenceCount" VkRenderPassInputAttachmentAspectCreateInfo where
-  rawOffset = #{offset struct VkRenderPassInputAttachmentAspectCreateInfo, aspectReferenceCount}
+  rawOffset = #{offset VkRenderPassInputAttachmentAspectCreateInfo, aspectReferenceCount}
 
 instance Offset "pAspectReferences" VkRenderPassInputAttachmentAspectCreateInfo where
-  rawOffset = #{offset struct VkRenderPassInputAttachmentAspectCreateInfo, pAspectReferences}
+  rawOffset = #{offset VkRenderPassInputAttachmentAspectCreateInfo, pAspectReferences}
 
 #else
 

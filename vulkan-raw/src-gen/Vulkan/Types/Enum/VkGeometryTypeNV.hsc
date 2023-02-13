@@ -1,14 +1,14 @@
 {-# LANGUAGE CPP #-}
+{-# LANGUAGE PatternSynonyms #-}
 
 #include <vulkan/vulkan.h>
 
 module Vulkan.Types.Enum.VkGeometryTypeNV where
 
 import Data.Int
-import Vulkan.Types.Enum.VkGeometryTypeKHR
 
 
 
 #if VK_NV_ray_tracing
-type VkGeometryTypeNV = VkGeometryTypeKHR
+type VkGeometryTypeNV = #{type int}
 #endif

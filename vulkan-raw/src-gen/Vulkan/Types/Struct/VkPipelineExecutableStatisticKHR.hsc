@@ -34,8 +34,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkPipelineExecutableStatisticKHR" #-} VkPipeli
          }
 
 instance Storable VkPipelineExecutableStatisticKHR where
-  sizeOf    _ = #{size      struct VkPipelineExecutableStatisticKHR}
-  alignment _ = #{alignment struct VkPipelineExecutableStatisticKHR}
+  sizeOf    _ = #{size      VkPipelineExecutableStatisticKHR}
+  alignment _ = #{alignment VkPipelineExecutableStatisticKHR}
 
   peek ptr = 
     VkPipelineExecutableStatisticKHR
@@ -55,22 +55,22 @@ instance Storable VkPipelineExecutableStatisticKHR where
     pokeField @"value" ptr val
 
 instance Offset "sType" VkPipelineExecutableStatisticKHR where
-  rawOffset = #{offset struct VkPipelineExecutableStatisticKHR, sType}
+  rawOffset = #{offset VkPipelineExecutableStatisticKHR, sType}
 
 instance Offset "pNext" VkPipelineExecutableStatisticKHR where
-  rawOffset = #{offset struct VkPipelineExecutableStatisticKHR, pNext}
+  rawOffset = #{offset VkPipelineExecutableStatisticKHR, pNext}
 
 instance Offset "name" VkPipelineExecutableStatisticKHR where
-  rawOffset = #{offset struct VkPipelineExecutableStatisticKHR, name}
+  rawOffset = #{offset VkPipelineExecutableStatisticKHR, name}
 
 instance Offset "description" VkPipelineExecutableStatisticKHR where
-  rawOffset = #{offset struct VkPipelineExecutableStatisticKHR, description}
+  rawOffset = #{offset VkPipelineExecutableStatisticKHR, description}
 
 instance Offset "format" VkPipelineExecutableStatisticKHR where
-  rawOffset = #{offset struct VkPipelineExecutableStatisticKHR, format}
+  rawOffset = #{offset VkPipelineExecutableStatisticKHR, format}
 
 instance Offset "value" VkPipelineExecutableStatisticKHR where
-  rawOffset = #{offset struct VkPipelineExecutableStatisticKHR, value}
+  rawOffset = #{offset VkPipelineExecutableStatisticKHR, value}
 
 #else
 

@@ -33,8 +33,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkPhysicalDeviceInlineUniformBlockProperties" 
          }
 
 instance Storable VkPhysicalDeviceInlineUniformBlockProperties where
-  sizeOf    _ = #{size      struct VkPhysicalDeviceInlineUniformBlockProperties}
-  alignment _ = #{alignment struct VkPhysicalDeviceInlineUniformBlockProperties}
+  sizeOf    _ = #{size      VkPhysicalDeviceInlineUniformBlockProperties}
+  alignment _ = #{alignment VkPhysicalDeviceInlineUniformBlockProperties}
 
   peek ptr = 
     VkPhysicalDeviceInlineUniformBlockProperties
@@ -56,25 +56,25 @@ instance Storable VkPhysicalDeviceInlineUniformBlockProperties where
     pokeField @"maxDescriptorSetUpdateAfterBindInlineUniformBlocks" ptr val
 
 instance Offset "sType" VkPhysicalDeviceInlineUniformBlockProperties where
-  rawOffset = #{offset struct VkPhysicalDeviceInlineUniformBlockProperties, sType}
+  rawOffset = #{offset VkPhysicalDeviceInlineUniformBlockProperties, sType}
 
 instance Offset "pNext" VkPhysicalDeviceInlineUniformBlockProperties where
-  rawOffset = #{offset struct VkPhysicalDeviceInlineUniformBlockProperties, pNext}
+  rawOffset = #{offset VkPhysicalDeviceInlineUniformBlockProperties, pNext}
 
 instance Offset "maxInlineUniformBlockSize" VkPhysicalDeviceInlineUniformBlockProperties where
-  rawOffset = #{offset struct VkPhysicalDeviceInlineUniformBlockProperties, maxInlineUniformBlockSize}
+  rawOffset = #{offset VkPhysicalDeviceInlineUniformBlockProperties, maxInlineUniformBlockSize}
 
 instance Offset "maxPerStageDescriptorInlineUniformBlocks" VkPhysicalDeviceInlineUniformBlockProperties where
-  rawOffset = #{offset struct VkPhysicalDeviceInlineUniformBlockProperties, maxPerStageDescriptorInlineUniformBlocks}
+  rawOffset = #{offset VkPhysicalDeviceInlineUniformBlockProperties, maxPerStageDescriptorInlineUniformBlocks}
 
 instance Offset "maxPerStageDescriptorUpdateAfterBindInlineUniformBlocks" VkPhysicalDeviceInlineUniformBlockProperties where
-  rawOffset = #{offset struct VkPhysicalDeviceInlineUniformBlockProperties, maxPerStageDescriptorUpdateAfterBindInlineUniformBlocks}
+  rawOffset = #{offset VkPhysicalDeviceInlineUniformBlockProperties, maxPerStageDescriptorUpdateAfterBindInlineUniformBlocks}
 
 instance Offset "maxDescriptorSetInlineUniformBlocks" VkPhysicalDeviceInlineUniformBlockProperties where
-  rawOffset = #{offset struct VkPhysicalDeviceInlineUniformBlockProperties, maxDescriptorSetInlineUniformBlocks}
+  rawOffset = #{offset VkPhysicalDeviceInlineUniformBlockProperties, maxDescriptorSetInlineUniformBlocks}
 
 instance Offset "maxDescriptorSetUpdateAfterBindInlineUniformBlocks" VkPhysicalDeviceInlineUniformBlockProperties where
-  rawOffset = #{offset struct VkPhysicalDeviceInlineUniformBlockProperties, maxDescriptorSetUpdateAfterBindInlineUniformBlocks}
+  rawOffset = #{offset VkPhysicalDeviceInlineUniformBlockProperties, maxDescriptorSetUpdateAfterBindInlineUniformBlocks}
 
 #else
 

@@ -30,8 +30,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkBindIndexBufferIndirectCommandNV" #-} VkBind
          }
 
 instance Storable VkBindIndexBufferIndirectCommandNV where
-  sizeOf    _ = #{size      struct VkBindIndexBufferIndirectCommandNV}
-  alignment _ = #{alignment struct VkBindIndexBufferIndirectCommandNV}
+  sizeOf    _ = #{size      VkBindIndexBufferIndirectCommandNV}
+  alignment _ = #{alignment VkBindIndexBufferIndirectCommandNV}
 
   peek ptr = 
     VkBindIndexBufferIndirectCommandNV
@@ -45,13 +45,13 @@ instance Storable VkBindIndexBufferIndirectCommandNV where
     pokeField @"indexType" ptr val
 
 instance Offset "bufferAddress" VkBindIndexBufferIndirectCommandNV where
-  rawOffset = #{offset struct VkBindIndexBufferIndirectCommandNV, bufferAddress}
+  rawOffset = #{offset VkBindIndexBufferIndirectCommandNV, bufferAddress}
 
 instance Offset "size" VkBindIndexBufferIndirectCommandNV where
-  rawOffset = #{offset struct VkBindIndexBufferIndirectCommandNV, size}
+  rawOffset = #{offset VkBindIndexBufferIndirectCommandNV, size}
 
 instance Offset "indexType" VkBindIndexBufferIndirectCommandNV where
-  rawOffset = #{offset struct VkBindIndexBufferIndirectCommandNV, indexType}
+  rawOffset = #{offset VkBindIndexBufferIndirectCommandNV, indexType}
 
 #else
 

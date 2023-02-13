@@ -30,8 +30,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkAccelerationStructureDeviceAddressInfoKHR" #
          }
 
 instance Storable VkAccelerationStructureDeviceAddressInfoKHR where
-  sizeOf    _ = #{size      struct VkAccelerationStructureDeviceAddressInfoKHR}
-  alignment _ = #{alignment struct VkAccelerationStructureDeviceAddressInfoKHR}
+  sizeOf    _ = #{size      VkAccelerationStructureDeviceAddressInfoKHR}
+  alignment _ = #{alignment VkAccelerationStructureDeviceAddressInfoKHR}
 
   peek ptr = 
     VkAccelerationStructureDeviceAddressInfoKHR
@@ -45,13 +45,13 @@ instance Storable VkAccelerationStructureDeviceAddressInfoKHR where
     pokeField @"accelerationStructure" ptr val
 
 instance Offset "sType" VkAccelerationStructureDeviceAddressInfoKHR where
-  rawOffset = #{offset struct VkAccelerationStructureDeviceAddressInfoKHR, sType}
+  rawOffset = #{offset VkAccelerationStructureDeviceAddressInfoKHR, sType}
 
 instance Offset "pNext" VkAccelerationStructureDeviceAddressInfoKHR where
-  rawOffset = #{offset struct VkAccelerationStructureDeviceAddressInfoKHR, pNext}
+  rawOffset = #{offset VkAccelerationStructureDeviceAddressInfoKHR, pNext}
 
 instance Offset "accelerationStructure" VkAccelerationStructureDeviceAddressInfoKHR where
-  rawOffset = #{offset struct VkAccelerationStructureDeviceAddressInfoKHR, accelerationStructure}
+  rawOffset = #{offset VkAccelerationStructureDeviceAddressInfoKHR, accelerationStructure}
 
 #else
 

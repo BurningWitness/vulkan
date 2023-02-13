@@ -34,8 +34,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkVideoEncodeH264RateControlInfoEXT" #-} VkVid
          }
 
 instance Storable VkVideoEncodeH264RateControlInfoEXT where
-  sizeOf    _ = #{size      struct VkVideoEncodeH264RateControlInfoEXT}
-  alignment _ = #{alignment struct VkVideoEncodeH264RateControlInfoEXT}
+  sizeOf    _ = #{size      VkVideoEncodeH264RateControlInfoEXT}
+  alignment _ = #{alignment VkVideoEncodeH264RateControlInfoEXT}
 
   peek ptr = 
     VkVideoEncodeH264RateControlInfoEXT
@@ -57,25 +57,25 @@ instance Storable VkVideoEncodeH264RateControlInfoEXT where
     pokeField @"temporalLayerCount" ptr val
 
 instance Offset "sType" VkVideoEncodeH264RateControlInfoEXT where
-  rawOffset = #{offset struct VkVideoEncodeH264RateControlInfoEXT, sType}
+  rawOffset = #{offset VkVideoEncodeH264RateControlInfoEXT, sType}
 
 instance Offset "pNext" VkVideoEncodeH264RateControlInfoEXT where
-  rawOffset = #{offset struct VkVideoEncodeH264RateControlInfoEXT, pNext}
+  rawOffset = #{offset VkVideoEncodeH264RateControlInfoEXT, pNext}
 
 instance Offset "gopFrameCount" VkVideoEncodeH264RateControlInfoEXT where
-  rawOffset = #{offset struct VkVideoEncodeH264RateControlInfoEXT, gopFrameCount}
+  rawOffset = #{offset VkVideoEncodeH264RateControlInfoEXT, gopFrameCount}
 
 instance Offset "idrPeriod" VkVideoEncodeH264RateControlInfoEXT where
-  rawOffset = #{offset struct VkVideoEncodeH264RateControlInfoEXT, idrPeriod}
+  rawOffset = #{offset VkVideoEncodeH264RateControlInfoEXT, idrPeriod}
 
 instance Offset "consecutiveBFrameCount" VkVideoEncodeH264RateControlInfoEXT where
-  rawOffset = #{offset struct VkVideoEncodeH264RateControlInfoEXT, consecutiveBFrameCount}
+  rawOffset = #{offset VkVideoEncodeH264RateControlInfoEXT, consecutiveBFrameCount}
 
 instance Offset "rateControlStructure" VkVideoEncodeH264RateControlInfoEXT where
-  rawOffset = #{offset struct VkVideoEncodeH264RateControlInfoEXT, rateControlStructure}
+  rawOffset = #{offset VkVideoEncodeH264RateControlInfoEXT, rateControlStructure}
 
 instance Offset "temporalLayerCount" VkVideoEncodeH264RateControlInfoEXT where
-  rawOffset = #{offset struct VkVideoEncodeH264RateControlInfoEXT, temporalLayerCount}
+  rawOffset = #{offset VkVideoEncodeH264RateControlInfoEXT, temporalLayerCount}
 
 #else
 

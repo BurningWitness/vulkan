@@ -44,8 +44,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkAccelerationStructureBuildGeometryInfoKHR" #
          }
 
 instance Storable VkAccelerationStructureBuildGeometryInfoKHR where
-  sizeOf    _ = #{size      struct VkAccelerationStructureBuildGeometryInfoKHR}
-  alignment _ = #{alignment struct VkAccelerationStructureBuildGeometryInfoKHR}
+  sizeOf    _ = #{size      VkAccelerationStructureBuildGeometryInfoKHR}
+  alignment _ = #{alignment VkAccelerationStructureBuildGeometryInfoKHR}
 
   peek ptr = 
     VkAccelerationStructureBuildGeometryInfoKHR
@@ -75,37 +75,37 @@ instance Storable VkAccelerationStructureBuildGeometryInfoKHR where
     pokeField @"scratchData" ptr val
 
 instance Offset "sType" VkAccelerationStructureBuildGeometryInfoKHR where
-  rawOffset = #{offset struct VkAccelerationStructureBuildGeometryInfoKHR, sType}
+  rawOffset = #{offset VkAccelerationStructureBuildGeometryInfoKHR, sType}
 
 instance Offset "pNext" VkAccelerationStructureBuildGeometryInfoKHR where
-  rawOffset = #{offset struct VkAccelerationStructureBuildGeometryInfoKHR, pNext}
+  rawOffset = #{offset VkAccelerationStructureBuildGeometryInfoKHR, pNext}
 
 instance Offset "type_" VkAccelerationStructureBuildGeometryInfoKHR where
-  rawOffset = #{offset struct VkAccelerationStructureBuildGeometryInfoKHR, type}
+  rawOffset = #{offset VkAccelerationStructureBuildGeometryInfoKHR, type}
 
 instance Offset "flags" VkAccelerationStructureBuildGeometryInfoKHR where
-  rawOffset = #{offset struct VkAccelerationStructureBuildGeometryInfoKHR, flags}
+  rawOffset = #{offset VkAccelerationStructureBuildGeometryInfoKHR, flags}
 
 instance Offset "mode" VkAccelerationStructureBuildGeometryInfoKHR where
-  rawOffset = #{offset struct VkAccelerationStructureBuildGeometryInfoKHR, mode}
+  rawOffset = #{offset VkAccelerationStructureBuildGeometryInfoKHR, mode}
 
 instance Offset "srcAccelerationStructure" VkAccelerationStructureBuildGeometryInfoKHR where
-  rawOffset = #{offset struct VkAccelerationStructureBuildGeometryInfoKHR, srcAccelerationStructure}
+  rawOffset = #{offset VkAccelerationStructureBuildGeometryInfoKHR, srcAccelerationStructure}
 
 instance Offset "dstAccelerationStructure" VkAccelerationStructureBuildGeometryInfoKHR where
-  rawOffset = #{offset struct VkAccelerationStructureBuildGeometryInfoKHR, dstAccelerationStructure}
+  rawOffset = #{offset VkAccelerationStructureBuildGeometryInfoKHR, dstAccelerationStructure}
 
 instance Offset "geometryCount" VkAccelerationStructureBuildGeometryInfoKHR where
-  rawOffset = #{offset struct VkAccelerationStructureBuildGeometryInfoKHR, geometryCount}
+  rawOffset = #{offset VkAccelerationStructureBuildGeometryInfoKHR, geometryCount}
 
 instance Offset "pGeometries" VkAccelerationStructureBuildGeometryInfoKHR where
-  rawOffset = #{offset struct VkAccelerationStructureBuildGeometryInfoKHR, pGeometries}
+  rawOffset = #{offset VkAccelerationStructureBuildGeometryInfoKHR, pGeometries}
 
 instance Offset "ppGeometries" VkAccelerationStructureBuildGeometryInfoKHR where
-  rawOffset = #{offset struct VkAccelerationStructureBuildGeometryInfoKHR, ppGeometries}
+  rawOffset = #{offset VkAccelerationStructureBuildGeometryInfoKHR, ppGeometries}
 
 instance Offset "scratchData" VkAccelerationStructureBuildGeometryInfoKHR where
-  rawOffset = #{offset struct VkAccelerationStructureBuildGeometryInfoKHR, scratchData}
+  rawOffset = #{offset VkAccelerationStructureBuildGeometryInfoKHR, scratchData}
 
 instance Offset "type" VkAccelerationStructureBuildGeometryInfoKHR where
   rawOffset = rawOffset @"type_" @VkAccelerationStructureBuildGeometryInfoKHR

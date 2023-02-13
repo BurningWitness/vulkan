@@ -32,8 +32,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkPhysicalDeviceImageProcessingFeaturesQCOM" #
          }
 
 instance Storable VkPhysicalDeviceImageProcessingFeaturesQCOM where
-  sizeOf    _ = #{size      struct VkPhysicalDeviceImageProcessingFeaturesQCOM}
-  alignment _ = #{alignment struct VkPhysicalDeviceImageProcessingFeaturesQCOM}
+  sizeOf    _ = #{size      VkPhysicalDeviceImageProcessingFeaturesQCOM}
+  alignment _ = #{alignment VkPhysicalDeviceImageProcessingFeaturesQCOM}
 
   peek ptr = 
     VkPhysicalDeviceImageProcessingFeaturesQCOM
@@ -51,19 +51,19 @@ instance Storable VkPhysicalDeviceImageProcessingFeaturesQCOM where
     pokeField @"textureBlockMatch" ptr val
 
 instance Offset "sType" VkPhysicalDeviceImageProcessingFeaturesQCOM where
-  rawOffset = #{offset struct VkPhysicalDeviceImageProcessingFeaturesQCOM, sType}
+  rawOffset = #{offset VkPhysicalDeviceImageProcessingFeaturesQCOM, sType}
 
 instance Offset "pNext" VkPhysicalDeviceImageProcessingFeaturesQCOM where
-  rawOffset = #{offset struct VkPhysicalDeviceImageProcessingFeaturesQCOM, pNext}
+  rawOffset = #{offset VkPhysicalDeviceImageProcessingFeaturesQCOM, pNext}
 
 instance Offset "textureSampleWeighted" VkPhysicalDeviceImageProcessingFeaturesQCOM where
-  rawOffset = #{offset struct VkPhysicalDeviceImageProcessingFeaturesQCOM, textureSampleWeighted}
+  rawOffset = #{offset VkPhysicalDeviceImageProcessingFeaturesQCOM, textureSampleWeighted}
 
 instance Offset "textureBoxFilter" VkPhysicalDeviceImageProcessingFeaturesQCOM where
-  rawOffset = #{offset struct VkPhysicalDeviceImageProcessingFeaturesQCOM, textureBoxFilter}
+  rawOffset = #{offset VkPhysicalDeviceImageProcessingFeaturesQCOM, textureBoxFilter}
 
 instance Offset "textureBlockMatch" VkPhysicalDeviceImageProcessingFeaturesQCOM where
-  rawOffset = #{offset struct VkPhysicalDeviceImageProcessingFeaturesQCOM, textureBlockMatch}
+  rawOffset = #{offset VkPhysicalDeviceImageProcessingFeaturesQCOM, textureBlockMatch}
 
 #else
 

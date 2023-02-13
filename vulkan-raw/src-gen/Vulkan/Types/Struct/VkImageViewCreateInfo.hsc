@@ -38,8 +38,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkImageViewCreateInfo" #-} VkImageViewCreateIn
          }
 
 instance Storable VkImageViewCreateInfo where
-  sizeOf    _ = #{size      struct VkImageViewCreateInfo}
-  alignment _ = #{alignment struct VkImageViewCreateInfo}
+  sizeOf    _ = #{size      VkImageViewCreateInfo}
+  alignment _ = #{alignment VkImageViewCreateInfo}
 
   peek ptr = 
     VkImageViewCreateInfo
@@ -63,25 +63,25 @@ instance Storable VkImageViewCreateInfo where
     pokeField @"subresourceRange" ptr val
 
 instance Offset "sType" VkImageViewCreateInfo where
-  rawOffset = #{offset struct VkImageViewCreateInfo, sType}
+  rawOffset = #{offset VkImageViewCreateInfo, sType}
 
 instance Offset "pNext" VkImageViewCreateInfo where
-  rawOffset = #{offset struct VkImageViewCreateInfo, pNext}
+  rawOffset = #{offset VkImageViewCreateInfo, pNext}
 
 instance Offset "flags" VkImageViewCreateInfo where
-  rawOffset = #{offset struct VkImageViewCreateInfo, flags}
+  rawOffset = #{offset VkImageViewCreateInfo, flags}
 
 instance Offset "image" VkImageViewCreateInfo where
-  rawOffset = #{offset struct VkImageViewCreateInfo, image}
+  rawOffset = #{offset VkImageViewCreateInfo, image}
 
 instance Offset "viewType" VkImageViewCreateInfo where
-  rawOffset = #{offset struct VkImageViewCreateInfo, viewType}
+  rawOffset = #{offset VkImageViewCreateInfo, viewType}
 
 instance Offset "format" VkImageViewCreateInfo where
-  rawOffset = #{offset struct VkImageViewCreateInfo, format}
+  rawOffset = #{offset VkImageViewCreateInfo, format}
 
 instance Offset "components" VkImageViewCreateInfo where
-  rawOffset = #{offset struct VkImageViewCreateInfo, components}
+  rawOffset = #{offset VkImageViewCreateInfo, components}
 
 instance Offset "subresourceRange" VkImageViewCreateInfo where
-  rawOffset = #{offset struct VkImageViewCreateInfo, subresourceRange}
+  rawOffset = #{offset VkImageViewCreateInfo, subresourceRange}

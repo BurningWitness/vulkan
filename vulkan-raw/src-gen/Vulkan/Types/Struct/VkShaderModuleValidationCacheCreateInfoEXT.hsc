@@ -30,8 +30,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkShaderModuleValidationCacheCreateInfoEXT" #-
          }
 
 instance Storable VkShaderModuleValidationCacheCreateInfoEXT where
-  sizeOf    _ = #{size      struct VkShaderModuleValidationCacheCreateInfoEXT}
-  alignment _ = #{alignment struct VkShaderModuleValidationCacheCreateInfoEXT}
+  sizeOf    _ = #{size      VkShaderModuleValidationCacheCreateInfoEXT}
+  alignment _ = #{alignment VkShaderModuleValidationCacheCreateInfoEXT}
 
   peek ptr = 
     VkShaderModuleValidationCacheCreateInfoEXT
@@ -45,13 +45,13 @@ instance Storable VkShaderModuleValidationCacheCreateInfoEXT where
     pokeField @"validationCache" ptr val
 
 instance Offset "sType" VkShaderModuleValidationCacheCreateInfoEXT where
-  rawOffset = #{offset struct VkShaderModuleValidationCacheCreateInfoEXT, sType}
+  rawOffset = #{offset VkShaderModuleValidationCacheCreateInfoEXT, sType}
 
 instance Offset "pNext" VkShaderModuleValidationCacheCreateInfoEXT where
-  rawOffset = #{offset struct VkShaderModuleValidationCacheCreateInfoEXT, pNext}
+  rawOffset = #{offset VkShaderModuleValidationCacheCreateInfoEXT, pNext}
 
 instance Offset "validationCache" VkShaderModuleValidationCacheCreateInfoEXT where
-  rawOffset = #{offset struct VkShaderModuleValidationCacheCreateInfoEXT, validationCache}
+  rawOffset = #{offset VkShaderModuleValidationCacheCreateInfoEXT, validationCache}
 
 #else
 

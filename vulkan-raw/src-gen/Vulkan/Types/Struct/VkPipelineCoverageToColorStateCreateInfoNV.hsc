@@ -33,8 +33,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkPipelineCoverageToColorStateCreateInfoNV" #-
          }
 
 instance Storable VkPipelineCoverageToColorStateCreateInfoNV where
-  sizeOf    _ = #{size      struct VkPipelineCoverageToColorStateCreateInfoNV}
-  alignment _ = #{alignment struct VkPipelineCoverageToColorStateCreateInfoNV}
+  sizeOf    _ = #{size      VkPipelineCoverageToColorStateCreateInfoNV}
+  alignment _ = #{alignment VkPipelineCoverageToColorStateCreateInfoNV}
 
   peek ptr = 
     VkPipelineCoverageToColorStateCreateInfoNV
@@ -52,19 +52,19 @@ instance Storable VkPipelineCoverageToColorStateCreateInfoNV where
     pokeField @"coverageToColorLocation" ptr val
 
 instance Offset "sType" VkPipelineCoverageToColorStateCreateInfoNV where
-  rawOffset = #{offset struct VkPipelineCoverageToColorStateCreateInfoNV, sType}
+  rawOffset = #{offset VkPipelineCoverageToColorStateCreateInfoNV, sType}
 
 instance Offset "pNext" VkPipelineCoverageToColorStateCreateInfoNV where
-  rawOffset = #{offset struct VkPipelineCoverageToColorStateCreateInfoNV, pNext}
+  rawOffset = #{offset VkPipelineCoverageToColorStateCreateInfoNV, pNext}
 
 instance Offset "flags" VkPipelineCoverageToColorStateCreateInfoNV where
-  rawOffset = #{offset struct VkPipelineCoverageToColorStateCreateInfoNV, flags}
+  rawOffset = #{offset VkPipelineCoverageToColorStateCreateInfoNV, flags}
 
 instance Offset "coverageToColorEnable" VkPipelineCoverageToColorStateCreateInfoNV where
-  rawOffset = #{offset struct VkPipelineCoverageToColorStateCreateInfoNV, coverageToColorEnable}
+  rawOffset = #{offset VkPipelineCoverageToColorStateCreateInfoNV, coverageToColorEnable}
 
 instance Offset "coverageToColorLocation" VkPipelineCoverageToColorStateCreateInfoNV where
-  rawOffset = #{offset struct VkPipelineCoverageToColorStateCreateInfoNV, coverageToColorLocation}
+  rawOffset = #{offset VkPipelineCoverageToColorStateCreateInfoNV, coverageToColorLocation}
 
 #else
 

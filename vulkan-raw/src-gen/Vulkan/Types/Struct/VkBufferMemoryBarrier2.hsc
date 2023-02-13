@@ -41,8 +41,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkBufferMemoryBarrier2" #-} VkBufferMemoryBarr
          }
 
 instance Storable VkBufferMemoryBarrier2 where
-  sizeOf    _ = #{size      struct VkBufferMemoryBarrier2}
-  alignment _ = #{alignment struct VkBufferMemoryBarrier2}
+  sizeOf    _ = #{size      VkBufferMemoryBarrier2}
+  alignment _ = #{alignment VkBufferMemoryBarrier2}
 
   peek ptr = 
     VkBufferMemoryBarrier2
@@ -72,37 +72,37 @@ instance Storable VkBufferMemoryBarrier2 where
     pokeField @"size" ptr val
 
 instance Offset "sType" VkBufferMemoryBarrier2 where
-  rawOffset = #{offset struct VkBufferMemoryBarrier2, sType}
+  rawOffset = #{offset VkBufferMemoryBarrier2, sType}
 
 instance Offset "pNext" VkBufferMemoryBarrier2 where
-  rawOffset = #{offset struct VkBufferMemoryBarrier2, pNext}
+  rawOffset = #{offset VkBufferMemoryBarrier2, pNext}
 
 instance Offset "srcStageMask" VkBufferMemoryBarrier2 where
-  rawOffset = #{offset struct VkBufferMemoryBarrier2, srcStageMask}
+  rawOffset = #{offset VkBufferMemoryBarrier2, srcStageMask}
 
 instance Offset "srcAccessMask" VkBufferMemoryBarrier2 where
-  rawOffset = #{offset struct VkBufferMemoryBarrier2, srcAccessMask}
+  rawOffset = #{offset VkBufferMemoryBarrier2, srcAccessMask}
 
 instance Offset "dstStageMask" VkBufferMemoryBarrier2 where
-  rawOffset = #{offset struct VkBufferMemoryBarrier2, dstStageMask}
+  rawOffset = #{offset VkBufferMemoryBarrier2, dstStageMask}
 
 instance Offset "dstAccessMask" VkBufferMemoryBarrier2 where
-  rawOffset = #{offset struct VkBufferMemoryBarrier2, dstAccessMask}
+  rawOffset = #{offset VkBufferMemoryBarrier2, dstAccessMask}
 
 instance Offset "srcQueueFamilyIndex" VkBufferMemoryBarrier2 where
-  rawOffset = #{offset struct VkBufferMemoryBarrier2, srcQueueFamilyIndex}
+  rawOffset = #{offset VkBufferMemoryBarrier2, srcQueueFamilyIndex}
 
 instance Offset "dstQueueFamilyIndex" VkBufferMemoryBarrier2 where
-  rawOffset = #{offset struct VkBufferMemoryBarrier2, dstQueueFamilyIndex}
+  rawOffset = #{offset VkBufferMemoryBarrier2, dstQueueFamilyIndex}
 
 instance Offset "buffer" VkBufferMemoryBarrier2 where
-  rawOffset = #{offset struct VkBufferMemoryBarrier2, buffer}
+  rawOffset = #{offset VkBufferMemoryBarrier2, buffer}
 
 instance Offset "offset" VkBufferMemoryBarrier2 where
-  rawOffset = #{offset struct VkBufferMemoryBarrier2, offset}
+  rawOffset = #{offset VkBufferMemoryBarrier2, offset}
 
 instance Offset "size" VkBufferMemoryBarrier2 where
-  rawOffset = #{offset struct VkBufferMemoryBarrier2, size}
+  rawOffset = #{offset VkBufferMemoryBarrier2, size}
 
 #else
 

@@ -26,8 +26,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkExtent3D" #-} VkExtent3D =
          }
 
 instance Storable VkExtent3D where
-  sizeOf    _ = #{size      struct VkExtent3D}
-  alignment _ = #{alignment struct VkExtent3D}
+  sizeOf    _ = #{size      VkExtent3D}
+  alignment _ = #{alignment VkExtent3D}
 
   peek ptr = 
     VkExtent3D
@@ -41,10 +41,10 @@ instance Storable VkExtent3D where
     pokeField @"depth" ptr val
 
 instance Offset "width" VkExtent3D where
-  rawOffset = #{offset struct VkExtent3D, width}
+  rawOffset = #{offset VkExtent3D, width}
 
 instance Offset "height" VkExtent3D where
-  rawOffset = #{offset struct VkExtent3D, height}
+  rawOffset = #{offset VkExtent3D, height}
 
 instance Offset "depth" VkExtent3D where
-  rawOffset = #{offset struct VkExtent3D, depth}
+  rawOffset = #{offset VkExtent3D, depth}

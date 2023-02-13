@@ -36,8 +36,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkCopyBufferToImageInfo2" #-} VkCopyBufferToIm
          }
 
 instance Storable VkCopyBufferToImageInfo2 where
-  sizeOf    _ = #{size      struct VkCopyBufferToImageInfo2}
-  alignment _ = #{alignment struct VkCopyBufferToImageInfo2}
+  sizeOf    _ = #{size      VkCopyBufferToImageInfo2}
+  alignment _ = #{alignment VkCopyBufferToImageInfo2}
 
   peek ptr = 
     VkCopyBufferToImageInfo2
@@ -59,25 +59,25 @@ instance Storable VkCopyBufferToImageInfo2 where
     pokeField @"pRegions" ptr val
 
 instance Offset "sType" VkCopyBufferToImageInfo2 where
-  rawOffset = #{offset struct VkCopyBufferToImageInfo2, sType}
+  rawOffset = #{offset VkCopyBufferToImageInfo2, sType}
 
 instance Offset "pNext" VkCopyBufferToImageInfo2 where
-  rawOffset = #{offset struct VkCopyBufferToImageInfo2, pNext}
+  rawOffset = #{offset VkCopyBufferToImageInfo2, pNext}
 
 instance Offset "srcBuffer" VkCopyBufferToImageInfo2 where
-  rawOffset = #{offset struct VkCopyBufferToImageInfo2, srcBuffer}
+  rawOffset = #{offset VkCopyBufferToImageInfo2, srcBuffer}
 
 instance Offset "dstImage" VkCopyBufferToImageInfo2 where
-  rawOffset = #{offset struct VkCopyBufferToImageInfo2, dstImage}
+  rawOffset = #{offset VkCopyBufferToImageInfo2, dstImage}
 
 instance Offset "dstImageLayout" VkCopyBufferToImageInfo2 where
-  rawOffset = #{offset struct VkCopyBufferToImageInfo2, dstImageLayout}
+  rawOffset = #{offset VkCopyBufferToImageInfo2, dstImageLayout}
 
 instance Offset "regionCount" VkCopyBufferToImageInfo2 where
-  rawOffset = #{offset struct VkCopyBufferToImageInfo2, regionCount}
+  rawOffset = #{offset VkCopyBufferToImageInfo2, regionCount}
 
 instance Offset "pRegions" VkCopyBufferToImageInfo2 where
-  rawOffset = #{offset struct VkCopyBufferToImageInfo2, pRegions}
+  rawOffset = #{offset VkCopyBufferToImageInfo2, pRegions}
 
 #else
 

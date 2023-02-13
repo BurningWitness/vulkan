@@ -35,8 +35,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkPerformanceCounterKHR" #-} VkPerformanceCoun
          }
 
 instance Storable VkPerformanceCounterKHR where
-  sizeOf    _ = #{size      struct VkPerformanceCounterKHR}
-  alignment _ = #{alignment struct VkPerformanceCounterKHR}
+  sizeOf    _ = #{size      VkPerformanceCounterKHR}
+  alignment _ = #{alignment VkPerformanceCounterKHR}
 
   peek ptr = 
     VkPerformanceCounterKHR
@@ -56,22 +56,22 @@ instance Storable VkPerformanceCounterKHR where
     pokeField @"uuid" ptr val
 
 instance Offset "sType" VkPerformanceCounterKHR where
-  rawOffset = #{offset struct VkPerformanceCounterKHR, sType}
+  rawOffset = #{offset VkPerformanceCounterKHR, sType}
 
 instance Offset "pNext" VkPerformanceCounterKHR where
-  rawOffset = #{offset struct VkPerformanceCounterKHR, pNext}
+  rawOffset = #{offset VkPerformanceCounterKHR, pNext}
 
 instance Offset "unit" VkPerformanceCounterKHR where
-  rawOffset = #{offset struct VkPerformanceCounterKHR, unit}
+  rawOffset = #{offset VkPerformanceCounterKHR, unit}
 
 instance Offset "scope" VkPerformanceCounterKHR where
-  rawOffset = #{offset struct VkPerformanceCounterKHR, scope}
+  rawOffset = #{offset VkPerformanceCounterKHR, scope}
 
 instance Offset "storage" VkPerformanceCounterKHR where
-  rawOffset = #{offset struct VkPerformanceCounterKHR, storage}
+  rawOffset = #{offset VkPerformanceCounterKHR, storage}
 
 instance Offset "uuid" VkPerformanceCounterKHR where
-  rawOffset = #{offset struct VkPerformanceCounterKHR, uuid}
+  rawOffset = #{offset VkPerformanceCounterKHR, uuid}
 
 #else
 

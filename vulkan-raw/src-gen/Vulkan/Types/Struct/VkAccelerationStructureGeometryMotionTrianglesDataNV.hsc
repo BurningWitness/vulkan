@@ -30,8 +30,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkAccelerationStructureGeometryMotionTriangles
          }
 
 instance Storable VkAccelerationStructureGeometryMotionTrianglesDataNV where
-  sizeOf    _ = #{size      struct VkAccelerationStructureGeometryMotionTrianglesDataNV}
-  alignment _ = #{alignment struct VkAccelerationStructureGeometryMotionTrianglesDataNV}
+  sizeOf    _ = #{size      VkAccelerationStructureGeometryMotionTrianglesDataNV}
+  alignment _ = #{alignment VkAccelerationStructureGeometryMotionTrianglesDataNV}
 
   peek ptr = 
     VkAccelerationStructureGeometryMotionTrianglesDataNV
@@ -45,13 +45,13 @@ instance Storable VkAccelerationStructureGeometryMotionTrianglesDataNV where
     pokeField @"vertexData" ptr val
 
 instance Offset "sType" VkAccelerationStructureGeometryMotionTrianglesDataNV where
-  rawOffset = #{offset struct VkAccelerationStructureGeometryMotionTrianglesDataNV, sType}
+  rawOffset = #{offset VkAccelerationStructureGeometryMotionTrianglesDataNV, sType}
 
 instance Offset "pNext" VkAccelerationStructureGeometryMotionTrianglesDataNV where
-  rawOffset = #{offset struct VkAccelerationStructureGeometryMotionTrianglesDataNV, pNext}
+  rawOffset = #{offset VkAccelerationStructureGeometryMotionTrianglesDataNV, pNext}
 
 instance Offset "vertexData" VkAccelerationStructureGeometryMotionTrianglesDataNV where
-  rawOffset = #{offset struct VkAccelerationStructureGeometryMotionTrianglesDataNV, vertexData}
+  rawOffset = #{offset VkAccelerationStructureGeometryMotionTrianglesDataNV, vertexData}
 
 #else
 

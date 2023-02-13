@@ -32,8 +32,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkMetalSurfaceCreateInfoEXT" #-} VkMetalSurfac
          }
 
 instance Storable VkMetalSurfaceCreateInfoEXT where
-  sizeOf    _ = #{size      struct VkMetalSurfaceCreateInfoEXT}
-  alignment _ = #{alignment struct VkMetalSurfaceCreateInfoEXT}
+  sizeOf    _ = #{size      VkMetalSurfaceCreateInfoEXT}
+  alignment _ = #{alignment VkMetalSurfaceCreateInfoEXT}
 
   peek ptr = 
     VkMetalSurfaceCreateInfoEXT
@@ -49,16 +49,16 @@ instance Storable VkMetalSurfaceCreateInfoEXT where
     pokeField @"pLayer" ptr val
 
 instance Offset "sType" VkMetalSurfaceCreateInfoEXT where
-  rawOffset = #{offset struct VkMetalSurfaceCreateInfoEXT, sType}
+  rawOffset = #{offset VkMetalSurfaceCreateInfoEXT, sType}
 
 instance Offset "pNext" VkMetalSurfaceCreateInfoEXT where
-  rawOffset = #{offset struct VkMetalSurfaceCreateInfoEXT, pNext}
+  rawOffset = #{offset VkMetalSurfaceCreateInfoEXT, pNext}
 
 instance Offset "flags" VkMetalSurfaceCreateInfoEXT where
-  rawOffset = #{offset struct VkMetalSurfaceCreateInfoEXT, flags}
+  rawOffset = #{offset VkMetalSurfaceCreateInfoEXT, flags}
 
 instance Offset "pLayer" VkMetalSurfaceCreateInfoEXT where
-  rawOffset = #{offset struct VkMetalSurfaceCreateInfoEXT, pLayer}
+  rawOffset = #{offset VkMetalSurfaceCreateInfoEXT, pLayer}
 
 #else
 

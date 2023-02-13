@@ -32,8 +32,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkAccelerationStructureCreateInfoNV" #-} VkAcc
          }
 
 instance Storable VkAccelerationStructureCreateInfoNV where
-  sizeOf    _ = #{size      struct VkAccelerationStructureCreateInfoNV}
-  alignment _ = #{alignment struct VkAccelerationStructureCreateInfoNV}
+  sizeOf    _ = #{size      VkAccelerationStructureCreateInfoNV}
+  alignment _ = #{alignment VkAccelerationStructureCreateInfoNV}
 
   peek ptr = 
     VkAccelerationStructureCreateInfoNV
@@ -49,16 +49,16 @@ instance Storable VkAccelerationStructureCreateInfoNV where
     pokeField @"info" ptr val
 
 instance Offset "sType" VkAccelerationStructureCreateInfoNV where
-  rawOffset = #{offset struct VkAccelerationStructureCreateInfoNV, sType}
+  rawOffset = #{offset VkAccelerationStructureCreateInfoNV, sType}
 
 instance Offset "pNext" VkAccelerationStructureCreateInfoNV where
-  rawOffset = #{offset struct VkAccelerationStructureCreateInfoNV, pNext}
+  rawOffset = #{offset VkAccelerationStructureCreateInfoNV, pNext}
 
 instance Offset "compactedSize" VkAccelerationStructureCreateInfoNV where
-  rawOffset = #{offset struct VkAccelerationStructureCreateInfoNV, compactedSize}
+  rawOffset = #{offset VkAccelerationStructureCreateInfoNV, compactedSize}
 
 instance Offset "info" VkAccelerationStructureCreateInfoNV where
-  rawOffset = #{offset struct VkAccelerationStructureCreateInfoNV, info}
+  rawOffset = #{offset VkAccelerationStructureCreateInfoNV, info}
 
 #else
 

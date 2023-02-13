@@ -30,8 +30,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkPhysicalDeviceImageCompressionControlFeature
          }
 
 instance Storable VkPhysicalDeviceImageCompressionControlFeaturesEXT where
-  sizeOf    _ = #{size      struct VkPhysicalDeviceImageCompressionControlFeaturesEXT}
-  alignment _ = #{alignment struct VkPhysicalDeviceImageCompressionControlFeaturesEXT}
+  sizeOf    _ = #{size      VkPhysicalDeviceImageCompressionControlFeaturesEXT}
+  alignment _ = #{alignment VkPhysicalDeviceImageCompressionControlFeaturesEXT}
 
   peek ptr = 
     VkPhysicalDeviceImageCompressionControlFeaturesEXT
@@ -45,13 +45,13 @@ instance Storable VkPhysicalDeviceImageCompressionControlFeaturesEXT where
     pokeField @"imageCompressionControl" ptr val
 
 instance Offset "sType" VkPhysicalDeviceImageCompressionControlFeaturesEXT where
-  rawOffset = #{offset struct VkPhysicalDeviceImageCompressionControlFeaturesEXT, sType}
+  rawOffset = #{offset VkPhysicalDeviceImageCompressionControlFeaturesEXT, sType}
 
 instance Offset "pNext" VkPhysicalDeviceImageCompressionControlFeaturesEXT where
-  rawOffset = #{offset struct VkPhysicalDeviceImageCompressionControlFeaturesEXT, pNext}
+  rawOffset = #{offset VkPhysicalDeviceImageCompressionControlFeaturesEXT, pNext}
 
 instance Offset "imageCompressionControl" VkPhysicalDeviceImageCompressionControlFeaturesEXT where
-  rawOffset = #{offset struct VkPhysicalDeviceImageCompressionControlFeaturesEXT, imageCompressionControl}
+  rawOffset = #{offset VkPhysicalDeviceImageCompressionControlFeaturesEXT, imageCompressionControl}
 
 #else
 

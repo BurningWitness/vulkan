@@ -32,8 +32,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkFenceGetFdInfoKHR" #-} VkFenceGetFdInfoKHR =
          }
 
 instance Storable VkFenceGetFdInfoKHR where
-  sizeOf    _ = #{size      struct VkFenceGetFdInfoKHR}
-  alignment _ = #{alignment struct VkFenceGetFdInfoKHR}
+  sizeOf    _ = #{size      VkFenceGetFdInfoKHR}
+  alignment _ = #{alignment VkFenceGetFdInfoKHR}
 
   peek ptr = 
     VkFenceGetFdInfoKHR
@@ -49,16 +49,16 @@ instance Storable VkFenceGetFdInfoKHR where
     pokeField @"handleType" ptr val
 
 instance Offset "sType" VkFenceGetFdInfoKHR where
-  rawOffset = #{offset struct VkFenceGetFdInfoKHR, sType}
+  rawOffset = #{offset VkFenceGetFdInfoKHR, sType}
 
 instance Offset "pNext" VkFenceGetFdInfoKHR where
-  rawOffset = #{offset struct VkFenceGetFdInfoKHR, pNext}
+  rawOffset = #{offset VkFenceGetFdInfoKHR, pNext}
 
 instance Offset "fence" VkFenceGetFdInfoKHR where
-  rawOffset = #{offset struct VkFenceGetFdInfoKHR, fence}
+  rawOffset = #{offset VkFenceGetFdInfoKHR, fence}
 
 instance Offset "handleType" VkFenceGetFdInfoKHR where
-  rawOffset = #{offset struct VkFenceGetFdInfoKHR, handleType}
+  rawOffset = #{offset VkFenceGetFdInfoKHR, handleType}
 
 #else
 

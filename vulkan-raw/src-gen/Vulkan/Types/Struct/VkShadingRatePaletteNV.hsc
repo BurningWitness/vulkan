@@ -28,8 +28,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkShadingRatePaletteNV" #-} VkShadingRatePalet
          }
 
 instance Storable VkShadingRatePaletteNV where
-  sizeOf    _ = #{size      struct VkShadingRatePaletteNV}
-  alignment _ = #{alignment struct VkShadingRatePaletteNV}
+  sizeOf    _ = #{size      VkShadingRatePaletteNV}
+  alignment _ = #{alignment VkShadingRatePaletteNV}
 
   peek ptr = 
     VkShadingRatePaletteNV
@@ -41,10 +41,10 @@ instance Storable VkShadingRatePaletteNV where
     pokeField @"pShadingRatePaletteEntries" ptr val
 
 instance Offset "shadingRatePaletteEntryCount" VkShadingRatePaletteNV where
-  rawOffset = #{offset struct VkShadingRatePaletteNV, shadingRatePaletteEntryCount}
+  rawOffset = #{offset VkShadingRatePaletteNV, shadingRatePaletteEntryCount}
 
 instance Offset "pShadingRatePaletteEntries" VkShadingRatePaletteNV where
-  rawOffset = #{offset struct VkShadingRatePaletteNV, pShadingRatePaletteEntries}
+  rawOffset = #{offset VkShadingRatePaletteNV, pShadingRatePaletteEntries}
 
 #else
 

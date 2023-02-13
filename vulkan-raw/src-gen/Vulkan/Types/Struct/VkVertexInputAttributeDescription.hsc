@@ -28,8 +28,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkVertexInputAttributeDescription" #-} VkVerte
          }
 
 instance Storable VkVertexInputAttributeDescription where
-  sizeOf    _ = #{size      struct VkVertexInputAttributeDescription}
-  alignment _ = #{alignment struct VkVertexInputAttributeDescription}
+  sizeOf    _ = #{size      VkVertexInputAttributeDescription}
+  alignment _ = #{alignment VkVertexInputAttributeDescription}
 
   peek ptr = 
     VkVertexInputAttributeDescription
@@ -45,13 +45,13 @@ instance Storable VkVertexInputAttributeDescription where
     pokeField @"offset" ptr val
 
 instance Offset "location" VkVertexInputAttributeDescription where
-  rawOffset = #{offset struct VkVertexInputAttributeDescription, location}
+  rawOffset = #{offset VkVertexInputAttributeDescription, location}
 
 instance Offset "binding" VkVertexInputAttributeDescription where
-  rawOffset = #{offset struct VkVertexInputAttributeDescription, binding}
+  rawOffset = #{offset VkVertexInputAttributeDescription, binding}
 
 instance Offset "format" VkVertexInputAttributeDescription where
-  rawOffset = #{offset struct VkVertexInputAttributeDescription, format}
+  rawOffset = #{offset VkVertexInputAttributeDescription, format}
 
 instance Offset "offset" VkVertexInputAttributeDescription where
-  rawOffset = #{offset struct VkVertexInputAttributeDescription, offset}
+  rawOffset = #{offset VkVertexInputAttributeDescription, offset}

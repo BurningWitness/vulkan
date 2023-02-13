@@ -33,8 +33,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkVertexInputBindingDescription2EXT" #-} VkVer
          }
 
 instance Storable VkVertexInputBindingDescription2EXT where
-  sizeOf    _ = #{size      struct VkVertexInputBindingDescription2EXT}
-  alignment _ = #{alignment struct VkVertexInputBindingDescription2EXT}
+  sizeOf    _ = #{size      VkVertexInputBindingDescription2EXT}
+  alignment _ = #{alignment VkVertexInputBindingDescription2EXT}
 
   peek ptr = 
     VkVertexInputBindingDescription2EXT
@@ -54,22 +54,22 @@ instance Storable VkVertexInputBindingDescription2EXT where
     pokeField @"divisor" ptr val
 
 instance Offset "sType" VkVertexInputBindingDescription2EXT where
-  rawOffset = #{offset struct VkVertexInputBindingDescription2EXT, sType}
+  rawOffset = #{offset VkVertexInputBindingDescription2EXT, sType}
 
 instance Offset "pNext" VkVertexInputBindingDescription2EXT where
-  rawOffset = #{offset struct VkVertexInputBindingDescription2EXT, pNext}
+  rawOffset = #{offset VkVertexInputBindingDescription2EXT, pNext}
 
 instance Offset "binding" VkVertexInputBindingDescription2EXT where
-  rawOffset = #{offset struct VkVertexInputBindingDescription2EXT, binding}
+  rawOffset = #{offset VkVertexInputBindingDescription2EXT, binding}
 
 instance Offset "stride" VkVertexInputBindingDescription2EXT where
-  rawOffset = #{offset struct VkVertexInputBindingDescription2EXT, stride}
+  rawOffset = #{offset VkVertexInputBindingDescription2EXT, stride}
 
 instance Offset "inputRate" VkVertexInputBindingDescription2EXT where
-  rawOffset = #{offset struct VkVertexInputBindingDescription2EXT, inputRate}
+  rawOffset = #{offset VkVertexInputBindingDescription2EXT, inputRate}
 
 instance Offset "divisor" VkVertexInputBindingDescription2EXT where
-  rawOffset = #{offset struct VkVertexInputBindingDescription2EXT, divisor}
+  rawOffset = #{offset VkVertexInputBindingDescription2EXT, divisor}
 
 #else
 

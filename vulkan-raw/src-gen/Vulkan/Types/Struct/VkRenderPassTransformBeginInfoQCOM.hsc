@@ -30,8 +30,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkRenderPassTransformBeginInfoQCOM" #-} VkRend
          }
 
 instance Storable VkRenderPassTransformBeginInfoQCOM where
-  sizeOf    _ = #{size      struct VkRenderPassTransformBeginInfoQCOM}
-  alignment _ = #{alignment struct VkRenderPassTransformBeginInfoQCOM}
+  sizeOf    _ = #{size      VkRenderPassTransformBeginInfoQCOM}
+  alignment _ = #{alignment VkRenderPassTransformBeginInfoQCOM}
 
   peek ptr = 
     VkRenderPassTransformBeginInfoQCOM
@@ -45,13 +45,13 @@ instance Storable VkRenderPassTransformBeginInfoQCOM where
     pokeField @"transform" ptr val
 
 instance Offset "sType" VkRenderPassTransformBeginInfoQCOM where
-  rawOffset = #{offset struct VkRenderPassTransformBeginInfoQCOM, sType}
+  rawOffset = #{offset VkRenderPassTransformBeginInfoQCOM, sType}
 
 instance Offset "pNext" VkRenderPassTransformBeginInfoQCOM where
-  rawOffset = #{offset struct VkRenderPassTransformBeginInfoQCOM, pNext}
+  rawOffset = #{offset VkRenderPassTransformBeginInfoQCOM, pNext}
 
 instance Offset "transform" VkRenderPassTransformBeginInfoQCOM where
-  rawOffset = #{offset struct VkRenderPassTransformBeginInfoQCOM, transform}
+  rawOffset = #{offset VkRenderPassTransformBeginInfoQCOM, transform}
 
 #else
 

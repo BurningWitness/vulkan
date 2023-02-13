@@ -31,8 +31,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkPhysicalDeviceShaderImageAtomicInt64Features
          }
 
 instance Storable VkPhysicalDeviceShaderImageAtomicInt64FeaturesEXT where
-  sizeOf    _ = #{size      struct VkPhysicalDeviceShaderImageAtomicInt64FeaturesEXT}
-  alignment _ = #{alignment struct VkPhysicalDeviceShaderImageAtomicInt64FeaturesEXT}
+  sizeOf    _ = #{size      VkPhysicalDeviceShaderImageAtomicInt64FeaturesEXT}
+  alignment _ = #{alignment VkPhysicalDeviceShaderImageAtomicInt64FeaturesEXT}
 
   peek ptr = 
     VkPhysicalDeviceShaderImageAtomicInt64FeaturesEXT
@@ -48,16 +48,16 @@ instance Storable VkPhysicalDeviceShaderImageAtomicInt64FeaturesEXT where
     pokeField @"sparseImageInt64Atomics" ptr val
 
 instance Offset "sType" VkPhysicalDeviceShaderImageAtomicInt64FeaturesEXT where
-  rawOffset = #{offset struct VkPhysicalDeviceShaderImageAtomicInt64FeaturesEXT, sType}
+  rawOffset = #{offset VkPhysicalDeviceShaderImageAtomicInt64FeaturesEXT, sType}
 
 instance Offset "pNext" VkPhysicalDeviceShaderImageAtomicInt64FeaturesEXT where
-  rawOffset = #{offset struct VkPhysicalDeviceShaderImageAtomicInt64FeaturesEXT, pNext}
+  rawOffset = #{offset VkPhysicalDeviceShaderImageAtomicInt64FeaturesEXT, pNext}
 
 instance Offset "shaderImageInt64Atomics" VkPhysicalDeviceShaderImageAtomicInt64FeaturesEXT where
-  rawOffset = #{offset struct VkPhysicalDeviceShaderImageAtomicInt64FeaturesEXT, shaderImageInt64Atomics}
+  rawOffset = #{offset VkPhysicalDeviceShaderImageAtomicInt64FeaturesEXT, shaderImageInt64Atomics}
 
 instance Offset "sparseImageInt64Atomics" VkPhysicalDeviceShaderImageAtomicInt64FeaturesEXT where
-  rawOffset = #{offset struct VkPhysicalDeviceShaderImageAtomicInt64FeaturesEXT, sparseImageInt64Atomics}
+  rawOffset = #{offset VkPhysicalDeviceShaderImageAtomicInt64FeaturesEXT, sparseImageInt64Atomics}
 
 #else
 

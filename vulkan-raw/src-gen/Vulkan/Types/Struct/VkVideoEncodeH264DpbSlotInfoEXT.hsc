@@ -31,8 +31,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkVideoEncodeH264DpbSlotInfoEXT" #-} VkVideoEn
          }
 
 instance Storable VkVideoEncodeH264DpbSlotInfoEXT where
-  sizeOf    _ = #{size      struct VkVideoEncodeH264DpbSlotInfoEXT}
-  alignment _ = #{alignment struct VkVideoEncodeH264DpbSlotInfoEXT}
+  sizeOf    _ = #{size      VkVideoEncodeH264DpbSlotInfoEXT}
+  alignment _ = #{alignment VkVideoEncodeH264DpbSlotInfoEXT}
 
   peek ptr = 
     VkVideoEncodeH264DpbSlotInfoEXT
@@ -48,16 +48,16 @@ instance Storable VkVideoEncodeH264DpbSlotInfoEXT where
     pokeField @"pStdReferenceInfo" ptr val
 
 instance Offset "sType" VkVideoEncodeH264DpbSlotInfoEXT where
-  rawOffset = #{offset struct VkVideoEncodeH264DpbSlotInfoEXT, sType}
+  rawOffset = #{offset VkVideoEncodeH264DpbSlotInfoEXT, sType}
 
 instance Offset "pNext" VkVideoEncodeH264DpbSlotInfoEXT where
-  rawOffset = #{offset struct VkVideoEncodeH264DpbSlotInfoEXT, pNext}
+  rawOffset = #{offset VkVideoEncodeH264DpbSlotInfoEXT, pNext}
 
 instance Offset "slotIndex" VkVideoEncodeH264DpbSlotInfoEXT where
-  rawOffset = #{offset struct VkVideoEncodeH264DpbSlotInfoEXT, slotIndex}
+  rawOffset = #{offset VkVideoEncodeH264DpbSlotInfoEXT, slotIndex}
 
 instance Offset "pStdReferenceInfo" VkVideoEncodeH264DpbSlotInfoEXT where
-  rawOffset = #{offset struct VkVideoEncodeH264DpbSlotInfoEXT, pStdReferenceInfo}
+  rawOffset = #{offset VkVideoEncodeH264DpbSlotInfoEXT, pStdReferenceInfo}
 
 #else
 

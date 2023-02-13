@@ -29,8 +29,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkSamplerYcbcrConversionImageFormatProperties"
          }
 
 instance Storable VkSamplerYcbcrConversionImageFormatProperties where
-  sizeOf    _ = #{size      struct VkSamplerYcbcrConversionImageFormatProperties}
-  alignment _ = #{alignment struct VkSamplerYcbcrConversionImageFormatProperties}
+  sizeOf    _ = #{size      VkSamplerYcbcrConversionImageFormatProperties}
+  alignment _ = #{alignment VkSamplerYcbcrConversionImageFormatProperties}
 
   peek ptr = 
     VkSamplerYcbcrConversionImageFormatProperties
@@ -44,13 +44,13 @@ instance Storable VkSamplerYcbcrConversionImageFormatProperties where
     pokeField @"combinedImageSamplerDescriptorCount" ptr val
 
 instance Offset "sType" VkSamplerYcbcrConversionImageFormatProperties where
-  rawOffset = #{offset struct VkSamplerYcbcrConversionImageFormatProperties, sType}
+  rawOffset = #{offset VkSamplerYcbcrConversionImageFormatProperties, sType}
 
 instance Offset "pNext" VkSamplerYcbcrConversionImageFormatProperties where
-  rawOffset = #{offset struct VkSamplerYcbcrConversionImageFormatProperties, pNext}
+  rawOffset = #{offset VkSamplerYcbcrConversionImageFormatProperties, pNext}
 
 instance Offset "combinedImageSamplerDescriptorCount" VkSamplerYcbcrConversionImageFormatProperties where
-  rawOffset = #{offset struct VkSamplerYcbcrConversionImageFormatProperties, combinedImageSamplerDescriptorCount}
+  rawOffset = #{offset VkSamplerYcbcrConversionImageFormatProperties, combinedImageSamplerDescriptorCount}
 
 #else
 

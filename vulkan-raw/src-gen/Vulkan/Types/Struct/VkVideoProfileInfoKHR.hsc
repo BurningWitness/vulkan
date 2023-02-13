@@ -35,8 +35,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkVideoProfileInfoKHR" #-} VkVideoProfileInfoK
          }
 
 instance Storable VkVideoProfileInfoKHR where
-  sizeOf    _ = #{size      struct VkVideoProfileInfoKHR}
-  alignment _ = #{alignment struct VkVideoProfileInfoKHR}
+  sizeOf    _ = #{size      VkVideoProfileInfoKHR}
+  alignment _ = #{alignment VkVideoProfileInfoKHR}
 
   peek ptr = 
     VkVideoProfileInfoKHR
@@ -56,22 +56,22 @@ instance Storable VkVideoProfileInfoKHR where
     pokeField @"chromaBitDepth" ptr val
 
 instance Offset "sType" VkVideoProfileInfoKHR where
-  rawOffset = #{offset struct VkVideoProfileInfoKHR, sType}
+  rawOffset = #{offset VkVideoProfileInfoKHR, sType}
 
 instance Offset "pNext" VkVideoProfileInfoKHR where
-  rawOffset = #{offset struct VkVideoProfileInfoKHR, pNext}
+  rawOffset = #{offset VkVideoProfileInfoKHR, pNext}
 
 instance Offset "videoCodecOperation" VkVideoProfileInfoKHR where
-  rawOffset = #{offset struct VkVideoProfileInfoKHR, videoCodecOperation}
+  rawOffset = #{offset VkVideoProfileInfoKHR, videoCodecOperation}
 
 instance Offset "chromaSubsampling" VkVideoProfileInfoKHR where
-  rawOffset = #{offset struct VkVideoProfileInfoKHR, chromaSubsampling}
+  rawOffset = #{offset VkVideoProfileInfoKHR, chromaSubsampling}
 
 instance Offset "lumaBitDepth" VkVideoProfileInfoKHR where
-  rawOffset = #{offset struct VkVideoProfileInfoKHR, lumaBitDepth}
+  rawOffset = #{offset VkVideoProfileInfoKHR, lumaBitDepth}
 
 instance Offset "chromaBitDepth" VkVideoProfileInfoKHR where
-  rawOffset = #{offset struct VkVideoProfileInfoKHR, chromaBitDepth}
+  rawOffset = #{offset VkVideoProfileInfoKHR, chromaBitDepth}
 
 #else
 

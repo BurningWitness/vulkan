@@ -34,8 +34,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkSemaphoreWaitInfo" #-} VkSemaphoreWaitInfo =
          }
 
 instance Storable VkSemaphoreWaitInfo where
-  sizeOf    _ = #{size      struct VkSemaphoreWaitInfo}
-  alignment _ = #{alignment struct VkSemaphoreWaitInfo}
+  sizeOf    _ = #{size      VkSemaphoreWaitInfo}
+  alignment _ = #{alignment VkSemaphoreWaitInfo}
 
   peek ptr = 
     VkSemaphoreWaitInfo
@@ -55,22 +55,22 @@ instance Storable VkSemaphoreWaitInfo where
     pokeField @"pValues" ptr val
 
 instance Offset "sType" VkSemaphoreWaitInfo where
-  rawOffset = #{offset struct VkSemaphoreWaitInfo, sType}
+  rawOffset = #{offset VkSemaphoreWaitInfo, sType}
 
 instance Offset "pNext" VkSemaphoreWaitInfo where
-  rawOffset = #{offset struct VkSemaphoreWaitInfo, pNext}
+  rawOffset = #{offset VkSemaphoreWaitInfo, pNext}
 
 instance Offset "flags" VkSemaphoreWaitInfo where
-  rawOffset = #{offset struct VkSemaphoreWaitInfo, flags}
+  rawOffset = #{offset VkSemaphoreWaitInfo, flags}
 
 instance Offset "semaphoreCount" VkSemaphoreWaitInfo where
-  rawOffset = #{offset struct VkSemaphoreWaitInfo, semaphoreCount}
+  rawOffset = #{offset VkSemaphoreWaitInfo, semaphoreCount}
 
 instance Offset "pSemaphores" VkSemaphoreWaitInfo where
-  rawOffset = #{offset struct VkSemaphoreWaitInfo, pSemaphores}
+  rawOffset = #{offset VkSemaphoreWaitInfo, pSemaphores}
 
 instance Offset "pValues" VkSemaphoreWaitInfo where
-  rawOffset = #{offset struct VkSemaphoreWaitInfo, pValues}
+  rawOffset = #{offset VkSemaphoreWaitInfo, pValues}
 
 #else
 

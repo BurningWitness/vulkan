@@ -32,8 +32,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkAccelerationStructureMotionInstanceNV" #-} V
          }
 
 instance Storable VkAccelerationStructureMotionInstanceNV where
-  sizeOf    _ = #{size      struct VkAccelerationStructureMotionInstanceNV}
-  alignment _ = #{alignment struct VkAccelerationStructureMotionInstanceNV}
+  sizeOf    _ = #{size      VkAccelerationStructureMotionInstanceNV}
+  alignment _ = #{alignment VkAccelerationStructureMotionInstanceNV}
 
   peek ptr = 
     VkAccelerationStructureMotionInstanceNV
@@ -47,13 +47,13 @@ instance Storable VkAccelerationStructureMotionInstanceNV where
     pokeField @"data" ptr val
 
 instance Offset "type_" VkAccelerationStructureMotionInstanceNV where
-  rawOffset = #{offset struct VkAccelerationStructureMotionInstanceNV, type}
+  rawOffset = #{offset VkAccelerationStructureMotionInstanceNV, type}
 
 instance Offset "flags" VkAccelerationStructureMotionInstanceNV where
-  rawOffset = #{offset struct VkAccelerationStructureMotionInstanceNV, flags}
+  rawOffset = #{offset VkAccelerationStructureMotionInstanceNV, flags}
 
 instance Offset "data_" VkAccelerationStructureMotionInstanceNV where
-  rawOffset = #{offset struct VkAccelerationStructureMotionInstanceNV, data}
+  rawOffset = #{offset VkAccelerationStructureMotionInstanceNV, data}
 
 instance Offset "type" VkAccelerationStructureMotionInstanceNV where
   rawOffset = rawOffset @"type_" @VkAccelerationStructureMotionInstanceNV

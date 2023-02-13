@@ -28,8 +28,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkSparseImageMemoryBindInfo" #-} VkSparseImage
          }
 
 instance Storable VkSparseImageMemoryBindInfo where
-  sizeOf    _ = #{size      struct VkSparseImageMemoryBindInfo}
-  alignment _ = #{alignment struct VkSparseImageMemoryBindInfo}
+  sizeOf    _ = #{size      VkSparseImageMemoryBindInfo}
+  alignment _ = #{alignment VkSparseImageMemoryBindInfo}
 
   peek ptr = 
     VkSparseImageMemoryBindInfo
@@ -43,10 +43,10 @@ instance Storable VkSparseImageMemoryBindInfo where
     pokeField @"pBinds" ptr val
 
 instance Offset "image" VkSparseImageMemoryBindInfo where
-  rawOffset = #{offset struct VkSparseImageMemoryBindInfo, image}
+  rawOffset = #{offset VkSparseImageMemoryBindInfo, image}
 
 instance Offset "bindCount" VkSparseImageMemoryBindInfo where
-  rawOffset = #{offset struct VkSparseImageMemoryBindInfo, bindCount}
+  rawOffset = #{offset VkSparseImageMemoryBindInfo, bindCount}
 
 instance Offset "pBinds" VkSparseImageMemoryBindInfo where
-  rawOffset = #{offset struct VkSparseImageMemoryBindInfo, pBinds}
+  rawOffset = #{offset VkSparseImageMemoryBindInfo, pBinds}

@@ -30,8 +30,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkPhysicalDeviceTextureCompressionASTCHDRFeatu
          }
 
 instance Storable VkPhysicalDeviceTextureCompressionASTCHDRFeatures where
-  sizeOf    _ = #{size      struct VkPhysicalDeviceTextureCompressionASTCHDRFeatures}
-  alignment _ = #{alignment struct VkPhysicalDeviceTextureCompressionASTCHDRFeatures}
+  sizeOf    _ = #{size      VkPhysicalDeviceTextureCompressionASTCHDRFeatures}
+  alignment _ = #{alignment VkPhysicalDeviceTextureCompressionASTCHDRFeatures}
 
   peek ptr = 
     VkPhysicalDeviceTextureCompressionASTCHDRFeatures
@@ -45,13 +45,13 @@ instance Storable VkPhysicalDeviceTextureCompressionASTCHDRFeatures where
     pokeField @"textureCompressionASTC_HDR" ptr val
 
 instance Offset "sType" VkPhysicalDeviceTextureCompressionASTCHDRFeatures where
-  rawOffset = #{offset struct VkPhysicalDeviceTextureCompressionASTCHDRFeatures, sType}
+  rawOffset = #{offset VkPhysicalDeviceTextureCompressionASTCHDRFeatures, sType}
 
 instance Offset "pNext" VkPhysicalDeviceTextureCompressionASTCHDRFeatures where
-  rawOffset = #{offset struct VkPhysicalDeviceTextureCompressionASTCHDRFeatures, pNext}
+  rawOffset = #{offset VkPhysicalDeviceTextureCompressionASTCHDRFeatures, pNext}
 
 instance Offset "textureCompressionASTC_HDR" VkPhysicalDeviceTextureCompressionASTCHDRFeatures where
-  rawOffset = #{offset struct VkPhysicalDeviceTextureCompressionASTCHDRFeatures, textureCompressionASTC_HDR}
+  rawOffset = #{offset VkPhysicalDeviceTextureCompressionASTCHDRFeatures, textureCompressionASTC_HDR}
 
 #else
 

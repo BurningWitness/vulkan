@@ -32,8 +32,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkPhysicalDeviceFragmentShadingRateFeaturesKHR
          }
 
 instance Storable VkPhysicalDeviceFragmentShadingRateFeaturesKHR where
-  sizeOf    _ = #{size      struct VkPhysicalDeviceFragmentShadingRateFeaturesKHR}
-  alignment _ = #{alignment struct VkPhysicalDeviceFragmentShadingRateFeaturesKHR}
+  sizeOf    _ = #{size      VkPhysicalDeviceFragmentShadingRateFeaturesKHR}
+  alignment _ = #{alignment VkPhysicalDeviceFragmentShadingRateFeaturesKHR}
 
   peek ptr = 
     VkPhysicalDeviceFragmentShadingRateFeaturesKHR
@@ -51,19 +51,19 @@ instance Storable VkPhysicalDeviceFragmentShadingRateFeaturesKHR where
     pokeField @"attachmentFragmentShadingRate" ptr val
 
 instance Offset "sType" VkPhysicalDeviceFragmentShadingRateFeaturesKHR where
-  rawOffset = #{offset struct VkPhysicalDeviceFragmentShadingRateFeaturesKHR, sType}
+  rawOffset = #{offset VkPhysicalDeviceFragmentShadingRateFeaturesKHR, sType}
 
 instance Offset "pNext" VkPhysicalDeviceFragmentShadingRateFeaturesKHR where
-  rawOffset = #{offset struct VkPhysicalDeviceFragmentShadingRateFeaturesKHR, pNext}
+  rawOffset = #{offset VkPhysicalDeviceFragmentShadingRateFeaturesKHR, pNext}
 
 instance Offset "pipelineFragmentShadingRate" VkPhysicalDeviceFragmentShadingRateFeaturesKHR where
-  rawOffset = #{offset struct VkPhysicalDeviceFragmentShadingRateFeaturesKHR, pipelineFragmentShadingRate}
+  rawOffset = #{offset VkPhysicalDeviceFragmentShadingRateFeaturesKHR, pipelineFragmentShadingRate}
 
 instance Offset "primitiveFragmentShadingRate" VkPhysicalDeviceFragmentShadingRateFeaturesKHR where
-  rawOffset = #{offset struct VkPhysicalDeviceFragmentShadingRateFeaturesKHR, primitiveFragmentShadingRate}
+  rawOffset = #{offset VkPhysicalDeviceFragmentShadingRateFeaturesKHR, primitiveFragmentShadingRate}
 
 instance Offset "attachmentFragmentShadingRate" VkPhysicalDeviceFragmentShadingRateFeaturesKHR where
-  rawOffset = #{offset struct VkPhysicalDeviceFragmentShadingRateFeaturesKHR, attachmentFragmentShadingRate}
+  rawOffset = #{offset VkPhysicalDeviceFragmentShadingRateFeaturesKHR, attachmentFragmentShadingRate}
 
 #else
 

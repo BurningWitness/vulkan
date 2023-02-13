@@ -30,8 +30,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkPhysicalDevicePageableDeviceLocalMemoryFeatu
          }
 
 instance Storable VkPhysicalDevicePageableDeviceLocalMemoryFeaturesEXT where
-  sizeOf    _ = #{size      struct VkPhysicalDevicePageableDeviceLocalMemoryFeaturesEXT}
-  alignment _ = #{alignment struct VkPhysicalDevicePageableDeviceLocalMemoryFeaturesEXT}
+  sizeOf    _ = #{size      VkPhysicalDevicePageableDeviceLocalMemoryFeaturesEXT}
+  alignment _ = #{alignment VkPhysicalDevicePageableDeviceLocalMemoryFeaturesEXT}
 
   peek ptr = 
     VkPhysicalDevicePageableDeviceLocalMemoryFeaturesEXT
@@ -45,13 +45,13 @@ instance Storable VkPhysicalDevicePageableDeviceLocalMemoryFeaturesEXT where
     pokeField @"pageableDeviceLocalMemory" ptr val
 
 instance Offset "sType" VkPhysicalDevicePageableDeviceLocalMemoryFeaturesEXT where
-  rawOffset = #{offset struct VkPhysicalDevicePageableDeviceLocalMemoryFeaturesEXT, sType}
+  rawOffset = #{offset VkPhysicalDevicePageableDeviceLocalMemoryFeaturesEXT, sType}
 
 instance Offset "pNext" VkPhysicalDevicePageableDeviceLocalMemoryFeaturesEXT where
-  rawOffset = #{offset struct VkPhysicalDevicePageableDeviceLocalMemoryFeaturesEXT, pNext}
+  rawOffset = #{offset VkPhysicalDevicePageableDeviceLocalMemoryFeaturesEXT, pNext}
 
 instance Offset "pageableDeviceLocalMemory" VkPhysicalDevicePageableDeviceLocalMemoryFeaturesEXT where
-  rawOffset = #{offset struct VkPhysicalDevicePageableDeviceLocalMemoryFeaturesEXT, pageableDeviceLocalMemory}
+  rawOffset = #{offset VkPhysicalDevicePageableDeviceLocalMemoryFeaturesEXT, pageableDeviceLocalMemory}
 
 #else
 

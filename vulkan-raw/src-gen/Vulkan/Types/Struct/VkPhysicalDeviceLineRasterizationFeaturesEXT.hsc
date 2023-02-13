@@ -35,8 +35,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkPhysicalDeviceLineRasterizationFeaturesEXT" 
          }
 
 instance Storable VkPhysicalDeviceLineRasterizationFeaturesEXT where
-  sizeOf    _ = #{size      struct VkPhysicalDeviceLineRasterizationFeaturesEXT}
-  alignment _ = #{alignment struct VkPhysicalDeviceLineRasterizationFeaturesEXT}
+  sizeOf    _ = #{size      VkPhysicalDeviceLineRasterizationFeaturesEXT}
+  alignment _ = #{alignment VkPhysicalDeviceLineRasterizationFeaturesEXT}
 
   peek ptr = 
     VkPhysicalDeviceLineRasterizationFeaturesEXT
@@ -60,28 +60,28 @@ instance Storable VkPhysicalDeviceLineRasterizationFeaturesEXT where
     pokeField @"stippledSmoothLines" ptr val
 
 instance Offset "sType" VkPhysicalDeviceLineRasterizationFeaturesEXT where
-  rawOffset = #{offset struct VkPhysicalDeviceLineRasterizationFeaturesEXT, sType}
+  rawOffset = #{offset VkPhysicalDeviceLineRasterizationFeaturesEXT, sType}
 
 instance Offset "pNext" VkPhysicalDeviceLineRasterizationFeaturesEXT where
-  rawOffset = #{offset struct VkPhysicalDeviceLineRasterizationFeaturesEXT, pNext}
+  rawOffset = #{offset VkPhysicalDeviceLineRasterizationFeaturesEXT, pNext}
 
 instance Offset "rectangularLines" VkPhysicalDeviceLineRasterizationFeaturesEXT where
-  rawOffset = #{offset struct VkPhysicalDeviceLineRasterizationFeaturesEXT, rectangularLines}
+  rawOffset = #{offset VkPhysicalDeviceLineRasterizationFeaturesEXT, rectangularLines}
 
 instance Offset "bresenhamLines" VkPhysicalDeviceLineRasterizationFeaturesEXT where
-  rawOffset = #{offset struct VkPhysicalDeviceLineRasterizationFeaturesEXT, bresenhamLines}
+  rawOffset = #{offset VkPhysicalDeviceLineRasterizationFeaturesEXT, bresenhamLines}
 
 instance Offset "smoothLines" VkPhysicalDeviceLineRasterizationFeaturesEXT where
-  rawOffset = #{offset struct VkPhysicalDeviceLineRasterizationFeaturesEXT, smoothLines}
+  rawOffset = #{offset VkPhysicalDeviceLineRasterizationFeaturesEXT, smoothLines}
 
 instance Offset "stippledRectangularLines" VkPhysicalDeviceLineRasterizationFeaturesEXT where
-  rawOffset = #{offset struct VkPhysicalDeviceLineRasterizationFeaturesEXT, stippledRectangularLines}
+  rawOffset = #{offset VkPhysicalDeviceLineRasterizationFeaturesEXT, stippledRectangularLines}
 
 instance Offset "stippledBresenhamLines" VkPhysicalDeviceLineRasterizationFeaturesEXT where
-  rawOffset = #{offset struct VkPhysicalDeviceLineRasterizationFeaturesEXT, stippledBresenhamLines}
+  rawOffset = #{offset VkPhysicalDeviceLineRasterizationFeaturesEXT, stippledBresenhamLines}
 
 instance Offset "stippledSmoothLines" VkPhysicalDeviceLineRasterizationFeaturesEXT where
-  rawOffset = #{offset struct VkPhysicalDeviceLineRasterizationFeaturesEXT, stippledSmoothLines}
+  rawOffset = #{offset VkPhysicalDeviceLineRasterizationFeaturesEXT, stippledSmoothLines}
 
 #else
 

@@ -1,14 +1,14 @@
 {-# LANGUAGE CPP #-}
+{-# LANGUAGE PatternSynonyms #-}
 
 #include <vulkan/vulkan.h>
 
 module Vulkan.Types.Enum.VkPointClippingBehaviorKHR where
 
 import Data.Int
-import Vulkan.Types.Enum.VkPointClippingBehavior
 
 
 
 #if VK_KHR_maintenance2
-type VkPointClippingBehaviorKHR = VkPointClippingBehavior
+type VkPointClippingBehaviorKHR = #{type int}
 #endif

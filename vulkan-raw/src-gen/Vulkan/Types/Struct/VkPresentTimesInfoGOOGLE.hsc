@@ -31,8 +31,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkPresentTimesInfoGOOGLE" #-} VkPresentTimesIn
          }
 
 instance Storable VkPresentTimesInfoGOOGLE where
-  sizeOf    _ = #{size      struct VkPresentTimesInfoGOOGLE}
-  alignment _ = #{alignment struct VkPresentTimesInfoGOOGLE}
+  sizeOf    _ = #{size      VkPresentTimesInfoGOOGLE}
+  alignment _ = #{alignment VkPresentTimesInfoGOOGLE}
 
   peek ptr = 
     VkPresentTimesInfoGOOGLE
@@ -48,16 +48,16 @@ instance Storable VkPresentTimesInfoGOOGLE where
     pokeField @"pTimes" ptr val
 
 instance Offset "sType" VkPresentTimesInfoGOOGLE where
-  rawOffset = #{offset struct VkPresentTimesInfoGOOGLE, sType}
+  rawOffset = #{offset VkPresentTimesInfoGOOGLE, sType}
 
 instance Offset "pNext" VkPresentTimesInfoGOOGLE where
-  rawOffset = #{offset struct VkPresentTimesInfoGOOGLE, pNext}
+  rawOffset = #{offset VkPresentTimesInfoGOOGLE, pNext}
 
 instance Offset "swapchainCount" VkPresentTimesInfoGOOGLE where
-  rawOffset = #{offset struct VkPresentTimesInfoGOOGLE, swapchainCount}
+  rawOffset = #{offset VkPresentTimesInfoGOOGLE, swapchainCount}
 
 instance Offset "pTimes" VkPresentTimesInfoGOOGLE where
-  rawOffset = #{offset struct VkPresentTimesInfoGOOGLE, pTimes}
+  rawOffset = #{offset VkPresentTimesInfoGOOGLE, pTimes}
 
 #else
 

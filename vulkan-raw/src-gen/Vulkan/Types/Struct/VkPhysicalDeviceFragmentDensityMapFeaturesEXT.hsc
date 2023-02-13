@@ -32,8 +32,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkPhysicalDeviceFragmentDensityMapFeaturesEXT"
          }
 
 instance Storable VkPhysicalDeviceFragmentDensityMapFeaturesEXT where
-  sizeOf    _ = #{size      struct VkPhysicalDeviceFragmentDensityMapFeaturesEXT}
-  alignment _ = #{alignment struct VkPhysicalDeviceFragmentDensityMapFeaturesEXT}
+  sizeOf    _ = #{size      VkPhysicalDeviceFragmentDensityMapFeaturesEXT}
+  alignment _ = #{alignment VkPhysicalDeviceFragmentDensityMapFeaturesEXT}
 
   peek ptr = 
     VkPhysicalDeviceFragmentDensityMapFeaturesEXT
@@ -51,19 +51,19 @@ instance Storable VkPhysicalDeviceFragmentDensityMapFeaturesEXT where
     pokeField @"fragmentDensityMapNonSubsampledImages" ptr val
 
 instance Offset "sType" VkPhysicalDeviceFragmentDensityMapFeaturesEXT where
-  rawOffset = #{offset struct VkPhysicalDeviceFragmentDensityMapFeaturesEXT, sType}
+  rawOffset = #{offset VkPhysicalDeviceFragmentDensityMapFeaturesEXT, sType}
 
 instance Offset "pNext" VkPhysicalDeviceFragmentDensityMapFeaturesEXT where
-  rawOffset = #{offset struct VkPhysicalDeviceFragmentDensityMapFeaturesEXT, pNext}
+  rawOffset = #{offset VkPhysicalDeviceFragmentDensityMapFeaturesEXT, pNext}
 
 instance Offset "fragmentDensityMap" VkPhysicalDeviceFragmentDensityMapFeaturesEXT where
-  rawOffset = #{offset struct VkPhysicalDeviceFragmentDensityMapFeaturesEXT, fragmentDensityMap}
+  rawOffset = #{offset VkPhysicalDeviceFragmentDensityMapFeaturesEXT, fragmentDensityMap}
 
 instance Offset "fragmentDensityMapDynamic" VkPhysicalDeviceFragmentDensityMapFeaturesEXT where
-  rawOffset = #{offset struct VkPhysicalDeviceFragmentDensityMapFeaturesEXT, fragmentDensityMapDynamic}
+  rawOffset = #{offset VkPhysicalDeviceFragmentDensityMapFeaturesEXT, fragmentDensityMapDynamic}
 
 instance Offset "fragmentDensityMapNonSubsampledImages" VkPhysicalDeviceFragmentDensityMapFeaturesEXT where
-  rawOffset = #{offset struct VkPhysicalDeviceFragmentDensityMapFeaturesEXT, fragmentDensityMapNonSubsampledImages}
+  rawOffset = #{offset VkPhysicalDeviceFragmentDensityMapFeaturesEXT, fragmentDensityMapNonSubsampledImages}
 
 #else
 

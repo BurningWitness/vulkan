@@ -27,8 +27,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkMultiDrawInfoEXT" #-} VkMultiDrawInfoEXT =
          }
 
 instance Storable VkMultiDrawInfoEXT where
-  sizeOf    _ = #{size      struct VkMultiDrawInfoEXT}
-  alignment _ = #{alignment struct VkMultiDrawInfoEXT}
+  sizeOf    _ = #{size      VkMultiDrawInfoEXT}
+  alignment _ = #{alignment VkMultiDrawInfoEXT}
 
   peek ptr = 
     VkMultiDrawInfoEXT
@@ -40,10 +40,10 @@ instance Storable VkMultiDrawInfoEXT where
     pokeField @"vertexCount" ptr val
 
 instance Offset "firstVertex" VkMultiDrawInfoEXT where
-  rawOffset = #{offset struct VkMultiDrawInfoEXT, firstVertex}
+  rawOffset = #{offset VkMultiDrawInfoEXT, firstVertex}
 
 instance Offset "vertexCount" VkMultiDrawInfoEXT where
-  rawOffset = #{offset struct VkMultiDrawInfoEXT, vertexCount}
+  rawOffset = #{offset VkMultiDrawInfoEXT, vertexCount}
 
 #else
 

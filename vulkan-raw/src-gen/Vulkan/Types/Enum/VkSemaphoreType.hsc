@@ -23,12 +23,12 @@ pattern VK_SEMAPHORE_TYPE_TIMELINE :: (Eq a, Num a) => a
 pattern VK_SEMAPHORE_TYPE_TIMELINE = 1
 #endif
 
-#if VK_KHR_timeline_semaphore
+#if VK_VERSION_1_2
 pattern VK_SEMAPHORE_TYPE_BINARY_KHR :: (Eq a, Num a) => a
-pattern VK_SEMAPHORE_TYPE_BINARY_KHR = VK_SEMAPHORE_TYPE_BINARY
+pattern VK_SEMAPHORE_TYPE_BINARY_KHR = 0
 #endif
 
-#if VK_KHR_timeline_semaphore
+#if VK_VERSION_1_2
 pattern VK_SEMAPHORE_TYPE_TIMELINE_KHR :: (Eq a, Num a) => a
-pattern VK_SEMAPHORE_TYPE_TIMELINE_KHR = VK_SEMAPHORE_TYPE_TIMELINE
+pattern VK_SEMAPHORE_TYPE_TIMELINE_KHR = 1
 #endif

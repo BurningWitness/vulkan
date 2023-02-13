@@ -39,8 +39,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkAccelerationStructureGeometryTrianglesDataKH
          }
 
 instance Storable VkAccelerationStructureGeometryTrianglesDataKHR where
-  sizeOf    _ = #{size      struct VkAccelerationStructureGeometryTrianglesDataKHR}
-  alignment _ = #{alignment struct VkAccelerationStructureGeometryTrianglesDataKHR}
+  sizeOf    _ = #{size      VkAccelerationStructureGeometryTrianglesDataKHR}
+  alignment _ = #{alignment VkAccelerationStructureGeometryTrianglesDataKHR}
 
   peek ptr = 
     VkAccelerationStructureGeometryTrianglesDataKHR
@@ -66,31 +66,31 @@ instance Storable VkAccelerationStructureGeometryTrianglesDataKHR where
     pokeField @"transformData" ptr val
 
 instance Offset "sType" VkAccelerationStructureGeometryTrianglesDataKHR where
-  rawOffset = #{offset struct VkAccelerationStructureGeometryTrianglesDataKHR, sType}
+  rawOffset = #{offset VkAccelerationStructureGeometryTrianglesDataKHR, sType}
 
 instance Offset "pNext" VkAccelerationStructureGeometryTrianglesDataKHR where
-  rawOffset = #{offset struct VkAccelerationStructureGeometryTrianglesDataKHR, pNext}
+  rawOffset = #{offset VkAccelerationStructureGeometryTrianglesDataKHR, pNext}
 
 instance Offset "vertexFormat" VkAccelerationStructureGeometryTrianglesDataKHR where
-  rawOffset = #{offset struct VkAccelerationStructureGeometryTrianglesDataKHR, vertexFormat}
+  rawOffset = #{offset VkAccelerationStructureGeometryTrianglesDataKHR, vertexFormat}
 
 instance Offset "vertexData" VkAccelerationStructureGeometryTrianglesDataKHR where
-  rawOffset = #{offset struct VkAccelerationStructureGeometryTrianglesDataKHR, vertexData}
+  rawOffset = #{offset VkAccelerationStructureGeometryTrianglesDataKHR, vertexData}
 
 instance Offset "vertexStride" VkAccelerationStructureGeometryTrianglesDataKHR where
-  rawOffset = #{offset struct VkAccelerationStructureGeometryTrianglesDataKHR, vertexStride}
+  rawOffset = #{offset VkAccelerationStructureGeometryTrianglesDataKHR, vertexStride}
 
 instance Offset "maxVertex" VkAccelerationStructureGeometryTrianglesDataKHR where
-  rawOffset = #{offset struct VkAccelerationStructureGeometryTrianglesDataKHR, maxVertex}
+  rawOffset = #{offset VkAccelerationStructureGeometryTrianglesDataKHR, maxVertex}
 
 instance Offset "indexType" VkAccelerationStructureGeometryTrianglesDataKHR where
-  rawOffset = #{offset struct VkAccelerationStructureGeometryTrianglesDataKHR, indexType}
+  rawOffset = #{offset VkAccelerationStructureGeometryTrianglesDataKHR, indexType}
 
 instance Offset "indexData" VkAccelerationStructureGeometryTrianglesDataKHR where
-  rawOffset = #{offset struct VkAccelerationStructureGeometryTrianglesDataKHR, indexData}
+  rawOffset = #{offset VkAccelerationStructureGeometryTrianglesDataKHR, indexData}
 
 instance Offset "transformData" VkAccelerationStructureGeometryTrianglesDataKHR where
-  rawOffset = #{offset struct VkAccelerationStructureGeometryTrianglesDataKHR, transformData}
+  rawOffset = #{offset VkAccelerationStructureGeometryTrianglesDataKHR, transformData}
 
 #else
 

@@ -30,8 +30,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkImportMetalSharedEventInfoEXT" #-} VkImportM
          }
 
 instance Storable VkImportMetalSharedEventInfoEXT where
-  sizeOf    _ = #{size      struct VkImportMetalSharedEventInfoEXT}
-  alignment _ = #{alignment struct VkImportMetalSharedEventInfoEXT}
+  sizeOf    _ = #{size      VkImportMetalSharedEventInfoEXT}
+  alignment _ = #{alignment VkImportMetalSharedEventInfoEXT}
 
   peek ptr = 
     VkImportMetalSharedEventInfoEXT
@@ -45,13 +45,13 @@ instance Storable VkImportMetalSharedEventInfoEXT where
     pokeField @"mtlSharedEvent" ptr val
 
 instance Offset "sType" VkImportMetalSharedEventInfoEXT where
-  rawOffset = #{offset struct VkImportMetalSharedEventInfoEXT, sType}
+  rawOffset = #{offset VkImportMetalSharedEventInfoEXT, sType}
 
 instance Offset "pNext" VkImportMetalSharedEventInfoEXT where
-  rawOffset = #{offset struct VkImportMetalSharedEventInfoEXT, pNext}
+  rawOffset = #{offset VkImportMetalSharedEventInfoEXT, pNext}
 
 instance Offset "mtlSharedEvent" VkImportMetalSharedEventInfoEXT where
-  rawOffset = #{offset struct VkImportMetalSharedEventInfoEXT, mtlSharedEvent}
+  rawOffset = #{offset VkImportMetalSharedEventInfoEXT, mtlSharedEvent}
 
 #else
 

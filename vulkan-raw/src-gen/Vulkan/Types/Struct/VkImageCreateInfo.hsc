@@ -48,8 +48,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkImageCreateInfo" #-} VkImageCreateInfo =
          }
 
 instance Storable VkImageCreateInfo where
-  sizeOf    _ = #{size      struct VkImageCreateInfo}
-  alignment _ = #{alignment struct VkImageCreateInfo}
+  sizeOf    _ = #{size      VkImageCreateInfo}
+  alignment _ = #{alignment VkImageCreateInfo}
 
   peek ptr = 
     VkImageCreateInfo
@@ -87,46 +87,46 @@ instance Storable VkImageCreateInfo where
     pokeField @"initialLayout" ptr val
 
 instance Offset "sType" VkImageCreateInfo where
-  rawOffset = #{offset struct VkImageCreateInfo, sType}
+  rawOffset = #{offset VkImageCreateInfo, sType}
 
 instance Offset "pNext" VkImageCreateInfo where
-  rawOffset = #{offset struct VkImageCreateInfo, pNext}
+  rawOffset = #{offset VkImageCreateInfo, pNext}
 
 instance Offset "flags" VkImageCreateInfo where
-  rawOffset = #{offset struct VkImageCreateInfo, flags}
+  rawOffset = #{offset VkImageCreateInfo, flags}
 
 instance Offset "imageType" VkImageCreateInfo where
-  rawOffset = #{offset struct VkImageCreateInfo, imageType}
+  rawOffset = #{offset VkImageCreateInfo, imageType}
 
 instance Offset "format" VkImageCreateInfo where
-  rawOffset = #{offset struct VkImageCreateInfo, format}
+  rawOffset = #{offset VkImageCreateInfo, format}
 
 instance Offset "extent" VkImageCreateInfo where
-  rawOffset = #{offset struct VkImageCreateInfo, extent}
+  rawOffset = #{offset VkImageCreateInfo, extent}
 
 instance Offset "mipLevels" VkImageCreateInfo where
-  rawOffset = #{offset struct VkImageCreateInfo, mipLevels}
+  rawOffset = #{offset VkImageCreateInfo, mipLevels}
 
 instance Offset "arrayLayers" VkImageCreateInfo where
-  rawOffset = #{offset struct VkImageCreateInfo, arrayLayers}
+  rawOffset = #{offset VkImageCreateInfo, arrayLayers}
 
 instance Offset "samples" VkImageCreateInfo where
-  rawOffset = #{offset struct VkImageCreateInfo, samples}
+  rawOffset = #{offset VkImageCreateInfo, samples}
 
 instance Offset "tiling" VkImageCreateInfo where
-  rawOffset = #{offset struct VkImageCreateInfo, tiling}
+  rawOffset = #{offset VkImageCreateInfo, tiling}
 
 instance Offset "usage" VkImageCreateInfo where
-  rawOffset = #{offset struct VkImageCreateInfo, usage}
+  rawOffset = #{offset VkImageCreateInfo, usage}
 
 instance Offset "sharingMode" VkImageCreateInfo where
-  rawOffset = #{offset struct VkImageCreateInfo, sharingMode}
+  rawOffset = #{offset VkImageCreateInfo, sharingMode}
 
 instance Offset "queueFamilyIndexCount" VkImageCreateInfo where
-  rawOffset = #{offset struct VkImageCreateInfo, queueFamilyIndexCount}
+  rawOffset = #{offset VkImageCreateInfo, queueFamilyIndexCount}
 
 instance Offset "pQueueFamilyIndices" VkImageCreateInfo where
-  rawOffset = #{offset struct VkImageCreateInfo, pQueueFamilyIndices}
+  rawOffset = #{offset VkImageCreateInfo, pQueueFamilyIndices}
 
 instance Offset "initialLayout" VkImageCreateInfo where
-  rawOffset = #{offset struct VkImageCreateInfo, initialLayout}
+  rawOffset = #{offset VkImageCreateInfo, initialLayout}

@@ -23,8 +23,8 @@ import Foreign.Storable.Offset
 data {-# CTYPE "vulkan/vulkan.h" "VkAccelerationStructureMatrixMotionInstanceNV" #-} VkAccelerationStructureMatrixMotionInstanceNV = VkAccelerationStructureMatrixMotionInstanceNV
 
 instance Storable VkAccelerationStructureMatrixMotionInstanceNV where
-  sizeOf    _ = #{size      struct VkAccelerationStructureMatrixMotionInstanceNV}
-  alignment _ = #{alignment struct VkAccelerationStructureMatrixMotionInstanceNV}
+  sizeOf    _ = #{size      VkAccelerationStructureMatrixMotionInstanceNV}
+  alignment _ = #{alignment VkAccelerationStructureMatrixMotionInstanceNV}
 
   peek _ptr = pure VkAccelerationStructureMatrixMotionInstanceNV
 

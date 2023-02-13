@@ -43,8 +43,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkSamplerYcbcrConversionCreateInfo" #-} VkSamp
          }
 
 instance Storable VkSamplerYcbcrConversionCreateInfo where
-  sizeOf    _ = #{size      struct VkSamplerYcbcrConversionCreateInfo}
-  alignment _ = #{alignment struct VkSamplerYcbcrConversionCreateInfo}
+  sizeOf    _ = #{size      VkSamplerYcbcrConversionCreateInfo}
+  alignment _ = #{alignment VkSamplerYcbcrConversionCreateInfo}
 
   peek ptr = 
     VkSamplerYcbcrConversionCreateInfo
@@ -72,34 +72,34 @@ instance Storable VkSamplerYcbcrConversionCreateInfo where
     pokeField @"forceExplicitReconstruction" ptr val
 
 instance Offset "sType" VkSamplerYcbcrConversionCreateInfo where
-  rawOffset = #{offset struct VkSamplerYcbcrConversionCreateInfo, sType}
+  rawOffset = #{offset VkSamplerYcbcrConversionCreateInfo, sType}
 
 instance Offset "pNext" VkSamplerYcbcrConversionCreateInfo where
-  rawOffset = #{offset struct VkSamplerYcbcrConversionCreateInfo, pNext}
+  rawOffset = #{offset VkSamplerYcbcrConversionCreateInfo, pNext}
 
 instance Offset "format" VkSamplerYcbcrConversionCreateInfo where
-  rawOffset = #{offset struct VkSamplerYcbcrConversionCreateInfo, format}
+  rawOffset = #{offset VkSamplerYcbcrConversionCreateInfo, format}
 
 instance Offset "ycbcrModel" VkSamplerYcbcrConversionCreateInfo where
-  rawOffset = #{offset struct VkSamplerYcbcrConversionCreateInfo, ycbcrModel}
+  rawOffset = #{offset VkSamplerYcbcrConversionCreateInfo, ycbcrModel}
 
 instance Offset "ycbcrRange" VkSamplerYcbcrConversionCreateInfo where
-  rawOffset = #{offset struct VkSamplerYcbcrConversionCreateInfo, ycbcrRange}
+  rawOffset = #{offset VkSamplerYcbcrConversionCreateInfo, ycbcrRange}
 
 instance Offset "components" VkSamplerYcbcrConversionCreateInfo where
-  rawOffset = #{offset struct VkSamplerYcbcrConversionCreateInfo, components}
+  rawOffset = #{offset VkSamplerYcbcrConversionCreateInfo, components}
 
 instance Offset "xChromaOffset" VkSamplerYcbcrConversionCreateInfo where
-  rawOffset = #{offset struct VkSamplerYcbcrConversionCreateInfo, xChromaOffset}
+  rawOffset = #{offset VkSamplerYcbcrConversionCreateInfo, xChromaOffset}
 
 instance Offset "yChromaOffset" VkSamplerYcbcrConversionCreateInfo where
-  rawOffset = #{offset struct VkSamplerYcbcrConversionCreateInfo, yChromaOffset}
+  rawOffset = #{offset VkSamplerYcbcrConversionCreateInfo, yChromaOffset}
 
 instance Offset "chromaFilter" VkSamplerYcbcrConversionCreateInfo where
-  rawOffset = #{offset struct VkSamplerYcbcrConversionCreateInfo, chromaFilter}
+  rawOffset = #{offset VkSamplerYcbcrConversionCreateInfo, chromaFilter}
 
 instance Offset "forceExplicitReconstruction" VkSamplerYcbcrConversionCreateInfo where
-  rawOffset = #{offset struct VkSamplerYcbcrConversionCreateInfo, forceExplicitReconstruction}
+  rawOffset = #{offset VkSamplerYcbcrConversionCreateInfo, forceExplicitReconstruction}
 
 #else
 

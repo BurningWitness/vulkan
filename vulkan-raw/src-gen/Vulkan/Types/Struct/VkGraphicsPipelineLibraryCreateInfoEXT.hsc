@@ -30,8 +30,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkGraphicsPipelineLibraryCreateInfoEXT" #-} Vk
          }
 
 instance Storable VkGraphicsPipelineLibraryCreateInfoEXT where
-  sizeOf    _ = #{size      struct VkGraphicsPipelineLibraryCreateInfoEXT}
-  alignment _ = #{alignment struct VkGraphicsPipelineLibraryCreateInfoEXT}
+  sizeOf    _ = #{size      VkGraphicsPipelineLibraryCreateInfoEXT}
+  alignment _ = #{alignment VkGraphicsPipelineLibraryCreateInfoEXT}
 
   peek ptr = 
     VkGraphicsPipelineLibraryCreateInfoEXT
@@ -45,13 +45,13 @@ instance Storable VkGraphicsPipelineLibraryCreateInfoEXT where
     pokeField @"flags" ptr val
 
 instance Offset "sType" VkGraphicsPipelineLibraryCreateInfoEXT where
-  rawOffset = #{offset struct VkGraphicsPipelineLibraryCreateInfoEXT, sType}
+  rawOffset = #{offset VkGraphicsPipelineLibraryCreateInfoEXT, sType}
 
 instance Offset "pNext" VkGraphicsPipelineLibraryCreateInfoEXT where
-  rawOffset = #{offset struct VkGraphicsPipelineLibraryCreateInfoEXT, pNext}
+  rawOffset = #{offset VkGraphicsPipelineLibraryCreateInfoEXT, pNext}
 
 instance Offset "flags" VkGraphicsPipelineLibraryCreateInfoEXT where
-  rawOffset = #{offset struct VkGraphicsPipelineLibraryCreateInfoEXT, flags}
+  rawOffset = #{offset VkGraphicsPipelineLibraryCreateInfoEXT, flags}
 
 #else
 

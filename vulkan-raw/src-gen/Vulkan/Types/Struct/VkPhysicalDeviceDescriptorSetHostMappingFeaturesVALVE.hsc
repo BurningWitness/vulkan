@@ -30,8 +30,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkPhysicalDeviceDescriptorSetHostMappingFeatur
          }
 
 instance Storable VkPhysicalDeviceDescriptorSetHostMappingFeaturesVALVE where
-  sizeOf    _ = #{size      struct VkPhysicalDeviceDescriptorSetHostMappingFeaturesVALVE}
-  alignment _ = #{alignment struct VkPhysicalDeviceDescriptorSetHostMappingFeaturesVALVE}
+  sizeOf    _ = #{size      VkPhysicalDeviceDescriptorSetHostMappingFeaturesVALVE}
+  alignment _ = #{alignment VkPhysicalDeviceDescriptorSetHostMappingFeaturesVALVE}
 
   peek ptr = 
     VkPhysicalDeviceDescriptorSetHostMappingFeaturesVALVE
@@ -45,13 +45,13 @@ instance Storable VkPhysicalDeviceDescriptorSetHostMappingFeaturesVALVE where
     pokeField @"descriptorSetHostMapping" ptr val
 
 instance Offset "sType" VkPhysicalDeviceDescriptorSetHostMappingFeaturesVALVE where
-  rawOffset = #{offset struct VkPhysicalDeviceDescriptorSetHostMappingFeaturesVALVE, sType}
+  rawOffset = #{offset VkPhysicalDeviceDescriptorSetHostMappingFeaturesVALVE, sType}
 
 instance Offset "pNext" VkPhysicalDeviceDescriptorSetHostMappingFeaturesVALVE where
-  rawOffset = #{offset struct VkPhysicalDeviceDescriptorSetHostMappingFeaturesVALVE, pNext}
+  rawOffset = #{offset VkPhysicalDeviceDescriptorSetHostMappingFeaturesVALVE, pNext}
 
 instance Offset "descriptorSetHostMapping" VkPhysicalDeviceDescriptorSetHostMappingFeaturesVALVE where
-  rawOffset = #{offset struct VkPhysicalDeviceDescriptorSetHostMappingFeaturesVALVE, descriptorSetHostMapping}
+  rawOffset = #{offset VkPhysicalDeviceDescriptorSetHostMappingFeaturesVALVE, descriptorSetHostMapping}
 
 #else
 

@@ -30,8 +30,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkDisplayNativeHdrSurfaceCapabilitiesAMD" #-} 
          }
 
 instance Storable VkDisplayNativeHdrSurfaceCapabilitiesAMD where
-  sizeOf    _ = #{size      struct VkDisplayNativeHdrSurfaceCapabilitiesAMD}
-  alignment _ = #{alignment struct VkDisplayNativeHdrSurfaceCapabilitiesAMD}
+  sizeOf    _ = #{size      VkDisplayNativeHdrSurfaceCapabilitiesAMD}
+  alignment _ = #{alignment VkDisplayNativeHdrSurfaceCapabilitiesAMD}
 
   peek ptr = 
     VkDisplayNativeHdrSurfaceCapabilitiesAMD
@@ -45,13 +45,13 @@ instance Storable VkDisplayNativeHdrSurfaceCapabilitiesAMD where
     pokeField @"localDimmingSupport" ptr val
 
 instance Offset "sType" VkDisplayNativeHdrSurfaceCapabilitiesAMD where
-  rawOffset = #{offset struct VkDisplayNativeHdrSurfaceCapabilitiesAMD, sType}
+  rawOffset = #{offset VkDisplayNativeHdrSurfaceCapabilitiesAMD, sType}
 
 instance Offset "pNext" VkDisplayNativeHdrSurfaceCapabilitiesAMD where
-  rawOffset = #{offset struct VkDisplayNativeHdrSurfaceCapabilitiesAMD, pNext}
+  rawOffset = #{offset VkDisplayNativeHdrSurfaceCapabilitiesAMD, pNext}
 
 instance Offset "localDimmingSupport" VkDisplayNativeHdrSurfaceCapabilitiesAMD where
-  rawOffset = #{offset struct VkDisplayNativeHdrSurfaceCapabilitiesAMD, localDimmingSupport}
+  rawOffset = #{offset VkDisplayNativeHdrSurfaceCapabilitiesAMD, localDimmingSupport}
 
 #else
 

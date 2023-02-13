@@ -1,14 +1,14 @@
 {-# LANGUAGE CPP #-}
+{-# LANGUAGE PatternSynonyms #-}
 
 #include <vulkan/vulkan.h>
 
 module Vulkan.Types.Enum.VkExternalSemaphoreFeatureFlagsKHR where
 
-import Data.Int
-import Vulkan.Types.Enum.VkExternalSemaphoreFeatureFlags
+import Vulkan.Types.Base
 
 
 
 #if VK_KHR_external_semaphore_capabilities
-type VkExternalSemaphoreFeatureFlagsKHR = VkExternalSemaphoreFeatureFlags
+type VkExternalSemaphoreFeatureFlagsKHR = VkFlags
 #endif

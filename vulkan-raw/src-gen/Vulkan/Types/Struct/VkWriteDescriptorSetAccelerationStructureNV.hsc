@@ -31,8 +31,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkWriteDescriptorSetAccelerationStructureNV" #
          }
 
 instance Storable VkWriteDescriptorSetAccelerationStructureNV where
-  sizeOf    _ = #{size      struct VkWriteDescriptorSetAccelerationStructureNV}
-  alignment _ = #{alignment struct VkWriteDescriptorSetAccelerationStructureNV}
+  sizeOf    _ = #{size      VkWriteDescriptorSetAccelerationStructureNV}
+  alignment _ = #{alignment VkWriteDescriptorSetAccelerationStructureNV}
 
   peek ptr = 
     VkWriteDescriptorSetAccelerationStructureNV
@@ -48,16 +48,16 @@ instance Storable VkWriteDescriptorSetAccelerationStructureNV where
     pokeField @"pAccelerationStructures" ptr val
 
 instance Offset "sType" VkWriteDescriptorSetAccelerationStructureNV where
-  rawOffset = #{offset struct VkWriteDescriptorSetAccelerationStructureNV, sType}
+  rawOffset = #{offset VkWriteDescriptorSetAccelerationStructureNV, sType}
 
 instance Offset "pNext" VkWriteDescriptorSetAccelerationStructureNV where
-  rawOffset = #{offset struct VkWriteDescriptorSetAccelerationStructureNV, pNext}
+  rawOffset = #{offset VkWriteDescriptorSetAccelerationStructureNV, pNext}
 
 instance Offset "accelerationStructureCount" VkWriteDescriptorSetAccelerationStructureNV where
-  rawOffset = #{offset struct VkWriteDescriptorSetAccelerationStructureNV, accelerationStructureCount}
+  rawOffset = #{offset VkWriteDescriptorSetAccelerationStructureNV, accelerationStructureCount}
 
 instance Offset "pAccelerationStructures" VkWriteDescriptorSetAccelerationStructureNV where
-  rawOffset = #{offset struct VkWriteDescriptorSetAccelerationStructureNV, pAccelerationStructures}
+  rawOffset = #{offset VkWriteDescriptorSetAccelerationStructureNV, pAccelerationStructures}
 
 #else
 

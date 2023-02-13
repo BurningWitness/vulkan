@@ -35,8 +35,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkPhysicalDeviceDrmPropertiesEXT" #-} VkPhysic
          }
 
 instance Storable VkPhysicalDeviceDrmPropertiesEXT where
-  sizeOf    _ = #{size      struct VkPhysicalDeviceDrmPropertiesEXT}
-  alignment _ = #{alignment struct VkPhysicalDeviceDrmPropertiesEXT}
+  sizeOf    _ = #{size      VkPhysicalDeviceDrmPropertiesEXT}
+  alignment _ = #{alignment VkPhysicalDeviceDrmPropertiesEXT}
 
   peek ptr = 
     VkPhysicalDeviceDrmPropertiesEXT
@@ -60,28 +60,28 @@ instance Storable VkPhysicalDeviceDrmPropertiesEXT where
     pokeField @"renderMinor" ptr val
 
 instance Offset "sType" VkPhysicalDeviceDrmPropertiesEXT where
-  rawOffset = #{offset struct VkPhysicalDeviceDrmPropertiesEXT, sType}
+  rawOffset = #{offset VkPhysicalDeviceDrmPropertiesEXT, sType}
 
 instance Offset "pNext" VkPhysicalDeviceDrmPropertiesEXT where
-  rawOffset = #{offset struct VkPhysicalDeviceDrmPropertiesEXT, pNext}
+  rawOffset = #{offset VkPhysicalDeviceDrmPropertiesEXT, pNext}
 
 instance Offset "hasPrimary" VkPhysicalDeviceDrmPropertiesEXT where
-  rawOffset = #{offset struct VkPhysicalDeviceDrmPropertiesEXT, hasPrimary}
+  rawOffset = #{offset VkPhysicalDeviceDrmPropertiesEXT, hasPrimary}
 
 instance Offset "hasRender" VkPhysicalDeviceDrmPropertiesEXT where
-  rawOffset = #{offset struct VkPhysicalDeviceDrmPropertiesEXT, hasRender}
+  rawOffset = #{offset VkPhysicalDeviceDrmPropertiesEXT, hasRender}
 
 instance Offset "primaryMajor" VkPhysicalDeviceDrmPropertiesEXT where
-  rawOffset = #{offset struct VkPhysicalDeviceDrmPropertiesEXT, primaryMajor}
+  rawOffset = #{offset VkPhysicalDeviceDrmPropertiesEXT, primaryMajor}
 
 instance Offset "primaryMinor" VkPhysicalDeviceDrmPropertiesEXT where
-  rawOffset = #{offset struct VkPhysicalDeviceDrmPropertiesEXT, primaryMinor}
+  rawOffset = #{offset VkPhysicalDeviceDrmPropertiesEXT, primaryMinor}
 
 instance Offset "renderMajor" VkPhysicalDeviceDrmPropertiesEXT where
-  rawOffset = #{offset struct VkPhysicalDeviceDrmPropertiesEXT, renderMajor}
+  rawOffset = #{offset VkPhysicalDeviceDrmPropertiesEXT, renderMajor}
 
 instance Offset "renderMinor" VkPhysicalDeviceDrmPropertiesEXT where
-  rawOffset = #{offset struct VkPhysicalDeviceDrmPropertiesEXT, renderMinor}
+  rawOffset = #{offset VkPhysicalDeviceDrmPropertiesEXT, renderMinor}
 
 #else
 

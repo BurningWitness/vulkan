@@ -60,8 +60,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkPhysicalDeviceExtendedDynamicState3FeaturesE
          }
 
 instance Storable VkPhysicalDeviceExtendedDynamicState3FeaturesEXT where
-  sizeOf    _ = #{size      struct VkPhysicalDeviceExtendedDynamicState3FeaturesEXT}
-  alignment _ = #{alignment struct VkPhysicalDeviceExtendedDynamicState3FeaturesEXT}
+  sizeOf    _ = #{size      VkPhysicalDeviceExtendedDynamicState3FeaturesEXT}
+  alignment _ = #{alignment VkPhysicalDeviceExtendedDynamicState3FeaturesEXT}
 
   peek ptr = 
     VkPhysicalDeviceExtendedDynamicState3FeaturesEXT
@@ -135,103 +135,103 @@ instance Storable VkPhysicalDeviceExtendedDynamicState3FeaturesEXT where
     pokeField @"extendedDynamicState3ShadingRateImageEnable" ptr val
 
 instance Offset "sType" VkPhysicalDeviceExtendedDynamicState3FeaturesEXT where
-  rawOffset = #{offset struct VkPhysicalDeviceExtendedDynamicState3FeaturesEXT, sType}
+  rawOffset = #{offset VkPhysicalDeviceExtendedDynamicState3FeaturesEXT, sType}
 
 instance Offset "pNext" VkPhysicalDeviceExtendedDynamicState3FeaturesEXT where
-  rawOffset = #{offset struct VkPhysicalDeviceExtendedDynamicState3FeaturesEXT, pNext}
+  rawOffset = #{offset VkPhysicalDeviceExtendedDynamicState3FeaturesEXT, pNext}
 
 instance Offset "extendedDynamicState3TessellationDomainOrigin" VkPhysicalDeviceExtendedDynamicState3FeaturesEXT where
-  rawOffset = #{offset struct VkPhysicalDeviceExtendedDynamicState3FeaturesEXT, extendedDynamicState3TessellationDomainOrigin}
+  rawOffset = #{offset VkPhysicalDeviceExtendedDynamicState3FeaturesEXT, extendedDynamicState3TessellationDomainOrigin}
 
 instance Offset "extendedDynamicState3DepthClampEnable" VkPhysicalDeviceExtendedDynamicState3FeaturesEXT where
-  rawOffset = #{offset struct VkPhysicalDeviceExtendedDynamicState3FeaturesEXT, extendedDynamicState3DepthClampEnable}
+  rawOffset = #{offset VkPhysicalDeviceExtendedDynamicState3FeaturesEXT, extendedDynamicState3DepthClampEnable}
 
 instance Offset "extendedDynamicState3PolygonMode" VkPhysicalDeviceExtendedDynamicState3FeaturesEXT where
-  rawOffset = #{offset struct VkPhysicalDeviceExtendedDynamicState3FeaturesEXT, extendedDynamicState3PolygonMode}
+  rawOffset = #{offset VkPhysicalDeviceExtendedDynamicState3FeaturesEXT, extendedDynamicState3PolygonMode}
 
 instance Offset "extendedDynamicState3RasterizationSamples" VkPhysicalDeviceExtendedDynamicState3FeaturesEXT where
-  rawOffset = #{offset struct VkPhysicalDeviceExtendedDynamicState3FeaturesEXT, extendedDynamicState3RasterizationSamples}
+  rawOffset = #{offset VkPhysicalDeviceExtendedDynamicState3FeaturesEXT, extendedDynamicState3RasterizationSamples}
 
 instance Offset "extendedDynamicState3SampleMask" VkPhysicalDeviceExtendedDynamicState3FeaturesEXT where
-  rawOffset = #{offset struct VkPhysicalDeviceExtendedDynamicState3FeaturesEXT, extendedDynamicState3SampleMask}
+  rawOffset = #{offset VkPhysicalDeviceExtendedDynamicState3FeaturesEXT, extendedDynamicState3SampleMask}
 
 instance Offset "extendedDynamicState3AlphaToCoverageEnable" VkPhysicalDeviceExtendedDynamicState3FeaturesEXT where
-  rawOffset = #{offset struct VkPhysicalDeviceExtendedDynamicState3FeaturesEXT, extendedDynamicState3AlphaToCoverageEnable}
+  rawOffset = #{offset VkPhysicalDeviceExtendedDynamicState3FeaturesEXT, extendedDynamicState3AlphaToCoverageEnable}
 
 instance Offset "extendedDynamicState3AlphaToOneEnable" VkPhysicalDeviceExtendedDynamicState3FeaturesEXT where
-  rawOffset = #{offset struct VkPhysicalDeviceExtendedDynamicState3FeaturesEXT, extendedDynamicState3AlphaToOneEnable}
+  rawOffset = #{offset VkPhysicalDeviceExtendedDynamicState3FeaturesEXT, extendedDynamicState3AlphaToOneEnable}
 
 instance Offset "extendedDynamicState3LogicOpEnable" VkPhysicalDeviceExtendedDynamicState3FeaturesEXT where
-  rawOffset = #{offset struct VkPhysicalDeviceExtendedDynamicState3FeaturesEXT, extendedDynamicState3LogicOpEnable}
+  rawOffset = #{offset VkPhysicalDeviceExtendedDynamicState3FeaturesEXT, extendedDynamicState3LogicOpEnable}
 
 instance Offset "extendedDynamicState3ColorBlendEnable" VkPhysicalDeviceExtendedDynamicState3FeaturesEXT where
-  rawOffset = #{offset struct VkPhysicalDeviceExtendedDynamicState3FeaturesEXT, extendedDynamicState3ColorBlendEnable}
+  rawOffset = #{offset VkPhysicalDeviceExtendedDynamicState3FeaturesEXT, extendedDynamicState3ColorBlendEnable}
 
 instance Offset "extendedDynamicState3ColorBlendEquation" VkPhysicalDeviceExtendedDynamicState3FeaturesEXT where
-  rawOffset = #{offset struct VkPhysicalDeviceExtendedDynamicState3FeaturesEXT, extendedDynamicState3ColorBlendEquation}
+  rawOffset = #{offset VkPhysicalDeviceExtendedDynamicState3FeaturesEXT, extendedDynamicState3ColorBlendEquation}
 
 instance Offset "extendedDynamicState3ColorWriteMask" VkPhysicalDeviceExtendedDynamicState3FeaturesEXT where
-  rawOffset = #{offset struct VkPhysicalDeviceExtendedDynamicState3FeaturesEXT, extendedDynamicState3ColorWriteMask}
+  rawOffset = #{offset VkPhysicalDeviceExtendedDynamicState3FeaturesEXT, extendedDynamicState3ColorWriteMask}
 
 instance Offset "extendedDynamicState3RasterizationStream" VkPhysicalDeviceExtendedDynamicState3FeaturesEXT where
-  rawOffset = #{offset struct VkPhysicalDeviceExtendedDynamicState3FeaturesEXT, extendedDynamicState3RasterizationStream}
+  rawOffset = #{offset VkPhysicalDeviceExtendedDynamicState3FeaturesEXT, extendedDynamicState3RasterizationStream}
 
 instance Offset "extendedDynamicState3ConservativeRasterizationMode" VkPhysicalDeviceExtendedDynamicState3FeaturesEXT where
-  rawOffset = #{offset struct VkPhysicalDeviceExtendedDynamicState3FeaturesEXT, extendedDynamicState3ConservativeRasterizationMode}
+  rawOffset = #{offset VkPhysicalDeviceExtendedDynamicState3FeaturesEXT, extendedDynamicState3ConservativeRasterizationMode}
 
 instance Offset "extendedDynamicState3ExtraPrimitiveOverestimationSize" VkPhysicalDeviceExtendedDynamicState3FeaturesEXT where
-  rawOffset = #{offset struct VkPhysicalDeviceExtendedDynamicState3FeaturesEXT, extendedDynamicState3ExtraPrimitiveOverestimationSize}
+  rawOffset = #{offset VkPhysicalDeviceExtendedDynamicState3FeaturesEXT, extendedDynamicState3ExtraPrimitiveOverestimationSize}
 
 instance Offset "extendedDynamicState3DepthClipEnable" VkPhysicalDeviceExtendedDynamicState3FeaturesEXT where
-  rawOffset = #{offset struct VkPhysicalDeviceExtendedDynamicState3FeaturesEXT, extendedDynamicState3DepthClipEnable}
+  rawOffset = #{offset VkPhysicalDeviceExtendedDynamicState3FeaturesEXT, extendedDynamicState3DepthClipEnable}
 
 instance Offset "extendedDynamicState3SampleLocationsEnable" VkPhysicalDeviceExtendedDynamicState3FeaturesEXT where
-  rawOffset = #{offset struct VkPhysicalDeviceExtendedDynamicState3FeaturesEXT, extendedDynamicState3SampleLocationsEnable}
+  rawOffset = #{offset VkPhysicalDeviceExtendedDynamicState3FeaturesEXT, extendedDynamicState3SampleLocationsEnable}
 
 instance Offset "extendedDynamicState3ColorBlendAdvanced" VkPhysicalDeviceExtendedDynamicState3FeaturesEXT where
-  rawOffset = #{offset struct VkPhysicalDeviceExtendedDynamicState3FeaturesEXT, extendedDynamicState3ColorBlendAdvanced}
+  rawOffset = #{offset VkPhysicalDeviceExtendedDynamicState3FeaturesEXT, extendedDynamicState3ColorBlendAdvanced}
 
 instance Offset "extendedDynamicState3ProvokingVertexMode" VkPhysicalDeviceExtendedDynamicState3FeaturesEXT where
-  rawOffset = #{offset struct VkPhysicalDeviceExtendedDynamicState3FeaturesEXT, extendedDynamicState3ProvokingVertexMode}
+  rawOffset = #{offset VkPhysicalDeviceExtendedDynamicState3FeaturesEXT, extendedDynamicState3ProvokingVertexMode}
 
 instance Offset "extendedDynamicState3LineRasterizationMode" VkPhysicalDeviceExtendedDynamicState3FeaturesEXT where
-  rawOffset = #{offset struct VkPhysicalDeviceExtendedDynamicState3FeaturesEXT, extendedDynamicState3LineRasterizationMode}
+  rawOffset = #{offset VkPhysicalDeviceExtendedDynamicState3FeaturesEXT, extendedDynamicState3LineRasterizationMode}
 
 instance Offset "extendedDynamicState3LineStippleEnable" VkPhysicalDeviceExtendedDynamicState3FeaturesEXT where
-  rawOffset = #{offset struct VkPhysicalDeviceExtendedDynamicState3FeaturesEXT, extendedDynamicState3LineStippleEnable}
+  rawOffset = #{offset VkPhysicalDeviceExtendedDynamicState3FeaturesEXT, extendedDynamicState3LineStippleEnable}
 
 instance Offset "extendedDynamicState3DepthClipNegativeOneToOne" VkPhysicalDeviceExtendedDynamicState3FeaturesEXT where
-  rawOffset = #{offset struct VkPhysicalDeviceExtendedDynamicState3FeaturesEXT, extendedDynamicState3DepthClipNegativeOneToOne}
+  rawOffset = #{offset VkPhysicalDeviceExtendedDynamicState3FeaturesEXT, extendedDynamicState3DepthClipNegativeOneToOne}
 
 instance Offset "extendedDynamicState3ViewportWScalingEnable" VkPhysicalDeviceExtendedDynamicState3FeaturesEXT where
-  rawOffset = #{offset struct VkPhysicalDeviceExtendedDynamicState3FeaturesEXT, extendedDynamicState3ViewportWScalingEnable}
+  rawOffset = #{offset VkPhysicalDeviceExtendedDynamicState3FeaturesEXT, extendedDynamicState3ViewportWScalingEnable}
 
 instance Offset "extendedDynamicState3ViewportSwizzle" VkPhysicalDeviceExtendedDynamicState3FeaturesEXT where
-  rawOffset = #{offset struct VkPhysicalDeviceExtendedDynamicState3FeaturesEXT, extendedDynamicState3ViewportSwizzle}
+  rawOffset = #{offset VkPhysicalDeviceExtendedDynamicState3FeaturesEXT, extendedDynamicState3ViewportSwizzle}
 
 instance Offset "extendedDynamicState3CoverageToColorEnable" VkPhysicalDeviceExtendedDynamicState3FeaturesEXT where
-  rawOffset = #{offset struct VkPhysicalDeviceExtendedDynamicState3FeaturesEXT, extendedDynamicState3CoverageToColorEnable}
+  rawOffset = #{offset VkPhysicalDeviceExtendedDynamicState3FeaturesEXT, extendedDynamicState3CoverageToColorEnable}
 
 instance Offset "extendedDynamicState3CoverageToColorLocation" VkPhysicalDeviceExtendedDynamicState3FeaturesEXT where
-  rawOffset = #{offset struct VkPhysicalDeviceExtendedDynamicState3FeaturesEXT, extendedDynamicState3CoverageToColorLocation}
+  rawOffset = #{offset VkPhysicalDeviceExtendedDynamicState3FeaturesEXT, extendedDynamicState3CoverageToColorLocation}
 
 instance Offset "extendedDynamicState3CoverageModulationMode" VkPhysicalDeviceExtendedDynamicState3FeaturesEXT where
-  rawOffset = #{offset struct VkPhysicalDeviceExtendedDynamicState3FeaturesEXT, extendedDynamicState3CoverageModulationMode}
+  rawOffset = #{offset VkPhysicalDeviceExtendedDynamicState3FeaturesEXT, extendedDynamicState3CoverageModulationMode}
 
 instance Offset "extendedDynamicState3CoverageModulationTableEnable" VkPhysicalDeviceExtendedDynamicState3FeaturesEXT where
-  rawOffset = #{offset struct VkPhysicalDeviceExtendedDynamicState3FeaturesEXT, extendedDynamicState3CoverageModulationTableEnable}
+  rawOffset = #{offset VkPhysicalDeviceExtendedDynamicState3FeaturesEXT, extendedDynamicState3CoverageModulationTableEnable}
 
 instance Offset "extendedDynamicState3CoverageModulationTable" VkPhysicalDeviceExtendedDynamicState3FeaturesEXT where
-  rawOffset = #{offset struct VkPhysicalDeviceExtendedDynamicState3FeaturesEXT, extendedDynamicState3CoverageModulationTable}
+  rawOffset = #{offset VkPhysicalDeviceExtendedDynamicState3FeaturesEXT, extendedDynamicState3CoverageModulationTable}
 
 instance Offset "extendedDynamicState3CoverageReductionMode" VkPhysicalDeviceExtendedDynamicState3FeaturesEXT where
-  rawOffset = #{offset struct VkPhysicalDeviceExtendedDynamicState3FeaturesEXT, extendedDynamicState3CoverageReductionMode}
+  rawOffset = #{offset VkPhysicalDeviceExtendedDynamicState3FeaturesEXT, extendedDynamicState3CoverageReductionMode}
 
 instance Offset "extendedDynamicState3RepresentativeFragmentTestEnable" VkPhysicalDeviceExtendedDynamicState3FeaturesEXT where
-  rawOffset = #{offset struct VkPhysicalDeviceExtendedDynamicState3FeaturesEXT, extendedDynamicState3RepresentativeFragmentTestEnable}
+  rawOffset = #{offset VkPhysicalDeviceExtendedDynamicState3FeaturesEXT, extendedDynamicState3RepresentativeFragmentTestEnable}
 
 instance Offset "extendedDynamicState3ShadingRateImageEnable" VkPhysicalDeviceExtendedDynamicState3FeaturesEXT where
-  rawOffset = #{offset struct VkPhysicalDeviceExtendedDynamicState3FeaturesEXT, extendedDynamicState3ShadingRateImageEnable}
+  rawOffset = #{offset VkPhysicalDeviceExtendedDynamicState3FeaturesEXT, extendedDynamicState3ShadingRateImageEnable}
 
 #else
 

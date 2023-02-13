@@ -30,8 +30,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkSwapchainPresentBarrierCreateInfoNV" #-} VkS
          }
 
 instance Storable VkSwapchainPresentBarrierCreateInfoNV where
-  sizeOf    _ = #{size      struct VkSwapchainPresentBarrierCreateInfoNV}
-  alignment _ = #{alignment struct VkSwapchainPresentBarrierCreateInfoNV}
+  sizeOf    _ = #{size      VkSwapchainPresentBarrierCreateInfoNV}
+  alignment _ = #{alignment VkSwapchainPresentBarrierCreateInfoNV}
 
   peek ptr = 
     VkSwapchainPresentBarrierCreateInfoNV
@@ -45,13 +45,13 @@ instance Storable VkSwapchainPresentBarrierCreateInfoNV where
     pokeField @"presentBarrierEnable" ptr val
 
 instance Offset "sType" VkSwapchainPresentBarrierCreateInfoNV where
-  rawOffset = #{offset struct VkSwapchainPresentBarrierCreateInfoNV, sType}
+  rawOffset = #{offset VkSwapchainPresentBarrierCreateInfoNV, sType}
 
 instance Offset "pNext" VkSwapchainPresentBarrierCreateInfoNV where
-  rawOffset = #{offset struct VkSwapchainPresentBarrierCreateInfoNV, pNext}
+  rawOffset = #{offset VkSwapchainPresentBarrierCreateInfoNV, pNext}
 
 instance Offset "presentBarrierEnable" VkSwapchainPresentBarrierCreateInfoNV where
-  rawOffset = #{offset struct VkSwapchainPresentBarrierCreateInfoNV, presentBarrierEnable}
+  rawOffset = #{offset VkSwapchainPresentBarrierCreateInfoNV, presentBarrierEnable}
 
 #else
 

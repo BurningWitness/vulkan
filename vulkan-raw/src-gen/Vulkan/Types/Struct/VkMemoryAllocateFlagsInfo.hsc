@@ -31,8 +31,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkMemoryAllocateFlagsInfo" #-} VkMemoryAllocat
          }
 
 instance Storable VkMemoryAllocateFlagsInfo where
-  sizeOf    _ = #{size      struct VkMemoryAllocateFlagsInfo}
-  alignment _ = #{alignment struct VkMemoryAllocateFlagsInfo}
+  sizeOf    _ = #{size      VkMemoryAllocateFlagsInfo}
+  alignment _ = #{alignment VkMemoryAllocateFlagsInfo}
 
   peek ptr = 
     VkMemoryAllocateFlagsInfo
@@ -48,16 +48,16 @@ instance Storable VkMemoryAllocateFlagsInfo where
     pokeField @"deviceMask" ptr val
 
 instance Offset "sType" VkMemoryAllocateFlagsInfo where
-  rawOffset = #{offset struct VkMemoryAllocateFlagsInfo, sType}
+  rawOffset = #{offset VkMemoryAllocateFlagsInfo, sType}
 
 instance Offset "pNext" VkMemoryAllocateFlagsInfo where
-  rawOffset = #{offset struct VkMemoryAllocateFlagsInfo, pNext}
+  rawOffset = #{offset VkMemoryAllocateFlagsInfo, pNext}
 
 instance Offset "flags" VkMemoryAllocateFlagsInfo where
-  rawOffset = #{offset struct VkMemoryAllocateFlagsInfo, flags}
+  rawOffset = #{offset VkMemoryAllocateFlagsInfo, flags}
 
 instance Offset "deviceMask" VkMemoryAllocateFlagsInfo where
-  rawOffset = #{offset struct VkMemoryAllocateFlagsInfo, deviceMask}
+  rawOffset = #{offset VkMemoryAllocateFlagsInfo, deviceMask}
 
 #else
 

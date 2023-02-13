@@ -32,8 +32,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkPipelineCoverageReductionStateCreateInfoNV" 
          }
 
 instance Storable VkPipelineCoverageReductionStateCreateInfoNV where
-  sizeOf    _ = #{size      struct VkPipelineCoverageReductionStateCreateInfoNV}
-  alignment _ = #{alignment struct VkPipelineCoverageReductionStateCreateInfoNV}
+  sizeOf    _ = #{size      VkPipelineCoverageReductionStateCreateInfoNV}
+  alignment _ = #{alignment VkPipelineCoverageReductionStateCreateInfoNV}
 
   peek ptr = 
     VkPipelineCoverageReductionStateCreateInfoNV
@@ -49,16 +49,16 @@ instance Storable VkPipelineCoverageReductionStateCreateInfoNV where
     pokeField @"coverageReductionMode" ptr val
 
 instance Offset "sType" VkPipelineCoverageReductionStateCreateInfoNV where
-  rawOffset = #{offset struct VkPipelineCoverageReductionStateCreateInfoNV, sType}
+  rawOffset = #{offset VkPipelineCoverageReductionStateCreateInfoNV, sType}
 
 instance Offset "pNext" VkPipelineCoverageReductionStateCreateInfoNV where
-  rawOffset = #{offset struct VkPipelineCoverageReductionStateCreateInfoNV, pNext}
+  rawOffset = #{offset VkPipelineCoverageReductionStateCreateInfoNV, pNext}
 
 instance Offset "flags" VkPipelineCoverageReductionStateCreateInfoNV where
-  rawOffset = #{offset struct VkPipelineCoverageReductionStateCreateInfoNV, flags}
+  rawOffset = #{offset VkPipelineCoverageReductionStateCreateInfoNV, flags}
 
 instance Offset "coverageReductionMode" VkPipelineCoverageReductionStateCreateInfoNV where
-  rawOffset = #{offset struct VkPipelineCoverageReductionStateCreateInfoNV, coverageReductionMode}
+  rawOffset = #{offset VkPipelineCoverageReductionStateCreateInfoNV, coverageReductionMode}
 
 #else
 

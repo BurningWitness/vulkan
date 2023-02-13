@@ -49,8 +49,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkSamplerCreateInfo" #-} VkSamplerCreateInfo =
          }
 
 instance Storable VkSamplerCreateInfo where
-  sizeOf    _ = #{size      struct VkSamplerCreateInfo}
-  alignment _ = #{alignment struct VkSamplerCreateInfo}
+  sizeOf    _ = #{size      VkSamplerCreateInfo}
+  alignment _ = #{alignment VkSamplerCreateInfo}
 
   peek ptr = 
     VkSamplerCreateInfo
@@ -94,55 +94,55 @@ instance Storable VkSamplerCreateInfo where
     pokeField @"unnormalizedCoordinates" ptr val
 
 instance Offset "sType" VkSamplerCreateInfo where
-  rawOffset = #{offset struct VkSamplerCreateInfo, sType}
+  rawOffset = #{offset VkSamplerCreateInfo, sType}
 
 instance Offset "pNext" VkSamplerCreateInfo where
-  rawOffset = #{offset struct VkSamplerCreateInfo, pNext}
+  rawOffset = #{offset VkSamplerCreateInfo, pNext}
 
 instance Offset "flags" VkSamplerCreateInfo where
-  rawOffset = #{offset struct VkSamplerCreateInfo, flags}
+  rawOffset = #{offset VkSamplerCreateInfo, flags}
 
 instance Offset "magFilter" VkSamplerCreateInfo where
-  rawOffset = #{offset struct VkSamplerCreateInfo, magFilter}
+  rawOffset = #{offset VkSamplerCreateInfo, magFilter}
 
 instance Offset "minFilter" VkSamplerCreateInfo where
-  rawOffset = #{offset struct VkSamplerCreateInfo, minFilter}
+  rawOffset = #{offset VkSamplerCreateInfo, minFilter}
 
 instance Offset "mipmapMode" VkSamplerCreateInfo where
-  rawOffset = #{offset struct VkSamplerCreateInfo, mipmapMode}
+  rawOffset = #{offset VkSamplerCreateInfo, mipmapMode}
 
 instance Offset "addressModeU" VkSamplerCreateInfo where
-  rawOffset = #{offset struct VkSamplerCreateInfo, addressModeU}
+  rawOffset = #{offset VkSamplerCreateInfo, addressModeU}
 
 instance Offset "addressModeV" VkSamplerCreateInfo where
-  rawOffset = #{offset struct VkSamplerCreateInfo, addressModeV}
+  rawOffset = #{offset VkSamplerCreateInfo, addressModeV}
 
 instance Offset "addressModeW" VkSamplerCreateInfo where
-  rawOffset = #{offset struct VkSamplerCreateInfo, addressModeW}
+  rawOffset = #{offset VkSamplerCreateInfo, addressModeW}
 
 instance Offset "mipLodBias" VkSamplerCreateInfo where
-  rawOffset = #{offset struct VkSamplerCreateInfo, mipLodBias}
+  rawOffset = #{offset VkSamplerCreateInfo, mipLodBias}
 
 instance Offset "anisotropyEnable" VkSamplerCreateInfo where
-  rawOffset = #{offset struct VkSamplerCreateInfo, anisotropyEnable}
+  rawOffset = #{offset VkSamplerCreateInfo, anisotropyEnable}
 
 instance Offset "maxAnisotropy" VkSamplerCreateInfo where
-  rawOffset = #{offset struct VkSamplerCreateInfo, maxAnisotropy}
+  rawOffset = #{offset VkSamplerCreateInfo, maxAnisotropy}
 
 instance Offset "compareEnable" VkSamplerCreateInfo where
-  rawOffset = #{offset struct VkSamplerCreateInfo, compareEnable}
+  rawOffset = #{offset VkSamplerCreateInfo, compareEnable}
 
 instance Offset "compareOp" VkSamplerCreateInfo where
-  rawOffset = #{offset struct VkSamplerCreateInfo, compareOp}
+  rawOffset = #{offset VkSamplerCreateInfo, compareOp}
 
 instance Offset "minLod" VkSamplerCreateInfo where
-  rawOffset = #{offset struct VkSamplerCreateInfo, minLod}
+  rawOffset = #{offset VkSamplerCreateInfo, minLod}
 
 instance Offset "maxLod" VkSamplerCreateInfo where
-  rawOffset = #{offset struct VkSamplerCreateInfo, maxLod}
+  rawOffset = #{offset VkSamplerCreateInfo, maxLod}
 
 instance Offset "borderColor" VkSamplerCreateInfo where
-  rawOffset = #{offset struct VkSamplerCreateInfo, borderColor}
+  rawOffset = #{offset VkSamplerCreateInfo, borderColor}
 
 instance Offset "unnormalizedCoordinates" VkSamplerCreateInfo where
-  rawOffset = #{offset struct VkSamplerCreateInfo, unnormalizedCoordinates}
+  rawOffset = #{offset VkSamplerCreateInfo, unnormalizedCoordinates}

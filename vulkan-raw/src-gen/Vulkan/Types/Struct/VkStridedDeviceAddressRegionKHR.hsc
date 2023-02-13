@@ -29,8 +29,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkStridedDeviceAddressRegionKHR" #-} VkStrided
          }
 
 instance Storable VkStridedDeviceAddressRegionKHR where
-  sizeOf    _ = #{size      struct VkStridedDeviceAddressRegionKHR}
-  alignment _ = #{alignment struct VkStridedDeviceAddressRegionKHR}
+  sizeOf    _ = #{size      VkStridedDeviceAddressRegionKHR}
+  alignment _ = #{alignment VkStridedDeviceAddressRegionKHR}
 
   peek ptr = 
     VkStridedDeviceAddressRegionKHR
@@ -44,13 +44,13 @@ instance Storable VkStridedDeviceAddressRegionKHR where
     pokeField @"size" ptr val
 
 instance Offset "deviceAddress" VkStridedDeviceAddressRegionKHR where
-  rawOffset = #{offset struct VkStridedDeviceAddressRegionKHR, deviceAddress}
+  rawOffset = #{offset VkStridedDeviceAddressRegionKHR, deviceAddress}
 
 instance Offset "stride" VkStridedDeviceAddressRegionKHR where
-  rawOffset = #{offset struct VkStridedDeviceAddressRegionKHR, stride}
+  rawOffset = #{offset VkStridedDeviceAddressRegionKHR, stride}
 
 instance Offset "size" VkStridedDeviceAddressRegionKHR where
-  rawOffset = #{offset struct VkStridedDeviceAddressRegionKHR, size}
+  rawOffset = #{offset VkStridedDeviceAddressRegionKHR, size}
 
 #else
 

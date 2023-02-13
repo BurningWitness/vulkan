@@ -31,8 +31,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkImportMemoryBufferCollectionFUCHSIA" #-} VkI
          }
 
 instance Storable VkImportMemoryBufferCollectionFUCHSIA where
-  sizeOf    _ = #{size      struct VkImportMemoryBufferCollectionFUCHSIA}
-  alignment _ = #{alignment struct VkImportMemoryBufferCollectionFUCHSIA}
+  sizeOf    _ = #{size      VkImportMemoryBufferCollectionFUCHSIA}
+  alignment _ = #{alignment VkImportMemoryBufferCollectionFUCHSIA}
 
   peek ptr = 
     VkImportMemoryBufferCollectionFUCHSIA
@@ -48,16 +48,16 @@ instance Storable VkImportMemoryBufferCollectionFUCHSIA where
     pokeField @"index" ptr val
 
 instance Offset "sType" VkImportMemoryBufferCollectionFUCHSIA where
-  rawOffset = #{offset struct VkImportMemoryBufferCollectionFUCHSIA, sType}
+  rawOffset = #{offset VkImportMemoryBufferCollectionFUCHSIA, sType}
 
 instance Offset "pNext" VkImportMemoryBufferCollectionFUCHSIA where
-  rawOffset = #{offset struct VkImportMemoryBufferCollectionFUCHSIA, pNext}
+  rawOffset = #{offset VkImportMemoryBufferCollectionFUCHSIA, pNext}
 
 instance Offset "collection" VkImportMemoryBufferCollectionFUCHSIA where
-  rawOffset = #{offset struct VkImportMemoryBufferCollectionFUCHSIA, collection}
+  rawOffset = #{offset VkImportMemoryBufferCollectionFUCHSIA, collection}
 
 instance Offset "index" VkImportMemoryBufferCollectionFUCHSIA where
-  rawOffset = #{offset struct VkImportMemoryBufferCollectionFUCHSIA, index}
+  rawOffset = #{offset VkImportMemoryBufferCollectionFUCHSIA, index}
 
 #else
 

@@ -30,8 +30,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkPipelineTessellationDomainOriginStateCreateI
          }
 
 instance Storable VkPipelineTessellationDomainOriginStateCreateInfo where
-  sizeOf    _ = #{size      struct VkPipelineTessellationDomainOriginStateCreateInfo}
-  alignment _ = #{alignment struct VkPipelineTessellationDomainOriginStateCreateInfo}
+  sizeOf    _ = #{size      VkPipelineTessellationDomainOriginStateCreateInfo}
+  alignment _ = #{alignment VkPipelineTessellationDomainOriginStateCreateInfo}
 
   peek ptr = 
     VkPipelineTessellationDomainOriginStateCreateInfo
@@ -45,13 +45,13 @@ instance Storable VkPipelineTessellationDomainOriginStateCreateInfo where
     pokeField @"domainOrigin" ptr val
 
 instance Offset "sType" VkPipelineTessellationDomainOriginStateCreateInfo where
-  rawOffset = #{offset struct VkPipelineTessellationDomainOriginStateCreateInfo, sType}
+  rawOffset = #{offset VkPipelineTessellationDomainOriginStateCreateInfo, sType}
 
 instance Offset "pNext" VkPipelineTessellationDomainOriginStateCreateInfo where
-  rawOffset = #{offset struct VkPipelineTessellationDomainOriginStateCreateInfo, pNext}
+  rawOffset = #{offset VkPipelineTessellationDomainOriginStateCreateInfo, pNext}
 
 instance Offset "domainOrigin" VkPipelineTessellationDomainOriginStateCreateInfo where
-  rawOffset = #{offset struct VkPipelineTessellationDomainOriginStateCreateInfo, domainOrigin}
+  rawOffset = #{offset VkPipelineTessellationDomainOriginStateCreateInfo, domainOrigin}
 
 #else
 

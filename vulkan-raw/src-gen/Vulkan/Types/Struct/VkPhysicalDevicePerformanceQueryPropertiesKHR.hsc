@@ -30,8 +30,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkPhysicalDevicePerformanceQueryPropertiesKHR"
          }
 
 instance Storable VkPhysicalDevicePerformanceQueryPropertiesKHR where
-  sizeOf    _ = #{size      struct VkPhysicalDevicePerformanceQueryPropertiesKHR}
-  alignment _ = #{alignment struct VkPhysicalDevicePerformanceQueryPropertiesKHR}
+  sizeOf    _ = #{size      VkPhysicalDevicePerformanceQueryPropertiesKHR}
+  alignment _ = #{alignment VkPhysicalDevicePerformanceQueryPropertiesKHR}
 
   peek ptr = 
     VkPhysicalDevicePerformanceQueryPropertiesKHR
@@ -45,13 +45,13 @@ instance Storable VkPhysicalDevicePerformanceQueryPropertiesKHR where
     pokeField @"allowCommandBufferQueryCopies" ptr val
 
 instance Offset "sType" VkPhysicalDevicePerformanceQueryPropertiesKHR where
-  rawOffset = #{offset struct VkPhysicalDevicePerformanceQueryPropertiesKHR, sType}
+  rawOffset = #{offset VkPhysicalDevicePerformanceQueryPropertiesKHR, sType}
 
 instance Offset "pNext" VkPhysicalDevicePerformanceQueryPropertiesKHR where
-  rawOffset = #{offset struct VkPhysicalDevicePerformanceQueryPropertiesKHR, pNext}
+  rawOffset = #{offset VkPhysicalDevicePerformanceQueryPropertiesKHR, pNext}
 
 instance Offset "allowCommandBufferQueryCopies" VkPhysicalDevicePerformanceQueryPropertiesKHR where
-  rawOffset = #{offset struct VkPhysicalDevicePerformanceQueryPropertiesKHR, allowCommandBufferQueryCopies}
+  rawOffset = #{offset VkPhysicalDevicePerformanceQueryPropertiesKHR, allowCommandBufferQueryCopies}
 
 #else
 

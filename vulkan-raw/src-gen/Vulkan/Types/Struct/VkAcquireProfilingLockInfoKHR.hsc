@@ -31,8 +31,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkAcquireProfilingLockInfoKHR" #-} VkAcquirePr
          }
 
 instance Storable VkAcquireProfilingLockInfoKHR where
-  sizeOf    _ = #{size      struct VkAcquireProfilingLockInfoKHR}
-  alignment _ = #{alignment struct VkAcquireProfilingLockInfoKHR}
+  sizeOf    _ = #{size      VkAcquireProfilingLockInfoKHR}
+  alignment _ = #{alignment VkAcquireProfilingLockInfoKHR}
 
   peek ptr = 
     VkAcquireProfilingLockInfoKHR
@@ -48,16 +48,16 @@ instance Storable VkAcquireProfilingLockInfoKHR where
     pokeField @"timeout" ptr val
 
 instance Offset "sType" VkAcquireProfilingLockInfoKHR where
-  rawOffset = #{offset struct VkAcquireProfilingLockInfoKHR, sType}
+  rawOffset = #{offset VkAcquireProfilingLockInfoKHR, sType}
 
 instance Offset "pNext" VkAcquireProfilingLockInfoKHR where
-  rawOffset = #{offset struct VkAcquireProfilingLockInfoKHR, pNext}
+  rawOffset = #{offset VkAcquireProfilingLockInfoKHR, pNext}
 
 instance Offset "flags" VkAcquireProfilingLockInfoKHR where
-  rawOffset = #{offset struct VkAcquireProfilingLockInfoKHR, flags}
+  rawOffset = #{offset VkAcquireProfilingLockInfoKHR, flags}
 
 instance Offset "timeout" VkAcquireProfilingLockInfoKHR where
-  rawOffset = #{offset struct VkAcquireProfilingLockInfoKHR, timeout}
+  rawOffset = #{offset VkAcquireProfilingLockInfoKHR, timeout}
 
 #else
 

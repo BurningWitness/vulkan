@@ -45,8 +45,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkGeneratedCommandsInfoNV" #-} VkGeneratedComm
          }
 
 instance Storable VkGeneratedCommandsInfoNV where
-  sizeOf    _ = #{size      struct VkGeneratedCommandsInfoNV}
-  alignment _ = #{alignment struct VkGeneratedCommandsInfoNV}
+  sizeOf    _ = #{size      VkGeneratedCommandsInfoNV}
+  alignment _ = #{alignment VkGeneratedCommandsInfoNV}
 
   peek ptr = 
     VkGeneratedCommandsInfoNV
@@ -84,49 +84,49 @@ instance Storable VkGeneratedCommandsInfoNV where
     pokeField @"sequencesIndexOffset" ptr val
 
 instance Offset "sType" VkGeneratedCommandsInfoNV where
-  rawOffset = #{offset struct VkGeneratedCommandsInfoNV, sType}
+  rawOffset = #{offset VkGeneratedCommandsInfoNV, sType}
 
 instance Offset "pNext" VkGeneratedCommandsInfoNV where
-  rawOffset = #{offset struct VkGeneratedCommandsInfoNV, pNext}
+  rawOffset = #{offset VkGeneratedCommandsInfoNV, pNext}
 
 instance Offset "pipelineBindPoint" VkGeneratedCommandsInfoNV where
-  rawOffset = #{offset struct VkGeneratedCommandsInfoNV, pipelineBindPoint}
+  rawOffset = #{offset VkGeneratedCommandsInfoNV, pipelineBindPoint}
 
 instance Offset "pipeline" VkGeneratedCommandsInfoNV where
-  rawOffset = #{offset struct VkGeneratedCommandsInfoNV, pipeline}
+  rawOffset = #{offset VkGeneratedCommandsInfoNV, pipeline}
 
 instance Offset "indirectCommandsLayout" VkGeneratedCommandsInfoNV where
-  rawOffset = #{offset struct VkGeneratedCommandsInfoNV, indirectCommandsLayout}
+  rawOffset = #{offset VkGeneratedCommandsInfoNV, indirectCommandsLayout}
 
 instance Offset "streamCount" VkGeneratedCommandsInfoNV where
-  rawOffset = #{offset struct VkGeneratedCommandsInfoNV, streamCount}
+  rawOffset = #{offset VkGeneratedCommandsInfoNV, streamCount}
 
 instance Offset "pStreams" VkGeneratedCommandsInfoNV where
-  rawOffset = #{offset struct VkGeneratedCommandsInfoNV, pStreams}
+  rawOffset = #{offset VkGeneratedCommandsInfoNV, pStreams}
 
 instance Offset "sequencesCount" VkGeneratedCommandsInfoNV where
-  rawOffset = #{offset struct VkGeneratedCommandsInfoNV, sequencesCount}
+  rawOffset = #{offset VkGeneratedCommandsInfoNV, sequencesCount}
 
 instance Offset "preprocessBuffer" VkGeneratedCommandsInfoNV where
-  rawOffset = #{offset struct VkGeneratedCommandsInfoNV, preprocessBuffer}
+  rawOffset = #{offset VkGeneratedCommandsInfoNV, preprocessBuffer}
 
 instance Offset "preprocessOffset" VkGeneratedCommandsInfoNV where
-  rawOffset = #{offset struct VkGeneratedCommandsInfoNV, preprocessOffset}
+  rawOffset = #{offset VkGeneratedCommandsInfoNV, preprocessOffset}
 
 instance Offset "preprocessSize" VkGeneratedCommandsInfoNV where
-  rawOffset = #{offset struct VkGeneratedCommandsInfoNV, preprocessSize}
+  rawOffset = #{offset VkGeneratedCommandsInfoNV, preprocessSize}
 
 instance Offset "sequencesCountBuffer" VkGeneratedCommandsInfoNV where
-  rawOffset = #{offset struct VkGeneratedCommandsInfoNV, sequencesCountBuffer}
+  rawOffset = #{offset VkGeneratedCommandsInfoNV, sequencesCountBuffer}
 
 instance Offset "sequencesCountOffset" VkGeneratedCommandsInfoNV where
-  rawOffset = #{offset struct VkGeneratedCommandsInfoNV, sequencesCountOffset}
+  rawOffset = #{offset VkGeneratedCommandsInfoNV, sequencesCountOffset}
 
 instance Offset "sequencesIndexBuffer" VkGeneratedCommandsInfoNV where
-  rawOffset = #{offset struct VkGeneratedCommandsInfoNV, sequencesIndexBuffer}
+  rawOffset = #{offset VkGeneratedCommandsInfoNV, sequencesIndexBuffer}
 
 instance Offset "sequencesIndexOffset" VkGeneratedCommandsInfoNV where
-  rawOffset = #{offset struct VkGeneratedCommandsInfoNV, sequencesIndexOffset}
+  rawOffset = #{offset VkGeneratedCommandsInfoNV, sequencesIndexOffset}
 
 #else
 

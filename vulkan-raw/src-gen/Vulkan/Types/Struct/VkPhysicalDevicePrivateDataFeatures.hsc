@@ -30,8 +30,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkPhysicalDevicePrivateDataFeatures" #-} VkPhy
          }
 
 instance Storable VkPhysicalDevicePrivateDataFeatures where
-  sizeOf    _ = #{size      struct VkPhysicalDevicePrivateDataFeatures}
-  alignment _ = #{alignment struct VkPhysicalDevicePrivateDataFeatures}
+  sizeOf    _ = #{size      VkPhysicalDevicePrivateDataFeatures}
+  alignment _ = #{alignment VkPhysicalDevicePrivateDataFeatures}
 
   peek ptr = 
     VkPhysicalDevicePrivateDataFeatures
@@ -45,13 +45,13 @@ instance Storable VkPhysicalDevicePrivateDataFeatures where
     pokeField @"privateData" ptr val
 
 instance Offset "sType" VkPhysicalDevicePrivateDataFeatures where
-  rawOffset = #{offset struct VkPhysicalDevicePrivateDataFeatures, sType}
+  rawOffset = #{offset VkPhysicalDevicePrivateDataFeatures, sType}
 
 instance Offset "pNext" VkPhysicalDevicePrivateDataFeatures where
-  rawOffset = #{offset struct VkPhysicalDevicePrivateDataFeatures, pNext}
+  rawOffset = #{offset VkPhysicalDevicePrivateDataFeatures, pNext}
 
 instance Offset "privateData" VkPhysicalDevicePrivateDataFeatures where
-  rawOffset = #{offset struct VkPhysicalDevicePrivateDataFeatures, privateData}
+  rawOffset = #{offset VkPhysicalDevicePrivateDataFeatures, privateData}
 
 #else
 

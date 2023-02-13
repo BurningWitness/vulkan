@@ -31,8 +31,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkPhysicalDeviceRobustness2PropertiesEXT" #-} 
          }
 
 instance Storable VkPhysicalDeviceRobustness2PropertiesEXT where
-  sizeOf    _ = #{size      struct VkPhysicalDeviceRobustness2PropertiesEXT}
-  alignment _ = #{alignment struct VkPhysicalDeviceRobustness2PropertiesEXT}
+  sizeOf    _ = #{size      VkPhysicalDeviceRobustness2PropertiesEXT}
+  alignment _ = #{alignment VkPhysicalDeviceRobustness2PropertiesEXT}
 
   peek ptr = 
     VkPhysicalDeviceRobustness2PropertiesEXT
@@ -48,16 +48,16 @@ instance Storable VkPhysicalDeviceRobustness2PropertiesEXT where
     pokeField @"robustUniformBufferAccessSizeAlignment" ptr val
 
 instance Offset "sType" VkPhysicalDeviceRobustness2PropertiesEXT where
-  rawOffset = #{offset struct VkPhysicalDeviceRobustness2PropertiesEXT, sType}
+  rawOffset = #{offset VkPhysicalDeviceRobustness2PropertiesEXT, sType}
 
 instance Offset "pNext" VkPhysicalDeviceRobustness2PropertiesEXT where
-  rawOffset = #{offset struct VkPhysicalDeviceRobustness2PropertiesEXT, pNext}
+  rawOffset = #{offset VkPhysicalDeviceRobustness2PropertiesEXT, pNext}
 
 instance Offset "robustStorageBufferAccessSizeAlignment" VkPhysicalDeviceRobustness2PropertiesEXT where
-  rawOffset = #{offset struct VkPhysicalDeviceRobustness2PropertiesEXT, robustStorageBufferAccessSizeAlignment}
+  rawOffset = #{offset VkPhysicalDeviceRobustness2PropertiesEXT, robustStorageBufferAccessSizeAlignment}
 
 instance Offset "robustUniformBufferAccessSizeAlignment" VkPhysicalDeviceRobustness2PropertiesEXT where
-  rawOffset = #{offset struct VkPhysicalDeviceRobustness2PropertiesEXT, robustUniformBufferAccessSizeAlignment}
+  rawOffset = #{offset VkPhysicalDeviceRobustness2PropertiesEXT, robustUniformBufferAccessSizeAlignment}
 
 #else
 

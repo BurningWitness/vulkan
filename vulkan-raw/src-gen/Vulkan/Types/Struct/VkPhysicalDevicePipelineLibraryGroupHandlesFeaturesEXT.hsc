@@ -30,8 +30,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkPhysicalDevicePipelineLibraryGroupHandlesFea
          }
 
 instance Storable VkPhysicalDevicePipelineLibraryGroupHandlesFeaturesEXT where
-  sizeOf    _ = #{size      struct VkPhysicalDevicePipelineLibraryGroupHandlesFeaturesEXT}
-  alignment _ = #{alignment struct VkPhysicalDevicePipelineLibraryGroupHandlesFeaturesEXT}
+  sizeOf    _ = #{size      VkPhysicalDevicePipelineLibraryGroupHandlesFeaturesEXT}
+  alignment _ = #{alignment VkPhysicalDevicePipelineLibraryGroupHandlesFeaturesEXT}
 
   peek ptr = 
     VkPhysicalDevicePipelineLibraryGroupHandlesFeaturesEXT
@@ -45,13 +45,13 @@ instance Storable VkPhysicalDevicePipelineLibraryGroupHandlesFeaturesEXT where
     pokeField @"pipelineLibraryGroupHandles" ptr val
 
 instance Offset "sType" VkPhysicalDevicePipelineLibraryGroupHandlesFeaturesEXT where
-  rawOffset = #{offset struct VkPhysicalDevicePipelineLibraryGroupHandlesFeaturesEXT, sType}
+  rawOffset = #{offset VkPhysicalDevicePipelineLibraryGroupHandlesFeaturesEXT, sType}
 
 instance Offset "pNext" VkPhysicalDevicePipelineLibraryGroupHandlesFeaturesEXT where
-  rawOffset = #{offset struct VkPhysicalDevicePipelineLibraryGroupHandlesFeaturesEXT, pNext}
+  rawOffset = #{offset VkPhysicalDevicePipelineLibraryGroupHandlesFeaturesEXT, pNext}
 
 instance Offset "pipelineLibraryGroupHandles" VkPhysicalDevicePipelineLibraryGroupHandlesFeaturesEXT where
-  rawOffset = #{offset struct VkPhysicalDevicePipelineLibraryGroupHandlesFeaturesEXT, pipelineLibraryGroupHandles}
+  rawOffset = #{offset VkPhysicalDevicePipelineLibraryGroupHandlesFeaturesEXT, pipelineLibraryGroupHandles}
 
 #else
 

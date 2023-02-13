@@ -30,8 +30,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkQueryPoolPerformanceQueryCreateInfoINTEL" #-
          }
 
 instance Storable VkQueryPoolPerformanceQueryCreateInfoINTEL where
-  sizeOf    _ = #{size      struct VkQueryPoolPerformanceQueryCreateInfoINTEL}
-  alignment _ = #{alignment struct VkQueryPoolPerformanceQueryCreateInfoINTEL}
+  sizeOf    _ = #{size      VkQueryPoolPerformanceQueryCreateInfoINTEL}
+  alignment _ = #{alignment VkQueryPoolPerformanceQueryCreateInfoINTEL}
 
   peek ptr = 
     VkQueryPoolPerformanceQueryCreateInfoINTEL
@@ -45,13 +45,13 @@ instance Storable VkQueryPoolPerformanceQueryCreateInfoINTEL where
     pokeField @"performanceCountersSampling" ptr val
 
 instance Offset "sType" VkQueryPoolPerformanceQueryCreateInfoINTEL where
-  rawOffset = #{offset struct VkQueryPoolPerformanceQueryCreateInfoINTEL, sType}
+  rawOffset = #{offset VkQueryPoolPerformanceQueryCreateInfoINTEL, sType}
 
 instance Offset "pNext" VkQueryPoolPerformanceQueryCreateInfoINTEL where
-  rawOffset = #{offset struct VkQueryPoolPerformanceQueryCreateInfoINTEL, pNext}
+  rawOffset = #{offset VkQueryPoolPerformanceQueryCreateInfoINTEL, pNext}
 
 instance Offset "performanceCountersSampling" VkQueryPoolPerformanceQueryCreateInfoINTEL where
-  rawOffset = #{offset struct VkQueryPoolPerformanceQueryCreateInfoINTEL, performanceCountersSampling}
+  rawOffset = #{offset VkQueryPoolPerformanceQueryCreateInfoINTEL, performanceCountersSampling}
 
 #else
 

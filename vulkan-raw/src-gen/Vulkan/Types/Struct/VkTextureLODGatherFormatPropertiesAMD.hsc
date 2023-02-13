@@ -30,8 +30,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkTextureLODGatherFormatPropertiesAMD" #-} VkT
          }
 
 instance Storable VkTextureLODGatherFormatPropertiesAMD where
-  sizeOf    _ = #{size      struct VkTextureLODGatherFormatPropertiesAMD}
-  alignment _ = #{alignment struct VkTextureLODGatherFormatPropertiesAMD}
+  sizeOf    _ = #{size      VkTextureLODGatherFormatPropertiesAMD}
+  alignment _ = #{alignment VkTextureLODGatherFormatPropertiesAMD}
 
   peek ptr = 
     VkTextureLODGatherFormatPropertiesAMD
@@ -45,13 +45,13 @@ instance Storable VkTextureLODGatherFormatPropertiesAMD where
     pokeField @"supportsTextureGatherLODBiasAMD" ptr val
 
 instance Offset "sType" VkTextureLODGatherFormatPropertiesAMD where
-  rawOffset = #{offset struct VkTextureLODGatherFormatPropertiesAMD, sType}
+  rawOffset = #{offset VkTextureLODGatherFormatPropertiesAMD, sType}
 
 instance Offset "pNext" VkTextureLODGatherFormatPropertiesAMD where
-  rawOffset = #{offset struct VkTextureLODGatherFormatPropertiesAMD, pNext}
+  rawOffset = #{offset VkTextureLODGatherFormatPropertiesAMD, pNext}
 
 instance Offset "supportsTextureGatherLODBiasAMD" VkTextureLODGatherFormatPropertiesAMD where
-  rawOffset = #{offset struct VkTextureLODGatherFormatPropertiesAMD, supportsTextureGatherLODBiasAMD}
+  rawOffset = #{offset VkTextureLODGatherFormatPropertiesAMD, supportsTextureGatherLODBiasAMD}
 
 #else
 

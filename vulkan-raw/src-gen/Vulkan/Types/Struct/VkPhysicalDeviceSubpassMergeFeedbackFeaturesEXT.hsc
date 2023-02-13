@@ -30,8 +30,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkPhysicalDeviceSubpassMergeFeedbackFeaturesEX
          }
 
 instance Storable VkPhysicalDeviceSubpassMergeFeedbackFeaturesEXT where
-  sizeOf    _ = #{size      struct VkPhysicalDeviceSubpassMergeFeedbackFeaturesEXT}
-  alignment _ = #{alignment struct VkPhysicalDeviceSubpassMergeFeedbackFeaturesEXT}
+  sizeOf    _ = #{size      VkPhysicalDeviceSubpassMergeFeedbackFeaturesEXT}
+  alignment _ = #{alignment VkPhysicalDeviceSubpassMergeFeedbackFeaturesEXT}
 
   peek ptr = 
     VkPhysicalDeviceSubpassMergeFeedbackFeaturesEXT
@@ -45,13 +45,13 @@ instance Storable VkPhysicalDeviceSubpassMergeFeedbackFeaturesEXT where
     pokeField @"subpassMergeFeedback" ptr val
 
 instance Offset "sType" VkPhysicalDeviceSubpassMergeFeedbackFeaturesEXT where
-  rawOffset = #{offset struct VkPhysicalDeviceSubpassMergeFeedbackFeaturesEXT, sType}
+  rawOffset = #{offset VkPhysicalDeviceSubpassMergeFeedbackFeaturesEXT, sType}
 
 instance Offset "pNext" VkPhysicalDeviceSubpassMergeFeedbackFeaturesEXT where
-  rawOffset = #{offset struct VkPhysicalDeviceSubpassMergeFeedbackFeaturesEXT, pNext}
+  rawOffset = #{offset VkPhysicalDeviceSubpassMergeFeedbackFeaturesEXT, pNext}
 
 instance Offset "subpassMergeFeedback" VkPhysicalDeviceSubpassMergeFeedbackFeaturesEXT where
-  rawOffset = #{offset struct VkPhysicalDeviceSubpassMergeFeedbackFeaturesEXT, subpassMergeFeedback}
+  rawOffset = #{offset VkPhysicalDeviceSubpassMergeFeedbackFeaturesEXT, subpassMergeFeedback}
 
 #else
 

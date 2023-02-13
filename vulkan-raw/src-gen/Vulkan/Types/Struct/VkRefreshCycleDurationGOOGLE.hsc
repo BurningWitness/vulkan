@@ -26,8 +26,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkRefreshCycleDurationGOOGLE" #-} VkRefreshCyc
          }
 
 instance Storable VkRefreshCycleDurationGOOGLE where
-  sizeOf    _ = #{size      struct VkRefreshCycleDurationGOOGLE}
-  alignment _ = #{alignment struct VkRefreshCycleDurationGOOGLE}
+  sizeOf    _ = #{size      VkRefreshCycleDurationGOOGLE}
+  alignment _ = #{alignment VkRefreshCycleDurationGOOGLE}
 
   peek ptr = 
     VkRefreshCycleDurationGOOGLE
@@ -38,7 +38,7 @@ instance Storable VkRefreshCycleDurationGOOGLE where
     pokeField @"refreshDuration" ptr val
 
 instance Offset "refreshDuration" VkRefreshCycleDurationGOOGLE where
-  rawOffset = #{offset struct VkRefreshCycleDurationGOOGLE, refreshDuration}
+  rawOffset = #{offset VkRefreshCycleDurationGOOGLE, refreshDuration}
 
 #else
 

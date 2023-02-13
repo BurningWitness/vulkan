@@ -31,8 +31,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkPhysicalDeviceMaintenance3Properties" #-} Vk
          }
 
 instance Storable VkPhysicalDeviceMaintenance3Properties where
-  sizeOf    _ = #{size      struct VkPhysicalDeviceMaintenance3Properties}
-  alignment _ = #{alignment struct VkPhysicalDeviceMaintenance3Properties}
+  sizeOf    _ = #{size      VkPhysicalDeviceMaintenance3Properties}
+  alignment _ = #{alignment VkPhysicalDeviceMaintenance3Properties}
 
   peek ptr = 
     VkPhysicalDeviceMaintenance3Properties
@@ -48,16 +48,16 @@ instance Storable VkPhysicalDeviceMaintenance3Properties where
     pokeField @"maxMemoryAllocationSize" ptr val
 
 instance Offset "sType" VkPhysicalDeviceMaintenance3Properties where
-  rawOffset = #{offset struct VkPhysicalDeviceMaintenance3Properties, sType}
+  rawOffset = #{offset VkPhysicalDeviceMaintenance3Properties, sType}
 
 instance Offset "pNext" VkPhysicalDeviceMaintenance3Properties where
-  rawOffset = #{offset struct VkPhysicalDeviceMaintenance3Properties, pNext}
+  rawOffset = #{offset VkPhysicalDeviceMaintenance3Properties, pNext}
 
 instance Offset "maxPerSetDescriptors" VkPhysicalDeviceMaintenance3Properties where
-  rawOffset = #{offset struct VkPhysicalDeviceMaintenance3Properties, maxPerSetDescriptors}
+  rawOffset = #{offset VkPhysicalDeviceMaintenance3Properties, maxPerSetDescriptors}
 
 instance Offset "maxMemoryAllocationSize" VkPhysicalDeviceMaintenance3Properties where
-  rawOffset = #{offset struct VkPhysicalDeviceMaintenance3Properties, maxMemoryAllocationSize}
+  rawOffset = #{offset VkPhysicalDeviceMaintenance3Properties, maxMemoryAllocationSize}
 
 #else
 

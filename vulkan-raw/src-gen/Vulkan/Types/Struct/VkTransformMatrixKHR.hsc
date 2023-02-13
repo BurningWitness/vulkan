@@ -26,8 +26,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkTransformMatrixKHR" #-} VkTransformMatrixKHR
          }
 
 instance Storable VkTransformMatrixKHR where
-  sizeOf    _ = #{size      struct VkTransformMatrixKHR}
-  alignment _ = #{alignment struct VkTransformMatrixKHR}
+  sizeOf    _ = #{size      VkTransformMatrixKHR}
+  alignment _ = #{alignment VkTransformMatrixKHR}
 
   peek ptr = 
     VkTransformMatrixKHR
@@ -38,7 +38,7 @@ instance Storable VkTransformMatrixKHR where
     pokeField @"matrix" ptr val
 
 instance Offset "matrix" VkTransformMatrixKHR where
-  rawOffset = #{offset struct VkTransformMatrixKHR, matrix}
+  rawOffset = #{offset VkTransformMatrixKHR, matrix}
 
 #else
 

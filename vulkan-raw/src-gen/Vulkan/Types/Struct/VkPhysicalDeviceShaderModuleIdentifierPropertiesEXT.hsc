@@ -29,8 +29,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkPhysicalDeviceShaderModuleIdentifierProperti
          }
 
 instance Storable VkPhysicalDeviceShaderModuleIdentifierPropertiesEXT where
-  sizeOf    _ = #{size      struct VkPhysicalDeviceShaderModuleIdentifierPropertiesEXT}
-  alignment _ = #{alignment struct VkPhysicalDeviceShaderModuleIdentifierPropertiesEXT}
+  sizeOf    _ = #{size      VkPhysicalDeviceShaderModuleIdentifierPropertiesEXT}
+  alignment _ = #{alignment VkPhysicalDeviceShaderModuleIdentifierPropertiesEXT}
 
   peek ptr = 
     VkPhysicalDeviceShaderModuleIdentifierPropertiesEXT
@@ -44,13 +44,13 @@ instance Storable VkPhysicalDeviceShaderModuleIdentifierPropertiesEXT where
     pokeField @"shaderModuleIdentifierAlgorithmUUID" ptr val
 
 instance Offset "sType" VkPhysicalDeviceShaderModuleIdentifierPropertiesEXT where
-  rawOffset = #{offset struct VkPhysicalDeviceShaderModuleIdentifierPropertiesEXT, sType}
+  rawOffset = #{offset VkPhysicalDeviceShaderModuleIdentifierPropertiesEXT, sType}
 
 instance Offset "pNext" VkPhysicalDeviceShaderModuleIdentifierPropertiesEXT where
-  rawOffset = #{offset struct VkPhysicalDeviceShaderModuleIdentifierPropertiesEXT, pNext}
+  rawOffset = #{offset VkPhysicalDeviceShaderModuleIdentifierPropertiesEXT, pNext}
 
 instance Offset "shaderModuleIdentifierAlgorithmUUID" VkPhysicalDeviceShaderModuleIdentifierPropertiesEXT where
-  rawOffset = #{offset struct VkPhysicalDeviceShaderModuleIdentifierPropertiesEXT, shaderModuleIdentifierAlgorithmUUID}
+  rawOffset = #{offset VkPhysicalDeviceShaderModuleIdentifierPropertiesEXT, shaderModuleIdentifierAlgorithmUUID}
 
 #else
 

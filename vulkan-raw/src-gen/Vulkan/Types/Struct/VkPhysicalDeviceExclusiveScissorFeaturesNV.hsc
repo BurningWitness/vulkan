@@ -30,8 +30,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkPhysicalDeviceExclusiveScissorFeaturesNV" #-
          }
 
 instance Storable VkPhysicalDeviceExclusiveScissorFeaturesNV where
-  sizeOf    _ = #{size      struct VkPhysicalDeviceExclusiveScissorFeaturesNV}
-  alignment _ = #{alignment struct VkPhysicalDeviceExclusiveScissorFeaturesNV}
+  sizeOf    _ = #{size      VkPhysicalDeviceExclusiveScissorFeaturesNV}
+  alignment _ = #{alignment VkPhysicalDeviceExclusiveScissorFeaturesNV}
 
   peek ptr = 
     VkPhysicalDeviceExclusiveScissorFeaturesNV
@@ -45,13 +45,13 @@ instance Storable VkPhysicalDeviceExclusiveScissorFeaturesNV where
     pokeField @"exclusiveScissor" ptr val
 
 instance Offset "sType" VkPhysicalDeviceExclusiveScissorFeaturesNV where
-  rawOffset = #{offset struct VkPhysicalDeviceExclusiveScissorFeaturesNV, sType}
+  rawOffset = #{offset VkPhysicalDeviceExclusiveScissorFeaturesNV, sType}
 
 instance Offset "pNext" VkPhysicalDeviceExclusiveScissorFeaturesNV where
-  rawOffset = #{offset struct VkPhysicalDeviceExclusiveScissorFeaturesNV, pNext}
+  rawOffset = #{offset VkPhysicalDeviceExclusiveScissorFeaturesNV, pNext}
 
 instance Offset "exclusiveScissor" VkPhysicalDeviceExclusiveScissorFeaturesNV where
-  rawOffset = #{offset struct VkPhysicalDeviceExclusiveScissorFeaturesNV, exclusiveScissor}
+  rawOffset = #{offset VkPhysicalDeviceExclusiveScissorFeaturesNV, exclusiveScissor}
 
 #else
 

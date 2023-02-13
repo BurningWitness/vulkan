@@ -32,8 +32,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkRenderingFragmentDensityMapAttachmentInfoEXT
          }
 
 instance Storable VkRenderingFragmentDensityMapAttachmentInfoEXT where
-  sizeOf    _ = #{size      struct VkRenderingFragmentDensityMapAttachmentInfoEXT}
-  alignment _ = #{alignment struct VkRenderingFragmentDensityMapAttachmentInfoEXT}
+  sizeOf    _ = #{size      VkRenderingFragmentDensityMapAttachmentInfoEXT}
+  alignment _ = #{alignment VkRenderingFragmentDensityMapAttachmentInfoEXT}
 
   peek ptr = 
     VkRenderingFragmentDensityMapAttachmentInfoEXT
@@ -49,16 +49,16 @@ instance Storable VkRenderingFragmentDensityMapAttachmentInfoEXT where
     pokeField @"imageLayout" ptr val
 
 instance Offset "sType" VkRenderingFragmentDensityMapAttachmentInfoEXT where
-  rawOffset = #{offset struct VkRenderingFragmentDensityMapAttachmentInfoEXT, sType}
+  rawOffset = #{offset VkRenderingFragmentDensityMapAttachmentInfoEXT, sType}
 
 instance Offset "pNext" VkRenderingFragmentDensityMapAttachmentInfoEXT where
-  rawOffset = #{offset struct VkRenderingFragmentDensityMapAttachmentInfoEXT, pNext}
+  rawOffset = #{offset VkRenderingFragmentDensityMapAttachmentInfoEXT, pNext}
 
 instance Offset "imageView" VkRenderingFragmentDensityMapAttachmentInfoEXT where
-  rawOffset = #{offset struct VkRenderingFragmentDensityMapAttachmentInfoEXT, imageView}
+  rawOffset = #{offset VkRenderingFragmentDensityMapAttachmentInfoEXT, imageView}
 
 instance Offset "imageLayout" VkRenderingFragmentDensityMapAttachmentInfoEXT where
-  rawOffset = #{offset struct VkRenderingFragmentDensityMapAttachmentInfoEXT, imageLayout}
+  rawOffset = #{offset VkRenderingFragmentDensityMapAttachmentInfoEXT, imageLayout}
 
 #else
 

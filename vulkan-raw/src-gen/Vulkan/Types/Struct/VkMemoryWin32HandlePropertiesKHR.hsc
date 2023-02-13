@@ -29,8 +29,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkMemoryWin32HandlePropertiesKHR" #-} VkMemory
          }
 
 instance Storable VkMemoryWin32HandlePropertiesKHR where
-  sizeOf    _ = #{size      struct VkMemoryWin32HandlePropertiesKHR}
-  alignment _ = #{alignment struct VkMemoryWin32HandlePropertiesKHR}
+  sizeOf    _ = #{size      VkMemoryWin32HandlePropertiesKHR}
+  alignment _ = #{alignment VkMemoryWin32HandlePropertiesKHR}
 
   peek ptr = 
     VkMemoryWin32HandlePropertiesKHR
@@ -44,13 +44,13 @@ instance Storable VkMemoryWin32HandlePropertiesKHR where
     pokeField @"memoryTypeBits" ptr val
 
 instance Offset "sType" VkMemoryWin32HandlePropertiesKHR where
-  rawOffset = #{offset struct VkMemoryWin32HandlePropertiesKHR, sType}
+  rawOffset = #{offset VkMemoryWin32HandlePropertiesKHR, sType}
 
 instance Offset "pNext" VkMemoryWin32HandlePropertiesKHR where
-  rawOffset = #{offset struct VkMemoryWin32HandlePropertiesKHR, pNext}
+  rawOffset = #{offset VkMemoryWin32HandlePropertiesKHR, pNext}
 
 instance Offset "memoryTypeBits" VkMemoryWin32HandlePropertiesKHR where
-  rawOffset = #{offset struct VkMemoryWin32HandlePropertiesKHR, memoryTypeBits}
+  rawOffset = #{offset VkMemoryWin32HandlePropertiesKHR, memoryTypeBits}
 
 #else
 

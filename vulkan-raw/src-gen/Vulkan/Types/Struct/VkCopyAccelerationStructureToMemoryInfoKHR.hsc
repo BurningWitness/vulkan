@@ -34,8 +34,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkCopyAccelerationStructureToMemoryInfoKHR" #-
          }
 
 instance Storable VkCopyAccelerationStructureToMemoryInfoKHR where
-  sizeOf    _ = #{size      struct VkCopyAccelerationStructureToMemoryInfoKHR}
-  alignment _ = #{alignment struct VkCopyAccelerationStructureToMemoryInfoKHR}
+  sizeOf    _ = #{size      VkCopyAccelerationStructureToMemoryInfoKHR}
+  alignment _ = #{alignment VkCopyAccelerationStructureToMemoryInfoKHR}
 
   peek ptr = 
     VkCopyAccelerationStructureToMemoryInfoKHR
@@ -53,19 +53,19 @@ instance Storable VkCopyAccelerationStructureToMemoryInfoKHR where
     pokeField @"mode" ptr val
 
 instance Offset "sType" VkCopyAccelerationStructureToMemoryInfoKHR where
-  rawOffset = #{offset struct VkCopyAccelerationStructureToMemoryInfoKHR, sType}
+  rawOffset = #{offset VkCopyAccelerationStructureToMemoryInfoKHR, sType}
 
 instance Offset "pNext" VkCopyAccelerationStructureToMemoryInfoKHR where
-  rawOffset = #{offset struct VkCopyAccelerationStructureToMemoryInfoKHR, pNext}
+  rawOffset = #{offset VkCopyAccelerationStructureToMemoryInfoKHR, pNext}
 
 instance Offset "src" VkCopyAccelerationStructureToMemoryInfoKHR where
-  rawOffset = #{offset struct VkCopyAccelerationStructureToMemoryInfoKHR, src}
+  rawOffset = #{offset VkCopyAccelerationStructureToMemoryInfoKHR, src}
 
 instance Offset "dst" VkCopyAccelerationStructureToMemoryInfoKHR where
-  rawOffset = #{offset struct VkCopyAccelerationStructureToMemoryInfoKHR, dst}
+  rawOffset = #{offset VkCopyAccelerationStructureToMemoryInfoKHR, dst}
 
 instance Offset "mode" VkCopyAccelerationStructureToMemoryInfoKHR where
-  rawOffset = #{offset struct VkCopyAccelerationStructureToMemoryInfoKHR, mode}
+  rawOffset = #{offset VkCopyAccelerationStructureToMemoryInfoKHR, mode}
 
 #else
 

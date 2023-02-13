@@ -32,8 +32,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkFenceGetWin32HandleInfoKHR" #-} VkFenceGetWi
          }
 
 instance Storable VkFenceGetWin32HandleInfoKHR where
-  sizeOf    _ = #{size      struct VkFenceGetWin32HandleInfoKHR}
-  alignment _ = #{alignment struct VkFenceGetWin32HandleInfoKHR}
+  sizeOf    _ = #{size      VkFenceGetWin32HandleInfoKHR}
+  alignment _ = #{alignment VkFenceGetWin32HandleInfoKHR}
 
   peek ptr = 
     VkFenceGetWin32HandleInfoKHR
@@ -49,16 +49,16 @@ instance Storable VkFenceGetWin32HandleInfoKHR where
     pokeField @"handleType" ptr val
 
 instance Offset "sType" VkFenceGetWin32HandleInfoKHR where
-  rawOffset = #{offset struct VkFenceGetWin32HandleInfoKHR, sType}
+  rawOffset = #{offset VkFenceGetWin32HandleInfoKHR, sType}
 
 instance Offset "pNext" VkFenceGetWin32HandleInfoKHR where
-  rawOffset = #{offset struct VkFenceGetWin32HandleInfoKHR, pNext}
+  rawOffset = #{offset VkFenceGetWin32HandleInfoKHR, pNext}
 
 instance Offset "fence" VkFenceGetWin32HandleInfoKHR where
-  rawOffset = #{offset struct VkFenceGetWin32HandleInfoKHR, fence}
+  rawOffset = #{offset VkFenceGetWin32HandleInfoKHR, fence}
 
 instance Offset "handleType" VkFenceGetWin32HandleInfoKHR where
-  rawOffset = #{offset struct VkFenceGetWin32HandleInfoKHR, handleType}
+  rawOffset = #{offset VkFenceGetWin32HandleInfoKHR, handleType}
 
 #else
 

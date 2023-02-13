@@ -33,8 +33,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkScreenSurfaceCreateInfoQNX" #-} VkScreenSurf
          }
 
 instance Storable VkScreenSurfaceCreateInfoQNX where
-  sizeOf    _ = #{size      struct VkScreenSurfaceCreateInfoQNX}
-  alignment _ = #{alignment struct VkScreenSurfaceCreateInfoQNX}
+  sizeOf    _ = #{size      VkScreenSurfaceCreateInfoQNX}
+  alignment _ = #{alignment VkScreenSurfaceCreateInfoQNX}
 
   peek ptr = 
     VkScreenSurfaceCreateInfoQNX
@@ -52,19 +52,19 @@ instance Storable VkScreenSurfaceCreateInfoQNX where
     pokeField @"window" ptr val
 
 instance Offset "sType" VkScreenSurfaceCreateInfoQNX where
-  rawOffset = #{offset struct VkScreenSurfaceCreateInfoQNX, sType}
+  rawOffset = #{offset VkScreenSurfaceCreateInfoQNX, sType}
 
 instance Offset "pNext" VkScreenSurfaceCreateInfoQNX where
-  rawOffset = #{offset struct VkScreenSurfaceCreateInfoQNX, pNext}
+  rawOffset = #{offset VkScreenSurfaceCreateInfoQNX, pNext}
 
 instance Offset "flags" VkScreenSurfaceCreateInfoQNX where
-  rawOffset = #{offset struct VkScreenSurfaceCreateInfoQNX, flags}
+  rawOffset = #{offset VkScreenSurfaceCreateInfoQNX, flags}
 
 instance Offset "context" VkScreenSurfaceCreateInfoQNX where
-  rawOffset = #{offset struct VkScreenSurfaceCreateInfoQNX, context}
+  rawOffset = #{offset VkScreenSurfaceCreateInfoQNX, context}
 
 instance Offset "window" VkScreenSurfaceCreateInfoQNX where
-  rawOffset = #{offset struct VkScreenSurfaceCreateInfoQNX, window}
+  rawOffset = #{offset VkScreenSurfaceCreateInfoQNX, window}
 
 #else
 

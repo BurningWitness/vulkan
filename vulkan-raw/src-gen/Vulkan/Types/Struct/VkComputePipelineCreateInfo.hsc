@@ -34,8 +34,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkComputePipelineCreateInfo" #-} VkComputePipe
          }
 
 instance Storable VkComputePipelineCreateInfo where
-  sizeOf    _ = #{size      struct VkComputePipelineCreateInfo}
-  alignment _ = #{alignment struct VkComputePipelineCreateInfo}
+  sizeOf    _ = #{size      VkComputePipelineCreateInfo}
+  alignment _ = #{alignment VkComputePipelineCreateInfo}
 
   peek ptr = 
     VkComputePipelineCreateInfo
@@ -57,22 +57,22 @@ instance Storable VkComputePipelineCreateInfo where
     pokeField @"basePipelineIndex" ptr val
 
 instance Offset "sType" VkComputePipelineCreateInfo where
-  rawOffset = #{offset struct VkComputePipelineCreateInfo, sType}
+  rawOffset = #{offset VkComputePipelineCreateInfo, sType}
 
 instance Offset "pNext" VkComputePipelineCreateInfo where
-  rawOffset = #{offset struct VkComputePipelineCreateInfo, pNext}
+  rawOffset = #{offset VkComputePipelineCreateInfo, pNext}
 
 instance Offset "flags" VkComputePipelineCreateInfo where
-  rawOffset = #{offset struct VkComputePipelineCreateInfo, flags}
+  rawOffset = #{offset VkComputePipelineCreateInfo, flags}
 
 instance Offset "stage" VkComputePipelineCreateInfo where
-  rawOffset = #{offset struct VkComputePipelineCreateInfo, stage}
+  rawOffset = #{offset VkComputePipelineCreateInfo, stage}
 
 instance Offset "layout" VkComputePipelineCreateInfo where
-  rawOffset = #{offset struct VkComputePipelineCreateInfo, layout}
+  rawOffset = #{offset VkComputePipelineCreateInfo, layout}
 
 instance Offset "basePipelineHandle" VkComputePipelineCreateInfo where
-  rawOffset = #{offset struct VkComputePipelineCreateInfo, basePipelineHandle}
+  rawOffset = #{offset VkComputePipelineCreateInfo, basePipelineHandle}
 
 instance Offset "basePipelineIndex" VkComputePipelineCreateInfo where
-  rawOffset = #{offset struct VkComputePipelineCreateInfo, basePipelineIndex}
+  rawOffset = #{offset VkComputePipelineCreateInfo, basePipelineIndex}

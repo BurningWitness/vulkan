@@ -29,8 +29,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkImageSubresourceRange" #-} VkImageSubresourc
          }
 
 instance Storable VkImageSubresourceRange where
-  sizeOf    _ = #{size      struct VkImageSubresourceRange}
-  alignment _ = #{alignment struct VkImageSubresourceRange}
+  sizeOf    _ = #{size      VkImageSubresourceRange}
+  alignment _ = #{alignment VkImageSubresourceRange}
 
   peek ptr = 
     VkImageSubresourceRange
@@ -48,16 +48,16 @@ instance Storable VkImageSubresourceRange where
     pokeField @"layerCount" ptr val
 
 instance Offset "aspectMask" VkImageSubresourceRange where
-  rawOffset = #{offset struct VkImageSubresourceRange, aspectMask}
+  rawOffset = #{offset VkImageSubresourceRange, aspectMask}
 
 instance Offset "baseMipLevel" VkImageSubresourceRange where
-  rawOffset = #{offset struct VkImageSubresourceRange, baseMipLevel}
+  rawOffset = #{offset VkImageSubresourceRange, baseMipLevel}
 
 instance Offset "levelCount" VkImageSubresourceRange where
-  rawOffset = #{offset struct VkImageSubresourceRange, levelCount}
+  rawOffset = #{offset VkImageSubresourceRange, levelCount}
 
 instance Offset "baseArrayLayer" VkImageSubresourceRange where
-  rawOffset = #{offset struct VkImageSubresourceRange, baseArrayLayer}
+  rawOffset = #{offset VkImageSubresourceRange, baseArrayLayer}
 
 instance Offset "layerCount" VkImageSubresourceRange where
-  rawOffset = #{offset struct VkImageSubresourceRange, layerCount}
+  rawOffset = #{offset VkImageSubresourceRange, layerCount}

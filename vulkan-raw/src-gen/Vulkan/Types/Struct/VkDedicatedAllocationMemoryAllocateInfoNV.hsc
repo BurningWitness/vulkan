@@ -31,8 +31,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkDedicatedAllocationMemoryAllocateInfoNV" #-}
          }
 
 instance Storable VkDedicatedAllocationMemoryAllocateInfoNV where
-  sizeOf    _ = #{size      struct VkDedicatedAllocationMemoryAllocateInfoNV}
-  alignment _ = #{alignment struct VkDedicatedAllocationMemoryAllocateInfoNV}
+  sizeOf    _ = #{size      VkDedicatedAllocationMemoryAllocateInfoNV}
+  alignment _ = #{alignment VkDedicatedAllocationMemoryAllocateInfoNV}
 
   peek ptr = 
     VkDedicatedAllocationMemoryAllocateInfoNV
@@ -48,16 +48,16 @@ instance Storable VkDedicatedAllocationMemoryAllocateInfoNV where
     pokeField @"buffer" ptr val
 
 instance Offset "sType" VkDedicatedAllocationMemoryAllocateInfoNV where
-  rawOffset = #{offset struct VkDedicatedAllocationMemoryAllocateInfoNV, sType}
+  rawOffset = #{offset VkDedicatedAllocationMemoryAllocateInfoNV, sType}
 
 instance Offset "pNext" VkDedicatedAllocationMemoryAllocateInfoNV where
-  rawOffset = #{offset struct VkDedicatedAllocationMemoryAllocateInfoNV, pNext}
+  rawOffset = #{offset VkDedicatedAllocationMemoryAllocateInfoNV, pNext}
 
 instance Offset "image" VkDedicatedAllocationMemoryAllocateInfoNV where
-  rawOffset = #{offset struct VkDedicatedAllocationMemoryAllocateInfoNV, image}
+  rawOffset = #{offset VkDedicatedAllocationMemoryAllocateInfoNV, image}
 
 instance Offset "buffer" VkDedicatedAllocationMemoryAllocateInfoNV where
-  rawOffset = #{offset struct VkDedicatedAllocationMemoryAllocateInfoNV, buffer}
+  rawOffset = #{offset VkDedicatedAllocationMemoryAllocateInfoNV, buffer}
 
 #else
 

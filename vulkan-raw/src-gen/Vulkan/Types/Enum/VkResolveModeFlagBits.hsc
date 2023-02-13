@@ -38,27 +38,27 @@ pattern VK_RESOLVE_MODE_MAX_BIT :: (Eq a, Num a) => a
 pattern VK_RESOLVE_MODE_MAX_BIT = 8
 #endif
 
-#if VK_KHR_depth_stencil_resolve
+#if VK_VERSION_1_2
 pattern VK_RESOLVE_MODE_NONE_KHR :: (Eq a, Num a) => a
-pattern VK_RESOLVE_MODE_NONE_KHR = VK_RESOLVE_MODE_NONE
+pattern VK_RESOLVE_MODE_NONE_KHR = 0
 #endif
 
-#if VK_KHR_depth_stencil_resolve
+#if VK_VERSION_1_2
 pattern VK_RESOLVE_MODE_SAMPLE_ZERO_BIT_KHR :: (Eq a, Num a) => a
-pattern VK_RESOLVE_MODE_SAMPLE_ZERO_BIT_KHR = VK_RESOLVE_MODE_SAMPLE_ZERO_BIT
+pattern VK_RESOLVE_MODE_SAMPLE_ZERO_BIT_KHR = 1
 #endif
 
-#if VK_KHR_depth_stencil_resolve
+#if VK_VERSION_1_2
 pattern VK_RESOLVE_MODE_AVERAGE_BIT_KHR :: (Eq a, Num a) => a
-pattern VK_RESOLVE_MODE_AVERAGE_BIT_KHR = VK_RESOLVE_MODE_AVERAGE_BIT
+pattern VK_RESOLVE_MODE_AVERAGE_BIT_KHR = 2
 #endif
 
-#if VK_KHR_depth_stencil_resolve
+#if VK_VERSION_1_2
 pattern VK_RESOLVE_MODE_MIN_BIT_KHR :: (Eq a, Num a) => a
-pattern VK_RESOLVE_MODE_MIN_BIT_KHR = VK_RESOLVE_MODE_MIN_BIT
+pattern VK_RESOLVE_MODE_MIN_BIT_KHR = 4
 #endif
 
-#if VK_KHR_depth_stencil_resolve
+#if VK_VERSION_1_2
 pattern VK_RESOLVE_MODE_MAX_BIT_KHR :: (Eq a, Num a) => a
-pattern VK_RESOLVE_MODE_MAX_BIT_KHR = VK_RESOLVE_MODE_MAX_BIT
+pattern VK_RESOLVE_MODE_MAX_BIT_KHR = 8
 #endif

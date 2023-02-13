@@ -41,8 +41,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkDescriptorUpdateTemplateCreateInfo" #-} VkDe
          }
 
 instance Storable VkDescriptorUpdateTemplateCreateInfo where
-  sizeOf    _ = #{size      struct VkDescriptorUpdateTemplateCreateInfo}
-  alignment _ = #{alignment struct VkDescriptorUpdateTemplateCreateInfo}
+  sizeOf    _ = #{size      VkDescriptorUpdateTemplateCreateInfo}
+  alignment _ = #{alignment VkDescriptorUpdateTemplateCreateInfo}
 
   peek ptr = 
     VkDescriptorUpdateTemplateCreateInfo
@@ -70,34 +70,34 @@ instance Storable VkDescriptorUpdateTemplateCreateInfo where
     pokeField @"set" ptr val
 
 instance Offset "sType" VkDescriptorUpdateTemplateCreateInfo where
-  rawOffset = #{offset struct VkDescriptorUpdateTemplateCreateInfo, sType}
+  rawOffset = #{offset VkDescriptorUpdateTemplateCreateInfo, sType}
 
 instance Offset "pNext" VkDescriptorUpdateTemplateCreateInfo where
-  rawOffset = #{offset struct VkDescriptorUpdateTemplateCreateInfo, pNext}
+  rawOffset = #{offset VkDescriptorUpdateTemplateCreateInfo, pNext}
 
 instance Offset "flags" VkDescriptorUpdateTemplateCreateInfo where
-  rawOffset = #{offset struct VkDescriptorUpdateTemplateCreateInfo, flags}
+  rawOffset = #{offset VkDescriptorUpdateTemplateCreateInfo, flags}
 
 instance Offset "descriptorUpdateEntryCount" VkDescriptorUpdateTemplateCreateInfo where
-  rawOffset = #{offset struct VkDescriptorUpdateTemplateCreateInfo, descriptorUpdateEntryCount}
+  rawOffset = #{offset VkDescriptorUpdateTemplateCreateInfo, descriptorUpdateEntryCount}
 
 instance Offset "pDescriptorUpdateEntries" VkDescriptorUpdateTemplateCreateInfo where
-  rawOffset = #{offset struct VkDescriptorUpdateTemplateCreateInfo, pDescriptorUpdateEntries}
+  rawOffset = #{offset VkDescriptorUpdateTemplateCreateInfo, pDescriptorUpdateEntries}
 
 instance Offset "templateType" VkDescriptorUpdateTemplateCreateInfo where
-  rawOffset = #{offset struct VkDescriptorUpdateTemplateCreateInfo, templateType}
+  rawOffset = #{offset VkDescriptorUpdateTemplateCreateInfo, templateType}
 
 instance Offset "descriptorSetLayout" VkDescriptorUpdateTemplateCreateInfo where
-  rawOffset = #{offset struct VkDescriptorUpdateTemplateCreateInfo, descriptorSetLayout}
+  rawOffset = #{offset VkDescriptorUpdateTemplateCreateInfo, descriptorSetLayout}
 
 instance Offset "pipelineBindPoint" VkDescriptorUpdateTemplateCreateInfo where
-  rawOffset = #{offset struct VkDescriptorUpdateTemplateCreateInfo, pipelineBindPoint}
+  rawOffset = #{offset VkDescriptorUpdateTemplateCreateInfo, pipelineBindPoint}
 
 instance Offset "pipelineLayout" VkDescriptorUpdateTemplateCreateInfo where
-  rawOffset = #{offset struct VkDescriptorUpdateTemplateCreateInfo, pipelineLayout}
+  rawOffset = #{offset VkDescriptorUpdateTemplateCreateInfo, pipelineLayout}
 
 instance Offset "set" VkDescriptorUpdateTemplateCreateInfo where
-  rawOffset = #{offset struct VkDescriptorUpdateTemplateCreateInfo, set}
+  rawOffset = #{offset VkDescriptorUpdateTemplateCreateInfo, set}
 
 #else
 

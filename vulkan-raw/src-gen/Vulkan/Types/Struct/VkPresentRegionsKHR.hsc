@@ -31,8 +31,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkPresentRegionsKHR" #-} VkPresentRegionsKHR =
          }
 
 instance Storable VkPresentRegionsKHR where
-  sizeOf    _ = #{size      struct VkPresentRegionsKHR}
-  alignment _ = #{alignment struct VkPresentRegionsKHR}
+  sizeOf    _ = #{size      VkPresentRegionsKHR}
+  alignment _ = #{alignment VkPresentRegionsKHR}
 
   peek ptr = 
     VkPresentRegionsKHR
@@ -48,16 +48,16 @@ instance Storable VkPresentRegionsKHR where
     pokeField @"pRegions" ptr val
 
 instance Offset "sType" VkPresentRegionsKHR where
-  rawOffset = #{offset struct VkPresentRegionsKHR, sType}
+  rawOffset = #{offset VkPresentRegionsKHR, sType}
 
 instance Offset "pNext" VkPresentRegionsKHR where
-  rawOffset = #{offset struct VkPresentRegionsKHR, pNext}
+  rawOffset = #{offset VkPresentRegionsKHR, pNext}
 
 instance Offset "swapchainCount" VkPresentRegionsKHR where
-  rawOffset = #{offset struct VkPresentRegionsKHR, swapchainCount}
+  rawOffset = #{offset VkPresentRegionsKHR, swapchainCount}
 
 instance Offset "pRegions" VkPresentRegionsKHR where
-  rawOffset = #{offset struct VkPresentRegionsKHR, pRegions}
+  rawOffset = #{offset VkPresentRegionsKHR, pRegions}
 
 #else
 

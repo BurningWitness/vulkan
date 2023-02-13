@@ -33,8 +33,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkImageViewHandleInfoNVX" #-} VkImageViewHandl
          }
 
 instance Storable VkImageViewHandleInfoNVX where
-  sizeOf    _ = #{size      struct VkImageViewHandleInfoNVX}
-  alignment _ = #{alignment struct VkImageViewHandleInfoNVX}
+  sizeOf    _ = #{size      VkImageViewHandleInfoNVX}
+  alignment _ = #{alignment VkImageViewHandleInfoNVX}
 
   peek ptr = 
     VkImageViewHandleInfoNVX
@@ -52,19 +52,19 @@ instance Storable VkImageViewHandleInfoNVX where
     pokeField @"sampler" ptr val
 
 instance Offset "sType" VkImageViewHandleInfoNVX where
-  rawOffset = #{offset struct VkImageViewHandleInfoNVX, sType}
+  rawOffset = #{offset VkImageViewHandleInfoNVX, sType}
 
 instance Offset "pNext" VkImageViewHandleInfoNVX where
-  rawOffset = #{offset struct VkImageViewHandleInfoNVX, pNext}
+  rawOffset = #{offset VkImageViewHandleInfoNVX, pNext}
 
 instance Offset "imageView" VkImageViewHandleInfoNVX where
-  rawOffset = #{offset struct VkImageViewHandleInfoNVX, imageView}
+  rawOffset = #{offset VkImageViewHandleInfoNVX, imageView}
 
 instance Offset "descriptorType" VkImageViewHandleInfoNVX where
-  rawOffset = #{offset struct VkImageViewHandleInfoNVX, descriptorType}
+  rawOffset = #{offset VkImageViewHandleInfoNVX, descriptorType}
 
 instance Offset "sampler" VkImageViewHandleInfoNVX where
-  rawOffset = #{offset struct VkImageViewHandleInfoNVX, sampler}
+  rawOffset = #{offset VkImageViewHandleInfoNVX, sampler}
 
 #else
 

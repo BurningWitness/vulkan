@@ -40,8 +40,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkVideoEncodeH265RateControlLayerInfoEXT" #-} 
          }
 
 instance Storable VkVideoEncodeH265RateControlLayerInfoEXT where
-  sizeOf    _ = #{size      struct VkVideoEncodeH265RateControlLayerInfoEXT}
-  alignment _ = #{alignment struct VkVideoEncodeH265RateControlLayerInfoEXT}
+  sizeOf    _ = #{size      VkVideoEncodeH265RateControlLayerInfoEXT}
+  alignment _ = #{alignment VkVideoEncodeH265RateControlLayerInfoEXT}
 
   peek ptr = 
     VkVideoEncodeH265RateControlLayerInfoEXT
@@ -71,37 +71,37 @@ instance Storable VkVideoEncodeH265RateControlLayerInfoEXT where
     pokeField @"maxFrameSize" ptr val
 
 instance Offset "sType" VkVideoEncodeH265RateControlLayerInfoEXT where
-  rawOffset = #{offset struct VkVideoEncodeH265RateControlLayerInfoEXT, sType}
+  rawOffset = #{offset VkVideoEncodeH265RateControlLayerInfoEXT, sType}
 
 instance Offset "pNext" VkVideoEncodeH265RateControlLayerInfoEXT where
-  rawOffset = #{offset struct VkVideoEncodeH265RateControlLayerInfoEXT, pNext}
+  rawOffset = #{offset VkVideoEncodeH265RateControlLayerInfoEXT, pNext}
 
 instance Offset "temporalId" VkVideoEncodeH265RateControlLayerInfoEXT where
-  rawOffset = #{offset struct VkVideoEncodeH265RateControlLayerInfoEXT, temporalId}
+  rawOffset = #{offset VkVideoEncodeH265RateControlLayerInfoEXT, temporalId}
 
 instance Offset "useInitialRcQp" VkVideoEncodeH265RateControlLayerInfoEXT where
-  rawOffset = #{offset struct VkVideoEncodeH265RateControlLayerInfoEXT, useInitialRcQp}
+  rawOffset = #{offset VkVideoEncodeH265RateControlLayerInfoEXT, useInitialRcQp}
 
 instance Offset "initialRcQp" VkVideoEncodeH265RateControlLayerInfoEXT where
-  rawOffset = #{offset struct VkVideoEncodeH265RateControlLayerInfoEXT, initialRcQp}
+  rawOffset = #{offset VkVideoEncodeH265RateControlLayerInfoEXT, initialRcQp}
 
 instance Offset "useMinQp" VkVideoEncodeH265RateControlLayerInfoEXT where
-  rawOffset = #{offset struct VkVideoEncodeH265RateControlLayerInfoEXT, useMinQp}
+  rawOffset = #{offset VkVideoEncodeH265RateControlLayerInfoEXT, useMinQp}
 
 instance Offset "minQp" VkVideoEncodeH265RateControlLayerInfoEXT where
-  rawOffset = #{offset struct VkVideoEncodeH265RateControlLayerInfoEXT, minQp}
+  rawOffset = #{offset VkVideoEncodeH265RateControlLayerInfoEXT, minQp}
 
 instance Offset "useMaxQp" VkVideoEncodeH265RateControlLayerInfoEXT where
-  rawOffset = #{offset struct VkVideoEncodeH265RateControlLayerInfoEXT, useMaxQp}
+  rawOffset = #{offset VkVideoEncodeH265RateControlLayerInfoEXT, useMaxQp}
 
 instance Offset "maxQp" VkVideoEncodeH265RateControlLayerInfoEXT where
-  rawOffset = #{offset struct VkVideoEncodeH265RateControlLayerInfoEXT, maxQp}
+  rawOffset = #{offset VkVideoEncodeH265RateControlLayerInfoEXT, maxQp}
 
 instance Offset "useMaxFrameSize" VkVideoEncodeH265RateControlLayerInfoEXT where
-  rawOffset = #{offset struct VkVideoEncodeH265RateControlLayerInfoEXT, useMaxFrameSize}
+  rawOffset = #{offset VkVideoEncodeH265RateControlLayerInfoEXT, useMaxFrameSize}
 
 instance Offset "maxFrameSize" VkVideoEncodeH265RateControlLayerInfoEXT where
-  rawOffset = #{offset struct VkVideoEncodeH265RateControlLayerInfoEXT, maxFrameSize}
+  rawOffset = #{offset VkVideoEncodeH265RateControlLayerInfoEXT, maxFrameSize}
 
 #else
 

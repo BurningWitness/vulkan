@@ -25,4 +25,4 @@ pattern VK_STENCIL_FACE_FRONT_AND_BACK = 3
 
 -- | Backwards-compatible alias containing a typo
 pattern VK_STENCIL_FRONT_AND_BACK :: (Eq a, Num a) => a
-pattern VK_STENCIL_FRONT_AND_BACK = VK_STENCIL_FACE_FRONT_AND_BACK
+pattern VK_STENCIL_FRONT_AND_BACK = 3

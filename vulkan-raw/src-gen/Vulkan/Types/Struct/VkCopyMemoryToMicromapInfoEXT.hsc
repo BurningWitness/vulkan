@@ -34,8 +34,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkCopyMemoryToMicromapInfoEXT" #-} VkCopyMemor
          }
 
 instance Storable VkCopyMemoryToMicromapInfoEXT where
-  sizeOf    _ = #{size      struct VkCopyMemoryToMicromapInfoEXT}
-  alignment _ = #{alignment struct VkCopyMemoryToMicromapInfoEXT}
+  sizeOf    _ = #{size      VkCopyMemoryToMicromapInfoEXT}
+  alignment _ = #{alignment VkCopyMemoryToMicromapInfoEXT}
 
   peek ptr = 
     VkCopyMemoryToMicromapInfoEXT
@@ -53,19 +53,19 @@ instance Storable VkCopyMemoryToMicromapInfoEXT where
     pokeField @"mode" ptr val
 
 instance Offset "sType" VkCopyMemoryToMicromapInfoEXT where
-  rawOffset = #{offset struct VkCopyMemoryToMicromapInfoEXT, sType}
+  rawOffset = #{offset VkCopyMemoryToMicromapInfoEXT, sType}
 
 instance Offset "pNext" VkCopyMemoryToMicromapInfoEXT where
-  rawOffset = #{offset struct VkCopyMemoryToMicromapInfoEXT, pNext}
+  rawOffset = #{offset VkCopyMemoryToMicromapInfoEXT, pNext}
 
 instance Offset "src" VkCopyMemoryToMicromapInfoEXT where
-  rawOffset = #{offset struct VkCopyMemoryToMicromapInfoEXT, src}
+  rawOffset = #{offset VkCopyMemoryToMicromapInfoEXT, src}
 
 instance Offset "dst" VkCopyMemoryToMicromapInfoEXT where
-  rawOffset = #{offset struct VkCopyMemoryToMicromapInfoEXT, dst}
+  rawOffset = #{offset VkCopyMemoryToMicromapInfoEXT, dst}
 
 instance Offset "mode" VkCopyMemoryToMicromapInfoEXT where
-  rawOffset = #{offset struct VkCopyMemoryToMicromapInfoEXT, mode}
+  rawOffset = #{offset VkCopyMemoryToMicromapInfoEXT, mode}
 
 #else
 

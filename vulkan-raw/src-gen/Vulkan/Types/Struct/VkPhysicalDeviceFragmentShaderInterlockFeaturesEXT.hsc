@@ -32,8 +32,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkPhysicalDeviceFragmentShaderInterlockFeature
          }
 
 instance Storable VkPhysicalDeviceFragmentShaderInterlockFeaturesEXT where
-  sizeOf    _ = #{size      struct VkPhysicalDeviceFragmentShaderInterlockFeaturesEXT}
-  alignment _ = #{alignment struct VkPhysicalDeviceFragmentShaderInterlockFeaturesEXT}
+  sizeOf    _ = #{size      VkPhysicalDeviceFragmentShaderInterlockFeaturesEXT}
+  alignment _ = #{alignment VkPhysicalDeviceFragmentShaderInterlockFeaturesEXT}
 
   peek ptr = 
     VkPhysicalDeviceFragmentShaderInterlockFeaturesEXT
@@ -51,19 +51,19 @@ instance Storable VkPhysicalDeviceFragmentShaderInterlockFeaturesEXT where
     pokeField @"fragmentShaderShadingRateInterlock" ptr val
 
 instance Offset "sType" VkPhysicalDeviceFragmentShaderInterlockFeaturesEXT where
-  rawOffset = #{offset struct VkPhysicalDeviceFragmentShaderInterlockFeaturesEXT, sType}
+  rawOffset = #{offset VkPhysicalDeviceFragmentShaderInterlockFeaturesEXT, sType}
 
 instance Offset "pNext" VkPhysicalDeviceFragmentShaderInterlockFeaturesEXT where
-  rawOffset = #{offset struct VkPhysicalDeviceFragmentShaderInterlockFeaturesEXT, pNext}
+  rawOffset = #{offset VkPhysicalDeviceFragmentShaderInterlockFeaturesEXT, pNext}
 
 instance Offset "fragmentShaderSampleInterlock" VkPhysicalDeviceFragmentShaderInterlockFeaturesEXT where
-  rawOffset = #{offset struct VkPhysicalDeviceFragmentShaderInterlockFeaturesEXT, fragmentShaderSampleInterlock}
+  rawOffset = #{offset VkPhysicalDeviceFragmentShaderInterlockFeaturesEXT, fragmentShaderSampleInterlock}
 
 instance Offset "fragmentShaderPixelInterlock" VkPhysicalDeviceFragmentShaderInterlockFeaturesEXT where
-  rawOffset = #{offset struct VkPhysicalDeviceFragmentShaderInterlockFeaturesEXT, fragmentShaderPixelInterlock}
+  rawOffset = #{offset VkPhysicalDeviceFragmentShaderInterlockFeaturesEXT, fragmentShaderPixelInterlock}
 
 instance Offset "fragmentShaderShadingRateInterlock" VkPhysicalDeviceFragmentShaderInterlockFeaturesEXT where
-  rawOffset = #{offset struct VkPhysicalDeviceFragmentShaderInterlockFeaturesEXT, fragmentShaderShadingRateInterlock}
+  rawOffset = #{offset VkPhysicalDeviceFragmentShaderInterlockFeaturesEXT, fragmentShaderShadingRateInterlock}
 
 #else
 

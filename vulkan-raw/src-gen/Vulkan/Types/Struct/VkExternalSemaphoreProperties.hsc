@@ -33,8 +33,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkExternalSemaphoreProperties" #-} VkExternalS
          }
 
 instance Storable VkExternalSemaphoreProperties where
-  sizeOf    _ = #{size      struct VkExternalSemaphoreProperties}
-  alignment _ = #{alignment struct VkExternalSemaphoreProperties}
+  sizeOf    _ = #{size      VkExternalSemaphoreProperties}
+  alignment _ = #{alignment VkExternalSemaphoreProperties}
 
   peek ptr = 
     VkExternalSemaphoreProperties
@@ -52,19 +52,19 @@ instance Storable VkExternalSemaphoreProperties where
     pokeField @"externalSemaphoreFeatures" ptr val
 
 instance Offset "sType" VkExternalSemaphoreProperties where
-  rawOffset = #{offset struct VkExternalSemaphoreProperties, sType}
+  rawOffset = #{offset VkExternalSemaphoreProperties, sType}
 
 instance Offset "pNext" VkExternalSemaphoreProperties where
-  rawOffset = #{offset struct VkExternalSemaphoreProperties, pNext}
+  rawOffset = #{offset VkExternalSemaphoreProperties, pNext}
 
 instance Offset "exportFromImportedHandleTypes" VkExternalSemaphoreProperties where
-  rawOffset = #{offset struct VkExternalSemaphoreProperties, exportFromImportedHandleTypes}
+  rawOffset = #{offset VkExternalSemaphoreProperties, exportFromImportedHandleTypes}
 
 instance Offset "compatibleHandleTypes" VkExternalSemaphoreProperties where
-  rawOffset = #{offset struct VkExternalSemaphoreProperties, compatibleHandleTypes}
+  rawOffset = #{offset VkExternalSemaphoreProperties, compatibleHandleTypes}
 
 instance Offset "externalSemaphoreFeatures" VkExternalSemaphoreProperties where
-  rawOffset = #{offset struct VkExternalSemaphoreProperties, externalSemaphoreFeatures}
+  rawOffset = #{offset VkExternalSemaphoreProperties, externalSemaphoreFeatures}
 
 #else
 

@@ -30,8 +30,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkPhysicalDeviceScalarBlockLayoutFeatures" #-}
          }
 
 instance Storable VkPhysicalDeviceScalarBlockLayoutFeatures where
-  sizeOf    _ = #{size      struct VkPhysicalDeviceScalarBlockLayoutFeatures}
-  alignment _ = #{alignment struct VkPhysicalDeviceScalarBlockLayoutFeatures}
+  sizeOf    _ = #{size      VkPhysicalDeviceScalarBlockLayoutFeatures}
+  alignment _ = #{alignment VkPhysicalDeviceScalarBlockLayoutFeatures}
 
   peek ptr = 
     VkPhysicalDeviceScalarBlockLayoutFeatures
@@ -45,13 +45,13 @@ instance Storable VkPhysicalDeviceScalarBlockLayoutFeatures where
     pokeField @"scalarBlockLayout" ptr val
 
 instance Offset "sType" VkPhysicalDeviceScalarBlockLayoutFeatures where
-  rawOffset = #{offset struct VkPhysicalDeviceScalarBlockLayoutFeatures, sType}
+  rawOffset = #{offset VkPhysicalDeviceScalarBlockLayoutFeatures, sType}
 
 instance Offset "pNext" VkPhysicalDeviceScalarBlockLayoutFeatures where
-  rawOffset = #{offset struct VkPhysicalDeviceScalarBlockLayoutFeatures, pNext}
+  rawOffset = #{offset VkPhysicalDeviceScalarBlockLayoutFeatures, pNext}
 
 instance Offset "scalarBlockLayout" VkPhysicalDeviceScalarBlockLayoutFeatures where
-  rawOffset = #{offset struct VkPhysicalDeviceScalarBlockLayoutFeatures, scalarBlockLayout}
+  rawOffset = #{offset VkPhysicalDeviceScalarBlockLayoutFeatures, scalarBlockLayout}
 
 #else
 

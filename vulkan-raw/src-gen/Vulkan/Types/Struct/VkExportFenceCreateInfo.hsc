@@ -30,8 +30,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkExportFenceCreateInfo" #-} VkExportFenceCrea
          }
 
 instance Storable VkExportFenceCreateInfo where
-  sizeOf    _ = #{size      struct VkExportFenceCreateInfo}
-  alignment _ = #{alignment struct VkExportFenceCreateInfo}
+  sizeOf    _ = #{size      VkExportFenceCreateInfo}
+  alignment _ = #{alignment VkExportFenceCreateInfo}
 
   peek ptr = 
     VkExportFenceCreateInfo
@@ -45,13 +45,13 @@ instance Storable VkExportFenceCreateInfo where
     pokeField @"handleTypes" ptr val
 
 instance Offset "sType" VkExportFenceCreateInfo where
-  rawOffset = #{offset struct VkExportFenceCreateInfo, sType}
+  rawOffset = #{offset VkExportFenceCreateInfo, sType}
 
 instance Offset "pNext" VkExportFenceCreateInfo where
-  rawOffset = #{offset struct VkExportFenceCreateInfo, pNext}
+  rawOffset = #{offset VkExportFenceCreateInfo, pNext}
 
 instance Offset "handleTypes" VkExportFenceCreateInfo where
-  rawOffset = #{offset struct VkExportFenceCreateInfo, handleTypes}
+  rawOffset = #{offset VkExportFenceCreateInfo, handleTypes}
 
 #else
 

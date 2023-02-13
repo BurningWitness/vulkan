@@ -31,8 +31,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkPerformanceConfigurationAcquireInfoINTEL" #-
          }
 
 instance Storable VkPerformanceConfigurationAcquireInfoINTEL where
-  sizeOf    _ = #{size      struct VkPerformanceConfigurationAcquireInfoINTEL}
-  alignment _ = #{alignment struct VkPerformanceConfigurationAcquireInfoINTEL}
+  sizeOf    _ = #{size      VkPerformanceConfigurationAcquireInfoINTEL}
+  alignment _ = #{alignment VkPerformanceConfigurationAcquireInfoINTEL}
 
   peek ptr = 
     VkPerformanceConfigurationAcquireInfoINTEL
@@ -46,13 +46,13 @@ instance Storable VkPerformanceConfigurationAcquireInfoINTEL where
     pokeField @"type" ptr val
 
 instance Offset "sType" VkPerformanceConfigurationAcquireInfoINTEL where
-  rawOffset = #{offset struct VkPerformanceConfigurationAcquireInfoINTEL, sType}
+  rawOffset = #{offset VkPerformanceConfigurationAcquireInfoINTEL, sType}
 
 instance Offset "pNext" VkPerformanceConfigurationAcquireInfoINTEL where
-  rawOffset = #{offset struct VkPerformanceConfigurationAcquireInfoINTEL, pNext}
+  rawOffset = #{offset VkPerformanceConfigurationAcquireInfoINTEL, pNext}
 
 instance Offset "type_" VkPerformanceConfigurationAcquireInfoINTEL where
-  rawOffset = #{offset struct VkPerformanceConfigurationAcquireInfoINTEL, type}
+  rawOffset = #{offset VkPerformanceConfigurationAcquireInfoINTEL, type}
 
 instance Offset "type" VkPerformanceConfigurationAcquireInfoINTEL where
   rawOffset = rawOffset @"type_" @VkPerformanceConfigurationAcquireInfoINTEL

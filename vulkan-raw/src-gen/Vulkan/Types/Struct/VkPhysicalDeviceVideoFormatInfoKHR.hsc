@@ -30,8 +30,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkPhysicalDeviceVideoFormatInfoKHR" #-} VkPhys
          }
 
 instance Storable VkPhysicalDeviceVideoFormatInfoKHR where
-  sizeOf    _ = #{size      struct VkPhysicalDeviceVideoFormatInfoKHR}
-  alignment _ = #{alignment struct VkPhysicalDeviceVideoFormatInfoKHR}
+  sizeOf    _ = #{size      VkPhysicalDeviceVideoFormatInfoKHR}
+  alignment _ = #{alignment VkPhysicalDeviceVideoFormatInfoKHR}
 
   peek ptr = 
     VkPhysicalDeviceVideoFormatInfoKHR
@@ -45,13 +45,13 @@ instance Storable VkPhysicalDeviceVideoFormatInfoKHR where
     pokeField @"imageUsage" ptr val
 
 instance Offset "sType" VkPhysicalDeviceVideoFormatInfoKHR where
-  rawOffset = #{offset struct VkPhysicalDeviceVideoFormatInfoKHR, sType}
+  rawOffset = #{offset VkPhysicalDeviceVideoFormatInfoKHR, sType}
 
 instance Offset "pNext" VkPhysicalDeviceVideoFormatInfoKHR where
-  rawOffset = #{offset struct VkPhysicalDeviceVideoFormatInfoKHR, pNext}
+  rawOffset = #{offset VkPhysicalDeviceVideoFormatInfoKHR, pNext}
 
 instance Offset "imageUsage" VkPhysicalDeviceVideoFormatInfoKHR where
-  rawOffset = #{offset struct VkPhysicalDeviceVideoFormatInfoKHR, imageUsage}
+  rawOffset = #{offset VkPhysicalDeviceVideoFormatInfoKHR, imageUsage}
 
 #else
 

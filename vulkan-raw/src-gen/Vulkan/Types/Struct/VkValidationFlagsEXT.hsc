@@ -31,8 +31,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkValidationFlagsEXT" #-} VkValidationFlagsEXT
          }
 
 instance Storable VkValidationFlagsEXT where
-  sizeOf    _ = #{size      struct VkValidationFlagsEXT}
-  alignment _ = #{alignment struct VkValidationFlagsEXT}
+  sizeOf    _ = #{size      VkValidationFlagsEXT}
+  alignment _ = #{alignment VkValidationFlagsEXT}
 
   peek ptr = 
     VkValidationFlagsEXT
@@ -48,16 +48,16 @@ instance Storable VkValidationFlagsEXT where
     pokeField @"pDisabledValidationChecks" ptr val
 
 instance Offset "sType" VkValidationFlagsEXT where
-  rawOffset = #{offset struct VkValidationFlagsEXT, sType}
+  rawOffset = #{offset VkValidationFlagsEXT, sType}
 
 instance Offset "pNext" VkValidationFlagsEXT where
-  rawOffset = #{offset struct VkValidationFlagsEXT, pNext}
+  rawOffset = #{offset VkValidationFlagsEXT, pNext}
 
 instance Offset "disabledValidationCheckCount" VkValidationFlagsEXT where
-  rawOffset = #{offset struct VkValidationFlagsEXT, disabledValidationCheckCount}
+  rawOffset = #{offset VkValidationFlagsEXT, disabledValidationCheckCount}
 
 instance Offset "pDisabledValidationChecks" VkValidationFlagsEXT where
-  rawOffset = #{offset struct VkValidationFlagsEXT, pDisabledValidationChecks}
+  rawOffset = #{offset VkValidationFlagsEXT, pDisabledValidationChecks}
 
 #else
 

@@ -28,8 +28,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkAttachmentSampleLocationsEXT" #-} VkAttachme
          }
 
 instance Storable VkAttachmentSampleLocationsEXT where
-  sizeOf    _ = #{size      struct VkAttachmentSampleLocationsEXT}
-  alignment _ = #{alignment struct VkAttachmentSampleLocationsEXT}
+  sizeOf    _ = #{size      VkAttachmentSampleLocationsEXT}
+  alignment _ = #{alignment VkAttachmentSampleLocationsEXT}
 
   peek ptr = 
     VkAttachmentSampleLocationsEXT
@@ -41,10 +41,10 @@ instance Storable VkAttachmentSampleLocationsEXT where
     pokeField @"sampleLocationsInfo" ptr val
 
 instance Offset "attachmentIndex" VkAttachmentSampleLocationsEXT where
-  rawOffset = #{offset struct VkAttachmentSampleLocationsEXT, attachmentIndex}
+  rawOffset = #{offset VkAttachmentSampleLocationsEXT, attachmentIndex}
 
 instance Offset "sampleLocationsInfo" VkAttachmentSampleLocationsEXT where
-  rawOffset = #{offset struct VkAttachmentSampleLocationsEXT, sampleLocationsInfo}
+  rawOffset = #{offset VkAttachmentSampleLocationsEXT, sampleLocationsInfo}
 
 #else
 

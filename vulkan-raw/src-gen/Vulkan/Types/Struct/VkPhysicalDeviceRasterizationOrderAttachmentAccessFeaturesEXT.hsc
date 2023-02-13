@@ -32,8 +32,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkPhysicalDeviceRasterizationOrderAttachmentAc
          }
 
 instance Storable VkPhysicalDeviceRasterizationOrderAttachmentAccessFeaturesEXT where
-  sizeOf    _ = #{size      struct VkPhysicalDeviceRasterizationOrderAttachmentAccessFeaturesEXT}
-  alignment _ = #{alignment struct VkPhysicalDeviceRasterizationOrderAttachmentAccessFeaturesEXT}
+  sizeOf    _ = #{size      VkPhysicalDeviceRasterizationOrderAttachmentAccessFeaturesEXT}
+  alignment _ = #{alignment VkPhysicalDeviceRasterizationOrderAttachmentAccessFeaturesEXT}
 
   peek ptr = 
     VkPhysicalDeviceRasterizationOrderAttachmentAccessFeaturesEXT
@@ -51,19 +51,19 @@ instance Storable VkPhysicalDeviceRasterizationOrderAttachmentAccessFeaturesEXT 
     pokeField @"rasterizationOrderStencilAttachmentAccess" ptr val
 
 instance Offset "sType" VkPhysicalDeviceRasterizationOrderAttachmentAccessFeaturesEXT where
-  rawOffset = #{offset struct VkPhysicalDeviceRasterizationOrderAttachmentAccessFeaturesEXT, sType}
+  rawOffset = #{offset VkPhysicalDeviceRasterizationOrderAttachmentAccessFeaturesEXT, sType}
 
 instance Offset "pNext" VkPhysicalDeviceRasterizationOrderAttachmentAccessFeaturesEXT where
-  rawOffset = #{offset struct VkPhysicalDeviceRasterizationOrderAttachmentAccessFeaturesEXT, pNext}
+  rawOffset = #{offset VkPhysicalDeviceRasterizationOrderAttachmentAccessFeaturesEXT, pNext}
 
 instance Offset "rasterizationOrderColorAttachmentAccess" VkPhysicalDeviceRasterizationOrderAttachmentAccessFeaturesEXT where
-  rawOffset = #{offset struct VkPhysicalDeviceRasterizationOrderAttachmentAccessFeaturesEXT, rasterizationOrderColorAttachmentAccess}
+  rawOffset = #{offset VkPhysicalDeviceRasterizationOrderAttachmentAccessFeaturesEXT, rasterizationOrderColorAttachmentAccess}
 
 instance Offset "rasterizationOrderDepthAttachmentAccess" VkPhysicalDeviceRasterizationOrderAttachmentAccessFeaturesEXT where
-  rawOffset = #{offset struct VkPhysicalDeviceRasterizationOrderAttachmentAccessFeaturesEXT, rasterizationOrderDepthAttachmentAccess}
+  rawOffset = #{offset VkPhysicalDeviceRasterizationOrderAttachmentAccessFeaturesEXT, rasterizationOrderDepthAttachmentAccess}
 
 instance Offset "rasterizationOrderStencilAttachmentAccess" VkPhysicalDeviceRasterizationOrderAttachmentAccessFeaturesEXT where
-  rawOffset = #{offset struct VkPhysicalDeviceRasterizationOrderAttachmentAccessFeaturesEXT, rasterizationOrderStencilAttachmentAccess}
+  rawOffset = #{offset VkPhysicalDeviceRasterizationOrderAttachmentAccessFeaturesEXT, rasterizationOrderStencilAttachmentAccess}
 
 #else
 

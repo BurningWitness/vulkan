@@ -33,8 +33,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkPhysicalDeviceDescriptorBufferFeaturesEXT" #
          }
 
 instance Storable VkPhysicalDeviceDescriptorBufferFeaturesEXT where
-  sizeOf    _ = #{size      struct VkPhysicalDeviceDescriptorBufferFeaturesEXT}
-  alignment _ = #{alignment struct VkPhysicalDeviceDescriptorBufferFeaturesEXT}
+  sizeOf    _ = #{size      VkPhysicalDeviceDescriptorBufferFeaturesEXT}
+  alignment _ = #{alignment VkPhysicalDeviceDescriptorBufferFeaturesEXT}
 
   peek ptr = 
     VkPhysicalDeviceDescriptorBufferFeaturesEXT
@@ -54,22 +54,22 @@ instance Storable VkPhysicalDeviceDescriptorBufferFeaturesEXT where
     pokeField @"descriptorBufferPushDescriptors" ptr val
 
 instance Offset "sType" VkPhysicalDeviceDescriptorBufferFeaturesEXT where
-  rawOffset = #{offset struct VkPhysicalDeviceDescriptorBufferFeaturesEXT, sType}
+  rawOffset = #{offset VkPhysicalDeviceDescriptorBufferFeaturesEXT, sType}
 
 instance Offset "pNext" VkPhysicalDeviceDescriptorBufferFeaturesEXT where
-  rawOffset = #{offset struct VkPhysicalDeviceDescriptorBufferFeaturesEXT, pNext}
+  rawOffset = #{offset VkPhysicalDeviceDescriptorBufferFeaturesEXT, pNext}
 
 instance Offset "descriptorBuffer" VkPhysicalDeviceDescriptorBufferFeaturesEXT where
-  rawOffset = #{offset struct VkPhysicalDeviceDescriptorBufferFeaturesEXT, descriptorBuffer}
+  rawOffset = #{offset VkPhysicalDeviceDescriptorBufferFeaturesEXT, descriptorBuffer}
 
 instance Offset "descriptorBufferCaptureReplay" VkPhysicalDeviceDescriptorBufferFeaturesEXT where
-  rawOffset = #{offset struct VkPhysicalDeviceDescriptorBufferFeaturesEXT, descriptorBufferCaptureReplay}
+  rawOffset = #{offset VkPhysicalDeviceDescriptorBufferFeaturesEXT, descriptorBufferCaptureReplay}
 
 instance Offset "descriptorBufferImageLayoutIgnored" VkPhysicalDeviceDescriptorBufferFeaturesEXT where
-  rawOffset = #{offset struct VkPhysicalDeviceDescriptorBufferFeaturesEXT, descriptorBufferImageLayoutIgnored}
+  rawOffset = #{offset VkPhysicalDeviceDescriptorBufferFeaturesEXT, descriptorBufferImageLayoutIgnored}
 
 instance Offset "descriptorBufferPushDescriptors" VkPhysicalDeviceDescriptorBufferFeaturesEXT where
-  rawOffset = #{offset struct VkPhysicalDeviceDescriptorBufferFeaturesEXT, descriptorBufferPushDescriptors}
+  rawOffset = #{offset VkPhysicalDeviceDescriptorBufferFeaturesEXT, descriptorBufferPushDescriptors}
 
 #else
 

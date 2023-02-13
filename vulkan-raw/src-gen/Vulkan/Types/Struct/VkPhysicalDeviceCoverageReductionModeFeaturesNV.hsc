@@ -30,8 +30,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkPhysicalDeviceCoverageReductionModeFeaturesN
          }
 
 instance Storable VkPhysicalDeviceCoverageReductionModeFeaturesNV where
-  sizeOf    _ = #{size      struct VkPhysicalDeviceCoverageReductionModeFeaturesNV}
-  alignment _ = #{alignment struct VkPhysicalDeviceCoverageReductionModeFeaturesNV}
+  sizeOf    _ = #{size      VkPhysicalDeviceCoverageReductionModeFeaturesNV}
+  alignment _ = #{alignment VkPhysicalDeviceCoverageReductionModeFeaturesNV}
 
   peek ptr = 
     VkPhysicalDeviceCoverageReductionModeFeaturesNV
@@ -45,13 +45,13 @@ instance Storable VkPhysicalDeviceCoverageReductionModeFeaturesNV where
     pokeField @"coverageReductionMode" ptr val
 
 instance Offset "sType" VkPhysicalDeviceCoverageReductionModeFeaturesNV where
-  rawOffset = #{offset struct VkPhysicalDeviceCoverageReductionModeFeaturesNV, sType}
+  rawOffset = #{offset VkPhysicalDeviceCoverageReductionModeFeaturesNV, sType}
 
 instance Offset "pNext" VkPhysicalDeviceCoverageReductionModeFeaturesNV where
-  rawOffset = #{offset struct VkPhysicalDeviceCoverageReductionModeFeaturesNV, pNext}
+  rawOffset = #{offset VkPhysicalDeviceCoverageReductionModeFeaturesNV, pNext}
 
 instance Offset "coverageReductionMode" VkPhysicalDeviceCoverageReductionModeFeaturesNV where
-  rawOffset = #{offset struct VkPhysicalDeviceCoverageReductionModeFeaturesNV, coverageReductionMode}
+  rawOffset = #{offset VkPhysicalDeviceCoverageReductionModeFeaturesNV, coverageReductionMode}
 
 #else
 

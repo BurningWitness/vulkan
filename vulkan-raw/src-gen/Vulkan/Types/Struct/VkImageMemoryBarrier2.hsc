@@ -43,8 +43,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkImageMemoryBarrier2" #-} VkImageMemoryBarrie
          }
 
 instance Storable VkImageMemoryBarrier2 where
-  sizeOf    _ = #{size      struct VkImageMemoryBarrier2}
-  alignment _ = #{alignment struct VkImageMemoryBarrier2}
+  sizeOf    _ = #{size      VkImageMemoryBarrier2}
+  alignment _ = #{alignment VkImageMemoryBarrier2}
 
   peek ptr = 
     VkImageMemoryBarrier2
@@ -76,40 +76,40 @@ instance Storable VkImageMemoryBarrier2 where
     pokeField @"subresourceRange" ptr val
 
 instance Offset "sType" VkImageMemoryBarrier2 where
-  rawOffset = #{offset struct VkImageMemoryBarrier2, sType}
+  rawOffset = #{offset VkImageMemoryBarrier2, sType}
 
 instance Offset "pNext" VkImageMemoryBarrier2 where
-  rawOffset = #{offset struct VkImageMemoryBarrier2, pNext}
+  rawOffset = #{offset VkImageMemoryBarrier2, pNext}
 
 instance Offset "srcStageMask" VkImageMemoryBarrier2 where
-  rawOffset = #{offset struct VkImageMemoryBarrier2, srcStageMask}
+  rawOffset = #{offset VkImageMemoryBarrier2, srcStageMask}
 
 instance Offset "srcAccessMask" VkImageMemoryBarrier2 where
-  rawOffset = #{offset struct VkImageMemoryBarrier2, srcAccessMask}
+  rawOffset = #{offset VkImageMemoryBarrier2, srcAccessMask}
 
 instance Offset "dstStageMask" VkImageMemoryBarrier2 where
-  rawOffset = #{offset struct VkImageMemoryBarrier2, dstStageMask}
+  rawOffset = #{offset VkImageMemoryBarrier2, dstStageMask}
 
 instance Offset "dstAccessMask" VkImageMemoryBarrier2 where
-  rawOffset = #{offset struct VkImageMemoryBarrier2, dstAccessMask}
+  rawOffset = #{offset VkImageMemoryBarrier2, dstAccessMask}
 
 instance Offset "oldLayout" VkImageMemoryBarrier2 where
-  rawOffset = #{offset struct VkImageMemoryBarrier2, oldLayout}
+  rawOffset = #{offset VkImageMemoryBarrier2, oldLayout}
 
 instance Offset "newLayout" VkImageMemoryBarrier2 where
-  rawOffset = #{offset struct VkImageMemoryBarrier2, newLayout}
+  rawOffset = #{offset VkImageMemoryBarrier2, newLayout}
 
 instance Offset "srcQueueFamilyIndex" VkImageMemoryBarrier2 where
-  rawOffset = #{offset struct VkImageMemoryBarrier2, srcQueueFamilyIndex}
+  rawOffset = #{offset VkImageMemoryBarrier2, srcQueueFamilyIndex}
 
 instance Offset "dstQueueFamilyIndex" VkImageMemoryBarrier2 where
-  rawOffset = #{offset struct VkImageMemoryBarrier2, dstQueueFamilyIndex}
+  rawOffset = #{offset VkImageMemoryBarrier2, dstQueueFamilyIndex}
 
 instance Offset "image" VkImageMemoryBarrier2 where
-  rawOffset = #{offset struct VkImageMemoryBarrier2, image}
+  rawOffset = #{offset VkImageMemoryBarrier2, image}
 
 instance Offset "subresourceRange" VkImageMemoryBarrier2 where
-  rawOffset = #{offset struct VkImageMemoryBarrier2, subresourceRange}
+  rawOffset = #{offset VkImageMemoryBarrier2, subresourceRange}
 
 #else
 

@@ -30,8 +30,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkPresentFrameTokenGGP" #-} VkPresentFrameToke
          }
 
 instance Storable VkPresentFrameTokenGGP where
-  sizeOf    _ = #{size      struct VkPresentFrameTokenGGP}
-  alignment _ = #{alignment struct VkPresentFrameTokenGGP}
+  sizeOf    _ = #{size      VkPresentFrameTokenGGP}
+  alignment _ = #{alignment VkPresentFrameTokenGGP}
 
   peek ptr = 
     VkPresentFrameTokenGGP
@@ -45,13 +45,13 @@ instance Storable VkPresentFrameTokenGGP where
     pokeField @"frameToken" ptr val
 
 instance Offset "sType" VkPresentFrameTokenGGP where
-  rawOffset = #{offset struct VkPresentFrameTokenGGP, sType}
+  rawOffset = #{offset VkPresentFrameTokenGGP, sType}
 
 instance Offset "pNext" VkPresentFrameTokenGGP where
-  rawOffset = #{offset struct VkPresentFrameTokenGGP, pNext}
+  rawOffset = #{offset VkPresentFrameTokenGGP, pNext}
 
 instance Offset "frameToken" VkPresentFrameTokenGGP where
-  rawOffset = #{offset struct VkPresentFrameTokenGGP, frameToken}
+  rawOffset = #{offset VkPresentFrameTokenGGP, frameToken}
 
 #else
 

@@ -31,8 +31,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkQueryPoolPerformanceCreateInfoKHR" #-} VkQue
          }
 
 instance Storable VkQueryPoolPerformanceCreateInfoKHR where
-  sizeOf    _ = #{size      struct VkQueryPoolPerformanceCreateInfoKHR}
-  alignment _ = #{alignment struct VkQueryPoolPerformanceCreateInfoKHR}
+  sizeOf    _ = #{size      VkQueryPoolPerformanceCreateInfoKHR}
+  alignment _ = #{alignment VkQueryPoolPerformanceCreateInfoKHR}
 
   peek ptr = 
     VkQueryPoolPerformanceCreateInfoKHR
@@ -50,19 +50,19 @@ instance Storable VkQueryPoolPerformanceCreateInfoKHR where
     pokeField @"pCounterIndices" ptr val
 
 instance Offset "sType" VkQueryPoolPerformanceCreateInfoKHR where
-  rawOffset = #{offset struct VkQueryPoolPerformanceCreateInfoKHR, sType}
+  rawOffset = #{offset VkQueryPoolPerformanceCreateInfoKHR, sType}
 
 instance Offset "pNext" VkQueryPoolPerformanceCreateInfoKHR where
-  rawOffset = #{offset struct VkQueryPoolPerformanceCreateInfoKHR, pNext}
+  rawOffset = #{offset VkQueryPoolPerformanceCreateInfoKHR, pNext}
 
 instance Offset "queueFamilyIndex" VkQueryPoolPerformanceCreateInfoKHR where
-  rawOffset = #{offset struct VkQueryPoolPerformanceCreateInfoKHR, queueFamilyIndex}
+  rawOffset = #{offset VkQueryPoolPerformanceCreateInfoKHR, queueFamilyIndex}
 
 instance Offset "counterIndexCount" VkQueryPoolPerformanceCreateInfoKHR where
-  rawOffset = #{offset struct VkQueryPoolPerformanceCreateInfoKHR, counterIndexCount}
+  rawOffset = #{offset VkQueryPoolPerformanceCreateInfoKHR, counterIndexCount}
 
 instance Offset "pCounterIndices" VkQueryPoolPerformanceCreateInfoKHR where
-  rawOffset = #{offset struct VkQueryPoolPerformanceCreateInfoKHR, pCounterIndices}
+  rawOffset = #{offset VkQueryPoolPerformanceCreateInfoKHR, pCounterIndices}
 
 #else
 

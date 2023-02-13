@@ -35,8 +35,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkPhysicalDeviceBlendOperationAdvancedProperti
          }
 
 instance Storable VkPhysicalDeviceBlendOperationAdvancedPropertiesEXT where
-  sizeOf    _ = #{size      struct VkPhysicalDeviceBlendOperationAdvancedPropertiesEXT}
-  alignment _ = #{alignment struct VkPhysicalDeviceBlendOperationAdvancedPropertiesEXT}
+  sizeOf    _ = #{size      VkPhysicalDeviceBlendOperationAdvancedPropertiesEXT}
+  alignment _ = #{alignment VkPhysicalDeviceBlendOperationAdvancedPropertiesEXT}
 
   peek ptr = 
     VkPhysicalDeviceBlendOperationAdvancedPropertiesEXT
@@ -60,28 +60,28 @@ instance Storable VkPhysicalDeviceBlendOperationAdvancedPropertiesEXT where
     pokeField @"advancedBlendAllOperations" ptr val
 
 instance Offset "sType" VkPhysicalDeviceBlendOperationAdvancedPropertiesEXT where
-  rawOffset = #{offset struct VkPhysicalDeviceBlendOperationAdvancedPropertiesEXT, sType}
+  rawOffset = #{offset VkPhysicalDeviceBlendOperationAdvancedPropertiesEXT, sType}
 
 instance Offset "pNext" VkPhysicalDeviceBlendOperationAdvancedPropertiesEXT where
-  rawOffset = #{offset struct VkPhysicalDeviceBlendOperationAdvancedPropertiesEXT, pNext}
+  rawOffset = #{offset VkPhysicalDeviceBlendOperationAdvancedPropertiesEXT, pNext}
 
 instance Offset "advancedBlendMaxColorAttachments" VkPhysicalDeviceBlendOperationAdvancedPropertiesEXT where
-  rawOffset = #{offset struct VkPhysicalDeviceBlendOperationAdvancedPropertiesEXT, advancedBlendMaxColorAttachments}
+  rawOffset = #{offset VkPhysicalDeviceBlendOperationAdvancedPropertiesEXT, advancedBlendMaxColorAttachments}
 
 instance Offset "advancedBlendIndependentBlend" VkPhysicalDeviceBlendOperationAdvancedPropertiesEXT where
-  rawOffset = #{offset struct VkPhysicalDeviceBlendOperationAdvancedPropertiesEXT, advancedBlendIndependentBlend}
+  rawOffset = #{offset VkPhysicalDeviceBlendOperationAdvancedPropertiesEXT, advancedBlendIndependentBlend}
 
 instance Offset "advancedBlendNonPremultipliedSrcColor" VkPhysicalDeviceBlendOperationAdvancedPropertiesEXT where
-  rawOffset = #{offset struct VkPhysicalDeviceBlendOperationAdvancedPropertiesEXT, advancedBlendNonPremultipliedSrcColor}
+  rawOffset = #{offset VkPhysicalDeviceBlendOperationAdvancedPropertiesEXT, advancedBlendNonPremultipliedSrcColor}
 
 instance Offset "advancedBlendNonPremultipliedDstColor" VkPhysicalDeviceBlendOperationAdvancedPropertiesEXT where
-  rawOffset = #{offset struct VkPhysicalDeviceBlendOperationAdvancedPropertiesEXT, advancedBlendNonPremultipliedDstColor}
+  rawOffset = #{offset VkPhysicalDeviceBlendOperationAdvancedPropertiesEXT, advancedBlendNonPremultipliedDstColor}
 
 instance Offset "advancedBlendCorrelatedOverlap" VkPhysicalDeviceBlendOperationAdvancedPropertiesEXT where
-  rawOffset = #{offset struct VkPhysicalDeviceBlendOperationAdvancedPropertiesEXT, advancedBlendCorrelatedOverlap}
+  rawOffset = #{offset VkPhysicalDeviceBlendOperationAdvancedPropertiesEXT, advancedBlendCorrelatedOverlap}
 
 instance Offset "advancedBlendAllOperations" VkPhysicalDeviceBlendOperationAdvancedPropertiesEXT where
-  rawOffset = #{offset struct VkPhysicalDeviceBlendOperationAdvancedPropertiesEXT, advancedBlendAllOperations}
+  rawOffset = #{offset VkPhysicalDeviceBlendOperationAdvancedPropertiesEXT, advancedBlendAllOperations}
 
 #else
 

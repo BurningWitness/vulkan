@@ -32,8 +32,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkPhysicalDeviceExtendedDynamicState2FeaturesE
          }
 
 instance Storable VkPhysicalDeviceExtendedDynamicState2FeaturesEXT where
-  sizeOf    _ = #{size      struct VkPhysicalDeviceExtendedDynamicState2FeaturesEXT}
-  alignment _ = #{alignment struct VkPhysicalDeviceExtendedDynamicState2FeaturesEXT}
+  sizeOf    _ = #{size      VkPhysicalDeviceExtendedDynamicState2FeaturesEXT}
+  alignment _ = #{alignment VkPhysicalDeviceExtendedDynamicState2FeaturesEXT}
 
   peek ptr = 
     VkPhysicalDeviceExtendedDynamicState2FeaturesEXT
@@ -51,19 +51,19 @@ instance Storable VkPhysicalDeviceExtendedDynamicState2FeaturesEXT where
     pokeField @"extendedDynamicState2PatchControlPoints" ptr val
 
 instance Offset "sType" VkPhysicalDeviceExtendedDynamicState2FeaturesEXT where
-  rawOffset = #{offset struct VkPhysicalDeviceExtendedDynamicState2FeaturesEXT, sType}
+  rawOffset = #{offset VkPhysicalDeviceExtendedDynamicState2FeaturesEXT, sType}
 
 instance Offset "pNext" VkPhysicalDeviceExtendedDynamicState2FeaturesEXT where
-  rawOffset = #{offset struct VkPhysicalDeviceExtendedDynamicState2FeaturesEXT, pNext}
+  rawOffset = #{offset VkPhysicalDeviceExtendedDynamicState2FeaturesEXT, pNext}
 
 instance Offset "extendedDynamicState2" VkPhysicalDeviceExtendedDynamicState2FeaturesEXT where
-  rawOffset = #{offset struct VkPhysicalDeviceExtendedDynamicState2FeaturesEXT, extendedDynamicState2}
+  rawOffset = #{offset VkPhysicalDeviceExtendedDynamicState2FeaturesEXT, extendedDynamicState2}
 
 instance Offset "extendedDynamicState2LogicOp" VkPhysicalDeviceExtendedDynamicState2FeaturesEXT where
-  rawOffset = #{offset struct VkPhysicalDeviceExtendedDynamicState2FeaturesEXT, extendedDynamicState2LogicOp}
+  rawOffset = #{offset VkPhysicalDeviceExtendedDynamicState2FeaturesEXT, extendedDynamicState2LogicOp}
 
 instance Offset "extendedDynamicState2PatchControlPoints" VkPhysicalDeviceExtendedDynamicState2FeaturesEXT where
-  rawOffset = #{offset struct VkPhysicalDeviceExtendedDynamicState2FeaturesEXT, extendedDynamicState2PatchControlPoints}
+  rawOffset = #{offset VkPhysicalDeviceExtendedDynamicState2FeaturesEXT, extendedDynamicState2PatchControlPoints}
 
 #else
 

@@ -30,8 +30,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkPhysicalDeviceLegacyDitheringFeaturesEXT" #-
          }
 
 instance Storable VkPhysicalDeviceLegacyDitheringFeaturesEXT where
-  sizeOf    _ = #{size      struct VkPhysicalDeviceLegacyDitheringFeaturesEXT}
-  alignment _ = #{alignment struct VkPhysicalDeviceLegacyDitheringFeaturesEXT}
+  sizeOf    _ = #{size      VkPhysicalDeviceLegacyDitheringFeaturesEXT}
+  alignment _ = #{alignment VkPhysicalDeviceLegacyDitheringFeaturesEXT}
 
   peek ptr = 
     VkPhysicalDeviceLegacyDitheringFeaturesEXT
@@ -45,13 +45,13 @@ instance Storable VkPhysicalDeviceLegacyDitheringFeaturesEXT where
     pokeField @"legacyDithering" ptr val
 
 instance Offset "sType" VkPhysicalDeviceLegacyDitheringFeaturesEXT where
-  rawOffset = #{offset struct VkPhysicalDeviceLegacyDitheringFeaturesEXT, sType}
+  rawOffset = #{offset VkPhysicalDeviceLegacyDitheringFeaturesEXT, sType}
 
 instance Offset "pNext" VkPhysicalDeviceLegacyDitheringFeaturesEXT where
-  rawOffset = #{offset struct VkPhysicalDeviceLegacyDitheringFeaturesEXT, pNext}
+  rawOffset = #{offset VkPhysicalDeviceLegacyDitheringFeaturesEXT, pNext}
 
 instance Offset "legacyDithering" VkPhysicalDeviceLegacyDitheringFeaturesEXT where
-  rawOffset = #{offset struct VkPhysicalDeviceLegacyDitheringFeaturesEXT, legacyDithering}
+  rawOffset = #{offset VkPhysicalDeviceLegacyDitheringFeaturesEXT, legacyDithering}
 
 #else
 

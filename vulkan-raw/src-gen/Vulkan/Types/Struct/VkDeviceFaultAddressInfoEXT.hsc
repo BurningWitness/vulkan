@@ -30,8 +30,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkDeviceFaultAddressInfoEXT" #-} VkDeviceFault
          }
 
 instance Storable VkDeviceFaultAddressInfoEXT where
-  sizeOf    _ = #{size      struct VkDeviceFaultAddressInfoEXT}
-  alignment _ = #{alignment struct VkDeviceFaultAddressInfoEXT}
+  sizeOf    _ = #{size      VkDeviceFaultAddressInfoEXT}
+  alignment _ = #{alignment VkDeviceFaultAddressInfoEXT}
 
   peek ptr = 
     VkDeviceFaultAddressInfoEXT
@@ -45,13 +45,13 @@ instance Storable VkDeviceFaultAddressInfoEXT where
     pokeField @"addressPrecision" ptr val
 
 instance Offset "addressType" VkDeviceFaultAddressInfoEXT where
-  rawOffset = #{offset struct VkDeviceFaultAddressInfoEXT, addressType}
+  rawOffset = #{offset VkDeviceFaultAddressInfoEXT, addressType}
 
 instance Offset "reportedAddress" VkDeviceFaultAddressInfoEXT where
-  rawOffset = #{offset struct VkDeviceFaultAddressInfoEXT, reportedAddress}
+  rawOffset = #{offset VkDeviceFaultAddressInfoEXT, reportedAddress}
 
 instance Offset "addressPrecision" VkDeviceFaultAddressInfoEXT where
-  rawOffset = #{offset struct VkDeviceFaultAddressInfoEXT, addressPrecision}
+  rawOffset = #{offset VkDeviceFaultAddressInfoEXT, addressPrecision}
 
 #else
 

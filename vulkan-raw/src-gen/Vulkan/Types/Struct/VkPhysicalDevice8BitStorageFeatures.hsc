@@ -32,8 +32,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkPhysicalDevice8BitStorageFeatures" #-} VkPhy
          }
 
 instance Storable VkPhysicalDevice8BitStorageFeatures where
-  sizeOf    _ = #{size      struct VkPhysicalDevice8BitStorageFeatures}
-  alignment _ = #{alignment struct VkPhysicalDevice8BitStorageFeatures}
+  sizeOf    _ = #{size      VkPhysicalDevice8BitStorageFeatures}
+  alignment _ = #{alignment VkPhysicalDevice8BitStorageFeatures}
 
   peek ptr = 
     VkPhysicalDevice8BitStorageFeatures
@@ -51,19 +51,19 @@ instance Storable VkPhysicalDevice8BitStorageFeatures where
     pokeField @"storagePushConstant8" ptr val
 
 instance Offset "sType" VkPhysicalDevice8BitStorageFeatures where
-  rawOffset = #{offset struct VkPhysicalDevice8BitStorageFeatures, sType}
+  rawOffset = #{offset VkPhysicalDevice8BitStorageFeatures, sType}
 
 instance Offset "pNext" VkPhysicalDevice8BitStorageFeatures where
-  rawOffset = #{offset struct VkPhysicalDevice8BitStorageFeatures, pNext}
+  rawOffset = #{offset VkPhysicalDevice8BitStorageFeatures, pNext}
 
 instance Offset "storageBuffer8BitAccess" VkPhysicalDevice8BitStorageFeatures where
-  rawOffset = #{offset struct VkPhysicalDevice8BitStorageFeatures, storageBuffer8BitAccess}
+  rawOffset = #{offset VkPhysicalDevice8BitStorageFeatures, storageBuffer8BitAccess}
 
 instance Offset "uniformAndStorageBuffer8BitAccess" VkPhysicalDevice8BitStorageFeatures where
-  rawOffset = #{offset struct VkPhysicalDevice8BitStorageFeatures, uniformAndStorageBuffer8BitAccess}
+  rawOffset = #{offset VkPhysicalDevice8BitStorageFeatures, uniformAndStorageBuffer8BitAccess}
 
 instance Offset "storagePushConstant8" VkPhysicalDevice8BitStorageFeatures where
-  rawOffset = #{offset struct VkPhysicalDevice8BitStorageFeatures, storagePushConstant8}
+  rawOffset = #{offset VkPhysicalDevice8BitStorageFeatures, storagePushConstant8}
 
 #else
 

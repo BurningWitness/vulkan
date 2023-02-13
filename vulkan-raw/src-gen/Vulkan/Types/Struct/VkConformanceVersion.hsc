@@ -29,8 +29,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkConformanceVersion" #-} VkConformanceVersion
          }
 
 instance Storable VkConformanceVersion where
-  sizeOf    _ = #{size      struct VkConformanceVersion}
-  alignment _ = #{alignment struct VkConformanceVersion}
+  sizeOf    _ = #{size      VkConformanceVersion}
+  alignment _ = #{alignment VkConformanceVersion}
 
   peek ptr = 
     VkConformanceVersion
@@ -46,16 +46,16 @@ instance Storable VkConformanceVersion where
     pokeField @"patch" ptr val
 
 instance Offset "major" VkConformanceVersion where
-  rawOffset = #{offset struct VkConformanceVersion, major}
+  rawOffset = #{offset VkConformanceVersion, major}
 
 instance Offset "minor" VkConformanceVersion where
-  rawOffset = #{offset struct VkConformanceVersion, minor}
+  rawOffset = #{offset VkConformanceVersion, minor}
 
 instance Offset "subminor" VkConformanceVersion where
-  rawOffset = #{offset struct VkConformanceVersion, subminor}
+  rawOffset = #{offset VkConformanceVersion, subminor}
 
 instance Offset "patch" VkConformanceVersion where
-  rawOffset = #{offset struct VkConformanceVersion, patch}
+  rawOffset = #{offset VkConformanceVersion, patch}
 
 #else
 

@@ -34,8 +34,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkShaderStatisticsInfoAMD" #-} VkShaderStatist
          }
 
 instance Storable VkShaderStatisticsInfoAMD where
-  sizeOf    _ = #{size      struct VkShaderStatisticsInfoAMD}
-  alignment _ = #{alignment struct VkShaderStatisticsInfoAMD}
+  sizeOf    _ = #{size      VkShaderStatisticsInfoAMD}
+  alignment _ = #{alignment VkShaderStatisticsInfoAMD}
 
   peek ptr = 
     VkShaderStatisticsInfoAMD
@@ -57,25 +57,25 @@ instance Storable VkShaderStatisticsInfoAMD where
     pokeField @"computeWorkGroupSize" ptr val
 
 instance Offset "shaderStageMask" VkShaderStatisticsInfoAMD where
-  rawOffset = #{offset struct VkShaderStatisticsInfoAMD, shaderStageMask}
+  rawOffset = #{offset VkShaderStatisticsInfoAMD, shaderStageMask}
 
 instance Offset "resourceUsage" VkShaderStatisticsInfoAMD where
-  rawOffset = #{offset struct VkShaderStatisticsInfoAMD, resourceUsage}
+  rawOffset = #{offset VkShaderStatisticsInfoAMD, resourceUsage}
 
 instance Offset "numPhysicalVgprs" VkShaderStatisticsInfoAMD where
-  rawOffset = #{offset struct VkShaderStatisticsInfoAMD, numPhysicalVgprs}
+  rawOffset = #{offset VkShaderStatisticsInfoAMD, numPhysicalVgprs}
 
 instance Offset "numPhysicalSgprs" VkShaderStatisticsInfoAMD where
-  rawOffset = #{offset struct VkShaderStatisticsInfoAMD, numPhysicalSgprs}
+  rawOffset = #{offset VkShaderStatisticsInfoAMD, numPhysicalSgprs}
 
 instance Offset "numAvailableVgprs" VkShaderStatisticsInfoAMD where
-  rawOffset = #{offset struct VkShaderStatisticsInfoAMD, numAvailableVgprs}
+  rawOffset = #{offset VkShaderStatisticsInfoAMD, numAvailableVgprs}
 
 instance Offset "numAvailableSgprs" VkShaderStatisticsInfoAMD where
-  rawOffset = #{offset struct VkShaderStatisticsInfoAMD, numAvailableSgprs}
+  rawOffset = #{offset VkShaderStatisticsInfoAMD, numAvailableSgprs}
 
 instance Offset "computeWorkGroupSize" VkShaderStatisticsInfoAMD where
-  rawOffset = #{offset struct VkShaderStatisticsInfoAMD, computeWorkGroupSize}
+  rawOffset = #{offset VkShaderStatisticsInfoAMD, computeWorkGroupSize}
 
 #else
 

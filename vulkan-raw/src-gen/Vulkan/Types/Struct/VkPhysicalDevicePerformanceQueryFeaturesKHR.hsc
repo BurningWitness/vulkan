@@ -31,8 +31,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkPhysicalDevicePerformanceQueryFeaturesKHR" #
          }
 
 instance Storable VkPhysicalDevicePerformanceQueryFeaturesKHR where
-  sizeOf    _ = #{size      struct VkPhysicalDevicePerformanceQueryFeaturesKHR}
-  alignment _ = #{alignment struct VkPhysicalDevicePerformanceQueryFeaturesKHR}
+  sizeOf    _ = #{size      VkPhysicalDevicePerformanceQueryFeaturesKHR}
+  alignment _ = #{alignment VkPhysicalDevicePerformanceQueryFeaturesKHR}
 
   peek ptr = 
     VkPhysicalDevicePerformanceQueryFeaturesKHR
@@ -48,16 +48,16 @@ instance Storable VkPhysicalDevicePerformanceQueryFeaturesKHR where
     pokeField @"performanceCounterMultipleQueryPools" ptr val
 
 instance Offset "sType" VkPhysicalDevicePerformanceQueryFeaturesKHR where
-  rawOffset = #{offset struct VkPhysicalDevicePerformanceQueryFeaturesKHR, sType}
+  rawOffset = #{offset VkPhysicalDevicePerformanceQueryFeaturesKHR, sType}
 
 instance Offset "pNext" VkPhysicalDevicePerformanceQueryFeaturesKHR where
-  rawOffset = #{offset struct VkPhysicalDevicePerformanceQueryFeaturesKHR, pNext}
+  rawOffset = #{offset VkPhysicalDevicePerformanceQueryFeaturesKHR, pNext}
 
 instance Offset "performanceCounterQueryPools" VkPhysicalDevicePerformanceQueryFeaturesKHR where
-  rawOffset = #{offset struct VkPhysicalDevicePerformanceQueryFeaturesKHR, performanceCounterQueryPools}
+  rawOffset = #{offset VkPhysicalDevicePerformanceQueryFeaturesKHR, performanceCounterQueryPools}
 
 instance Offset "performanceCounterMultipleQueryPools" VkPhysicalDevicePerformanceQueryFeaturesKHR where
-  rawOffset = #{offset struct VkPhysicalDevicePerformanceQueryFeaturesKHR, performanceCounterMultipleQueryPools}
+  rawOffset = #{offset VkPhysicalDevicePerformanceQueryFeaturesKHR, performanceCounterMultipleQueryPools}
 
 #else
 

@@ -29,8 +29,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkViewport" #-} VkViewport =
          }
 
 instance Storable VkViewport where
-  sizeOf    _ = #{size      struct VkViewport}
-  alignment _ = #{alignment struct VkViewport}
+  sizeOf    _ = #{size      VkViewport}
+  alignment _ = #{alignment VkViewport}
 
   peek ptr = 
     VkViewport
@@ -50,19 +50,19 @@ instance Storable VkViewport where
     pokeField @"maxDepth" ptr val
 
 instance Offset "x" VkViewport where
-  rawOffset = #{offset struct VkViewport, x}
+  rawOffset = #{offset VkViewport, x}
 
 instance Offset "y" VkViewport where
-  rawOffset = #{offset struct VkViewport, y}
+  rawOffset = #{offset VkViewport, y}
 
 instance Offset "width" VkViewport where
-  rawOffset = #{offset struct VkViewport, width}
+  rawOffset = #{offset VkViewport, width}
 
 instance Offset "height" VkViewport where
-  rawOffset = #{offset struct VkViewport, height}
+  rawOffset = #{offset VkViewport, height}
 
 instance Offset "minDepth" VkViewport where
-  rawOffset = #{offset struct VkViewport, minDepth}
+  rawOffset = #{offset VkViewport, minDepth}
 
 instance Offset "maxDepth" VkViewport where
-  rawOffset = #{offset struct VkViewport, maxDepth}
+  rawOffset = #{offset VkViewport, maxDepth}

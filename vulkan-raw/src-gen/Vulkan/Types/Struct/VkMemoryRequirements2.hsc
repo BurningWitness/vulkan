@@ -30,8 +30,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkMemoryRequirements2" #-} VkMemoryRequirement
          }
 
 instance Storable VkMemoryRequirements2 where
-  sizeOf    _ = #{size      struct VkMemoryRequirements2}
-  alignment _ = #{alignment struct VkMemoryRequirements2}
+  sizeOf    _ = #{size      VkMemoryRequirements2}
+  alignment _ = #{alignment VkMemoryRequirements2}
 
   peek ptr = 
     VkMemoryRequirements2
@@ -45,13 +45,13 @@ instance Storable VkMemoryRequirements2 where
     pokeField @"memoryRequirements" ptr val
 
 instance Offset "sType" VkMemoryRequirements2 where
-  rawOffset = #{offset struct VkMemoryRequirements2, sType}
+  rawOffset = #{offset VkMemoryRequirements2, sType}
 
 instance Offset "pNext" VkMemoryRequirements2 where
-  rawOffset = #{offset struct VkMemoryRequirements2, pNext}
+  rawOffset = #{offset VkMemoryRequirements2, pNext}
 
 instance Offset "memoryRequirements" VkMemoryRequirements2 where
-  rawOffset = #{offset struct VkMemoryRequirements2, memoryRequirements}
+  rawOffset = #{offset VkMemoryRequirements2, memoryRequirements}
 
 #else
 

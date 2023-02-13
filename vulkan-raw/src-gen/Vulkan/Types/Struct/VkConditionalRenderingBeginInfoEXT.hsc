@@ -34,8 +34,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkConditionalRenderingBeginInfoEXT" #-} VkCond
          }
 
 instance Storable VkConditionalRenderingBeginInfoEXT where
-  sizeOf    _ = #{size      struct VkConditionalRenderingBeginInfoEXT}
-  alignment _ = #{alignment struct VkConditionalRenderingBeginInfoEXT}
+  sizeOf    _ = #{size      VkConditionalRenderingBeginInfoEXT}
+  alignment _ = #{alignment VkConditionalRenderingBeginInfoEXT}
 
   peek ptr = 
     VkConditionalRenderingBeginInfoEXT
@@ -53,19 +53,19 @@ instance Storable VkConditionalRenderingBeginInfoEXT where
     pokeField @"flags" ptr val
 
 instance Offset "sType" VkConditionalRenderingBeginInfoEXT where
-  rawOffset = #{offset struct VkConditionalRenderingBeginInfoEXT, sType}
+  rawOffset = #{offset VkConditionalRenderingBeginInfoEXT, sType}
 
 instance Offset "pNext" VkConditionalRenderingBeginInfoEXT where
-  rawOffset = #{offset struct VkConditionalRenderingBeginInfoEXT, pNext}
+  rawOffset = #{offset VkConditionalRenderingBeginInfoEXT, pNext}
 
 instance Offset "buffer" VkConditionalRenderingBeginInfoEXT where
-  rawOffset = #{offset struct VkConditionalRenderingBeginInfoEXT, buffer}
+  rawOffset = #{offset VkConditionalRenderingBeginInfoEXT, buffer}
 
 instance Offset "offset" VkConditionalRenderingBeginInfoEXT where
-  rawOffset = #{offset struct VkConditionalRenderingBeginInfoEXT, offset}
+  rawOffset = #{offset VkConditionalRenderingBeginInfoEXT, offset}
 
 instance Offset "flags" VkConditionalRenderingBeginInfoEXT where
-  rawOffset = #{offset struct VkConditionalRenderingBeginInfoEXT, flags}
+  rawOffset = #{offset VkConditionalRenderingBeginInfoEXT, flags}
 
 #else
 

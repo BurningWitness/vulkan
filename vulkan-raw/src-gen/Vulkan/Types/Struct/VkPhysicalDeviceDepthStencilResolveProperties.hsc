@@ -34,8 +34,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkPhysicalDeviceDepthStencilResolveProperties"
          }
 
 instance Storable VkPhysicalDeviceDepthStencilResolveProperties where
-  sizeOf    _ = #{size      struct VkPhysicalDeviceDepthStencilResolveProperties}
-  alignment _ = #{alignment struct VkPhysicalDeviceDepthStencilResolveProperties}
+  sizeOf    _ = #{size      VkPhysicalDeviceDepthStencilResolveProperties}
+  alignment _ = #{alignment VkPhysicalDeviceDepthStencilResolveProperties}
 
   peek ptr = 
     VkPhysicalDeviceDepthStencilResolveProperties
@@ -55,22 +55,22 @@ instance Storable VkPhysicalDeviceDepthStencilResolveProperties where
     pokeField @"independentResolve" ptr val
 
 instance Offset "sType" VkPhysicalDeviceDepthStencilResolveProperties where
-  rawOffset = #{offset struct VkPhysicalDeviceDepthStencilResolveProperties, sType}
+  rawOffset = #{offset VkPhysicalDeviceDepthStencilResolveProperties, sType}
 
 instance Offset "pNext" VkPhysicalDeviceDepthStencilResolveProperties where
-  rawOffset = #{offset struct VkPhysicalDeviceDepthStencilResolveProperties, pNext}
+  rawOffset = #{offset VkPhysicalDeviceDepthStencilResolveProperties, pNext}
 
 instance Offset "supportedDepthResolveModes" VkPhysicalDeviceDepthStencilResolveProperties where
-  rawOffset = #{offset struct VkPhysicalDeviceDepthStencilResolveProperties, supportedDepthResolveModes}
+  rawOffset = #{offset VkPhysicalDeviceDepthStencilResolveProperties, supportedDepthResolveModes}
 
 instance Offset "supportedStencilResolveModes" VkPhysicalDeviceDepthStencilResolveProperties where
-  rawOffset = #{offset struct VkPhysicalDeviceDepthStencilResolveProperties, supportedStencilResolveModes}
+  rawOffset = #{offset VkPhysicalDeviceDepthStencilResolveProperties, supportedStencilResolveModes}
 
 instance Offset "independentResolveNone" VkPhysicalDeviceDepthStencilResolveProperties where
-  rawOffset = #{offset struct VkPhysicalDeviceDepthStencilResolveProperties, independentResolveNone}
+  rawOffset = #{offset VkPhysicalDeviceDepthStencilResolveProperties, independentResolveNone}
 
 instance Offset "independentResolve" VkPhysicalDeviceDepthStencilResolveProperties where
-  rawOffset = #{offset struct VkPhysicalDeviceDepthStencilResolveProperties, independentResolve}
+  rawOffset = #{offset VkPhysicalDeviceDepthStencilResolveProperties, independentResolve}
 
 #else
 

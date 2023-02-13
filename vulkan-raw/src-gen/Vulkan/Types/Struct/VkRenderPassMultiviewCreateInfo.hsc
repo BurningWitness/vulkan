@@ -34,8 +34,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkRenderPassMultiviewCreateInfo" #-} VkRenderP
          }
 
 instance Storable VkRenderPassMultiviewCreateInfo where
-  sizeOf    _ = #{size      struct VkRenderPassMultiviewCreateInfo}
-  alignment _ = #{alignment struct VkRenderPassMultiviewCreateInfo}
+  sizeOf    _ = #{size      VkRenderPassMultiviewCreateInfo}
+  alignment _ = #{alignment VkRenderPassMultiviewCreateInfo}
 
   peek ptr = 
     VkRenderPassMultiviewCreateInfo
@@ -59,28 +59,28 @@ instance Storable VkRenderPassMultiviewCreateInfo where
     pokeField @"pCorrelationMasks" ptr val
 
 instance Offset "sType" VkRenderPassMultiviewCreateInfo where
-  rawOffset = #{offset struct VkRenderPassMultiviewCreateInfo, sType}
+  rawOffset = #{offset VkRenderPassMultiviewCreateInfo, sType}
 
 instance Offset "pNext" VkRenderPassMultiviewCreateInfo where
-  rawOffset = #{offset struct VkRenderPassMultiviewCreateInfo, pNext}
+  rawOffset = #{offset VkRenderPassMultiviewCreateInfo, pNext}
 
 instance Offset "subpassCount" VkRenderPassMultiviewCreateInfo where
-  rawOffset = #{offset struct VkRenderPassMultiviewCreateInfo, subpassCount}
+  rawOffset = #{offset VkRenderPassMultiviewCreateInfo, subpassCount}
 
 instance Offset "pViewMasks" VkRenderPassMultiviewCreateInfo where
-  rawOffset = #{offset struct VkRenderPassMultiviewCreateInfo, pViewMasks}
+  rawOffset = #{offset VkRenderPassMultiviewCreateInfo, pViewMasks}
 
 instance Offset "dependencyCount" VkRenderPassMultiviewCreateInfo where
-  rawOffset = #{offset struct VkRenderPassMultiviewCreateInfo, dependencyCount}
+  rawOffset = #{offset VkRenderPassMultiviewCreateInfo, dependencyCount}
 
 instance Offset "pViewOffsets" VkRenderPassMultiviewCreateInfo where
-  rawOffset = #{offset struct VkRenderPassMultiviewCreateInfo, pViewOffsets}
+  rawOffset = #{offset VkRenderPassMultiviewCreateInfo, pViewOffsets}
 
 instance Offset "correlationMaskCount" VkRenderPassMultiviewCreateInfo where
-  rawOffset = #{offset struct VkRenderPassMultiviewCreateInfo, correlationMaskCount}
+  rawOffset = #{offset VkRenderPassMultiviewCreateInfo, correlationMaskCount}
 
 instance Offset "pCorrelationMasks" VkRenderPassMultiviewCreateInfo where
-  rawOffset = #{offset struct VkRenderPassMultiviewCreateInfo, pCorrelationMasks}
+  rawOffset = #{offset VkRenderPassMultiviewCreateInfo, pCorrelationMasks}
 
 #else
 

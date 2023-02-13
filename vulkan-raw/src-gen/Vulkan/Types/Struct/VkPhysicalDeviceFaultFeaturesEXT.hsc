@@ -31,8 +31,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkPhysicalDeviceFaultFeaturesEXT" #-} VkPhysic
          }
 
 instance Storable VkPhysicalDeviceFaultFeaturesEXT where
-  sizeOf    _ = #{size      struct VkPhysicalDeviceFaultFeaturesEXT}
-  alignment _ = #{alignment struct VkPhysicalDeviceFaultFeaturesEXT}
+  sizeOf    _ = #{size      VkPhysicalDeviceFaultFeaturesEXT}
+  alignment _ = #{alignment VkPhysicalDeviceFaultFeaturesEXT}
 
   peek ptr = 
     VkPhysicalDeviceFaultFeaturesEXT
@@ -48,16 +48,16 @@ instance Storable VkPhysicalDeviceFaultFeaturesEXT where
     pokeField @"deviceFaultVendorBinary" ptr val
 
 instance Offset "sType" VkPhysicalDeviceFaultFeaturesEXT where
-  rawOffset = #{offset struct VkPhysicalDeviceFaultFeaturesEXT, sType}
+  rawOffset = #{offset VkPhysicalDeviceFaultFeaturesEXT, sType}
 
 instance Offset "pNext" VkPhysicalDeviceFaultFeaturesEXT where
-  rawOffset = #{offset struct VkPhysicalDeviceFaultFeaturesEXT, pNext}
+  rawOffset = #{offset VkPhysicalDeviceFaultFeaturesEXT, pNext}
 
 instance Offset "deviceFault" VkPhysicalDeviceFaultFeaturesEXT where
-  rawOffset = #{offset struct VkPhysicalDeviceFaultFeaturesEXT, deviceFault}
+  rawOffset = #{offset VkPhysicalDeviceFaultFeaturesEXT, deviceFault}
 
 instance Offset "deviceFaultVendorBinary" VkPhysicalDeviceFaultFeaturesEXT where
-  rawOffset = #{offset struct VkPhysicalDeviceFaultFeaturesEXT, deviceFaultVendorBinary}
+  rawOffset = #{offset VkPhysicalDeviceFaultFeaturesEXT, deviceFaultVendorBinary}
 
 #else
 

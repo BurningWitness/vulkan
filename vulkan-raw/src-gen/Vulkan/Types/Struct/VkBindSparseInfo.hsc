@@ -40,8 +40,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkBindSparseInfo" #-} VkBindSparseInfo =
          }
 
 instance Storable VkBindSparseInfo where
-  sizeOf    _ = #{size      struct VkBindSparseInfo}
-  alignment _ = #{alignment struct VkBindSparseInfo}
+  sizeOf    _ = #{size      VkBindSparseInfo}
+  alignment _ = #{alignment VkBindSparseInfo}
 
   peek ptr = 
     VkBindSparseInfo
@@ -73,37 +73,37 @@ instance Storable VkBindSparseInfo where
     pokeField @"pSignalSemaphores" ptr val
 
 instance Offset "sType" VkBindSparseInfo where
-  rawOffset = #{offset struct VkBindSparseInfo, sType}
+  rawOffset = #{offset VkBindSparseInfo, sType}
 
 instance Offset "pNext" VkBindSparseInfo where
-  rawOffset = #{offset struct VkBindSparseInfo, pNext}
+  rawOffset = #{offset VkBindSparseInfo, pNext}
 
 instance Offset "waitSemaphoreCount" VkBindSparseInfo where
-  rawOffset = #{offset struct VkBindSparseInfo, waitSemaphoreCount}
+  rawOffset = #{offset VkBindSparseInfo, waitSemaphoreCount}
 
 instance Offset "pWaitSemaphores" VkBindSparseInfo where
-  rawOffset = #{offset struct VkBindSparseInfo, pWaitSemaphores}
+  rawOffset = #{offset VkBindSparseInfo, pWaitSemaphores}
 
 instance Offset "bufferBindCount" VkBindSparseInfo where
-  rawOffset = #{offset struct VkBindSparseInfo, bufferBindCount}
+  rawOffset = #{offset VkBindSparseInfo, bufferBindCount}
 
 instance Offset "pBufferBinds" VkBindSparseInfo where
-  rawOffset = #{offset struct VkBindSparseInfo, pBufferBinds}
+  rawOffset = #{offset VkBindSparseInfo, pBufferBinds}
 
 instance Offset "imageOpaqueBindCount" VkBindSparseInfo where
-  rawOffset = #{offset struct VkBindSparseInfo, imageOpaqueBindCount}
+  rawOffset = #{offset VkBindSparseInfo, imageOpaqueBindCount}
 
 instance Offset "pImageOpaqueBinds" VkBindSparseInfo where
-  rawOffset = #{offset struct VkBindSparseInfo, pImageOpaqueBinds}
+  rawOffset = #{offset VkBindSparseInfo, pImageOpaqueBinds}
 
 instance Offset "imageBindCount" VkBindSparseInfo where
-  rawOffset = #{offset struct VkBindSparseInfo, imageBindCount}
+  rawOffset = #{offset VkBindSparseInfo, imageBindCount}
 
 instance Offset "pImageBinds" VkBindSparseInfo where
-  rawOffset = #{offset struct VkBindSparseInfo, pImageBinds}
+  rawOffset = #{offset VkBindSparseInfo, pImageBinds}
 
 instance Offset "signalSemaphoreCount" VkBindSparseInfo where
-  rawOffset = #{offset struct VkBindSparseInfo, signalSemaphoreCount}
+  rawOffset = #{offset VkBindSparseInfo, signalSemaphoreCount}
 
 instance Offset "pSignalSemaphores" VkBindSparseInfo where
-  rawOffset = #{offset struct VkBindSparseInfo, pSignalSemaphores}
+  rawOffset = #{offset VkBindSparseInfo, pSignalSemaphores}

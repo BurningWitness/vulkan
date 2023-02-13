@@ -30,8 +30,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkPhysicalDeviceImageRobustnessFeatures" #-} V
          }
 
 instance Storable VkPhysicalDeviceImageRobustnessFeatures where
-  sizeOf    _ = #{size      struct VkPhysicalDeviceImageRobustnessFeatures}
-  alignment _ = #{alignment struct VkPhysicalDeviceImageRobustnessFeatures}
+  sizeOf    _ = #{size      VkPhysicalDeviceImageRobustnessFeatures}
+  alignment _ = #{alignment VkPhysicalDeviceImageRobustnessFeatures}
 
   peek ptr = 
     VkPhysicalDeviceImageRobustnessFeatures
@@ -45,13 +45,13 @@ instance Storable VkPhysicalDeviceImageRobustnessFeatures where
     pokeField @"robustImageAccess" ptr val
 
 instance Offset "sType" VkPhysicalDeviceImageRobustnessFeatures where
-  rawOffset = #{offset struct VkPhysicalDeviceImageRobustnessFeatures, sType}
+  rawOffset = #{offset VkPhysicalDeviceImageRobustnessFeatures, sType}
 
 instance Offset "pNext" VkPhysicalDeviceImageRobustnessFeatures where
-  rawOffset = #{offset struct VkPhysicalDeviceImageRobustnessFeatures, pNext}
+  rawOffset = #{offset VkPhysicalDeviceImageRobustnessFeatures, pNext}
 
 instance Offset "robustImageAccess" VkPhysicalDeviceImageRobustnessFeatures where
-  rawOffset = #{offset struct VkPhysicalDeviceImageRobustnessFeatures, robustImageAccess}
+  rawOffset = #{offset VkPhysicalDeviceImageRobustnessFeatures, robustImageAccess}
 
 #else
 

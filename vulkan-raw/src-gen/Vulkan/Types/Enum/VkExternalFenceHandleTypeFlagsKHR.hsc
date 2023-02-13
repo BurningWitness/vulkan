@@ -1,14 +1,14 @@
 {-# LANGUAGE CPP #-}
+{-# LANGUAGE PatternSynonyms #-}
 
 #include <vulkan/vulkan.h>
 
 module Vulkan.Types.Enum.VkExternalFenceHandleTypeFlagsKHR where
 
-import Data.Int
-import Vulkan.Types.Enum.VkExternalFenceHandleTypeFlags
+import Vulkan.Types.Base
 
 
 
 #if VK_KHR_external_fence_capabilities
-type VkExternalFenceHandleTypeFlagsKHR = VkExternalFenceHandleTypeFlags
+type VkExternalFenceHandleTypeFlagsKHR = VkFlags
 #endif

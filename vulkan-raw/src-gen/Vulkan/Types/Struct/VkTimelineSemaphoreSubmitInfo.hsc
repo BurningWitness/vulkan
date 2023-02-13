@@ -32,8 +32,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkTimelineSemaphoreSubmitInfo" #-} VkTimelineS
          }
 
 instance Storable VkTimelineSemaphoreSubmitInfo where
-  sizeOf    _ = #{size      struct VkTimelineSemaphoreSubmitInfo}
-  alignment _ = #{alignment struct VkTimelineSemaphoreSubmitInfo}
+  sizeOf    _ = #{size      VkTimelineSemaphoreSubmitInfo}
+  alignment _ = #{alignment VkTimelineSemaphoreSubmitInfo}
 
   peek ptr = 
     VkTimelineSemaphoreSubmitInfo
@@ -53,22 +53,22 @@ instance Storable VkTimelineSemaphoreSubmitInfo where
     pokeField @"pSignalSemaphoreValues" ptr val
 
 instance Offset "sType" VkTimelineSemaphoreSubmitInfo where
-  rawOffset = #{offset struct VkTimelineSemaphoreSubmitInfo, sType}
+  rawOffset = #{offset VkTimelineSemaphoreSubmitInfo, sType}
 
 instance Offset "pNext" VkTimelineSemaphoreSubmitInfo where
-  rawOffset = #{offset struct VkTimelineSemaphoreSubmitInfo, pNext}
+  rawOffset = #{offset VkTimelineSemaphoreSubmitInfo, pNext}
 
 instance Offset "waitSemaphoreValueCount" VkTimelineSemaphoreSubmitInfo where
-  rawOffset = #{offset struct VkTimelineSemaphoreSubmitInfo, waitSemaphoreValueCount}
+  rawOffset = #{offset VkTimelineSemaphoreSubmitInfo, waitSemaphoreValueCount}
 
 instance Offset "pWaitSemaphoreValues" VkTimelineSemaphoreSubmitInfo where
-  rawOffset = #{offset struct VkTimelineSemaphoreSubmitInfo, pWaitSemaphoreValues}
+  rawOffset = #{offset VkTimelineSemaphoreSubmitInfo, pWaitSemaphoreValues}
 
 instance Offset "signalSemaphoreValueCount" VkTimelineSemaphoreSubmitInfo where
-  rawOffset = #{offset struct VkTimelineSemaphoreSubmitInfo, signalSemaphoreValueCount}
+  rawOffset = #{offset VkTimelineSemaphoreSubmitInfo, signalSemaphoreValueCount}
 
 instance Offset "pSignalSemaphoreValues" VkTimelineSemaphoreSubmitInfo where
-  rawOffset = #{offset struct VkTimelineSemaphoreSubmitInfo, pSignalSemaphoreValues}
+  rawOffset = #{offset VkTimelineSemaphoreSubmitInfo, pSignalSemaphoreValues}
 
 #else
 

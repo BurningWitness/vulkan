@@ -47,8 +47,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkPhysicalDeviceFloatControlsProperties" #-} V
          }
 
 instance Storable VkPhysicalDeviceFloatControlsProperties where
-  sizeOf    _ = #{size      struct VkPhysicalDeviceFloatControlsProperties}
-  alignment _ = #{alignment struct VkPhysicalDeviceFloatControlsProperties}
+  sizeOf    _ = #{size      VkPhysicalDeviceFloatControlsProperties}
+  alignment _ = #{alignment VkPhysicalDeviceFloatControlsProperties}
 
   peek ptr = 
     VkPhysicalDeviceFloatControlsProperties
@@ -94,61 +94,61 @@ instance Storable VkPhysicalDeviceFloatControlsProperties where
     pokeField @"shaderRoundingModeRTZFloat64" ptr val
 
 instance Offset "sType" VkPhysicalDeviceFloatControlsProperties where
-  rawOffset = #{offset struct VkPhysicalDeviceFloatControlsProperties, sType}
+  rawOffset = #{offset VkPhysicalDeviceFloatControlsProperties, sType}
 
 instance Offset "pNext" VkPhysicalDeviceFloatControlsProperties where
-  rawOffset = #{offset struct VkPhysicalDeviceFloatControlsProperties, pNext}
+  rawOffset = #{offset VkPhysicalDeviceFloatControlsProperties, pNext}
 
 instance Offset "denormBehaviorIndependence" VkPhysicalDeviceFloatControlsProperties where
-  rawOffset = #{offset struct VkPhysicalDeviceFloatControlsProperties, denormBehaviorIndependence}
+  rawOffset = #{offset VkPhysicalDeviceFloatControlsProperties, denormBehaviorIndependence}
 
 instance Offset "roundingModeIndependence" VkPhysicalDeviceFloatControlsProperties where
-  rawOffset = #{offset struct VkPhysicalDeviceFloatControlsProperties, roundingModeIndependence}
+  rawOffset = #{offset VkPhysicalDeviceFloatControlsProperties, roundingModeIndependence}
 
 instance Offset "shaderSignedZeroInfNanPreserveFloat16" VkPhysicalDeviceFloatControlsProperties where
-  rawOffset = #{offset struct VkPhysicalDeviceFloatControlsProperties, shaderSignedZeroInfNanPreserveFloat16}
+  rawOffset = #{offset VkPhysicalDeviceFloatControlsProperties, shaderSignedZeroInfNanPreserveFloat16}
 
 instance Offset "shaderSignedZeroInfNanPreserveFloat32" VkPhysicalDeviceFloatControlsProperties where
-  rawOffset = #{offset struct VkPhysicalDeviceFloatControlsProperties, shaderSignedZeroInfNanPreserveFloat32}
+  rawOffset = #{offset VkPhysicalDeviceFloatControlsProperties, shaderSignedZeroInfNanPreserveFloat32}
 
 instance Offset "shaderSignedZeroInfNanPreserveFloat64" VkPhysicalDeviceFloatControlsProperties where
-  rawOffset = #{offset struct VkPhysicalDeviceFloatControlsProperties, shaderSignedZeroInfNanPreserveFloat64}
+  rawOffset = #{offset VkPhysicalDeviceFloatControlsProperties, shaderSignedZeroInfNanPreserveFloat64}
 
 instance Offset "shaderDenormPreserveFloat16" VkPhysicalDeviceFloatControlsProperties where
-  rawOffset = #{offset struct VkPhysicalDeviceFloatControlsProperties, shaderDenormPreserveFloat16}
+  rawOffset = #{offset VkPhysicalDeviceFloatControlsProperties, shaderDenormPreserveFloat16}
 
 instance Offset "shaderDenormPreserveFloat32" VkPhysicalDeviceFloatControlsProperties where
-  rawOffset = #{offset struct VkPhysicalDeviceFloatControlsProperties, shaderDenormPreserveFloat32}
+  rawOffset = #{offset VkPhysicalDeviceFloatControlsProperties, shaderDenormPreserveFloat32}
 
 instance Offset "shaderDenormPreserveFloat64" VkPhysicalDeviceFloatControlsProperties where
-  rawOffset = #{offset struct VkPhysicalDeviceFloatControlsProperties, shaderDenormPreserveFloat64}
+  rawOffset = #{offset VkPhysicalDeviceFloatControlsProperties, shaderDenormPreserveFloat64}
 
 instance Offset "shaderDenormFlushToZeroFloat16" VkPhysicalDeviceFloatControlsProperties where
-  rawOffset = #{offset struct VkPhysicalDeviceFloatControlsProperties, shaderDenormFlushToZeroFloat16}
+  rawOffset = #{offset VkPhysicalDeviceFloatControlsProperties, shaderDenormFlushToZeroFloat16}
 
 instance Offset "shaderDenormFlushToZeroFloat32" VkPhysicalDeviceFloatControlsProperties where
-  rawOffset = #{offset struct VkPhysicalDeviceFloatControlsProperties, shaderDenormFlushToZeroFloat32}
+  rawOffset = #{offset VkPhysicalDeviceFloatControlsProperties, shaderDenormFlushToZeroFloat32}
 
 instance Offset "shaderDenormFlushToZeroFloat64" VkPhysicalDeviceFloatControlsProperties where
-  rawOffset = #{offset struct VkPhysicalDeviceFloatControlsProperties, shaderDenormFlushToZeroFloat64}
+  rawOffset = #{offset VkPhysicalDeviceFloatControlsProperties, shaderDenormFlushToZeroFloat64}
 
 instance Offset "shaderRoundingModeRTEFloat16" VkPhysicalDeviceFloatControlsProperties where
-  rawOffset = #{offset struct VkPhysicalDeviceFloatControlsProperties, shaderRoundingModeRTEFloat16}
+  rawOffset = #{offset VkPhysicalDeviceFloatControlsProperties, shaderRoundingModeRTEFloat16}
 
 instance Offset "shaderRoundingModeRTEFloat32" VkPhysicalDeviceFloatControlsProperties where
-  rawOffset = #{offset struct VkPhysicalDeviceFloatControlsProperties, shaderRoundingModeRTEFloat32}
+  rawOffset = #{offset VkPhysicalDeviceFloatControlsProperties, shaderRoundingModeRTEFloat32}
 
 instance Offset "shaderRoundingModeRTEFloat64" VkPhysicalDeviceFloatControlsProperties where
-  rawOffset = #{offset struct VkPhysicalDeviceFloatControlsProperties, shaderRoundingModeRTEFloat64}
+  rawOffset = #{offset VkPhysicalDeviceFloatControlsProperties, shaderRoundingModeRTEFloat64}
 
 instance Offset "shaderRoundingModeRTZFloat16" VkPhysicalDeviceFloatControlsProperties where
-  rawOffset = #{offset struct VkPhysicalDeviceFloatControlsProperties, shaderRoundingModeRTZFloat16}
+  rawOffset = #{offset VkPhysicalDeviceFloatControlsProperties, shaderRoundingModeRTZFloat16}
 
 instance Offset "shaderRoundingModeRTZFloat32" VkPhysicalDeviceFloatControlsProperties where
-  rawOffset = #{offset struct VkPhysicalDeviceFloatControlsProperties, shaderRoundingModeRTZFloat32}
+  rawOffset = #{offset VkPhysicalDeviceFloatControlsProperties, shaderRoundingModeRTZFloat32}
 
 instance Offset "shaderRoundingModeRTZFloat64" VkPhysicalDeviceFloatControlsProperties where
-  rawOffset = #{offset struct VkPhysicalDeviceFloatControlsProperties, shaderRoundingModeRTZFloat64}
+  rawOffset = #{offset VkPhysicalDeviceFloatControlsProperties, shaderRoundingModeRTZFloat64}
 
 #else
 

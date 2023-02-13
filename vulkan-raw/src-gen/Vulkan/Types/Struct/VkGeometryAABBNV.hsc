@@ -34,8 +34,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkGeometryAABBNV" #-} VkGeometryAABBNV =
          }
 
 instance Storable VkGeometryAABBNV where
-  sizeOf    _ = #{size      struct VkGeometryAABBNV}
-  alignment _ = #{alignment struct VkGeometryAABBNV}
+  sizeOf    _ = #{size      VkGeometryAABBNV}
+  alignment _ = #{alignment VkGeometryAABBNV}
 
   peek ptr = 
     VkGeometryAABBNV
@@ -55,22 +55,22 @@ instance Storable VkGeometryAABBNV where
     pokeField @"offset" ptr val
 
 instance Offset "sType" VkGeometryAABBNV where
-  rawOffset = #{offset struct VkGeometryAABBNV, sType}
+  rawOffset = #{offset VkGeometryAABBNV, sType}
 
 instance Offset "pNext" VkGeometryAABBNV where
-  rawOffset = #{offset struct VkGeometryAABBNV, pNext}
+  rawOffset = #{offset VkGeometryAABBNV, pNext}
 
 instance Offset "aabbData" VkGeometryAABBNV where
-  rawOffset = #{offset struct VkGeometryAABBNV, aabbData}
+  rawOffset = #{offset VkGeometryAABBNV, aabbData}
 
 instance Offset "numAABBs" VkGeometryAABBNV where
-  rawOffset = #{offset struct VkGeometryAABBNV, numAABBs}
+  rawOffset = #{offset VkGeometryAABBNV, numAABBs}
 
 instance Offset "stride" VkGeometryAABBNV where
-  rawOffset = #{offset struct VkGeometryAABBNV, stride}
+  rawOffset = #{offset VkGeometryAABBNV, stride}
 
 instance Offset "offset" VkGeometryAABBNV where
-  rawOffset = #{offset struct VkGeometryAABBNV, offset}
+  rawOffset = #{offset VkGeometryAABBNV, offset}
 
 #else
 

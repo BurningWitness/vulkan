@@ -32,8 +32,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkPipelineSampleLocationsStateCreateInfoEXT" #
          }
 
 instance Storable VkPipelineSampleLocationsStateCreateInfoEXT where
-  sizeOf    _ = #{size      struct VkPipelineSampleLocationsStateCreateInfoEXT}
-  alignment _ = #{alignment struct VkPipelineSampleLocationsStateCreateInfoEXT}
+  sizeOf    _ = #{size      VkPipelineSampleLocationsStateCreateInfoEXT}
+  alignment _ = #{alignment VkPipelineSampleLocationsStateCreateInfoEXT}
 
   peek ptr = 
     VkPipelineSampleLocationsStateCreateInfoEXT
@@ -49,16 +49,16 @@ instance Storable VkPipelineSampleLocationsStateCreateInfoEXT where
     pokeField @"sampleLocationsInfo" ptr val
 
 instance Offset "sType" VkPipelineSampleLocationsStateCreateInfoEXT where
-  rawOffset = #{offset struct VkPipelineSampleLocationsStateCreateInfoEXT, sType}
+  rawOffset = #{offset VkPipelineSampleLocationsStateCreateInfoEXT, sType}
 
 instance Offset "pNext" VkPipelineSampleLocationsStateCreateInfoEXT where
-  rawOffset = #{offset struct VkPipelineSampleLocationsStateCreateInfoEXT, pNext}
+  rawOffset = #{offset VkPipelineSampleLocationsStateCreateInfoEXT, pNext}
 
 instance Offset "sampleLocationsEnable" VkPipelineSampleLocationsStateCreateInfoEXT where
-  rawOffset = #{offset struct VkPipelineSampleLocationsStateCreateInfoEXT, sampleLocationsEnable}
+  rawOffset = #{offset VkPipelineSampleLocationsStateCreateInfoEXT, sampleLocationsEnable}
 
 instance Offset "sampleLocationsInfo" VkPipelineSampleLocationsStateCreateInfoEXT where
-  rawOffset = #{offset struct VkPipelineSampleLocationsStateCreateInfoEXT, sampleLocationsInfo}
+  rawOffset = #{offset VkPipelineSampleLocationsStateCreateInfoEXT, sampleLocationsInfo}
 
 #else
 

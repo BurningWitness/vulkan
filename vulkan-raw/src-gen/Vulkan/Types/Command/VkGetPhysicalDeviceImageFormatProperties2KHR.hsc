@@ -1,3 +1,7 @@
+{-# LANGUAGE CApiFFI #-}
+{-# LANGUAGE CPP #-}
+{-# LANGUAGE MagicHash #-}
+
 #include <vulkan/vulkan.h>
 
 #if VK_KHR_get_physical_device_properties2
@@ -11,17 +15,18 @@ import Vulkan.Types.Enum.VkResult
 import Vulkan.Types.Handle
 import Vulkan.Types.Struct.VkImageFormatProperties2
 import Vulkan.Types.Struct.VkPhysicalDeviceImageFormatInfo2
-import Vulkan.Types.Command.VkGetPhysicalDeviceImageFormatProperties2
 import Vulkan.Types.VkFun
 
 
 
-type VkGetPhysicalDeviceImageFormatProperties2KHR = VkGetPhysicalDeviceImageFormatProperties2
+type VkGetPhysicalDeviceImageFormatProperties2KHR =
+          VkPhysicalDevice -- ^ physicalDevice
+       -> Ptr VkPhysicalDeviceImageFormatInfo2 -- ^ pImageFormatInfo
+       -> Ptr VkImageFormatProperties2 -- ^ pImageFormatProperties
+       -> IO VkResult
 
-vkFunGetPhysicalDeviceImageFormatProperties2KHR
-  :: VkFun VkGetPhysicalDeviceImageFormatProperties2KHR
-vkFunGetPhysicalDeviceImageFormatProperties2KHR = vkFunGetPhysicalDeviceImageFormatProperties2
-
+vkFunGetPhysicalDeviceImageFormatProperties2KHR :: VkFun VkGetPhysicalDeviceImageFormatProperties2KHR
+vkFunGetPhysicalDeviceImageFormatProperties2KHR = VkFun (Ptr ("vkGetPhysicalDeviceImageFormatProperties2KHR\0"##))
 
 #else
 

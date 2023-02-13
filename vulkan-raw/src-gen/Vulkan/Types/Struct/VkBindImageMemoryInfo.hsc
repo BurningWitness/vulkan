@@ -33,8 +33,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkBindImageMemoryInfo" #-} VkBindImageMemoryIn
          }
 
 instance Storable VkBindImageMemoryInfo where
-  sizeOf    _ = #{size      struct VkBindImageMemoryInfo}
-  alignment _ = #{alignment struct VkBindImageMemoryInfo}
+  sizeOf    _ = #{size      VkBindImageMemoryInfo}
+  alignment _ = #{alignment VkBindImageMemoryInfo}
 
   peek ptr = 
     VkBindImageMemoryInfo
@@ -52,19 +52,19 @@ instance Storable VkBindImageMemoryInfo where
     pokeField @"memoryOffset" ptr val
 
 instance Offset "sType" VkBindImageMemoryInfo where
-  rawOffset = #{offset struct VkBindImageMemoryInfo, sType}
+  rawOffset = #{offset VkBindImageMemoryInfo, sType}
 
 instance Offset "pNext" VkBindImageMemoryInfo where
-  rawOffset = #{offset struct VkBindImageMemoryInfo, pNext}
+  rawOffset = #{offset VkBindImageMemoryInfo, pNext}
 
 instance Offset "image" VkBindImageMemoryInfo where
-  rawOffset = #{offset struct VkBindImageMemoryInfo, image}
+  rawOffset = #{offset VkBindImageMemoryInfo, image}
 
 instance Offset "memory" VkBindImageMemoryInfo where
-  rawOffset = #{offset struct VkBindImageMemoryInfo, memory}
+  rawOffset = #{offset VkBindImageMemoryInfo, memory}
 
 instance Offset "memoryOffset" VkBindImageMemoryInfo where
-  rawOffset = #{offset struct VkBindImageMemoryInfo, memoryOffset}
+  rawOffset = #{offset VkBindImageMemoryInfo, memoryOffset}
 
 #else
 

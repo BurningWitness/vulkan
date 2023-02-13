@@ -38,8 +38,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkCommandBufferInheritanceRenderingInfo" #-} V
          }
 
 instance Storable VkCommandBufferInheritanceRenderingInfo where
-  sizeOf    _ = #{size      struct VkCommandBufferInheritanceRenderingInfo}
-  alignment _ = #{alignment struct VkCommandBufferInheritanceRenderingInfo}
+  sizeOf    _ = #{size      VkCommandBufferInheritanceRenderingInfo}
+  alignment _ = #{alignment VkCommandBufferInheritanceRenderingInfo}
 
   peek ptr = 
     VkCommandBufferInheritanceRenderingInfo
@@ -65,31 +65,31 @@ instance Storable VkCommandBufferInheritanceRenderingInfo where
     pokeField @"rasterizationSamples" ptr val
 
 instance Offset "sType" VkCommandBufferInheritanceRenderingInfo where
-  rawOffset = #{offset struct VkCommandBufferInheritanceRenderingInfo, sType}
+  rawOffset = #{offset VkCommandBufferInheritanceRenderingInfo, sType}
 
 instance Offset "pNext" VkCommandBufferInheritanceRenderingInfo where
-  rawOffset = #{offset struct VkCommandBufferInheritanceRenderingInfo, pNext}
+  rawOffset = #{offset VkCommandBufferInheritanceRenderingInfo, pNext}
 
 instance Offset "flags" VkCommandBufferInheritanceRenderingInfo where
-  rawOffset = #{offset struct VkCommandBufferInheritanceRenderingInfo, flags}
+  rawOffset = #{offset VkCommandBufferInheritanceRenderingInfo, flags}
 
 instance Offset "viewMask" VkCommandBufferInheritanceRenderingInfo where
-  rawOffset = #{offset struct VkCommandBufferInheritanceRenderingInfo, viewMask}
+  rawOffset = #{offset VkCommandBufferInheritanceRenderingInfo, viewMask}
 
 instance Offset "colorAttachmentCount" VkCommandBufferInheritanceRenderingInfo where
-  rawOffset = #{offset struct VkCommandBufferInheritanceRenderingInfo, colorAttachmentCount}
+  rawOffset = #{offset VkCommandBufferInheritanceRenderingInfo, colorAttachmentCount}
 
 instance Offset "pColorAttachmentFormats" VkCommandBufferInheritanceRenderingInfo where
-  rawOffset = #{offset struct VkCommandBufferInheritanceRenderingInfo, pColorAttachmentFormats}
+  rawOffset = #{offset VkCommandBufferInheritanceRenderingInfo, pColorAttachmentFormats}
 
 instance Offset "depthAttachmentFormat" VkCommandBufferInheritanceRenderingInfo where
-  rawOffset = #{offset struct VkCommandBufferInheritanceRenderingInfo, depthAttachmentFormat}
+  rawOffset = #{offset VkCommandBufferInheritanceRenderingInfo, depthAttachmentFormat}
 
 instance Offset "stencilAttachmentFormat" VkCommandBufferInheritanceRenderingInfo where
-  rawOffset = #{offset struct VkCommandBufferInheritanceRenderingInfo, stencilAttachmentFormat}
+  rawOffset = #{offset VkCommandBufferInheritanceRenderingInfo, stencilAttachmentFormat}
 
 instance Offset "rasterizationSamples" VkCommandBufferInheritanceRenderingInfo where
-  rawOffset = #{offset struct VkCommandBufferInheritanceRenderingInfo, rasterizationSamples}
+  rawOffset = #{offset VkCommandBufferInheritanceRenderingInfo, rasterizationSamples}
 
 #else
 

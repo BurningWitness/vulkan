@@ -27,8 +27,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkLayerProperties" #-} VkLayerProperties =
          }
 
 instance Storable VkLayerProperties where
-  sizeOf    _ = #{size      struct VkLayerProperties}
-  alignment _ = #{alignment struct VkLayerProperties}
+  sizeOf    _ = #{size      VkLayerProperties}
+  alignment _ = #{alignment VkLayerProperties}
 
   peek ptr = 
     VkLayerProperties
@@ -44,13 +44,13 @@ instance Storable VkLayerProperties where
     pokeField @"description" ptr val
 
 instance Offset "layerName" VkLayerProperties where
-  rawOffset = #{offset struct VkLayerProperties, layerName}
+  rawOffset = #{offset VkLayerProperties, layerName}
 
 instance Offset "specVersion" VkLayerProperties where
-  rawOffset = #{offset struct VkLayerProperties, specVersion}
+  rawOffset = #{offset VkLayerProperties, specVersion}
 
 instance Offset "implementationVersion" VkLayerProperties where
-  rawOffset = #{offset struct VkLayerProperties, implementationVersion}
+  rawOffset = #{offset VkLayerProperties, implementationVersion}
 
 instance Offset "description" VkLayerProperties where
-  rawOffset = #{offset struct VkLayerProperties, description}
+  rawOffset = #{offset VkLayerProperties, description}

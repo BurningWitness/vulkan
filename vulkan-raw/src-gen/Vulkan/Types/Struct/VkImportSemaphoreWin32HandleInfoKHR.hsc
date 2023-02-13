@@ -37,8 +37,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkImportSemaphoreWin32HandleInfoKHR" #-} VkImp
          }
 
 instance Storable VkImportSemaphoreWin32HandleInfoKHR where
-  sizeOf    _ = #{size      struct VkImportSemaphoreWin32HandleInfoKHR}
-  alignment _ = #{alignment struct VkImportSemaphoreWin32HandleInfoKHR}
+  sizeOf    _ = #{size      VkImportSemaphoreWin32HandleInfoKHR}
+  alignment _ = #{alignment VkImportSemaphoreWin32HandleInfoKHR}
 
   peek ptr = 
     VkImportSemaphoreWin32HandleInfoKHR
@@ -60,25 +60,25 @@ instance Storable VkImportSemaphoreWin32HandleInfoKHR where
     pokeField @"name" ptr val
 
 instance Offset "sType" VkImportSemaphoreWin32HandleInfoKHR where
-  rawOffset = #{offset struct VkImportSemaphoreWin32HandleInfoKHR, sType}
+  rawOffset = #{offset VkImportSemaphoreWin32HandleInfoKHR, sType}
 
 instance Offset "pNext" VkImportSemaphoreWin32HandleInfoKHR where
-  rawOffset = #{offset struct VkImportSemaphoreWin32HandleInfoKHR, pNext}
+  rawOffset = #{offset VkImportSemaphoreWin32HandleInfoKHR, pNext}
 
 instance Offset "semaphore" VkImportSemaphoreWin32HandleInfoKHR where
-  rawOffset = #{offset struct VkImportSemaphoreWin32HandleInfoKHR, semaphore}
+  rawOffset = #{offset VkImportSemaphoreWin32HandleInfoKHR, semaphore}
 
 instance Offset "flags" VkImportSemaphoreWin32HandleInfoKHR where
-  rawOffset = #{offset struct VkImportSemaphoreWin32HandleInfoKHR, flags}
+  rawOffset = #{offset VkImportSemaphoreWin32HandleInfoKHR, flags}
 
 instance Offset "handleType" VkImportSemaphoreWin32HandleInfoKHR where
-  rawOffset = #{offset struct VkImportSemaphoreWin32HandleInfoKHR, handleType}
+  rawOffset = #{offset VkImportSemaphoreWin32HandleInfoKHR, handleType}
 
 instance Offset "handle" VkImportSemaphoreWin32HandleInfoKHR where
-  rawOffset = #{offset struct VkImportSemaphoreWin32HandleInfoKHR, handle}
+  rawOffset = #{offset VkImportSemaphoreWin32HandleInfoKHR, handle}
 
 instance Offset "name" VkImportSemaphoreWin32HandleInfoKHR where
-  rawOffset = #{offset struct VkImportSemaphoreWin32HandleInfoKHR, name}
+  rawOffset = #{offset VkImportSemaphoreWin32HandleInfoKHR, name}
 
 #else
 

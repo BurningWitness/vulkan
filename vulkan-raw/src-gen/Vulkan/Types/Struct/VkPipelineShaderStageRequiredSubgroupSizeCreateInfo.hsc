@@ -29,8 +29,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkPipelineShaderStageRequiredSubgroupSizeCreat
          }
 
 instance Storable VkPipelineShaderStageRequiredSubgroupSizeCreateInfo where
-  sizeOf    _ = #{size      struct VkPipelineShaderStageRequiredSubgroupSizeCreateInfo}
-  alignment _ = #{alignment struct VkPipelineShaderStageRequiredSubgroupSizeCreateInfo}
+  sizeOf    _ = #{size      VkPipelineShaderStageRequiredSubgroupSizeCreateInfo}
+  alignment _ = #{alignment VkPipelineShaderStageRequiredSubgroupSizeCreateInfo}
 
   peek ptr = 
     VkPipelineShaderStageRequiredSubgroupSizeCreateInfo
@@ -44,13 +44,13 @@ instance Storable VkPipelineShaderStageRequiredSubgroupSizeCreateInfo where
     pokeField @"requiredSubgroupSize" ptr val
 
 instance Offset "sType" VkPipelineShaderStageRequiredSubgroupSizeCreateInfo where
-  rawOffset = #{offset struct VkPipelineShaderStageRequiredSubgroupSizeCreateInfo, sType}
+  rawOffset = #{offset VkPipelineShaderStageRequiredSubgroupSizeCreateInfo, sType}
 
 instance Offset "pNext" VkPipelineShaderStageRequiredSubgroupSizeCreateInfo where
-  rawOffset = #{offset struct VkPipelineShaderStageRequiredSubgroupSizeCreateInfo, pNext}
+  rawOffset = #{offset VkPipelineShaderStageRequiredSubgroupSizeCreateInfo, pNext}
 
 instance Offset "requiredSubgroupSize" VkPipelineShaderStageRequiredSubgroupSizeCreateInfo where
-  rawOffset = #{offset struct VkPipelineShaderStageRequiredSubgroupSizeCreateInfo, requiredSubgroupSize}
+  rawOffset = #{offset VkPipelineShaderStageRequiredSubgroupSizeCreateInfo, requiredSubgroupSize}
 
 #else
 

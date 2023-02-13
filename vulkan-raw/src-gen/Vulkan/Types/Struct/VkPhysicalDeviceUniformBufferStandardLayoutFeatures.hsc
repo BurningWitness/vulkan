@@ -30,8 +30,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkPhysicalDeviceUniformBufferStandardLayoutFea
          }
 
 instance Storable VkPhysicalDeviceUniformBufferStandardLayoutFeatures where
-  sizeOf    _ = #{size      struct VkPhysicalDeviceUniformBufferStandardLayoutFeatures}
-  alignment _ = #{alignment struct VkPhysicalDeviceUniformBufferStandardLayoutFeatures}
+  sizeOf    _ = #{size      VkPhysicalDeviceUniformBufferStandardLayoutFeatures}
+  alignment _ = #{alignment VkPhysicalDeviceUniformBufferStandardLayoutFeatures}
 
   peek ptr = 
     VkPhysicalDeviceUniformBufferStandardLayoutFeatures
@@ -45,13 +45,13 @@ instance Storable VkPhysicalDeviceUniformBufferStandardLayoutFeatures where
     pokeField @"uniformBufferStandardLayout" ptr val
 
 instance Offset "sType" VkPhysicalDeviceUniformBufferStandardLayoutFeatures where
-  rawOffset = #{offset struct VkPhysicalDeviceUniformBufferStandardLayoutFeatures, sType}
+  rawOffset = #{offset VkPhysicalDeviceUniformBufferStandardLayoutFeatures, sType}
 
 instance Offset "pNext" VkPhysicalDeviceUniformBufferStandardLayoutFeatures where
-  rawOffset = #{offset struct VkPhysicalDeviceUniformBufferStandardLayoutFeatures, pNext}
+  rawOffset = #{offset VkPhysicalDeviceUniformBufferStandardLayoutFeatures, pNext}
 
 instance Offset "uniformBufferStandardLayout" VkPhysicalDeviceUniformBufferStandardLayoutFeatures where
-  rawOffset = #{offset struct VkPhysicalDeviceUniformBufferStandardLayoutFeatures, uniformBufferStandardLayout}
+  rawOffset = #{offset VkPhysicalDeviceUniformBufferStandardLayoutFeatures, uniformBufferStandardLayout}
 
 #else
 

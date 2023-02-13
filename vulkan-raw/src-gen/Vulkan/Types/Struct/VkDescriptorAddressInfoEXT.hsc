@@ -33,8 +33,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkDescriptorAddressInfoEXT" #-} VkDescriptorAd
          }
 
 instance Storable VkDescriptorAddressInfoEXT where
-  sizeOf    _ = #{size      struct VkDescriptorAddressInfoEXT}
-  alignment _ = #{alignment struct VkDescriptorAddressInfoEXT}
+  sizeOf    _ = #{size      VkDescriptorAddressInfoEXT}
+  alignment _ = #{alignment VkDescriptorAddressInfoEXT}
 
   peek ptr = 
     VkDescriptorAddressInfoEXT
@@ -52,19 +52,19 @@ instance Storable VkDescriptorAddressInfoEXT where
     pokeField @"format" ptr val
 
 instance Offset "sType" VkDescriptorAddressInfoEXT where
-  rawOffset = #{offset struct VkDescriptorAddressInfoEXT, sType}
+  rawOffset = #{offset VkDescriptorAddressInfoEXT, sType}
 
 instance Offset "pNext" VkDescriptorAddressInfoEXT where
-  rawOffset = #{offset struct VkDescriptorAddressInfoEXT, pNext}
+  rawOffset = #{offset VkDescriptorAddressInfoEXT, pNext}
 
 instance Offset "address" VkDescriptorAddressInfoEXT where
-  rawOffset = #{offset struct VkDescriptorAddressInfoEXT, address}
+  rawOffset = #{offset VkDescriptorAddressInfoEXT, address}
 
 instance Offset "range" VkDescriptorAddressInfoEXT where
-  rawOffset = #{offset struct VkDescriptorAddressInfoEXT, range}
+  rawOffset = #{offset VkDescriptorAddressInfoEXT, range}
 
 instance Offset "format" VkDescriptorAddressInfoEXT where
-  rawOffset = #{offset struct VkDescriptorAddressInfoEXT, format}
+  rawOffset = #{offset VkDescriptorAddressInfoEXT, format}
 
 #else
 

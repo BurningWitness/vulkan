@@ -29,8 +29,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkInputAttachmentAspectReference" #-} VkInputA
          }
 
 instance Storable VkInputAttachmentAspectReference where
-  sizeOf    _ = #{size      struct VkInputAttachmentAspectReference}
-  alignment _ = #{alignment struct VkInputAttachmentAspectReference}
+  sizeOf    _ = #{size      VkInputAttachmentAspectReference}
+  alignment _ = #{alignment VkInputAttachmentAspectReference}
 
   peek ptr = 
     VkInputAttachmentAspectReference
@@ -44,13 +44,13 @@ instance Storable VkInputAttachmentAspectReference where
     pokeField @"aspectMask" ptr val
 
 instance Offset "subpass" VkInputAttachmentAspectReference where
-  rawOffset = #{offset struct VkInputAttachmentAspectReference, subpass}
+  rawOffset = #{offset VkInputAttachmentAspectReference, subpass}
 
 instance Offset "inputAttachmentIndex" VkInputAttachmentAspectReference where
-  rawOffset = #{offset struct VkInputAttachmentAspectReference, inputAttachmentIndex}
+  rawOffset = #{offset VkInputAttachmentAspectReference, inputAttachmentIndex}
 
 instance Offset "aspectMask" VkInputAttachmentAspectReference where
-  rawOffset = #{offset struct VkInputAttachmentAspectReference, aspectMask}
+  rawOffset = #{offset VkInputAttachmentAspectReference, aspectMask}
 
 #else
 

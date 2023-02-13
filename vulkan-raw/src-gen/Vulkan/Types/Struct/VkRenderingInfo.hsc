@@ -39,8 +39,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkRenderingInfo" #-} VkRenderingInfo =
          }
 
 instance Storable VkRenderingInfo where
-  sizeOf    _ = #{size      struct VkRenderingInfo}
-  alignment _ = #{alignment struct VkRenderingInfo}
+  sizeOf    _ = #{size      VkRenderingInfo}
+  alignment _ = #{alignment VkRenderingInfo}
 
   peek ptr = 
     VkRenderingInfo
@@ -68,34 +68,34 @@ instance Storable VkRenderingInfo where
     pokeField @"pStencilAttachment" ptr val
 
 instance Offset "sType" VkRenderingInfo where
-  rawOffset = #{offset struct VkRenderingInfo, sType}
+  rawOffset = #{offset VkRenderingInfo, sType}
 
 instance Offset "pNext" VkRenderingInfo where
-  rawOffset = #{offset struct VkRenderingInfo, pNext}
+  rawOffset = #{offset VkRenderingInfo, pNext}
 
 instance Offset "flags" VkRenderingInfo where
-  rawOffset = #{offset struct VkRenderingInfo, flags}
+  rawOffset = #{offset VkRenderingInfo, flags}
 
 instance Offset "renderArea" VkRenderingInfo where
-  rawOffset = #{offset struct VkRenderingInfo, renderArea}
+  rawOffset = #{offset VkRenderingInfo, renderArea}
 
 instance Offset "layerCount" VkRenderingInfo where
-  rawOffset = #{offset struct VkRenderingInfo, layerCount}
+  rawOffset = #{offset VkRenderingInfo, layerCount}
 
 instance Offset "viewMask" VkRenderingInfo where
-  rawOffset = #{offset struct VkRenderingInfo, viewMask}
+  rawOffset = #{offset VkRenderingInfo, viewMask}
 
 instance Offset "colorAttachmentCount" VkRenderingInfo where
-  rawOffset = #{offset struct VkRenderingInfo, colorAttachmentCount}
+  rawOffset = #{offset VkRenderingInfo, colorAttachmentCount}
 
 instance Offset "pColorAttachments" VkRenderingInfo where
-  rawOffset = #{offset struct VkRenderingInfo, pColorAttachments}
+  rawOffset = #{offset VkRenderingInfo, pColorAttachments}
 
 instance Offset "pDepthAttachment" VkRenderingInfo where
-  rawOffset = #{offset struct VkRenderingInfo, pDepthAttachment}
+  rawOffset = #{offset VkRenderingInfo, pDepthAttachment}
 
 instance Offset "pStencilAttachment" VkRenderingInfo where
-  rawOffset = #{offset struct VkRenderingInfo, pStencilAttachment}
+  rawOffset = #{offset VkRenderingInfo, pStencilAttachment}
 
 #else
 

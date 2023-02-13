@@ -36,8 +36,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkDisplayPropertiesKHR" #-} VkDisplayPropertie
          }
 
 instance Storable VkDisplayPropertiesKHR where
-  sizeOf    _ = #{size      struct VkDisplayPropertiesKHR}
-  alignment _ = #{alignment struct VkDisplayPropertiesKHR}
+  sizeOf    _ = #{size      VkDisplayPropertiesKHR}
+  alignment _ = #{alignment VkDisplayPropertiesKHR}
 
   peek ptr = 
     VkDisplayPropertiesKHR
@@ -59,25 +59,25 @@ instance Storable VkDisplayPropertiesKHR where
     pokeField @"persistentContent" ptr val
 
 instance Offset "display" VkDisplayPropertiesKHR where
-  rawOffset = #{offset struct VkDisplayPropertiesKHR, display}
+  rawOffset = #{offset VkDisplayPropertiesKHR, display}
 
 instance Offset "displayName" VkDisplayPropertiesKHR where
-  rawOffset = #{offset struct VkDisplayPropertiesKHR, displayName}
+  rawOffset = #{offset VkDisplayPropertiesKHR, displayName}
 
 instance Offset "physicalDimensions" VkDisplayPropertiesKHR where
-  rawOffset = #{offset struct VkDisplayPropertiesKHR, physicalDimensions}
+  rawOffset = #{offset VkDisplayPropertiesKHR, physicalDimensions}
 
 instance Offset "physicalResolution" VkDisplayPropertiesKHR where
-  rawOffset = #{offset struct VkDisplayPropertiesKHR, physicalResolution}
+  rawOffset = #{offset VkDisplayPropertiesKHR, physicalResolution}
 
 instance Offset "supportedTransforms" VkDisplayPropertiesKHR where
-  rawOffset = #{offset struct VkDisplayPropertiesKHR, supportedTransforms}
+  rawOffset = #{offset VkDisplayPropertiesKHR, supportedTransforms}
 
 instance Offset "planeReorderPossible" VkDisplayPropertiesKHR where
-  rawOffset = #{offset struct VkDisplayPropertiesKHR, planeReorderPossible}
+  rawOffset = #{offset VkDisplayPropertiesKHR, planeReorderPossible}
 
 instance Offset "persistentContent" VkDisplayPropertiesKHR where
-  rawOffset = #{offset struct VkDisplayPropertiesKHR, persistentContent}
+  rawOffset = #{offset VkDisplayPropertiesKHR, persistentContent}
 
 #else
 

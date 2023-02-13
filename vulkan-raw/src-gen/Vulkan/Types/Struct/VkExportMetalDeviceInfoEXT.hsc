@@ -30,8 +30,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkExportMetalDeviceInfoEXT" #-} VkExportMetalD
          }
 
 instance Storable VkExportMetalDeviceInfoEXT where
-  sizeOf    _ = #{size      struct VkExportMetalDeviceInfoEXT}
-  alignment _ = #{alignment struct VkExportMetalDeviceInfoEXT}
+  sizeOf    _ = #{size      VkExportMetalDeviceInfoEXT}
+  alignment _ = #{alignment VkExportMetalDeviceInfoEXT}
 
   peek ptr = 
     VkExportMetalDeviceInfoEXT
@@ -45,13 +45,13 @@ instance Storable VkExportMetalDeviceInfoEXT where
     pokeField @"mtlDevice" ptr val
 
 instance Offset "sType" VkExportMetalDeviceInfoEXT where
-  rawOffset = #{offset struct VkExportMetalDeviceInfoEXT, sType}
+  rawOffset = #{offset VkExportMetalDeviceInfoEXT, sType}
 
 instance Offset "pNext" VkExportMetalDeviceInfoEXT where
-  rawOffset = #{offset struct VkExportMetalDeviceInfoEXT, pNext}
+  rawOffset = #{offset VkExportMetalDeviceInfoEXT, pNext}
 
 instance Offset "mtlDevice" VkExportMetalDeviceInfoEXT where
-  rawOffset = #{offset struct VkExportMetalDeviceInfoEXT, mtlDevice}
+  rawOffset = #{offset VkExportMetalDeviceInfoEXT, mtlDevice}
 
 #else
 

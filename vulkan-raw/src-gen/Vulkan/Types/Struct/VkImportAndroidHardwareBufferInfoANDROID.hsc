@@ -30,8 +30,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkImportAndroidHardwareBufferInfoANDROID" #-} 
          }
 
 instance Storable VkImportAndroidHardwareBufferInfoANDROID where
-  sizeOf    _ = #{size      struct VkImportAndroidHardwareBufferInfoANDROID}
-  alignment _ = #{alignment struct VkImportAndroidHardwareBufferInfoANDROID}
+  sizeOf    _ = #{size      VkImportAndroidHardwareBufferInfoANDROID}
+  alignment _ = #{alignment VkImportAndroidHardwareBufferInfoANDROID}
 
   peek ptr = 
     VkImportAndroidHardwareBufferInfoANDROID
@@ -45,13 +45,13 @@ instance Storable VkImportAndroidHardwareBufferInfoANDROID where
     pokeField @"buffer" ptr val
 
 instance Offset "sType" VkImportAndroidHardwareBufferInfoANDROID where
-  rawOffset = #{offset struct VkImportAndroidHardwareBufferInfoANDROID, sType}
+  rawOffset = #{offset VkImportAndroidHardwareBufferInfoANDROID, sType}
 
 instance Offset "pNext" VkImportAndroidHardwareBufferInfoANDROID where
-  rawOffset = #{offset struct VkImportAndroidHardwareBufferInfoANDROID, pNext}
+  rawOffset = #{offset VkImportAndroidHardwareBufferInfoANDROID, pNext}
 
 instance Offset "buffer" VkImportAndroidHardwareBufferInfoANDROID where
-  rawOffset = #{offset struct VkImportAndroidHardwareBufferInfoANDROID, buffer}
+  rawOffset = #{offset VkImportAndroidHardwareBufferInfoANDROID, buffer}
 
 #else
 

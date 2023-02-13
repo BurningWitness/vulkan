@@ -31,8 +31,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkApplicationInfo" #-} VkApplicationInfo =
          }
 
 instance Storable VkApplicationInfo where
-  sizeOf    _ = #{size      struct VkApplicationInfo}
-  alignment _ = #{alignment struct VkApplicationInfo}
+  sizeOf    _ = #{size      VkApplicationInfo}
+  alignment _ = #{alignment VkApplicationInfo}
 
   peek ptr = 
     VkApplicationInfo
@@ -54,22 +54,22 @@ instance Storable VkApplicationInfo where
     pokeField @"apiVersion" ptr val
 
 instance Offset "sType" VkApplicationInfo where
-  rawOffset = #{offset struct VkApplicationInfo, sType}
+  rawOffset = #{offset VkApplicationInfo, sType}
 
 instance Offset "pNext" VkApplicationInfo where
-  rawOffset = #{offset struct VkApplicationInfo, pNext}
+  rawOffset = #{offset VkApplicationInfo, pNext}
 
 instance Offset "pApplicationName" VkApplicationInfo where
-  rawOffset = #{offset struct VkApplicationInfo, pApplicationName}
+  rawOffset = #{offset VkApplicationInfo, pApplicationName}
 
 instance Offset "applicationVersion" VkApplicationInfo where
-  rawOffset = #{offset struct VkApplicationInfo, applicationVersion}
+  rawOffset = #{offset VkApplicationInfo, applicationVersion}
 
 instance Offset "pEngineName" VkApplicationInfo where
-  rawOffset = #{offset struct VkApplicationInfo, pEngineName}
+  rawOffset = #{offset VkApplicationInfo, pEngineName}
 
 instance Offset "engineVersion" VkApplicationInfo where
-  rawOffset = #{offset struct VkApplicationInfo, engineVersion}
+  rawOffset = #{offset VkApplicationInfo, engineVersion}
 
 instance Offset "apiVersion" VkApplicationInfo where
-  rawOffset = #{offset struct VkApplicationInfo, apiVersion}
+  rawOffset = #{offset VkApplicationInfo, apiVersion}

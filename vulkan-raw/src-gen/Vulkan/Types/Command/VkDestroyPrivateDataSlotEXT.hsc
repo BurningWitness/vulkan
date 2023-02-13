@@ -1,3 +1,7 @@
+{-# LANGUAGE CApiFFI #-}
+{-# LANGUAGE CPP #-}
+{-# LANGUAGE MagicHash #-}
+
 #include <vulkan/vulkan.h>
 
 #if VK_EXT_private_data
@@ -9,17 +13,18 @@ import Data.Word
 import GHC.Ptr
 import Vulkan.Types.Handle
 import Vulkan.Types.Struct.VkAllocationCallbacks
-import Vulkan.Types.Command.VkDestroyPrivateDataSlot
 import Vulkan.Types.VkFun
 
 
 
-type VkDestroyPrivateDataSlotEXT = VkDestroyPrivateDataSlot
+type VkDestroyPrivateDataSlotEXT =
+          VkDevice -- ^ device
+       -> VkPrivateDataSlot -- ^ privateDataSlot
+       -> Ptr VkAllocationCallbacks -- ^ pAllocator
+       -> IO ()
 
-vkFunDestroyPrivateDataSlotEXT
-  :: VkFun VkDestroyPrivateDataSlotEXT
-vkFunDestroyPrivateDataSlotEXT = vkFunDestroyPrivateDataSlot
-
+vkFunDestroyPrivateDataSlotEXT :: VkFun VkDestroyPrivateDataSlotEXT
+vkFunDestroyPrivateDataSlotEXT = VkFun (Ptr ("vkDestroyPrivateDataSlotEXT\0"##))
 
 #else
 

@@ -31,8 +31,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkMemoryDedicatedAllocateInfo" #-} VkMemoryDed
          }
 
 instance Storable VkMemoryDedicatedAllocateInfo where
-  sizeOf    _ = #{size      struct VkMemoryDedicatedAllocateInfo}
-  alignment _ = #{alignment struct VkMemoryDedicatedAllocateInfo}
+  sizeOf    _ = #{size      VkMemoryDedicatedAllocateInfo}
+  alignment _ = #{alignment VkMemoryDedicatedAllocateInfo}
 
   peek ptr = 
     VkMemoryDedicatedAllocateInfo
@@ -48,16 +48,16 @@ instance Storable VkMemoryDedicatedAllocateInfo where
     pokeField @"buffer" ptr val
 
 instance Offset "sType" VkMemoryDedicatedAllocateInfo where
-  rawOffset = #{offset struct VkMemoryDedicatedAllocateInfo, sType}
+  rawOffset = #{offset VkMemoryDedicatedAllocateInfo, sType}
 
 instance Offset "pNext" VkMemoryDedicatedAllocateInfo where
-  rawOffset = #{offset struct VkMemoryDedicatedAllocateInfo, pNext}
+  rawOffset = #{offset VkMemoryDedicatedAllocateInfo, pNext}
 
 instance Offset "image" VkMemoryDedicatedAllocateInfo where
-  rawOffset = #{offset struct VkMemoryDedicatedAllocateInfo, image}
+  rawOffset = #{offset VkMemoryDedicatedAllocateInfo, image}
 
 instance Offset "buffer" VkMemoryDedicatedAllocateInfo where
-  rawOffset = #{offset struct VkMemoryDedicatedAllocateInfo, buffer}
+  rawOffset = #{offset VkMemoryDedicatedAllocateInfo, buffer}
 
 #else
 

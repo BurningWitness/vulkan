@@ -31,8 +31,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkPhysicalDeviceVertexAttributeDivisorFeatures
          }
 
 instance Storable VkPhysicalDeviceVertexAttributeDivisorFeaturesEXT where
-  sizeOf    _ = #{size      struct VkPhysicalDeviceVertexAttributeDivisorFeaturesEXT}
-  alignment _ = #{alignment struct VkPhysicalDeviceVertexAttributeDivisorFeaturesEXT}
+  sizeOf    _ = #{size      VkPhysicalDeviceVertexAttributeDivisorFeaturesEXT}
+  alignment _ = #{alignment VkPhysicalDeviceVertexAttributeDivisorFeaturesEXT}
 
   peek ptr = 
     VkPhysicalDeviceVertexAttributeDivisorFeaturesEXT
@@ -48,16 +48,16 @@ instance Storable VkPhysicalDeviceVertexAttributeDivisorFeaturesEXT where
     pokeField @"vertexAttributeInstanceRateZeroDivisor" ptr val
 
 instance Offset "sType" VkPhysicalDeviceVertexAttributeDivisorFeaturesEXT where
-  rawOffset = #{offset struct VkPhysicalDeviceVertexAttributeDivisorFeaturesEXT, sType}
+  rawOffset = #{offset VkPhysicalDeviceVertexAttributeDivisorFeaturesEXT, sType}
 
 instance Offset "pNext" VkPhysicalDeviceVertexAttributeDivisorFeaturesEXT where
-  rawOffset = #{offset struct VkPhysicalDeviceVertexAttributeDivisorFeaturesEXT, pNext}
+  rawOffset = #{offset VkPhysicalDeviceVertexAttributeDivisorFeaturesEXT, pNext}
 
 instance Offset "vertexAttributeInstanceRateDivisor" VkPhysicalDeviceVertexAttributeDivisorFeaturesEXT where
-  rawOffset = #{offset struct VkPhysicalDeviceVertexAttributeDivisorFeaturesEXT, vertexAttributeInstanceRateDivisor}
+  rawOffset = #{offset VkPhysicalDeviceVertexAttributeDivisorFeaturesEXT, vertexAttributeInstanceRateDivisor}
 
 instance Offset "vertexAttributeInstanceRateZeroDivisor" VkPhysicalDeviceVertexAttributeDivisorFeaturesEXT where
-  rawOffset = #{offset struct VkPhysicalDeviceVertexAttributeDivisorFeaturesEXT, vertexAttributeInstanceRateZeroDivisor}
+  rawOffset = #{offset VkPhysicalDeviceVertexAttributeDivisorFeaturesEXT, vertexAttributeInstanceRateZeroDivisor}
 
 #else
 

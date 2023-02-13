@@ -33,8 +33,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkImageViewSampleWeightCreateInfoQCOM" #-} VkI
          }
 
 instance Storable VkImageViewSampleWeightCreateInfoQCOM where
-  sizeOf    _ = #{size      struct VkImageViewSampleWeightCreateInfoQCOM}
-  alignment _ = #{alignment struct VkImageViewSampleWeightCreateInfoQCOM}
+  sizeOf    _ = #{size      VkImageViewSampleWeightCreateInfoQCOM}
+  alignment _ = #{alignment VkImageViewSampleWeightCreateInfoQCOM}
 
   peek ptr = 
     VkImageViewSampleWeightCreateInfoQCOM
@@ -52,19 +52,19 @@ instance Storable VkImageViewSampleWeightCreateInfoQCOM where
     pokeField @"numPhases" ptr val
 
 instance Offset "sType" VkImageViewSampleWeightCreateInfoQCOM where
-  rawOffset = #{offset struct VkImageViewSampleWeightCreateInfoQCOM, sType}
+  rawOffset = #{offset VkImageViewSampleWeightCreateInfoQCOM, sType}
 
 instance Offset "pNext" VkImageViewSampleWeightCreateInfoQCOM where
-  rawOffset = #{offset struct VkImageViewSampleWeightCreateInfoQCOM, pNext}
+  rawOffset = #{offset VkImageViewSampleWeightCreateInfoQCOM, pNext}
 
 instance Offset "filterCenter" VkImageViewSampleWeightCreateInfoQCOM where
-  rawOffset = #{offset struct VkImageViewSampleWeightCreateInfoQCOM, filterCenter}
+  rawOffset = #{offset VkImageViewSampleWeightCreateInfoQCOM, filterCenter}
 
 instance Offset "filterSize" VkImageViewSampleWeightCreateInfoQCOM where
-  rawOffset = #{offset struct VkImageViewSampleWeightCreateInfoQCOM, filterSize}
+  rawOffset = #{offset VkImageViewSampleWeightCreateInfoQCOM, filterSize}
 
 instance Offset "numPhases" VkImageViewSampleWeightCreateInfoQCOM where
-  rawOffset = #{offset struct VkImageViewSampleWeightCreateInfoQCOM, numPhases}
+  rawOffset = #{offset VkImageViewSampleWeightCreateInfoQCOM, numPhases}
 
 #else
 

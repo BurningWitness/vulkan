@@ -31,8 +31,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkFilterCubicImageViewImageFormatPropertiesEXT
          }
 
 instance Storable VkFilterCubicImageViewImageFormatPropertiesEXT where
-  sizeOf    _ = #{size      struct VkFilterCubicImageViewImageFormatPropertiesEXT}
-  alignment _ = #{alignment struct VkFilterCubicImageViewImageFormatPropertiesEXT}
+  sizeOf    _ = #{size      VkFilterCubicImageViewImageFormatPropertiesEXT}
+  alignment _ = #{alignment VkFilterCubicImageViewImageFormatPropertiesEXT}
 
   peek ptr = 
     VkFilterCubicImageViewImageFormatPropertiesEXT
@@ -48,16 +48,16 @@ instance Storable VkFilterCubicImageViewImageFormatPropertiesEXT where
     pokeField @"filterCubicMinmax" ptr val
 
 instance Offset "sType" VkFilterCubicImageViewImageFormatPropertiesEXT where
-  rawOffset = #{offset struct VkFilterCubicImageViewImageFormatPropertiesEXT, sType}
+  rawOffset = #{offset VkFilterCubicImageViewImageFormatPropertiesEXT, sType}
 
 instance Offset "pNext" VkFilterCubicImageViewImageFormatPropertiesEXT where
-  rawOffset = #{offset struct VkFilterCubicImageViewImageFormatPropertiesEXT, pNext}
+  rawOffset = #{offset VkFilterCubicImageViewImageFormatPropertiesEXT, pNext}
 
 instance Offset "filterCubic" VkFilterCubicImageViewImageFormatPropertiesEXT where
-  rawOffset = #{offset struct VkFilterCubicImageViewImageFormatPropertiesEXT, filterCubic}
+  rawOffset = #{offset VkFilterCubicImageViewImageFormatPropertiesEXT, filterCubic}
 
 instance Offset "filterCubicMinmax" VkFilterCubicImageViewImageFormatPropertiesEXT where
-  rawOffset = #{offset struct VkFilterCubicImageViewImageFormatPropertiesEXT, filterCubicMinmax}
+  rawOffset = #{offset VkFilterCubicImageViewImageFormatPropertiesEXT, filterCubicMinmax}
 
 #else
 

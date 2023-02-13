@@ -34,8 +34,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkAcquireNextImageInfoKHR" #-} VkAcquireNextIm
          }
 
 instance Storable VkAcquireNextImageInfoKHR where
-  sizeOf    _ = #{size      struct VkAcquireNextImageInfoKHR}
-  alignment _ = #{alignment struct VkAcquireNextImageInfoKHR}
+  sizeOf    _ = #{size      VkAcquireNextImageInfoKHR}
+  alignment _ = #{alignment VkAcquireNextImageInfoKHR}
 
   peek ptr = 
     VkAcquireNextImageInfoKHR
@@ -57,25 +57,25 @@ instance Storable VkAcquireNextImageInfoKHR where
     pokeField @"deviceMask" ptr val
 
 instance Offset "sType" VkAcquireNextImageInfoKHR where
-  rawOffset = #{offset struct VkAcquireNextImageInfoKHR, sType}
+  rawOffset = #{offset VkAcquireNextImageInfoKHR, sType}
 
 instance Offset "pNext" VkAcquireNextImageInfoKHR where
-  rawOffset = #{offset struct VkAcquireNextImageInfoKHR, pNext}
+  rawOffset = #{offset VkAcquireNextImageInfoKHR, pNext}
 
 instance Offset "swapchain" VkAcquireNextImageInfoKHR where
-  rawOffset = #{offset struct VkAcquireNextImageInfoKHR, swapchain}
+  rawOffset = #{offset VkAcquireNextImageInfoKHR, swapchain}
 
 instance Offset "timeout" VkAcquireNextImageInfoKHR where
-  rawOffset = #{offset struct VkAcquireNextImageInfoKHR, timeout}
+  rawOffset = #{offset VkAcquireNextImageInfoKHR, timeout}
 
 instance Offset "semaphore" VkAcquireNextImageInfoKHR where
-  rawOffset = #{offset struct VkAcquireNextImageInfoKHR, semaphore}
+  rawOffset = #{offset VkAcquireNextImageInfoKHR, semaphore}
 
 instance Offset "fence" VkAcquireNextImageInfoKHR where
-  rawOffset = #{offset struct VkAcquireNextImageInfoKHR, fence}
+  rawOffset = #{offset VkAcquireNextImageInfoKHR, fence}
 
 instance Offset "deviceMask" VkAcquireNextImageInfoKHR where
-  rawOffset = #{offset struct VkAcquireNextImageInfoKHR, deviceMask}
+  rawOffset = #{offset VkAcquireNextImageInfoKHR, deviceMask}
 
 #else
 

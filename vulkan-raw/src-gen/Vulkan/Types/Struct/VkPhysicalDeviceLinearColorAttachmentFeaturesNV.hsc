@@ -30,8 +30,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkPhysicalDeviceLinearColorAttachmentFeaturesN
          }
 
 instance Storable VkPhysicalDeviceLinearColorAttachmentFeaturesNV where
-  sizeOf    _ = #{size      struct VkPhysicalDeviceLinearColorAttachmentFeaturesNV}
-  alignment _ = #{alignment struct VkPhysicalDeviceLinearColorAttachmentFeaturesNV}
+  sizeOf    _ = #{size      VkPhysicalDeviceLinearColorAttachmentFeaturesNV}
+  alignment _ = #{alignment VkPhysicalDeviceLinearColorAttachmentFeaturesNV}
 
   peek ptr = 
     VkPhysicalDeviceLinearColorAttachmentFeaturesNV
@@ -45,13 +45,13 @@ instance Storable VkPhysicalDeviceLinearColorAttachmentFeaturesNV where
     pokeField @"linearColorAttachment" ptr val
 
 instance Offset "sType" VkPhysicalDeviceLinearColorAttachmentFeaturesNV where
-  rawOffset = #{offset struct VkPhysicalDeviceLinearColorAttachmentFeaturesNV, sType}
+  rawOffset = #{offset VkPhysicalDeviceLinearColorAttachmentFeaturesNV, sType}
 
 instance Offset "pNext" VkPhysicalDeviceLinearColorAttachmentFeaturesNV where
-  rawOffset = #{offset struct VkPhysicalDeviceLinearColorAttachmentFeaturesNV, pNext}
+  rawOffset = #{offset VkPhysicalDeviceLinearColorAttachmentFeaturesNV, pNext}
 
 instance Offset "linearColorAttachment" VkPhysicalDeviceLinearColorAttachmentFeaturesNV where
-  rawOffset = #{offset struct VkPhysicalDeviceLinearColorAttachmentFeaturesNV, linearColorAttachment}
+  rawOffset = #{offset VkPhysicalDeviceLinearColorAttachmentFeaturesNV, linearColorAttachment}
 
 #else
 

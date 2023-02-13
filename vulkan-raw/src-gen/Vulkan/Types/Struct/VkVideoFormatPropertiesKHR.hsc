@@ -40,8 +40,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkVideoFormatPropertiesKHR" #-} VkVideoFormatP
          }
 
 instance Storable VkVideoFormatPropertiesKHR where
-  sizeOf    _ = #{size      struct VkVideoFormatPropertiesKHR}
-  alignment _ = #{alignment struct VkVideoFormatPropertiesKHR}
+  sizeOf    _ = #{size      VkVideoFormatPropertiesKHR}
+  alignment _ = #{alignment VkVideoFormatPropertiesKHR}
 
   peek ptr = 
     VkVideoFormatPropertiesKHR
@@ -65,28 +65,28 @@ instance Storable VkVideoFormatPropertiesKHR where
     pokeField @"imageUsageFlags" ptr val
 
 instance Offset "sType" VkVideoFormatPropertiesKHR where
-  rawOffset = #{offset struct VkVideoFormatPropertiesKHR, sType}
+  rawOffset = #{offset VkVideoFormatPropertiesKHR, sType}
 
 instance Offset "pNext" VkVideoFormatPropertiesKHR where
-  rawOffset = #{offset struct VkVideoFormatPropertiesKHR, pNext}
+  rawOffset = #{offset VkVideoFormatPropertiesKHR, pNext}
 
 instance Offset "format" VkVideoFormatPropertiesKHR where
-  rawOffset = #{offset struct VkVideoFormatPropertiesKHR, format}
+  rawOffset = #{offset VkVideoFormatPropertiesKHR, format}
 
 instance Offset "componentMapping" VkVideoFormatPropertiesKHR where
-  rawOffset = #{offset struct VkVideoFormatPropertiesKHR, componentMapping}
+  rawOffset = #{offset VkVideoFormatPropertiesKHR, componentMapping}
 
 instance Offset "imageCreateFlags" VkVideoFormatPropertiesKHR where
-  rawOffset = #{offset struct VkVideoFormatPropertiesKHR, imageCreateFlags}
+  rawOffset = #{offset VkVideoFormatPropertiesKHR, imageCreateFlags}
 
 instance Offset "imageType" VkVideoFormatPropertiesKHR where
-  rawOffset = #{offset struct VkVideoFormatPropertiesKHR, imageType}
+  rawOffset = #{offset VkVideoFormatPropertiesKHR, imageType}
 
 instance Offset "imageTiling" VkVideoFormatPropertiesKHR where
-  rawOffset = #{offset struct VkVideoFormatPropertiesKHR, imageTiling}
+  rawOffset = #{offset VkVideoFormatPropertiesKHR, imageTiling}
 
 instance Offset "imageUsageFlags" VkVideoFormatPropertiesKHR where
-  rawOffset = #{offset struct VkVideoFormatPropertiesKHR, imageUsageFlags}
+  rawOffset = #{offset VkVideoFormatPropertiesKHR, imageUsageFlags}
 
 #else
 

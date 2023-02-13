@@ -30,8 +30,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkPhysicalDeviceBlendOperationAdvancedFeatures
          }
 
 instance Storable VkPhysicalDeviceBlendOperationAdvancedFeaturesEXT where
-  sizeOf    _ = #{size      struct VkPhysicalDeviceBlendOperationAdvancedFeaturesEXT}
-  alignment _ = #{alignment struct VkPhysicalDeviceBlendOperationAdvancedFeaturesEXT}
+  sizeOf    _ = #{size      VkPhysicalDeviceBlendOperationAdvancedFeaturesEXT}
+  alignment _ = #{alignment VkPhysicalDeviceBlendOperationAdvancedFeaturesEXT}
 
   peek ptr = 
     VkPhysicalDeviceBlendOperationAdvancedFeaturesEXT
@@ -45,13 +45,13 @@ instance Storable VkPhysicalDeviceBlendOperationAdvancedFeaturesEXT where
     pokeField @"advancedBlendCoherentOperations" ptr val
 
 instance Offset "sType" VkPhysicalDeviceBlendOperationAdvancedFeaturesEXT where
-  rawOffset = #{offset struct VkPhysicalDeviceBlendOperationAdvancedFeaturesEXT, sType}
+  rawOffset = #{offset VkPhysicalDeviceBlendOperationAdvancedFeaturesEXT, sType}
 
 instance Offset "pNext" VkPhysicalDeviceBlendOperationAdvancedFeaturesEXT where
-  rawOffset = #{offset struct VkPhysicalDeviceBlendOperationAdvancedFeaturesEXT, pNext}
+  rawOffset = #{offset VkPhysicalDeviceBlendOperationAdvancedFeaturesEXT, pNext}
 
 instance Offset "advancedBlendCoherentOperations" VkPhysicalDeviceBlendOperationAdvancedFeaturesEXT where
-  rawOffset = #{offset struct VkPhysicalDeviceBlendOperationAdvancedFeaturesEXT, advancedBlendCoherentOperations}
+  rawOffset = #{offset VkPhysicalDeviceBlendOperationAdvancedFeaturesEXT, advancedBlendCoherentOperations}
 
 #else
 

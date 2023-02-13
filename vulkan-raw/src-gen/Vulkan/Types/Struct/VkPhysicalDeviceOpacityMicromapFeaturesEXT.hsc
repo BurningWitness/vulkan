@@ -32,8 +32,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkPhysicalDeviceOpacityMicromapFeaturesEXT" #-
          }
 
 instance Storable VkPhysicalDeviceOpacityMicromapFeaturesEXT where
-  sizeOf    _ = #{size      struct VkPhysicalDeviceOpacityMicromapFeaturesEXT}
-  alignment _ = #{alignment struct VkPhysicalDeviceOpacityMicromapFeaturesEXT}
+  sizeOf    _ = #{size      VkPhysicalDeviceOpacityMicromapFeaturesEXT}
+  alignment _ = #{alignment VkPhysicalDeviceOpacityMicromapFeaturesEXT}
 
   peek ptr = 
     VkPhysicalDeviceOpacityMicromapFeaturesEXT
@@ -51,19 +51,19 @@ instance Storable VkPhysicalDeviceOpacityMicromapFeaturesEXT where
     pokeField @"micromapHostCommands" ptr val
 
 instance Offset "sType" VkPhysicalDeviceOpacityMicromapFeaturesEXT where
-  rawOffset = #{offset struct VkPhysicalDeviceOpacityMicromapFeaturesEXT, sType}
+  rawOffset = #{offset VkPhysicalDeviceOpacityMicromapFeaturesEXT, sType}
 
 instance Offset "pNext" VkPhysicalDeviceOpacityMicromapFeaturesEXT where
-  rawOffset = #{offset struct VkPhysicalDeviceOpacityMicromapFeaturesEXT, pNext}
+  rawOffset = #{offset VkPhysicalDeviceOpacityMicromapFeaturesEXT, pNext}
 
 instance Offset "micromap" VkPhysicalDeviceOpacityMicromapFeaturesEXT where
-  rawOffset = #{offset struct VkPhysicalDeviceOpacityMicromapFeaturesEXT, micromap}
+  rawOffset = #{offset VkPhysicalDeviceOpacityMicromapFeaturesEXT, micromap}
 
 instance Offset "micromapCaptureReplay" VkPhysicalDeviceOpacityMicromapFeaturesEXT where
-  rawOffset = #{offset struct VkPhysicalDeviceOpacityMicromapFeaturesEXT, micromapCaptureReplay}
+  rawOffset = #{offset VkPhysicalDeviceOpacityMicromapFeaturesEXT, micromapCaptureReplay}
 
 instance Offset "micromapHostCommands" VkPhysicalDeviceOpacityMicromapFeaturesEXT where
-  rawOffset = #{offset struct VkPhysicalDeviceOpacityMicromapFeaturesEXT, micromapHostCommands}
+  rawOffset = #{offset VkPhysicalDeviceOpacityMicromapFeaturesEXT, micromapHostCommands}
 
 #else
 

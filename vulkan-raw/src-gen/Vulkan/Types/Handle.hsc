@@ -83,7 +83,9 @@ data {-# CTYPE "vulkan/vulkan.h" "struct VkDescriptorUpdateTemplate_T" #-} VkDes
 
 type VkDescriptorUpdateTemplate = VkPtr VkDescriptorUpdateTemplate_T
 
-type VkDescriptorUpdateTemplateKHR = VkDescriptorUpdateTemplate
+data {-# CTYPE "vulkan/vulkan.h" "struct VkDescriptorUpdateTemplateKHR_T" #-} VkDescriptorUpdateTemplateKHR_T
+
+type VkDescriptorUpdateTemplateKHR = VkPtr VkDescriptorUpdateTemplateKHR_T
 
 data {-# CTYPE "vulkan/vulkan.h" "struct VkDevice_T" #-} VkDevice_T
 
@@ -161,7 +163,9 @@ data {-# CTYPE "vulkan/vulkan.h" "struct VkPrivateDataSlot_T" #-} VkPrivateDataS
 
 type VkPrivateDataSlot = VkPtr VkPrivateDataSlot_T
 
-type VkPrivateDataSlotEXT = VkPrivateDataSlot
+data {-# CTYPE "vulkan/vulkan.h" "struct VkPrivateDataSlotEXT_T" #-} VkPrivateDataSlotEXT_T
+
+type VkPrivateDataSlotEXT = VkPtr VkPrivateDataSlotEXT_T
 
 data {-# CTYPE "vulkan/vulkan.h" "struct VkQueryPool_T" #-} VkQueryPool_T
 
@@ -183,7 +187,9 @@ data {-# CTYPE "vulkan/vulkan.h" "struct VkSamplerYcbcrConversion_T" #-} VkSampl
 
 type VkSamplerYcbcrConversion = VkPtr VkSamplerYcbcrConversion_T
 
-type VkSamplerYcbcrConversionKHR = VkSamplerYcbcrConversion
+data {-# CTYPE "vulkan/vulkan.h" "struct VkSamplerYcbcrConversionKHR_T" #-} VkSamplerYcbcrConversionKHR_T
+
+type VkSamplerYcbcrConversionKHR = VkPtr VkSamplerYcbcrConversionKHR_T
 
 data {-# CTYPE "vulkan/vulkan.h" "struct VkSemaphore_T" #-} VkSemaphore_T
 

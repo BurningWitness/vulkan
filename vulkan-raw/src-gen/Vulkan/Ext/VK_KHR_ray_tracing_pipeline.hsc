@@ -38,6 +38,9 @@ module Vulkan.Ext.VK_KHR_ray_tracing_pipeline
   , pattern VK_RAY_TRACING_SHADER_GROUP_TYPE_GENERAL_KHR
   , pattern VK_RAY_TRACING_SHADER_GROUP_TYPE_TRIANGLES_HIT_GROUP_KHR
   , pattern VK_RAY_TRACING_SHADER_GROUP_TYPE_PROCEDURAL_HIT_GROUP_KHR
+  , pattern VK_RAY_TRACING_SHADER_GROUP_TYPE_GENERAL_NV
+  , pattern VK_RAY_TRACING_SHADER_GROUP_TYPE_TRIANGLES_HIT_GROUP_NV
+  , pattern VK_RAY_TRACING_SHADER_GROUP_TYPE_PROCEDURAL_HIT_GROUP_NV
   , VkRayTracingPipelineCreateInfoKHR (..)
   , VkPhysicalDeviceRayTracingPipelineFeaturesKHR (..)
   , VkPhysicalDeviceRayTracingPipelinePropertiesKHR (..)

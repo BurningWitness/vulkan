@@ -30,8 +30,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkPhysicalDeviceASTCDecodeFeaturesEXT" #-} VkP
          }
 
 instance Storable VkPhysicalDeviceASTCDecodeFeaturesEXT where
-  sizeOf    _ = #{size      struct VkPhysicalDeviceASTCDecodeFeaturesEXT}
-  alignment _ = #{alignment struct VkPhysicalDeviceASTCDecodeFeaturesEXT}
+  sizeOf    _ = #{size      VkPhysicalDeviceASTCDecodeFeaturesEXT}
+  alignment _ = #{alignment VkPhysicalDeviceASTCDecodeFeaturesEXT}
 
   peek ptr = 
     VkPhysicalDeviceASTCDecodeFeaturesEXT
@@ -45,13 +45,13 @@ instance Storable VkPhysicalDeviceASTCDecodeFeaturesEXT where
     pokeField @"decodeModeSharedExponent" ptr val
 
 instance Offset "sType" VkPhysicalDeviceASTCDecodeFeaturesEXT where
-  rawOffset = #{offset struct VkPhysicalDeviceASTCDecodeFeaturesEXT, sType}
+  rawOffset = #{offset VkPhysicalDeviceASTCDecodeFeaturesEXT, sType}
 
 instance Offset "pNext" VkPhysicalDeviceASTCDecodeFeaturesEXT where
-  rawOffset = #{offset struct VkPhysicalDeviceASTCDecodeFeaturesEXT, pNext}
+  rawOffset = #{offset VkPhysicalDeviceASTCDecodeFeaturesEXT, pNext}
 
 instance Offset "decodeModeSharedExponent" VkPhysicalDeviceASTCDecodeFeaturesEXT where
-  rawOffset = #{offset struct VkPhysicalDeviceASTCDecodeFeaturesEXT, decodeModeSharedExponent}
+  rawOffset = #{offset VkPhysicalDeviceASTCDecodeFeaturesEXT, decodeModeSharedExponent}
 
 #else
 

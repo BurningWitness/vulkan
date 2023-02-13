@@ -36,8 +36,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkRayTracingShaderGroupCreateInfoKHR" #-} VkRa
          }
 
 instance Storable VkRayTracingShaderGroupCreateInfoKHR where
-  sizeOf    _ = #{size      struct VkRayTracingShaderGroupCreateInfoKHR}
-  alignment _ = #{alignment struct VkRayTracingShaderGroupCreateInfoKHR}
+  sizeOf    _ = #{size      VkRayTracingShaderGroupCreateInfoKHR}
+  alignment _ = #{alignment VkRayTracingShaderGroupCreateInfoKHR}
 
   peek ptr = 
     VkRayTracingShaderGroupCreateInfoKHR
@@ -61,28 +61,28 @@ instance Storable VkRayTracingShaderGroupCreateInfoKHR where
     pokeField @"pShaderGroupCaptureReplayHandle" ptr val
 
 instance Offset "sType" VkRayTracingShaderGroupCreateInfoKHR where
-  rawOffset = #{offset struct VkRayTracingShaderGroupCreateInfoKHR, sType}
+  rawOffset = #{offset VkRayTracingShaderGroupCreateInfoKHR, sType}
 
 instance Offset "pNext" VkRayTracingShaderGroupCreateInfoKHR where
-  rawOffset = #{offset struct VkRayTracingShaderGroupCreateInfoKHR, pNext}
+  rawOffset = #{offset VkRayTracingShaderGroupCreateInfoKHR, pNext}
 
 instance Offset "type_" VkRayTracingShaderGroupCreateInfoKHR where
-  rawOffset = #{offset struct VkRayTracingShaderGroupCreateInfoKHR, type}
+  rawOffset = #{offset VkRayTracingShaderGroupCreateInfoKHR, type}
 
 instance Offset "generalShader" VkRayTracingShaderGroupCreateInfoKHR where
-  rawOffset = #{offset struct VkRayTracingShaderGroupCreateInfoKHR, generalShader}
+  rawOffset = #{offset VkRayTracingShaderGroupCreateInfoKHR, generalShader}
 
 instance Offset "closestHitShader" VkRayTracingShaderGroupCreateInfoKHR where
-  rawOffset = #{offset struct VkRayTracingShaderGroupCreateInfoKHR, closestHitShader}
+  rawOffset = #{offset VkRayTracingShaderGroupCreateInfoKHR, closestHitShader}
 
 instance Offset "anyHitShader" VkRayTracingShaderGroupCreateInfoKHR where
-  rawOffset = #{offset struct VkRayTracingShaderGroupCreateInfoKHR, anyHitShader}
+  rawOffset = #{offset VkRayTracingShaderGroupCreateInfoKHR, anyHitShader}
 
 instance Offset "intersectionShader" VkRayTracingShaderGroupCreateInfoKHR where
-  rawOffset = #{offset struct VkRayTracingShaderGroupCreateInfoKHR, intersectionShader}
+  rawOffset = #{offset VkRayTracingShaderGroupCreateInfoKHR, intersectionShader}
 
 instance Offset "pShaderGroupCaptureReplayHandle" VkRayTracingShaderGroupCreateInfoKHR where
-  rawOffset = #{offset struct VkRayTracingShaderGroupCreateInfoKHR, pShaderGroupCaptureReplayHandle}
+  rawOffset = #{offset VkRayTracingShaderGroupCreateInfoKHR, pShaderGroupCaptureReplayHandle}
 
 instance Offset "type" VkRayTracingShaderGroupCreateInfoKHR where
   rawOffset = rawOffset @"type_" @VkRayTracingShaderGroupCreateInfoKHR

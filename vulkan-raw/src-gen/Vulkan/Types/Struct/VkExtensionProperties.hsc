@@ -25,8 +25,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkExtensionProperties" #-} VkExtensionProperti
          }
 
 instance Storable VkExtensionProperties where
-  sizeOf    _ = #{size      struct VkExtensionProperties}
-  alignment _ = #{alignment struct VkExtensionProperties}
+  sizeOf    _ = #{size      VkExtensionProperties}
+  alignment _ = #{alignment VkExtensionProperties}
 
   peek ptr = 
     VkExtensionProperties
@@ -38,7 +38,7 @@ instance Storable VkExtensionProperties where
     pokeField @"specVersion" ptr val
 
 instance Offset "extensionName" VkExtensionProperties where
-  rawOffset = #{offset struct VkExtensionProperties, extensionName}
+  rawOffset = #{offset VkExtensionProperties, extensionName}
 
 instance Offset "specVersion" VkExtensionProperties where
-  rawOffset = #{offset struct VkExtensionProperties, specVersion}
+  rawOffset = #{offset VkExtensionProperties, specVersion}

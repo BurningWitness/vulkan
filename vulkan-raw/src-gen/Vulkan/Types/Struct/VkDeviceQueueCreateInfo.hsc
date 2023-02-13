@@ -31,8 +31,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkDeviceQueueCreateInfo" #-} VkDeviceQueueCrea
          }
 
 instance Storable VkDeviceQueueCreateInfo where
-  sizeOf    _ = #{size      struct VkDeviceQueueCreateInfo}
-  alignment _ = #{alignment struct VkDeviceQueueCreateInfo}
+  sizeOf    _ = #{size      VkDeviceQueueCreateInfo}
+  alignment _ = #{alignment VkDeviceQueueCreateInfo}
 
   peek ptr = 
     VkDeviceQueueCreateInfo
@@ -52,19 +52,19 @@ instance Storable VkDeviceQueueCreateInfo where
     pokeField @"pQueuePriorities" ptr val
 
 instance Offset "sType" VkDeviceQueueCreateInfo where
-  rawOffset = #{offset struct VkDeviceQueueCreateInfo, sType}
+  rawOffset = #{offset VkDeviceQueueCreateInfo, sType}
 
 instance Offset "pNext" VkDeviceQueueCreateInfo where
-  rawOffset = #{offset struct VkDeviceQueueCreateInfo, pNext}
+  rawOffset = #{offset VkDeviceQueueCreateInfo, pNext}
 
 instance Offset "flags" VkDeviceQueueCreateInfo where
-  rawOffset = #{offset struct VkDeviceQueueCreateInfo, flags}
+  rawOffset = #{offset VkDeviceQueueCreateInfo, flags}
 
 instance Offset "queueFamilyIndex" VkDeviceQueueCreateInfo where
-  rawOffset = #{offset struct VkDeviceQueueCreateInfo, queueFamilyIndex}
+  rawOffset = #{offset VkDeviceQueueCreateInfo, queueFamilyIndex}
 
 instance Offset "queueCount" VkDeviceQueueCreateInfo where
-  rawOffset = #{offset struct VkDeviceQueueCreateInfo, queueCount}
+  rawOffset = #{offset VkDeviceQueueCreateInfo, queueCount}
 
 instance Offset "pQueuePriorities" VkDeviceQueueCreateInfo where
-  rawOffset = #{offset struct VkDeviceQueueCreateInfo, pQueuePriorities}
+  rawOffset = #{offset VkDeviceQueueCreateInfo, pQueuePriorities}

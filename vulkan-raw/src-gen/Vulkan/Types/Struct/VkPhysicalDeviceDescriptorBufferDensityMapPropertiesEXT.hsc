@@ -29,8 +29,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkPhysicalDeviceDescriptorBufferDensityMapProp
          }
 
 instance Storable VkPhysicalDeviceDescriptorBufferDensityMapPropertiesEXT where
-  sizeOf    _ = #{size      struct VkPhysicalDeviceDescriptorBufferDensityMapPropertiesEXT}
-  alignment _ = #{alignment struct VkPhysicalDeviceDescriptorBufferDensityMapPropertiesEXT}
+  sizeOf    _ = #{size      VkPhysicalDeviceDescriptorBufferDensityMapPropertiesEXT}
+  alignment _ = #{alignment VkPhysicalDeviceDescriptorBufferDensityMapPropertiesEXT}
 
   peek ptr = 
     VkPhysicalDeviceDescriptorBufferDensityMapPropertiesEXT
@@ -44,13 +44,13 @@ instance Storable VkPhysicalDeviceDescriptorBufferDensityMapPropertiesEXT where
     pokeField @"combinedImageSamplerDensityMapDescriptorSize" ptr val
 
 instance Offset "sType" VkPhysicalDeviceDescriptorBufferDensityMapPropertiesEXT where
-  rawOffset = #{offset struct VkPhysicalDeviceDescriptorBufferDensityMapPropertiesEXT, sType}
+  rawOffset = #{offset VkPhysicalDeviceDescriptorBufferDensityMapPropertiesEXT, sType}
 
 instance Offset "pNext" VkPhysicalDeviceDescriptorBufferDensityMapPropertiesEXT where
-  rawOffset = #{offset struct VkPhysicalDeviceDescriptorBufferDensityMapPropertiesEXT, pNext}
+  rawOffset = #{offset VkPhysicalDeviceDescriptorBufferDensityMapPropertiesEXT, pNext}
 
 instance Offset "combinedImageSamplerDensityMapDescriptorSize" VkPhysicalDeviceDescriptorBufferDensityMapPropertiesEXT where
-  rawOffset = #{offset struct VkPhysicalDeviceDescriptorBufferDensityMapPropertiesEXT, combinedImageSamplerDensityMapDescriptorSize}
+  rawOffset = #{offset VkPhysicalDeviceDescriptorBufferDensityMapPropertiesEXT, combinedImageSamplerDensityMapDescriptorSize}
 
 #else
 

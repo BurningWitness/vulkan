@@ -32,8 +32,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkDeviceGroupRenderPassBeginInfo" #-} VkDevice
          }
 
 instance Storable VkDeviceGroupRenderPassBeginInfo where
-  sizeOf    _ = #{size      struct VkDeviceGroupRenderPassBeginInfo}
-  alignment _ = #{alignment struct VkDeviceGroupRenderPassBeginInfo}
+  sizeOf    _ = #{size      VkDeviceGroupRenderPassBeginInfo}
+  alignment _ = #{alignment VkDeviceGroupRenderPassBeginInfo}
 
   peek ptr = 
     VkDeviceGroupRenderPassBeginInfo
@@ -51,19 +51,19 @@ instance Storable VkDeviceGroupRenderPassBeginInfo where
     pokeField @"pDeviceRenderAreas" ptr val
 
 instance Offset "sType" VkDeviceGroupRenderPassBeginInfo where
-  rawOffset = #{offset struct VkDeviceGroupRenderPassBeginInfo, sType}
+  rawOffset = #{offset VkDeviceGroupRenderPassBeginInfo, sType}
 
 instance Offset "pNext" VkDeviceGroupRenderPassBeginInfo where
-  rawOffset = #{offset struct VkDeviceGroupRenderPassBeginInfo, pNext}
+  rawOffset = #{offset VkDeviceGroupRenderPassBeginInfo, pNext}
 
 instance Offset "deviceMask" VkDeviceGroupRenderPassBeginInfo where
-  rawOffset = #{offset struct VkDeviceGroupRenderPassBeginInfo, deviceMask}
+  rawOffset = #{offset VkDeviceGroupRenderPassBeginInfo, deviceMask}
 
 instance Offset "deviceRenderAreaCount" VkDeviceGroupRenderPassBeginInfo where
-  rawOffset = #{offset struct VkDeviceGroupRenderPassBeginInfo, deviceRenderAreaCount}
+  rawOffset = #{offset VkDeviceGroupRenderPassBeginInfo, deviceRenderAreaCount}
 
 instance Offset "pDeviceRenderAreas" VkDeviceGroupRenderPassBeginInfo where
-  rawOffset = #{offset struct VkDeviceGroupRenderPassBeginInfo, pDeviceRenderAreas}
+  rawOffset = #{offset VkDeviceGroupRenderPassBeginInfo, pDeviceRenderAreas}
 
 #else
 

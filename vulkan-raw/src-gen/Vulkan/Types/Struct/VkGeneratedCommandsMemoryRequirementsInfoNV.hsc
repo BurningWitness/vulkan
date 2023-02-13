@@ -34,8 +34,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkGeneratedCommandsMemoryRequirementsInfoNV" #
          }
 
 instance Storable VkGeneratedCommandsMemoryRequirementsInfoNV where
-  sizeOf    _ = #{size      struct VkGeneratedCommandsMemoryRequirementsInfoNV}
-  alignment _ = #{alignment struct VkGeneratedCommandsMemoryRequirementsInfoNV}
+  sizeOf    _ = #{size      VkGeneratedCommandsMemoryRequirementsInfoNV}
+  alignment _ = #{alignment VkGeneratedCommandsMemoryRequirementsInfoNV}
 
   peek ptr = 
     VkGeneratedCommandsMemoryRequirementsInfoNV
@@ -55,22 +55,22 @@ instance Storable VkGeneratedCommandsMemoryRequirementsInfoNV where
     pokeField @"maxSequencesCount" ptr val
 
 instance Offset "sType" VkGeneratedCommandsMemoryRequirementsInfoNV where
-  rawOffset = #{offset struct VkGeneratedCommandsMemoryRequirementsInfoNV, sType}
+  rawOffset = #{offset VkGeneratedCommandsMemoryRequirementsInfoNV, sType}
 
 instance Offset "pNext" VkGeneratedCommandsMemoryRequirementsInfoNV where
-  rawOffset = #{offset struct VkGeneratedCommandsMemoryRequirementsInfoNV, pNext}
+  rawOffset = #{offset VkGeneratedCommandsMemoryRequirementsInfoNV, pNext}
 
 instance Offset "pipelineBindPoint" VkGeneratedCommandsMemoryRequirementsInfoNV where
-  rawOffset = #{offset struct VkGeneratedCommandsMemoryRequirementsInfoNV, pipelineBindPoint}
+  rawOffset = #{offset VkGeneratedCommandsMemoryRequirementsInfoNV, pipelineBindPoint}
 
 instance Offset "pipeline" VkGeneratedCommandsMemoryRequirementsInfoNV where
-  rawOffset = #{offset struct VkGeneratedCommandsMemoryRequirementsInfoNV, pipeline}
+  rawOffset = #{offset VkGeneratedCommandsMemoryRequirementsInfoNV, pipeline}
 
 instance Offset "indirectCommandsLayout" VkGeneratedCommandsMemoryRequirementsInfoNV where
-  rawOffset = #{offset struct VkGeneratedCommandsMemoryRequirementsInfoNV, indirectCommandsLayout}
+  rawOffset = #{offset VkGeneratedCommandsMemoryRequirementsInfoNV, indirectCommandsLayout}
 
 instance Offset "maxSequencesCount" VkGeneratedCommandsMemoryRequirementsInfoNV where
-  rawOffset = #{offset struct VkGeneratedCommandsMemoryRequirementsInfoNV, maxSequencesCount}
+  rawOffset = #{offset VkGeneratedCommandsMemoryRequirementsInfoNV, maxSequencesCount}
 
 #else
 

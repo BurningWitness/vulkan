@@ -1,3 +1,7 @@
+{-# LANGUAGE CApiFFI #-}
+{-# LANGUAGE CPP #-}
+{-# LANGUAGE MagicHash #-}
+
 #include <vulkan/vulkan.h>
 
 #if VK_EXT_private_data
@@ -11,17 +15,19 @@ import Vulkan.Types.Enum.VkResult
 import Vulkan.Types.Handle
 import Vulkan.Types.Struct.VkAllocationCallbacks
 import Vulkan.Types.Struct.VkPrivateDataSlotCreateInfo
-import Vulkan.Types.Command.VkCreatePrivateDataSlot
 import Vulkan.Types.VkFun
 
 
 
-type VkCreatePrivateDataSlotEXT = VkCreatePrivateDataSlot
+type VkCreatePrivateDataSlotEXT =
+          VkDevice -- ^ device
+       -> Ptr VkPrivateDataSlotCreateInfo -- ^ pCreateInfo
+       -> Ptr VkAllocationCallbacks -- ^ pAllocator
+       -> Ptr VkPrivateDataSlot -- ^ pPrivateDataSlot
+       -> IO VkResult
 
-vkFunCreatePrivateDataSlotEXT
-  :: VkFun VkCreatePrivateDataSlotEXT
-vkFunCreatePrivateDataSlotEXT = vkFunCreatePrivateDataSlot
-
+vkFunCreatePrivateDataSlotEXT :: VkFun VkCreatePrivateDataSlotEXT
+vkFunCreatePrivateDataSlotEXT = VkFun (Ptr ("vkCreatePrivateDataSlotEXT\0"##))
 
 #else
 

@@ -42,8 +42,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkPhysicalDeviceShaderCorePropertiesAMD" #-} V
          }
 
 instance Storable VkPhysicalDeviceShaderCorePropertiesAMD where
-  sizeOf    _ = #{size      struct VkPhysicalDeviceShaderCorePropertiesAMD}
-  alignment _ = #{alignment struct VkPhysicalDeviceShaderCorePropertiesAMD}
+  sizeOf    _ = #{size      VkPhysicalDeviceShaderCorePropertiesAMD}
+  alignment _ = #{alignment VkPhysicalDeviceShaderCorePropertiesAMD}
 
   peek ptr = 
     VkPhysicalDeviceShaderCorePropertiesAMD
@@ -83,52 +83,52 @@ instance Storable VkPhysicalDeviceShaderCorePropertiesAMD where
     pokeField @"vgprAllocationGranularity" ptr val
 
 instance Offset "sType" VkPhysicalDeviceShaderCorePropertiesAMD where
-  rawOffset = #{offset struct VkPhysicalDeviceShaderCorePropertiesAMD, sType}
+  rawOffset = #{offset VkPhysicalDeviceShaderCorePropertiesAMD, sType}
 
 instance Offset "pNext" VkPhysicalDeviceShaderCorePropertiesAMD where
-  rawOffset = #{offset struct VkPhysicalDeviceShaderCorePropertiesAMD, pNext}
+  rawOffset = #{offset VkPhysicalDeviceShaderCorePropertiesAMD, pNext}
 
 instance Offset "shaderEngineCount" VkPhysicalDeviceShaderCorePropertiesAMD where
-  rawOffset = #{offset struct VkPhysicalDeviceShaderCorePropertiesAMD, shaderEngineCount}
+  rawOffset = #{offset VkPhysicalDeviceShaderCorePropertiesAMD, shaderEngineCount}
 
 instance Offset "shaderArraysPerEngineCount" VkPhysicalDeviceShaderCorePropertiesAMD where
-  rawOffset = #{offset struct VkPhysicalDeviceShaderCorePropertiesAMD, shaderArraysPerEngineCount}
+  rawOffset = #{offset VkPhysicalDeviceShaderCorePropertiesAMD, shaderArraysPerEngineCount}
 
 instance Offset "computeUnitsPerShaderArray" VkPhysicalDeviceShaderCorePropertiesAMD where
-  rawOffset = #{offset struct VkPhysicalDeviceShaderCorePropertiesAMD, computeUnitsPerShaderArray}
+  rawOffset = #{offset VkPhysicalDeviceShaderCorePropertiesAMD, computeUnitsPerShaderArray}
 
 instance Offset "simdPerComputeUnit" VkPhysicalDeviceShaderCorePropertiesAMD where
-  rawOffset = #{offset struct VkPhysicalDeviceShaderCorePropertiesAMD, simdPerComputeUnit}
+  rawOffset = #{offset VkPhysicalDeviceShaderCorePropertiesAMD, simdPerComputeUnit}
 
 instance Offset "wavefrontsPerSimd" VkPhysicalDeviceShaderCorePropertiesAMD where
-  rawOffset = #{offset struct VkPhysicalDeviceShaderCorePropertiesAMD, wavefrontsPerSimd}
+  rawOffset = #{offset VkPhysicalDeviceShaderCorePropertiesAMD, wavefrontsPerSimd}
 
 instance Offset "wavefrontSize" VkPhysicalDeviceShaderCorePropertiesAMD where
-  rawOffset = #{offset struct VkPhysicalDeviceShaderCorePropertiesAMD, wavefrontSize}
+  rawOffset = #{offset VkPhysicalDeviceShaderCorePropertiesAMD, wavefrontSize}
 
 instance Offset "sgprsPerSimd" VkPhysicalDeviceShaderCorePropertiesAMD where
-  rawOffset = #{offset struct VkPhysicalDeviceShaderCorePropertiesAMD, sgprsPerSimd}
+  rawOffset = #{offset VkPhysicalDeviceShaderCorePropertiesAMD, sgprsPerSimd}
 
 instance Offset "minSgprAllocation" VkPhysicalDeviceShaderCorePropertiesAMD where
-  rawOffset = #{offset struct VkPhysicalDeviceShaderCorePropertiesAMD, minSgprAllocation}
+  rawOffset = #{offset VkPhysicalDeviceShaderCorePropertiesAMD, minSgprAllocation}
 
 instance Offset "maxSgprAllocation" VkPhysicalDeviceShaderCorePropertiesAMD where
-  rawOffset = #{offset struct VkPhysicalDeviceShaderCorePropertiesAMD, maxSgprAllocation}
+  rawOffset = #{offset VkPhysicalDeviceShaderCorePropertiesAMD, maxSgprAllocation}
 
 instance Offset "sgprAllocationGranularity" VkPhysicalDeviceShaderCorePropertiesAMD where
-  rawOffset = #{offset struct VkPhysicalDeviceShaderCorePropertiesAMD, sgprAllocationGranularity}
+  rawOffset = #{offset VkPhysicalDeviceShaderCorePropertiesAMD, sgprAllocationGranularity}
 
 instance Offset "vgprsPerSimd" VkPhysicalDeviceShaderCorePropertiesAMD where
-  rawOffset = #{offset struct VkPhysicalDeviceShaderCorePropertiesAMD, vgprsPerSimd}
+  rawOffset = #{offset VkPhysicalDeviceShaderCorePropertiesAMD, vgprsPerSimd}
 
 instance Offset "minVgprAllocation" VkPhysicalDeviceShaderCorePropertiesAMD where
-  rawOffset = #{offset struct VkPhysicalDeviceShaderCorePropertiesAMD, minVgprAllocation}
+  rawOffset = #{offset VkPhysicalDeviceShaderCorePropertiesAMD, minVgprAllocation}
 
 instance Offset "maxVgprAllocation" VkPhysicalDeviceShaderCorePropertiesAMD where
-  rawOffset = #{offset struct VkPhysicalDeviceShaderCorePropertiesAMD, maxVgprAllocation}
+  rawOffset = #{offset VkPhysicalDeviceShaderCorePropertiesAMD, maxVgprAllocation}
 
 instance Offset "vgprAllocationGranularity" VkPhysicalDeviceShaderCorePropertiesAMD where
-  rawOffset = #{offset struct VkPhysicalDeviceShaderCorePropertiesAMD, vgprAllocationGranularity}
+  rawOffset = #{offset VkPhysicalDeviceShaderCorePropertiesAMD, vgprAllocationGranularity}
 
 #else
 

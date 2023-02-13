@@ -40,8 +40,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkDeviceMemoryReportCallbackDataEXT" #-} VkDev
          }
 
 instance Storable VkDeviceMemoryReportCallbackDataEXT where
-  sizeOf    _ = #{size      struct VkDeviceMemoryReportCallbackDataEXT}
-  alignment _ = #{alignment struct VkDeviceMemoryReportCallbackDataEXT}
+  sizeOf    _ = #{size      VkDeviceMemoryReportCallbackDataEXT}
+  alignment _ = #{alignment VkDeviceMemoryReportCallbackDataEXT}
 
   peek ptr = 
     VkDeviceMemoryReportCallbackDataEXT
@@ -67,31 +67,31 @@ instance Storable VkDeviceMemoryReportCallbackDataEXT where
     pokeField @"heapIndex" ptr val
 
 instance Offset "sType" VkDeviceMemoryReportCallbackDataEXT where
-  rawOffset = #{offset struct VkDeviceMemoryReportCallbackDataEXT, sType}
+  rawOffset = #{offset VkDeviceMemoryReportCallbackDataEXT, sType}
 
 instance Offset "pNext" VkDeviceMemoryReportCallbackDataEXT where
-  rawOffset = #{offset struct VkDeviceMemoryReportCallbackDataEXT, pNext}
+  rawOffset = #{offset VkDeviceMemoryReportCallbackDataEXT, pNext}
 
 instance Offset "flags" VkDeviceMemoryReportCallbackDataEXT where
-  rawOffset = #{offset struct VkDeviceMemoryReportCallbackDataEXT, flags}
+  rawOffset = #{offset VkDeviceMemoryReportCallbackDataEXT, flags}
 
 instance Offset "type_" VkDeviceMemoryReportCallbackDataEXT where
-  rawOffset = #{offset struct VkDeviceMemoryReportCallbackDataEXT, type}
+  rawOffset = #{offset VkDeviceMemoryReportCallbackDataEXT, type}
 
 instance Offset "memoryObjectId" VkDeviceMemoryReportCallbackDataEXT where
-  rawOffset = #{offset struct VkDeviceMemoryReportCallbackDataEXT, memoryObjectId}
+  rawOffset = #{offset VkDeviceMemoryReportCallbackDataEXT, memoryObjectId}
 
 instance Offset "size" VkDeviceMemoryReportCallbackDataEXT where
-  rawOffset = #{offset struct VkDeviceMemoryReportCallbackDataEXT, size}
+  rawOffset = #{offset VkDeviceMemoryReportCallbackDataEXT, size}
 
 instance Offset "objectType" VkDeviceMemoryReportCallbackDataEXT where
-  rawOffset = #{offset struct VkDeviceMemoryReportCallbackDataEXT, objectType}
+  rawOffset = #{offset VkDeviceMemoryReportCallbackDataEXT, objectType}
 
 instance Offset "objectHandle" VkDeviceMemoryReportCallbackDataEXT where
-  rawOffset = #{offset struct VkDeviceMemoryReportCallbackDataEXT, objectHandle}
+  rawOffset = #{offset VkDeviceMemoryReportCallbackDataEXT, objectHandle}
 
 instance Offset "heapIndex" VkDeviceMemoryReportCallbackDataEXT where
-  rawOffset = #{offset struct VkDeviceMemoryReportCallbackDataEXT, heapIndex}
+  rawOffset = #{offset VkDeviceMemoryReportCallbackDataEXT, heapIndex}
 
 instance Offset "type" VkDeviceMemoryReportCallbackDataEXT where
   rawOffset = rawOffset @"type_" @VkDeviceMemoryReportCallbackDataEXT

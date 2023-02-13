@@ -39,8 +39,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkDependencyInfo" #-} VkDependencyInfo =
          }
 
 instance Storable VkDependencyInfo where
-  sizeOf    _ = #{size      struct VkDependencyInfo}
-  alignment _ = #{alignment struct VkDependencyInfo}
+  sizeOf    _ = #{size      VkDependencyInfo}
+  alignment _ = #{alignment VkDependencyInfo}
 
   peek ptr = 
     VkDependencyInfo
@@ -66,31 +66,31 @@ instance Storable VkDependencyInfo where
     pokeField @"pImageMemoryBarriers" ptr val
 
 instance Offset "sType" VkDependencyInfo where
-  rawOffset = #{offset struct VkDependencyInfo, sType}
+  rawOffset = #{offset VkDependencyInfo, sType}
 
 instance Offset "pNext" VkDependencyInfo where
-  rawOffset = #{offset struct VkDependencyInfo, pNext}
+  rawOffset = #{offset VkDependencyInfo, pNext}
 
 instance Offset "dependencyFlags" VkDependencyInfo where
-  rawOffset = #{offset struct VkDependencyInfo, dependencyFlags}
+  rawOffset = #{offset VkDependencyInfo, dependencyFlags}
 
 instance Offset "memoryBarrierCount" VkDependencyInfo where
-  rawOffset = #{offset struct VkDependencyInfo, memoryBarrierCount}
+  rawOffset = #{offset VkDependencyInfo, memoryBarrierCount}
 
 instance Offset "pMemoryBarriers" VkDependencyInfo where
-  rawOffset = #{offset struct VkDependencyInfo, pMemoryBarriers}
+  rawOffset = #{offset VkDependencyInfo, pMemoryBarriers}
 
 instance Offset "bufferMemoryBarrierCount" VkDependencyInfo where
-  rawOffset = #{offset struct VkDependencyInfo, bufferMemoryBarrierCount}
+  rawOffset = #{offset VkDependencyInfo, bufferMemoryBarrierCount}
 
 instance Offset "pBufferMemoryBarriers" VkDependencyInfo where
-  rawOffset = #{offset struct VkDependencyInfo, pBufferMemoryBarriers}
+  rawOffset = #{offset VkDependencyInfo, pBufferMemoryBarriers}
 
 instance Offset "imageMemoryBarrierCount" VkDependencyInfo where
-  rawOffset = #{offset struct VkDependencyInfo, imageMemoryBarrierCount}
+  rawOffset = #{offset VkDependencyInfo, imageMemoryBarrierCount}
 
 instance Offset "pImageMemoryBarriers" VkDependencyInfo where
-  rawOffset = #{offset struct VkDependencyInfo, pImageMemoryBarriers}
+  rawOffset = #{offset VkDependencyInfo, pImageMemoryBarriers}
 
 #else
 

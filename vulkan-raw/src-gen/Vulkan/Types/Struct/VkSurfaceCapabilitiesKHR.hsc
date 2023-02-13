@@ -40,8 +40,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkSurfaceCapabilitiesKHR" #-} VkSurfaceCapabil
          }
 
 instance Storable VkSurfaceCapabilitiesKHR where
-  sizeOf    _ = #{size      struct VkSurfaceCapabilitiesKHR}
-  alignment _ = #{alignment struct VkSurfaceCapabilitiesKHR}
+  sizeOf    _ = #{size      VkSurfaceCapabilitiesKHR}
+  alignment _ = #{alignment VkSurfaceCapabilitiesKHR}
 
   peek ptr = 
     VkSurfaceCapabilitiesKHR
@@ -69,34 +69,34 @@ instance Storable VkSurfaceCapabilitiesKHR where
     pokeField @"supportedUsageFlags" ptr val
 
 instance Offset "minImageCount" VkSurfaceCapabilitiesKHR where
-  rawOffset = #{offset struct VkSurfaceCapabilitiesKHR, minImageCount}
+  rawOffset = #{offset VkSurfaceCapabilitiesKHR, minImageCount}
 
 instance Offset "maxImageCount" VkSurfaceCapabilitiesKHR where
-  rawOffset = #{offset struct VkSurfaceCapabilitiesKHR, maxImageCount}
+  rawOffset = #{offset VkSurfaceCapabilitiesKHR, maxImageCount}
 
 instance Offset "currentExtent" VkSurfaceCapabilitiesKHR where
-  rawOffset = #{offset struct VkSurfaceCapabilitiesKHR, currentExtent}
+  rawOffset = #{offset VkSurfaceCapabilitiesKHR, currentExtent}
 
 instance Offset "minImageExtent" VkSurfaceCapabilitiesKHR where
-  rawOffset = #{offset struct VkSurfaceCapabilitiesKHR, minImageExtent}
+  rawOffset = #{offset VkSurfaceCapabilitiesKHR, minImageExtent}
 
 instance Offset "maxImageExtent" VkSurfaceCapabilitiesKHR where
-  rawOffset = #{offset struct VkSurfaceCapabilitiesKHR, maxImageExtent}
+  rawOffset = #{offset VkSurfaceCapabilitiesKHR, maxImageExtent}
 
 instance Offset "maxImageArrayLayers" VkSurfaceCapabilitiesKHR where
-  rawOffset = #{offset struct VkSurfaceCapabilitiesKHR, maxImageArrayLayers}
+  rawOffset = #{offset VkSurfaceCapabilitiesKHR, maxImageArrayLayers}
 
 instance Offset "supportedTransforms" VkSurfaceCapabilitiesKHR where
-  rawOffset = #{offset struct VkSurfaceCapabilitiesKHR, supportedTransforms}
+  rawOffset = #{offset VkSurfaceCapabilitiesKHR, supportedTransforms}
 
 instance Offset "currentTransform" VkSurfaceCapabilitiesKHR where
-  rawOffset = #{offset struct VkSurfaceCapabilitiesKHR, currentTransform}
+  rawOffset = #{offset VkSurfaceCapabilitiesKHR, currentTransform}
 
 instance Offset "supportedCompositeAlpha" VkSurfaceCapabilitiesKHR where
-  rawOffset = #{offset struct VkSurfaceCapabilitiesKHR, supportedCompositeAlpha}
+  rawOffset = #{offset VkSurfaceCapabilitiesKHR, supportedCompositeAlpha}
 
 instance Offset "supportedUsageFlags" VkSurfaceCapabilitiesKHR where
-  rawOffset = #{offset struct VkSurfaceCapabilitiesKHR, supportedUsageFlags}
+  rawOffset = #{offset VkSurfaceCapabilitiesKHR, supportedUsageFlags}
 
 #else
 

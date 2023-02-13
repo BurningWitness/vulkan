@@ -30,8 +30,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkFormatProperties2" #-} VkFormatProperties2 =
          }
 
 instance Storable VkFormatProperties2 where
-  sizeOf    _ = #{size      struct VkFormatProperties2}
-  alignment _ = #{alignment struct VkFormatProperties2}
+  sizeOf    _ = #{size      VkFormatProperties2}
+  alignment _ = #{alignment VkFormatProperties2}
 
   peek ptr = 
     VkFormatProperties2
@@ -45,13 +45,13 @@ instance Storable VkFormatProperties2 where
     pokeField @"formatProperties" ptr val
 
 instance Offset "sType" VkFormatProperties2 where
-  rawOffset = #{offset struct VkFormatProperties2, sType}
+  rawOffset = #{offset VkFormatProperties2, sType}
 
 instance Offset "pNext" VkFormatProperties2 where
-  rawOffset = #{offset struct VkFormatProperties2, pNext}
+  rawOffset = #{offset VkFormatProperties2, pNext}
 
 instance Offset "formatProperties" VkFormatProperties2 where
-  rawOffset = #{offset struct VkFormatProperties2, formatProperties}
+  rawOffset = #{offset VkFormatProperties2, formatProperties}
 
 #else
 

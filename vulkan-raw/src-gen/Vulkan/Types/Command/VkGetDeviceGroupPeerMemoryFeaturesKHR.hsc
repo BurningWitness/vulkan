@@ -1,3 +1,7 @@
+{-# LANGUAGE CApiFFI #-}
+{-# LANGUAGE CPP #-}
+{-# LANGUAGE MagicHash #-}
+
 #include <vulkan/vulkan.h>
 
 #if VK_KHR_device_group
@@ -9,17 +13,20 @@ import Data.Word
 import GHC.Ptr
 import Vulkan.Types.Enum.VkPeerMemoryFeatureFlags
 import Vulkan.Types.Handle
-import Vulkan.Types.Command.VkGetDeviceGroupPeerMemoryFeatures
 import Vulkan.Types.VkFun
 
 
 
-type VkGetDeviceGroupPeerMemoryFeaturesKHR = VkGetDeviceGroupPeerMemoryFeatures
+type VkGetDeviceGroupPeerMemoryFeaturesKHR =
+          VkDevice -- ^ device
+       -> #{type uint32_t} -- ^ heapIndex
+       -> #{type uint32_t} -- ^ localDeviceIndex
+       -> #{type uint32_t} -- ^ remoteDeviceIndex
+       -> Ptr VkPeerMemoryFeatureFlags -- ^ pPeerMemoryFeatures
+       -> IO ()
 
-vkFunGetDeviceGroupPeerMemoryFeaturesKHR
-  :: VkFun VkGetDeviceGroupPeerMemoryFeaturesKHR
-vkFunGetDeviceGroupPeerMemoryFeaturesKHR = vkFunGetDeviceGroupPeerMemoryFeatures
-
+vkFunGetDeviceGroupPeerMemoryFeaturesKHR :: VkFun VkGetDeviceGroupPeerMemoryFeaturesKHR
+vkFunGetDeviceGroupPeerMemoryFeaturesKHR = VkFun (Ptr ("vkGetDeviceGroupPeerMemoryFeaturesKHR\0"##))
 
 #else
 

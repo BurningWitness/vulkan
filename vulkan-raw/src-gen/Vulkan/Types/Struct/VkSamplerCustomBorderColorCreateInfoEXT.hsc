@@ -32,8 +32,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkSamplerCustomBorderColorCreateInfoEXT" #-} V
          }
 
 instance Storable VkSamplerCustomBorderColorCreateInfoEXT where
-  sizeOf    _ = #{size      struct VkSamplerCustomBorderColorCreateInfoEXT}
-  alignment _ = #{alignment struct VkSamplerCustomBorderColorCreateInfoEXT}
+  sizeOf    _ = #{size      VkSamplerCustomBorderColorCreateInfoEXT}
+  alignment _ = #{alignment VkSamplerCustomBorderColorCreateInfoEXT}
 
   peek ptr = 
     VkSamplerCustomBorderColorCreateInfoEXT
@@ -49,16 +49,16 @@ instance Storable VkSamplerCustomBorderColorCreateInfoEXT where
     pokeField @"format" ptr val
 
 instance Offset "sType" VkSamplerCustomBorderColorCreateInfoEXT where
-  rawOffset = #{offset struct VkSamplerCustomBorderColorCreateInfoEXT, sType}
+  rawOffset = #{offset VkSamplerCustomBorderColorCreateInfoEXT, sType}
 
 instance Offset "pNext" VkSamplerCustomBorderColorCreateInfoEXT where
-  rawOffset = #{offset struct VkSamplerCustomBorderColorCreateInfoEXT, pNext}
+  rawOffset = #{offset VkSamplerCustomBorderColorCreateInfoEXT, pNext}
 
 instance Offset "customBorderColor" VkSamplerCustomBorderColorCreateInfoEXT where
-  rawOffset = #{offset struct VkSamplerCustomBorderColorCreateInfoEXT, customBorderColor}
+  rawOffset = #{offset VkSamplerCustomBorderColorCreateInfoEXT, customBorderColor}
 
 instance Offset "format" VkSamplerCustomBorderColorCreateInfoEXT where
-  rawOffset = #{offset struct VkSamplerCustomBorderColorCreateInfoEXT, format}
+  rawOffset = #{offset VkSamplerCustomBorderColorCreateInfoEXT, format}
 
 #else
 

@@ -32,8 +32,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkAttachmentSampleCountInfoAMD" #-} VkAttachme
          }
 
 instance Storable VkAttachmentSampleCountInfoAMD where
-  sizeOf    _ = #{size      struct VkAttachmentSampleCountInfoAMD}
-  alignment _ = #{alignment struct VkAttachmentSampleCountInfoAMD}
+  sizeOf    _ = #{size      VkAttachmentSampleCountInfoAMD}
+  alignment _ = #{alignment VkAttachmentSampleCountInfoAMD}
 
   peek ptr = 
     VkAttachmentSampleCountInfoAMD
@@ -51,19 +51,19 @@ instance Storable VkAttachmentSampleCountInfoAMD where
     pokeField @"depthStencilAttachmentSamples" ptr val
 
 instance Offset "sType" VkAttachmentSampleCountInfoAMD where
-  rawOffset = #{offset struct VkAttachmentSampleCountInfoAMD, sType}
+  rawOffset = #{offset VkAttachmentSampleCountInfoAMD, sType}
 
 instance Offset "pNext" VkAttachmentSampleCountInfoAMD where
-  rawOffset = #{offset struct VkAttachmentSampleCountInfoAMD, pNext}
+  rawOffset = #{offset VkAttachmentSampleCountInfoAMD, pNext}
 
 instance Offset "colorAttachmentCount" VkAttachmentSampleCountInfoAMD where
-  rawOffset = #{offset struct VkAttachmentSampleCountInfoAMD, colorAttachmentCount}
+  rawOffset = #{offset VkAttachmentSampleCountInfoAMD, colorAttachmentCount}
 
 instance Offset "pColorAttachmentSamples" VkAttachmentSampleCountInfoAMD where
-  rawOffset = #{offset struct VkAttachmentSampleCountInfoAMD, pColorAttachmentSamples}
+  rawOffset = #{offset VkAttachmentSampleCountInfoAMD, pColorAttachmentSamples}
 
 instance Offset "depthStencilAttachmentSamples" VkAttachmentSampleCountInfoAMD where
-  rawOffset = #{offset struct VkAttachmentSampleCountInfoAMD, depthStencilAttachmentSamples}
+  rawOffset = #{offset VkAttachmentSampleCountInfoAMD, depthStencilAttachmentSamples}
 
 #else
 

@@ -30,8 +30,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkDisplayPowerInfoEXT" #-} VkDisplayPowerInfoE
          }
 
 instance Storable VkDisplayPowerInfoEXT where
-  sizeOf    _ = #{size      struct VkDisplayPowerInfoEXT}
-  alignment _ = #{alignment struct VkDisplayPowerInfoEXT}
+  sizeOf    _ = #{size      VkDisplayPowerInfoEXT}
+  alignment _ = #{alignment VkDisplayPowerInfoEXT}
 
   peek ptr = 
     VkDisplayPowerInfoEXT
@@ -45,13 +45,13 @@ instance Storable VkDisplayPowerInfoEXT where
     pokeField @"powerState" ptr val
 
 instance Offset "sType" VkDisplayPowerInfoEXT where
-  rawOffset = #{offset struct VkDisplayPowerInfoEXT, sType}
+  rawOffset = #{offset VkDisplayPowerInfoEXT, sType}
 
 instance Offset "pNext" VkDisplayPowerInfoEXT where
-  rawOffset = #{offset struct VkDisplayPowerInfoEXT, pNext}
+  rawOffset = #{offset VkDisplayPowerInfoEXT, pNext}
 
 instance Offset "powerState" VkDisplayPowerInfoEXT where
-  rawOffset = #{offset struct VkDisplayPowerInfoEXT, powerState}
+  rawOffset = #{offset VkDisplayPowerInfoEXT, powerState}
 
 #else
 

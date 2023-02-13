@@ -30,8 +30,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkPhysicalDeviceMutableDescriptorTypeFeaturesE
          }
 
 instance Storable VkPhysicalDeviceMutableDescriptorTypeFeaturesEXT where
-  sizeOf    _ = #{size      struct VkPhysicalDeviceMutableDescriptorTypeFeaturesEXT}
-  alignment _ = #{alignment struct VkPhysicalDeviceMutableDescriptorTypeFeaturesEXT}
+  sizeOf    _ = #{size      VkPhysicalDeviceMutableDescriptorTypeFeaturesEXT}
+  alignment _ = #{alignment VkPhysicalDeviceMutableDescriptorTypeFeaturesEXT}
 
   peek ptr = 
     VkPhysicalDeviceMutableDescriptorTypeFeaturesEXT
@@ -45,13 +45,13 @@ instance Storable VkPhysicalDeviceMutableDescriptorTypeFeaturesEXT where
     pokeField @"mutableDescriptorType" ptr val
 
 instance Offset "sType" VkPhysicalDeviceMutableDescriptorTypeFeaturesEXT where
-  rawOffset = #{offset struct VkPhysicalDeviceMutableDescriptorTypeFeaturesEXT, sType}
+  rawOffset = #{offset VkPhysicalDeviceMutableDescriptorTypeFeaturesEXT, sType}
 
 instance Offset "pNext" VkPhysicalDeviceMutableDescriptorTypeFeaturesEXT where
-  rawOffset = #{offset struct VkPhysicalDeviceMutableDescriptorTypeFeaturesEXT, pNext}
+  rawOffset = #{offset VkPhysicalDeviceMutableDescriptorTypeFeaturesEXT, pNext}
 
 instance Offset "mutableDescriptorType" VkPhysicalDeviceMutableDescriptorTypeFeaturesEXT where
-  rawOffset = #{offset struct VkPhysicalDeviceMutableDescriptorTypeFeaturesEXT, mutableDescriptorType}
+  rawOffset = #{offset VkPhysicalDeviceMutableDescriptorTypeFeaturesEXT, mutableDescriptorType}
 
 #else
 

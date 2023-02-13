@@ -1,3 +1,7 @@
+{-# LANGUAGE CApiFFI #-}
+{-# LANGUAGE CPP #-}
+{-# LANGUAGE MagicHash #-}
+
 #include <vulkan/vulkan.h>
 
 #if VK_KHR_buffer_device_address
@@ -9,17 +13,17 @@ import Data.Word
 import GHC.Ptr
 import Vulkan.Types.Handle
 import Vulkan.Types.Struct.VkBufferDeviceAddressInfo
-import Vulkan.Types.Command.VkGetBufferOpaqueCaptureAddress
 import Vulkan.Types.VkFun
 
 
 
-type VkGetBufferOpaqueCaptureAddressKHR = VkGetBufferOpaqueCaptureAddress
+type VkGetBufferOpaqueCaptureAddressKHR =
+          VkDevice -- ^ device
+       -> Ptr VkBufferDeviceAddressInfo -- ^ pInfo
+       -> IO #{type uint64_t}
 
-vkFunGetBufferOpaqueCaptureAddressKHR
-  :: VkFun VkGetBufferOpaqueCaptureAddressKHR
-vkFunGetBufferOpaqueCaptureAddressKHR = vkFunGetBufferOpaqueCaptureAddress
-
+vkFunGetBufferOpaqueCaptureAddressKHR :: VkFun VkGetBufferOpaqueCaptureAddressKHR
+vkFunGetBufferOpaqueCaptureAddressKHR = VkFun (Ptr ("vkGetBufferOpaqueCaptureAddressKHR\0"##))
 
 #else
 

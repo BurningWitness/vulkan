@@ -28,8 +28,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkVideoEncodeH264QpEXT" #-} VkVideoEncodeH264Q
          }
 
 instance Storable VkVideoEncodeH264QpEXT where
-  sizeOf    _ = #{size      struct VkVideoEncodeH264QpEXT}
-  alignment _ = #{alignment struct VkVideoEncodeH264QpEXT}
+  sizeOf    _ = #{size      VkVideoEncodeH264QpEXT}
+  alignment _ = #{alignment VkVideoEncodeH264QpEXT}
 
   peek ptr = 
     VkVideoEncodeH264QpEXT
@@ -43,13 +43,13 @@ instance Storable VkVideoEncodeH264QpEXT where
     pokeField @"qpB" ptr val
 
 instance Offset "qpI" VkVideoEncodeH264QpEXT where
-  rawOffset = #{offset struct VkVideoEncodeH264QpEXT, qpI}
+  rawOffset = #{offset VkVideoEncodeH264QpEXT, qpI}
 
 instance Offset "qpP" VkVideoEncodeH264QpEXT where
-  rawOffset = #{offset struct VkVideoEncodeH264QpEXT, qpP}
+  rawOffset = #{offset VkVideoEncodeH264QpEXT, qpP}
 
 instance Offset "qpB" VkVideoEncodeH264QpEXT where
-  rawOffset = #{offset struct VkVideoEncodeH264QpEXT, qpB}
+  rawOffset = #{offset VkVideoEncodeH264QpEXT, qpB}
 
 #else
 

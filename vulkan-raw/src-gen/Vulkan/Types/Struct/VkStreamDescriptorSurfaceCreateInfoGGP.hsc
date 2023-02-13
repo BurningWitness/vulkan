@@ -32,8 +32,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkStreamDescriptorSurfaceCreateInfoGGP" #-} Vk
          }
 
 instance Storable VkStreamDescriptorSurfaceCreateInfoGGP where
-  sizeOf    _ = #{size      struct VkStreamDescriptorSurfaceCreateInfoGGP}
-  alignment _ = #{alignment struct VkStreamDescriptorSurfaceCreateInfoGGP}
+  sizeOf    _ = #{size      VkStreamDescriptorSurfaceCreateInfoGGP}
+  alignment _ = #{alignment VkStreamDescriptorSurfaceCreateInfoGGP}
 
   peek ptr = 
     VkStreamDescriptorSurfaceCreateInfoGGP
@@ -49,16 +49,16 @@ instance Storable VkStreamDescriptorSurfaceCreateInfoGGP where
     pokeField @"streamDescriptor" ptr val
 
 instance Offset "sType" VkStreamDescriptorSurfaceCreateInfoGGP where
-  rawOffset = #{offset struct VkStreamDescriptorSurfaceCreateInfoGGP, sType}
+  rawOffset = #{offset VkStreamDescriptorSurfaceCreateInfoGGP, sType}
 
 instance Offset "pNext" VkStreamDescriptorSurfaceCreateInfoGGP where
-  rawOffset = #{offset struct VkStreamDescriptorSurfaceCreateInfoGGP, pNext}
+  rawOffset = #{offset VkStreamDescriptorSurfaceCreateInfoGGP, pNext}
 
 instance Offset "flags" VkStreamDescriptorSurfaceCreateInfoGGP where
-  rawOffset = #{offset struct VkStreamDescriptorSurfaceCreateInfoGGP, flags}
+  rawOffset = #{offset VkStreamDescriptorSurfaceCreateInfoGGP, flags}
 
 instance Offset "streamDescriptor" VkStreamDescriptorSurfaceCreateInfoGGP where
-  rawOffset = #{offset struct VkStreamDescriptorSurfaceCreateInfoGGP, streamDescriptor}
+  rawOffset = #{offset VkStreamDescriptorSurfaceCreateInfoGGP, streamDescriptor}
 
 #else
 

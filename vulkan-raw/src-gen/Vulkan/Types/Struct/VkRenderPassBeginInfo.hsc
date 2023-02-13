@@ -34,8 +34,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkRenderPassBeginInfo" #-} VkRenderPassBeginIn
          }
 
 instance Storable VkRenderPassBeginInfo where
-  sizeOf    _ = #{size      struct VkRenderPassBeginInfo}
-  alignment _ = #{alignment struct VkRenderPassBeginInfo}
+  sizeOf    _ = #{size      VkRenderPassBeginInfo}
+  alignment _ = #{alignment VkRenderPassBeginInfo}
 
   peek ptr = 
     VkRenderPassBeginInfo
@@ -57,22 +57,22 @@ instance Storable VkRenderPassBeginInfo where
     pokeField @"pClearValues" ptr val
 
 instance Offset "sType" VkRenderPassBeginInfo where
-  rawOffset = #{offset struct VkRenderPassBeginInfo, sType}
+  rawOffset = #{offset VkRenderPassBeginInfo, sType}
 
 instance Offset "pNext" VkRenderPassBeginInfo where
-  rawOffset = #{offset struct VkRenderPassBeginInfo, pNext}
+  rawOffset = #{offset VkRenderPassBeginInfo, pNext}
 
 instance Offset "renderPass" VkRenderPassBeginInfo where
-  rawOffset = #{offset struct VkRenderPassBeginInfo, renderPass}
+  rawOffset = #{offset VkRenderPassBeginInfo, renderPass}
 
 instance Offset "framebuffer" VkRenderPassBeginInfo where
-  rawOffset = #{offset struct VkRenderPassBeginInfo, framebuffer}
+  rawOffset = #{offset VkRenderPassBeginInfo, framebuffer}
 
 instance Offset "renderArea" VkRenderPassBeginInfo where
-  rawOffset = #{offset struct VkRenderPassBeginInfo, renderArea}
+  rawOffset = #{offset VkRenderPassBeginInfo, renderArea}
 
 instance Offset "clearValueCount" VkRenderPassBeginInfo where
-  rawOffset = #{offset struct VkRenderPassBeginInfo, clearValueCount}
+  rawOffset = #{offset VkRenderPassBeginInfo, clearValueCount}
 
 instance Offset "pClearValues" VkRenderPassBeginInfo where
-  rawOffset = #{offset struct VkRenderPassBeginInfo, pClearValues}
+  rawOffset = #{offset VkRenderPassBeginInfo, pClearValues}

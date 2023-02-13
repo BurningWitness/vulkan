@@ -32,8 +32,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkMicromapBuildSizesInfoEXT" #-} VkMicromapBui
          }
 
 instance Storable VkMicromapBuildSizesInfoEXT where
-  sizeOf    _ = #{size      struct VkMicromapBuildSizesInfoEXT}
-  alignment _ = #{alignment struct VkMicromapBuildSizesInfoEXT}
+  sizeOf    _ = #{size      VkMicromapBuildSizesInfoEXT}
+  alignment _ = #{alignment VkMicromapBuildSizesInfoEXT}
 
   peek ptr = 
     VkMicromapBuildSizesInfoEXT
@@ -51,19 +51,19 @@ instance Storable VkMicromapBuildSizesInfoEXT where
     pokeField @"discardable" ptr val
 
 instance Offset "sType" VkMicromapBuildSizesInfoEXT where
-  rawOffset = #{offset struct VkMicromapBuildSizesInfoEXT, sType}
+  rawOffset = #{offset VkMicromapBuildSizesInfoEXT, sType}
 
 instance Offset "pNext" VkMicromapBuildSizesInfoEXT where
-  rawOffset = #{offset struct VkMicromapBuildSizesInfoEXT, pNext}
+  rawOffset = #{offset VkMicromapBuildSizesInfoEXT, pNext}
 
 instance Offset "micromapSize" VkMicromapBuildSizesInfoEXT where
-  rawOffset = #{offset struct VkMicromapBuildSizesInfoEXT, micromapSize}
+  rawOffset = #{offset VkMicromapBuildSizesInfoEXT, micromapSize}
 
 instance Offset "buildScratchSize" VkMicromapBuildSizesInfoEXT where
-  rawOffset = #{offset struct VkMicromapBuildSizesInfoEXT, buildScratchSize}
+  rawOffset = #{offset VkMicromapBuildSizesInfoEXT, buildScratchSize}
 
 instance Offset "discardable" VkMicromapBuildSizesInfoEXT where
-  rawOffset = #{offset struct VkMicromapBuildSizesInfoEXT, discardable}
+  rawOffset = #{offset VkMicromapBuildSizesInfoEXT, discardable}
 
 #else
 

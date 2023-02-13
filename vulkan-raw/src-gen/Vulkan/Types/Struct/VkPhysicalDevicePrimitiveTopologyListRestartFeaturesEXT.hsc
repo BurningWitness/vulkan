@@ -31,8 +31,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkPhysicalDevicePrimitiveTopologyListRestartFe
          }
 
 instance Storable VkPhysicalDevicePrimitiveTopologyListRestartFeaturesEXT where
-  sizeOf    _ = #{size      struct VkPhysicalDevicePrimitiveTopologyListRestartFeaturesEXT}
-  alignment _ = #{alignment struct VkPhysicalDevicePrimitiveTopologyListRestartFeaturesEXT}
+  sizeOf    _ = #{size      VkPhysicalDevicePrimitiveTopologyListRestartFeaturesEXT}
+  alignment _ = #{alignment VkPhysicalDevicePrimitiveTopologyListRestartFeaturesEXT}
 
   peek ptr = 
     VkPhysicalDevicePrimitiveTopologyListRestartFeaturesEXT
@@ -48,16 +48,16 @@ instance Storable VkPhysicalDevicePrimitiveTopologyListRestartFeaturesEXT where
     pokeField @"primitiveTopologyPatchListRestart" ptr val
 
 instance Offset "sType" VkPhysicalDevicePrimitiveTopologyListRestartFeaturesEXT where
-  rawOffset = #{offset struct VkPhysicalDevicePrimitiveTopologyListRestartFeaturesEXT, sType}
+  rawOffset = #{offset VkPhysicalDevicePrimitiveTopologyListRestartFeaturesEXT, sType}
 
 instance Offset "pNext" VkPhysicalDevicePrimitiveTopologyListRestartFeaturesEXT where
-  rawOffset = #{offset struct VkPhysicalDevicePrimitiveTopologyListRestartFeaturesEXT, pNext}
+  rawOffset = #{offset VkPhysicalDevicePrimitiveTopologyListRestartFeaturesEXT, pNext}
 
 instance Offset "primitiveTopologyListRestart" VkPhysicalDevicePrimitiveTopologyListRestartFeaturesEXT where
-  rawOffset = #{offset struct VkPhysicalDevicePrimitiveTopologyListRestartFeaturesEXT, primitiveTopologyListRestart}
+  rawOffset = #{offset VkPhysicalDevicePrimitiveTopologyListRestartFeaturesEXT, primitiveTopologyListRestart}
 
 instance Offset "primitiveTopologyPatchListRestart" VkPhysicalDevicePrimitiveTopologyListRestartFeaturesEXT where
-  rawOffset = #{offset struct VkPhysicalDevicePrimitiveTopologyListRestartFeaturesEXT, primitiveTopologyPatchListRestart}
+  rawOffset = #{offset VkPhysicalDevicePrimitiveTopologyListRestartFeaturesEXT, primitiveTopologyPatchListRestart}
 
 #else
 

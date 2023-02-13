@@ -34,8 +34,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkRenderingFragmentShadingRateAttachmentInfoKH
          }
 
 instance Storable VkRenderingFragmentShadingRateAttachmentInfoKHR where
-  sizeOf    _ = #{size      struct VkRenderingFragmentShadingRateAttachmentInfoKHR}
-  alignment _ = #{alignment struct VkRenderingFragmentShadingRateAttachmentInfoKHR}
+  sizeOf    _ = #{size      VkRenderingFragmentShadingRateAttachmentInfoKHR}
+  alignment _ = #{alignment VkRenderingFragmentShadingRateAttachmentInfoKHR}
 
   peek ptr = 
     VkRenderingFragmentShadingRateAttachmentInfoKHR
@@ -53,19 +53,19 @@ instance Storable VkRenderingFragmentShadingRateAttachmentInfoKHR where
     pokeField @"shadingRateAttachmentTexelSize" ptr val
 
 instance Offset "sType" VkRenderingFragmentShadingRateAttachmentInfoKHR where
-  rawOffset = #{offset struct VkRenderingFragmentShadingRateAttachmentInfoKHR, sType}
+  rawOffset = #{offset VkRenderingFragmentShadingRateAttachmentInfoKHR, sType}
 
 instance Offset "pNext" VkRenderingFragmentShadingRateAttachmentInfoKHR where
-  rawOffset = #{offset struct VkRenderingFragmentShadingRateAttachmentInfoKHR, pNext}
+  rawOffset = #{offset VkRenderingFragmentShadingRateAttachmentInfoKHR, pNext}
 
 instance Offset "imageView" VkRenderingFragmentShadingRateAttachmentInfoKHR where
-  rawOffset = #{offset struct VkRenderingFragmentShadingRateAttachmentInfoKHR, imageView}
+  rawOffset = #{offset VkRenderingFragmentShadingRateAttachmentInfoKHR, imageView}
 
 instance Offset "imageLayout" VkRenderingFragmentShadingRateAttachmentInfoKHR where
-  rawOffset = #{offset struct VkRenderingFragmentShadingRateAttachmentInfoKHR, imageLayout}
+  rawOffset = #{offset VkRenderingFragmentShadingRateAttachmentInfoKHR, imageLayout}
 
 instance Offset "shadingRateAttachmentTexelSize" VkRenderingFragmentShadingRateAttachmentInfoKHR where
-  rawOffset = #{offset struct VkRenderingFragmentShadingRateAttachmentInfoKHR, shadingRateAttachmentTexelSize}
+  rawOffset = #{offset VkRenderingFragmentShadingRateAttachmentInfoKHR, shadingRateAttachmentTexelSize}
 
 #else
 

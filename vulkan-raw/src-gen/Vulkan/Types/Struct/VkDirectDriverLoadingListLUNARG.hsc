@@ -33,8 +33,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkDirectDriverLoadingListLUNARG" #-} VkDirectD
          }
 
 instance Storable VkDirectDriverLoadingListLUNARG where
-  sizeOf    _ = #{size      struct VkDirectDriverLoadingListLUNARG}
-  alignment _ = #{alignment struct VkDirectDriverLoadingListLUNARG}
+  sizeOf    _ = #{size      VkDirectDriverLoadingListLUNARG}
+  alignment _ = #{alignment VkDirectDriverLoadingListLUNARG}
 
   peek ptr = 
     VkDirectDriverLoadingListLUNARG
@@ -52,19 +52,19 @@ instance Storable VkDirectDriverLoadingListLUNARG where
     pokeField @"pDrivers" ptr val
 
 instance Offset "sType" VkDirectDriverLoadingListLUNARG where
-  rawOffset = #{offset struct VkDirectDriverLoadingListLUNARG, sType}
+  rawOffset = #{offset VkDirectDriverLoadingListLUNARG, sType}
 
 instance Offset "pNext" VkDirectDriverLoadingListLUNARG where
-  rawOffset = #{offset struct VkDirectDriverLoadingListLUNARG, pNext}
+  rawOffset = #{offset VkDirectDriverLoadingListLUNARG, pNext}
 
 instance Offset "mode" VkDirectDriverLoadingListLUNARG where
-  rawOffset = #{offset struct VkDirectDriverLoadingListLUNARG, mode}
+  rawOffset = #{offset VkDirectDriverLoadingListLUNARG, mode}
 
 instance Offset "driverCount" VkDirectDriverLoadingListLUNARG where
-  rawOffset = #{offset struct VkDirectDriverLoadingListLUNARG, driverCount}
+  rawOffset = #{offset VkDirectDriverLoadingListLUNARG, driverCount}
 
 instance Offset "pDrivers" VkDirectDriverLoadingListLUNARG where
-  rawOffset = #{offset struct VkDirectDriverLoadingListLUNARG, pDrivers}
+  rawOffset = #{offset VkDirectDriverLoadingListLUNARG, pDrivers}
 
 #else
 

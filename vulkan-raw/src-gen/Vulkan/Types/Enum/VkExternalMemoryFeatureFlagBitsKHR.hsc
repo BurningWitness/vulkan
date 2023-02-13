@@ -1,14 +1,14 @@
 {-# LANGUAGE CPP #-}
+{-# LANGUAGE PatternSynonyms #-}
 
 #include <vulkan/vulkan.h>
 
 module Vulkan.Types.Enum.VkExternalMemoryFeatureFlagBitsKHR where
 
-import Data.Int
-import Vulkan.Types.Enum.VkExternalMemoryFeatureFlagBits
+import Vulkan.Types.Base
 
 
 
 #if VK_KHR_external_memory_capabilities
-type VkExternalMemoryFeatureFlagBitsKHR = VkExternalMemoryFeatureFlagBits
+type VkExternalMemoryFeatureFlagBitsKHR = VkFlags
 #endif

@@ -30,8 +30,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkPhysicalDeviceCooperativeMatrixPropertiesNV"
          }
 
 instance Storable VkPhysicalDeviceCooperativeMatrixPropertiesNV where
-  sizeOf    _ = #{size      struct VkPhysicalDeviceCooperativeMatrixPropertiesNV}
-  alignment _ = #{alignment struct VkPhysicalDeviceCooperativeMatrixPropertiesNV}
+  sizeOf    _ = #{size      VkPhysicalDeviceCooperativeMatrixPropertiesNV}
+  alignment _ = #{alignment VkPhysicalDeviceCooperativeMatrixPropertiesNV}
 
   peek ptr = 
     VkPhysicalDeviceCooperativeMatrixPropertiesNV
@@ -45,13 +45,13 @@ instance Storable VkPhysicalDeviceCooperativeMatrixPropertiesNV where
     pokeField @"cooperativeMatrixSupportedStages" ptr val
 
 instance Offset "sType" VkPhysicalDeviceCooperativeMatrixPropertiesNV where
-  rawOffset = #{offset struct VkPhysicalDeviceCooperativeMatrixPropertiesNV, sType}
+  rawOffset = #{offset VkPhysicalDeviceCooperativeMatrixPropertiesNV, sType}
 
 instance Offset "pNext" VkPhysicalDeviceCooperativeMatrixPropertiesNV where
-  rawOffset = #{offset struct VkPhysicalDeviceCooperativeMatrixPropertiesNV, pNext}
+  rawOffset = #{offset VkPhysicalDeviceCooperativeMatrixPropertiesNV, pNext}
 
 instance Offset "cooperativeMatrixSupportedStages" VkPhysicalDeviceCooperativeMatrixPropertiesNV where
-  rawOffset = #{offset struct VkPhysicalDeviceCooperativeMatrixPropertiesNV, cooperativeMatrixSupportedStages}
+  rawOffset = #{offset VkPhysicalDeviceCooperativeMatrixPropertiesNV, cooperativeMatrixSupportedStages}
 
 #else
 

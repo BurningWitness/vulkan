@@ -31,8 +31,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkPerformanceCounterResultKHR" #-} VkPerforman
          }
 
 instance Storable VkPerformanceCounterResultKHR where
-  sizeOf    _ = #{size      union VkPerformanceCounterResultKHR}
-  alignment _ = #{alignment union VkPerformanceCounterResultKHR}
+  sizeOf    _ = #{size      VkPerformanceCounterResultKHR}
+  alignment _ = #{alignment VkPerformanceCounterResultKHR}
 
   peek ptr = 
     VkPerformanceCounterResultKHR
@@ -52,22 +52,22 @@ instance Storable VkPerformanceCounterResultKHR where
     pokeField @"float64" ptr val
 
 instance Offset "int32" VkPerformanceCounterResultKHR where
-  rawOffset = #{offset union VkPerformanceCounterResultKHR, int32}
+  rawOffset = #{offset VkPerformanceCounterResultKHR, int32}
 
 instance Offset "int64" VkPerformanceCounterResultKHR where
-  rawOffset = #{offset union VkPerformanceCounterResultKHR, int64}
+  rawOffset = #{offset VkPerformanceCounterResultKHR, int64}
 
 instance Offset "uint32" VkPerformanceCounterResultKHR where
-  rawOffset = #{offset union VkPerformanceCounterResultKHR, uint32}
+  rawOffset = #{offset VkPerformanceCounterResultKHR, uint32}
 
 instance Offset "uint64" VkPerformanceCounterResultKHR where
-  rawOffset = #{offset union VkPerformanceCounterResultKHR, uint64}
+  rawOffset = #{offset VkPerformanceCounterResultKHR, uint64}
 
 instance Offset "float32" VkPerformanceCounterResultKHR where
-  rawOffset = #{offset union VkPerformanceCounterResultKHR, float32}
+  rawOffset = #{offset VkPerformanceCounterResultKHR, float32}
 
 instance Offset "float64" VkPerformanceCounterResultKHR where
-  rawOffset = #{offset union VkPerformanceCounterResultKHR, float64}
+  rawOffset = #{offset VkPerformanceCounterResultKHR, float64}
 
 #else
 

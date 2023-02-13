@@ -30,8 +30,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkPhysicalDeviceShaderSubgroupUniformControlFl
          }
 
 instance Storable VkPhysicalDeviceShaderSubgroupUniformControlFlowFeaturesKHR where
-  sizeOf    _ = #{size      struct VkPhysicalDeviceShaderSubgroupUniformControlFlowFeaturesKHR}
-  alignment _ = #{alignment struct VkPhysicalDeviceShaderSubgroupUniformControlFlowFeaturesKHR}
+  sizeOf    _ = #{size      VkPhysicalDeviceShaderSubgroupUniformControlFlowFeaturesKHR}
+  alignment _ = #{alignment VkPhysicalDeviceShaderSubgroupUniformControlFlowFeaturesKHR}
 
   peek ptr = 
     VkPhysicalDeviceShaderSubgroupUniformControlFlowFeaturesKHR
@@ -45,13 +45,13 @@ instance Storable VkPhysicalDeviceShaderSubgroupUniformControlFlowFeaturesKHR wh
     pokeField @"shaderSubgroupUniformControlFlow" ptr val
 
 instance Offset "sType" VkPhysicalDeviceShaderSubgroupUniformControlFlowFeaturesKHR where
-  rawOffset = #{offset struct VkPhysicalDeviceShaderSubgroupUniformControlFlowFeaturesKHR, sType}
+  rawOffset = #{offset VkPhysicalDeviceShaderSubgroupUniformControlFlowFeaturesKHR, sType}
 
 instance Offset "pNext" VkPhysicalDeviceShaderSubgroupUniformControlFlowFeaturesKHR where
-  rawOffset = #{offset struct VkPhysicalDeviceShaderSubgroupUniformControlFlowFeaturesKHR, pNext}
+  rawOffset = #{offset VkPhysicalDeviceShaderSubgroupUniformControlFlowFeaturesKHR, pNext}
 
 instance Offset "shaderSubgroupUniformControlFlow" VkPhysicalDeviceShaderSubgroupUniformControlFlowFeaturesKHR where
-  rawOffset = #{offset struct VkPhysicalDeviceShaderSubgroupUniformControlFlowFeaturesKHR, shaderSubgroupUniformControlFlow}
+  rawOffset = #{offset VkPhysicalDeviceShaderSubgroupUniformControlFlowFeaturesKHR, shaderSubgroupUniformControlFlow}
 
 #else
 

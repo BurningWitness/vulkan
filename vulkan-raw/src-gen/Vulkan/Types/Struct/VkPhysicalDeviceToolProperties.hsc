@@ -34,8 +34,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkPhysicalDeviceToolProperties" #-} VkPhysical
          }
 
 instance Storable VkPhysicalDeviceToolProperties where
-  sizeOf    _ = #{size      struct VkPhysicalDeviceToolProperties}
-  alignment _ = #{alignment struct VkPhysicalDeviceToolProperties}
+  sizeOf    _ = #{size      VkPhysicalDeviceToolProperties}
+  alignment _ = #{alignment VkPhysicalDeviceToolProperties}
 
   peek ptr = 
     VkPhysicalDeviceToolProperties
@@ -57,25 +57,25 @@ instance Storable VkPhysicalDeviceToolProperties where
     pokeField @"layer" ptr val
 
 instance Offset "sType" VkPhysicalDeviceToolProperties where
-  rawOffset = #{offset struct VkPhysicalDeviceToolProperties, sType}
+  rawOffset = #{offset VkPhysicalDeviceToolProperties, sType}
 
 instance Offset "pNext" VkPhysicalDeviceToolProperties where
-  rawOffset = #{offset struct VkPhysicalDeviceToolProperties, pNext}
+  rawOffset = #{offset VkPhysicalDeviceToolProperties, pNext}
 
 instance Offset "name" VkPhysicalDeviceToolProperties where
-  rawOffset = #{offset struct VkPhysicalDeviceToolProperties, name}
+  rawOffset = #{offset VkPhysicalDeviceToolProperties, name}
 
 instance Offset "version" VkPhysicalDeviceToolProperties where
-  rawOffset = #{offset struct VkPhysicalDeviceToolProperties, version}
+  rawOffset = #{offset VkPhysicalDeviceToolProperties, version}
 
 instance Offset "purposes" VkPhysicalDeviceToolProperties where
-  rawOffset = #{offset struct VkPhysicalDeviceToolProperties, purposes}
+  rawOffset = #{offset VkPhysicalDeviceToolProperties, purposes}
 
 instance Offset "description" VkPhysicalDeviceToolProperties where
-  rawOffset = #{offset struct VkPhysicalDeviceToolProperties, description}
+  rawOffset = #{offset VkPhysicalDeviceToolProperties, description}
 
 instance Offset "layer" VkPhysicalDeviceToolProperties where
-  rawOffset = #{offset struct VkPhysicalDeviceToolProperties, layer}
+  rawOffset = #{offset VkPhysicalDeviceToolProperties, layer}
 
 #else
 

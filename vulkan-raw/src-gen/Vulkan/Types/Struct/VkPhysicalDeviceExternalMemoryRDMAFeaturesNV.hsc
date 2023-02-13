@@ -30,8 +30,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkPhysicalDeviceExternalMemoryRDMAFeaturesNV" 
          }
 
 instance Storable VkPhysicalDeviceExternalMemoryRDMAFeaturesNV where
-  sizeOf    _ = #{size      struct VkPhysicalDeviceExternalMemoryRDMAFeaturesNV}
-  alignment _ = #{alignment struct VkPhysicalDeviceExternalMemoryRDMAFeaturesNV}
+  sizeOf    _ = #{size      VkPhysicalDeviceExternalMemoryRDMAFeaturesNV}
+  alignment _ = #{alignment VkPhysicalDeviceExternalMemoryRDMAFeaturesNV}
 
   peek ptr = 
     VkPhysicalDeviceExternalMemoryRDMAFeaturesNV
@@ -45,13 +45,13 @@ instance Storable VkPhysicalDeviceExternalMemoryRDMAFeaturesNV where
     pokeField @"externalMemoryRDMA" ptr val
 
 instance Offset "sType" VkPhysicalDeviceExternalMemoryRDMAFeaturesNV where
-  rawOffset = #{offset struct VkPhysicalDeviceExternalMemoryRDMAFeaturesNV, sType}
+  rawOffset = #{offset VkPhysicalDeviceExternalMemoryRDMAFeaturesNV, sType}
 
 instance Offset "pNext" VkPhysicalDeviceExternalMemoryRDMAFeaturesNV where
-  rawOffset = #{offset struct VkPhysicalDeviceExternalMemoryRDMAFeaturesNV, pNext}
+  rawOffset = #{offset VkPhysicalDeviceExternalMemoryRDMAFeaturesNV, pNext}
 
 instance Offset "externalMemoryRDMA" VkPhysicalDeviceExternalMemoryRDMAFeaturesNV where
-  rawOffset = #{offset struct VkPhysicalDeviceExternalMemoryRDMAFeaturesNV, externalMemoryRDMA}
+  rawOffset = #{offset VkPhysicalDeviceExternalMemoryRDMAFeaturesNV, externalMemoryRDMA}
 
 #else
 

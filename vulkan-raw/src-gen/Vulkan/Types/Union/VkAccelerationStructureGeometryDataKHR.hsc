@@ -31,8 +31,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkAccelerationStructureGeometryDataKHR" #-} Vk
          }
 
 instance Storable VkAccelerationStructureGeometryDataKHR where
-  sizeOf    _ = #{size      union VkAccelerationStructureGeometryDataKHR}
-  alignment _ = #{alignment union VkAccelerationStructureGeometryDataKHR}
+  sizeOf    _ = #{size      VkAccelerationStructureGeometryDataKHR}
+  alignment _ = #{alignment VkAccelerationStructureGeometryDataKHR}
 
   peek ptr = 
     VkAccelerationStructureGeometryDataKHR
@@ -46,13 +46,13 @@ instance Storable VkAccelerationStructureGeometryDataKHR where
     pokeField @"instances" ptr val
 
 instance Offset "triangles" VkAccelerationStructureGeometryDataKHR where
-  rawOffset = #{offset union VkAccelerationStructureGeometryDataKHR, triangles}
+  rawOffset = #{offset VkAccelerationStructureGeometryDataKHR, triangles}
 
 instance Offset "aabbs" VkAccelerationStructureGeometryDataKHR where
-  rawOffset = #{offset union VkAccelerationStructureGeometryDataKHR, aabbs}
+  rawOffset = #{offset VkAccelerationStructureGeometryDataKHR, aabbs}
 
 instance Offset "instances" VkAccelerationStructureGeometryDataKHR where
-  rawOffset = #{offset union VkAccelerationStructureGeometryDataKHR, instances}
+  rawOffset = #{offset VkAccelerationStructureGeometryDataKHR, instances}
 
 #else
 

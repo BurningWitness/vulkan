@@ -31,8 +31,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkDisplayPlaneInfo2KHR" #-} VkDisplayPlaneInfo
          }
 
 instance Storable VkDisplayPlaneInfo2KHR where
-  sizeOf    _ = #{size      struct VkDisplayPlaneInfo2KHR}
-  alignment _ = #{alignment struct VkDisplayPlaneInfo2KHR}
+  sizeOf    _ = #{size      VkDisplayPlaneInfo2KHR}
+  alignment _ = #{alignment VkDisplayPlaneInfo2KHR}
 
   peek ptr = 
     VkDisplayPlaneInfo2KHR
@@ -48,16 +48,16 @@ instance Storable VkDisplayPlaneInfo2KHR where
     pokeField @"planeIndex" ptr val
 
 instance Offset "sType" VkDisplayPlaneInfo2KHR where
-  rawOffset = #{offset struct VkDisplayPlaneInfo2KHR, sType}
+  rawOffset = #{offset VkDisplayPlaneInfo2KHR, sType}
 
 instance Offset "pNext" VkDisplayPlaneInfo2KHR where
-  rawOffset = #{offset struct VkDisplayPlaneInfo2KHR, pNext}
+  rawOffset = #{offset VkDisplayPlaneInfo2KHR, pNext}
 
 instance Offset "mode" VkDisplayPlaneInfo2KHR where
-  rawOffset = #{offset struct VkDisplayPlaneInfo2KHR, mode}
+  rawOffset = #{offset VkDisplayPlaneInfo2KHR, mode}
 
 instance Offset "planeIndex" VkDisplayPlaneInfo2KHR where
-  rawOffset = #{offset struct VkDisplayPlaneInfo2KHR, planeIndex}
+  rawOffset = #{offset VkDisplayPlaneInfo2KHR, planeIndex}
 
 #else
 

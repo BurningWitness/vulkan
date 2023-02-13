@@ -30,8 +30,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkPhysicalDeviceMemoryPriorityFeaturesEXT" #-}
          }
 
 instance Storable VkPhysicalDeviceMemoryPriorityFeaturesEXT where
-  sizeOf    _ = #{size      struct VkPhysicalDeviceMemoryPriorityFeaturesEXT}
-  alignment _ = #{alignment struct VkPhysicalDeviceMemoryPriorityFeaturesEXT}
+  sizeOf    _ = #{size      VkPhysicalDeviceMemoryPriorityFeaturesEXT}
+  alignment _ = #{alignment VkPhysicalDeviceMemoryPriorityFeaturesEXT}
 
   peek ptr = 
     VkPhysicalDeviceMemoryPriorityFeaturesEXT
@@ -45,13 +45,13 @@ instance Storable VkPhysicalDeviceMemoryPriorityFeaturesEXT where
     pokeField @"memoryPriority" ptr val
 
 instance Offset "sType" VkPhysicalDeviceMemoryPriorityFeaturesEXT where
-  rawOffset = #{offset struct VkPhysicalDeviceMemoryPriorityFeaturesEXT, sType}
+  rawOffset = #{offset VkPhysicalDeviceMemoryPriorityFeaturesEXT, sType}
 
 instance Offset "pNext" VkPhysicalDeviceMemoryPriorityFeaturesEXT where
-  rawOffset = #{offset struct VkPhysicalDeviceMemoryPriorityFeaturesEXT, pNext}
+  rawOffset = #{offset VkPhysicalDeviceMemoryPriorityFeaturesEXT, pNext}
 
 instance Offset "memoryPriority" VkPhysicalDeviceMemoryPriorityFeaturesEXT where
-  rawOffset = #{offset struct VkPhysicalDeviceMemoryPriorityFeaturesEXT, memoryPriority}
+  rawOffset = #{offset VkPhysicalDeviceMemoryPriorityFeaturesEXT, memoryPriority}
 
 #else
 

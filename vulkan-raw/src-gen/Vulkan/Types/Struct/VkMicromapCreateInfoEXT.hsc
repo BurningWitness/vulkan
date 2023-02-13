@@ -39,8 +39,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkMicromapCreateInfoEXT" #-} VkMicromapCreateI
          }
 
 instance Storable VkMicromapCreateInfoEXT where
-  sizeOf    _ = #{size      struct VkMicromapCreateInfoEXT}
-  alignment _ = #{alignment struct VkMicromapCreateInfoEXT}
+  sizeOf    _ = #{size      VkMicromapCreateInfoEXT}
+  alignment _ = #{alignment VkMicromapCreateInfoEXT}
 
   peek ptr = 
     VkMicromapCreateInfoEXT
@@ -64,28 +64,28 @@ instance Storable VkMicromapCreateInfoEXT where
     pokeField @"deviceAddress" ptr val
 
 instance Offset "sType" VkMicromapCreateInfoEXT where
-  rawOffset = #{offset struct VkMicromapCreateInfoEXT, sType}
+  rawOffset = #{offset VkMicromapCreateInfoEXT, sType}
 
 instance Offset "pNext" VkMicromapCreateInfoEXT where
-  rawOffset = #{offset struct VkMicromapCreateInfoEXT, pNext}
+  rawOffset = #{offset VkMicromapCreateInfoEXT, pNext}
 
 instance Offset "createFlags" VkMicromapCreateInfoEXT where
-  rawOffset = #{offset struct VkMicromapCreateInfoEXT, createFlags}
+  rawOffset = #{offset VkMicromapCreateInfoEXT, createFlags}
 
 instance Offset "buffer" VkMicromapCreateInfoEXT where
-  rawOffset = #{offset struct VkMicromapCreateInfoEXT, buffer}
+  rawOffset = #{offset VkMicromapCreateInfoEXT, buffer}
 
 instance Offset "offset" VkMicromapCreateInfoEXT where
-  rawOffset = #{offset struct VkMicromapCreateInfoEXT, offset}
+  rawOffset = #{offset VkMicromapCreateInfoEXT, offset}
 
 instance Offset "size" VkMicromapCreateInfoEXT where
-  rawOffset = #{offset struct VkMicromapCreateInfoEXT, size}
+  rawOffset = #{offset VkMicromapCreateInfoEXT, size}
 
 instance Offset "type_" VkMicromapCreateInfoEXT where
-  rawOffset = #{offset struct VkMicromapCreateInfoEXT, type}
+  rawOffset = #{offset VkMicromapCreateInfoEXT, type}
 
 instance Offset "deviceAddress" VkMicromapCreateInfoEXT where
-  rawOffset = #{offset struct VkMicromapCreateInfoEXT, deviceAddress}
+  rawOffset = #{offset VkMicromapCreateInfoEXT, deviceAddress}
 
 instance Offset "type" VkMicromapCreateInfoEXT where
   rawOffset = rawOffset @"type_" @VkMicromapCreateInfoEXT

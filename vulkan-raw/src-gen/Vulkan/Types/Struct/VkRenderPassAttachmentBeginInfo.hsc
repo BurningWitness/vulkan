@@ -31,8 +31,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkRenderPassAttachmentBeginInfo" #-} VkRenderP
          }
 
 instance Storable VkRenderPassAttachmentBeginInfo where
-  sizeOf    _ = #{size      struct VkRenderPassAttachmentBeginInfo}
-  alignment _ = #{alignment struct VkRenderPassAttachmentBeginInfo}
+  sizeOf    _ = #{size      VkRenderPassAttachmentBeginInfo}
+  alignment _ = #{alignment VkRenderPassAttachmentBeginInfo}
 
   peek ptr = 
     VkRenderPassAttachmentBeginInfo
@@ -48,16 +48,16 @@ instance Storable VkRenderPassAttachmentBeginInfo where
     pokeField @"pAttachments" ptr val
 
 instance Offset "sType" VkRenderPassAttachmentBeginInfo where
-  rawOffset = #{offset struct VkRenderPassAttachmentBeginInfo, sType}
+  rawOffset = #{offset VkRenderPassAttachmentBeginInfo, sType}
 
 instance Offset "pNext" VkRenderPassAttachmentBeginInfo where
-  rawOffset = #{offset struct VkRenderPassAttachmentBeginInfo, pNext}
+  rawOffset = #{offset VkRenderPassAttachmentBeginInfo, pNext}
 
 instance Offset "attachmentCount" VkRenderPassAttachmentBeginInfo where
-  rawOffset = #{offset struct VkRenderPassAttachmentBeginInfo, attachmentCount}
+  rawOffset = #{offset VkRenderPassAttachmentBeginInfo, attachmentCount}
 
 instance Offset "pAttachments" VkRenderPassAttachmentBeginInfo where
-  rawOffset = #{offset struct VkRenderPassAttachmentBeginInfo, pAttachments}
+  rawOffset = #{offset VkRenderPassAttachmentBeginInfo, pAttachments}
 
 #else
 

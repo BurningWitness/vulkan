@@ -30,8 +30,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkPhysicalDeviceAddressBindingReportFeaturesEX
          }
 
 instance Storable VkPhysicalDeviceAddressBindingReportFeaturesEXT where
-  sizeOf    _ = #{size      struct VkPhysicalDeviceAddressBindingReportFeaturesEXT}
-  alignment _ = #{alignment struct VkPhysicalDeviceAddressBindingReportFeaturesEXT}
+  sizeOf    _ = #{size      VkPhysicalDeviceAddressBindingReportFeaturesEXT}
+  alignment _ = #{alignment VkPhysicalDeviceAddressBindingReportFeaturesEXT}
 
   peek ptr = 
     VkPhysicalDeviceAddressBindingReportFeaturesEXT
@@ -45,13 +45,13 @@ instance Storable VkPhysicalDeviceAddressBindingReportFeaturesEXT where
     pokeField @"reportAddressBinding" ptr val
 
 instance Offset "sType" VkPhysicalDeviceAddressBindingReportFeaturesEXT where
-  rawOffset = #{offset struct VkPhysicalDeviceAddressBindingReportFeaturesEXT, sType}
+  rawOffset = #{offset VkPhysicalDeviceAddressBindingReportFeaturesEXT, sType}
 
 instance Offset "pNext" VkPhysicalDeviceAddressBindingReportFeaturesEXT where
-  rawOffset = #{offset struct VkPhysicalDeviceAddressBindingReportFeaturesEXT, pNext}
+  rawOffset = #{offset VkPhysicalDeviceAddressBindingReportFeaturesEXT, pNext}
 
 instance Offset "reportAddressBinding" VkPhysicalDeviceAddressBindingReportFeaturesEXT where
-  rawOffset = #{offset struct VkPhysicalDeviceAddressBindingReportFeaturesEXT, reportAddressBinding}
+  rawOffset = #{offset VkPhysicalDeviceAddressBindingReportFeaturesEXT, reportAddressBinding}
 
 #else
 

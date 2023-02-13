@@ -33,8 +33,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkPhysicalDeviceSubgroupSizeControlProperties"
          }
 
 instance Storable VkPhysicalDeviceSubgroupSizeControlProperties where
-  sizeOf    _ = #{size      struct VkPhysicalDeviceSubgroupSizeControlProperties}
-  alignment _ = #{alignment struct VkPhysicalDeviceSubgroupSizeControlProperties}
+  sizeOf    _ = #{size      VkPhysicalDeviceSubgroupSizeControlProperties}
+  alignment _ = #{alignment VkPhysicalDeviceSubgroupSizeControlProperties}
 
   peek ptr = 
     VkPhysicalDeviceSubgroupSizeControlProperties
@@ -54,22 +54,22 @@ instance Storable VkPhysicalDeviceSubgroupSizeControlProperties where
     pokeField @"requiredSubgroupSizeStages" ptr val
 
 instance Offset "sType" VkPhysicalDeviceSubgroupSizeControlProperties where
-  rawOffset = #{offset struct VkPhysicalDeviceSubgroupSizeControlProperties, sType}
+  rawOffset = #{offset VkPhysicalDeviceSubgroupSizeControlProperties, sType}
 
 instance Offset "pNext" VkPhysicalDeviceSubgroupSizeControlProperties where
-  rawOffset = #{offset struct VkPhysicalDeviceSubgroupSizeControlProperties, pNext}
+  rawOffset = #{offset VkPhysicalDeviceSubgroupSizeControlProperties, pNext}
 
 instance Offset "minSubgroupSize" VkPhysicalDeviceSubgroupSizeControlProperties where
-  rawOffset = #{offset struct VkPhysicalDeviceSubgroupSizeControlProperties, minSubgroupSize}
+  rawOffset = #{offset VkPhysicalDeviceSubgroupSizeControlProperties, minSubgroupSize}
 
 instance Offset "maxSubgroupSize" VkPhysicalDeviceSubgroupSizeControlProperties where
-  rawOffset = #{offset struct VkPhysicalDeviceSubgroupSizeControlProperties, maxSubgroupSize}
+  rawOffset = #{offset VkPhysicalDeviceSubgroupSizeControlProperties, maxSubgroupSize}
 
 instance Offset "maxComputeWorkgroupSubgroups" VkPhysicalDeviceSubgroupSizeControlProperties where
-  rawOffset = #{offset struct VkPhysicalDeviceSubgroupSizeControlProperties, maxComputeWorkgroupSubgroups}
+  rawOffset = #{offset VkPhysicalDeviceSubgroupSizeControlProperties, maxComputeWorkgroupSubgroups}
 
 instance Offset "requiredSubgroupSizeStages" VkPhysicalDeviceSubgroupSizeControlProperties where
-  rawOffset = #{offset struct VkPhysicalDeviceSubgroupSizeControlProperties, requiredSubgroupSizeStages}
+  rawOffset = #{offset VkPhysicalDeviceSubgroupSizeControlProperties, requiredSubgroupSizeStages}
 
 #else
 

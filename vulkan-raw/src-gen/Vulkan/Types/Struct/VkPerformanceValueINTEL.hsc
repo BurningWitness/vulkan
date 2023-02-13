@@ -30,8 +30,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkPerformanceValueINTEL" #-} VkPerformanceValu
          }
 
 instance Storable VkPerformanceValueINTEL where
-  sizeOf    _ = #{size      struct VkPerformanceValueINTEL}
-  alignment _ = #{alignment struct VkPerformanceValueINTEL}
+  sizeOf    _ = #{size      VkPerformanceValueINTEL}
+  alignment _ = #{alignment VkPerformanceValueINTEL}
 
   peek ptr = 
     VkPerformanceValueINTEL
@@ -43,10 +43,10 @@ instance Storable VkPerformanceValueINTEL where
     pokeField @"data" ptr val
 
 instance Offset "type_" VkPerformanceValueINTEL where
-  rawOffset = #{offset struct VkPerformanceValueINTEL, type}
+  rawOffset = #{offset VkPerformanceValueINTEL, type}
 
 instance Offset "data_" VkPerformanceValueINTEL where
-  rawOffset = #{offset struct VkPerformanceValueINTEL, data}
+  rawOffset = #{offset VkPerformanceValueINTEL, data}
 
 instance Offset "type" VkPerformanceValueINTEL where
   rawOffset = rawOffset @"type_" @VkPerformanceValueINTEL

@@ -31,8 +31,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkPhysicalDeviceVariablePointersFeatures" #-} 
          }
 
 instance Storable VkPhysicalDeviceVariablePointersFeatures where
-  sizeOf    _ = #{size      struct VkPhysicalDeviceVariablePointersFeatures}
-  alignment _ = #{alignment struct VkPhysicalDeviceVariablePointersFeatures}
+  sizeOf    _ = #{size      VkPhysicalDeviceVariablePointersFeatures}
+  alignment _ = #{alignment VkPhysicalDeviceVariablePointersFeatures}
 
   peek ptr = 
     VkPhysicalDeviceVariablePointersFeatures
@@ -48,16 +48,16 @@ instance Storable VkPhysicalDeviceVariablePointersFeatures where
     pokeField @"variablePointers" ptr val
 
 instance Offset "sType" VkPhysicalDeviceVariablePointersFeatures where
-  rawOffset = #{offset struct VkPhysicalDeviceVariablePointersFeatures, sType}
+  rawOffset = #{offset VkPhysicalDeviceVariablePointersFeatures, sType}
 
 instance Offset "pNext" VkPhysicalDeviceVariablePointersFeatures where
-  rawOffset = #{offset struct VkPhysicalDeviceVariablePointersFeatures, pNext}
+  rawOffset = #{offset VkPhysicalDeviceVariablePointersFeatures, pNext}
 
 instance Offset "variablePointersStorageBuffer" VkPhysicalDeviceVariablePointersFeatures where
-  rawOffset = #{offset struct VkPhysicalDeviceVariablePointersFeatures, variablePointersStorageBuffer}
+  rawOffset = #{offset VkPhysicalDeviceVariablePointersFeatures, variablePointersStorageBuffer}
 
 instance Offset "variablePointers" VkPhysicalDeviceVariablePointersFeatures where
-  rawOffset = #{offset struct VkPhysicalDeviceVariablePointersFeatures, variablePointers}
+  rawOffset = #{offset VkPhysicalDeviceVariablePointersFeatures, variablePointers}
 
 #else
 

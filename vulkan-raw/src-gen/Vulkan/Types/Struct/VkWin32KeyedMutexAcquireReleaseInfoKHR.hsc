@@ -36,8 +36,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkWin32KeyedMutexAcquireReleaseInfoKHR" #-} Vk
          }
 
 instance Storable VkWin32KeyedMutexAcquireReleaseInfoKHR where
-  sizeOf    _ = #{size      struct VkWin32KeyedMutexAcquireReleaseInfoKHR}
-  alignment _ = #{alignment struct VkWin32KeyedMutexAcquireReleaseInfoKHR}
+  sizeOf    _ = #{size      VkWin32KeyedMutexAcquireReleaseInfoKHR}
+  alignment _ = #{alignment VkWin32KeyedMutexAcquireReleaseInfoKHR}
 
   peek ptr = 
     VkWin32KeyedMutexAcquireReleaseInfoKHR
@@ -63,31 +63,31 @@ instance Storable VkWin32KeyedMutexAcquireReleaseInfoKHR where
     pokeField @"pReleaseKeys" ptr val
 
 instance Offset "sType" VkWin32KeyedMutexAcquireReleaseInfoKHR where
-  rawOffset = #{offset struct VkWin32KeyedMutexAcquireReleaseInfoKHR, sType}
+  rawOffset = #{offset VkWin32KeyedMutexAcquireReleaseInfoKHR, sType}
 
 instance Offset "pNext" VkWin32KeyedMutexAcquireReleaseInfoKHR where
-  rawOffset = #{offset struct VkWin32KeyedMutexAcquireReleaseInfoKHR, pNext}
+  rawOffset = #{offset VkWin32KeyedMutexAcquireReleaseInfoKHR, pNext}
 
 instance Offset "acquireCount" VkWin32KeyedMutexAcquireReleaseInfoKHR where
-  rawOffset = #{offset struct VkWin32KeyedMutexAcquireReleaseInfoKHR, acquireCount}
+  rawOffset = #{offset VkWin32KeyedMutexAcquireReleaseInfoKHR, acquireCount}
 
 instance Offset "pAcquireSyncs" VkWin32KeyedMutexAcquireReleaseInfoKHR where
-  rawOffset = #{offset struct VkWin32KeyedMutexAcquireReleaseInfoKHR, pAcquireSyncs}
+  rawOffset = #{offset VkWin32KeyedMutexAcquireReleaseInfoKHR, pAcquireSyncs}
 
 instance Offset "pAcquireKeys" VkWin32KeyedMutexAcquireReleaseInfoKHR where
-  rawOffset = #{offset struct VkWin32KeyedMutexAcquireReleaseInfoKHR, pAcquireKeys}
+  rawOffset = #{offset VkWin32KeyedMutexAcquireReleaseInfoKHR, pAcquireKeys}
 
 instance Offset "pAcquireTimeouts" VkWin32KeyedMutexAcquireReleaseInfoKHR where
-  rawOffset = #{offset struct VkWin32KeyedMutexAcquireReleaseInfoKHR, pAcquireTimeouts}
+  rawOffset = #{offset VkWin32KeyedMutexAcquireReleaseInfoKHR, pAcquireTimeouts}
 
 instance Offset "releaseCount" VkWin32KeyedMutexAcquireReleaseInfoKHR where
-  rawOffset = #{offset struct VkWin32KeyedMutexAcquireReleaseInfoKHR, releaseCount}
+  rawOffset = #{offset VkWin32KeyedMutexAcquireReleaseInfoKHR, releaseCount}
 
 instance Offset "pReleaseSyncs" VkWin32KeyedMutexAcquireReleaseInfoKHR where
-  rawOffset = #{offset struct VkWin32KeyedMutexAcquireReleaseInfoKHR, pReleaseSyncs}
+  rawOffset = #{offset VkWin32KeyedMutexAcquireReleaseInfoKHR, pReleaseSyncs}
 
 instance Offset "pReleaseKeys" VkWin32KeyedMutexAcquireReleaseInfoKHR where
-  rawOffset = #{offset struct VkWin32KeyedMutexAcquireReleaseInfoKHR, pReleaseKeys}
+  rawOffset = #{offset VkWin32KeyedMutexAcquireReleaseInfoKHR, pReleaseKeys}
 
 #else
 

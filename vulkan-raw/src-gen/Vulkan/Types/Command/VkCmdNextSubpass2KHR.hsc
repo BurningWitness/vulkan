@@ -1,3 +1,7 @@
+{-# LANGUAGE CApiFFI #-}
+{-# LANGUAGE CPP #-}
+{-# LANGUAGE MagicHash #-}
+
 #include <vulkan/vulkan.h>
 
 #if VK_KHR_create_renderpass2
@@ -10,17 +14,18 @@ import GHC.Ptr
 import Vulkan.Types.Handle
 import Vulkan.Types.Struct.VkSubpassBeginInfo
 import Vulkan.Types.Struct.VkSubpassEndInfo
-import Vulkan.Types.Command.VkCmdNextSubpass2
 import Vulkan.Types.VkFun
 
 
 
-type VkCmdNextSubpass2KHR = VkCmdNextSubpass2
+type VkCmdNextSubpass2KHR =
+          VkCommandBuffer -- ^ commandBuffer
+       -> Ptr VkSubpassBeginInfo -- ^ pSubpassBeginInfo
+       -> Ptr VkSubpassEndInfo -- ^ pSubpassEndInfo
+       -> IO ()
 
-vkFunCmdNextSubpass2KHR
-  :: VkFun VkCmdNextSubpass2KHR
-vkFunCmdNextSubpass2KHR = vkFunCmdNextSubpass2
-
+vkFunCmdNextSubpass2KHR :: VkFun VkCmdNextSubpass2KHR
+vkFunCmdNextSubpass2KHR = VkFun (Ptr ("vkCmdNextSubpass2KHR\0"##))
 
 #else
 

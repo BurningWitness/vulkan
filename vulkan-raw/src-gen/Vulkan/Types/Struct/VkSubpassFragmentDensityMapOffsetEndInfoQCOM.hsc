@@ -31,8 +31,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkSubpassFragmentDensityMapOffsetEndInfoQCOM" 
          }
 
 instance Storable VkSubpassFragmentDensityMapOffsetEndInfoQCOM where
-  sizeOf    _ = #{size      struct VkSubpassFragmentDensityMapOffsetEndInfoQCOM}
-  alignment _ = #{alignment struct VkSubpassFragmentDensityMapOffsetEndInfoQCOM}
+  sizeOf    _ = #{size      VkSubpassFragmentDensityMapOffsetEndInfoQCOM}
+  alignment _ = #{alignment VkSubpassFragmentDensityMapOffsetEndInfoQCOM}
 
   peek ptr = 
     VkSubpassFragmentDensityMapOffsetEndInfoQCOM
@@ -48,16 +48,16 @@ instance Storable VkSubpassFragmentDensityMapOffsetEndInfoQCOM where
     pokeField @"pFragmentDensityOffsets" ptr val
 
 instance Offset "sType" VkSubpassFragmentDensityMapOffsetEndInfoQCOM where
-  rawOffset = #{offset struct VkSubpassFragmentDensityMapOffsetEndInfoQCOM, sType}
+  rawOffset = #{offset VkSubpassFragmentDensityMapOffsetEndInfoQCOM, sType}
 
 instance Offset "pNext" VkSubpassFragmentDensityMapOffsetEndInfoQCOM where
-  rawOffset = #{offset struct VkSubpassFragmentDensityMapOffsetEndInfoQCOM, pNext}
+  rawOffset = #{offset VkSubpassFragmentDensityMapOffsetEndInfoQCOM, pNext}
 
 instance Offset "fragmentDensityOffsetCount" VkSubpassFragmentDensityMapOffsetEndInfoQCOM where
-  rawOffset = #{offset struct VkSubpassFragmentDensityMapOffsetEndInfoQCOM, fragmentDensityOffsetCount}
+  rawOffset = #{offset VkSubpassFragmentDensityMapOffsetEndInfoQCOM, fragmentDensityOffsetCount}
 
 instance Offset "pFragmentDensityOffsets" VkSubpassFragmentDensityMapOffsetEndInfoQCOM where
-  rawOffset = #{offset struct VkSubpassFragmentDensityMapOffsetEndInfoQCOM, pFragmentDensityOffsets}
+  rawOffset = #{offset VkSubpassFragmentDensityMapOffsetEndInfoQCOM, pFragmentDensityOffsets}
 
 #else
 

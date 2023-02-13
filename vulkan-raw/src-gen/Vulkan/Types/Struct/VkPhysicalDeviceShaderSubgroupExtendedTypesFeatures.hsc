@@ -30,8 +30,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkPhysicalDeviceShaderSubgroupExtendedTypesFea
          }
 
 instance Storable VkPhysicalDeviceShaderSubgroupExtendedTypesFeatures where
-  sizeOf    _ = #{size      struct VkPhysicalDeviceShaderSubgroupExtendedTypesFeatures}
-  alignment _ = #{alignment struct VkPhysicalDeviceShaderSubgroupExtendedTypesFeatures}
+  sizeOf    _ = #{size      VkPhysicalDeviceShaderSubgroupExtendedTypesFeatures}
+  alignment _ = #{alignment VkPhysicalDeviceShaderSubgroupExtendedTypesFeatures}
 
   peek ptr = 
     VkPhysicalDeviceShaderSubgroupExtendedTypesFeatures
@@ -45,13 +45,13 @@ instance Storable VkPhysicalDeviceShaderSubgroupExtendedTypesFeatures where
     pokeField @"shaderSubgroupExtendedTypes" ptr val
 
 instance Offset "sType" VkPhysicalDeviceShaderSubgroupExtendedTypesFeatures where
-  rawOffset = #{offset struct VkPhysicalDeviceShaderSubgroupExtendedTypesFeatures, sType}
+  rawOffset = #{offset VkPhysicalDeviceShaderSubgroupExtendedTypesFeatures, sType}
 
 instance Offset "pNext" VkPhysicalDeviceShaderSubgroupExtendedTypesFeatures where
-  rawOffset = #{offset struct VkPhysicalDeviceShaderSubgroupExtendedTypesFeatures, pNext}
+  rawOffset = #{offset VkPhysicalDeviceShaderSubgroupExtendedTypesFeatures, pNext}
 
 instance Offset "shaderSubgroupExtendedTypes" VkPhysicalDeviceShaderSubgroupExtendedTypesFeatures where
-  rawOffset = #{offset struct VkPhysicalDeviceShaderSubgroupExtendedTypesFeatures, shaderSubgroupExtendedTypes}
+  rawOffset = #{offset VkPhysicalDeviceShaderSubgroupExtendedTypesFeatures, shaderSubgroupExtendedTypes}
 
 #else
 

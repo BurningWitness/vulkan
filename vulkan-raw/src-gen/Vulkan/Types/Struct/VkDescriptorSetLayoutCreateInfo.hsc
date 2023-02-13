@@ -31,8 +31,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkDescriptorSetLayoutCreateInfo" #-} VkDescrip
          }
 
 instance Storable VkDescriptorSetLayoutCreateInfo where
-  sizeOf    _ = #{size      struct VkDescriptorSetLayoutCreateInfo}
-  alignment _ = #{alignment struct VkDescriptorSetLayoutCreateInfo}
+  sizeOf    _ = #{size      VkDescriptorSetLayoutCreateInfo}
+  alignment _ = #{alignment VkDescriptorSetLayoutCreateInfo}
 
   peek ptr = 
     VkDescriptorSetLayoutCreateInfo
@@ -50,16 +50,16 @@ instance Storable VkDescriptorSetLayoutCreateInfo where
     pokeField @"pBindings" ptr val
 
 instance Offset "sType" VkDescriptorSetLayoutCreateInfo where
-  rawOffset = #{offset struct VkDescriptorSetLayoutCreateInfo, sType}
+  rawOffset = #{offset VkDescriptorSetLayoutCreateInfo, sType}
 
 instance Offset "pNext" VkDescriptorSetLayoutCreateInfo where
-  rawOffset = #{offset struct VkDescriptorSetLayoutCreateInfo, pNext}
+  rawOffset = #{offset VkDescriptorSetLayoutCreateInfo, pNext}
 
 instance Offset "flags" VkDescriptorSetLayoutCreateInfo where
-  rawOffset = #{offset struct VkDescriptorSetLayoutCreateInfo, flags}
+  rawOffset = #{offset VkDescriptorSetLayoutCreateInfo, flags}
 
 instance Offset "bindingCount" VkDescriptorSetLayoutCreateInfo where
-  rawOffset = #{offset struct VkDescriptorSetLayoutCreateInfo, bindingCount}
+  rawOffset = #{offset VkDescriptorSetLayoutCreateInfo, bindingCount}
 
 instance Offset "pBindings" VkDescriptorSetLayoutCreateInfo where
-  rawOffset = #{offset struct VkDescriptorSetLayoutCreateInfo, pBindings}
+  rawOffset = #{offset VkDescriptorSetLayoutCreateInfo, pBindings}

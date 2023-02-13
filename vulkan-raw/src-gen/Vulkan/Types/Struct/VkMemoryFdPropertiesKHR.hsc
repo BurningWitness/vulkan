@@ -29,8 +29,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkMemoryFdPropertiesKHR" #-} VkMemoryFdPropert
          }
 
 instance Storable VkMemoryFdPropertiesKHR where
-  sizeOf    _ = #{size      struct VkMemoryFdPropertiesKHR}
-  alignment _ = #{alignment struct VkMemoryFdPropertiesKHR}
+  sizeOf    _ = #{size      VkMemoryFdPropertiesKHR}
+  alignment _ = #{alignment VkMemoryFdPropertiesKHR}
 
   peek ptr = 
     VkMemoryFdPropertiesKHR
@@ -44,13 +44,13 @@ instance Storable VkMemoryFdPropertiesKHR where
     pokeField @"memoryTypeBits" ptr val
 
 instance Offset "sType" VkMemoryFdPropertiesKHR where
-  rawOffset = #{offset struct VkMemoryFdPropertiesKHR, sType}
+  rawOffset = #{offset VkMemoryFdPropertiesKHR, sType}
 
 instance Offset "pNext" VkMemoryFdPropertiesKHR where
-  rawOffset = #{offset struct VkMemoryFdPropertiesKHR, pNext}
+  rawOffset = #{offset VkMemoryFdPropertiesKHR, pNext}
 
 instance Offset "memoryTypeBits" VkMemoryFdPropertiesKHR where
-  rawOffset = #{offset struct VkMemoryFdPropertiesKHR, memoryTypeBits}
+  rawOffset = #{offset VkMemoryFdPropertiesKHR, memoryTypeBits}
 
 #else
 

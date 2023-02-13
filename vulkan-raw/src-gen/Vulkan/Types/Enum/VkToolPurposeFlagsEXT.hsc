@@ -1,14 +1,14 @@
 {-# LANGUAGE CPP #-}
+{-# LANGUAGE PatternSynonyms #-}
 
 #include <vulkan/vulkan.h>
 
 module Vulkan.Types.Enum.VkToolPurposeFlagsEXT where
 
-import Data.Int
-import Vulkan.Types.Enum.VkToolPurposeFlags
+import Vulkan.Types.Base
 
 
 
 #if VK_EXT_tooling_info
-type VkToolPurposeFlagsEXT = VkToolPurposeFlags
+type VkToolPurposeFlagsEXT = VkFlags
 #endif

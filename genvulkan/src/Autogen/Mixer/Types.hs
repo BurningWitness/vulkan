@@ -62,7 +62,7 @@ instance Monoid MentionTag where
 data MentionEnum =
        MentionEnum
          { name    :: String
-         , value   :: OrAlias (Distillery.Value Integer)
+         , flavor  :: OrAlias (Distillery.Value Integer)
          , protect :: Maybe String
          , comment :: Maybe String
          , tag     :: MentionTag
@@ -85,11 +85,11 @@ data Category = Include
               | Define
               | Basic
               | Const
-              | Enumerated
-              | FunPointer
+              | EnumCat
+              | FuncPointerCat
               | Handle
-              | Struct
-              | Union
+              | StructCat
+              | UnionCat
               | Function
                 deriving (Show, Eq, Ord)
 
@@ -109,7 +109,7 @@ data Enumerator =
        Enumerator
          { comment :: Maybe String
          , name    :: String
-         , flavor  :: OrAlias (Distillery.Value Integer)
+         , value   :: Distillery.Value Integer
          , tags    :: MentionTag
          }
        deriving Show
@@ -122,7 +122,7 @@ data Enum =
        Enum
          { comment :: Maybe String
          , type_   :: EnumType
-         , flavor  :: OrAlias [Enumerator]
+         , enums   :: [Enumerator]
          , tags    :: MentionTag
          }
        deriving Show
@@ -216,7 +216,6 @@ data Base =
 data Constant =
        Constant
          { value   :: Distillery.Value Integer
-         , alias   :: Maybe String
          , comment :: Maybe String
          }
        deriving Show
@@ -232,11 +231,9 @@ data FuncPointer = VoidPointer
 
 
 
-type Handle = OrAlias RealHandle
-
-data RealHandle = DispatchableHandle
-                | NonDispatchableHandle
-                  deriving Show
+data Handle = DispatchableHandle
+            | NonDispatchableHandle
+              deriving Show
 
 
 
@@ -248,23 +245,19 @@ data Field =
          }
        deriving Show
 
-data RealStruct =
-       RealStruct
+data Struct =
+       Struct
          { fields :: NonEmpty Field
          , tags   :: MentionTag
          }
        deriving Show
 
-type Struct = OrAlias RealStruct
-
-data RealUnion =
-       RealUnion
+data Union =
+       Union
          { fields :: NonEmpty Field
          , tags   :: MentionTag
          }
        deriving Show
-
-type Union = OrAlias RealUnion
 
 
 
@@ -279,7 +272,7 @@ data Command =
        Command
          { arguments :: [Argument]
          , return    :: Type
-         , type_     :: OrAlias CommandType
+         , type_     :: CommandType
          , tags      :: MentionTag
          }
        deriving Show

@@ -29,8 +29,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkDevicePrivateDataCreateInfo" #-} VkDevicePri
          }
 
 instance Storable VkDevicePrivateDataCreateInfo where
-  sizeOf    _ = #{size      struct VkDevicePrivateDataCreateInfo}
-  alignment _ = #{alignment struct VkDevicePrivateDataCreateInfo}
+  sizeOf    _ = #{size      VkDevicePrivateDataCreateInfo}
+  alignment _ = #{alignment VkDevicePrivateDataCreateInfo}
 
   peek ptr = 
     VkDevicePrivateDataCreateInfo
@@ -44,13 +44,13 @@ instance Storable VkDevicePrivateDataCreateInfo where
     pokeField @"privateDataSlotRequestCount" ptr val
 
 instance Offset "sType" VkDevicePrivateDataCreateInfo where
-  rawOffset = #{offset struct VkDevicePrivateDataCreateInfo, sType}
+  rawOffset = #{offset VkDevicePrivateDataCreateInfo, sType}
 
 instance Offset "pNext" VkDevicePrivateDataCreateInfo where
-  rawOffset = #{offset struct VkDevicePrivateDataCreateInfo, pNext}
+  rawOffset = #{offset VkDevicePrivateDataCreateInfo, pNext}
 
 instance Offset "privateDataSlotRequestCount" VkDevicePrivateDataCreateInfo where
-  rawOffset = #{offset struct VkDevicePrivateDataCreateInfo, privateDataSlotRequestCount}
+  rawOffset = #{offset VkDevicePrivateDataCreateInfo, privateDataSlotRequestCount}
 
 #else
 

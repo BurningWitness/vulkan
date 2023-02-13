@@ -31,8 +31,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkBindImageMemorySwapchainInfoKHR" #-} VkBindI
          }
 
 instance Storable VkBindImageMemorySwapchainInfoKHR where
-  sizeOf    _ = #{size      struct VkBindImageMemorySwapchainInfoKHR}
-  alignment _ = #{alignment struct VkBindImageMemorySwapchainInfoKHR}
+  sizeOf    _ = #{size      VkBindImageMemorySwapchainInfoKHR}
+  alignment _ = #{alignment VkBindImageMemorySwapchainInfoKHR}
 
   peek ptr = 
     VkBindImageMemorySwapchainInfoKHR
@@ -48,16 +48,16 @@ instance Storable VkBindImageMemorySwapchainInfoKHR where
     pokeField @"imageIndex" ptr val
 
 instance Offset "sType" VkBindImageMemorySwapchainInfoKHR where
-  rawOffset = #{offset struct VkBindImageMemorySwapchainInfoKHR, sType}
+  rawOffset = #{offset VkBindImageMemorySwapchainInfoKHR, sType}
 
 instance Offset "pNext" VkBindImageMemorySwapchainInfoKHR where
-  rawOffset = #{offset struct VkBindImageMemorySwapchainInfoKHR, pNext}
+  rawOffset = #{offset VkBindImageMemorySwapchainInfoKHR, pNext}
 
 instance Offset "swapchain" VkBindImageMemorySwapchainInfoKHR where
-  rawOffset = #{offset struct VkBindImageMemorySwapchainInfoKHR, swapchain}
+  rawOffset = #{offset VkBindImageMemorySwapchainInfoKHR, swapchain}
 
 instance Offset "imageIndex" VkBindImageMemorySwapchainInfoKHR where
-  rawOffset = #{offset struct VkBindImageMemorySwapchainInfoKHR, imageIndex}
+  rawOffset = #{offset VkBindImageMemorySwapchainInfoKHR, imageIndex}
 
 #else
 

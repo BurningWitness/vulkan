@@ -33,8 +33,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkPhysicalDeviceFragmentDensityMapPropertiesEX
          }
 
 instance Storable VkPhysicalDeviceFragmentDensityMapPropertiesEXT where
-  sizeOf    _ = #{size      struct VkPhysicalDeviceFragmentDensityMapPropertiesEXT}
-  alignment _ = #{alignment struct VkPhysicalDeviceFragmentDensityMapPropertiesEXT}
+  sizeOf    _ = #{size      VkPhysicalDeviceFragmentDensityMapPropertiesEXT}
+  alignment _ = #{alignment VkPhysicalDeviceFragmentDensityMapPropertiesEXT}
 
   peek ptr = 
     VkPhysicalDeviceFragmentDensityMapPropertiesEXT
@@ -52,19 +52,19 @@ instance Storable VkPhysicalDeviceFragmentDensityMapPropertiesEXT where
     pokeField @"fragmentDensityInvocations" ptr val
 
 instance Offset "sType" VkPhysicalDeviceFragmentDensityMapPropertiesEXT where
-  rawOffset = #{offset struct VkPhysicalDeviceFragmentDensityMapPropertiesEXT, sType}
+  rawOffset = #{offset VkPhysicalDeviceFragmentDensityMapPropertiesEXT, sType}
 
 instance Offset "pNext" VkPhysicalDeviceFragmentDensityMapPropertiesEXT where
-  rawOffset = #{offset struct VkPhysicalDeviceFragmentDensityMapPropertiesEXT, pNext}
+  rawOffset = #{offset VkPhysicalDeviceFragmentDensityMapPropertiesEXT, pNext}
 
 instance Offset "minFragmentDensityTexelSize" VkPhysicalDeviceFragmentDensityMapPropertiesEXT where
-  rawOffset = #{offset struct VkPhysicalDeviceFragmentDensityMapPropertiesEXT, minFragmentDensityTexelSize}
+  rawOffset = #{offset VkPhysicalDeviceFragmentDensityMapPropertiesEXT, minFragmentDensityTexelSize}
 
 instance Offset "maxFragmentDensityTexelSize" VkPhysicalDeviceFragmentDensityMapPropertiesEXT where
-  rawOffset = #{offset struct VkPhysicalDeviceFragmentDensityMapPropertiesEXT, maxFragmentDensityTexelSize}
+  rawOffset = #{offset VkPhysicalDeviceFragmentDensityMapPropertiesEXT, maxFragmentDensityTexelSize}
 
 instance Offset "fragmentDensityInvocations" VkPhysicalDeviceFragmentDensityMapPropertiesEXT where
-  rawOffset = #{offset struct VkPhysicalDeviceFragmentDensityMapPropertiesEXT, fragmentDensityInvocations}
+  rawOffset = #{offset VkPhysicalDeviceFragmentDensityMapPropertiesEXT, fragmentDensityInvocations}
 
 #else
 

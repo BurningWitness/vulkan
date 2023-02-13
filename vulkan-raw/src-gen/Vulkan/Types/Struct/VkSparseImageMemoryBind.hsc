@@ -35,8 +35,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkSparseImageMemoryBind" #-} VkSparseImageMemo
          }
 
 instance Storable VkSparseImageMemoryBind where
-  sizeOf    _ = #{size      struct VkSparseImageMemoryBind}
-  alignment _ = #{alignment struct VkSparseImageMemoryBind}
+  sizeOf    _ = #{size      VkSparseImageMemoryBind}
+  alignment _ = #{alignment VkSparseImageMemoryBind}
 
   peek ptr = 
     VkSparseImageMemoryBind
@@ -56,19 +56,19 @@ instance Storable VkSparseImageMemoryBind where
     pokeField @"flags" ptr val
 
 instance Offset "subresource" VkSparseImageMemoryBind where
-  rawOffset = #{offset struct VkSparseImageMemoryBind, subresource}
+  rawOffset = #{offset VkSparseImageMemoryBind, subresource}
 
 instance Offset "offset" VkSparseImageMemoryBind where
-  rawOffset = #{offset struct VkSparseImageMemoryBind, offset}
+  rawOffset = #{offset VkSparseImageMemoryBind, offset}
 
 instance Offset "extent" VkSparseImageMemoryBind where
-  rawOffset = #{offset struct VkSparseImageMemoryBind, extent}
+  rawOffset = #{offset VkSparseImageMemoryBind, extent}
 
 instance Offset "memory" VkSparseImageMemoryBind where
-  rawOffset = #{offset struct VkSparseImageMemoryBind, memory}
+  rawOffset = #{offset VkSparseImageMemoryBind, memory}
 
 instance Offset "memoryOffset" VkSparseImageMemoryBind where
-  rawOffset = #{offset struct VkSparseImageMemoryBind, memoryOffset}
+  rawOffset = #{offset VkSparseImageMemoryBind, memoryOffset}
 
 instance Offset "flags" VkSparseImageMemoryBind where
-  rawOffset = #{offset struct VkSparseImageMemoryBind, flags}
+  rawOffset = #{offset VkSparseImageMemoryBind, flags}

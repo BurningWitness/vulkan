@@ -31,8 +31,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkPhysicalDeviceCustomBorderColorFeaturesEXT" 
          }
 
 instance Storable VkPhysicalDeviceCustomBorderColorFeaturesEXT where
-  sizeOf    _ = #{size      struct VkPhysicalDeviceCustomBorderColorFeaturesEXT}
-  alignment _ = #{alignment struct VkPhysicalDeviceCustomBorderColorFeaturesEXT}
+  sizeOf    _ = #{size      VkPhysicalDeviceCustomBorderColorFeaturesEXT}
+  alignment _ = #{alignment VkPhysicalDeviceCustomBorderColorFeaturesEXT}
 
   peek ptr = 
     VkPhysicalDeviceCustomBorderColorFeaturesEXT
@@ -48,16 +48,16 @@ instance Storable VkPhysicalDeviceCustomBorderColorFeaturesEXT where
     pokeField @"customBorderColorWithoutFormat" ptr val
 
 instance Offset "sType" VkPhysicalDeviceCustomBorderColorFeaturesEXT where
-  rawOffset = #{offset struct VkPhysicalDeviceCustomBorderColorFeaturesEXT, sType}
+  rawOffset = #{offset VkPhysicalDeviceCustomBorderColorFeaturesEXT, sType}
 
 instance Offset "pNext" VkPhysicalDeviceCustomBorderColorFeaturesEXT where
-  rawOffset = #{offset struct VkPhysicalDeviceCustomBorderColorFeaturesEXT, pNext}
+  rawOffset = #{offset VkPhysicalDeviceCustomBorderColorFeaturesEXT, pNext}
 
 instance Offset "customBorderColors" VkPhysicalDeviceCustomBorderColorFeaturesEXT where
-  rawOffset = #{offset struct VkPhysicalDeviceCustomBorderColorFeaturesEXT, customBorderColors}
+  rawOffset = #{offset VkPhysicalDeviceCustomBorderColorFeaturesEXT, customBorderColors}
 
 instance Offset "customBorderColorWithoutFormat" VkPhysicalDeviceCustomBorderColorFeaturesEXT where
-  rawOffset = #{offset struct VkPhysicalDeviceCustomBorderColorFeaturesEXT, customBorderColorWithoutFormat}
+  rawOffset = #{offset VkPhysicalDeviceCustomBorderColorFeaturesEXT, customBorderColorWithoutFormat}
 
 #else
 

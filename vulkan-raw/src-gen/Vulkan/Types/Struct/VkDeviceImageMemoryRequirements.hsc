@@ -32,8 +32,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkDeviceImageMemoryRequirements" #-} VkDeviceI
          }
 
 instance Storable VkDeviceImageMemoryRequirements where
-  sizeOf    _ = #{size      struct VkDeviceImageMemoryRequirements}
-  alignment _ = #{alignment struct VkDeviceImageMemoryRequirements}
+  sizeOf    _ = #{size      VkDeviceImageMemoryRequirements}
+  alignment _ = #{alignment VkDeviceImageMemoryRequirements}
 
   peek ptr = 
     VkDeviceImageMemoryRequirements
@@ -49,16 +49,16 @@ instance Storable VkDeviceImageMemoryRequirements where
     pokeField @"planeAspect" ptr val
 
 instance Offset "sType" VkDeviceImageMemoryRequirements where
-  rawOffset = #{offset struct VkDeviceImageMemoryRequirements, sType}
+  rawOffset = #{offset VkDeviceImageMemoryRequirements, sType}
 
 instance Offset "pNext" VkDeviceImageMemoryRequirements where
-  rawOffset = #{offset struct VkDeviceImageMemoryRequirements, pNext}
+  rawOffset = #{offset VkDeviceImageMemoryRequirements, pNext}
 
 instance Offset "pCreateInfo" VkDeviceImageMemoryRequirements where
-  rawOffset = #{offset struct VkDeviceImageMemoryRequirements, pCreateInfo}
+  rawOffset = #{offset VkDeviceImageMemoryRequirements, pCreateInfo}
 
 instance Offset "planeAspect" VkDeviceImageMemoryRequirements where
-  rawOffset = #{offset struct VkDeviceImageMemoryRequirements, planeAspect}
+  rawOffset = #{offset VkDeviceImageMemoryRequirements, planeAspect}
 
 #else
 

@@ -1,3 +1,7 @@
+{-# LANGUAGE CApiFFI #-}
+{-# LANGUAGE CPP #-}
+{-# LANGUAGE MagicHash #-}
+
 #include <vulkan/vulkan.h>
 
 #if VK_EXT_extended_dynamic_state
@@ -9,17 +13,17 @@ import Data.Word
 import GHC.Ptr
 import Vulkan.Types.Enum.VkCompareOp
 import Vulkan.Types.Handle
-import Vulkan.Types.Command.VkCmdSetDepthCompareOp
 import Vulkan.Types.VkFun
 
 
 
-type VkCmdSetDepthCompareOpEXT = VkCmdSetDepthCompareOp
+type VkCmdSetDepthCompareOpEXT =
+          VkCommandBuffer -- ^ commandBuffer
+       -> VkCompareOp -- ^ depthCompareOp
+       -> IO ()
 
-vkFunCmdSetDepthCompareOpEXT
-  :: VkFun VkCmdSetDepthCompareOpEXT
-vkFunCmdSetDepthCompareOpEXT = vkFunCmdSetDepthCompareOp
-
+vkFunCmdSetDepthCompareOpEXT :: VkFun VkCmdSetDepthCompareOpEXT
+vkFunCmdSetDepthCompareOpEXT = VkFun (Ptr ("vkCmdSetDepthCompareOpEXT\0"##))
 
 #else
 

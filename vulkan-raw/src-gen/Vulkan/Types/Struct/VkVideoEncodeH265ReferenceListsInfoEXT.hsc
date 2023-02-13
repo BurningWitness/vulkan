@@ -35,8 +35,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkVideoEncodeH265ReferenceListsInfoEXT" #-} Vk
          }
 
 instance Storable VkVideoEncodeH265ReferenceListsInfoEXT where
-  sizeOf    _ = #{size      struct VkVideoEncodeH265ReferenceListsInfoEXT}
-  alignment _ = #{alignment struct VkVideoEncodeH265ReferenceListsInfoEXT}
+  sizeOf    _ = #{size      VkVideoEncodeH265ReferenceListsInfoEXT}
+  alignment _ = #{alignment VkVideoEncodeH265ReferenceListsInfoEXT}
 
   peek ptr = 
     VkVideoEncodeH265ReferenceListsInfoEXT
@@ -58,25 +58,25 @@ instance Storable VkVideoEncodeH265ReferenceListsInfoEXT where
     pokeField @"pReferenceModifications" ptr val
 
 instance Offset "sType" VkVideoEncodeH265ReferenceListsInfoEXT where
-  rawOffset = #{offset struct VkVideoEncodeH265ReferenceListsInfoEXT, sType}
+  rawOffset = #{offset VkVideoEncodeH265ReferenceListsInfoEXT, sType}
 
 instance Offset "pNext" VkVideoEncodeH265ReferenceListsInfoEXT where
-  rawOffset = #{offset struct VkVideoEncodeH265ReferenceListsInfoEXT, pNext}
+  rawOffset = #{offset VkVideoEncodeH265ReferenceListsInfoEXT, pNext}
 
 instance Offset "referenceList0EntryCount" VkVideoEncodeH265ReferenceListsInfoEXT where
-  rawOffset = #{offset struct VkVideoEncodeH265ReferenceListsInfoEXT, referenceList0EntryCount}
+  rawOffset = #{offset VkVideoEncodeH265ReferenceListsInfoEXT, referenceList0EntryCount}
 
 instance Offset "pReferenceList0Entries" VkVideoEncodeH265ReferenceListsInfoEXT where
-  rawOffset = #{offset struct VkVideoEncodeH265ReferenceListsInfoEXT, pReferenceList0Entries}
+  rawOffset = #{offset VkVideoEncodeH265ReferenceListsInfoEXT, pReferenceList0Entries}
 
 instance Offset "referenceList1EntryCount" VkVideoEncodeH265ReferenceListsInfoEXT where
-  rawOffset = #{offset struct VkVideoEncodeH265ReferenceListsInfoEXT, referenceList1EntryCount}
+  rawOffset = #{offset VkVideoEncodeH265ReferenceListsInfoEXT, referenceList1EntryCount}
 
 instance Offset "pReferenceList1Entries" VkVideoEncodeH265ReferenceListsInfoEXT where
-  rawOffset = #{offset struct VkVideoEncodeH265ReferenceListsInfoEXT, pReferenceList1Entries}
+  rawOffset = #{offset VkVideoEncodeH265ReferenceListsInfoEXT, pReferenceList1Entries}
 
 instance Offset "pReferenceModifications" VkVideoEncodeH265ReferenceListsInfoEXT where
-  rawOffset = #{offset struct VkVideoEncodeH265ReferenceListsInfoEXT, pReferenceModifications}
+  rawOffset = #{offset VkVideoEncodeH265ReferenceListsInfoEXT, pReferenceModifications}
 
 #else
 

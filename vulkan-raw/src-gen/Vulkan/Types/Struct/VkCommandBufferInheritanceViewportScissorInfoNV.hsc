@@ -33,8 +33,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkCommandBufferInheritanceViewportScissorInfoN
          }
 
 instance Storable VkCommandBufferInheritanceViewportScissorInfoNV where
-  sizeOf    _ = #{size      struct VkCommandBufferInheritanceViewportScissorInfoNV}
-  alignment _ = #{alignment struct VkCommandBufferInheritanceViewportScissorInfoNV}
+  sizeOf    _ = #{size      VkCommandBufferInheritanceViewportScissorInfoNV}
+  alignment _ = #{alignment VkCommandBufferInheritanceViewportScissorInfoNV}
 
   peek ptr = 
     VkCommandBufferInheritanceViewportScissorInfoNV
@@ -52,19 +52,19 @@ instance Storable VkCommandBufferInheritanceViewportScissorInfoNV where
     pokeField @"pViewportDepths" ptr val
 
 instance Offset "sType" VkCommandBufferInheritanceViewportScissorInfoNV where
-  rawOffset = #{offset struct VkCommandBufferInheritanceViewportScissorInfoNV, sType}
+  rawOffset = #{offset VkCommandBufferInheritanceViewportScissorInfoNV, sType}
 
 instance Offset "pNext" VkCommandBufferInheritanceViewportScissorInfoNV where
-  rawOffset = #{offset struct VkCommandBufferInheritanceViewportScissorInfoNV, pNext}
+  rawOffset = #{offset VkCommandBufferInheritanceViewportScissorInfoNV, pNext}
 
 instance Offset "viewportScissor2D" VkCommandBufferInheritanceViewportScissorInfoNV where
-  rawOffset = #{offset struct VkCommandBufferInheritanceViewportScissorInfoNV, viewportScissor2D}
+  rawOffset = #{offset VkCommandBufferInheritanceViewportScissorInfoNV, viewportScissor2D}
 
 instance Offset "viewportDepthCount" VkCommandBufferInheritanceViewportScissorInfoNV where
-  rawOffset = #{offset struct VkCommandBufferInheritanceViewportScissorInfoNV, viewportDepthCount}
+  rawOffset = #{offset VkCommandBufferInheritanceViewportScissorInfoNV, viewportDepthCount}
 
 instance Offset "pViewportDepths" VkCommandBufferInheritanceViewportScissorInfoNV where
-  rawOffset = #{offset struct VkCommandBufferInheritanceViewportScissorInfoNV, pViewportDepths}
+  rawOffset = #{offset VkCommandBufferInheritanceViewportScissorInfoNV, pViewportDepths}
 
 #else
 

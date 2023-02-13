@@ -30,8 +30,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkDescriptorSetLayoutHostMappingInfoVALVE" #-}
          }
 
 instance Storable VkDescriptorSetLayoutHostMappingInfoVALVE where
-  sizeOf    _ = #{size      struct VkDescriptorSetLayoutHostMappingInfoVALVE}
-  alignment _ = #{alignment struct VkDescriptorSetLayoutHostMappingInfoVALVE}
+  sizeOf    _ = #{size      VkDescriptorSetLayoutHostMappingInfoVALVE}
+  alignment _ = #{alignment VkDescriptorSetLayoutHostMappingInfoVALVE}
 
   peek ptr = 
     VkDescriptorSetLayoutHostMappingInfoVALVE
@@ -47,16 +47,16 @@ instance Storable VkDescriptorSetLayoutHostMappingInfoVALVE where
     pokeField @"descriptorSize" ptr val
 
 instance Offset "sType" VkDescriptorSetLayoutHostMappingInfoVALVE where
-  rawOffset = #{offset struct VkDescriptorSetLayoutHostMappingInfoVALVE, sType}
+  rawOffset = #{offset VkDescriptorSetLayoutHostMappingInfoVALVE, sType}
 
 instance Offset "pNext" VkDescriptorSetLayoutHostMappingInfoVALVE where
-  rawOffset = #{offset struct VkDescriptorSetLayoutHostMappingInfoVALVE, pNext}
+  rawOffset = #{offset VkDescriptorSetLayoutHostMappingInfoVALVE, pNext}
 
 instance Offset "descriptorOffset" VkDescriptorSetLayoutHostMappingInfoVALVE where
-  rawOffset = #{offset struct VkDescriptorSetLayoutHostMappingInfoVALVE, descriptorOffset}
+  rawOffset = #{offset VkDescriptorSetLayoutHostMappingInfoVALVE, descriptorOffset}
 
 instance Offset "descriptorSize" VkDescriptorSetLayoutHostMappingInfoVALVE where
-  rawOffset = #{offset struct VkDescriptorSetLayoutHostMappingInfoVALVE, descriptorSize}
+  rawOffset = #{offset VkDescriptorSetLayoutHostMappingInfoVALVE, descriptorSize}
 
 #else
 

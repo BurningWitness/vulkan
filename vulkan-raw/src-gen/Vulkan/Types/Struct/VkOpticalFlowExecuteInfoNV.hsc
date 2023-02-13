@@ -33,8 +33,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkOpticalFlowExecuteInfoNV" #-} VkOpticalFlowE
          }
 
 instance Storable VkOpticalFlowExecuteInfoNV where
-  sizeOf    _ = #{size      struct VkOpticalFlowExecuteInfoNV}
-  alignment _ = #{alignment struct VkOpticalFlowExecuteInfoNV}
+  sizeOf    _ = #{size      VkOpticalFlowExecuteInfoNV}
+  alignment _ = #{alignment VkOpticalFlowExecuteInfoNV}
 
   peek ptr = 
     VkOpticalFlowExecuteInfoNV
@@ -52,19 +52,19 @@ instance Storable VkOpticalFlowExecuteInfoNV where
     pokeField @"pRegions" ptr val
 
 instance Offset "sType" VkOpticalFlowExecuteInfoNV where
-  rawOffset = #{offset struct VkOpticalFlowExecuteInfoNV, sType}
+  rawOffset = #{offset VkOpticalFlowExecuteInfoNV, sType}
 
 instance Offset "pNext" VkOpticalFlowExecuteInfoNV where
-  rawOffset = #{offset struct VkOpticalFlowExecuteInfoNV, pNext}
+  rawOffset = #{offset VkOpticalFlowExecuteInfoNV, pNext}
 
 instance Offset "flags" VkOpticalFlowExecuteInfoNV where
-  rawOffset = #{offset struct VkOpticalFlowExecuteInfoNV, flags}
+  rawOffset = #{offset VkOpticalFlowExecuteInfoNV, flags}
 
 instance Offset "regionCount" VkOpticalFlowExecuteInfoNV where
-  rawOffset = #{offset struct VkOpticalFlowExecuteInfoNV, regionCount}
+  rawOffset = #{offset VkOpticalFlowExecuteInfoNV, regionCount}
 
 instance Offset "pRegions" VkOpticalFlowExecuteInfoNV where
-  rawOffset = #{offset struct VkOpticalFlowExecuteInfoNV, pRegions}
+  rawOffset = #{offset VkOpticalFlowExecuteInfoNV, pRegions}
 
 #else
 

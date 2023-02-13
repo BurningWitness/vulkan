@@ -33,8 +33,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkBufferCollectionConstraintsInfoFUCHSIA" #-} 
          }
 
 instance Storable VkBufferCollectionConstraintsInfoFUCHSIA where
-  sizeOf    _ = #{size      struct VkBufferCollectionConstraintsInfoFUCHSIA}
-  alignment _ = #{alignment struct VkBufferCollectionConstraintsInfoFUCHSIA}
+  sizeOf    _ = #{size      VkBufferCollectionConstraintsInfoFUCHSIA}
+  alignment _ = #{alignment VkBufferCollectionConstraintsInfoFUCHSIA}
 
   peek ptr = 
     VkBufferCollectionConstraintsInfoFUCHSIA
@@ -56,25 +56,25 @@ instance Storable VkBufferCollectionConstraintsInfoFUCHSIA where
     pokeField @"minBufferCountForSharedSlack" ptr val
 
 instance Offset "sType" VkBufferCollectionConstraintsInfoFUCHSIA where
-  rawOffset = #{offset struct VkBufferCollectionConstraintsInfoFUCHSIA, sType}
+  rawOffset = #{offset VkBufferCollectionConstraintsInfoFUCHSIA, sType}
 
 instance Offset "pNext" VkBufferCollectionConstraintsInfoFUCHSIA where
-  rawOffset = #{offset struct VkBufferCollectionConstraintsInfoFUCHSIA, pNext}
+  rawOffset = #{offset VkBufferCollectionConstraintsInfoFUCHSIA, pNext}
 
 instance Offset "minBufferCount" VkBufferCollectionConstraintsInfoFUCHSIA where
-  rawOffset = #{offset struct VkBufferCollectionConstraintsInfoFUCHSIA, minBufferCount}
+  rawOffset = #{offset VkBufferCollectionConstraintsInfoFUCHSIA, minBufferCount}
 
 instance Offset "maxBufferCount" VkBufferCollectionConstraintsInfoFUCHSIA where
-  rawOffset = #{offset struct VkBufferCollectionConstraintsInfoFUCHSIA, maxBufferCount}
+  rawOffset = #{offset VkBufferCollectionConstraintsInfoFUCHSIA, maxBufferCount}
 
 instance Offset "minBufferCountForCamping" VkBufferCollectionConstraintsInfoFUCHSIA where
-  rawOffset = #{offset struct VkBufferCollectionConstraintsInfoFUCHSIA, minBufferCountForCamping}
+  rawOffset = #{offset VkBufferCollectionConstraintsInfoFUCHSIA, minBufferCountForCamping}
 
 instance Offset "minBufferCountForDedicatedSlack" VkBufferCollectionConstraintsInfoFUCHSIA where
-  rawOffset = #{offset struct VkBufferCollectionConstraintsInfoFUCHSIA, minBufferCountForDedicatedSlack}
+  rawOffset = #{offset VkBufferCollectionConstraintsInfoFUCHSIA, minBufferCountForDedicatedSlack}
 
 instance Offset "minBufferCountForSharedSlack" VkBufferCollectionConstraintsInfoFUCHSIA where
-  rawOffset = #{offset struct VkBufferCollectionConstraintsInfoFUCHSIA, minBufferCountForSharedSlack}
+  rawOffset = #{offset VkBufferCollectionConstraintsInfoFUCHSIA, minBufferCountForSharedSlack}
 
 #else
 

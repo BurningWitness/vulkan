@@ -76,8 +76,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkPhysicalDeviceVulkan12Features" #-} VkPhysic
          }
 
 instance Storable VkPhysicalDeviceVulkan12Features where
-  sizeOf    _ = #{size      struct VkPhysicalDeviceVulkan12Features}
-  alignment _ = #{alignment struct VkPhysicalDeviceVulkan12Features}
+  sizeOf    _ = #{size      VkPhysicalDeviceVulkan12Features}
+  alignment _ = #{alignment VkPhysicalDeviceVulkan12Features}
 
   peek ptr = 
     VkPhysicalDeviceVulkan12Features
@@ -183,151 +183,151 @@ instance Storable VkPhysicalDeviceVulkan12Features where
     pokeField @"subgroupBroadcastDynamicId" ptr val
 
 instance Offset "sType" VkPhysicalDeviceVulkan12Features where
-  rawOffset = #{offset struct VkPhysicalDeviceVulkan12Features, sType}
+  rawOffset = #{offset VkPhysicalDeviceVulkan12Features, sType}
 
 instance Offset "pNext" VkPhysicalDeviceVulkan12Features where
-  rawOffset = #{offset struct VkPhysicalDeviceVulkan12Features, pNext}
+  rawOffset = #{offset VkPhysicalDeviceVulkan12Features, pNext}
 
 instance Offset "samplerMirrorClampToEdge" VkPhysicalDeviceVulkan12Features where
-  rawOffset = #{offset struct VkPhysicalDeviceVulkan12Features, samplerMirrorClampToEdge}
+  rawOffset = #{offset VkPhysicalDeviceVulkan12Features, samplerMirrorClampToEdge}
 
 instance Offset "drawIndirectCount" VkPhysicalDeviceVulkan12Features where
-  rawOffset = #{offset struct VkPhysicalDeviceVulkan12Features, drawIndirectCount}
+  rawOffset = #{offset VkPhysicalDeviceVulkan12Features, drawIndirectCount}
 
 instance Offset "storageBuffer8BitAccess" VkPhysicalDeviceVulkan12Features where
-  rawOffset = #{offset struct VkPhysicalDeviceVulkan12Features, storageBuffer8BitAccess}
+  rawOffset = #{offset VkPhysicalDeviceVulkan12Features, storageBuffer8BitAccess}
 
 instance Offset "uniformAndStorageBuffer8BitAccess" VkPhysicalDeviceVulkan12Features where
-  rawOffset = #{offset struct VkPhysicalDeviceVulkan12Features, uniformAndStorageBuffer8BitAccess}
+  rawOffset = #{offset VkPhysicalDeviceVulkan12Features, uniformAndStorageBuffer8BitAccess}
 
 instance Offset "storagePushConstant8" VkPhysicalDeviceVulkan12Features where
-  rawOffset = #{offset struct VkPhysicalDeviceVulkan12Features, storagePushConstant8}
+  rawOffset = #{offset VkPhysicalDeviceVulkan12Features, storagePushConstant8}
 
 instance Offset "shaderBufferInt64Atomics" VkPhysicalDeviceVulkan12Features where
-  rawOffset = #{offset struct VkPhysicalDeviceVulkan12Features, shaderBufferInt64Atomics}
+  rawOffset = #{offset VkPhysicalDeviceVulkan12Features, shaderBufferInt64Atomics}
 
 instance Offset "shaderSharedInt64Atomics" VkPhysicalDeviceVulkan12Features where
-  rawOffset = #{offset struct VkPhysicalDeviceVulkan12Features, shaderSharedInt64Atomics}
+  rawOffset = #{offset VkPhysicalDeviceVulkan12Features, shaderSharedInt64Atomics}
 
 instance Offset "shaderFloat16" VkPhysicalDeviceVulkan12Features where
-  rawOffset = #{offset struct VkPhysicalDeviceVulkan12Features, shaderFloat16}
+  rawOffset = #{offset VkPhysicalDeviceVulkan12Features, shaderFloat16}
 
 instance Offset "shaderInt8" VkPhysicalDeviceVulkan12Features where
-  rawOffset = #{offset struct VkPhysicalDeviceVulkan12Features, shaderInt8}
+  rawOffset = #{offset VkPhysicalDeviceVulkan12Features, shaderInt8}
 
 instance Offset "descriptorIndexing" VkPhysicalDeviceVulkan12Features where
-  rawOffset = #{offset struct VkPhysicalDeviceVulkan12Features, descriptorIndexing}
+  rawOffset = #{offset VkPhysicalDeviceVulkan12Features, descriptorIndexing}
 
 instance Offset "shaderInputAttachmentArrayDynamicIndexing" VkPhysicalDeviceVulkan12Features where
-  rawOffset = #{offset struct VkPhysicalDeviceVulkan12Features, shaderInputAttachmentArrayDynamicIndexing}
+  rawOffset = #{offset VkPhysicalDeviceVulkan12Features, shaderInputAttachmentArrayDynamicIndexing}
 
 instance Offset "shaderUniformTexelBufferArrayDynamicIndexing" VkPhysicalDeviceVulkan12Features where
-  rawOffset = #{offset struct VkPhysicalDeviceVulkan12Features, shaderUniformTexelBufferArrayDynamicIndexing}
+  rawOffset = #{offset VkPhysicalDeviceVulkan12Features, shaderUniformTexelBufferArrayDynamicIndexing}
 
 instance Offset "shaderStorageTexelBufferArrayDynamicIndexing" VkPhysicalDeviceVulkan12Features where
-  rawOffset = #{offset struct VkPhysicalDeviceVulkan12Features, shaderStorageTexelBufferArrayDynamicIndexing}
+  rawOffset = #{offset VkPhysicalDeviceVulkan12Features, shaderStorageTexelBufferArrayDynamicIndexing}
 
 instance Offset "shaderUniformBufferArrayNonUniformIndexing" VkPhysicalDeviceVulkan12Features where
-  rawOffset = #{offset struct VkPhysicalDeviceVulkan12Features, shaderUniformBufferArrayNonUniformIndexing}
+  rawOffset = #{offset VkPhysicalDeviceVulkan12Features, shaderUniformBufferArrayNonUniformIndexing}
 
 instance Offset "shaderSampledImageArrayNonUniformIndexing" VkPhysicalDeviceVulkan12Features where
-  rawOffset = #{offset struct VkPhysicalDeviceVulkan12Features, shaderSampledImageArrayNonUniformIndexing}
+  rawOffset = #{offset VkPhysicalDeviceVulkan12Features, shaderSampledImageArrayNonUniformIndexing}
 
 instance Offset "shaderStorageBufferArrayNonUniformIndexing" VkPhysicalDeviceVulkan12Features where
-  rawOffset = #{offset struct VkPhysicalDeviceVulkan12Features, shaderStorageBufferArrayNonUniformIndexing}
+  rawOffset = #{offset VkPhysicalDeviceVulkan12Features, shaderStorageBufferArrayNonUniformIndexing}
 
 instance Offset "shaderStorageImageArrayNonUniformIndexing" VkPhysicalDeviceVulkan12Features where
-  rawOffset = #{offset struct VkPhysicalDeviceVulkan12Features, shaderStorageImageArrayNonUniformIndexing}
+  rawOffset = #{offset VkPhysicalDeviceVulkan12Features, shaderStorageImageArrayNonUniformIndexing}
 
 instance Offset "shaderInputAttachmentArrayNonUniformIndexing" VkPhysicalDeviceVulkan12Features where
-  rawOffset = #{offset struct VkPhysicalDeviceVulkan12Features, shaderInputAttachmentArrayNonUniformIndexing}
+  rawOffset = #{offset VkPhysicalDeviceVulkan12Features, shaderInputAttachmentArrayNonUniformIndexing}
 
 instance Offset "shaderUniformTexelBufferArrayNonUniformIndexing" VkPhysicalDeviceVulkan12Features where
-  rawOffset = #{offset struct VkPhysicalDeviceVulkan12Features, shaderUniformTexelBufferArrayNonUniformIndexing}
+  rawOffset = #{offset VkPhysicalDeviceVulkan12Features, shaderUniformTexelBufferArrayNonUniformIndexing}
 
 instance Offset "shaderStorageTexelBufferArrayNonUniformIndexing" VkPhysicalDeviceVulkan12Features where
-  rawOffset = #{offset struct VkPhysicalDeviceVulkan12Features, shaderStorageTexelBufferArrayNonUniformIndexing}
+  rawOffset = #{offset VkPhysicalDeviceVulkan12Features, shaderStorageTexelBufferArrayNonUniformIndexing}
 
 instance Offset "descriptorBindingUniformBufferUpdateAfterBind" VkPhysicalDeviceVulkan12Features where
-  rawOffset = #{offset struct VkPhysicalDeviceVulkan12Features, descriptorBindingUniformBufferUpdateAfterBind}
+  rawOffset = #{offset VkPhysicalDeviceVulkan12Features, descriptorBindingUniformBufferUpdateAfterBind}
 
 instance Offset "descriptorBindingSampledImageUpdateAfterBind" VkPhysicalDeviceVulkan12Features where
-  rawOffset = #{offset struct VkPhysicalDeviceVulkan12Features, descriptorBindingSampledImageUpdateAfterBind}
+  rawOffset = #{offset VkPhysicalDeviceVulkan12Features, descriptorBindingSampledImageUpdateAfterBind}
 
 instance Offset "descriptorBindingStorageImageUpdateAfterBind" VkPhysicalDeviceVulkan12Features where
-  rawOffset = #{offset struct VkPhysicalDeviceVulkan12Features, descriptorBindingStorageImageUpdateAfterBind}
+  rawOffset = #{offset VkPhysicalDeviceVulkan12Features, descriptorBindingStorageImageUpdateAfterBind}
 
 instance Offset "descriptorBindingStorageBufferUpdateAfterBind" VkPhysicalDeviceVulkan12Features where
-  rawOffset = #{offset struct VkPhysicalDeviceVulkan12Features, descriptorBindingStorageBufferUpdateAfterBind}
+  rawOffset = #{offset VkPhysicalDeviceVulkan12Features, descriptorBindingStorageBufferUpdateAfterBind}
 
 instance Offset "descriptorBindingUniformTexelBufferUpdateAfterBind" VkPhysicalDeviceVulkan12Features where
-  rawOffset = #{offset struct VkPhysicalDeviceVulkan12Features, descriptorBindingUniformTexelBufferUpdateAfterBind}
+  rawOffset = #{offset VkPhysicalDeviceVulkan12Features, descriptorBindingUniformTexelBufferUpdateAfterBind}
 
 instance Offset "descriptorBindingStorageTexelBufferUpdateAfterBind" VkPhysicalDeviceVulkan12Features where
-  rawOffset = #{offset struct VkPhysicalDeviceVulkan12Features, descriptorBindingStorageTexelBufferUpdateAfterBind}
+  rawOffset = #{offset VkPhysicalDeviceVulkan12Features, descriptorBindingStorageTexelBufferUpdateAfterBind}
 
 instance Offset "descriptorBindingUpdateUnusedWhilePending" VkPhysicalDeviceVulkan12Features where
-  rawOffset = #{offset struct VkPhysicalDeviceVulkan12Features, descriptorBindingUpdateUnusedWhilePending}
+  rawOffset = #{offset VkPhysicalDeviceVulkan12Features, descriptorBindingUpdateUnusedWhilePending}
 
 instance Offset "descriptorBindingPartiallyBound" VkPhysicalDeviceVulkan12Features where
-  rawOffset = #{offset struct VkPhysicalDeviceVulkan12Features, descriptorBindingPartiallyBound}
+  rawOffset = #{offset VkPhysicalDeviceVulkan12Features, descriptorBindingPartiallyBound}
 
 instance Offset "descriptorBindingVariableDescriptorCount" VkPhysicalDeviceVulkan12Features where
-  rawOffset = #{offset struct VkPhysicalDeviceVulkan12Features, descriptorBindingVariableDescriptorCount}
+  rawOffset = #{offset VkPhysicalDeviceVulkan12Features, descriptorBindingVariableDescriptorCount}
 
 instance Offset "runtimeDescriptorArray" VkPhysicalDeviceVulkan12Features where
-  rawOffset = #{offset struct VkPhysicalDeviceVulkan12Features, runtimeDescriptorArray}
+  rawOffset = #{offset VkPhysicalDeviceVulkan12Features, runtimeDescriptorArray}
 
 instance Offset "samplerFilterMinmax" VkPhysicalDeviceVulkan12Features where
-  rawOffset = #{offset struct VkPhysicalDeviceVulkan12Features, samplerFilterMinmax}
+  rawOffset = #{offset VkPhysicalDeviceVulkan12Features, samplerFilterMinmax}
 
 instance Offset "scalarBlockLayout" VkPhysicalDeviceVulkan12Features where
-  rawOffset = #{offset struct VkPhysicalDeviceVulkan12Features, scalarBlockLayout}
+  rawOffset = #{offset VkPhysicalDeviceVulkan12Features, scalarBlockLayout}
 
 instance Offset "imagelessFramebuffer" VkPhysicalDeviceVulkan12Features where
-  rawOffset = #{offset struct VkPhysicalDeviceVulkan12Features, imagelessFramebuffer}
+  rawOffset = #{offset VkPhysicalDeviceVulkan12Features, imagelessFramebuffer}
 
 instance Offset "uniformBufferStandardLayout" VkPhysicalDeviceVulkan12Features where
-  rawOffset = #{offset struct VkPhysicalDeviceVulkan12Features, uniformBufferStandardLayout}
+  rawOffset = #{offset VkPhysicalDeviceVulkan12Features, uniformBufferStandardLayout}
 
 instance Offset "shaderSubgroupExtendedTypes" VkPhysicalDeviceVulkan12Features where
-  rawOffset = #{offset struct VkPhysicalDeviceVulkan12Features, shaderSubgroupExtendedTypes}
+  rawOffset = #{offset VkPhysicalDeviceVulkan12Features, shaderSubgroupExtendedTypes}
 
 instance Offset "separateDepthStencilLayouts" VkPhysicalDeviceVulkan12Features where
-  rawOffset = #{offset struct VkPhysicalDeviceVulkan12Features, separateDepthStencilLayouts}
+  rawOffset = #{offset VkPhysicalDeviceVulkan12Features, separateDepthStencilLayouts}
 
 instance Offset "hostQueryReset" VkPhysicalDeviceVulkan12Features where
-  rawOffset = #{offset struct VkPhysicalDeviceVulkan12Features, hostQueryReset}
+  rawOffset = #{offset VkPhysicalDeviceVulkan12Features, hostQueryReset}
 
 instance Offset "timelineSemaphore" VkPhysicalDeviceVulkan12Features where
-  rawOffset = #{offset struct VkPhysicalDeviceVulkan12Features, timelineSemaphore}
+  rawOffset = #{offset VkPhysicalDeviceVulkan12Features, timelineSemaphore}
 
 instance Offset "bufferDeviceAddress" VkPhysicalDeviceVulkan12Features where
-  rawOffset = #{offset struct VkPhysicalDeviceVulkan12Features, bufferDeviceAddress}
+  rawOffset = #{offset VkPhysicalDeviceVulkan12Features, bufferDeviceAddress}
 
 instance Offset "bufferDeviceAddressCaptureReplay" VkPhysicalDeviceVulkan12Features where
-  rawOffset = #{offset struct VkPhysicalDeviceVulkan12Features, bufferDeviceAddressCaptureReplay}
+  rawOffset = #{offset VkPhysicalDeviceVulkan12Features, bufferDeviceAddressCaptureReplay}
 
 instance Offset "bufferDeviceAddressMultiDevice" VkPhysicalDeviceVulkan12Features where
-  rawOffset = #{offset struct VkPhysicalDeviceVulkan12Features, bufferDeviceAddressMultiDevice}
+  rawOffset = #{offset VkPhysicalDeviceVulkan12Features, bufferDeviceAddressMultiDevice}
 
 instance Offset "vulkanMemoryModel" VkPhysicalDeviceVulkan12Features where
-  rawOffset = #{offset struct VkPhysicalDeviceVulkan12Features, vulkanMemoryModel}
+  rawOffset = #{offset VkPhysicalDeviceVulkan12Features, vulkanMemoryModel}
 
 instance Offset "vulkanMemoryModelDeviceScope" VkPhysicalDeviceVulkan12Features where
-  rawOffset = #{offset struct VkPhysicalDeviceVulkan12Features, vulkanMemoryModelDeviceScope}
+  rawOffset = #{offset VkPhysicalDeviceVulkan12Features, vulkanMemoryModelDeviceScope}
 
 instance Offset "vulkanMemoryModelAvailabilityVisibilityChains" VkPhysicalDeviceVulkan12Features where
-  rawOffset = #{offset struct VkPhysicalDeviceVulkan12Features, vulkanMemoryModelAvailabilityVisibilityChains}
+  rawOffset = #{offset VkPhysicalDeviceVulkan12Features, vulkanMemoryModelAvailabilityVisibilityChains}
 
 instance Offset "shaderOutputViewportIndex" VkPhysicalDeviceVulkan12Features where
-  rawOffset = #{offset struct VkPhysicalDeviceVulkan12Features, shaderOutputViewportIndex}
+  rawOffset = #{offset VkPhysicalDeviceVulkan12Features, shaderOutputViewportIndex}
 
 instance Offset "shaderOutputLayer" VkPhysicalDeviceVulkan12Features where
-  rawOffset = #{offset struct VkPhysicalDeviceVulkan12Features, shaderOutputLayer}
+  rawOffset = #{offset VkPhysicalDeviceVulkan12Features, shaderOutputLayer}
 
 instance Offset "subgroupBroadcastDynamicId" VkPhysicalDeviceVulkan12Features where
-  rawOffset = #{offset struct VkPhysicalDeviceVulkan12Features, subgroupBroadcastDynamicId}
+  rawOffset = #{offset VkPhysicalDeviceVulkan12Features, subgroupBroadcastDynamicId}
 
 #else
 

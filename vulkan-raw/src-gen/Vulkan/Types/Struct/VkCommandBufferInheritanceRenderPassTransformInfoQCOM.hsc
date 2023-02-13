@@ -32,8 +32,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkCommandBufferInheritanceRenderPassTransformI
          }
 
 instance Storable VkCommandBufferInheritanceRenderPassTransformInfoQCOM where
-  sizeOf    _ = #{size      struct VkCommandBufferInheritanceRenderPassTransformInfoQCOM}
-  alignment _ = #{alignment struct VkCommandBufferInheritanceRenderPassTransformInfoQCOM}
+  sizeOf    _ = #{size      VkCommandBufferInheritanceRenderPassTransformInfoQCOM}
+  alignment _ = #{alignment VkCommandBufferInheritanceRenderPassTransformInfoQCOM}
 
   peek ptr = 
     VkCommandBufferInheritanceRenderPassTransformInfoQCOM
@@ -49,16 +49,16 @@ instance Storable VkCommandBufferInheritanceRenderPassTransformInfoQCOM where
     pokeField @"renderArea" ptr val
 
 instance Offset "sType" VkCommandBufferInheritanceRenderPassTransformInfoQCOM where
-  rawOffset = #{offset struct VkCommandBufferInheritanceRenderPassTransformInfoQCOM, sType}
+  rawOffset = #{offset VkCommandBufferInheritanceRenderPassTransformInfoQCOM, sType}
 
 instance Offset "pNext" VkCommandBufferInheritanceRenderPassTransformInfoQCOM where
-  rawOffset = #{offset struct VkCommandBufferInheritanceRenderPassTransformInfoQCOM, pNext}
+  rawOffset = #{offset VkCommandBufferInheritanceRenderPassTransformInfoQCOM, pNext}
 
 instance Offset "transform" VkCommandBufferInheritanceRenderPassTransformInfoQCOM where
-  rawOffset = #{offset struct VkCommandBufferInheritanceRenderPassTransformInfoQCOM, transform}
+  rawOffset = #{offset VkCommandBufferInheritanceRenderPassTransformInfoQCOM, transform}
 
 instance Offset "renderArea" VkCommandBufferInheritanceRenderPassTransformInfoQCOM where
-  rawOffset = #{offset struct VkCommandBufferInheritanceRenderPassTransformInfoQCOM, renderArea}
+  rawOffset = #{offset VkCommandBufferInheritanceRenderPassTransformInfoQCOM, renderArea}
 
 #else
 

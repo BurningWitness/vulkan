@@ -31,8 +31,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkPhysicalDeviceMemoryBudgetPropertiesEXT" #-}
          }
 
 instance Storable VkPhysicalDeviceMemoryBudgetPropertiesEXT where
-  sizeOf    _ = #{size      struct VkPhysicalDeviceMemoryBudgetPropertiesEXT}
-  alignment _ = #{alignment struct VkPhysicalDeviceMemoryBudgetPropertiesEXT}
+  sizeOf    _ = #{size      VkPhysicalDeviceMemoryBudgetPropertiesEXT}
+  alignment _ = #{alignment VkPhysicalDeviceMemoryBudgetPropertiesEXT}
 
   peek ptr = 
     VkPhysicalDeviceMemoryBudgetPropertiesEXT
@@ -48,16 +48,16 @@ instance Storable VkPhysicalDeviceMemoryBudgetPropertiesEXT where
     pokeField @"heapUsage" ptr val
 
 instance Offset "sType" VkPhysicalDeviceMemoryBudgetPropertiesEXT where
-  rawOffset = #{offset struct VkPhysicalDeviceMemoryBudgetPropertiesEXT, sType}
+  rawOffset = #{offset VkPhysicalDeviceMemoryBudgetPropertiesEXT, sType}
 
 instance Offset "pNext" VkPhysicalDeviceMemoryBudgetPropertiesEXT where
-  rawOffset = #{offset struct VkPhysicalDeviceMemoryBudgetPropertiesEXT, pNext}
+  rawOffset = #{offset VkPhysicalDeviceMemoryBudgetPropertiesEXT, pNext}
 
 instance Offset "heapBudget" VkPhysicalDeviceMemoryBudgetPropertiesEXT where
-  rawOffset = #{offset struct VkPhysicalDeviceMemoryBudgetPropertiesEXT, heapBudget}
+  rawOffset = #{offset VkPhysicalDeviceMemoryBudgetPropertiesEXT, heapBudget}
 
 instance Offset "heapUsage" VkPhysicalDeviceMemoryBudgetPropertiesEXT where
-  rawOffset = #{offset struct VkPhysicalDeviceMemoryBudgetPropertiesEXT, heapUsage}
+  rawOffset = #{offset VkPhysicalDeviceMemoryBudgetPropertiesEXT, heapUsage}
 
 #else
 

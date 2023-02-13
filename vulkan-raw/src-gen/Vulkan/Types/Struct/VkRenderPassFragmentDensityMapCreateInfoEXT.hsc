@@ -30,8 +30,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkRenderPassFragmentDensityMapCreateInfoEXT" #
          }
 
 instance Storable VkRenderPassFragmentDensityMapCreateInfoEXT where
-  sizeOf    _ = #{size      struct VkRenderPassFragmentDensityMapCreateInfoEXT}
-  alignment _ = #{alignment struct VkRenderPassFragmentDensityMapCreateInfoEXT}
+  sizeOf    _ = #{size      VkRenderPassFragmentDensityMapCreateInfoEXT}
+  alignment _ = #{alignment VkRenderPassFragmentDensityMapCreateInfoEXT}
 
   peek ptr = 
     VkRenderPassFragmentDensityMapCreateInfoEXT
@@ -45,13 +45,13 @@ instance Storable VkRenderPassFragmentDensityMapCreateInfoEXT where
     pokeField @"fragmentDensityMapAttachment" ptr val
 
 instance Offset "sType" VkRenderPassFragmentDensityMapCreateInfoEXT where
-  rawOffset = #{offset struct VkRenderPassFragmentDensityMapCreateInfoEXT, sType}
+  rawOffset = #{offset VkRenderPassFragmentDensityMapCreateInfoEXT, sType}
 
 instance Offset "pNext" VkRenderPassFragmentDensityMapCreateInfoEXT where
-  rawOffset = #{offset struct VkRenderPassFragmentDensityMapCreateInfoEXT, pNext}
+  rawOffset = #{offset VkRenderPassFragmentDensityMapCreateInfoEXT, pNext}
 
 instance Offset "fragmentDensityMapAttachment" VkRenderPassFragmentDensityMapCreateInfoEXT where
-  rawOffset = #{offset struct VkRenderPassFragmentDensityMapCreateInfoEXT, fragmentDensityMapAttachment}
+  rawOffset = #{offset VkRenderPassFragmentDensityMapCreateInfoEXT, fragmentDensityMapAttachment}
 
 #else
 

@@ -29,8 +29,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkPhysicalDevicePushDescriptorPropertiesKHR" #
          }
 
 instance Storable VkPhysicalDevicePushDescriptorPropertiesKHR where
-  sizeOf    _ = #{size      struct VkPhysicalDevicePushDescriptorPropertiesKHR}
-  alignment _ = #{alignment struct VkPhysicalDevicePushDescriptorPropertiesKHR}
+  sizeOf    _ = #{size      VkPhysicalDevicePushDescriptorPropertiesKHR}
+  alignment _ = #{alignment VkPhysicalDevicePushDescriptorPropertiesKHR}
 
   peek ptr = 
     VkPhysicalDevicePushDescriptorPropertiesKHR
@@ -44,13 +44,13 @@ instance Storable VkPhysicalDevicePushDescriptorPropertiesKHR where
     pokeField @"maxPushDescriptors" ptr val
 
 instance Offset "sType" VkPhysicalDevicePushDescriptorPropertiesKHR where
-  rawOffset = #{offset struct VkPhysicalDevicePushDescriptorPropertiesKHR, sType}
+  rawOffset = #{offset VkPhysicalDevicePushDescriptorPropertiesKHR, sType}
 
 instance Offset "pNext" VkPhysicalDevicePushDescriptorPropertiesKHR where
-  rawOffset = #{offset struct VkPhysicalDevicePushDescriptorPropertiesKHR, pNext}
+  rawOffset = #{offset VkPhysicalDevicePushDescriptorPropertiesKHR, pNext}
 
 instance Offset "maxPushDescriptors" VkPhysicalDevicePushDescriptorPropertiesKHR where
-  rawOffset = #{offset struct VkPhysicalDevicePushDescriptorPropertiesKHR, maxPushDescriptors}
+  rawOffset = #{offset VkPhysicalDevicePushDescriptorPropertiesKHR, maxPushDescriptors}
 
 #else
 

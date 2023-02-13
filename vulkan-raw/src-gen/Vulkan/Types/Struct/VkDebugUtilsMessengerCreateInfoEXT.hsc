@@ -37,8 +37,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkDebugUtilsMessengerCreateInfoEXT" #-} VkDebu
          }
 
 instance Storable VkDebugUtilsMessengerCreateInfoEXT where
-  sizeOf    _ = #{size      struct VkDebugUtilsMessengerCreateInfoEXT}
-  alignment _ = #{alignment struct VkDebugUtilsMessengerCreateInfoEXT}
+  sizeOf    _ = #{size      VkDebugUtilsMessengerCreateInfoEXT}
+  alignment _ = #{alignment VkDebugUtilsMessengerCreateInfoEXT}
 
   peek ptr = 
     VkDebugUtilsMessengerCreateInfoEXT
@@ -60,25 +60,25 @@ instance Storable VkDebugUtilsMessengerCreateInfoEXT where
     pokeField @"pUserData" ptr val
 
 instance Offset "sType" VkDebugUtilsMessengerCreateInfoEXT where
-  rawOffset = #{offset struct VkDebugUtilsMessengerCreateInfoEXT, sType}
+  rawOffset = #{offset VkDebugUtilsMessengerCreateInfoEXT, sType}
 
 instance Offset "pNext" VkDebugUtilsMessengerCreateInfoEXT where
-  rawOffset = #{offset struct VkDebugUtilsMessengerCreateInfoEXT, pNext}
+  rawOffset = #{offset VkDebugUtilsMessengerCreateInfoEXT, pNext}
 
 instance Offset "flags" VkDebugUtilsMessengerCreateInfoEXT where
-  rawOffset = #{offset struct VkDebugUtilsMessengerCreateInfoEXT, flags}
+  rawOffset = #{offset VkDebugUtilsMessengerCreateInfoEXT, flags}
 
 instance Offset "messageSeverity" VkDebugUtilsMessengerCreateInfoEXT where
-  rawOffset = #{offset struct VkDebugUtilsMessengerCreateInfoEXT, messageSeverity}
+  rawOffset = #{offset VkDebugUtilsMessengerCreateInfoEXT, messageSeverity}
 
 instance Offset "messageType" VkDebugUtilsMessengerCreateInfoEXT where
-  rawOffset = #{offset struct VkDebugUtilsMessengerCreateInfoEXT, messageType}
+  rawOffset = #{offset VkDebugUtilsMessengerCreateInfoEXT, messageType}
 
 instance Offset "pfnUserCallback" VkDebugUtilsMessengerCreateInfoEXT where
-  rawOffset = #{offset struct VkDebugUtilsMessengerCreateInfoEXT, pfnUserCallback}
+  rawOffset = #{offset VkDebugUtilsMessengerCreateInfoEXT, pfnUserCallback}
 
 instance Offset "pUserData" VkDebugUtilsMessengerCreateInfoEXT where
-  rawOffset = #{offset struct VkDebugUtilsMessengerCreateInfoEXT, pUserData}
+  rawOffset = #{offset VkDebugUtilsMessengerCreateInfoEXT, pUserData}
 
 #else
 

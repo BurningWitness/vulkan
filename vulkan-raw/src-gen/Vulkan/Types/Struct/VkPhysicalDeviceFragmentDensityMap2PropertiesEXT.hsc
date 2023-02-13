@@ -33,8 +33,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkPhysicalDeviceFragmentDensityMap2PropertiesE
          }
 
 instance Storable VkPhysicalDeviceFragmentDensityMap2PropertiesEXT where
-  sizeOf    _ = #{size      struct VkPhysicalDeviceFragmentDensityMap2PropertiesEXT}
-  alignment _ = #{alignment struct VkPhysicalDeviceFragmentDensityMap2PropertiesEXT}
+  sizeOf    _ = #{size      VkPhysicalDeviceFragmentDensityMap2PropertiesEXT}
+  alignment _ = #{alignment VkPhysicalDeviceFragmentDensityMap2PropertiesEXT}
 
   peek ptr = 
     VkPhysicalDeviceFragmentDensityMap2PropertiesEXT
@@ -54,22 +54,22 @@ instance Storable VkPhysicalDeviceFragmentDensityMap2PropertiesEXT where
     pokeField @"maxDescriptorSetSubsampledSamplers" ptr val
 
 instance Offset "sType" VkPhysicalDeviceFragmentDensityMap2PropertiesEXT where
-  rawOffset = #{offset struct VkPhysicalDeviceFragmentDensityMap2PropertiesEXT, sType}
+  rawOffset = #{offset VkPhysicalDeviceFragmentDensityMap2PropertiesEXT, sType}
 
 instance Offset "pNext" VkPhysicalDeviceFragmentDensityMap2PropertiesEXT where
-  rawOffset = #{offset struct VkPhysicalDeviceFragmentDensityMap2PropertiesEXT, pNext}
+  rawOffset = #{offset VkPhysicalDeviceFragmentDensityMap2PropertiesEXT, pNext}
 
 instance Offset "subsampledLoads" VkPhysicalDeviceFragmentDensityMap2PropertiesEXT where
-  rawOffset = #{offset struct VkPhysicalDeviceFragmentDensityMap2PropertiesEXT, subsampledLoads}
+  rawOffset = #{offset VkPhysicalDeviceFragmentDensityMap2PropertiesEXT, subsampledLoads}
 
 instance Offset "subsampledCoarseReconstructionEarlyAccess" VkPhysicalDeviceFragmentDensityMap2PropertiesEXT where
-  rawOffset = #{offset struct VkPhysicalDeviceFragmentDensityMap2PropertiesEXT, subsampledCoarseReconstructionEarlyAccess}
+  rawOffset = #{offset VkPhysicalDeviceFragmentDensityMap2PropertiesEXT, subsampledCoarseReconstructionEarlyAccess}
 
 instance Offset "maxSubsampledArrayLayers" VkPhysicalDeviceFragmentDensityMap2PropertiesEXT where
-  rawOffset = #{offset struct VkPhysicalDeviceFragmentDensityMap2PropertiesEXT, maxSubsampledArrayLayers}
+  rawOffset = #{offset VkPhysicalDeviceFragmentDensityMap2PropertiesEXT, maxSubsampledArrayLayers}
 
 instance Offset "maxDescriptorSetSubsampledSamplers" VkPhysicalDeviceFragmentDensityMap2PropertiesEXT where
-  rawOffset = #{offset struct VkPhysicalDeviceFragmentDensityMap2PropertiesEXT, maxDescriptorSetSubsampledSamplers}
+  rawOffset = #{offset VkPhysicalDeviceFragmentDensityMap2PropertiesEXT, maxDescriptorSetSubsampledSamplers}
 
 #else
 

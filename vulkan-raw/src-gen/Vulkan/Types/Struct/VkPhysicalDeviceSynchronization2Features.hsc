@@ -30,8 +30,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkPhysicalDeviceSynchronization2Features" #-} 
          }
 
 instance Storable VkPhysicalDeviceSynchronization2Features where
-  sizeOf    _ = #{size      struct VkPhysicalDeviceSynchronization2Features}
-  alignment _ = #{alignment struct VkPhysicalDeviceSynchronization2Features}
+  sizeOf    _ = #{size      VkPhysicalDeviceSynchronization2Features}
+  alignment _ = #{alignment VkPhysicalDeviceSynchronization2Features}
 
   peek ptr = 
     VkPhysicalDeviceSynchronization2Features
@@ -45,13 +45,13 @@ instance Storable VkPhysicalDeviceSynchronization2Features where
     pokeField @"synchronization2" ptr val
 
 instance Offset "sType" VkPhysicalDeviceSynchronization2Features where
-  rawOffset = #{offset struct VkPhysicalDeviceSynchronization2Features, sType}
+  rawOffset = #{offset VkPhysicalDeviceSynchronization2Features, sType}
 
 instance Offset "pNext" VkPhysicalDeviceSynchronization2Features where
-  rawOffset = #{offset struct VkPhysicalDeviceSynchronization2Features, pNext}
+  rawOffset = #{offset VkPhysicalDeviceSynchronization2Features, pNext}
 
 instance Offset "synchronization2" VkPhysicalDeviceSynchronization2Features where
-  rawOffset = #{offset struct VkPhysicalDeviceSynchronization2Features, synchronization2}
+  rawOffset = #{offset VkPhysicalDeviceSynchronization2Features, synchronization2}
 
 #else
 

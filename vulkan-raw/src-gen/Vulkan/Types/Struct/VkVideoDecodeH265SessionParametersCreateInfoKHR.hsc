@@ -33,8 +33,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkVideoDecodeH265SessionParametersCreateInfoKH
          }
 
 instance Storable VkVideoDecodeH265SessionParametersCreateInfoKHR where
-  sizeOf    _ = #{size      struct VkVideoDecodeH265SessionParametersCreateInfoKHR}
-  alignment _ = #{alignment struct VkVideoDecodeH265SessionParametersCreateInfoKHR}
+  sizeOf    _ = #{size      VkVideoDecodeH265SessionParametersCreateInfoKHR}
+  alignment _ = #{alignment VkVideoDecodeH265SessionParametersCreateInfoKHR}
 
   peek ptr = 
     VkVideoDecodeH265SessionParametersCreateInfoKHR
@@ -54,22 +54,22 @@ instance Storable VkVideoDecodeH265SessionParametersCreateInfoKHR where
     pokeField @"pParametersAddInfo" ptr val
 
 instance Offset "sType" VkVideoDecodeH265SessionParametersCreateInfoKHR where
-  rawOffset = #{offset struct VkVideoDecodeH265SessionParametersCreateInfoKHR, sType}
+  rawOffset = #{offset VkVideoDecodeH265SessionParametersCreateInfoKHR, sType}
 
 instance Offset "pNext" VkVideoDecodeH265SessionParametersCreateInfoKHR where
-  rawOffset = #{offset struct VkVideoDecodeH265SessionParametersCreateInfoKHR, pNext}
+  rawOffset = #{offset VkVideoDecodeH265SessionParametersCreateInfoKHR, pNext}
 
 instance Offset "maxStdVPSCount" VkVideoDecodeH265SessionParametersCreateInfoKHR where
-  rawOffset = #{offset struct VkVideoDecodeH265SessionParametersCreateInfoKHR, maxStdVPSCount}
+  rawOffset = #{offset VkVideoDecodeH265SessionParametersCreateInfoKHR, maxStdVPSCount}
 
 instance Offset "maxStdSPSCount" VkVideoDecodeH265SessionParametersCreateInfoKHR where
-  rawOffset = #{offset struct VkVideoDecodeH265SessionParametersCreateInfoKHR, maxStdSPSCount}
+  rawOffset = #{offset VkVideoDecodeH265SessionParametersCreateInfoKHR, maxStdSPSCount}
 
 instance Offset "maxStdPPSCount" VkVideoDecodeH265SessionParametersCreateInfoKHR where
-  rawOffset = #{offset struct VkVideoDecodeH265SessionParametersCreateInfoKHR, maxStdPPSCount}
+  rawOffset = #{offset VkVideoDecodeH265SessionParametersCreateInfoKHR, maxStdPPSCount}
 
 instance Offset "pParametersAddInfo" VkVideoDecodeH265SessionParametersCreateInfoKHR where
-  rawOffset = #{offset struct VkVideoDecodeH265SessionParametersCreateInfoKHR, pParametersAddInfo}
+  rawOffset = #{offset VkVideoDecodeH265SessionParametersCreateInfoKHR, pParametersAddInfo}
 
 #else
 

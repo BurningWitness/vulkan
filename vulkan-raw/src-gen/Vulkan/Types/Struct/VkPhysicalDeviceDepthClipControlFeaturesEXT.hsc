@@ -30,8 +30,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkPhysicalDeviceDepthClipControlFeaturesEXT" #
          }
 
 instance Storable VkPhysicalDeviceDepthClipControlFeaturesEXT where
-  sizeOf    _ = #{size      struct VkPhysicalDeviceDepthClipControlFeaturesEXT}
-  alignment _ = #{alignment struct VkPhysicalDeviceDepthClipControlFeaturesEXT}
+  sizeOf    _ = #{size      VkPhysicalDeviceDepthClipControlFeaturesEXT}
+  alignment _ = #{alignment VkPhysicalDeviceDepthClipControlFeaturesEXT}
 
   peek ptr = 
     VkPhysicalDeviceDepthClipControlFeaturesEXT
@@ -45,13 +45,13 @@ instance Storable VkPhysicalDeviceDepthClipControlFeaturesEXT where
     pokeField @"depthClipControl" ptr val
 
 instance Offset "sType" VkPhysicalDeviceDepthClipControlFeaturesEXT where
-  rawOffset = #{offset struct VkPhysicalDeviceDepthClipControlFeaturesEXT, sType}
+  rawOffset = #{offset VkPhysicalDeviceDepthClipControlFeaturesEXT, sType}
 
 instance Offset "pNext" VkPhysicalDeviceDepthClipControlFeaturesEXT where
-  rawOffset = #{offset struct VkPhysicalDeviceDepthClipControlFeaturesEXT, pNext}
+  rawOffset = #{offset VkPhysicalDeviceDepthClipControlFeaturesEXT, pNext}
 
 instance Offset "depthClipControl" VkPhysicalDeviceDepthClipControlFeaturesEXT where
-  rawOffset = #{offset struct VkPhysicalDeviceDepthClipControlFeaturesEXT, depthClipControl}
+  rawOffset = #{offset VkPhysicalDeviceDepthClipControlFeaturesEXT, depthClipControl}
 
 #else
 

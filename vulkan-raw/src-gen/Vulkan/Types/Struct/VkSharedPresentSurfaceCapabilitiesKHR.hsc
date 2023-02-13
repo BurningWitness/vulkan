@@ -30,8 +30,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkSharedPresentSurfaceCapabilitiesKHR" #-} VkS
          }
 
 instance Storable VkSharedPresentSurfaceCapabilitiesKHR where
-  sizeOf    _ = #{size      struct VkSharedPresentSurfaceCapabilitiesKHR}
-  alignment _ = #{alignment struct VkSharedPresentSurfaceCapabilitiesKHR}
+  sizeOf    _ = #{size      VkSharedPresentSurfaceCapabilitiesKHR}
+  alignment _ = #{alignment VkSharedPresentSurfaceCapabilitiesKHR}
 
   peek ptr = 
     VkSharedPresentSurfaceCapabilitiesKHR
@@ -45,13 +45,13 @@ instance Storable VkSharedPresentSurfaceCapabilitiesKHR where
     pokeField @"sharedPresentSupportedUsageFlags" ptr val
 
 instance Offset "sType" VkSharedPresentSurfaceCapabilitiesKHR where
-  rawOffset = #{offset struct VkSharedPresentSurfaceCapabilitiesKHR, sType}
+  rawOffset = #{offset VkSharedPresentSurfaceCapabilitiesKHR, sType}
 
 instance Offset "pNext" VkSharedPresentSurfaceCapabilitiesKHR where
-  rawOffset = #{offset struct VkSharedPresentSurfaceCapabilitiesKHR, pNext}
+  rawOffset = #{offset VkSharedPresentSurfaceCapabilitiesKHR, pNext}
 
 instance Offset "sharedPresentSupportedUsageFlags" VkSharedPresentSurfaceCapabilitiesKHR where
-  rawOffset = #{offset struct VkSharedPresentSurfaceCapabilitiesKHR, sharedPresentSupportedUsageFlags}
+  rawOffset = #{offset VkSharedPresentSurfaceCapabilitiesKHR, sharedPresentSupportedUsageFlags}
 
 #else
 

@@ -31,8 +31,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkCheckpointData2NV" #-} VkCheckpointData2NV =
          }
 
 instance Storable VkCheckpointData2NV where
-  sizeOf    _ = #{size      struct VkCheckpointData2NV}
-  alignment _ = #{alignment struct VkCheckpointData2NV}
+  sizeOf    _ = #{size      VkCheckpointData2NV}
+  alignment _ = #{alignment VkCheckpointData2NV}
 
   peek ptr = 
     VkCheckpointData2NV
@@ -48,16 +48,16 @@ instance Storable VkCheckpointData2NV where
     pokeField @"pCheckpointMarker" ptr val
 
 instance Offset "sType" VkCheckpointData2NV where
-  rawOffset = #{offset struct VkCheckpointData2NV, sType}
+  rawOffset = #{offset VkCheckpointData2NV, sType}
 
 instance Offset "pNext" VkCheckpointData2NV where
-  rawOffset = #{offset struct VkCheckpointData2NV, pNext}
+  rawOffset = #{offset VkCheckpointData2NV, pNext}
 
 instance Offset "stage" VkCheckpointData2NV where
-  rawOffset = #{offset struct VkCheckpointData2NV, stage}
+  rawOffset = #{offset VkCheckpointData2NV, stage}
 
 instance Offset "pCheckpointMarker" VkCheckpointData2NV where
-  rawOffset = #{offset struct VkCheckpointData2NV, pCheckpointMarker}
+  rawOffset = #{offset VkCheckpointData2NV, pCheckpointMarker}
 
 #else
 

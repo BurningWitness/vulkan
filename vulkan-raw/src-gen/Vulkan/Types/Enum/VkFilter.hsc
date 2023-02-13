@@ -19,7 +19,7 @@ pattern VK_FILTER_LINEAR = 1
 
 #if VK_IMG_filter_cubic
 pattern VK_FILTER_CUBIC_IMG :: (Eq a, Num a) => a
-pattern VK_FILTER_CUBIC_IMG = VK_FILTER_CUBIC_EXT
+pattern VK_FILTER_CUBIC_IMG = 1000015000
 #endif
 
 #if VK_EXT_filter_cubic

@@ -31,8 +31,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkPhysicalDeviceShaderCoreProperties2AMD" #-} 
          }
 
 instance Storable VkPhysicalDeviceShaderCoreProperties2AMD where
-  sizeOf    _ = #{size      struct VkPhysicalDeviceShaderCoreProperties2AMD}
-  alignment _ = #{alignment struct VkPhysicalDeviceShaderCoreProperties2AMD}
+  sizeOf    _ = #{size      VkPhysicalDeviceShaderCoreProperties2AMD}
+  alignment _ = #{alignment VkPhysicalDeviceShaderCoreProperties2AMD}
 
   peek ptr = 
     VkPhysicalDeviceShaderCoreProperties2AMD
@@ -48,16 +48,16 @@ instance Storable VkPhysicalDeviceShaderCoreProperties2AMD where
     pokeField @"activeComputeUnitCount" ptr val
 
 instance Offset "sType" VkPhysicalDeviceShaderCoreProperties2AMD where
-  rawOffset = #{offset struct VkPhysicalDeviceShaderCoreProperties2AMD, sType}
+  rawOffset = #{offset VkPhysicalDeviceShaderCoreProperties2AMD, sType}
 
 instance Offset "pNext" VkPhysicalDeviceShaderCoreProperties2AMD where
-  rawOffset = #{offset struct VkPhysicalDeviceShaderCoreProperties2AMD, pNext}
+  rawOffset = #{offset VkPhysicalDeviceShaderCoreProperties2AMD, pNext}
 
 instance Offset "shaderCoreFeatures" VkPhysicalDeviceShaderCoreProperties2AMD where
-  rawOffset = #{offset struct VkPhysicalDeviceShaderCoreProperties2AMD, shaderCoreFeatures}
+  rawOffset = #{offset VkPhysicalDeviceShaderCoreProperties2AMD, shaderCoreFeatures}
 
 instance Offset "activeComputeUnitCount" VkPhysicalDeviceShaderCoreProperties2AMD where
-  rawOffset = #{offset struct VkPhysicalDeviceShaderCoreProperties2AMD, activeComputeUnitCount}
+  rawOffset = #{offset VkPhysicalDeviceShaderCoreProperties2AMD, activeComputeUnitCount}
 
 #else
 

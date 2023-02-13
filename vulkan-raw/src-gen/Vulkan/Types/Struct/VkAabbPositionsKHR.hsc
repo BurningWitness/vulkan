@@ -31,8 +31,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkAabbPositionsKHR" #-} VkAabbPositionsKHR =
          }
 
 instance Storable VkAabbPositionsKHR where
-  sizeOf    _ = #{size      struct VkAabbPositionsKHR}
-  alignment _ = #{alignment struct VkAabbPositionsKHR}
+  sizeOf    _ = #{size      VkAabbPositionsKHR}
+  alignment _ = #{alignment VkAabbPositionsKHR}
 
   peek ptr = 
     VkAabbPositionsKHR
@@ -52,22 +52,22 @@ instance Storable VkAabbPositionsKHR where
     pokeField @"maxZ" ptr val
 
 instance Offset "minX" VkAabbPositionsKHR where
-  rawOffset = #{offset struct VkAabbPositionsKHR, minX}
+  rawOffset = #{offset VkAabbPositionsKHR, minX}
 
 instance Offset "minY" VkAabbPositionsKHR where
-  rawOffset = #{offset struct VkAabbPositionsKHR, minY}
+  rawOffset = #{offset VkAabbPositionsKHR, minY}
 
 instance Offset "minZ" VkAabbPositionsKHR where
-  rawOffset = #{offset struct VkAabbPositionsKHR, minZ}
+  rawOffset = #{offset VkAabbPositionsKHR, minZ}
 
 instance Offset "maxX" VkAabbPositionsKHR where
-  rawOffset = #{offset struct VkAabbPositionsKHR, maxX}
+  rawOffset = #{offset VkAabbPositionsKHR, maxX}
 
 instance Offset "maxY" VkAabbPositionsKHR where
-  rawOffset = #{offset struct VkAabbPositionsKHR, maxY}
+  rawOffset = #{offset VkAabbPositionsKHR, maxY}
 
 instance Offset "maxZ" VkAabbPositionsKHR where
-  rawOffset = #{offset struct VkAabbPositionsKHR, maxZ}
+  rawOffset = #{offset VkAabbPositionsKHR, maxZ}
 
 #else
 

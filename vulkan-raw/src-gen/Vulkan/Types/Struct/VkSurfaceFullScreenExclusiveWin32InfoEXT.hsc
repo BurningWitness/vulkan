@@ -30,8 +30,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkSurfaceFullScreenExclusiveWin32InfoEXT" #-} 
          }
 
 instance Storable VkSurfaceFullScreenExclusiveWin32InfoEXT where
-  sizeOf    _ = #{size      struct VkSurfaceFullScreenExclusiveWin32InfoEXT}
-  alignment _ = #{alignment struct VkSurfaceFullScreenExclusiveWin32InfoEXT}
+  sizeOf    _ = #{size      VkSurfaceFullScreenExclusiveWin32InfoEXT}
+  alignment _ = #{alignment VkSurfaceFullScreenExclusiveWin32InfoEXT}
 
   peek ptr = 
     VkSurfaceFullScreenExclusiveWin32InfoEXT
@@ -45,13 +45,13 @@ instance Storable VkSurfaceFullScreenExclusiveWin32InfoEXT where
     pokeField @"hmonitor" ptr val
 
 instance Offset "sType" VkSurfaceFullScreenExclusiveWin32InfoEXT where
-  rawOffset = #{offset struct VkSurfaceFullScreenExclusiveWin32InfoEXT, sType}
+  rawOffset = #{offset VkSurfaceFullScreenExclusiveWin32InfoEXT, sType}
 
 instance Offset "pNext" VkSurfaceFullScreenExclusiveWin32InfoEXT where
-  rawOffset = #{offset struct VkSurfaceFullScreenExclusiveWin32InfoEXT, pNext}
+  rawOffset = #{offset VkSurfaceFullScreenExclusiveWin32InfoEXT, pNext}
 
 instance Offset "hmonitor" VkSurfaceFullScreenExclusiveWin32InfoEXT where
-  rawOffset = #{offset struct VkSurfaceFullScreenExclusiveWin32InfoEXT, hmonitor}
+  rawOffset = #{offset VkSurfaceFullScreenExclusiveWin32InfoEXT, hmonitor}
 
 #else
 

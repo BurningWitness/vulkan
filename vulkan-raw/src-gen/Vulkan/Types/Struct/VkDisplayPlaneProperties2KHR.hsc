@@ -30,8 +30,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkDisplayPlaneProperties2KHR" #-} VkDisplayPla
          }
 
 instance Storable VkDisplayPlaneProperties2KHR where
-  sizeOf    _ = #{size      struct VkDisplayPlaneProperties2KHR}
-  alignment _ = #{alignment struct VkDisplayPlaneProperties2KHR}
+  sizeOf    _ = #{size      VkDisplayPlaneProperties2KHR}
+  alignment _ = #{alignment VkDisplayPlaneProperties2KHR}
 
   peek ptr = 
     VkDisplayPlaneProperties2KHR
@@ -45,13 +45,13 @@ instance Storable VkDisplayPlaneProperties2KHR where
     pokeField @"displayPlaneProperties" ptr val
 
 instance Offset "sType" VkDisplayPlaneProperties2KHR where
-  rawOffset = #{offset struct VkDisplayPlaneProperties2KHR, sType}
+  rawOffset = #{offset VkDisplayPlaneProperties2KHR, sType}
 
 instance Offset "pNext" VkDisplayPlaneProperties2KHR where
-  rawOffset = #{offset struct VkDisplayPlaneProperties2KHR, pNext}
+  rawOffset = #{offset VkDisplayPlaneProperties2KHR, pNext}
 
 instance Offset "displayPlaneProperties" VkDisplayPlaneProperties2KHR where
-  rawOffset = #{offset struct VkDisplayPlaneProperties2KHR, displayPlaneProperties}
+  rawOffset = #{offset VkDisplayPlaneProperties2KHR, displayPlaneProperties}
 
 #else
 

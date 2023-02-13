@@ -32,8 +32,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkFragmentShadingRateAttachmentInfoKHR" #-} Vk
          }
 
 instance Storable VkFragmentShadingRateAttachmentInfoKHR where
-  sizeOf    _ = #{size      struct VkFragmentShadingRateAttachmentInfoKHR}
-  alignment _ = #{alignment struct VkFragmentShadingRateAttachmentInfoKHR}
+  sizeOf    _ = #{size      VkFragmentShadingRateAttachmentInfoKHR}
+  alignment _ = #{alignment VkFragmentShadingRateAttachmentInfoKHR}
 
   peek ptr = 
     VkFragmentShadingRateAttachmentInfoKHR
@@ -49,16 +49,16 @@ instance Storable VkFragmentShadingRateAttachmentInfoKHR where
     pokeField @"shadingRateAttachmentTexelSize" ptr val
 
 instance Offset "sType" VkFragmentShadingRateAttachmentInfoKHR where
-  rawOffset = #{offset struct VkFragmentShadingRateAttachmentInfoKHR, sType}
+  rawOffset = #{offset VkFragmentShadingRateAttachmentInfoKHR, sType}
 
 instance Offset "pNext" VkFragmentShadingRateAttachmentInfoKHR where
-  rawOffset = #{offset struct VkFragmentShadingRateAttachmentInfoKHR, pNext}
+  rawOffset = #{offset VkFragmentShadingRateAttachmentInfoKHR, pNext}
 
 instance Offset "pFragmentShadingRateAttachment" VkFragmentShadingRateAttachmentInfoKHR where
-  rawOffset = #{offset struct VkFragmentShadingRateAttachmentInfoKHR, pFragmentShadingRateAttachment}
+  rawOffset = #{offset VkFragmentShadingRateAttachmentInfoKHR, pFragmentShadingRateAttachment}
 
 instance Offset "shadingRateAttachmentTexelSize" VkFragmentShadingRateAttachmentInfoKHR where
-  rawOffset = #{offset struct VkFragmentShadingRateAttachmentInfoKHR, shadingRateAttachmentTexelSize}
+  rawOffset = #{offset VkFragmentShadingRateAttachmentInfoKHR, shadingRateAttachmentTexelSize}
 
 #else
 

@@ -31,8 +31,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkPhysicalDeviceTransformFeedbackFeaturesEXT" 
          }
 
 instance Storable VkPhysicalDeviceTransformFeedbackFeaturesEXT where
-  sizeOf    _ = #{size      struct VkPhysicalDeviceTransformFeedbackFeaturesEXT}
-  alignment _ = #{alignment struct VkPhysicalDeviceTransformFeedbackFeaturesEXT}
+  sizeOf    _ = #{size      VkPhysicalDeviceTransformFeedbackFeaturesEXT}
+  alignment _ = #{alignment VkPhysicalDeviceTransformFeedbackFeaturesEXT}
 
   peek ptr = 
     VkPhysicalDeviceTransformFeedbackFeaturesEXT
@@ -48,16 +48,16 @@ instance Storable VkPhysicalDeviceTransformFeedbackFeaturesEXT where
     pokeField @"geometryStreams" ptr val
 
 instance Offset "sType" VkPhysicalDeviceTransformFeedbackFeaturesEXT where
-  rawOffset = #{offset struct VkPhysicalDeviceTransformFeedbackFeaturesEXT, sType}
+  rawOffset = #{offset VkPhysicalDeviceTransformFeedbackFeaturesEXT, sType}
 
 instance Offset "pNext" VkPhysicalDeviceTransformFeedbackFeaturesEXT where
-  rawOffset = #{offset struct VkPhysicalDeviceTransformFeedbackFeaturesEXT, pNext}
+  rawOffset = #{offset VkPhysicalDeviceTransformFeedbackFeaturesEXT, pNext}
 
 instance Offset "transformFeedback" VkPhysicalDeviceTransformFeedbackFeaturesEXT where
-  rawOffset = #{offset struct VkPhysicalDeviceTransformFeedbackFeaturesEXT, transformFeedback}
+  rawOffset = #{offset VkPhysicalDeviceTransformFeedbackFeaturesEXT, transformFeedback}
 
 instance Offset "geometryStreams" VkPhysicalDeviceTransformFeedbackFeaturesEXT where
-  rawOffset = #{offset struct VkPhysicalDeviceTransformFeedbackFeaturesEXT, geometryStreams}
+  rawOffset = #{offset VkPhysicalDeviceTransformFeedbackFeaturesEXT, geometryStreams}
 
 #else
 

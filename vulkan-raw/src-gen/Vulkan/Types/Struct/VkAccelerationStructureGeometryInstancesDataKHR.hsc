@@ -33,8 +33,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkAccelerationStructureGeometryInstancesDataKH
          }
 
 instance Storable VkAccelerationStructureGeometryInstancesDataKHR where
-  sizeOf    _ = #{size      struct VkAccelerationStructureGeometryInstancesDataKHR}
-  alignment _ = #{alignment struct VkAccelerationStructureGeometryInstancesDataKHR}
+  sizeOf    _ = #{size      VkAccelerationStructureGeometryInstancesDataKHR}
+  alignment _ = #{alignment VkAccelerationStructureGeometryInstancesDataKHR}
 
   peek ptr = 
     VkAccelerationStructureGeometryInstancesDataKHR
@@ -50,16 +50,16 @@ instance Storable VkAccelerationStructureGeometryInstancesDataKHR where
     pokeField @"data" ptr val
 
 instance Offset "sType" VkAccelerationStructureGeometryInstancesDataKHR where
-  rawOffset = #{offset struct VkAccelerationStructureGeometryInstancesDataKHR, sType}
+  rawOffset = #{offset VkAccelerationStructureGeometryInstancesDataKHR, sType}
 
 instance Offset "pNext" VkAccelerationStructureGeometryInstancesDataKHR where
-  rawOffset = #{offset struct VkAccelerationStructureGeometryInstancesDataKHR, pNext}
+  rawOffset = #{offset VkAccelerationStructureGeometryInstancesDataKHR, pNext}
 
 instance Offset "arrayOfPointers" VkAccelerationStructureGeometryInstancesDataKHR where
-  rawOffset = #{offset struct VkAccelerationStructureGeometryInstancesDataKHR, arrayOfPointers}
+  rawOffset = #{offset VkAccelerationStructureGeometryInstancesDataKHR, arrayOfPointers}
 
 instance Offset "data_" VkAccelerationStructureGeometryInstancesDataKHR where
-  rawOffset = #{offset struct VkAccelerationStructureGeometryInstancesDataKHR, data}
+  rawOffset = #{offset VkAccelerationStructureGeometryInstancesDataKHR, data}
 
 instance Offset "data" VkAccelerationStructureGeometryInstancesDataKHR where
   rawOffset = rawOffset @"data_" @VkAccelerationStructureGeometryInstancesDataKHR

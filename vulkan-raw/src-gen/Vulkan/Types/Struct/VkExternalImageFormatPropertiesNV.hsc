@@ -32,8 +32,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkExternalImageFormatPropertiesNV" #-} VkExter
          }
 
 instance Storable VkExternalImageFormatPropertiesNV where
-  sizeOf    _ = #{size      struct VkExternalImageFormatPropertiesNV}
-  alignment _ = #{alignment struct VkExternalImageFormatPropertiesNV}
+  sizeOf    _ = #{size      VkExternalImageFormatPropertiesNV}
+  alignment _ = #{alignment VkExternalImageFormatPropertiesNV}
 
   peek ptr = 
     VkExternalImageFormatPropertiesNV
@@ -49,16 +49,16 @@ instance Storable VkExternalImageFormatPropertiesNV where
     pokeField @"compatibleHandleTypes" ptr val
 
 instance Offset "imageFormatProperties" VkExternalImageFormatPropertiesNV where
-  rawOffset = #{offset struct VkExternalImageFormatPropertiesNV, imageFormatProperties}
+  rawOffset = #{offset VkExternalImageFormatPropertiesNV, imageFormatProperties}
 
 instance Offset "externalMemoryFeatures" VkExternalImageFormatPropertiesNV where
-  rawOffset = #{offset struct VkExternalImageFormatPropertiesNV, externalMemoryFeatures}
+  rawOffset = #{offset VkExternalImageFormatPropertiesNV, externalMemoryFeatures}
 
 instance Offset "exportFromImportedHandleTypes" VkExternalImageFormatPropertiesNV where
-  rawOffset = #{offset struct VkExternalImageFormatPropertiesNV, exportFromImportedHandleTypes}
+  rawOffset = #{offset VkExternalImageFormatPropertiesNV, exportFromImportedHandleTypes}
 
 instance Offset "compatibleHandleTypes" VkExternalImageFormatPropertiesNV where
-  rawOffset = #{offset struct VkExternalImageFormatPropertiesNV, compatibleHandleTypes}
+  rawOffset = #{offset VkExternalImageFormatPropertiesNV, compatibleHandleTypes}
 
 #else
 

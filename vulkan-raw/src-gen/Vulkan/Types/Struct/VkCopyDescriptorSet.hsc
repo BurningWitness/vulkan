@@ -34,8 +34,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkCopyDescriptorSet" #-} VkCopyDescriptorSet =
          }
 
 instance Storable VkCopyDescriptorSet where
-  sizeOf    _ = #{size      struct VkCopyDescriptorSet}
-  alignment _ = #{alignment struct VkCopyDescriptorSet}
+  sizeOf    _ = #{size      VkCopyDescriptorSet}
+  alignment _ = #{alignment VkCopyDescriptorSet}
 
   peek ptr = 
     VkCopyDescriptorSet
@@ -61,28 +61,28 @@ instance Storable VkCopyDescriptorSet where
     pokeField @"descriptorCount" ptr val
 
 instance Offset "sType" VkCopyDescriptorSet where
-  rawOffset = #{offset struct VkCopyDescriptorSet, sType}
+  rawOffset = #{offset VkCopyDescriptorSet, sType}
 
 instance Offset "pNext" VkCopyDescriptorSet where
-  rawOffset = #{offset struct VkCopyDescriptorSet, pNext}
+  rawOffset = #{offset VkCopyDescriptorSet, pNext}
 
 instance Offset "srcSet" VkCopyDescriptorSet where
-  rawOffset = #{offset struct VkCopyDescriptorSet, srcSet}
+  rawOffset = #{offset VkCopyDescriptorSet, srcSet}
 
 instance Offset "srcBinding" VkCopyDescriptorSet where
-  rawOffset = #{offset struct VkCopyDescriptorSet, srcBinding}
+  rawOffset = #{offset VkCopyDescriptorSet, srcBinding}
 
 instance Offset "srcArrayElement" VkCopyDescriptorSet where
-  rawOffset = #{offset struct VkCopyDescriptorSet, srcArrayElement}
+  rawOffset = #{offset VkCopyDescriptorSet, srcArrayElement}
 
 instance Offset "dstSet" VkCopyDescriptorSet where
-  rawOffset = #{offset struct VkCopyDescriptorSet, dstSet}
+  rawOffset = #{offset VkCopyDescriptorSet, dstSet}
 
 instance Offset "dstBinding" VkCopyDescriptorSet where
-  rawOffset = #{offset struct VkCopyDescriptorSet, dstBinding}
+  rawOffset = #{offset VkCopyDescriptorSet, dstBinding}
 
 instance Offset "dstArrayElement" VkCopyDescriptorSet where
-  rawOffset = #{offset struct VkCopyDescriptorSet, dstArrayElement}
+  rawOffset = #{offset VkCopyDescriptorSet, dstArrayElement}
 
 instance Offset "descriptorCount" VkCopyDescriptorSet where
-  rawOffset = #{offset struct VkCopyDescriptorSet, descriptorCount}
+  rawOffset = #{offset VkCopyDescriptorSet, descriptorCount}

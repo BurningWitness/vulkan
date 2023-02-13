@@ -32,8 +32,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkPhysicalDeviceFragmentShadingRateEnumsFeatur
          }
 
 instance Storable VkPhysicalDeviceFragmentShadingRateEnumsFeaturesNV where
-  sizeOf    _ = #{size      struct VkPhysicalDeviceFragmentShadingRateEnumsFeaturesNV}
-  alignment _ = #{alignment struct VkPhysicalDeviceFragmentShadingRateEnumsFeaturesNV}
+  sizeOf    _ = #{size      VkPhysicalDeviceFragmentShadingRateEnumsFeaturesNV}
+  alignment _ = #{alignment VkPhysicalDeviceFragmentShadingRateEnumsFeaturesNV}
 
   peek ptr = 
     VkPhysicalDeviceFragmentShadingRateEnumsFeaturesNV
@@ -51,19 +51,19 @@ instance Storable VkPhysicalDeviceFragmentShadingRateEnumsFeaturesNV where
     pokeField @"noInvocationFragmentShadingRates" ptr val
 
 instance Offset "sType" VkPhysicalDeviceFragmentShadingRateEnumsFeaturesNV where
-  rawOffset = #{offset struct VkPhysicalDeviceFragmentShadingRateEnumsFeaturesNV, sType}
+  rawOffset = #{offset VkPhysicalDeviceFragmentShadingRateEnumsFeaturesNV, sType}
 
 instance Offset "pNext" VkPhysicalDeviceFragmentShadingRateEnumsFeaturesNV where
-  rawOffset = #{offset struct VkPhysicalDeviceFragmentShadingRateEnumsFeaturesNV, pNext}
+  rawOffset = #{offset VkPhysicalDeviceFragmentShadingRateEnumsFeaturesNV, pNext}
 
 instance Offset "fragmentShadingRateEnums" VkPhysicalDeviceFragmentShadingRateEnumsFeaturesNV where
-  rawOffset = #{offset struct VkPhysicalDeviceFragmentShadingRateEnumsFeaturesNV, fragmentShadingRateEnums}
+  rawOffset = #{offset VkPhysicalDeviceFragmentShadingRateEnumsFeaturesNV, fragmentShadingRateEnums}
 
 instance Offset "supersampleFragmentShadingRates" VkPhysicalDeviceFragmentShadingRateEnumsFeaturesNV where
-  rawOffset = #{offset struct VkPhysicalDeviceFragmentShadingRateEnumsFeaturesNV, supersampleFragmentShadingRates}
+  rawOffset = #{offset VkPhysicalDeviceFragmentShadingRateEnumsFeaturesNV, supersampleFragmentShadingRates}
 
 instance Offset "noInvocationFragmentShadingRates" VkPhysicalDeviceFragmentShadingRateEnumsFeaturesNV where
-  rawOffset = #{offset struct VkPhysicalDeviceFragmentShadingRateEnumsFeaturesNV, noInvocationFragmentShadingRates}
+  rawOffset = #{offset VkPhysicalDeviceFragmentShadingRateEnumsFeaturesNV, noInvocationFragmentShadingRates}
 
 #else
 

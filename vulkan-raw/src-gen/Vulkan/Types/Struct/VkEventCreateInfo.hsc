@@ -28,8 +28,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkEventCreateInfo" #-} VkEventCreateInfo =
          }
 
 instance Storable VkEventCreateInfo where
-  sizeOf    _ = #{size      struct VkEventCreateInfo}
-  alignment _ = #{alignment struct VkEventCreateInfo}
+  sizeOf    _ = #{size      VkEventCreateInfo}
+  alignment _ = #{alignment VkEventCreateInfo}
 
   peek ptr = 
     VkEventCreateInfo
@@ -43,10 +43,10 @@ instance Storable VkEventCreateInfo where
     pokeField @"flags" ptr val
 
 instance Offset "sType" VkEventCreateInfo where
-  rawOffset = #{offset struct VkEventCreateInfo, sType}
+  rawOffset = #{offset VkEventCreateInfo, sType}
 
 instance Offset "pNext" VkEventCreateInfo where
-  rawOffset = #{offset struct VkEventCreateInfo, pNext}
+  rawOffset = #{offset VkEventCreateInfo, pNext}
 
 instance Offset "flags" VkEventCreateInfo where
-  rawOffset = #{offset struct VkEventCreateInfo, flags}
+  rawOffset = #{offset VkEventCreateInfo, flags}

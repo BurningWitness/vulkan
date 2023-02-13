@@ -33,8 +33,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkBindImageMemoryDeviceGroupInfo" #-} VkBindIm
          }
 
 instance Storable VkBindImageMemoryDeviceGroupInfo where
-  sizeOf    _ = #{size      struct VkBindImageMemoryDeviceGroupInfo}
-  alignment _ = #{alignment struct VkBindImageMemoryDeviceGroupInfo}
+  sizeOf    _ = #{size      VkBindImageMemoryDeviceGroupInfo}
+  alignment _ = #{alignment VkBindImageMemoryDeviceGroupInfo}
 
   peek ptr = 
     VkBindImageMemoryDeviceGroupInfo
@@ -54,22 +54,22 @@ instance Storable VkBindImageMemoryDeviceGroupInfo where
     pokeField @"pSplitInstanceBindRegions" ptr val
 
 instance Offset "sType" VkBindImageMemoryDeviceGroupInfo where
-  rawOffset = #{offset struct VkBindImageMemoryDeviceGroupInfo, sType}
+  rawOffset = #{offset VkBindImageMemoryDeviceGroupInfo, sType}
 
 instance Offset "pNext" VkBindImageMemoryDeviceGroupInfo where
-  rawOffset = #{offset struct VkBindImageMemoryDeviceGroupInfo, pNext}
+  rawOffset = #{offset VkBindImageMemoryDeviceGroupInfo, pNext}
 
 instance Offset "deviceIndexCount" VkBindImageMemoryDeviceGroupInfo where
-  rawOffset = #{offset struct VkBindImageMemoryDeviceGroupInfo, deviceIndexCount}
+  rawOffset = #{offset VkBindImageMemoryDeviceGroupInfo, deviceIndexCount}
 
 instance Offset "pDeviceIndices" VkBindImageMemoryDeviceGroupInfo where
-  rawOffset = #{offset struct VkBindImageMemoryDeviceGroupInfo, pDeviceIndices}
+  rawOffset = #{offset VkBindImageMemoryDeviceGroupInfo, pDeviceIndices}
 
 instance Offset "splitInstanceBindRegionCount" VkBindImageMemoryDeviceGroupInfo where
-  rawOffset = #{offset struct VkBindImageMemoryDeviceGroupInfo, splitInstanceBindRegionCount}
+  rawOffset = #{offset VkBindImageMemoryDeviceGroupInfo, splitInstanceBindRegionCount}
 
 instance Offset "pSplitInstanceBindRegions" VkBindImageMemoryDeviceGroupInfo where
-  rawOffset = #{offset struct VkBindImageMemoryDeviceGroupInfo, pSplitInstanceBindRegions}
+  rawOffset = #{offset VkBindImageMemoryDeviceGroupInfo, pSplitInstanceBindRegions}
 
 #else
 

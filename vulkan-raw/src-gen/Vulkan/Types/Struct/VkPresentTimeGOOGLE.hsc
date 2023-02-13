@@ -27,8 +27,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkPresentTimeGOOGLE" #-} VkPresentTimeGOOGLE =
          }
 
 instance Storable VkPresentTimeGOOGLE where
-  sizeOf    _ = #{size      struct VkPresentTimeGOOGLE}
-  alignment _ = #{alignment struct VkPresentTimeGOOGLE}
+  sizeOf    _ = #{size      VkPresentTimeGOOGLE}
+  alignment _ = #{alignment VkPresentTimeGOOGLE}
 
   peek ptr = 
     VkPresentTimeGOOGLE
@@ -40,10 +40,10 @@ instance Storable VkPresentTimeGOOGLE where
     pokeField @"desiredPresentTime" ptr val
 
 instance Offset "presentID" VkPresentTimeGOOGLE where
-  rawOffset = #{offset struct VkPresentTimeGOOGLE, presentID}
+  rawOffset = #{offset VkPresentTimeGOOGLE, presentID}
 
 instance Offset "desiredPresentTime" VkPresentTimeGOOGLE where
-  rawOffset = #{offset struct VkPresentTimeGOOGLE, desiredPresentTime}
+  rawOffset = #{offset VkPresentTimeGOOGLE, desiredPresentTime}
 
 #else
 

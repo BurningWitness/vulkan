@@ -31,8 +31,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkPhysicalDeviceShaderCoreBuiltinsPropertiesAR
          }
 
 instance Storable VkPhysicalDeviceShaderCoreBuiltinsPropertiesARM where
-  sizeOf    _ = #{size      struct VkPhysicalDeviceShaderCoreBuiltinsPropertiesARM}
-  alignment _ = #{alignment struct VkPhysicalDeviceShaderCoreBuiltinsPropertiesARM}
+  sizeOf    _ = #{size      VkPhysicalDeviceShaderCoreBuiltinsPropertiesARM}
+  alignment _ = #{alignment VkPhysicalDeviceShaderCoreBuiltinsPropertiesARM}
 
   peek ptr = 
     VkPhysicalDeviceShaderCoreBuiltinsPropertiesARM
@@ -50,19 +50,19 @@ instance Storable VkPhysicalDeviceShaderCoreBuiltinsPropertiesARM where
     pokeField @"shaderWarpsPerCore" ptr val
 
 instance Offset "sType" VkPhysicalDeviceShaderCoreBuiltinsPropertiesARM where
-  rawOffset = #{offset struct VkPhysicalDeviceShaderCoreBuiltinsPropertiesARM, sType}
+  rawOffset = #{offset VkPhysicalDeviceShaderCoreBuiltinsPropertiesARM, sType}
 
 instance Offset "pNext" VkPhysicalDeviceShaderCoreBuiltinsPropertiesARM where
-  rawOffset = #{offset struct VkPhysicalDeviceShaderCoreBuiltinsPropertiesARM, pNext}
+  rawOffset = #{offset VkPhysicalDeviceShaderCoreBuiltinsPropertiesARM, pNext}
 
 instance Offset "shaderCoreMask" VkPhysicalDeviceShaderCoreBuiltinsPropertiesARM where
-  rawOffset = #{offset struct VkPhysicalDeviceShaderCoreBuiltinsPropertiesARM, shaderCoreMask}
+  rawOffset = #{offset VkPhysicalDeviceShaderCoreBuiltinsPropertiesARM, shaderCoreMask}
 
 instance Offset "shaderCoreCount" VkPhysicalDeviceShaderCoreBuiltinsPropertiesARM where
-  rawOffset = #{offset struct VkPhysicalDeviceShaderCoreBuiltinsPropertiesARM, shaderCoreCount}
+  rawOffset = #{offset VkPhysicalDeviceShaderCoreBuiltinsPropertiesARM, shaderCoreCount}
 
 instance Offset "shaderWarpsPerCore" VkPhysicalDeviceShaderCoreBuiltinsPropertiesARM where
-  rawOffset = #{offset struct VkPhysicalDeviceShaderCoreBuiltinsPropertiesARM, shaderWarpsPerCore}
+  rawOffset = #{offset VkPhysicalDeviceShaderCoreBuiltinsPropertiesARM, shaderWarpsPerCore}
 
 #else
 

@@ -32,8 +32,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkMemoryGetRemoteAddressInfoNV" #-} VkMemoryGe
          }
 
 instance Storable VkMemoryGetRemoteAddressInfoNV where
-  sizeOf    _ = #{size      struct VkMemoryGetRemoteAddressInfoNV}
-  alignment _ = #{alignment struct VkMemoryGetRemoteAddressInfoNV}
+  sizeOf    _ = #{size      VkMemoryGetRemoteAddressInfoNV}
+  alignment _ = #{alignment VkMemoryGetRemoteAddressInfoNV}
 
   peek ptr = 
     VkMemoryGetRemoteAddressInfoNV
@@ -49,16 +49,16 @@ instance Storable VkMemoryGetRemoteAddressInfoNV where
     pokeField @"handleType" ptr val
 
 instance Offset "sType" VkMemoryGetRemoteAddressInfoNV where
-  rawOffset = #{offset struct VkMemoryGetRemoteAddressInfoNV, sType}
+  rawOffset = #{offset VkMemoryGetRemoteAddressInfoNV, sType}
 
 instance Offset "pNext" VkMemoryGetRemoteAddressInfoNV where
-  rawOffset = #{offset struct VkMemoryGetRemoteAddressInfoNV, pNext}
+  rawOffset = #{offset VkMemoryGetRemoteAddressInfoNV, pNext}
 
 instance Offset "memory" VkMemoryGetRemoteAddressInfoNV where
-  rawOffset = #{offset struct VkMemoryGetRemoteAddressInfoNV, memory}
+  rawOffset = #{offset VkMemoryGetRemoteAddressInfoNV, memory}
 
 instance Offset "handleType" VkMemoryGetRemoteAddressInfoNV where
-  rawOffset = #{offset struct VkMemoryGetRemoteAddressInfoNV, handleType}
+  rawOffset = #{offset VkMemoryGetRemoteAddressInfoNV, handleType}
 
 #else
 

@@ -35,8 +35,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkVideoPictureResourceInfoKHR" #-} VkVideoPict
          }
 
 instance Storable VkVideoPictureResourceInfoKHR where
-  sizeOf    _ = #{size      struct VkVideoPictureResourceInfoKHR}
-  alignment _ = #{alignment struct VkVideoPictureResourceInfoKHR}
+  sizeOf    _ = #{size      VkVideoPictureResourceInfoKHR}
+  alignment _ = #{alignment VkVideoPictureResourceInfoKHR}
 
   peek ptr = 
     VkVideoPictureResourceInfoKHR
@@ -56,22 +56,22 @@ instance Storable VkVideoPictureResourceInfoKHR where
     pokeField @"imageViewBinding" ptr val
 
 instance Offset "sType" VkVideoPictureResourceInfoKHR where
-  rawOffset = #{offset struct VkVideoPictureResourceInfoKHR, sType}
+  rawOffset = #{offset VkVideoPictureResourceInfoKHR, sType}
 
 instance Offset "pNext" VkVideoPictureResourceInfoKHR where
-  rawOffset = #{offset struct VkVideoPictureResourceInfoKHR, pNext}
+  rawOffset = #{offset VkVideoPictureResourceInfoKHR, pNext}
 
 instance Offset "codedOffset" VkVideoPictureResourceInfoKHR where
-  rawOffset = #{offset struct VkVideoPictureResourceInfoKHR, codedOffset}
+  rawOffset = #{offset VkVideoPictureResourceInfoKHR, codedOffset}
 
 instance Offset "codedExtent" VkVideoPictureResourceInfoKHR where
-  rawOffset = #{offset struct VkVideoPictureResourceInfoKHR, codedExtent}
+  rawOffset = #{offset VkVideoPictureResourceInfoKHR, codedExtent}
 
 instance Offset "baseArrayLayer" VkVideoPictureResourceInfoKHR where
-  rawOffset = #{offset struct VkVideoPictureResourceInfoKHR, baseArrayLayer}
+  rawOffset = #{offset VkVideoPictureResourceInfoKHR, baseArrayLayer}
 
 instance Offset "imageViewBinding" VkVideoPictureResourceInfoKHR where
-  rawOffset = #{offset struct VkVideoPictureResourceInfoKHR, imageViewBinding}
+  rawOffset = #{offset VkVideoPictureResourceInfoKHR, imageViewBinding}
 
 #else
 

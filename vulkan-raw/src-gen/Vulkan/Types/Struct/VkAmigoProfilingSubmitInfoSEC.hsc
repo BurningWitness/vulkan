@@ -30,8 +30,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkAmigoProfilingSubmitInfoSEC" #-} VkAmigoProf
          }
 
 instance Storable VkAmigoProfilingSubmitInfoSEC where
-  sizeOf    _ = #{size      struct VkAmigoProfilingSubmitInfoSEC}
-  alignment _ = #{alignment struct VkAmigoProfilingSubmitInfoSEC}
+  sizeOf    _ = #{size      VkAmigoProfilingSubmitInfoSEC}
+  alignment _ = #{alignment VkAmigoProfilingSubmitInfoSEC}
 
   peek ptr = 
     VkAmigoProfilingSubmitInfoSEC
@@ -47,16 +47,16 @@ instance Storable VkAmigoProfilingSubmitInfoSEC where
     pokeField @"swapBufferTimestamp" ptr val
 
 instance Offset "sType" VkAmigoProfilingSubmitInfoSEC where
-  rawOffset = #{offset struct VkAmigoProfilingSubmitInfoSEC, sType}
+  rawOffset = #{offset VkAmigoProfilingSubmitInfoSEC, sType}
 
 instance Offset "pNext" VkAmigoProfilingSubmitInfoSEC where
-  rawOffset = #{offset struct VkAmigoProfilingSubmitInfoSEC, pNext}
+  rawOffset = #{offset VkAmigoProfilingSubmitInfoSEC, pNext}
 
 instance Offset "firstDrawTimestamp" VkAmigoProfilingSubmitInfoSEC where
-  rawOffset = #{offset struct VkAmigoProfilingSubmitInfoSEC, firstDrawTimestamp}
+  rawOffset = #{offset VkAmigoProfilingSubmitInfoSEC, firstDrawTimestamp}
 
 instance Offset "swapBufferTimestamp" VkAmigoProfilingSubmitInfoSEC where
-  rawOffset = #{offset struct VkAmigoProfilingSubmitInfoSEC, swapBufferTimestamp}
+  rawOffset = #{offset VkAmigoProfilingSubmitInfoSEC, swapBufferTimestamp}
 
 #else
 

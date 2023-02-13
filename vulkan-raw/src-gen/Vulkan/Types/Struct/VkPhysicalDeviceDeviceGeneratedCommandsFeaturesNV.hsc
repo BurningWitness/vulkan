@@ -30,8 +30,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkPhysicalDeviceDeviceGeneratedCommandsFeature
          }
 
 instance Storable VkPhysicalDeviceDeviceGeneratedCommandsFeaturesNV where
-  sizeOf    _ = #{size      struct VkPhysicalDeviceDeviceGeneratedCommandsFeaturesNV}
-  alignment _ = #{alignment struct VkPhysicalDeviceDeviceGeneratedCommandsFeaturesNV}
+  sizeOf    _ = #{size      VkPhysicalDeviceDeviceGeneratedCommandsFeaturesNV}
+  alignment _ = #{alignment VkPhysicalDeviceDeviceGeneratedCommandsFeaturesNV}
 
   peek ptr = 
     VkPhysicalDeviceDeviceGeneratedCommandsFeaturesNV
@@ -45,13 +45,13 @@ instance Storable VkPhysicalDeviceDeviceGeneratedCommandsFeaturesNV where
     pokeField @"deviceGeneratedCommands" ptr val
 
 instance Offset "sType" VkPhysicalDeviceDeviceGeneratedCommandsFeaturesNV where
-  rawOffset = #{offset struct VkPhysicalDeviceDeviceGeneratedCommandsFeaturesNV, sType}
+  rawOffset = #{offset VkPhysicalDeviceDeviceGeneratedCommandsFeaturesNV, sType}
 
 instance Offset "pNext" VkPhysicalDeviceDeviceGeneratedCommandsFeaturesNV where
-  rawOffset = #{offset struct VkPhysicalDeviceDeviceGeneratedCommandsFeaturesNV, pNext}
+  rawOffset = #{offset VkPhysicalDeviceDeviceGeneratedCommandsFeaturesNV, pNext}
 
 instance Offset "deviceGeneratedCommands" VkPhysicalDeviceDeviceGeneratedCommandsFeaturesNV where
-  rawOffset = #{offset struct VkPhysicalDeviceDeviceGeneratedCommandsFeaturesNV, deviceGeneratedCommands}
+  rawOffset = #{offset VkPhysicalDeviceDeviceGeneratedCommandsFeaturesNV, deviceGeneratedCommands}
 
 #else
 

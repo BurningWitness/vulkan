@@ -36,8 +36,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkExportMetalTextureInfoEXT" #-} VkExportMetal
          }
 
 instance Storable VkExportMetalTextureInfoEXT where
-  sizeOf    _ = #{size      struct VkExportMetalTextureInfoEXT}
-  alignment _ = #{alignment struct VkExportMetalTextureInfoEXT}
+  sizeOf    _ = #{size      VkExportMetalTextureInfoEXT}
+  alignment _ = #{alignment VkExportMetalTextureInfoEXT}
 
   peek ptr = 
     VkExportMetalTextureInfoEXT
@@ -59,25 +59,25 @@ instance Storable VkExportMetalTextureInfoEXT where
     pokeField @"mtlTexture" ptr val
 
 instance Offset "sType" VkExportMetalTextureInfoEXT where
-  rawOffset = #{offset struct VkExportMetalTextureInfoEXT, sType}
+  rawOffset = #{offset VkExportMetalTextureInfoEXT, sType}
 
 instance Offset "pNext" VkExportMetalTextureInfoEXT where
-  rawOffset = #{offset struct VkExportMetalTextureInfoEXT, pNext}
+  rawOffset = #{offset VkExportMetalTextureInfoEXT, pNext}
 
 instance Offset "image" VkExportMetalTextureInfoEXT where
-  rawOffset = #{offset struct VkExportMetalTextureInfoEXT, image}
+  rawOffset = #{offset VkExportMetalTextureInfoEXT, image}
 
 instance Offset "imageView" VkExportMetalTextureInfoEXT where
-  rawOffset = #{offset struct VkExportMetalTextureInfoEXT, imageView}
+  rawOffset = #{offset VkExportMetalTextureInfoEXT, imageView}
 
 instance Offset "bufferView" VkExportMetalTextureInfoEXT where
-  rawOffset = #{offset struct VkExportMetalTextureInfoEXT, bufferView}
+  rawOffset = #{offset VkExportMetalTextureInfoEXT, bufferView}
 
 instance Offset "plane" VkExportMetalTextureInfoEXT where
-  rawOffset = #{offset struct VkExportMetalTextureInfoEXT, plane}
+  rawOffset = #{offset VkExportMetalTextureInfoEXT, plane}
 
 instance Offset "mtlTexture" VkExportMetalTextureInfoEXT where
-  rawOffset = #{offset struct VkExportMetalTextureInfoEXT, mtlTexture}
+  rawOffset = #{offset VkExportMetalTextureInfoEXT, mtlTexture}
 
 #else
 

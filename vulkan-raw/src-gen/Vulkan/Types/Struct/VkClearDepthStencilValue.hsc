@@ -25,8 +25,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkClearDepthStencilValue" #-} VkClearDepthSten
          }
 
 instance Storable VkClearDepthStencilValue where
-  sizeOf    _ = #{size      struct VkClearDepthStencilValue}
-  alignment _ = #{alignment struct VkClearDepthStencilValue}
+  sizeOf    _ = #{size      VkClearDepthStencilValue}
+  alignment _ = #{alignment VkClearDepthStencilValue}
 
   peek ptr = 
     VkClearDepthStencilValue
@@ -38,7 +38,7 @@ instance Storable VkClearDepthStencilValue where
     pokeField @"stencil" ptr val
 
 instance Offset "depth" VkClearDepthStencilValue where
-  rawOffset = #{offset struct VkClearDepthStencilValue, depth}
+  rawOffset = #{offset VkClearDepthStencilValue, depth}
 
 instance Offset "stencil" VkClearDepthStencilValue where
-  rawOffset = #{offset struct VkClearDepthStencilValue, stencil}
+  rawOffset = #{offset VkClearDepthStencilValue, stencil}

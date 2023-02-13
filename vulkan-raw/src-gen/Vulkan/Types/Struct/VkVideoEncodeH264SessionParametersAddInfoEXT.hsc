@@ -33,8 +33,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkVideoEncodeH264SessionParametersAddInfoEXT" 
          }
 
 instance Storable VkVideoEncodeH264SessionParametersAddInfoEXT where
-  sizeOf    _ = #{size      struct VkVideoEncodeH264SessionParametersAddInfoEXT}
-  alignment _ = #{alignment struct VkVideoEncodeH264SessionParametersAddInfoEXT}
+  sizeOf    _ = #{size      VkVideoEncodeH264SessionParametersAddInfoEXT}
+  alignment _ = #{alignment VkVideoEncodeH264SessionParametersAddInfoEXT}
 
   peek ptr = 
     VkVideoEncodeH264SessionParametersAddInfoEXT
@@ -54,22 +54,22 @@ instance Storable VkVideoEncodeH264SessionParametersAddInfoEXT where
     pokeField @"pStdPPSs" ptr val
 
 instance Offset "sType" VkVideoEncodeH264SessionParametersAddInfoEXT where
-  rawOffset = #{offset struct VkVideoEncodeH264SessionParametersAddInfoEXT, sType}
+  rawOffset = #{offset VkVideoEncodeH264SessionParametersAddInfoEXT, sType}
 
 instance Offset "pNext" VkVideoEncodeH264SessionParametersAddInfoEXT where
-  rawOffset = #{offset struct VkVideoEncodeH264SessionParametersAddInfoEXT, pNext}
+  rawOffset = #{offset VkVideoEncodeH264SessionParametersAddInfoEXT, pNext}
 
 instance Offset "stdSPSCount" VkVideoEncodeH264SessionParametersAddInfoEXT where
-  rawOffset = #{offset struct VkVideoEncodeH264SessionParametersAddInfoEXT, stdSPSCount}
+  rawOffset = #{offset VkVideoEncodeH264SessionParametersAddInfoEXT, stdSPSCount}
 
 instance Offset "pStdSPSs" VkVideoEncodeH264SessionParametersAddInfoEXT where
-  rawOffset = #{offset struct VkVideoEncodeH264SessionParametersAddInfoEXT, pStdSPSs}
+  rawOffset = #{offset VkVideoEncodeH264SessionParametersAddInfoEXT, pStdSPSs}
 
 instance Offset "stdPPSCount" VkVideoEncodeH264SessionParametersAddInfoEXT where
-  rawOffset = #{offset struct VkVideoEncodeH264SessionParametersAddInfoEXT, stdPPSCount}
+  rawOffset = #{offset VkVideoEncodeH264SessionParametersAddInfoEXT, stdPPSCount}
 
 instance Offset "pStdPPSs" VkVideoEncodeH264SessionParametersAddInfoEXT where
-  rawOffset = #{offset struct VkVideoEncodeH264SessionParametersAddInfoEXT, pStdPPSs}
+  rawOffset = #{offset VkVideoEncodeH264SessionParametersAddInfoEXT, pStdPPSs}
 
 #else
 

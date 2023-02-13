@@ -29,8 +29,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkDescriptorPoolInlineUniformBlockCreateInfo" 
          }
 
 instance Storable VkDescriptorPoolInlineUniformBlockCreateInfo where
-  sizeOf    _ = #{size      struct VkDescriptorPoolInlineUniformBlockCreateInfo}
-  alignment _ = #{alignment struct VkDescriptorPoolInlineUniformBlockCreateInfo}
+  sizeOf    _ = #{size      VkDescriptorPoolInlineUniformBlockCreateInfo}
+  alignment _ = #{alignment VkDescriptorPoolInlineUniformBlockCreateInfo}
 
   peek ptr = 
     VkDescriptorPoolInlineUniformBlockCreateInfo
@@ -44,13 +44,13 @@ instance Storable VkDescriptorPoolInlineUniformBlockCreateInfo where
     pokeField @"maxInlineUniformBlockBindings" ptr val
 
 instance Offset "sType" VkDescriptorPoolInlineUniformBlockCreateInfo where
-  rawOffset = #{offset struct VkDescriptorPoolInlineUniformBlockCreateInfo, sType}
+  rawOffset = #{offset VkDescriptorPoolInlineUniformBlockCreateInfo, sType}
 
 instance Offset "pNext" VkDescriptorPoolInlineUniformBlockCreateInfo where
-  rawOffset = #{offset struct VkDescriptorPoolInlineUniformBlockCreateInfo, pNext}
+  rawOffset = #{offset VkDescriptorPoolInlineUniformBlockCreateInfo, pNext}
 
 instance Offset "maxInlineUniformBlockBindings" VkDescriptorPoolInlineUniformBlockCreateInfo where
-  rawOffset = #{offset struct VkDescriptorPoolInlineUniformBlockCreateInfo, maxInlineUniformBlockBindings}
+  rawOffset = #{offset VkDescriptorPoolInlineUniformBlockCreateInfo, maxInlineUniformBlockBindings}
 
 #else
 

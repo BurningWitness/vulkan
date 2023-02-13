@@ -30,8 +30,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkDescriptorSetAllocateInfo" #-} VkDescriptorS
          }
 
 instance Storable VkDescriptorSetAllocateInfo where
-  sizeOf    _ = #{size      struct VkDescriptorSetAllocateInfo}
-  alignment _ = #{alignment struct VkDescriptorSetAllocateInfo}
+  sizeOf    _ = #{size      VkDescriptorSetAllocateInfo}
+  alignment _ = #{alignment VkDescriptorSetAllocateInfo}
 
   peek ptr = 
     VkDescriptorSetAllocateInfo
@@ -49,16 +49,16 @@ instance Storable VkDescriptorSetAllocateInfo where
     pokeField @"pSetLayouts" ptr val
 
 instance Offset "sType" VkDescriptorSetAllocateInfo where
-  rawOffset = #{offset struct VkDescriptorSetAllocateInfo, sType}
+  rawOffset = #{offset VkDescriptorSetAllocateInfo, sType}
 
 instance Offset "pNext" VkDescriptorSetAllocateInfo where
-  rawOffset = #{offset struct VkDescriptorSetAllocateInfo, pNext}
+  rawOffset = #{offset VkDescriptorSetAllocateInfo, pNext}
 
 instance Offset "descriptorPool" VkDescriptorSetAllocateInfo where
-  rawOffset = #{offset struct VkDescriptorSetAllocateInfo, descriptorPool}
+  rawOffset = #{offset VkDescriptorSetAllocateInfo, descriptorPool}
 
 instance Offset "descriptorSetCount" VkDescriptorSetAllocateInfo where
-  rawOffset = #{offset struct VkDescriptorSetAllocateInfo, descriptorSetCount}
+  rawOffset = #{offset VkDescriptorSetAllocateInfo, descriptorSetCount}
 
 instance Offset "pSetLayouts" VkDescriptorSetAllocateInfo where
-  rawOffset = #{offset struct VkDescriptorSetAllocateInfo, pSetLayouts}
+  rawOffset = #{offset VkDescriptorSetAllocateInfo, pSetLayouts}

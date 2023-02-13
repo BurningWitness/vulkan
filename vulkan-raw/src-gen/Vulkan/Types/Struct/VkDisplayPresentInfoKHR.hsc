@@ -33,8 +33,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkDisplayPresentInfoKHR" #-} VkDisplayPresentI
          }
 
 instance Storable VkDisplayPresentInfoKHR where
-  sizeOf    _ = #{size      struct VkDisplayPresentInfoKHR}
-  alignment _ = #{alignment struct VkDisplayPresentInfoKHR}
+  sizeOf    _ = #{size      VkDisplayPresentInfoKHR}
+  alignment _ = #{alignment VkDisplayPresentInfoKHR}
 
   peek ptr = 
     VkDisplayPresentInfoKHR
@@ -52,19 +52,19 @@ instance Storable VkDisplayPresentInfoKHR where
     pokeField @"persistent" ptr val
 
 instance Offset "sType" VkDisplayPresentInfoKHR where
-  rawOffset = #{offset struct VkDisplayPresentInfoKHR, sType}
+  rawOffset = #{offset VkDisplayPresentInfoKHR, sType}
 
 instance Offset "pNext" VkDisplayPresentInfoKHR where
-  rawOffset = #{offset struct VkDisplayPresentInfoKHR, pNext}
+  rawOffset = #{offset VkDisplayPresentInfoKHR, pNext}
 
 instance Offset "srcRect" VkDisplayPresentInfoKHR where
-  rawOffset = #{offset struct VkDisplayPresentInfoKHR, srcRect}
+  rawOffset = #{offset VkDisplayPresentInfoKHR, srcRect}
 
 instance Offset "dstRect" VkDisplayPresentInfoKHR where
-  rawOffset = #{offset struct VkDisplayPresentInfoKHR, dstRect}
+  rawOffset = #{offset VkDisplayPresentInfoKHR, dstRect}
 
 instance Offset "persistent" VkDisplayPresentInfoKHR where
-  rawOffset = #{offset struct VkDisplayPresentInfoKHR, persistent}
+  rawOffset = #{offset VkDisplayPresentInfoKHR, persistent}
 
 #else
 

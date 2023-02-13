@@ -30,8 +30,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkPhysicalDeviceMemoryDecompressionFeaturesNV"
          }
 
 instance Storable VkPhysicalDeviceMemoryDecompressionFeaturesNV where
-  sizeOf    _ = #{size      struct VkPhysicalDeviceMemoryDecompressionFeaturesNV}
-  alignment _ = #{alignment struct VkPhysicalDeviceMemoryDecompressionFeaturesNV}
+  sizeOf    _ = #{size      VkPhysicalDeviceMemoryDecompressionFeaturesNV}
+  alignment _ = #{alignment VkPhysicalDeviceMemoryDecompressionFeaturesNV}
 
   peek ptr = 
     VkPhysicalDeviceMemoryDecompressionFeaturesNV
@@ -45,13 +45,13 @@ instance Storable VkPhysicalDeviceMemoryDecompressionFeaturesNV where
     pokeField @"memoryDecompression" ptr val
 
 instance Offset "sType" VkPhysicalDeviceMemoryDecompressionFeaturesNV where
-  rawOffset = #{offset struct VkPhysicalDeviceMemoryDecompressionFeaturesNV, sType}
+  rawOffset = #{offset VkPhysicalDeviceMemoryDecompressionFeaturesNV, sType}
 
 instance Offset "pNext" VkPhysicalDeviceMemoryDecompressionFeaturesNV where
-  rawOffset = #{offset struct VkPhysicalDeviceMemoryDecompressionFeaturesNV, pNext}
+  rawOffset = #{offset VkPhysicalDeviceMemoryDecompressionFeaturesNV, pNext}
 
 instance Offset "memoryDecompression" VkPhysicalDeviceMemoryDecompressionFeaturesNV where
-  rawOffset = #{offset struct VkPhysicalDeviceMemoryDecompressionFeaturesNV, memoryDecompression}
+  rawOffset = #{offset VkPhysicalDeviceMemoryDecompressionFeaturesNV, memoryDecompression}
 
 #else
 

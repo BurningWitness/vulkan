@@ -34,8 +34,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkDeviceGroupSubmitInfo" #-} VkDeviceGroupSubm
          }
 
 instance Storable VkDeviceGroupSubmitInfo where
-  sizeOf    _ = #{size      struct VkDeviceGroupSubmitInfo}
-  alignment _ = #{alignment struct VkDeviceGroupSubmitInfo}
+  sizeOf    _ = #{size      VkDeviceGroupSubmitInfo}
+  alignment _ = #{alignment VkDeviceGroupSubmitInfo}
 
   peek ptr = 
     VkDeviceGroupSubmitInfo
@@ -59,28 +59,28 @@ instance Storable VkDeviceGroupSubmitInfo where
     pokeField @"pSignalSemaphoreDeviceIndices" ptr val
 
 instance Offset "sType" VkDeviceGroupSubmitInfo where
-  rawOffset = #{offset struct VkDeviceGroupSubmitInfo, sType}
+  rawOffset = #{offset VkDeviceGroupSubmitInfo, sType}
 
 instance Offset "pNext" VkDeviceGroupSubmitInfo where
-  rawOffset = #{offset struct VkDeviceGroupSubmitInfo, pNext}
+  rawOffset = #{offset VkDeviceGroupSubmitInfo, pNext}
 
 instance Offset "waitSemaphoreCount" VkDeviceGroupSubmitInfo where
-  rawOffset = #{offset struct VkDeviceGroupSubmitInfo, waitSemaphoreCount}
+  rawOffset = #{offset VkDeviceGroupSubmitInfo, waitSemaphoreCount}
 
 instance Offset "pWaitSemaphoreDeviceIndices" VkDeviceGroupSubmitInfo where
-  rawOffset = #{offset struct VkDeviceGroupSubmitInfo, pWaitSemaphoreDeviceIndices}
+  rawOffset = #{offset VkDeviceGroupSubmitInfo, pWaitSemaphoreDeviceIndices}
 
 instance Offset "commandBufferCount" VkDeviceGroupSubmitInfo where
-  rawOffset = #{offset struct VkDeviceGroupSubmitInfo, commandBufferCount}
+  rawOffset = #{offset VkDeviceGroupSubmitInfo, commandBufferCount}
 
 instance Offset "pCommandBufferDeviceMasks" VkDeviceGroupSubmitInfo where
-  rawOffset = #{offset struct VkDeviceGroupSubmitInfo, pCommandBufferDeviceMasks}
+  rawOffset = #{offset VkDeviceGroupSubmitInfo, pCommandBufferDeviceMasks}
 
 instance Offset "signalSemaphoreCount" VkDeviceGroupSubmitInfo where
-  rawOffset = #{offset struct VkDeviceGroupSubmitInfo, signalSemaphoreCount}
+  rawOffset = #{offset VkDeviceGroupSubmitInfo, signalSemaphoreCount}
 
 instance Offset "pSignalSemaphoreDeviceIndices" VkDeviceGroupSubmitInfo where
-  rawOffset = #{offset struct VkDeviceGroupSubmitInfo, pSignalSemaphoreDeviceIndices}
+  rawOffset = #{offset VkDeviceGroupSubmitInfo, pSignalSemaphoreDeviceIndices}
 
 #else
 

@@ -30,8 +30,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkImageSubresource2EXT" #-} VkImageSubresource
          }
 
 instance Storable VkImageSubresource2EXT where
-  sizeOf    _ = #{size      struct VkImageSubresource2EXT}
-  alignment _ = #{alignment struct VkImageSubresource2EXT}
+  sizeOf    _ = #{size      VkImageSubresource2EXT}
+  alignment _ = #{alignment VkImageSubresource2EXT}
 
   peek ptr = 
     VkImageSubresource2EXT
@@ -45,13 +45,13 @@ instance Storable VkImageSubresource2EXT where
     pokeField @"imageSubresource" ptr val
 
 instance Offset "sType" VkImageSubresource2EXT where
-  rawOffset = #{offset struct VkImageSubresource2EXT, sType}
+  rawOffset = #{offset VkImageSubresource2EXT, sType}
 
 instance Offset "pNext" VkImageSubresource2EXT where
-  rawOffset = #{offset struct VkImageSubresource2EXT, pNext}
+  rawOffset = #{offset VkImageSubresource2EXT, pNext}
 
 instance Offset "imageSubresource" VkImageSubresource2EXT where
-  rawOffset = #{offset struct VkImageSubresource2EXT, imageSubresource}
+  rawOffset = #{offset VkImageSubresource2EXT, imageSubresource}
 
 #else
 

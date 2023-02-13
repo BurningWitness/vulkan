@@ -33,8 +33,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkXcbSurfaceCreateInfoKHR" #-} VkXcbSurfaceCre
          }
 
 instance Storable VkXcbSurfaceCreateInfoKHR where
-  sizeOf    _ = #{size      struct VkXcbSurfaceCreateInfoKHR}
-  alignment _ = #{alignment struct VkXcbSurfaceCreateInfoKHR}
+  sizeOf    _ = #{size      VkXcbSurfaceCreateInfoKHR}
+  alignment _ = #{alignment VkXcbSurfaceCreateInfoKHR}
 
   peek ptr = 
     VkXcbSurfaceCreateInfoKHR
@@ -52,19 +52,19 @@ instance Storable VkXcbSurfaceCreateInfoKHR where
     pokeField @"window" ptr val
 
 instance Offset "sType" VkXcbSurfaceCreateInfoKHR where
-  rawOffset = #{offset struct VkXcbSurfaceCreateInfoKHR, sType}
+  rawOffset = #{offset VkXcbSurfaceCreateInfoKHR, sType}
 
 instance Offset "pNext" VkXcbSurfaceCreateInfoKHR where
-  rawOffset = #{offset struct VkXcbSurfaceCreateInfoKHR, pNext}
+  rawOffset = #{offset VkXcbSurfaceCreateInfoKHR, pNext}
 
 instance Offset "flags" VkXcbSurfaceCreateInfoKHR where
-  rawOffset = #{offset struct VkXcbSurfaceCreateInfoKHR, flags}
+  rawOffset = #{offset VkXcbSurfaceCreateInfoKHR, flags}
 
 instance Offset "connection" VkXcbSurfaceCreateInfoKHR where
-  rawOffset = #{offset struct VkXcbSurfaceCreateInfoKHR, connection}
+  rawOffset = #{offset VkXcbSurfaceCreateInfoKHR, connection}
 
 instance Offset "window" VkXcbSurfaceCreateInfoKHR where
-  rawOffset = #{offset struct VkXcbSurfaceCreateInfoKHR, window}
+  rawOffset = #{offset VkXcbSurfaceCreateInfoKHR, window}
 
 #else
 

@@ -34,8 +34,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkGraphicsPipelineShaderGroupsCreateInfoNV" #-
          }
 
 instance Storable VkGraphicsPipelineShaderGroupsCreateInfoNV where
-  sizeOf    _ = #{size      struct VkGraphicsPipelineShaderGroupsCreateInfoNV}
-  alignment _ = #{alignment struct VkGraphicsPipelineShaderGroupsCreateInfoNV}
+  sizeOf    _ = #{size      VkGraphicsPipelineShaderGroupsCreateInfoNV}
+  alignment _ = #{alignment VkGraphicsPipelineShaderGroupsCreateInfoNV}
 
   peek ptr = 
     VkGraphicsPipelineShaderGroupsCreateInfoNV
@@ -55,22 +55,22 @@ instance Storable VkGraphicsPipelineShaderGroupsCreateInfoNV where
     pokeField @"pPipelines" ptr val
 
 instance Offset "sType" VkGraphicsPipelineShaderGroupsCreateInfoNV where
-  rawOffset = #{offset struct VkGraphicsPipelineShaderGroupsCreateInfoNV, sType}
+  rawOffset = #{offset VkGraphicsPipelineShaderGroupsCreateInfoNV, sType}
 
 instance Offset "pNext" VkGraphicsPipelineShaderGroupsCreateInfoNV where
-  rawOffset = #{offset struct VkGraphicsPipelineShaderGroupsCreateInfoNV, pNext}
+  rawOffset = #{offset VkGraphicsPipelineShaderGroupsCreateInfoNV, pNext}
 
 instance Offset "groupCount" VkGraphicsPipelineShaderGroupsCreateInfoNV where
-  rawOffset = #{offset struct VkGraphicsPipelineShaderGroupsCreateInfoNV, groupCount}
+  rawOffset = #{offset VkGraphicsPipelineShaderGroupsCreateInfoNV, groupCount}
 
 instance Offset "pGroups" VkGraphicsPipelineShaderGroupsCreateInfoNV where
-  rawOffset = #{offset struct VkGraphicsPipelineShaderGroupsCreateInfoNV, pGroups}
+  rawOffset = #{offset VkGraphicsPipelineShaderGroupsCreateInfoNV, pGroups}
 
 instance Offset "pipelineCount" VkGraphicsPipelineShaderGroupsCreateInfoNV where
-  rawOffset = #{offset struct VkGraphicsPipelineShaderGroupsCreateInfoNV, pipelineCount}
+  rawOffset = #{offset VkGraphicsPipelineShaderGroupsCreateInfoNV, pipelineCount}
 
 instance Offset "pPipelines" VkGraphicsPipelineShaderGroupsCreateInfoNV where
-  rawOffset = #{offset struct VkGraphicsPipelineShaderGroupsCreateInfoNV, pPipelines}
+  rawOffset = #{offset VkGraphicsPipelineShaderGroupsCreateInfoNV, pPipelines}
 
 #else
 

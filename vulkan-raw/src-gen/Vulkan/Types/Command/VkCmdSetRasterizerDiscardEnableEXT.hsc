@@ -1,3 +1,7 @@
+{-# LANGUAGE CApiFFI #-}
+{-# LANGUAGE CPP #-}
+{-# LANGUAGE MagicHash #-}
+
 #include <vulkan/vulkan.h>
 
 #if VK_EXT_extended_dynamic_state2
@@ -9,17 +13,17 @@ import Data.Word
 import GHC.Ptr
 import Vulkan.Types.Base
 import Vulkan.Types.Handle
-import Vulkan.Types.Command.VkCmdSetRasterizerDiscardEnable
 import Vulkan.Types.VkFun
 
 
 
-type VkCmdSetRasterizerDiscardEnableEXT = VkCmdSetRasterizerDiscardEnable
+type VkCmdSetRasterizerDiscardEnableEXT =
+          VkCommandBuffer -- ^ commandBuffer
+       -> VkBool32 -- ^ rasterizerDiscardEnable
+       -> IO ()
 
-vkFunCmdSetRasterizerDiscardEnableEXT
-  :: VkFun VkCmdSetRasterizerDiscardEnableEXT
-vkFunCmdSetRasterizerDiscardEnableEXT = vkFunCmdSetRasterizerDiscardEnable
-
+vkFunCmdSetRasterizerDiscardEnableEXT :: VkFun VkCmdSetRasterizerDiscardEnableEXT
+vkFunCmdSetRasterizerDiscardEnableEXT = VkFun (Ptr ("vkCmdSetRasterizerDiscardEnableEXT\0"##))
 
 #else
 

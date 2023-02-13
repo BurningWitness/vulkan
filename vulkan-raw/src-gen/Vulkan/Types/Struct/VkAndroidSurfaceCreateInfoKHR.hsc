@@ -32,8 +32,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkAndroidSurfaceCreateInfoKHR" #-} VkAndroidSu
          }
 
 instance Storable VkAndroidSurfaceCreateInfoKHR where
-  sizeOf    _ = #{size      struct VkAndroidSurfaceCreateInfoKHR}
-  alignment _ = #{alignment struct VkAndroidSurfaceCreateInfoKHR}
+  sizeOf    _ = #{size      VkAndroidSurfaceCreateInfoKHR}
+  alignment _ = #{alignment VkAndroidSurfaceCreateInfoKHR}
 
   peek ptr = 
     VkAndroidSurfaceCreateInfoKHR
@@ -49,16 +49,16 @@ instance Storable VkAndroidSurfaceCreateInfoKHR where
     pokeField @"window" ptr val
 
 instance Offset "sType" VkAndroidSurfaceCreateInfoKHR where
-  rawOffset = #{offset struct VkAndroidSurfaceCreateInfoKHR, sType}
+  rawOffset = #{offset VkAndroidSurfaceCreateInfoKHR, sType}
 
 instance Offset "pNext" VkAndroidSurfaceCreateInfoKHR where
-  rawOffset = #{offset struct VkAndroidSurfaceCreateInfoKHR, pNext}
+  rawOffset = #{offset VkAndroidSurfaceCreateInfoKHR, pNext}
 
 instance Offset "flags" VkAndroidSurfaceCreateInfoKHR where
-  rawOffset = #{offset struct VkAndroidSurfaceCreateInfoKHR, flags}
+  rawOffset = #{offset VkAndroidSurfaceCreateInfoKHR, flags}
 
 instance Offset "window" VkAndroidSurfaceCreateInfoKHR where
-  rawOffset = #{offset struct VkAndroidSurfaceCreateInfoKHR, window}
+  rawOffset = #{offset VkAndroidSurfaceCreateInfoKHR, window}
 
 #else
 

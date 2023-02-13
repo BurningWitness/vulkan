@@ -43,8 +43,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkGeometryTrianglesNV" #-} VkGeometryTriangles
          }
 
 instance Storable VkGeometryTrianglesNV where
-  sizeOf    _ = #{size      struct VkGeometryTrianglesNV}
-  alignment _ = #{alignment struct VkGeometryTrianglesNV}
+  sizeOf    _ = #{size      VkGeometryTrianglesNV}
+  alignment _ = #{alignment VkGeometryTrianglesNV}
 
   peek ptr = 
     VkGeometryTrianglesNV
@@ -78,43 +78,43 @@ instance Storable VkGeometryTrianglesNV where
     pokeField @"transformOffset" ptr val
 
 instance Offset "sType" VkGeometryTrianglesNV where
-  rawOffset = #{offset struct VkGeometryTrianglesNV, sType}
+  rawOffset = #{offset VkGeometryTrianglesNV, sType}
 
 instance Offset "pNext" VkGeometryTrianglesNV where
-  rawOffset = #{offset struct VkGeometryTrianglesNV, pNext}
+  rawOffset = #{offset VkGeometryTrianglesNV, pNext}
 
 instance Offset "vertexData" VkGeometryTrianglesNV where
-  rawOffset = #{offset struct VkGeometryTrianglesNV, vertexData}
+  rawOffset = #{offset VkGeometryTrianglesNV, vertexData}
 
 instance Offset "vertexOffset" VkGeometryTrianglesNV where
-  rawOffset = #{offset struct VkGeometryTrianglesNV, vertexOffset}
+  rawOffset = #{offset VkGeometryTrianglesNV, vertexOffset}
 
 instance Offset "vertexCount" VkGeometryTrianglesNV where
-  rawOffset = #{offset struct VkGeometryTrianglesNV, vertexCount}
+  rawOffset = #{offset VkGeometryTrianglesNV, vertexCount}
 
 instance Offset "vertexStride" VkGeometryTrianglesNV where
-  rawOffset = #{offset struct VkGeometryTrianglesNV, vertexStride}
+  rawOffset = #{offset VkGeometryTrianglesNV, vertexStride}
 
 instance Offset "vertexFormat" VkGeometryTrianglesNV where
-  rawOffset = #{offset struct VkGeometryTrianglesNV, vertexFormat}
+  rawOffset = #{offset VkGeometryTrianglesNV, vertexFormat}
 
 instance Offset "indexData" VkGeometryTrianglesNV where
-  rawOffset = #{offset struct VkGeometryTrianglesNV, indexData}
+  rawOffset = #{offset VkGeometryTrianglesNV, indexData}
 
 instance Offset "indexOffset" VkGeometryTrianglesNV where
-  rawOffset = #{offset struct VkGeometryTrianglesNV, indexOffset}
+  rawOffset = #{offset VkGeometryTrianglesNV, indexOffset}
 
 instance Offset "indexCount" VkGeometryTrianglesNV where
-  rawOffset = #{offset struct VkGeometryTrianglesNV, indexCount}
+  rawOffset = #{offset VkGeometryTrianglesNV, indexCount}
 
 instance Offset "indexType" VkGeometryTrianglesNV where
-  rawOffset = #{offset struct VkGeometryTrianglesNV, indexType}
+  rawOffset = #{offset VkGeometryTrianglesNV, indexType}
 
 instance Offset "transformData" VkGeometryTrianglesNV where
-  rawOffset = #{offset struct VkGeometryTrianglesNV, transformData}
+  rawOffset = #{offset VkGeometryTrianglesNV, transformData}
 
 instance Offset "transformOffset" VkGeometryTrianglesNV where
-  rawOffset = #{offset struct VkGeometryTrianglesNV, transformOffset}
+  rawOffset = #{offset VkGeometryTrianglesNV, transformOffset}
 
 #else
 

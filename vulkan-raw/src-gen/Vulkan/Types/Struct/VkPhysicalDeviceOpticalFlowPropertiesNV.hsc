@@ -41,8 +41,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkPhysicalDeviceOpticalFlowPropertiesNV" #-} V
          }
 
 instance Storable VkPhysicalDeviceOpticalFlowPropertiesNV where
-  sizeOf    _ = #{size      struct VkPhysicalDeviceOpticalFlowPropertiesNV}
-  alignment _ = #{alignment struct VkPhysicalDeviceOpticalFlowPropertiesNV}
+  sizeOf    _ = #{size      VkPhysicalDeviceOpticalFlowPropertiesNV}
+  alignment _ = #{alignment VkPhysicalDeviceOpticalFlowPropertiesNV}
 
   peek ptr = 
     VkPhysicalDeviceOpticalFlowPropertiesNV
@@ -76,43 +76,43 @@ instance Storable VkPhysicalDeviceOpticalFlowPropertiesNV where
     pokeField @"maxNumRegionsOfInterest" ptr val
 
 instance Offset "sType" VkPhysicalDeviceOpticalFlowPropertiesNV where
-  rawOffset = #{offset struct VkPhysicalDeviceOpticalFlowPropertiesNV, sType}
+  rawOffset = #{offset VkPhysicalDeviceOpticalFlowPropertiesNV, sType}
 
 instance Offset "pNext" VkPhysicalDeviceOpticalFlowPropertiesNV where
-  rawOffset = #{offset struct VkPhysicalDeviceOpticalFlowPropertiesNV, pNext}
+  rawOffset = #{offset VkPhysicalDeviceOpticalFlowPropertiesNV, pNext}
 
 instance Offset "supportedOutputGridSizes" VkPhysicalDeviceOpticalFlowPropertiesNV where
-  rawOffset = #{offset struct VkPhysicalDeviceOpticalFlowPropertiesNV, supportedOutputGridSizes}
+  rawOffset = #{offset VkPhysicalDeviceOpticalFlowPropertiesNV, supportedOutputGridSizes}
 
 instance Offset "supportedHintGridSizes" VkPhysicalDeviceOpticalFlowPropertiesNV where
-  rawOffset = #{offset struct VkPhysicalDeviceOpticalFlowPropertiesNV, supportedHintGridSizes}
+  rawOffset = #{offset VkPhysicalDeviceOpticalFlowPropertiesNV, supportedHintGridSizes}
 
 instance Offset "hintSupported" VkPhysicalDeviceOpticalFlowPropertiesNV where
-  rawOffset = #{offset struct VkPhysicalDeviceOpticalFlowPropertiesNV, hintSupported}
+  rawOffset = #{offset VkPhysicalDeviceOpticalFlowPropertiesNV, hintSupported}
 
 instance Offset "costSupported" VkPhysicalDeviceOpticalFlowPropertiesNV where
-  rawOffset = #{offset struct VkPhysicalDeviceOpticalFlowPropertiesNV, costSupported}
+  rawOffset = #{offset VkPhysicalDeviceOpticalFlowPropertiesNV, costSupported}
 
 instance Offset "bidirectionalFlowSupported" VkPhysicalDeviceOpticalFlowPropertiesNV where
-  rawOffset = #{offset struct VkPhysicalDeviceOpticalFlowPropertiesNV, bidirectionalFlowSupported}
+  rawOffset = #{offset VkPhysicalDeviceOpticalFlowPropertiesNV, bidirectionalFlowSupported}
 
 instance Offset "globalFlowSupported" VkPhysicalDeviceOpticalFlowPropertiesNV where
-  rawOffset = #{offset struct VkPhysicalDeviceOpticalFlowPropertiesNV, globalFlowSupported}
+  rawOffset = #{offset VkPhysicalDeviceOpticalFlowPropertiesNV, globalFlowSupported}
 
 instance Offset "minWidth" VkPhysicalDeviceOpticalFlowPropertiesNV where
-  rawOffset = #{offset struct VkPhysicalDeviceOpticalFlowPropertiesNV, minWidth}
+  rawOffset = #{offset VkPhysicalDeviceOpticalFlowPropertiesNV, minWidth}
 
 instance Offset "minHeight" VkPhysicalDeviceOpticalFlowPropertiesNV where
-  rawOffset = #{offset struct VkPhysicalDeviceOpticalFlowPropertiesNV, minHeight}
+  rawOffset = #{offset VkPhysicalDeviceOpticalFlowPropertiesNV, minHeight}
 
 instance Offset "maxWidth" VkPhysicalDeviceOpticalFlowPropertiesNV where
-  rawOffset = #{offset struct VkPhysicalDeviceOpticalFlowPropertiesNV, maxWidth}
+  rawOffset = #{offset VkPhysicalDeviceOpticalFlowPropertiesNV, maxWidth}
 
 instance Offset "maxHeight" VkPhysicalDeviceOpticalFlowPropertiesNV where
-  rawOffset = #{offset struct VkPhysicalDeviceOpticalFlowPropertiesNV, maxHeight}
+  rawOffset = #{offset VkPhysicalDeviceOpticalFlowPropertiesNV, maxHeight}
 
 instance Offset "maxNumRegionsOfInterest" VkPhysicalDeviceOpticalFlowPropertiesNV where
-  rawOffset = #{offset struct VkPhysicalDeviceOpticalFlowPropertiesNV, maxNumRegionsOfInterest}
+  rawOffset = #{offset VkPhysicalDeviceOpticalFlowPropertiesNV, maxNumRegionsOfInterest}
 
 #else
 

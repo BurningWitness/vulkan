@@ -35,8 +35,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkBufferViewCreateInfo" #-} VkBufferViewCreate
          }
 
 instance Storable VkBufferViewCreateInfo where
-  sizeOf    _ = #{size      struct VkBufferViewCreateInfo}
-  alignment _ = #{alignment struct VkBufferViewCreateInfo}
+  sizeOf    _ = #{size      VkBufferViewCreateInfo}
+  alignment _ = #{alignment VkBufferViewCreateInfo}
 
   peek ptr = 
     VkBufferViewCreateInfo
@@ -58,22 +58,22 @@ instance Storable VkBufferViewCreateInfo where
     pokeField @"range" ptr val
 
 instance Offset "sType" VkBufferViewCreateInfo where
-  rawOffset = #{offset struct VkBufferViewCreateInfo, sType}
+  rawOffset = #{offset VkBufferViewCreateInfo, sType}
 
 instance Offset "pNext" VkBufferViewCreateInfo where
-  rawOffset = #{offset struct VkBufferViewCreateInfo, pNext}
+  rawOffset = #{offset VkBufferViewCreateInfo, pNext}
 
 instance Offset "flags" VkBufferViewCreateInfo where
-  rawOffset = #{offset struct VkBufferViewCreateInfo, flags}
+  rawOffset = #{offset VkBufferViewCreateInfo, flags}
 
 instance Offset "buffer" VkBufferViewCreateInfo where
-  rawOffset = #{offset struct VkBufferViewCreateInfo, buffer}
+  rawOffset = #{offset VkBufferViewCreateInfo, buffer}
 
 instance Offset "format" VkBufferViewCreateInfo where
-  rawOffset = #{offset struct VkBufferViewCreateInfo, format}
+  rawOffset = #{offset VkBufferViewCreateInfo, format}
 
 instance Offset "offset" VkBufferViewCreateInfo where
-  rawOffset = #{offset struct VkBufferViewCreateInfo, offset}
+  rawOffset = #{offset VkBufferViewCreateInfo, offset}
 
 instance Offset "range" VkBufferViewCreateInfo where
-  rawOffset = #{offset struct VkBufferViewCreateInfo, range}
+  rawOffset = #{offset VkBufferViewCreateInfo, range}

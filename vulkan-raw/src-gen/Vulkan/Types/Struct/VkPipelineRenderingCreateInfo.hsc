@@ -34,8 +34,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkPipelineRenderingCreateInfo" #-} VkPipelineR
          }
 
 instance Storable VkPipelineRenderingCreateInfo where
-  sizeOf    _ = #{size      struct VkPipelineRenderingCreateInfo}
-  alignment _ = #{alignment struct VkPipelineRenderingCreateInfo}
+  sizeOf    _ = #{size      VkPipelineRenderingCreateInfo}
+  alignment _ = #{alignment VkPipelineRenderingCreateInfo}
 
   peek ptr = 
     VkPipelineRenderingCreateInfo
@@ -57,25 +57,25 @@ instance Storable VkPipelineRenderingCreateInfo where
     pokeField @"stencilAttachmentFormat" ptr val
 
 instance Offset "sType" VkPipelineRenderingCreateInfo where
-  rawOffset = #{offset struct VkPipelineRenderingCreateInfo, sType}
+  rawOffset = #{offset VkPipelineRenderingCreateInfo, sType}
 
 instance Offset "pNext" VkPipelineRenderingCreateInfo where
-  rawOffset = #{offset struct VkPipelineRenderingCreateInfo, pNext}
+  rawOffset = #{offset VkPipelineRenderingCreateInfo, pNext}
 
 instance Offset "viewMask" VkPipelineRenderingCreateInfo where
-  rawOffset = #{offset struct VkPipelineRenderingCreateInfo, viewMask}
+  rawOffset = #{offset VkPipelineRenderingCreateInfo, viewMask}
 
 instance Offset "colorAttachmentCount" VkPipelineRenderingCreateInfo where
-  rawOffset = #{offset struct VkPipelineRenderingCreateInfo, colorAttachmentCount}
+  rawOffset = #{offset VkPipelineRenderingCreateInfo, colorAttachmentCount}
 
 instance Offset "pColorAttachmentFormats" VkPipelineRenderingCreateInfo where
-  rawOffset = #{offset struct VkPipelineRenderingCreateInfo, pColorAttachmentFormats}
+  rawOffset = #{offset VkPipelineRenderingCreateInfo, pColorAttachmentFormats}
 
 instance Offset "depthAttachmentFormat" VkPipelineRenderingCreateInfo where
-  rawOffset = #{offset struct VkPipelineRenderingCreateInfo, depthAttachmentFormat}
+  rawOffset = #{offset VkPipelineRenderingCreateInfo, depthAttachmentFormat}
 
 instance Offset "stencilAttachmentFormat" VkPipelineRenderingCreateInfo where
-  rawOffset = #{offset struct VkPipelineRenderingCreateInfo, stencilAttachmentFormat}
+  rawOffset = #{offset VkPipelineRenderingCreateInfo, stencilAttachmentFormat}
 
 #else
 

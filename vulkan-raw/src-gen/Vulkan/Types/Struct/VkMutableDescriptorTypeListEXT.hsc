@@ -28,8 +28,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkMutableDescriptorTypeListEXT" #-} VkMutableD
          }
 
 instance Storable VkMutableDescriptorTypeListEXT where
-  sizeOf    _ = #{size      struct VkMutableDescriptorTypeListEXT}
-  alignment _ = #{alignment struct VkMutableDescriptorTypeListEXT}
+  sizeOf    _ = #{size      VkMutableDescriptorTypeListEXT}
+  alignment _ = #{alignment VkMutableDescriptorTypeListEXT}
 
   peek ptr = 
     VkMutableDescriptorTypeListEXT
@@ -41,10 +41,10 @@ instance Storable VkMutableDescriptorTypeListEXT where
     pokeField @"pDescriptorTypes" ptr val
 
 instance Offset "descriptorTypeCount" VkMutableDescriptorTypeListEXT where
-  rawOffset = #{offset struct VkMutableDescriptorTypeListEXT, descriptorTypeCount}
+  rawOffset = #{offset VkMutableDescriptorTypeListEXT, descriptorTypeCount}
 
 instance Offset "pDescriptorTypes" VkMutableDescriptorTypeListEXT where
-  rawOffset = #{offset struct VkMutableDescriptorTypeListEXT, pDescriptorTypes}
+  rawOffset = #{offset VkMutableDescriptorTypeListEXT, pDescriptorTypes}
 
 #else
 

@@ -30,8 +30,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkPhysicalDeviceAmigoProfilingFeaturesSEC" #-}
          }
 
 instance Storable VkPhysicalDeviceAmigoProfilingFeaturesSEC where
-  sizeOf    _ = #{size      struct VkPhysicalDeviceAmigoProfilingFeaturesSEC}
-  alignment _ = #{alignment struct VkPhysicalDeviceAmigoProfilingFeaturesSEC}
+  sizeOf    _ = #{size      VkPhysicalDeviceAmigoProfilingFeaturesSEC}
+  alignment _ = #{alignment VkPhysicalDeviceAmigoProfilingFeaturesSEC}
 
   peek ptr = 
     VkPhysicalDeviceAmigoProfilingFeaturesSEC
@@ -45,13 +45,13 @@ instance Storable VkPhysicalDeviceAmigoProfilingFeaturesSEC where
     pokeField @"amigoProfiling" ptr val
 
 instance Offset "sType" VkPhysicalDeviceAmigoProfilingFeaturesSEC where
-  rawOffset = #{offset struct VkPhysicalDeviceAmigoProfilingFeaturesSEC, sType}
+  rawOffset = #{offset VkPhysicalDeviceAmigoProfilingFeaturesSEC, sType}
 
 instance Offset "pNext" VkPhysicalDeviceAmigoProfilingFeaturesSEC where
-  rawOffset = #{offset struct VkPhysicalDeviceAmigoProfilingFeaturesSEC, pNext}
+  rawOffset = #{offset VkPhysicalDeviceAmigoProfilingFeaturesSEC, pNext}
 
 instance Offset "amigoProfiling" VkPhysicalDeviceAmigoProfilingFeaturesSEC where
-  rawOffset = #{offset struct VkPhysicalDeviceAmigoProfilingFeaturesSEC, amigoProfiling}
+  rawOffset = #{offset VkPhysicalDeviceAmigoProfilingFeaturesSEC, amigoProfiling}
 
 #else
 

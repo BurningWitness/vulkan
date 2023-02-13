@@ -34,8 +34,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkPhysicalDevicePipelineRobustnessPropertiesEX
          }
 
 instance Storable VkPhysicalDevicePipelineRobustnessPropertiesEXT where
-  sizeOf    _ = #{size      struct VkPhysicalDevicePipelineRobustnessPropertiesEXT}
-  alignment _ = #{alignment struct VkPhysicalDevicePipelineRobustnessPropertiesEXT}
+  sizeOf    _ = #{size      VkPhysicalDevicePipelineRobustnessPropertiesEXT}
+  alignment _ = #{alignment VkPhysicalDevicePipelineRobustnessPropertiesEXT}
 
   peek ptr = 
     VkPhysicalDevicePipelineRobustnessPropertiesEXT
@@ -55,22 +55,22 @@ instance Storable VkPhysicalDevicePipelineRobustnessPropertiesEXT where
     pokeField @"defaultRobustnessImages" ptr val
 
 instance Offset "sType" VkPhysicalDevicePipelineRobustnessPropertiesEXT where
-  rawOffset = #{offset struct VkPhysicalDevicePipelineRobustnessPropertiesEXT, sType}
+  rawOffset = #{offset VkPhysicalDevicePipelineRobustnessPropertiesEXT, sType}
 
 instance Offset "pNext" VkPhysicalDevicePipelineRobustnessPropertiesEXT where
-  rawOffset = #{offset struct VkPhysicalDevicePipelineRobustnessPropertiesEXT, pNext}
+  rawOffset = #{offset VkPhysicalDevicePipelineRobustnessPropertiesEXT, pNext}
 
 instance Offset "defaultRobustnessStorageBuffers" VkPhysicalDevicePipelineRobustnessPropertiesEXT where
-  rawOffset = #{offset struct VkPhysicalDevicePipelineRobustnessPropertiesEXT, defaultRobustnessStorageBuffers}
+  rawOffset = #{offset VkPhysicalDevicePipelineRobustnessPropertiesEXT, defaultRobustnessStorageBuffers}
 
 instance Offset "defaultRobustnessUniformBuffers" VkPhysicalDevicePipelineRobustnessPropertiesEXT where
-  rawOffset = #{offset struct VkPhysicalDevicePipelineRobustnessPropertiesEXT, defaultRobustnessUniformBuffers}
+  rawOffset = #{offset VkPhysicalDevicePipelineRobustnessPropertiesEXT, defaultRobustnessUniformBuffers}
 
 instance Offset "defaultRobustnessVertexInputs" VkPhysicalDevicePipelineRobustnessPropertiesEXT where
-  rawOffset = #{offset struct VkPhysicalDevicePipelineRobustnessPropertiesEXT, defaultRobustnessVertexInputs}
+  rawOffset = #{offset VkPhysicalDevicePipelineRobustnessPropertiesEXT, defaultRobustnessVertexInputs}
 
 instance Offset "defaultRobustnessImages" VkPhysicalDevicePipelineRobustnessPropertiesEXT where
-  rawOffset = #{offset struct VkPhysicalDevicePipelineRobustnessPropertiesEXT, defaultRobustnessImages}
+  rawOffset = #{offset VkPhysicalDevicePipelineRobustnessPropertiesEXT, defaultRobustnessImages}
 
 #else
 

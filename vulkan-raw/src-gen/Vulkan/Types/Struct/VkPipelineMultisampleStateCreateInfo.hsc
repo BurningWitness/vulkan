@@ -36,8 +36,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkPipelineMultisampleStateCreateInfo" #-} VkPi
          }
 
 instance Storable VkPipelineMultisampleStateCreateInfo where
-  sizeOf    _ = #{size      struct VkPipelineMultisampleStateCreateInfo}
-  alignment _ = #{alignment struct VkPipelineMultisampleStateCreateInfo}
+  sizeOf    _ = #{size      VkPipelineMultisampleStateCreateInfo}
+  alignment _ = #{alignment VkPipelineMultisampleStateCreateInfo}
 
   peek ptr = 
     VkPipelineMultisampleStateCreateInfo
@@ -63,28 +63,28 @@ instance Storable VkPipelineMultisampleStateCreateInfo where
     pokeField @"alphaToOneEnable" ptr val
 
 instance Offset "sType" VkPipelineMultisampleStateCreateInfo where
-  rawOffset = #{offset struct VkPipelineMultisampleStateCreateInfo, sType}
+  rawOffset = #{offset VkPipelineMultisampleStateCreateInfo, sType}
 
 instance Offset "pNext" VkPipelineMultisampleStateCreateInfo where
-  rawOffset = #{offset struct VkPipelineMultisampleStateCreateInfo, pNext}
+  rawOffset = #{offset VkPipelineMultisampleStateCreateInfo, pNext}
 
 instance Offset "flags" VkPipelineMultisampleStateCreateInfo where
-  rawOffset = #{offset struct VkPipelineMultisampleStateCreateInfo, flags}
+  rawOffset = #{offset VkPipelineMultisampleStateCreateInfo, flags}
 
 instance Offset "rasterizationSamples" VkPipelineMultisampleStateCreateInfo where
-  rawOffset = #{offset struct VkPipelineMultisampleStateCreateInfo, rasterizationSamples}
+  rawOffset = #{offset VkPipelineMultisampleStateCreateInfo, rasterizationSamples}
 
 instance Offset "sampleShadingEnable" VkPipelineMultisampleStateCreateInfo where
-  rawOffset = #{offset struct VkPipelineMultisampleStateCreateInfo, sampleShadingEnable}
+  rawOffset = #{offset VkPipelineMultisampleStateCreateInfo, sampleShadingEnable}
 
 instance Offset "minSampleShading" VkPipelineMultisampleStateCreateInfo where
-  rawOffset = #{offset struct VkPipelineMultisampleStateCreateInfo, minSampleShading}
+  rawOffset = #{offset VkPipelineMultisampleStateCreateInfo, minSampleShading}
 
 instance Offset "pSampleMask" VkPipelineMultisampleStateCreateInfo where
-  rawOffset = #{offset struct VkPipelineMultisampleStateCreateInfo, pSampleMask}
+  rawOffset = #{offset VkPipelineMultisampleStateCreateInfo, pSampleMask}
 
 instance Offset "alphaToCoverageEnable" VkPipelineMultisampleStateCreateInfo where
-  rawOffset = #{offset struct VkPipelineMultisampleStateCreateInfo, alphaToCoverageEnable}
+  rawOffset = #{offset VkPipelineMultisampleStateCreateInfo, alphaToCoverageEnable}
 
 instance Offset "alphaToOneEnable" VkPipelineMultisampleStateCreateInfo where
-  rawOffset = #{offset struct VkPipelineMultisampleStateCreateInfo, alphaToOneEnable}
+  rawOffset = #{offset VkPipelineMultisampleStateCreateInfo, alphaToOneEnable}

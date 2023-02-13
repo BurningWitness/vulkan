@@ -29,8 +29,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkSubresourceLayout" #-} VkSubresourceLayout =
          }
 
 instance Storable VkSubresourceLayout where
-  sizeOf    _ = #{size      struct VkSubresourceLayout}
-  alignment _ = #{alignment struct VkSubresourceLayout}
+  sizeOf    _ = #{size      VkSubresourceLayout}
+  alignment _ = #{alignment VkSubresourceLayout}
 
   peek ptr = 
     VkSubresourceLayout
@@ -48,16 +48,16 @@ instance Storable VkSubresourceLayout where
     pokeField @"depthPitch" ptr val
 
 instance Offset "offset" VkSubresourceLayout where
-  rawOffset = #{offset struct VkSubresourceLayout, offset}
+  rawOffset = #{offset VkSubresourceLayout, offset}
 
 instance Offset "size" VkSubresourceLayout where
-  rawOffset = #{offset struct VkSubresourceLayout, size}
+  rawOffset = #{offset VkSubresourceLayout, size}
 
 instance Offset "rowPitch" VkSubresourceLayout where
-  rawOffset = #{offset struct VkSubresourceLayout, rowPitch}
+  rawOffset = #{offset VkSubresourceLayout, rowPitch}
 
 instance Offset "arrayPitch" VkSubresourceLayout where
-  rawOffset = #{offset struct VkSubresourceLayout, arrayPitch}
+  rawOffset = #{offset VkSubresourceLayout, arrayPitch}
 
 instance Offset "depthPitch" VkSubresourceLayout where
-  rawOffset = #{offset struct VkSubresourceLayout, depthPitch}
+  rawOffset = #{offset VkSubresourceLayout, depthPitch}

@@ -31,8 +31,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkViSurfaceCreateInfoNN" #-} VkViSurfaceCreate
          }
 
 instance Storable VkViSurfaceCreateInfoNN where
-  sizeOf    _ = #{size      struct VkViSurfaceCreateInfoNN}
-  alignment _ = #{alignment struct VkViSurfaceCreateInfoNN}
+  sizeOf    _ = #{size      VkViSurfaceCreateInfoNN}
+  alignment _ = #{alignment VkViSurfaceCreateInfoNN}
 
   peek ptr = 
     VkViSurfaceCreateInfoNN
@@ -48,16 +48,16 @@ instance Storable VkViSurfaceCreateInfoNN where
     pokeField @"window" ptr val
 
 instance Offset "sType" VkViSurfaceCreateInfoNN where
-  rawOffset = #{offset struct VkViSurfaceCreateInfoNN, sType}
+  rawOffset = #{offset VkViSurfaceCreateInfoNN, sType}
 
 instance Offset "pNext" VkViSurfaceCreateInfoNN where
-  rawOffset = #{offset struct VkViSurfaceCreateInfoNN, pNext}
+  rawOffset = #{offset VkViSurfaceCreateInfoNN, pNext}
 
 instance Offset "flags" VkViSurfaceCreateInfoNN where
-  rawOffset = #{offset struct VkViSurfaceCreateInfoNN, flags}
+  rawOffset = #{offset VkViSurfaceCreateInfoNN, flags}
 
 instance Offset "window" VkViSurfaceCreateInfoNN where
-  rawOffset = #{offset struct VkViSurfaceCreateInfoNN, window}
+  rawOffset = #{offset VkViSurfaceCreateInfoNN, window}
 
 #else
 

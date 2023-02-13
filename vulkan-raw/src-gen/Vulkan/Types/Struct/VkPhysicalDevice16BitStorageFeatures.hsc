@@ -33,8 +33,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkPhysicalDevice16BitStorageFeatures" #-} VkPh
          }
 
 instance Storable VkPhysicalDevice16BitStorageFeatures where
-  sizeOf    _ = #{size      struct VkPhysicalDevice16BitStorageFeatures}
-  alignment _ = #{alignment struct VkPhysicalDevice16BitStorageFeatures}
+  sizeOf    _ = #{size      VkPhysicalDevice16BitStorageFeatures}
+  alignment _ = #{alignment VkPhysicalDevice16BitStorageFeatures}
 
   peek ptr = 
     VkPhysicalDevice16BitStorageFeatures
@@ -54,22 +54,22 @@ instance Storable VkPhysicalDevice16BitStorageFeatures where
     pokeField @"storageInputOutput16" ptr val
 
 instance Offset "sType" VkPhysicalDevice16BitStorageFeatures where
-  rawOffset = #{offset struct VkPhysicalDevice16BitStorageFeatures, sType}
+  rawOffset = #{offset VkPhysicalDevice16BitStorageFeatures, sType}
 
 instance Offset "pNext" VkPhysicalDevice16BitStorageFeatures where
-  rawOffset = #{offset struct VkPhysicalDevice16BitStorageFeatures, pNext}
+  rawOffset = #{offset VkPhysicalDevice16BitStorageFeatures, pNext}
 
 instance Offset "storageBuffer16BitAccess" VkPhysicalDevice16BitStorageFeatures where
-  rawOffset = #{offset struct VkPhysicalDevice16BitStorageFeatures, storageBuffer16BitAccess}
+  rawOffset = #{offset VkPhysicalDevice16BitStorageFeatures, storageBuffer16BitAccess}
 
 instance Offset "uniformAndStorageBuffer16BitAccess" VkPhysicalDevice16BitStorageFeatures where
-  rawOffset = #{offset struct VkPhysicalDevice16BitStorageFeatures, uniformAndStorageBuffer16BitAccess}
+  rawOffset = #{offset VkPhysicalDevice16BitStorageFeatures, uniformAndStorageBuffer16BitAccess}
 
 instance Offset "storagePushConstant16" VkPhysicalDevice16BitStorageFeatures where
-  rawOffset = #{offset struct VkPhysicalDevice16BitStorageFeatures, storagePushConstant16}
+  rawOffset = #{offset VkPhysicalDevice16BitStorageFeatures, storagePushConstant16}
 
 instance Offset "storageInputOutput16" VkPhysicalDevice16BitStorageFeatures where
-  rawOffset = #{offset struct VkPhysicalDevice16BitStorageFeatures, storageInputOutput16}
+  rawOffset = #{offset VkPhysicalDevice16BitStorageFeatures, storageInputOutput16}
 
 #else
 

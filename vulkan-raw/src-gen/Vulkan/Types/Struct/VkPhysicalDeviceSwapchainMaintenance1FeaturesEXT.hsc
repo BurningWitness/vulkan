@@ -30,8 +30,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkPhysicalDeviceSwapchainMaintenance1FeaturesE
          }
 
 instance Storable VkPhysicalDeviceSwapchainMaintenance1FeaturesEXT where
-  sizeOf    _ = #{size      struct VkPhysicalDeviceSwapchainMaintenance1FeaturesEXT}
-  alignment _ = #{alignment struct VkPhysicalDeviceSwapchainMaintenance1FeaturesEXT}
+  sizeOf    _ = #{size      VkPhysicalDeviceSwapchainMaintenance1FeaturesEXT}
+  alignment _ = #{alignment VkPhysicalDeviceSwapchainMaintenance1FeaturesEXT}
 
   peek ptr = 
     VkPhysicalDeviceSwapchainMaintenance1FeaturesEXT
@@ -45,13 +45,13 @@ instance Storable VkPhysicalDeviceSwapchainMaintenance1FeaturesEXT where
     pokeField @"swapchainMaintenance1" ptr val
 
 instance Offset "sType" VkPhysicalDeviceSwapchainMaintenance1FeaturesEXT where
-  rawOffset = #{offset struct VkPhysicalDeviceSwapchainMaintenance1FeaturesEXT, sType}
+  rawOffset = #{offset VkPhysicalDeviceSwapchainMaintenance1FeaturesEXT, sType}
 
 instance Offset "pNext" VkPhysicalDeviceSwapchainMaintenance1FeaturesEXT where
-  rawOffset = #{offset struct VkPhysicalDeviceSwapchainMaintenance1FeaturesEXT, pNext}
+  rawOffset = #{offset VkPhysicalDeviceSwapchainMaintenance1FeaturesEXT, pNext}
 
 instance Offset "swapchainMaintenance1" VkPhysicalDeviceSwapchainMaintenance1FeaturesEXT where
-  rawOffset = #{offset struct VkPhysicalDeviceSwapchainMaintenance1FeaturesEXT, swapchainMaintenance1}
+  rawOffset = #{offset VkPhysicalDeviceSwapchainMaintenance1FeaturesEXT, swapchainMaintenance1}
 
 #else
 

@@ -1,14 +1,14 @@
 {-# LANGUAGE CPP #-}
+{-# LANGUAGE PatternSynonyms #-}
 
 #include <vulkan/vulkan.h>
 
 module Vulkan.Types.Enum.VkMemoryAllocateFlagBitsKHR where
 
-import Data.Int
-import Vulkan.Types.Enum.VkMemoryAllocateFlagBits
+import Vulkan.Types.Base
 
 
 
 #if VK_KHR_device_group
-type VkMemoryAllocateFlagBitsKHR = VkMemoryAllocateFlagBits
+type VkMemoryAllocateFlagBitsKHR = VkFlags
 #endif

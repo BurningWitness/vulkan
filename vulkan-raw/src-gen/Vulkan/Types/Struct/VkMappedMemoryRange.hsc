@@ -31,8 +31,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkMappedMemoryRange" #-} VkMappedMemoryRange =
          }
 
 instance Storable VkMappedMemoryRange where
-  sizeOf    _ = #{size      struct VkMappedMemoryRange}
-  alignment _ = #{alignment struct VkMappedMemoryRange}
+  sizeOf    _ = #{size      VkMappedMemoryRange}
+  alignment _ = #{alignment VkMappedMemoryRange}
 
   peek ptr = 
     VkMappedMemoryRange
@@ -50,16 +50,16 @@ instance Storable VkMappedMemoryRange where
     pokeField @"size" ptr val
 
 instance Offset "sType" VkMappedMemoryRange where
-  rawOffset = #{offset struct VkMappedMemoryRange, sType}
+  rawOffset = #{offset VkMappedMemoryRange, sType}
 
 instance Offset "pNext" VkMappedMemoryRange where
-  rawOffset = #{offset struct VkMappedMemoryRange, pNext}
+  rawOffset = #{offset VkMappedMemoryRange, pNext}
 
 instance Offset "memory" VkMappedMemoryRange where
-  rawOffset = #{offset struct VkMappedMemoryRange, memory}
+  rawOffset = #{offset VkMappedMemoryRange, memory}
 
 instance Offset "offset" VkMappedMemoryRange where
-  rawOffset = #{offset struct VkMappedMemoryRange, offset}
+  rawOffset = #{offset VkMappedMemoryRange, offset}
 
 instance Offset "size" VkMappedMemoryRange where
-  rawOffset = #{offset struct VkMappedMemoryRange, size}
+  rawOffset = #{offset VkMappedMemoryRange, size}

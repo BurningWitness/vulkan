@@ -30,8 +30,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkSubpassResolvePerformanceQueryEXT" #-} VkSub
          }
 
 instance Storable VkSubpassResolvePerformanceQueryEXT where
-  sizeOf    _ = #{size      struct VkSubpassResolvePerformanceQueryEXT}
-  alignment _ = #{alignment struct VkSubpassResolvePerformanceQueryEXT}
+  sizeOf    _ = #{size      VkSubpassResolvePerformanceQueryEXT}
+  alignment _ = #{alignment VkSubpassResolvePerformanceQueryEXT}
 
   peek ptr = 
     VkSubpassResolvePerformanceQueryEXT
@@ -45,13 +45,13 @@ instance Storable VkSubpassResolvePerformanceQueryEXT where
     pokeField @"optimal" ptr val
 
 instance Offset "sType" VkSubpassResolvePerformanceQueryEXT where
-  rawOffset = #{offset struct VkSubpassResolvePerformanceQueryEXT, sType}
+  rawOffset = #{offset VkSubpassResolvePerformanceQueryEXT, sType}
 
 instance Offset "pNext" VkSubpassResolvePerformanceQueryEXT where
-  rawOffset = #{offset struct VkSubpassResolvePerformanceQueryEXT, pNext}
+  rawOffset = #{offset VkSubpassResolvePerformanceQueryEXT, pNext}
 
 instance Offset "optimal" VkSubpassResolvePerformanceQueryEXT where
-  rawOffset = #{offset struct VkSubpassResolvePerformanceQueryEXT, optimal}
+  rawOffset = #{offset VkSubpassResolvePerformanceQueryEXT, optimal}
 
 #else
 

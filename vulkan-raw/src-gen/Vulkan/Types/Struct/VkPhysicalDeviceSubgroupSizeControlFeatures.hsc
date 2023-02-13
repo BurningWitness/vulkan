@@ -31,8 +31,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkPhysicalDeviceSubgroupSizeControlFeatures" #
          }
 
 instance Storable VkPhysicalDeviceSubgroupSizeControlFeatures where
-  sizeOf    _ = #{size      struct VkPhysicalDeviceSubgroupSizeControlFeatures}
-  alignment _ = #{alignment struct VkPhysicalDeviceSubgroupSizeControlFeatures}
+  sizeOf    _ = #{size      VkPhysicalDeviceSubgroupSizeControlFeatures}
+  alignment _ = #{alignment VkPhysicalDeviceSubgroupSizeControlFeatures}
 
   peek ptr = 
     VkPhysicalDeviceSubgroupSizeControlFeatures
@@ -48,16 +48,16 @@ instance Storable VkPhysicalDeviceSubgroupSizeControlFeatures where
     pokeField @"computeFullSubgroups" ptr val
 
 instance Offset "sType" VkPhysicalDeviceSubgroupSizeControlFeatures where
-  rawOffset = #{offset struct VkPhysicalDeviceSubgroupSizeControlFeatures, sType}
+  rawOffset = #{offset VkPhysicalDeviceSubgroupSizeControlFeatures, sType}
 
 instance Offset "pNext" VkPhysicalDeviceSubgroupSizeControlFeatures where
-  rawOffset = #{offset struct VkPhysicalDeviceSubgroupSizeControlFeatures, pNext}
+  rawOffset = #{offset VkPhysicalDeviceSubgroupSizeControlFeatures, pNext}
 
 instance Offset "subgroupSizeControl" VkPhysicalDeviceSubgroupSizeControlFeatures where
-  rawOffset = #{offset struct VkPhysicalDeviceSubgroupSizeControlFeatures, subgroupSizeControl}
+  rawOffset = #{offset VkPhysicalDeviceSubgroupSizeControlFeatures, subgroupSizeControl}
 
 instance Offset "computeFullSubgroups" VkPhysicalDeviceSubgroupSizeControlFeatures where
-  rawOffset = #{offset struct VkPhysicalDeviceSubgroupSizeControlFeatures, computeFullSubgroups}
+  rawOffset = #{offset VkPhysicalDeviceSubgroupSizeControlFeatures, computeFullSubgroups}
 
 #else
 

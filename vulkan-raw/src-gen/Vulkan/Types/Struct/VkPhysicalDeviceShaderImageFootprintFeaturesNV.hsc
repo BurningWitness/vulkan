@@ -30,8 +30,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkPhysicalDeviceShaderImageFootprintFeaturesNV
          }
 
 instance Storable VkPhysicalDeviceShaderImageFootprintFeaturesNV where
-  sizeOf    _ = #{size      struct VkPhysicalDeviceShaderImageFootprintFeaturesNV}
-  alignment _ = #{alignment struct VkPhysicalDeviceShaderImageFootprintFeaturesNV}
+  sizeOf    _ = #{size      VkPhysicalDeviceShaderImageFootprintFeaturesNV}
+  alignment _ = #{alignment VkPhysicalDeviceShaderImageFootprintFeaturesNV}
 
   peek ptr = 
     VkPhysicalDeviceShaderImageFootprintFeaturesNV
@@ -45,13 +45,13 @@ instance Storable VkPhysicalDeviceShaderImageFootprintFeaturesNV where
     pokeField @"imageFootprint" ptr val
 
 instance Offset "sType" VkPhysicalDeviceShaderImageFootprintFeaturesNV where
-  rawOffset = #{offset struct VkPhysicalDeviceShaderImageFootprintFeaturesNV, sType}
+  rawOffset = #{offset VkPhysicalDeviceShaderImageFootprintFeaturesNV, sType}
 
 instance Offset "pNext" VkPhysicalDeviceShaderImageFootprintFeaturesNV where
-  rawOffset = #{offset struct VkPhysicalDeviceShaderImageFootprintFeaturesNV, pNext}
+  rawOffset = #{offset VkPhysicalDeviceShaderImageFootprintFeaturesNV, pNext}
 
 instance Offset "imageFootprint" VkPhysicalDeviceShaderImageFootprintFeaturesNV where
-  rawOffset = #{offset struct VkPhysicalDeviceShaderImageFootprintFeaturesNV, imageFootprint}
+  rawOffset = #{offset VkPhysicalDeviceShaderImageFootprintFeaturesNV, imageFootprint}
 
 #else
 

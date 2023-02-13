@@ -30,8 +30,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkRectLayerKHR" #-} VkRectLayerKHR =
          }
 
 instance Storable VkRectLayerKHR where
-  sizeOf    _ = #{size      struct VkRectLayerKHR}
-  alignment _ = #{alignment struct VkRectLayerKHR}
+  sizeOf    _ = #{size      VkRectLayerKHR}
+  alignment _ = #{alignment VkRectLayerKHR}
 
   peek ptr = 
     VkRectLayerKHR
@@ -45,13 +45,13 @@ instance Storable VkRectLayerKHR where
     pokeField @"layer" ptr val
 
 instance Offset "offset" VkRectLayerKHR where
-  rawOffset = #{offset struct VkRectLayerKHR, offset}
+  rawOffset = #{offset VkRectLayerKHR, offset}
 
 instance Offset "extent" VkRectLayerKHR where
-  rawOffset = #{offset struct VkRectLayerKHR, extent}
+  rawOffset = #{offset VkRectLayerKHR, extent}
 
 instance Offset "layer" VkRectLayerKHR where
-  rawOffset = #{offset struct VkRectLayerKHR, layer}
+  rawOffset = #{offset VkRectLayerKHR, layer}
 
 #else
 

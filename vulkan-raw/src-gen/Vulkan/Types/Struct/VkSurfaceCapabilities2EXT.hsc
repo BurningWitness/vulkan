@@ -45,8 +45,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkSurfaceCapabilities2EXT" #-} VkSurfaceCapabi
          }
 
 instance Storable VkSurfaceCapabilities2EXT where
-  sizeOf    _ = #{size      struct VkSurfaceCapabilities2EXT}
-  alignment _ = #{alignment struct VkSurfaceCapabilities2EXT}
+  sizeOf    _ = #{size      VkSurfaceCapabilities2EXT}
+  alignment _ = #{alignment VkSurfaceCapabilities2EXT}
 
   peek ptr = 
     VkSurfaceCapabilities2EXT
@@ -80,43 +80,43 @@ instance Storable VkSurfaceCapabilities2EXT where
     pokeField @"supportedSurfaceCounters" ptr val
 
 instance Offset "sType" VkSurfaceCapabilities2EXT where
-  rawOffset = #{offset struct VkSurfaceCapabilities2EXT, sType}
+  rawOffset = #{offset VkSurfaceCapabilities2EXT, sType}
 
 instance Offset "pNext" VkSurfaceCapabilities2EXT where
-  rawOffset = #{offset struct VkSurfaceCapabilities2EXT, pNext}
+  rawOffset = #{offset VkSurfaceCapabilities2EXT, pNext}
 
 instance Offset "minImageCount" VkSurfaceCapabilities2EXT where
-  rawOffset = #{offset struct VkSurfaceCapabilities2EXT, minImageCount}
+  rawOffset = #{offset VkSurfaceCapabilities2EXT, minImageCount}
 
 instance Offset "maxImageCount" VkSurfaceCapabilities2EXT where
-  rawOffset = #{offset struct VkSurfaceCapabilities2EXT, maxImageCount}
+  rawOffset = #{offset VkSurfaceCapabilities2EXT, maxImageCount}
 
 instance Offset "currentExtent" VkSurfaceCapabilities2EXT where
-  rawOffset = #{offset struct VkSurfaceCapabilities2EXT, currentExtent}
+  rawOffset = #{offset VkSurfaceCapabilities2EXT, currentExtent}
 
 instance Offset "minImageExtent" VkSurfaceCapabilities2EXT where
-  rawOffset = #{offset struct VkSurfaceCapabilities2EXT, minImageExtent}
+  rawOffset = #{offset VkSurfaceCapabilities2EXT, minImageExtent}
 
 instance Offset "maxImageExtent" VkSurfaceCapabilities2EXT where
-  rawOffset = #{offset struct VkSurfaceCapabilities2EXT, maxImageExtent}
+  rawOffset = #{offset VkSurfaceCapabilities2EXT, maxImageExtent}
 
 instance Offset "maxImageArrayLayers" VkSurfaceCapabilities2EXT where
-  rawOffset = #{offset struct VkSurfaceCapabilities2EXT, maxImageArrayLayers}
+  rawOffset = #{offset VkSurfaceCapabilities2EXT, maxImageArrayLayers}
 
 instance Offset "supportedTransforms" VkSurfaceCapabilities2EXT where
-  rawOffset = #{offset struct VkSurfaceCapabilities2EXT, supportedTransforms}
+  rawOffset = #{offset VkSurfaceCapabilities2EXT, supportedTransforms}
 
 instance Offset "currentTransform" VkSurfaceCapabilities2EXT where
-  rawOffset = #{offset struct VkSurfaceCapabilities2EXT, currentTransform}
+  rawOffset = #{offset VkSurfaceCapabilities2EXT, currentTransform}
 
 instance Offset "supportedCompositeAlpha" VkSurfaceCapabilities2EXT where
-  rawOffset = #{offset struct VkSurfaceCapabilities2EXT, supportedCompositeAlpha}
+  rawOffset = #{offset VkSurfaceCapabilities2EXT, supportedCompositeAlpha}
 
 instance Offset "supportedUsageFlags" VkSurfaceCapabilities2EXT where
-  rawOffset = #{offset struct VkSurfaceCapabilities2EXT, supportedUsageFlags}
+  rawOffset = #{offset VkSurfaceCapabilities2EXT, supportedUsageFlags}
 
 instance Offset "supportedSurfaceCounters" VkSurfaceCapabilities2EXT where
-  rawOffset = #{offset struct VkSurfaceCapabilities2EXT, supportedSurfaceCounters}
+  rawOffset = #{offset VkSurfaceCapabilities2EXT, supportedSurfaceCounters}
 
 #else
 

@@ -36,8 +36,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkPhysicalDeviceSampleLocationsPropertiesEXT" 
          }
 
 instance Storable VkPhysicalDeviceSampleLocationsPropertiesEXT where
-  sizeOf    _ = #{size      struct VkPhysicalDeviceSampleLocationsPropertiesEXT}
-  alignment _ = #{alignment struct VkPhysicalDeviceSampleLocationsPropertiesEXT}
+  sizeOf    _ = #{size      VkPhysicalDeviceSampleLocationsPropertiesEXT}
+  alignment _ = #{alignment VkPhysicalDeviceSampleLocationsPropertiesEXT}
 
   peek ptr = 
     VkPhysicalDeviceSampleLocationsPropertiesEXT
@@ -59,25 +59,25 @@ instance Storable VkPhysicalDeviceSampleLocationsPropertiesEXT where
     pokeField @"variableSampleLocations" ptr val
 
 instance Offset "sType" VkPhysicalDeviceSampleLocationsPropertiesEXT where
-  rawOffset = #{offset struct VkPhysicalDeviceSampleLocationsPropertiesEXT, sType}
+  rawOffset = #{offset VkPhysicalDeviceSampleLocationsPropertiesEXT, sType}
 
 instance Offset "pNext" VkPhysicalDeviceSampleLocationsPropertiesEXT where
-  rawOffset = #{offset struct VkPhysicalDeviceSampleLocationsPropertiesEXT, pNext}
+  rawOffset = #{offset VkPhysicalDeviceSampleLocationsPropertiesEXT, pNext}
 
 instance Offset "sampleLocationSampleCounts" VkPhysicalDeviceSampleLocationsPropertiesEXT where
-  rawOffset = #{offset struct VkPhysicalDeviceSampleLocationsPropertiesEXT, sampleLocationSampleCounts}
+  rawOffset = #{offset VkPhysicalDeviceSampleLocationsPropertiesEXT, sampleLocationSampleCounts}
 
 instance Offset "maxSampleLocationGridSize" VkPhysicalDeviceSampleLocationsPropertiesEXT where
-  rawOffset = #{offset struct VkPhysicalDeviceSampleLocationsPropertiesEXT, maxSampleLocationGridSize}
+  rawOffset = #{offset VkPhysicalDeviceSampleLocationsPropertiesEXT, maxSampleLocationGridSize}
 
 instance Offset "sampleLocationCoordinateRange" VkPhysicalDeviceSampleLocationsPropertiesEXT where
-  rawOffset = #{offset struct VkPhysicalDeviceSampleLocationsPropertiesEXT, sampleLocationCoordinateRange}
+  rawOffset = #{offset VkPhysicalDeviceSampleLocationsPropertiesEXT, sampleLocationCoordinateRange}
 
 instance Offset "sampleLocationSubPixelBits" VkPhysicalDeviceSampleLocationsPropertiesEXT where
-  rawOffset = #{offset struct VkPhysicalDeviceSampleLocationsPropertiesEXT, sampleLocationSubPixelBits}
+  rawOffset = #{offset VkPhysicalDeviceSampleLocationsPropertiesEXT, sampleLocationSubPixelBits}
 
 instance Offset "variableSampleLocations" VkPhysicalDeviceSampleLocationsPropertiesEXT where
-  rawOffset = #{offset struct VkPhysicalDeviceSampleLocationsPropertiesEXT, variableSampleLocations}
+  rawOffset = #{offset VkPhysicalDeviceSampleLocationsPropertiesEXT, variableSampleLocations}
 
 #else
 

@@ -29,8 +29,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkMemoryHostPointerPropertiesEXT" #-} VkMemory
          }
 
 instance Storable VkMemoryHostPointerPropertiesEXT where
-  sizeOf    _ = #{size      struct VkMemoryHostPointerPropertiesEXT}
-  alignment _ = #{alignment struct VkMemoryHostPointerPropertiesEXT}
+  sizeOf    _ = #{size      VkMemoryHostPointerPropertiesEXT}
+  alignment _ = #{alignment VkMemoryHostPointerPropertiesEXT}
 
   peek ptr = 
     VkMemoryHostPointerPropertiesEXT
@@ -44,13 +44,13 @@ instance Storable VkMemoryHostPointerPropertiesEXT where
     pokeField @"memoryTypeBits" ptr val
 
 instance Offset "sType" VkMemoryHostPointerPropertiesEXT where
-  rawOffset = #{offset struct VkMemoryHostPointerPropertiesEXT, sType}
+  rawOffset = #{offset VkMemoryHostPointerPropertiesEXT, sType}
 
 instance Offset "pNext" VkMemoryHostPointerPropertiesEXT where
-  rawOffset = #{offset struct VkMemoryHostPointerPropertiesEXT, pNext}
+  rawOffset = #{offset VkMemoryHostPointerPropertiesEXT, pNext}
 
 instance Offset "memoryTypeBits" VkMemoryHostPointerPropertiesEXT where
-  rawOffset = #{offset struct VkMemoryHostPointerPropertiesEXT, memoryTypeBits}
+  rawOffset = #{offset VkMemoryHostPointerPropertiesEXT, memoryTypeBits}
 
 #else
 

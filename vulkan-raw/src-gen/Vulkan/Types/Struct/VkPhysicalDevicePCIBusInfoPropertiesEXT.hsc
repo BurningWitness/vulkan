@@ -32,8 +32,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkPhysicalDevicePCIBusInfoPropertiesEXT" #-} V
          }
 
 instance Storable VkPhysicalDevicePCIBusInfoPropertiesEXT where
-  sizeOf    _ = #{size      struct VkPhysicalDevicePCIBusInfoPropertiesEXT}
-  alignment _ = #{alignment struct VkPhysicalDevicePCIBusInfoPropertiesEXT}
+  sizeOf    _ = #{size      VkPhysicalDevicePCIBusInfoPropertiesEXT}
+  alignment _ = #{alignment VkPhysicalDevicePCIBusInfoPropertiesEXT}
 
   peek ptr = 
     VkPhysicalDevicePCIBusInfoPropertiesEXT
@@ -53,22 +53,22 @@ instance Storable VkPhysicalDevicePCIBusInfoPropertiesEXT where
     pokeField @"pciFunction" ptr val
 
 instance Offset "sType" VkPhysicalDevicePCIBusInfoPropertiesEXT where
-  rawOffset = #{offset struct VkPhysicalDevicePCIBusInfoPropertiesEXT, sType}
+  rawOffset = #{offset VkPhysicalDevicePCIBusInfoPropertiesEXT, sType}
 
 instance Offset "pNext" VkPhysicalDevicePCIBusInfoPropertiesEXT where
-  rawOffset = #{offset struct VkPhysicalDevicePCIBusInfoPropertiesEXT, pNext}
+  rawOffset = #{offset VkPhysicalDevicePCIBusInfoPropertiesEXT, pNext}
 
 instance Offset "pciDomain" VkPhysicalDevicePCIBusInfoPropertiesEXT where
-  rawOffset = #{offset struct VkPhysicalDevicePCIBusInfoPropertiesEXT, pciDomain}
+  rawOffset = #{offset VkPhysicalDevicePCIBusInfoPropertiesEXT, pciDomain}
 
 instance Offset "pciBus" VkPhysicalDevicePCIBusInfoPropertiesEXT where
-  rawOffset = #{offset struct VkPhysicalDevicePCIBusInfoPropertiesEXT, pciBus}
+  rawOffset = #{offset VkPhysicalDevicePCIBusInfoPropertiesEXT, pciBus}
 
 instance Offset "pciDevice" VkPhysicalDevicePCIBusInfoPropertiesEXT where
-  rawOffset = #{offset struct VkPhysicalDevicePCIBusInfoPropertiesEXT, pciDevice}
+  rawOffset = #{offset VkPhysicalDevicePCIBusInfoPropertiesEXT, pciDevice}
 
 instance Offset "pciFunction" VkPhysicalDevicePCIBusInfoPropertiesEXT where
-  rawOffset = #{offset struct VkPhysicalDevicePCIBusInfoPropertiesEXT, pciFunction}
+  rawOffset = #{offset VkPhysicalDevicePCIBusInfoPropertiesEXT, pciFunction}
 
 #else
 

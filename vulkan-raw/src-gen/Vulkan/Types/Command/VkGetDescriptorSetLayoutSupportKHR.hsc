@@ -1,3 +1,7 @@
+{-# LANGUAGE CApiFFI #-}
+{-# LANGUAGE CPP #-}
+{-# LANGUAGE MagicHash #-}
+
 #include <vulkan/vulkan.h>
 
 #if VK_KHR_maintenance3
@@ -10,17 +14,18 @@ import GHC.Ptr
 import Vulkan.Types.Handle
 import Vulkan.Types.Struct.VkDescriptorSetLayoutCreateInfo
 import Vulkan.Types.Struct.VkDescriptorSetLayoutSupport
-import Vulkan.Types.Command.VkGetDescriptorSetLayoutSupport
 import Vulkan.Types.VkFun
 
 
 
-type VkGetDescriptorSetLayoutSupportKHR = VkGetDescriptorSetLayoutSupport
+type VkGetDescriptorSetLayoutSupportKHR =
+          VkDevice -- ^ device
+       -> Ptr VkDescriptorSetLayoutCreateInfo -- ^ pCreateInfo
+       -> Ptr VkDescriptorSetLayoutSupport -- ^ pSupport
+       -> IO ()
 
-vkFunGetDescriptorSetLayoutSupportKHR
-  :: VkFun VkGetDescriptorSetLayoutSupportKHR
-vkFunGetDescriptorSetLayoutSupportKHR = vkFunGetDescriptorSetLayoutSupport
-
+vkFunGetDescriptorSetLayoutSupportKHR :: VkFun VkGetDescriptorSetLayoutSupportKHR
+vkFunGetDescriptorSetLayoutSupportKHR = VkFun (Ptr ("vkGetDescriptorSetLayoutSupportKHR\0"##))
 
 #else
 

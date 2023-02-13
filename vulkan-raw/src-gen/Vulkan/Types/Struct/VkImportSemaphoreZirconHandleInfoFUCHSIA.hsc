@@ -36,8 +36,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkImportSemaphoreZirconHandleInfoFUCHSIA" #-} 
          }
 
 instance Storable VkImportSemaphoreZirconHandleInfoFUCHSIA where
-  sizeOf    _ = #{size      struct VkImportSemaphoreZirconHandleInfoFUCHSIA}
-  alignment _ = #{alignment struct VkImportSemaphoreZirconHandleInfoFUCHSIA}
+  sizeOf    _ = #{size      VkImportSemaphoreZirconHandleInfoFUCHSIA}
+  alignment _ = #{alignment VkImportSemaphoreZirconHandleInfoFUCHSIA}
 
   peek ptr = 
     VkImportSemaphoreZirconHandleInfoFUCHSIA
@@ -57,22 +57,22 @@ instance Storable VkImportSemaphoreZirconHandleInfoFUCHSIA where
     pokeField @"zirconHandle" ptr val
 
 instance Offset "sType" VkImportSemaphoreZirconHandleInfoFUCHSIA where
-  rawOffset = #{offset struct VkImportSemaphoreZirconHandleInfoFUCHSIA, sType}
+  rawOffset = #{offset VkImportSemaphoreZirconHandleInfoFUCHSIA, sType}
 
 instance Offset "pNext" VkImportSemaphoreZirconHandleInfoFUCHSIA where
-  rawOffset = #{offset struct VkImportSemaphoreZirconHandleInfoFUCHSIA, pNext}
+  rawOffset = #{offset VkImportSemaphoreZirconHandleInfoFUCHSIA, pNext}
 
 instance Offset "semaphore" VkImportSemaphoreZirconHandleInfoFUCHSIA where
-  rawOffset = #{offset struct VkImportSemaphoreZirconHandleInfoFUCHSIA, semaphore}
+  rawOffset = #{offset VkImportSemaphoreZirconHandleInfoFUCHSIA, semaphore}
 
 instance Offset "flags" VkImportSemaphoreZirconHandleInfoFUCHSIA where
-  rawOffset = #{offset struct VkImportSemaphoreZirconHandleInfoFUCHSIA, flags}
+  rawOffset = #{offset VkImportSemaphoreZirconHandleInfoFUCHSIA, flags}
 
 instance Offset "handleType" VkImportSemaphoreZirconHandleInfoFUCHSIA where
-  rawOffset = #{offset struct VkImportSemaphoreZirconHandleInfoFUCHSIA, handleType}
+  rawOffset = #{offset VkImportSemaphoreZirconHandleInfoFUCHSIA, handleType}
 
 instance Offset "zirconHandle" VkImportSemaphoreZirconHandleInfoFUCHSIA where
-  rawOffset = #{offset struct VkImportSemaphoreZirconHandleInfoFUCHSIA, zirconHandle}
+  rawOffset = #{offset VkImportSemaphoreZirconHandleInfoFUCHSIA, zirconHandle}
 
 #else
 

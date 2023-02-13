@@ -32,8 +32,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkExportSemaphoreWin32HandleInfoKHR" #-} VkExp
          }
 
 instance Storable VkExportSemaphoreWin32HandleInfoKHR where
-  sizeOf    _ = #{size      struct VkExportSemaphoreWin32HandleInfoKHR}
-  alignment _ = #{alignment struct VkExportSemaphoreWin32HandleInfoKHR}
+  sizeOf    _ = #{size      VkExportSemaphoreWin32HandleInfoKHR}
+  alignment _ = #{alignment VkExportSemaphoreWin32HandleInfoKHR}
 
   peek ptr = 
     VkExportSemaphoreWin32HandleInfoKHR
@@ -51,19 +51,19 @@ instance Storable VkExportSemaphoreWin32HandleInfoKHR where
     pokeField @"name" ptr val
 
 instance Offset "sType" VkExportSemaphoreWin32HandleInfoKHR where
-  rawOffset = #{offset struct VkExportSemaphoreWin32HandleInfoKHR, sType}
+  rawOffset = #{offset VkExportSemaphoreWin32HandleInfoKHR, sType}
 
 instance Offset "pNext" VkExportSemaphoreWin32HandleInfoKHR where
-  rawOffset = #{offset struct VkExportSemaphoreWin32HandleInfoKHR, pNext}
+  rawOffset = #{offset VkExportSemaphoreWin32HandleInfoKHR, pNext}
 
 instance Offset "pAttributes" VkExportSemaphoreWin32HandleInfoKHR where
-  rawOffset = #{offset struct VkExportSemaphoreWin32HandleInfoKHR, pAttributes}
+  rawOffset = #{offset VkExportSemaphoreWin32HandleInfoKHR, pAttributes}
 
 instance Offset "dwAccess" VkExportSemaphoreWin32HandleInfoKHR where
-  rawOffset = #{offset struct VkExportSemaphoreWin32HandleInfoKHR, dwAccess}
+  rawOffset = #{offset VkExportSemaphoreWin32HandleInfoKHR, dwAccess}
 
 instance Offset "name" VkExportSemaphoreWin32HandleInfoKHR where
-  rawOffset = #{offset struct VkExportSemaphoreWin32HandleInfoKHR, name}
+  rawOffset = #{offset VkExportSemaphoreWin32HandleInfoKHR, name}
 
 #else
 

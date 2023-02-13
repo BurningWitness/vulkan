@@ -36,8 +36,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkImageResolve2" #-} VkImageResolve2 =
          }
 
 instance Storable VkImageResolve2 where
-  sizeOf    _ = #{size      struct VkImageResolve2}
-  alignment _ = #{alignment struct VkImageResolve2}
+  sizeOf    _ = #{size      VkImageResolve2}
+  alignment _ = #{alignment VkImageResolve2}
 
   peek ptr = 
     VkImageResolve2
@@ -59,25 +59,25 @@ instance Storable VkImageResolve2 where
     pokeField @"extent" ptr val
 
 instance Offset "sType" VkImageResolve2 where
-  rawOffset = #{offset struct VkImageResolve2, sType}
+  rawOffset = #{offset VkImageResolve2, sType}
 
 instance Offset "pNext" VkImageResolve2 where
-  rawOffset = #{offset struct VkImageResolve2, pNext}
+  rawOffset = #{offset VkImageResolve2, pNext}
 
 instance Offset "srcSubresource" VkImageResolve2 where
-  rawOffset = #{offset struct VkImageResolve2, srcSubresource}
+  rawOffset = #{offset VkImageResolve2, srcSubresource}
 
 instance Offset "srcOffset" VkImageResolve2 where
-  rawOffset = #{offset struct VkImageResolve2, srcOffset}
+  rawOffset = #{offset VkImageResolve2, srcOffset}
 
 instance Offset "dstSubresource" VkImageResolve2 where
-  rawOffset = #{offset struct VkImageResolve2, dstSubresource}
+  rawOffset = #{offset VkImageResolve2, dstSubresource}
 
 instance Offset "dstOffset" VkImageResolve2 where
-  rawOffset = #{offset struct VkImageResolve2, dstOffset}
+  rawOffset = #{offset VkImageResolve2, dstOffset}
 
 instance Offset "extent" VkImageResolve2 where
-  rawOffset = #{offset struct VkImageResolve2, extent}
+  rawOffset = #{offset VkImageResolve2, extent}
 
 #else
 

@@ -30,8 +30,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkSparseImageMemoryRequirements" #-} VkSparseI
          }
 
 instance Storable VkSparseImageMemoryRequirements where
-  sizeOf    _ = #{size      struct VkSparseImageMemoryRequirements}
-  alignment _ = #{alignment struct VkSparseImageMemoryRequirements}
+  sizeOf    _ = #{size      VkSparseImageMemoryRequirements}
+  alignment _ = #{alignment VkSparseImageMemoryRequirements}
 
   peek ptr = 
     VkSparseImageMemoryRequirements
@@ -49,16 +49,16 @@ instance Storable VkSparseImageMemoryRequirements where
     pokeField @"imageMipTailStride" ptr val
 
 instance Offset "formatProperties" VkSparseImageMemoryRequirements where
-  rawOffset = #{offset struct VkSparseImageMemoryRequirements, formatProperties}
+  rawOffset = #{offset VkSparseImageMemoryRequirements, formatProperties}
 
 instance Offset "imageMipTailFirstLod" VkSparseImageMemoryRequirements where
-  rawOffset = #{offset struct VkSparseImageMemoryRequirements, imageMipTailFirstLod}
+  rawOffset = #{offset VkSparseImageMemoryRequirements, imageMipTailFirstLod}
 
 instance Offset "imageMipTailSize" VkSparseImageMemoryRequirements where
-  rawOffset = #{offset struct VkSparseImageMemoryRequirements, imageMipTailSize}
+  rawOffset = #{offset VkSparseImageMemoryRequirements, imageMipTailSize}
 
 instance Offset "imageMipTailOffset" VkSparseImageMemoryRequirements where
-  rawOffset = #{offset struct VkSparseImageMemoryRequirements, imageMipTailOffset}
+  rawOffset = #{offset VkSparseImageMemoryRequirements, imageMipTailOffset}
 
 instance Offset "imageMipTailStride" VkSparseImageMemoryRequirements where
-  rawOffset = #{offset struct VkSparseImageMemoryRequirements, imageMipTailStride}
+  rawOffset = #{offset VkSparseImageMemoryRequirements, imageMipTailStride}

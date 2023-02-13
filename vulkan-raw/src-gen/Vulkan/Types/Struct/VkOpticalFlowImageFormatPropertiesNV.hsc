@@ -30,8 +30,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkOpticalFlowImageFormatPropertiesNV" #-} VkOp
          }
 
 instance Storable VkOpticalFlowImageFormatPropertiesNV where
-  sizeOf    _ = #{size      struct VkOpticalFlowImageFormatPropertiesNV}
-  alignment _ = #{alignment struct VkOpticalFlowImageFormatPropertiesNV}
+  sizeOf    _ = #{size      VkOpticalFlowImageFormatPropertiesNV}
+  alignment _ = #{alignment VkOpticalFlowImageFormatPropertiesNV}
 
   peek ptr = 
     VkOpticalFlowImageFormatPropertiesNV
@@ -45,13 +45,13 @@ instance Storable VkOpticalFlowImageFormatPropertiesNV where
     pokeField @"format" ptr val
 
 instance Offset "sType" VkOpticalFlowImageFormatPropertiesNV where
-  rawOffset = #{offset struct VkOpticalFlowImageFormatPropertiesNV, sType}
+  rawOffset = #{offset VkOpticalFlowImageFormatPropertiesNV, sType}
 
 instance Offset "pNext" VkOpticalFlowImageFormatPropertiesNV where
-  rawOffset = #{offset struct VkOpticalFlowImageFormatPropertiesNV, pNext}
+  rawOffset = #{offset VkOpticalFlowImageFormatPropertiesNV, pNext}
 
 instance Offset "format" VkOpticalFlowImageFormatPropertiesNV where
-  rawOffset = #{offset struct VkOpticalFlowImageFormatPropertiesNV, format}
+  rawOffset = #{offset VkOpticalFlowImageFormatPropertiesNV, format}
 
 #else
 

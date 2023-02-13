@@ -29,8 +29,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkPerformanceQuerySubmitInfoKHR" #-} VkPerform
          }
 
 instance Storable VkPerformanceQuerySubmitInfoKHR where
-  sizeOf    _ = #{size      struct VkPerformanceQuerySubmitInfoKHR}
-  alignment _ = #{alignment struct VkPerformanceQuerySubmitInfoKHR}
+  sizeOf    _ = #{size      VkPerformanceQuerySubmitInfoKHR}
+  alignment _ = #{alignment VkPerformanceQuerySubmitInfoKHR}
 
   peek ptr = 
     VkPerformanceQuerySubmitInfoKHR
@@ -44,13 +44,13 @@ instance Storable VkPerformanceQuerySubmitInfoKHR where
     pokeField @"counterPassIndex" ptr val
 
 instance Offset "sType" VkPerformanceQuerySubmitInfoKHR where
-  rawOffset = #{offset struct VkPerformanceQuerySubmitInfoKHR, sType}
+  rawOffset = #{offset VkPerformanceQuerySubmitInfoKHR, sType}
 
 instance Offset "pNext" VkPerformanceQuerySubmitInfoKHR where
-  rawOffset = #{offset struct VkPerformanceQuerySubmitInfoKHR, pNext}
+  rawOffset = #{offset VkPerformanceQuerySubmitInfoKHR, pNext}
 
 instance Offset "counterPassIndex" VkPerformanceQuerySubmitInfoKHR where
-  rawOffset = #{offset struct VkPerformanceQuerySubmitInfoKHR, counterPassIndex}
+  rawOffset = #{offset VkPerformanceQuerySubmitInfoKHR, counterPassIndex}
 
 #else
 

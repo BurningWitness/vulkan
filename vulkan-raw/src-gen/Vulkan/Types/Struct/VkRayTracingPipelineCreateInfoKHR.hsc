@@ -47,8 +47,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkRayTracingPipelineCreateInfoKHR" #-} VkRayTr
          }
 
 instance Storable VkRayTracingPipelineCreateInfoKHR where
-  sizeOf    _ = #{size      struct VkRayTracingPipelineCreateInfoKHR}
-  alignment _ = #{alignment struct VkRayTracingPipelineCreateInfoKHR}
+  sizeOf    _ = #{size      VkRayTracingPipelineCreateInfoKHR}
+  alignment _ = #{alignment VkRayTracingPipelineCreateInfoKHR}
 
   peek ptr = 
     VkRayTracingPipelineCreateInfoKHR
@@ -84,46 +84,46 @@ instance Storable VkRayTracingPipelineCreateInfoKHR where
     pokeField @"basePipelineIndex" ptr val
 
 instance Offset "sType" VkRayTracingPipelineCreateInfoKHR where
-  rawOffset = #{offset struct VkRayTracingPipelineCreateInfoKHR, sType}
+  rawOffset = #{offset VkRayTracingPipelineCreateInfoKHR, sType}
 
 instance Offset "pNext" VkRayTracingPipelineCreateInfoKHR where
-  rawOffset = #{offset struct VkRayTracingPipelineCreateInfoKHR, pNext}
+  rawOffset = #{offset VkRayTracingPipelineCreateInfoKHR, pNext}
 
 instance Offset "flags" VkRayTracingPipelineCreateInfoKHR where
-  rawOffset = #{offset struct VkRayTracingPipelineCreateInfoKHR, flags}
+  rawOffset = #{offset VkRayTracingPipelineCreateInfoKHR, flags}
 
 instance Offset "stageCount" VkRayTracingPipelineCreateInfoKHR where
-  rawOffset = #{offset struct VkRayTracingPipelineCreateInfoKHR, stageCount}
+  rawOffset = #{offset VkRayTracingPipelineCreateInfoKHR, stageCount}
 
 instance Offset "pStages" VkRayTracingPipelineCreateInfoKHR where
-  rawOffset = #{offset struct VkRayTracingPipelineCreateInfoKHR, pStages}
+  rawOffset = #{offset VkRayTracingPipelineCreateInfoKHR, pStages}
 
 instance Offset "groupCount" VkRayTracingPipelineCreateInfoKHR where
-  rawOffset = #{offset struct VkRayTracingPipelineCreateInfoKHR, groupCount}
+  rawOffset = #{offset VkRayTracingPipelineCreateInfoKHR, groupCount}
 
 instance Offset "pGroups" VkRayTracingPipelineCreateInfoKHR where
-  rawOffset = #{offset struct VkRayTracingPipelineCreateInfoKHR, pGroups}
+  rawOffset = #{offset VkRayTracingPipelineCreateInfoKHR, pGroups}
 
 instance Offset "maxPipelineRayRecursionDepth" VkRayTracingPipelineCreateInfoKHR where
-  rawOffset = #{offset struct VkRayTracingPipelineCreateInfoKHR, maxPipelineRayRecursionDepth}
+  rawOffset = #{offset VkRayTracingPipelineCreateInfoKHR, maxPipelineRayRecursionDepth}
 
 instance Offset "pLibraryInfo" VkRayTracingPipelineCreateInfoKHR where
-  rawOffset = #{offset struct VkRayTracingPipelineCreateInfoKHR, pLibraryInfo}
+  rawOffset = #{offset VkRayTracingPipelineCreateInfoKHR, pLibraryInfo}
 
 instance Offset "pLibraryInterface" VkRayTracingPipelineCreateInfoKHR where
-  rawOffset = #{offset struct VkRayTracingPipelineCreateInfoKHR, pLibraryInterface}
+  rawOffset = #{offset VkRayTracingPipelineCreateInfoKHR, pLibraryInterface}
 
 instance Offset "pDynamicState" VkRayTracingPipelineCreateInfoKHR where
-  rawOffset = #{offset struct VkRayTracingPipelineCreateInfoKHR, pDynamicState}
+  rawOffset = #{offset VkRayTracingPipelineCreateInfoKHR, pDynamicState}
 
 instance Offset "layout" VkRayTracingPipelineCreateInfoKHR where
-  rawOffset = #{offset struct VkRayTracingPipelineCreateInfoKHR, layout}
+  rawOffset = #{offset VkRayTracingPipelineCreateInfoKHR, layout}
 
 instance Offset "basePipelineHandle" VkRayTracingPipelineCreateInfoKHR where
-  rawOffset = #{offset struct VkRayTracingPipelineCreateInfoKHR, basePipelineHandle}
+  rawOffset = #{offset VkRayTracingPipelineCreateInfoKHR, basePipelineHandle}
 
 instance Offset "basePipelineIndex" VkRayTracingPipelineCreateInfoKHR where
-  rawOffset = #{offset struct VkRayTracingPipelineCreateInfoKHR, basePipelineIndex}
+  rawOffset = #{offset VkRayTracingPipelineCreateInfoKHR, basePipelineIndex}
 
 #else
 

@@ -32,8 +32,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkMultisampledRenderToSingleSampledInfoEXT" #-
          }
 
 instance Storable VkMultisampledRenderToSingleSampledInfoEXT where
-  sizeOf    _ = #{size      struct VkMultisampledRenderToSingleSampledInfoEXT}
-  alignment _ = #{alignment struct VkMultisampledRenderToSingleSampledInfoEXT}
+  sizeOf    _ = #{size      VkMultisampledRenderToSingleSampledInfoEXT}
+  alignment _ = #{alignment VkMultisampledRenderToSingleSampledInfoEXT}
 
   peek ptr = 
     VkMultisampledRenderToSingleSampledInfoEXT
@@ -49,16 +49,16 @@ instance Storable VkMultisampledRenderToSingleSampledInfoEXT where
     pokeField @"rasterizationSamples" ptr val
 
 instance Offset "sType" VkMultisampledRenderToSingleSampledInfoEXT where
-  rawOffset = #{offset struct VkMultisampledRenderToSingleSampledInfoEXT, sType}
+  rawOffset = #{offset VkMultisampledRenderToSingleSampledInfoEXT, sType}
 
 instance Offset "pNext" VkMultisampledRenderToSingleSampledInfoEXT where
-  rawOffset = #{offset struct VkMultisampledRenderToSingleSampledInfoEXT, pNext}
+  rawOffset = #{offset VkMultisampledRenderToSingleSampledInfoEXT, pNext}
 
 instance Offset "multisampledRenderToSingleSampledEnable" VkMultisampledRenderToSingleSampledInfoEXT where
-  rawOffset = #{offset struct VkMultisampledRenderToSingleSampledInfoEXT, multisampledRenderToSingleSampledEnable}
+  rawOffset = #{offset VkMultisampledRenderToSingleSampledInfoEXT, multisampledRenderToSingleSampledEnable}
 
 instance Offset "rasterizationSamples" VkMultisampledRenderToSingleSampledInfoEXT where
-  rawOffset = #{offset struct VkMultisampledRenderToSingleSampledInfoEXT, rasterizationSamples}
+  rawOffset = #{offset VkMultisampledRenderToSingleSampledInfoEXT, rasterizationSamples}
 
 #else
 

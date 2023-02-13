@@ -30,8 +30,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkImageViewASTCDecodeModeEXT" #-} VkImageViewA
          }
 
 instance Storable VkImageViewASTCDecodeModeEXT where
-  sizeOf    _ = #{size      struct VkImageViewASTCDecodeModeEXT}
-  alignment _ = #{alignment struct VkImageViewASTCDecodeModeEXT}
+  sizeOf    _ = #{size      VkImageViewASTCDecodeModeEXT}
+  alignment _ = #{alignment VkImageViewASTCDecodeModeEXT}
 
   peek ptr = 
     VkImageViewASTCDecodeModeEXT
@@ -45,13 +45,13 @@ instance Storable VkImageViewASTCDecodeModeEXT where
     pokeField @"decodeMode" ptr val
 
 instance Offset "sType" VkImageViewASTCDecodeModeEXT where
-  rawOffset = #{offset struct VkImageViewASTCDecodeModeEXT, sType}
+  rawOffset = #{offset VkImageViewASTCDecodeModeEXT, sType}
 
 instance Offset "pNext" VkImageViewASTCDecodeModeEXT where
-  rawOffset = #{offset struct VkImageViewASTCDecodeModeEXT, pNext}
+  rawOffset = #{offset VkImageViewASTCDecodeModeEXT, pNext}
 
 instance Offset "decodeMode" VkImageViewASTCDecodeModeEXT where
-  rawOffset = #{offset struct VkImageViewASTCDecodeModeEXT, decodeMode}
+  rawOffset = #{offset VkImageViewASTCDecodeModeEXT, decodeMode}
 
 #else
 

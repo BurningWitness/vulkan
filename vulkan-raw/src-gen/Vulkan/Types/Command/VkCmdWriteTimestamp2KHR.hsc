@@ -1,3 +1,7 @@
+{-# LANGUAGE CApiFFI #-}
+{-# LANGUAGE CPP #-}
+{-# LANGUAGE MagicHash #-}
+
 #include <vulkan/vulkan.h>
 
 #if VK_KHR_synchronization2
@@ -9,17 +13,19 @@ import Data.Word
 import GHC.Ptr
 import Vulkan.Types.Enum.VkPipelineStageFlags2
 import Vulkan.Types.Handle
-import Vulkan.Types.Command.VkCmdWriteTimestamp2
 import Vulkan.Types.VkFun
 
 
 
-type VkCmdWriteTimestamp2KHR = VkCmdWriteTimestamp2
+type VkCmdWriteTimestamp2KHR =
+          VkCommandBuffer -- ^ commandBuffer
+       -> VkPipelineStageFlags2 -- ^ stage
+       -> VkQueryPool -- ^ queryPool
+       -> #{type uint32_t} -- ^ query
+       -> IO ()
 
-vkFunCmdWriteTimestamp2KHR
-  :: VkFun VkCmdWriteTimestamp2KHR
-vkFunCmdWriteTimestamp2KHR = vkFunCmdWriteTimestamp2
-
+vkFunCmdWriteTimestamp2KHR :: VkFun VkCmdWriteTimestamp2KHR
+vkFunCmdWriteTimestamp2KHR = VkFun (Ptr ("vkCmdWriteTimestamp2KHR\0"##))
 
 #else
 

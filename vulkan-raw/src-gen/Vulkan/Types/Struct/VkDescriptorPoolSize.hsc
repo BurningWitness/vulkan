@@ -27,8 +27,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkDescriptorPoolSize" #-} VkDescriptorPoolSize
          }
 
 instance Storable VkDescriptorPoolSize where
-  sizeOf    _ = #{size      struct VkDescriptorPoolSize}
-  alignment _ = #{alignment struct VkDescriptorPoolSize}
+  sizeOf    _ = #{size      VkDescriptorPoolSize}
+  alignment _ = #{alignment VkDescriptorPoolSize}
 
   peek ptr = 
     VkDescriptorPoolSize
@@ -40,10 +40,10 @@ instance Storable VkDescriptorPoolSize where
     pokeField @"descriptorCount" ptr val
 
 instance Offset "type_" VkDescriptorPoolSize where
-  rawOffset = #{offset struct VkDescriptorPoolSize, type}
+  rawOffset = #{offset VkDescriptorPoolSize, type}
 
 instance Offset "descriptorCount" VkDescriptorPoolSize where
-  rawOffset = #{offset struct VkDescriptorPoolSize, descriptorCount}
+  rawOffset = #{offset VkDescriptorPoolSize, descriptorCount}
 
 instance Offset "type" VkDescriptorPoolSize where
   rawOffset = rawOffset @"type_" @VkDescriptorPoolSize

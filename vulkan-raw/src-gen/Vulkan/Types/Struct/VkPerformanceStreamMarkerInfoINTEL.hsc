@@ -29,8 +29,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkPerformanceStreamMarkerInfoINTEL" #-} VkPerf
          }
 
 instance Storable VkPerformanceStreamMarkerInfoINTEL where
-  sizeOf    _ = #{size      struct VkPerformanceStreamMarkerInfoINTEL}
-  alignment _ = #{alignment struct VkPerformanceStreamMarkerInfoINTEL}
+  sizeOf    _ = #{size      VkPerformanceStreamMarkerInfoINTEL}
+  alignment _ = #{alignment VkPerformanceStreamMarkerInfoINTEL}
 
   peek ptr = 
     VkPerformanceStreamMarkerInfoINTEL
@@ -44,13 +44,13 @@ instance Storable VkPerformanceStreamMarkerInfoINTEL where
     pokeField @"marker" ptr val
 
 instance Offset "sType" VkPerformanceStreamMarkerInfoINTEL where
-  rawOffset = #{offset struct VkPerformanceStreamMarkerInfoINTEL, sType}
+  rawOffset = #{offset VkPerformanceStreamMarkerInfoINTEL, sType}
 
 instance Offset "pNext" VkPerformanceStreamMarkerInfoINTEL where
-  rawOffset = #{offset struct VkPerformanceStreamMarkerInfoINTEL, pNext}
+  rawOffset = #{offset VkPerformanceStreamMarkerInfoINTEL, pNext}
 
 instance Offset "marker" VkPerformanceStreamMarkerInfoINTEL where
-  rawOffset = #{offset struct VkPerformanceStreamMarkerInfoINTEL, marker}
+  rawOffset = #{offset VkPerformanceStreamMarkerInfoINTEL, marker}
 
 #else
 

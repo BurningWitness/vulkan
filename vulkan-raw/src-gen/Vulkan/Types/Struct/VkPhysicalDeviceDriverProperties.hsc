@@ -34,8 +34,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkPhysicalDeviceDriverProperties" #-} VkPhysic
          }
 
 instance Storable VkPhysicalDeviceDriverProperties where
-  sizeOf    _ = #{size      struct VkPhysicalDeviceDriverProperties}
-  alignment _ = #{alignment struct VkPhysicalDeviceDriverProperties}
+  sizeOf    _ = #{size      VkPhysicalDeviceDriverProperties}
+  alignment _ = #{alignment VkPhysicalDeviceDriverProperties}
 
   peek ptr = 
     VkPhysicalDeviceDriverProperties
@@ -55,22 +55,22 @@ instance Storable VkPhysicalDeviceDriverProperties where
     pokeField @"conformanceVersion" ptr val
 
 instance Offset "sType" VkPhysicalDeviceDriverProperties where
-  rawOffset = #{offset struct VkPhysicalDeviceDriverProperties, sType}
+  rawOffset = #{offset VkPhysicalDeviceDriverProperties, sType}
 
 instance Offset "pNext" VkPhysicalDeviceDriverProperties where
-  rawOffset = #{offset struct VkPhysicalDeviceDriverProperties, pNext}
+  rawOffset = #{offset VkPhysicalDeviceDriverProperties, pNext}
 
 instance Offset "driverID" VkPhysicalDeviceDriverProperties where
-  rawOffset = #{offset struct VkPhysicalDeviceDriverProperties, driverID}
+  rawOffset = #{offset VkPhysicalDeviceDriverProperties, driverID}
 
 instance Offset "driverName" VkPhysicalDeviceDriverProperties where
-  rawOffset = #{offset struct VkPhysicalDeviceDriverProperties, driverName}
+  rawOffset = #{offset VkPhysicalDeviceDriverProperties, driverName}
 
 instance Offset "driverInfo" VkPhysicalDeviceDriverProperties where
-  rawOffset = #{offset struct VkPhysicalDeviceDriverProperties, driverInfo}
+  rawOffset = #{offset VkPhysicalDeviceDriverProperties, driverInfo}
 
 instance Offset "conformanceVersion" VkPhysicalDeviceDriverProperties where
-  rawOffset = #{offset struct VkPhysicalDeviceDriverProperties, conformanceVersion}
+  rawOffset = #{offset VkPhysicalDeviceDriverProperties, conformanceVersion}
 
 #else
 

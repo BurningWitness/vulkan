@@ -48,8 +48,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkMicromapBuildInfoEXT" #-} VkMicromapBuildInf
          }
 
 instance Storable VkMicromapBuildInfoEXT where
-  sizeOf    _ = #{size      struct VkMicromapBuildInfoEXT}
-  alignment _ = #{alignment struct VkMicromapBuildInfoEXT}
+  sizeOf    _ = #{size      VkMicromapBuildInfoEXT}
+  alignment _ = #{alignment VkMicromapBuildInfoEXT}
 
   peek ptr = 
     VkMicromapBuildInfoEXT
@@ -83,43 +83,43 @@ instance Storable VkMicromapBuildInfoEXT where
     pokeField @"triangleArrayStride" ptr val
 
 instance Offset "sType" VkMicromapBuildInfoEXT where
-  rawOffset = #{offset struct VkMicromapBuildInfoEXT, sType}
+  rawOffset = #{offset VkMicromapBuildInfoEXT, sType}
 
 instance Offset "pNext" VkMicromapBuildInfoEXT where
-  rawOffset = #{offset struct VkMicromapBuildInfoEXT, pNext}
+  rawOffset = #{offset VkMicromapBuildInfoEXT, pNext}
 
 instance Offset "type_" VkMicromapBuildInfoEXT where
-  rawOffset = #{offset struct VkMicromapBuildInfoEXT, type}
+  rawOffset = #{offset VkMicromapBuildInfoEXT, type}
 
 instance Offset "flags" VkMicromapBuildInfoEXT where
-  rawOffset = #{offset struct VkMicromapBuildInfoEXT, flags}
+  rawOffset = #{offset VkMicromapBuildInfoEXT, flags}
 
 instance Offset "mode" VkMicromapBuildInfoEXT where
-  rawOffset = #{offset struct VkMicromapBuildInfoEXT, mode}
+  rawOffset = #{offset VkMicromapBuildInfoEXT, mode}
 
 instance Offset "dstMicromap" VkMicromapBuildInfoEXT where
-  rawOffset = #{offset struct VkMicromapBuildInfoEXT, dstMicromap}
+  rawOffset = #{offset VkMicromapBuildInfoEXT, dstMicromap}
 
 instance Offset "usageCountsCount" VkMicromapBuildInfoEXT where
-  rawOffset = #{offset struct VkMicromapBuildInfoEXT, usageCountsCount}
+  rawOffset = #{offset VkMicromapBuildInfoEXT, usageCountsCount}
 
 instance Offset "pUsageCounts" VkMicromapBuildInfoEXT where
-  rawOffset = #{offset struct VkMicromapBuildInfoEXT, pUsageCounts}
+  rawOffset = #{offset VkMicromapBuildInfoEXT, pUsageCounts}
 
 instance Offset "ppUsageCounts" VkMicromapBuildInfoEXT where
-  rawOffset = #{offset struct VkMicromapBuildInfoEXT, ppUsageCounts}
+  rawOffset = #{offset VkMicromapBuildInfoEXT, ppUsageCounts}
 
 instance Offset "data_" VkMicromapBuildInfoEXT where
-  rawOffset = #{offset struct VkMicromapBuildInfoEXT, data}
+  rawOffset = #{offset VkMicromapBuildInfoEXT, data}
 
 instance Offset "scratchData" VkMicromapBuildInfoEXT where
-  rawOffset = #{offset struct VkMicromapBuildInfoEXT, scratchData}
+  rawOffset = #{offset VkMicromapBuildInfoEXT, scratchData}
 
 instance Offset "triangleArray" VkMicromapBuildInfoEXT where
-  rawOffset = #{offset struct VkMicromapBuildInfoEXT, triangleArray}
+  rawOffset = #{offset VkMicromapBuildInfoEXT, triangleArray}
 
 instance Offset "triangleArrayStride" VkMicromapBuildInfoEXT where
-  rawOffset = #{offset struct VkMicromapBuildInfoEXT, triangleArrayStride}
+  rawOffset = #{offset VkMicromapBuildInfoEXT, triangleArrayStride}
 
 instance Offset "type" VkMicromapBuildInfoEXT where
   rawOffset = rawOffset @"type_" @VkMicromapBuildInfoEXT

@@ -1,9 +1,66 @@
+{-# LANGUAGE DataKinds #-}
+{-# LANGUAGE DuplicateRecordFields #-}
+{-# LANGUAGE MultiParamTypeClasses #-}
+#if __GLASGOW_HASKELL__ >= 902
+{-# LANGUAGE NoFieldSelectors #-}
+#endif
+{-# LANGUAGE TypeApplications #-}
+
 #include <vulkan/vulkan.h>
+
+#if VK_KHR_shader_atomic_int64
 
 module Vulkan.Types.Struct.VkPhysicalDeviceShaderAtomicInt64FeaturesKHR where
 
-import Vulkan.Types.Struct.VkPhysicalDeviceShaderAtomicInt64Features
+import Data.Int
+import Data.Word
+import Foreign.Ptr
+import Foreign.Storable
+import Foreign.Storable.Offset
+import Vulkan.Types.Base
+import Vulkan.Types.Enum.VkStructureType
 
 
 
-type VkPhysicalDeviceShaderAtomicInt64FeaturesKHR = VkPhysicalDeviceShaderAtomicInt64Features
+data {-# CTYPE "vulkan/vulkan.h" "VkPhysicalDeviceShaderAtomicInt64FeaturesKHR" #-} VkPhysicalDeviceShaderAtomicInt64FeaturesKHR =
+       VkPhysicalDeviceShaderAtomicInt64FeaturesKHR
+         { sType :: VkStructureType
+         , pNext :: Ptr ()
+         , shaderBufferInt64Atomics :: VkBool32
+         , shaderSharedInt64Atomics :: VkBool32
+         }
+
+instance Storable VkPhysicalDeviceShaderAtomicInt64FeaturesKHR where
+  sizeOf    _ = #{size      VkPhysicalDeviceShaderAtomicInt64FeaturesKHR}
+  alignment _ = #{alignment VkPhysicalDeviceShaderAtomicInt64FeaturesKHR}
+
+  peek ptr = 
+    VkPhysicalDeviceShaderAtomicInt64FeaturesKHR
+       <$> peek (offset @"sType" ptr)
+       <*> peek (offset @"pNext" ptr)
+       <*> peek (offset @"shaderBufferInt64Atomics" ptr)
+       <*> peek (offset @"shaderSharedInt64Atomics" ptr)
+
+  poke ptr val = do
+    pokeField @"sType" ptr val
+    pokeField @"pNext" ptr val
+    pokeField @"shaderBufferInt64Atomics" ptr val
+    pokeField @"shaderSharedInt64Atomics" ptr val
+
+instance Offset "sType" VkPhysicalDeviceShaderAtomicInt64FeaturesKHR where
+  rawOffset = #{offset VkPhysicalDeviceShaderAtomicInt64FeaturesKHR, sType}
+
+instance Offset "pNext" VkPhysicalDeviceShaderAtomicInt64FeaturesKHR where
+  rawOffset = #{offset VkPhysicalDeviceShaderAtomicInt64FeaturesKHR, pNext}
+
+instance Offset "shaderBufferInt64Atomics" VkPhysicalDeviceShaderAtomicInt64FeaturesKHR where
+  rawOffset = #{offset VkPhysicalDeviceShaderAtomicInt64FeaturesKHR, shaderBufferInt64Atomics}
+
+instance Offset "shaderSharedInt64Atomics" VkPhysicalDeviceShaderAtomicInt64FeaturesKHR where
+  rawOffset = #{offset VkPhysicalDeviceShaderAtomicInt64FeaturesKHR, shaderSharedInt64Atomics}
+
+#else
+
+module Vulkan.Types.Struct.VkPhysicalDeviceShaderAtomicInt64FeaturesKHR where
+
+#endif

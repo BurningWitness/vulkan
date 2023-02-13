@@ -34,8 +34,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkValidationFeaturesEXT" #-} VkValidationFeatu
          }
 
 instance Storable VkValidationFeaturesEXT where
-  sizeOf    _ = #{size      struct VkValidationFeaturesEXT}
-  alignment _ = #{alignment struct VkValidationFeaturesEXT}
+  sizeOf    _ = #{size      VkValidationFeaturesEXT}
+  alignment _ = #{alignment VkValidationFeaturesEXT}
 
   peek ptr = 
     VkValidationFeaturesEXT
@@ -55,22 +55,22 @@ instance Storable VkValidationFeaturesEXT where
     pokeField @"pDisabledValidationFeatures" ptr val
 
 instance Offset "sType" VkValidationFeaturesEXT where
-  rawOffset = #{offset struct VkValidationFeaturesEXT, sType}
+  rawOffset = #{offset VkValidationFeaturesEXT, sType}
 
 instance Offset "pNext" VkValidationFeaturesEXT where
-  rawOffset = #{offset struct VkValidationFeaturesEXT, pNext}
+  rawOffset = #{offset VkValidationFeaturesEXT, pNext}
 
 instance Offset "enabledValidationFeatureCount" VkValidationFeaturesEXT where
-  rawOffset = #{offset struct VkValidationFeaturesEXT, enabledValidationFeatureCount}
+  rawOffset = #{offset VkValidationFeaturesEXT, enabledValidationFeatureCount}
 
 instance Offset "pEnabledValidationFeatures" VkValidationFeaturesEXT where
-  rawOffset = #{offset struct VkValidationFeaturesEXT, pEnabledValidationFeatures}
+  rawOffset = #{offset VkValidationFeaturesEXT, pEnabledValidationFeatures}
 
 instance Offset "disabledValidationFeatureCount" VkValidationFeaturesEXT where
-  rawOffset = #{offset struct VkValidationFeaturesEXT, disabledValidationFeatureCount}
+  rawOffset = #{offset VkValidationFeaturesEXT, disabledValidationFeatureCount}
 
 instance Offset "pDisabledValidationFeatures" VkValidationFeaturesEXT where
-  rawOffset = #{offset struct VkValidationFeaturesEXT, pDisabledValidationFeatures}
+  rawOffset = #{offset VkValidationFeaturesEXT, pDisabledValidationFeatures}
 
 #else
 

@@ -42,8 +42,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkRenderingAttachmentInfo" #-} VkRenderingAtta
          }
 
 instance Storable VkRenderingAttachmentInfo where
-  sizeOf    _ = #{size      struct VkRenderingAttachmentInfo}
-  alignment _ = #{alignment struct VkRenderingAttachmentInfo}
+  sizeOf    _ = #{size      VkRenderingAttachmentInfo}
+  alignment _ = #{alignment VkRenderingAttachmentInfo}
 
   peek ptr = 
     VkRenderingAttachmentInfo
@@ -71,34 +71,34 @@ instance Storable VkRenderingAttachmentInfo where
     pokeField @"clearValue" ptr val
 
 instance Offset "sType" VkRenderingAttachmentInfo where
-  rawOffset = #{offset struct VkRenderingAttachmentInfo, sType}
+  rawOffset = #{offset VkRenderingAttachmentInfo, sType}
 
 instance Offset "pNext" VkRenderingAttachmentInfo where
-  rawOffset = #{offset struct VkRenderingAttachmentInfo, pNext}
+  rawOffset = #{offset VkRenderingAttachmentInfo, pNext}
 
 instance Offset "imageView" VkRenderingAttachmentInfo where
-  rawOffset = #{offset struct VkRenderingAttachmentInfo, imageView}
+  rawOffset = #{offset VkRenderingAttachmentInfo, imageView}
 
 instance Offset "imageLayout" VkRenderingAttachmentInfo where
-  rawOffset = #{offset struct VkRenderingAttachmentInfo, imageLayout}
+  rawOffset = #{offset VkRenderingAttachmentInfo, imageLayout}
 
 instance Offset "resolveMode" VkRenderingAttachmentInfo where
-  rawOffset = #{offset struct VkRenderingAttachmentInfo, resolveMode}
+  rawOffset = #{offset VkRenderingAttachmentInfo, resolveMode}
 
 instance Offset "resolveImageView" VkRenderingAttachmentInfo where
-  rawOffset = #{offset struct VkRenderingAttachmentInfo, resolveImageView}
+  rawOffset = #{offset VkRenderingAttachmentInfo, resolveImageView}
 
 instance Offset "resolveImageLayout" VkRenderingAttachmentInfo where
-  rawOffset = #{offset struct VkRenderingAttachmentInfo, resolveImageLayout}
+  rawOffset = #{offset VkRenderingAttachmentInfo, resolveImageLayout}
 
 instance Offset "loadOp" VkRenderingAttachmentInfo where
-  rawOffset = #{offset struct VkRenderingAttachmentInfo, loadOp}
+  rawOffset = #{offset VkRenderingAttachmentInfo, loadOp}
 
 instance Offset "storeOp" VkRenderingAttachmentInfo where
-  rawOffset = #{offset struct VkRenderingAttachmentInfo, storeOp}
+  rawOffset = #{offset VkRenderingAttachmentInfo, storeOp}
 
 instance Offset "clearValue" VkRenderingAttachmentInfo where
-  rawOffset = #{offset struct VkRenderingAttachmentInfo, clearValue}
+  rawOffset = #{offset VkRenderingAttachmentInfo, clearValue}
 
 #else
 

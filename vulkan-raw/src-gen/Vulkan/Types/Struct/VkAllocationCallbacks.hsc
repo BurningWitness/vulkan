@@ -30,8 +30,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkAllocationCallbacks" #-} VkAllocationCallbac
          }
 
 instance Storable VkAllocationCallbacks where
-  sizeOf    _ = #{size      struct VkAllocationCallbacks}
-  alignment _ = #{alignment struct VkAllocationCallbacks}
+  sizeOf    _ = #{size      VkAllocationCallbacks}
+  alignment _ = #{alignment VkAllocationCallbacks}
 
   peek ptr = 
     VkAllocationCallbacks
@@ -51,19 +51,19 @@ instance Storable VkAllocationCallbacks where
     pokeField @"pfnInternalFree" ptr val
 
 instance Offset "pUserData" VkAllocationCallbacks where
-  rawOffset = #{offset struct VkAllocationCallbacks, pUserData}
+  rawOffset = #{offset VkAllocationCallbacks, pUserData}
 
 instance Offset "pfnAllocation" VkAllocationCallbacks where
-  rawOffset = #{offset struct VkAllocationCallbacks, pfnAllocation}
+  rawOffset = #{offset VkAllocationCallbacks, pfnAllocation}
 
 instance Offset "pfnReallocation" VkAllocationCallbacks where
-  rawOffset = #{offset struct VkAllocationCallbacks, pfnReallocation}
+  rawOffset = #{offset VkAllocationCallbacks, pfnReallocation}
 
 instance Offset "pfnFree" VkAllocationCallbacks where
-  rawOffset = #{offset struct VkAllocationCallbacks, pfnFree}
+  rawOffset = #{offset VkAllocationCallbacks, pfnFree}
 
 instance Offset "pfnInternalAllocation" VkAllocationCallbacks where
-  rawOffset = #{offset struct VkAllocationCallbacks, pfnInternalAllocation}
+  rawOffset = #{offset VkAllocationCallbacks, pfnInternalAllocation}
 
 instance Offset "pfnInternalFree" VkAllocationCallbacks where
-  rawOffset = #{offset struct VkAllocationCallbacks, pfnInternalFree}
+  rawOffset = #{offset VkAllocationCallbacks, pfnInternalFree}

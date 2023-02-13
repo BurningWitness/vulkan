@@ -29,8 +29,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkSysmemColorSpaceFUCHSIA" #-} VkSysmemColorSp
          }
 
 instance Storable VkSysmemColorSpaceFUCHSIA where
-  sizeOf    _ = #{size      struct VkSysmemColorSpaceFUCHSIA}
-  alignment _ = #{alignment struct VkSysmemColorSpaceFUCHSIA}
+  sizeOf    _ = #{size      VkSysmemColorSpaceFUCHSIA}
+  alignment _ = #{alignment VkSysmemColorSpaceFUCHSIA}
 
   peek ptr = 
     VkSysmemColorSpaceFUCHSIA
@@ -44,13 +44,13 @@ instance Storable VkSysmemColorSpaceFUCHSIA where
     pokeField @"colorSpace" ptr val
 
 instance Offset "sType" VkSysmemColorSpaceFUCHSIA where
-  rawOffset = #{offset struct VkSysmemColorSpaceFUCHSIA, sType}
+  rawOffset = #{offset VkSysmemColorSpaceFUCHSIA, sType}
 
 instance Offset "pNext" VkSysmemColorSpaceFUCHSIA where
-  rawOffset = #{offset struct VkSysmemColorSpaceFUCHSIA, pNext}
+  rawOffset = #{offset VkSysmemColorSpaceFUCHSIA, pNext}
 
 instance Offset "colorSpace" VkSysmemColorSpaceFUCHSIA where
-  rawOffset = #{offset struct VkSysmemColorSpaceFUCHSIA, colorSpace}
+  rawOffset = #{offset VkSysmemColorSpaceFUCHSIA, colorSpace}
 
 #else
 

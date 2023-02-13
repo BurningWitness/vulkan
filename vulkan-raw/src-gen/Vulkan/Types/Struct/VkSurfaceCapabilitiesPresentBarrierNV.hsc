@@ -30,8 +30,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkSurfaceCapabilitiesPresentBarrierNV" #-} VkS
          }
 
 instance Storable VkSurfaceCapabilitiesPresentBarrierNV where
-  sizeOf    _ = #{size      struct VkSurfaceCapabilitiesPresentBarrierNV}
-  alignment _ = #{alignment struct VkSurfaceCapabilitiesPresentBarrierNV}
+  sizeOf    _ = #{size      VkSurfaceCapabilitiesPresentBarrierNV}
+  alignment _ = #{alignment VkSurfaceCapabilitiesPresentBarrierNV}
 
   peek ptr = 
     VkSurfaceCapabilitiesPresentBarrierNV
@@ -45,13 +45,13 @@ instance Storable VkSurfaceCapabilitiesPresentBarrierNV where
     pokeField @"presentBarrierSupported" ptr val
 
 instance Offset "sType" VkSurfaceCapabilitiesPresentBarrierNV where
-  rawOffset = #{offset struct VkSurfaceCapabilitiesPresentBarrierNV, sType}
+  rawOffset = #{offset VkSurfaceCapabilitiesPresentBarrierNV, sType}
 
 instance Offset "pNext" VkSurfaceCapabilitiesPresentBarrierNV where
-  rawOffset = #{offset struct VkSurfaceCapabilitiesPresentBarrierNV, pNext}
+  rawOffset = #{offset VkSurfaceCapabilitiesPresentBarrierNV, pNext}
 
 instance Offset "presentBarrierSupported" VkSurfaceCapabilitiesPresentBarrierNV where
-  rawOffset = #{offset struct VkSurfaceCapabilitiesPresentBarrierNV, presentBarrierSupported}
+  rawOffset = #{offset VkSurfaceCapabilitiesPresentBarrierNV, presentBarrierSupported}
 
 #else
 

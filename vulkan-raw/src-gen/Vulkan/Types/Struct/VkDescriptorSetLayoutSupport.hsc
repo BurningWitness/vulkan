@@ -30,8 +30,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkDescriptorSetLayoutSupport" #-} VkDescriptor
          }
 
 instance Storable VkDescriptorSetLayoutSupport where
-  sizeOf    _ = #{size      struct VkDescriptorSetLayoutSupport}
-  alignment _ = #{alignment struct VkDescriptorSetLayoutSupport}
+  sizeOf    _ = #{size      VkDescriptorSetLayoutSupport}
+  alignment _ = #{alignment VkDescriptorSetLayoutSupport}
 
   peek ptr = 
     VkDescriptorSetLayoutSupport
@@ -45,13 +45,13 @@ instance Storable VkDescriptorSetLayoutSupport where
     pokeField @"supported" ptr val
 
 instance Offset "sType" VkDescriptorSetLayoutSupport where
-  rawOffset = #{offset struct VkDescriptorSetLayoutSupport, sType}
+  rawOffset = #{offset VkDescriptorSetLayoutSupport, sType}
 
 instance Offset "pNext" VkDescriptorSetLayoutSupport where
-  rawOffset = #{offset struct VkDescriptorSetLayoutSupport, pNext}
+  rawOffset = #{offset VkDescriptorSetLayoutSupport, pNext}
 
 instance Offset "supported" VkDescriptorSetLayoutSupport where
-  rawOffset = #{offset struct VkDescriptorSetLayoutSupport, supported}
+  rawOffset = #{offset VkDescriptorSetLayoutSupport, supported}
 
 #else
 

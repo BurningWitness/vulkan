@@ -31,8 +31,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkCommandBufferAllocateInfo" #-} VkCommandBuff
          }
 
 instance Storable VkCommandBufferAllocateInfo where
-  sizeOf    _ = #{size      struct VkCommandBufferAllocateInfo}
-  alignment _ = #{alignment struct VkCommandBufferAllocateInfo}
+  sizeOf    _ = #{size      VkCommandBufferAllocateInfo}
+  alignment _ = #{alignment VkCommandBufferAllocateInfo}
 
   peek ptr = 
     VkCommandBufferAllocateInfo
@@ -50,16 +50,16 @@ instance Storable VkCommandBufferAllocateInfo where
     pokeField @"commandBufferCount" ptr val
 
 instance Offset "sType" VkCommandBufferAllocateInfo where
-  rawOffset = #{offset struct VkCommandBufferAllocateInfo, sType}
+  rawOffset = #{offset VkCommandBufferAllocateInfo, sType}
 
 instance Offset "pNext" VkCommandBufferAllocateInfo where
-  rawOffset = #{offset struct VkCommandBufferAllocateInfo, pNext}
+  rawOffset = #{offset VkCommandBufferAllocateInfo, pNext}
 
 instance Offset "commandPool" VkCommandBufferAllocateInfo where
-  rawOffset = #{offset struct VkCommandBufferAllocateInfo, commandPool}
+  rawOffset = #{offset VkCommandBufferAllocateInfo, commandPool}
 
 instance Offset "level" VkCommandBufferAllocateInfo where
-  rawOffset = #{offset struct VkCommandBufferAllocateInfo, level}
+  rawOffset = #{offset VkCommandBufferAllocateInfo, level}
 
 instance Offset "commandBufferCount" VkCommandBufferAllocateInfo where
-  rawOffset = #{offset struct VkCommandBufferAllocateInfo, commandBufferCount}
+  rawOffset = #{offset VkCommandBufferAllocateInfo, commandBufferCount}

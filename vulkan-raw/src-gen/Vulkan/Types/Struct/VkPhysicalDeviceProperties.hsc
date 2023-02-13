@@ -35,8 +35,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkPhysicalDeviceProperties" #-} VkPhysicalDevi
          }
 
 instance Storable VkPhysicalDeviceProperties where
-  sizeOf    _ = #{size      struct VkPhysicalDeviceProperties}
-  alignment _ = #{alignment struct VkPhysicalDeviceProperties}
+  sizeOf    _ = #{size      VkPhysicalDeviceProperties}
+  alignment _ = #{alignment VkPhysicalDeviceProperties}
 
   peek ptr = 
     VkPhysicalDeviceProperties
@@ -62,28 +62,28 @@ instance Storable VkPhysicalDeviceProperties where
     pokeField @"sparseProperties" ptr val
 
 instance Offset "apiVersion" VkPhysicalDeviceProperties where
-  rawOffset = #{offset struct VkPhysicalDeviceProperties, apiVersion}
+  rawOffset = #{offset VkPhysicalDeviceProperties, apiVersion}
 
 instance Offset "driverVersion" VkPhysicalDeviceProperties where
-  rawOffset = #{offset struct VkPhysicalDeviceProperties, driverVersion}
+  rawOffset = #{offset VkPhysicalDeviceProperties, driverVersion}
 
 instance Offset "vendorID" VkPhysicalDeviceProperties where
-  rawOffset = #{offset struct VkPhysicalDeviceProperties, vendorID}
+  rawOffset = #{offset VkPhysicalDeviceProperties, vendorID}
 
 instance Offset "deviceID" VkPhysicalDeviceProperties where
-  rawOffset = #{offset struct VkPhysicalDeviceProperties, deviceID}
+  rawOffset = #{offset VkPhysicalDeviceProperties, deviceID}
 
 instance Offset "deviceType" VkPhysicalDeviceProperties where
-  rawOffset = #{offset struct VkPhysicalDeviceProperties, deviceType}
+  rawOffset = #{offset VkPhysicalDeviceProperties, deviceType}
 
 instance Offset "deviceName" VkPhysicalDeviceProperties where
-  rawOffset = #{offset struct VkPhysicalDeviceProperties, deviceName}
+  rawOffset = #{offset VkPhysicalDeviceProperties, deviceName}
 
 instance Offset "pipelineCacheUUID" VkPhysicalDeviceProperties where
-  rawOffset = #{offset struct VkPhysicalDeviceProperties, pipelineCacheUUID}
+  rawOffset = #{offset VkPhysicalDeviceProperties, pipelineCacheUUID}
 
 instance Offset "limits" VkPhysicalDeviceProperties where
-  rawOffset = #{offset struct VkPhysicalDeviceProperties, limits}
+  rawOffset = #{offset VkPhysicalDeviceProperties, limits}
 
 instance Offset "sparseProperties" VkPhysicalDeviceProperties where
-  rawOffset = #{offset struct VkPhysicalDeviceProperties, sparseProperties}
+  rawOffset = #{offset VkPhysicalDeviceProperties, sparseProperties}

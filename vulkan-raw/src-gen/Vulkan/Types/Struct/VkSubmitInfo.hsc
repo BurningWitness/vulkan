@@ -35,8 +35,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkSubmitInfo" #-} VkSubmitInfo =
          }
 
 instance Storable VkSubmitInfo where
-  sizeOf    _ = #{size      struct VkSubmitInfo}
-  alignment _ = #{alignment struct VkSubmitInfo}
+  sizeOf    _ = #{size      VkSubmitInfo}
+  alignment _ = #{alignment VkSubmitInfo}
 
   peek ptr = 
     VkSubmitInfo
@@ -62,28 +62,28 @@ instance Storable VkSubmitInfo where
     pokeField @"pSignalSemaphores" ptr val
 
 instance Offset "sType" VkSubmitInfo where
-  rawOffset = #{offset struct VkSubmitInfo, sType}
+  rawOffset = #{offset VkSubmitInfo, sType}
 
 instance Offset "pNext" VkSubmitInfo where
-  rawOffset = #{offset struct VkSubmitInfo, pNext}
+  rawOffset = #{offset VkSubmitInfo, pNext}
 
 instance Offset "waitSemaphoreCount" VkSubmitInfo where
-  rawOffset = #{offset struct VkSubmitInfo, waitSemaphoreCount}
+  rawOffset = #{offset VkSubmitInfo, waitSemaphoreCount}
 
 instance Offset "pWaitSemaphores" VkSubmitInfo where
-  rawOffset = #{offset struct VkSubmitInfo, pWaitSemaphores}
+  rawOffset = #{offset VkSubmitInfo, pWaitSemaphores}
 
 instance Offset "pWaitDstStageMask" VkSubmitInfo where
-  rawOffset = #{offset struct VkSubmitInfo, pWaitDstStageMask}
+  rawOffset = #{offset VkSubmitInfo, pWaitDstStageMask}
 
 instance Offset "commandBufferCount" VkSubmitInfo where
-  rawOffset = #{offset struct VkSubmitInfo, commandBufferCount}
+  rawOffset = #{offset VkSubmitInfo, commandBufferCount}
 
 instance Offset "pCommandBuffers" VkSubmitInfo where
-  rawOffset = #{offset struct VkSubmitInfo, pCommandBuffers}
+  rawOffset = #{offset VkSubmitInfo, pCommandBuffers}
 
 instance Offset "signalSemaphoreCount" VkSubmitInfo where
-  rawOffset = #{offset struct VkSubmitInfo, signalSemaphoreCount}
+  rawOffset = #{offset VkSubmitInfo, signalSemaphoreCount}
 
 instance Offset "pSignalSemaphores" VkSubmitInfo where
-  rawOffset = #{offset struct VkSubmitInfo, pSignalSemaphores}
+  rawOffset = #{offset VkSubmitInfo, pSignalSemaphores}

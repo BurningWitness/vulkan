@@ -30,8 +30,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkPhysicalDeviceMultiDrawFeaturesEXT" #-} VkPh
          }
 
 instance Storable VkPhysicalDeviceMultiDrawFeaturesEXT where
-  sizeOf    _ = #{size      struct VkPhysicalDeviceMultiDrawFeaturesEXT}
-  alignment _ = #{alignment struct VkPhysicalDeviceMultiDrawFeaturesEXT}
+  sizeOf    _ = #{size      VkPhysicalDeviceMultiDrawFeaturesEXT}
+  alignment _ = #{alignment VkPhysicalDeviceMultiDrawFeaturesEXT}
 
   peek ptr = 
     VkPhysicalDeviceMultiDrawFeaturesEXT
@@ -45,13 +45,13 @@ instance Storable VkPhysicalDeviceMultiDrawFeaturesEXT where
     pokeField @"multiDraw" ptr val
 
 instance Offset "sType" VkPhysicalDeviceMultiDrawFeaturesEXT where
-  rawOffset = #{offset struct VkPhysicalDeviceMultiDrawFeaturesEXT, sType}
+  rawOffset = #{offset VkPhysicalDeviceMultiDrawFeaturesEXT, sType}
 
 instance Offset "pNext" VkPhysicalDeviceMultiDrawFeaturesEXT where
-  rawOffset = #{offset struct VkPhysicalDeviceMultiDrawFeaturesEXT, pNext}
+  rawOffset = #{offset VkPhysicalDeviceMultiDrawFeaturesEXT, pNext}
 
 instance Offset "multiDraw" VkPhysicalDeviceMultiDrawFeaturesEXT where
-  rawOffset = #{offset struct VkPhysicalDeviceMultiDrawFeaturesEXT, multiDraw}
+  rawOffset = #{offset VkPhysicalDeviceMultiDrawFeaturesEXT, multiDraw}
 
 #else
 

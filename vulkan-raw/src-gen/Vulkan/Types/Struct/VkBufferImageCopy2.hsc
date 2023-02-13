@@ -38,8 +38,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkBufferImageCopy2" #-} VkBufferImageCopy2 =
          }
 
 instance Storable VkBufferImageCopy2 where
-  sizeOf    _ = #{size      struct VkBufferImageCopy2}
-  alignment _ = #{alignment struct VkBufferImageCopy2}
+  sizeOf    _ = #{size      VkBufferImageCopy2}
+  alignment _ = #{alignment VkBufferImageCopy2}
 
   peek ptr = 
     VkBufferImageCopy2
@@ -63,28 +63,28 @@ instance Storable VkBufferImageCopy2 where
     pokeField @"imageExtent" ptr val
 
 instance Offset "sType" VkBufferImageCopy2 where
-  rawOffset = #{offset struct VkBufferImageCopy2, sType}
+  rawOffset = #{offset VkBufferImageCopy2, sType}
 
 instance Offset "pNext" VkBufferImageCopy2 where
-  rawOffset = #{offset struct VkBufferImageCopy2, pNext}
+  rawOffset = #{offset VkBufferImageCopy2, pNext}
 
 instance Offset "bufferOffset" VkBufferImageCopy2 where
-  rawOffset = #{offset struct VkBufferImageCopy2, bufferOffset}
+  rawOffset = #{offset VkBufferImageCopy2, bufferOffset}
 
 instance Offset "bufferRowLength" VkBufferImageCopy2 where
-  rawOffset = #{offset struct VkBufferImageCopy2, bufferRowLength}
+  rawOffset = #{offset VkBufferImageCopy2, bufferRowLength}
 
 instance Offset "bufferImageHeight" VkBufferImageCopy2 where
-  rawOffset = #{offset struct VkBufferImageCopy2, bufferImageHeight}
+  rawOffset = #{offset VkBufferImageCopy2, bufferImageHeight}
 
 instance Offset "imageSubresource" VkBufferImageCopy2 where
-  rawOffset = #{offset struct VkBufferImageCopy2, imageSubresource}
+  rawOffset = #{offset VkBufferImageCopy2, imageSubresource}
 
 instance Offset "imageOffset" VkBufferImageCopy2 where
-  rawOffset = #{offset struct VkBufferImageCopy2, imageOffset}
+  rawOffset = #{offset VkBufferImageCopy2, imageOffset}
 
 instance Offset "imageExtent" VkBufferImageCopy2 where
-  rawOffset = #{offset struct VkBufferImageCopy2, imageExtent}
+  rawOffset = #{offset VkBufferImageCopy2, imageExtent}
 
 #else
 

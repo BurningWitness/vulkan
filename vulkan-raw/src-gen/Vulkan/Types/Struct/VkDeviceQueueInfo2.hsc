@@ -32,8 +32,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkDeviceQueueInfo2" #-} VkDeviceQueueInfo2 =
          }
 
 instance Storable VkDeviceQueueInfo2 where
-  sizeOf    _ = #{size      struct VkDeviceQueueInfo2}
-  alignment _ = #{alignment struct VkDeviceQueueInfo2}
+  sizeOf    _ = #{size      VkDeviceQueueInfo2}
+  alignment _ = #{alignment VkDeviceQueueInfo2}
 
   peek ptr = 
     VkDeviceQueueInfo2
@@ -51,19 +51,19 @@ instance Storable VkDeviceQueueInfo2 where
     pokeField @"queueIndex" ptr val
 
 instance Offset "sType" VkDeviceQueueInfo2 where
-  rawOffset = #{offset struct VkDeviceQueueInfo2, sType}
+  rawOffset = #{offset VkDeviceQueueInfo2, sType}
 
 instance Offset "pNext" VkDeviceQueueInfo2 where
-  rawOffset = #{offset struct VkDeviceQueueInfo2, pNext}
+  rawOffset = #{offset VkDeviceQueueInfo2, pNext}
 
 instance Offset "flags" VkDeviceQueueInfo2 where
-  rawOffset = #{offset struct VkDeviceQueueInfo2, flags}
+  rawOffset = #{offset VkDeviceQueueInfo2, flags}
 
 instance Offset "queueFamilyIndex" VkDeviceQueueInfo2 where
-  rawOffset = #{offset struct VkDeviceQueueInfo2, queueFamilyIndex}
+  rawOffset = #{offset VkDeviceQueueInfo2, queueFamilyIndex}
 
 instance Offset "queueIndex" VkDeviceQueueInfo2 where
-  rawOffset = #{offset struct VkDeviceQueueInfo2, queueIndex}
+  rawOffset = #{offset VkDeviceQueueInfo2, queueIndex}
 
 #else
 

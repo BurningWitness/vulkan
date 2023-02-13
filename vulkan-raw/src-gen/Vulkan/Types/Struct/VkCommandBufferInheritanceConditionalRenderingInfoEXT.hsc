@@ -30,8 +30,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkCommandBufferInheritanceConditionalRendering
          }
 
 instance Storable VkCommandBufferInheritanceConditionalRenderingInfoEXT where
-  sizeOf    _ = #{size      struct VkCommandBufferInheritanceConditionalRenderingInfoEXT}
-  alignment _ = #{alignment struct VkCommandBufferInheritanceConditionalRenderingInfoEXT}
+  sizeOf    _ = #{size      VkCommandBufferInheritanceConditionalRenderingInfoEXT}
+  alignment _ = #{alignment VkCommandBufferInheritanceConditionalRenderingInfoEXT}
 
   peek ptr = 
     VkCommandBufferInheritanceConditionalRenderingInfoEXT
@@ -45,13 +45,13 @@ instance Storable VkCommandBufferInheritanceConditionalRenderingInfoEXT where
     pokeField @"conditionalRenderingEnable" ptr val
 
 instance Offset "sType" VkCommandBufferInheritanceConditionalRenderingInfoEXT where
-  rawOffset = #{offset struct VkCommandBufferInheritanceConditionalRenderingInfoEXT, sType}
+  rawOffset = #{offset VkCommandBufferInheritanceConditionalRenderingInfoEXT, sType}
 
 instance Offset "pNext" VkCommandBufferInheritanceConditionalRenderingInfoEXT where
-  rawOffset = #{offset struct VkCommandBufferInheritanceConditionalRenderingInfoEXT, pNext}
+  rawOffset = #{offset VkCommandBufferInheritanceConditionalRenderingInfoEXT, pNext}
 
 instance Offset "conditionalRenderingEnable" VkCommandBufferInheritanceConditionalRenderingInfoEXT where
-  rawOffset = #{offset struct VkCommandBufferInheritanceConditionalRenderingInfoEXT, conditionalRenderingEnable}
+  rawOffset = #{offset VkCommandBufferInheritanceConditionalRenderingInfoEXT, conditionalRenderingEnable}
 
 #else
 

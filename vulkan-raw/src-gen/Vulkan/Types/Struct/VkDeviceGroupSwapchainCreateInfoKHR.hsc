@@ -30,8 +30,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkDeviceGroupSwapchainCreateInfoKHR" #-} VkDev
          }
 
 instance Storable VkDeviceGroupSwapchainCreateInfoKHR where
-  sizeOf    _ = #{size      struct VkDeviceGroupSwapchainCreateInfoKHR}
-  alignment _ = #{alignment struct VkDeviceGroupSwapchainCreateInfoKHR}
+  sizeOf    _ = #{size      VkDeviceGroupSwapchainCreateInfoKHR}
+  alignment _ = #{alignment VkDeviceGroupSwapchainCreateInfoKHR}
 
   peek ptr = 
     VkDeviceGroupSwapchainCreateInfoKHR
@@ -45,13 +45,13 @@ instance Storable VkDeviceGroupSwapchainCreateInfoKHR where
     pokeField @"modes" ptr val
 
 instance Offset "sType" VkDeviceGroupSwapchainCreateInfoKHR where
-  rawOffset = #{offset struct VkDeviceGroupSwapchainCreateInfoKHR, sType}
+  rawOffset = #{offset VkDeviceGroupSwapchainCreateInfoKHR, sType}
 
 instance Offset "pNext" VkDeviceGroupSwapchainCreateInfoKHR where
-  rawOffset = #{offset struct VkDeviceGroupSwapchainCreateInfoKHR, pNext}
+  rawOffset = #{offset VkDeviceGroupSwapchainCreateInfoKHR, pNext}
 
 instance Offset "modes" VkDeviceGroupSwapchainCreateInfoKHR where
-  rawOffset = #{offset struct VkDeviceGroupSwapchainCreateInfoKHR, modes}
+  rawOffset = #{offset VkDeviceGroupSwapchainCreateInfoKHR, modes}
 
 #else
 

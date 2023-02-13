@@ -39,8 +39,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkAccelerationStructureCreateInfoKHR" #-} VkAc
          }
 
 instance Storable VkAccelerationStructureCreateInfoKHR where
-  sizeOf    _ = #{size      struct VkAccelerationStructureCreateInfoKHR}
-  alignment _ = #{alignment struct VkAccelerationStructureCreateInfoKHR}
+  sizeOf    _ = #{size      VkAccelerationStructureCreateInfoKHR}
+  alignment _ = #{alignment VkAccelerationStructureCreateInfoKHR}
 
   peek ptr = 
     VkAccelerationStructureCreateInfoKHR
@@ -64,28 +64,28 @@ instance Storable VkAccelerationStructureCreateInfoKHR where
     pokeField @"deviceAddress" ptr val
 
 instance Offset "sType" VkAccelerationStructureCreateInfoKHR where
-  rawOffset = #{offset struct VkAccelerationStructureCreateInfoKHR, sType}
+  rawOffset = #{offset VkAccelerationStructureCreateInfoKHR, sType}
 
 instance Offset "pNext" VkAccelerationStructureCreateInfoKHR where
-  rawOffset = #{offset struct VkAccelerationStructureCreateInfoKHR, pNext}
+  rawOffset = #{offset VkAccelerationStructureCreateInfoKHR, pNext}
 
 instance Offset "createFlags" VkAccelerationStructureCreateInfoKHR where
-  rawOffset = #{offset struct VkAccelerationStructureCreateInfoKHR, createFlags}
+  rawOffset = #{offset VkAccelerationStructureCreateInfoKHR, createFlags}
 
 instance Offset "buffer" VkAccelerationStructureCreateInfoKHR where
-  rawOffset = #{offset struct VkAccelerationStructureCreateInfoKHR, buffer}
+  rawOffset = #{offset VkAccelerationStructureCreateInfoKHR, buffer}
 
 instance Offset "offset" VkAccelerationStructureCreateInfoKHR where
-  rawOffset = #{offset struct VkAccelerationStructureCreateInfoKHR, offset}
+  rawOffset = #{offset VkAccelerationStructureCreateInfoKHR, offset}
 
 instance Offset "size" VkAccelerationStructureCreateInfoKHR where
-  rawOffset = #{offset struct VkAccelerationStructureCreateInfoKHR, size}
+  rawOffset = #{offset VkAccelerationStructureCreateInfoKHR, size}
 
 instance Offset "type_" VkAccelerationStructureCreateInfoKHR where
-  rawOffset = #{offset struct VkAccelerationStructureCreateInfoKHR, type}
+  rawOffset = #{offset VkAccelerationStructureCreateInfoKHR, type}
 
 instance Offset "deviceAddress" VkAccelerationStructureCreateInfoKHR where
-  rawOffset = #{offset struct VkAccelerationStructureCreateInfoKHR, deviceAddress}
+  rawOffset = #{offset VkAccelerationStructureCreateInfoKHR, deviceAddress}
 
 instance Offset "type" VkAccelerationStructureCreateInfoKHR where
   rawOffset = rawOffset @"type_" @VkAccelerationStructureCreateInfoKHR

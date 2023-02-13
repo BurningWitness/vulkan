@@ -31,8 +31,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkPhysicalDeviceShaderClockFeaturesKHR" #-} Vk
          }
 
 instance Storable VkPhysicalDeviceShaderClockFeaturesKHR where
-  sizeOf    _ = #{size      struct VkPhysicalDeviceShaderClockFeaturesKHR}
-  alignment _ = #{alignment struct VkPhysicalDeviceShaderClockFeaturesKHR}
+  sizeOf    _ = #{size      VkPhysicalDeviceShaderClockFeaturesKHR}
+  alignment _ = #{alignment VkPhysicalDeviceShaderClockFeaturesKHR}
 
   peek ptr = 
     VkPhysicalDeviceShaderClockFeaturesKHR
@@ -48,16 +48,16 @@ instance Storable VkPhysicalDeviceShaderClockFeaturesKHR where
     pokeField @"shaderDeviceClock" ptr val
 
 instance Offset "sType" VkPhysicalDeviceShaderClockFeaturesKHR where
-  rawOffset = #{offset struct VkPhysicalDeviceShaderClockFeaturesKHR, sType}
+  rawOffset = #{offset VkPhysicalDeviceShaderClockFeaturesKHR, sType}
 
 instance Offset "pNext" VkPhysicalDeviceShaderClockFeaturesKHR where
-  rawOffset = #{offset struct VkPhysicalDeviceShaderClockFeaturesKHR, pNext}
+  rawOffset = #{offset VkPhysicalDeviceShaderClockFeaturesKHR, pNext}
 
 instance Offset "shaderSubgroupClock" VkPhysicalDeviceShaderClockFeaturesKHR where
-  rawOffset = #{offset struct VkPhysicalDeviceShaderClockFeaturesKHR, shaderSubgroupClock}
+  rawOffset = #{offset VkPhysicalDeviceShaderClockFeaturesKHR, shaderSubgroupClock}
 
 instance Offset "shaderDeviceClock" VkPhysicalDeviceShaderClockFeaturesKHR where
-  rawOffset = #{offset struct VkPhysicalDeviceShaderClockFeaturesKHR, shaderDeviceClock}
+  rawOffset = #{offset VkPhysicalDeviceShaderClockFeaturesKHR, shaderDeviceClock}
 
 #else
 

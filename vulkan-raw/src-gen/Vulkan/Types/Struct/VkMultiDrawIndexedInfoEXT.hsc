@@ -28,8 +28,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkMultiDrawIndexedInfoEXT" #-} VkMultiDrawInde
          }
 
 instance Storable VkMultiDrawIndexedInfoEXT where
-  sizeOf    _ = #{size      struct VkMultiDrawIndexedInfoEXT}
-  alignment _ = #{alignment struct VkMultiDrawIndexedInfoEXT}
+  sizeOf    _ = #{size      VkMultiDrawIndexedInfoEXT}
+  alignment _ = #{alignment VkMultiDrawIndexedInfoEXT}
 
   peek ptr = 
     VkMultiDrawIndexedInfoEXT
@@ -43,13 +43,13 @@ instance Storable VkMultiDrawIndexedInfoEXT where
     pokeField @"vertexOffset" ptr val
 
 instance Offset "firstIndex" VkMultiDrawIndexedInfoEXT where
-  rawOffset = #{offset struct VkMultiDrawIndexedInfoEXT, firstIndex}
+  rawOffset = #{offset VkMultiDrawIndexedInfoEXT, firstIndex}
 
 instance Offset "indexCount" VkMultiDrawIndexedInfoEXT where
-  rawOffset = #{offset struct VkMultiDrawIndexedInfoEXT, indexCount}
+  rawOffset = #{offset VkMultiDrawIndexedInfoEXT, indexCount}
 
 instance Offset "vertexOffset" VkMultiDrawIndexedInfoEXT where
-  rawOffset = #{offset struct VkMultiDrawIndexedInfoEXT, vertexOffset}
+  rawOffset = #{offset VkMultiDrawIndexedInfoEXT, vertexOffset}
 
 #else
 

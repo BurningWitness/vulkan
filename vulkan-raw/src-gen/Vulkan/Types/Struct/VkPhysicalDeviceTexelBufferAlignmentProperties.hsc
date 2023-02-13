@@ -33,8 +33,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkPhysicalDeviceTexelBufferAlignmentProperties
          }
 
 instance Storable VkPhysicalDeviceTexelBufferAlignmentProperties where
-  sizeOf    _ = #{size      struct VkPhysicalDeviceTexelBufferAlignmentProperties}
-  alignment _ = #{alignment struct VkPhysicalDeviceTexelBufferAlignmentProperties}
+  sizeOf    _ = #{size      VkPhysicalDeviceTexelBufferAlignmentProperties}
+  alignment _ = #{alignment VkPhysicalDeviceTexelBufferAlignmentProperties}
 
   peek ptr = 
     VkPhysicalDeviceTexelBufferAlignmentProperties
@@ -54,22 +54,22 @@ instance Storable VkPhysicalDeviceTexelBufferAlignmentProperties where
     pokeField @"uniformTexelBufferOffsetSingleTexelAlignment" ptr val
 
 instance Offset "sType" VkPhysicalDeviceTexelBufferAlignmentProperties where
-  rawOffset = #{offset struct VkPhysicalDeviceTexelBufferAlignmentProperties, sType}
+  rawOffset = #{offset VkPhysicalDeviceTexelBufferAlignmentProperties, sType}
 
 instance Offset "pNext" VkPhysicalDeviceTexelBufferAlignmentProperties where
-  rawOffset = #{offset struct VkPhysicalDeviceTexelBufferAlignmentProperties, pNext}
+  rawOffset = #{offset VkPhysicalDeviceTexelBufferAlignmentProperties, pNext}
 
 instance Offset "storageTexelBufferOffsetAlignmentBytes" VkPhysicalDeviceTexelBufferAlignmentProperties where
-  rawOffset = #{offset struct VkPhysicalDeviceTexelBufferAlignmentProperties, storageTexelBufferOffsetAlignmentBytes}
+  rawOffset = #{offset VkPhysicalDeviceTexelBufferAlignmentProperties, storageTexelBufferOffsetAlignmentBytes}
 
 instance Offset "storageTexelBufferOffsetSingleTexelAlignment" VkPhysicalDeviceTexelBufferAlignmentProperties where
-  rawOffset = #{offset struct VkPhysicalDeviceTexelBufferAlignmentProperties, storageTexelBufferOffsetSingleTexelAlignment}
+  rawOffset = #{offset VkPhysicalDeviceTexelBufferAlignmentProperties, storageTexelBufferOffsetSingleTexelAlignment}
 
 instance Offset "uniformTexelBufferOffsetAlignmentBytes" VkPhysicalDeviceTexelBufferAlignmentProperties where
-  rawOffset = #{offset struct VkPhysicalDeviceTexelBufferAlignmentProperties, uniformTexelBufferOffsetAlignmentBytes}
+  rawOffset = #{offset VkPhysicalDeviceTexelBufferAlignmentProperties, uniformTexelBufferOffsetAlignmentBytes}
 
 instance Offset "uniformTexelBufferOffsetSingleTexelAlignment" VkPhysicalDeviceTexelBufferAlignmentProperties where
-  rawOffset = #{offset struct VkPhysicalDeviceTexelBufferAlignmentProperties, uniformTexelBufferOffsetSingleTexelAlignment}
+  rawOffset = #{offset VkPhysicalDeviceTexelBufferAlignmentProperties, uniformTexelBufferOffsetSingleTexelAlignment}
 
 #else
 

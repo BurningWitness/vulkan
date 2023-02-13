@@ -34,8 +34,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkPerformanceOverrideInfoINTEL" #-} VkPerforma
          }
 
 instance Storable VkPerformanceOverrideInfoINTEL where
-  sizeOf    _ = #{size      struct VkPerformanceOverrideInfoINTEL}
-  alignment _ = #{alignment struct VkPerformanceOverrideInfoINTEL}
+  sizeOf    _ = #{size      VkPerformanceOverrideInfoINTEL}
+  alignment _ = #{alignment VkPerformanceOverrideInfoINTEL}
 
   peek ptr = 
     VkPerformanceOverrideInfoINTEL
@@ -53,19 +53,19 @@ instance Storable VkPerformanceOverrideInfoINTEL where
     pokeField @"parameter" ptr val
 
 instance Offset "sType" VkPerformanceOverrideInfoINTEL where
-  rawOffset = #{offset struct VkPerformanceOverrideInfoINTEL, sType}
+  rawOffset = #{offset VkPerformanceOverrideInfoINTEL, sType}
 
 instance Offset "pNext" VkPerformanceOverrideInfoINTEL where
-  rawOffset = #{offset struct VkPerformanceOverrideInfoINTEL, pNext}
+  rawOffset = #{offset VkPerformanceOverrideInfoINTEL, pNext}
 
 instance Offset "type_" VkPerformanceOverrideInfoINTEL where
-  rawOffset = #{offset struct VkPerformanceOverrideInfoINTEL, type}
+  rawOffset = #{offset VkPerformanceOverrideInfoINTEL, type}
 
 instance Offset "enable" VkPerformanceOverrideInfoINTEL where
-  rawOffset = #{offset struct VkPerformanceOverrideInfoINTEL, enable}
+  rawOffset = #{offset VkPerformanceOverrideInfoINTEL, enable}
 
 instance Offset "parameter" VkPerformanceOverrideInfoINTEL where
-  rawOffset = #{offset struct VkPerformanceOverrideInfoINTEL, parameter}
+  rawOffset = #{offset VkPerformanceOverrideInfoINTEL, parameter}
 
 instance Offset "type" VkPerformanceOverrideInfoINTEL where
   rawOffset = rawOffset @"type_" @VkPerformanceOverrideInfoINTEL

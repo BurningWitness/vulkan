@@ -30,8 +30,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkSamplerYcbcrConversionInfo" #-} VkSamplerYcb
          }
 
 instance Storable VkSamplerYcbcrConversionInfo where
-  sizeOf    _ = #{size      struct VkSamplerYcbcrConversionInfo}
-  alignment _ = #{alignment struct VkSamplerYcbcrConversionInfo}
+  sizeOf    _ = #{size      VkSamplerYcbcrConversionInfo}
+  alignment _ = #{alignment VkSamplerYcbcrConversionInfo}
 
   peek ptr = 
     VkSamplerYcbcrConversionInfo
@@ -45,13 +45,13 @@ instance Storable VkSamplerYcbcrConversionInfo where
     pokeField @"conversion" ptr val
 
 instance Offset "sType" VkSamplerYcbcrConversionInfo where
-  rawOffset = #{offset struct VkSamplerYcbcrConversionInfo, sType}
+  rawOffset = #{offset VkSamplerYcbcrConversionInfo, sType}
 
 instance Offset "pNext" VkSamplerYcbcrConversionInfo where
-  rawOffset = #{offset struct VkSamplerYcbcrConversionInfo, pNext}
+  rawOffset = #{offset VkSamplerYcbcrConversionInfo, pNext}
 
 instance Offset "conversion" VkSamplerYcbcrConversionInfo where
-  rawOffset = #{offset struct VkSamplerYcbcrConversionInfo, conversion}
+  rawOffset = #{offset VkSamplerYcbcrConversionInfo, conversion}
 
 #else
 

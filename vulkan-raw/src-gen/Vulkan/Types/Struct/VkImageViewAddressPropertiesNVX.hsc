@@ -31,8 +31,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkImageViewAddressPropertiesNVX" #-} VkImageVi
          }
 
 instance Storable VkImageViewAddressPropertiesNVX where
-  sizeOf    _ = #{size      struct VkImageViewAddressPropertiesNVX}
-  alignment _ = #{alignment struct VkImageViewAddressPropertiesNVX}
+  sizeOf    _ = #{size      VkImageViewAddressPropertiesNVX}
+  alignment _ = #{alignment VkImageViewAddressPropertiesNVX}
 
   peek ptr = 
     VkImageViewAddressPropertiesNVX
@@ -48,16 +48,16 @@ instance Storable VkImageViewAddressPropertiesNVX where
     pokeField @"size" ptr val
 
 instance Offset "sType" VkImageViewAddressPropertiesNVX where
-  rawOffset = #{offset struct VkImageViewAddressPropertiesNVX, sType}
+  rawOffset = #{offset VkImageViewAddressPropertiesNVX, sType}
 
 instance Offset "pNext" VkImageViewAddressPropertiesNVX where
-  rawOffset = #{offset struct VkImageViewAddressPropertiesNVX, pNext}
+  rawOffset = #{offset VkImageViewAddressPropertiesNVX, pNext}
 
 instance Offset "deviceAddress" VkImageViewAddressPropertiesNVX where
-  rawOffset = #{offset struct VkImageViewAddressPropertiesNVX, deviceAddress}
+  rawOffset = #{offset VkImageViewAddressPropertiesNVX, deviceAddress}
 
 instance Offset "size" VkImageViewAddressPropertiesNVX where
-  rawOffset = #{offset struct VkImageViewAddressPropertiesNVX, size}
+  rawOffset = #{offset VkImageViewAddressPropertiesNVX, size}
 
 #else
 

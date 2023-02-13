@@ -30,8 +30,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkPhysicalDeviceExternalMemoryHostPropertiesEX
          }
 
 instance Storable VkPhysicalDeviceExternalMemoryHostPropertiesEXT where
-  sizeOf    _ = #{size      struct VkPhysicalDeviceExternalMemoryHostPropertiesEXT}
-  alignment _ = #{alignment struct VkPhysicalDeviceExternalMemoryHostPropertiesEXT}
+  sizeOf    _ = #{size      VkPhysicalDeviceExternalMemoryHostPropertiesEXT}
+  alignment _ = #{alignment VkPhysicalDeviceExternalMemoryHostPropertiesEXT}
 
   peek ptr = 
     VkPhysicalDeviceExternalMemoryHostPropertiesEXT
@@ -45,13 +45,13 @@ instance Storable VkPhysicalDeviceExternalMemoryHostPropertiesEXT where
     pokeField @"minImportedHostPointerAlignment" ptr val
 
 instance Offset "sType" VkPhysicalDeviceExternalMemoryHostPropertiesEXT where
-  rawOffset = #{offset struct VkPhysicalDeviceExternalMemoryHostPropertiesEXT, sType}
+  rawOffset = #{offset VkPhysicalDeviceExternalMemoryHostPropertiesEXT, sType}
 
 instance Offset "pNext" VkPhysicalDeviceExternalMemoryHostPropertiesEXT where
-  rawOffset = #{offset struct VkPhysicalDeviceExternalMemoryHostPropertiesEXT, pNext}
+  rawOffset = #{offset VkPhysicalDeviceExternalMemoryHostPropertiesEXT, pNext}
 
 instance Offset "minImportedHostPointerAlignment" VkPhysicalDeviceExternalMemoryHostPropertiesEXT where
-  rawOffset = #{offset struct VkPhysicalDeviceExternalMemoryHostPropertiesEXT, minImportedHostPointerAlignment}
+  rawOffset = #{offset VkPhysicalDeviceExternalMemoryHostPropertiesEXT, minImportedHostPointerAlignment}
 
 #else
 

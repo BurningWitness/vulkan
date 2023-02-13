@@ -29,8 +29,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkDisplayModePropertiesKHR" #-} VkDisplayModeP
          }
 
 instance Storable VkDisplayModePropertiesKHR where
-  sizeOf    _ = #{size      struct VkDisplayModePropertiesKHR}
-  alignment _ = #{alignment struct VkDisplayModePropertiesKHR}
+  sizeOf    _ = #{size      VkDisplayModePropertiesKHR}
+  alignment _ = #{alignment VkDisplayModePropertiesKHR}
 
   peek ptr = 
     VkDisplayModePropertiesKHR
@@ -42,10 +42,10 @@ instance Storable VkDisplayModePropertiesKHR where
     pokeField @"parameters" ptr val
 
 instance Offset "displayMode" VkDisplayModePropertiesKHR where
-  rawOffset = #{offset struct VkDisplayModePropertiesKHR, displayMode}
+  rawOffset = #{offset VkDisplayModePropertiesKHR, displayMode}
 
 instance Offset "parameters" VkDisplayModePropertiesKHR where
-  rawOffset = #{offset struct VkDisplayModePropertiesKHR, parameters}
+  rawOffset = #{offset VkDisplayModePropertiesKHR, parameters}
 
 #else
 

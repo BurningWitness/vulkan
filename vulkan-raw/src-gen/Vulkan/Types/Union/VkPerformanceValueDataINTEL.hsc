@@ -31,8 +31,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkPerformanceValueDataINTEL" #-} VkPerformance
          }
 
 instance Storable VkPerformanceValueDataINTEL where
-  sizeOf    _ = #{size      union VkPerformanceValueDataINTEL}
-  alignment _ = #{alignment union VkPerformanceValueDataINTEL}
+  sizeOf    _ = #{size      VkPerformanceValueDataINTEL}
+  alignment _ = #{alignment VkPerformanceValueDataINTEL}
 
   peek ptr = 
     VkPerformanceValueDataINTEL
@@ -50,19 +50,19 @@ instance Storable VkPerformanceValueDataINTEL where
     pokeField @"valueString" ptr val
 
 instance Offset "value32" VkPerformanceValueDataINTEL where
-  rawOffset = #{offset union VkPerformanceValueDataINTEL, value32}
+  rawOffset = #{offset VkPerformanceValueDataINTEL, value32}
 
 instance Offset "value64" VkPerformanceValueDataINTEL where
-  rawOffset = #{offset union VkPerformanceValueDataINTEL, value64}
+  rawOffset = #{offset VkPerformanceValueDataINTEL, value64}
 
 instance Offset "valueFloat" VkPerformanceValueDataINTEL where
-  rawOffset = #{offset union VkPerformanceValueDataINTEL, valueFloat}
+  rawOffset = #{offset VkPerformanceValueDataINTEL, valueFloat}
 
 instance Offset "valueBool" VkPerformanceValueDataINTEL where
-  rawOffset = #{offset union VkPerformanceValueDataINTEL, valueBool}
+  rawOffset = #{offset VkPerformanceValueDataINTEL, valueBool}
 
 instance Offset "valueString" VkPerformanceValueDataINTEL where
-  rawOffset = #{offset union VkPerformanceValueDataINTEL, valueString}
+  rawOffset = #{offset VkPerformanceValueDataINTEL, valueString}
 
 #else
 

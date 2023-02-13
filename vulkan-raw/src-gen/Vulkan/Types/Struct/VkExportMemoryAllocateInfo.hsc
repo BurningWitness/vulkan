@@ -30,8 +30,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkExportMemoryAllocateInfo" #-} VkExportMemory
          }
 
 instance Storable VkExportMemoryAllocateInfo where
-  sizeOf    _ = #{size      struct VkExportMemoryAllocateInfo}
-  alignment _ = #{alignment struct VkExportMemoryAllocateInfo}
+  sizeOf    _ = #{size      VkExportMemoryAllocateInfo}
+  alignment _ = #{alignment VkExportMemoryAllocateInfo}
 
   peek ptr = 
     VkExportMemoryAllocateInfo
@@ -45,13 +45,13 @@ instance Storable VkExportMemoryAllocateInfo where
     pokeField @"handleTypes" ptr val
 
 instance Offset "sType" VkExportMemoryAllocateInfo where
-  rawOffset = #{offset struct VkExportMemoryAllocateInfo, sType}
+  rawOffset = #{offset VkExportMemoryAllocateInfo, sType}
 
 instance Offset "pNext" VkExportMemoryAllocateInfo where
-  rawOffset = #{offset struct VkExportMemoryAllocateInfo, pNext}
+  rawOffset = #{offset VkExportMemoryAllocateInfo, pNext}
 
 instance Offset "handleTypes" VkExportMemoryAllocateInfo where
-  rawOffset = #{offset struct VkExportMemoryAllocateInfo, handleTypes}
+  rawOffset = #{offset VkExportMemoryAllocateInfo, handleTypes}
 
 #else
 

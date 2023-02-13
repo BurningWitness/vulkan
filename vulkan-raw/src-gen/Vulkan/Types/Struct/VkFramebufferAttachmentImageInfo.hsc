@@ -38,8 +38,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkFramebufferAttachmentImageInfo" #-} VkFrameb
          }
 
 instance Storable VkFramebufferAttachmentImageInfo where
-  sizeOf    _ = #{size      struct VkFramebufferAttachmentImageInfo}
-  alignment _ = #{alignment struct VkFramebufferAttachmentImageInfo}
+  sizeOf    _ = #{size      VkFramebufferAttachmentImageInfo}
+  alignment _ = #{alignment VkFramebufferAttachmentImageInfo}
 
   peek ptr = 
     VkFramebufferAttachmentImageInfo
@@ -65,31 +65,31 @@ instance Storable VkFramebufferAttachmentImageInfo where
     pokeField @"pViewFormats" ptr val
 
 instance Offset "sType" VkFramebufferAttachmentImageInfo where
-  rawOffset = #{offset struct VkFramebufferAttachmentImageInfo, sType}
+  rawOffset = #{offset VkFramebufferAttachmentImageInfo, sType}
 
 instance Offset "pNext" VkFramebufferAttachmentImageInfo where
-  rawOffset = #{offset struct VkFramebufferAttachmentImageInfo, pNext}
+  rawOffset = #{offset VkFramebufferAttachmentImageInfo, pNext}
 
 instance Offset "flags" VkFramebufferAttachmentImageInfo where
-  rawOffset = #{offset struct VkFramebufferAttachmentImageInfo, flags}
+  rawOffset = #{offset VkFramebufferAttachmentImageInfo, flags}
 
 instance Offset "usage" VkFramebufferAttachmentImageInfo where
-  rawOffset = #{offset struct VkFramebufferAttachmentImageInfo, usage}
+  rawOffset = #{offset VkFramebufferAttachmentImageInfo, usage}
 
 instance Offset "width" VkFramebufferAttachmentImageInfo where
-  rawOffset = #{offset struct VkFramebufferAttachmentImageInfo, width}
+  rawOffset = #{offset VkFramebufferAttachmentImageInfo, width}
 
 instance Offset "height" VkFramebufferAttachmentImageInfo where
-  rawOffset = #{offset struct VkFramebufferAttachmentImageInfo, height}
+  rawOffset = #{offset VkFramebufferAttachmentImageInfo, height}
 
 instance Offset "layerCount" VkFramebufferAttachmentImageInfo where
-  rawOffset = #{offset struct VkFramebufferAttachmentImageInfo, layerCount}
+  rawOffset = #{offset VkFramebufferAttachmentImageInfo, layerCount}
 
 instance Offset "viewFormatCount" VkFramebufferAttachmentImageInfo where
-  rawOffset = #{offset struct VkFramebufferAttachmentImageInfo, viewFormatCount}
+  rawOffset = #{offset VkFramebufferAttachmentImageInfo, viewFormatCount}
 
 instance Offset "pViewFormats" VkFramebufferAttachmentImageInfo where
-  rawOffset = #{offset struct VkFramebufferAttachmentImageInfo, pViewFormats}
+  rawOffset = #{offset VkFramebufferAttachmentImageInfo, pViewFormats}
 
 #else
 

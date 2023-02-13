@@ -1,3 +1,7 @@
+{-# LANGUAGE CApiFFI #-}
+{-# LANGUAGE CPP #-}
+{-# LANGUAGE MagicHash #-}
+
 #include <vulkan/vulkan.h>
 
 #if VK_EXT_tooling_info
@@ -10,17 +14,18 @@ import GHC.Ptr
 import Vulkan.Types.Enum.VkResult
 import Vulkan.Types.Handle
 import Vulkan.Types.Struct.VkPhysicalDeviceToolProperties
-import Vulkan.Types.Command.VkGetPhysicalDeviceToolProperties
 import Vulkan.Types.VkFun
 
 
 
-type VkGetPhysicalDeviceToolPropertiesEXT = VkGetPhysicalDeviceToolProperties
+type VkGetPhysicalDeviceToolPropertiesEXT =
+          VkPhysicalDevice -- ^ physicalDevice
+       -> Ptr #{type uint32_t} -- ^ pToolCount
+       -> Ptr VkPhysicalDeviceToolProperties -- ^ pToolProperties
+       -> IO VkResult
 
-vkFunGetPhysicalDeviceToolPropertiesEXT
-  :: VkFun VkGetPhysicalDeviceToolPropertiesEXT
-vkFunGetPhysicalDeviceToolPropertiesEXT = vkFunGetPhysicalDeviceToolProperties
-
+vkFunGetPhysicalDeviceToolPropertiesEXT :: VkFun VkGetPhysicalDeviceToolPropertiesEXT
+vkFunGetPhysicalDeviceToolPropertiesEXT = VkFun (Ptr ("vkGetPhysicalDeviceToolPropertiesEXT\0"##))
 
 #else
 

@@ -29,8 +29,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkPhysicalDevicePortabilitySubsetPropertiesKHR
          }
 
 instance Storable VkPhysicalDevicePortabilitySubsetPropertiesKHR where
-  sizeOf    _ = #{size      struct VkPhysicalDevicePortabilitySubsetPropertiesKHR}
-  alignment _ = #{alignment struct VkPhysicalDevicePortabilitySubsetPropertiesKHR}
+  sizeOf    _ = #{size      VkPhysicalDevicePortabilitySubsetPropertiesKHR}
+  alignment _ = #{alignment VkPhysicalDevicePortabilitySubsetPropertiesKHR}
 
   peek ptr = 
     VkPhysicalDevicePortabilitySubsetPropertiesKHR
@@ -44,13 +44,13 @@ instance Storable VkPhysicalDevicePortabilitySubsetPropertiesKHR where
     pokeField @"minVertexInputBindingStrideAlignment" ptr val
 
 instance Offset "sType" VkPhysicalDevicePortabilitySubsetPropertiesKHR where
-  rawOffset = #{offset struct VkPhysicalDevicePortabilitySubsetPropertiesKHR, sType}
+  rawOffset = #{offset VkPhysicalDevicePortabilitySubsetPropertiesKHR, sType}
 
 instance Offset "pNext" VkPhysicalDevicePortabilitySubsetPropertiesKHR where
-  rawOffset = #{offset struct VkPhysicalDevicePortabilitySubsetPropertiesKHR, pNext}
+  rawOffset = #{offset VkPhysicalDevicePortabilitySubsetPropertiesKHR, pNext}
 
 instance Offset "minVertexInputBindingStrideAlignment" VkPhysicalDevicePortabilitySubsetPropertiesKHR where
-  rawOffset = #{offset struct VkPhysicalDevicePortabilitySubsetPropertiesKHR, minVertexInputBindingStrideAlignment}
+  rawOffset = #{offset VkPhysicalDevicePortabilitySubsetPropertiesKHR, minVertexInputBindingStrideAlignment}
 
 #else
 

@@ -35,8 +35,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkDeviceAddressBindingCallbackDataEXT" #-} VkD
          }
 
 instance Storable VkDeviceAddressBindingCallbackDataEXT where
-  sizeOf    _ = #{size      struct VkDeviceAddressBindingCallbackDataEXT}
-  alignment _ = #{alignment struct VkDeviceAddressBindingCallbackDataEXT}
+  sizeOf    _ = #{size      VkDeviceAddressBindingCallbackDataEXT}
+  alignment _ = #{alignment VkDeviceAddressBindingCallbackDataEXT}
 
   peek ptr = 
     VkDeviceAddressBindingCallbackDataEXT
@@ -56,22 +56,22 @@ instance Storable VkDeviceAddressBindingCallbackDataEXT where
     pokeField @"bindingType" ptr val
 
 instance Offset "sType" VkDeviceAddressBindingCallbackDataEXT where
-  rawOffset = #{offset struct VkDeviceAddressBindingCallbackDataEXT, sType}
+  rawOffset = #{offset VkDeviceAddressBindingCallbackDataEXT, sType}
 
 instance Offset "pNext" VkDeviceAddressBindingCallbackDataEXT where
-  rawOffset = #{offset struct VkDeviceAddressBindingCallbackDataEXT, pNext}
+  rawOffset = #{offset VkDeviceAddressBindingCallbackDataEXT, pNext}
 
 instance Offset "flags" VkDeviceAddressBindingCallbackDataEXT where
-  rawOffset = #{offset struct VkDeviceAddressBindingCallbackDataEXT, flags}
+  rawOffset = #{offset VkDeviceAddressBindingCallbackDataEXT, flags}
 
 instance Offset "baseAddress" VkDeviceAddressBindingCallbackDataEXT where
-  rawOffset = #{offset struct VkDeviceAddressBindingCallbackDataEXT, baseAddress}
+  rawOffset = #{offset VkDeviceAddressBindingCallbackDataEXT, baseAddress}
 
 instance Offset "size" VkDeviceAddressBindingCallbackDataEXT where
-  rawOffset = #{offset struct VkDeviceAddressBindingCallbackDataEXT, size}
+  rawOffset = #{offset VkDeviceAddressBindingCallbackDataEXT, size}
 
 instance Offset "bindingType" VkDeviceAddressBindingCallbackDataEXT where
-  rawOffset = #{offset struct VkDeviceAddressBindingCallbackDataEXT, bindingType}
+  rawOffset = #{offset VkDeviceAddressBindingCallbackDataEXT, bindingType}
 
 #else
 

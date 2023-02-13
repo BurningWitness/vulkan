@@ -33,8 +33,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkQueryPoolCreateInfo" #-} VkQueryPoolCreateIn
          }
 
 instance Storable VkQueryPoolCreateInfo where
-  sizeOf    _ = #{size      struct VkQueryPoolCreateInfo}
-  alignment _ = #{alignment struct VkQueryPoolCreateInfo}
+  sizeOf    _ = #{size      VkQueryPoolCreateInfo}
+  alignment _ = #{alignment VkQueryPoolCreateInfo}
 
   peek ptr = 
     VkQueryPoolCreateInfo
@@ -54,19 +54,19 @@ instance Storable VkQueryPoolCreateInfo where
     pokeField @"pipelineStatistics" ptr val
 
 instance Offset "sType" VkQueryPoolCreateInfo where
-  rawOffset = #{offset struct VkQueryPoolCreateInfo, sType}
+  rawOffset = #{offset VkQueryPoolCreateInfo, sType}
 
 instance Offset "pNext" VkQueryPoolCreateInfo where
-  rawOffset = #{offset struct VkQueryPoolCreateInfo, pNext}
+  rawOffset = #{offset VkQueryPoolCreateInfo, pNext}
 
 instance Offset "flags" VkQueryPoolCreateInfo where
-  rawOffset = #{offset struct VkQueryPoolCreateInfo, flags}
+  rawOffset = #{offset VkQueryPoolCreateInfo, flags}
 
 instance Offset "queryType" VkQueryPoolCreateInfo where
-  rawOffset = #{offset struct VkQueryPoolCreateInfo, queryType}
+  rawOffset = #{offset VkQueryPoolCreateInfo, queryType}
 
 instance Offset "queryCount" VkQueryPoolCreateInfo where
-  rawOffset = #{offset struct VkQueryPoolCreateInfo, queryCount}
+  rawOffset = #{offset VkQueryPoolCreateInfo, queryCount}
 
 instance Offset "pipelineStatistics" VkQueryPoolCreateInfo where
-  rawOffset = #{offset struct VkQueryPoolCreateInfo, pipelineStatistics}
+  rawOffset = #{offset VkQueryPoolCreateInfo, pipelineStatistics}

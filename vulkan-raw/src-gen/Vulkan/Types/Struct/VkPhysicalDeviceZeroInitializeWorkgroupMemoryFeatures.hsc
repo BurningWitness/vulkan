@@ -30,8 +30,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkPhysicalDeviceZeroInitializeWorkgroupMemoryF
          }
 
 instance Storable VkPhysicalDeviceZeroInitializeWorkgroupMemoryFeatures where
-  sizeOf    _ = #{size      struct VkPhysicalDeviceZeroInitializeWorkgroupMemoryFeatures}
-  alignment _ = #{alignment struct VkPhysicalDeviceZeroInitializeWorkgroupMemoryFeatures}
+  sizeOf    _ = #{size      VkPhysicalDeviceZeroInitializeWorkgroupMemoryFeatures}
+  alignment _ = #{alignment VkPhysicalDeviceZeroInitializeWorkgroupMemoryFeatures}
 
   peek ptr = 
     VkPhysicalDeviceZeroInitializeWorkgroupMemoryFeatures
@@ -45,13 +45,13 @@ instance Storable VkPhysicalDeviceZeroInitializeWorkgroupMemoryFeatures where
     pokeField @"shaderZeroInitializeWorkgroupMemory" ptr val
 
 instance Offset "sType" VkPhysicalDeviceZeroInitializeWorkgroupMemoryFeatures where
-  rawOffset = #{offset struct VkPhysicalDeviceZeroInitializeWorkgroupMemoryFeatures, sType}
+  rawOffset = #{offset VkPhysicalDeviceZeroInitializeWorkgroupMemoryFeatures, sType}
 
 instance Offset "pNext" VkPhysicalDeviceZeroInitializeWorkgroupMemoryFeatures where
-  rawOffset = #{offset struct VkPhysicalDeviceZeroInitializeWorkgroupMemoryFeatures, pNext}
+  rawOffset = #{offset VkPhysicalDeviceZeroInitializeWorkgroupMemoryFeatures, pNext}
 
 instance Offset "shaderZeroInitializeWorkgroupMemory" VkPhysicalDeviceZeroInitializeWorkgroupMemoryFeatures where
-  rawOffset = #{offset struct VkPhysicalDeviceZeroInitializeWorkgroupMemoryFeatures, shaderZeroInitializeWorkgroupMemory}
+  rawOffset = #{offset VkPhysicalDeviceZeroInitializeWorkgroupMemoryFeatures, shaderZeroInitializeWorkgroupMemory}
 
 #else
 

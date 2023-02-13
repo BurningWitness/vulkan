@@ -29,8 +29,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkBindVertexBufferIndirectCommandNV" #-} VkBin
          }
 
 instance Storable VkBindVertexBufferIndirectCommandNV where
-  sizeOf    _ = #{size      struct VkBindVertexBufferIndirectCommandNV}
-  alignment _ = #{alignment struct VkBindVertexBufferIndirectCommandNV}
+  sizeOf    _ = #{size      VkBindVertexBufferIndirectCommandNV}
+  alignment _ = #{alignment VkBindVertexBufferIndirectCommandNV}
 
   peek ptr = 
     VkBindVertexBufferIndirectCommandNV
@@ -44,13 +44,13 @@ instance Storable VkBindVertexBufferIndirectCommandNV where
     pokeField @"stride" ptr val
 
 instance Offset "bufferAddress" VkBindVertexBufferIndirectCommandNV where
-  rawOffset = #{offset struct VkBindVertexBufferIndirectCommandNV, bufferAddress}
+  rawOffset = #{offset VkBindVertexBufferIndirectCommandNV, bufferAddress}
 
 instance Offset "size" VkBindVertexBufferIndirectCommandNV where
-  rawOffset = #{offset struct VkBindVertexBufferIndirectCommandNV, size}
+  rawOffset = #{offset VkBindVertexBufferIndirectCommandNV, size}
 
 instance Offset "stride" VkBindVertexBufferIndirectCommandNV where
-  rawOffset = #{offset struct VkBindVertexBufferIndirectCommandNV, stride}
+  rawOffset = #{offset VkBindVertexBufferIndirectCommandNV, stride}
 
 #else
 

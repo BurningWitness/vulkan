@@ -32,8 +32,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkPhysicalDeviceBufferDeviceAddressFeaturesEXT
          }
 
 instance Storable VkPhysicalDeviceBufferDeviceAddressFeaturesEXT where
-  sizeOf    _ = #{size      struct VkPhysicalDeviceBufferDeviceAddressFeaturesEXT}
-  alignment _ = #{alignment struct VkPhysicalDeviceBufferDeviceAddressFeaturesEXT}
+  sizeOf    _ = #{size      VkPhysicalDeviceBufferDeviceAddressFeaturesEXT}
+  alignment _ = #{alignment VkPhysicalDeviceBufferDeviceAddressFeaturesEXT}
 
   peek ptr = 
     VkPhysicalDeviceBufferDeviceAddressFeaturesEXT
@@ -51,19 +51,19 @@ instance Storable VkPhysicalDeviceBufferDeviceAddressFeaturesEXT where
     pokeField @"bufferDeviceAddressMultiDevice" ptr val
 
 instance Offset "sType" VkPhysicalDeviceBufferDeviceAddressFeaturesEXT where
-  rawOffset = #{offset struct VkPhysicalDeviceBufferDeviceAddressFeaturesEXT, sType}
+  rawOffset = #{offset VkPhysicalDeviceBufferDeviceAddressFeaturesEXT, sType}
 
 instance Offset "pNext" VkPhysicalDeviceBufferDeviceAddressFeaturesEXT where
-  rawOffset = #{offset struct VkPhysicalDeviceBufferDeviceAddressFeaturesEXT, pNext}
+  rawOffset = #{offset VkPhysicalDeviceBufferDeviceAddressFeaturesEXT, pNext}
 
 instance Offset "bufferDeviceAddress" VkPhysicalDeviceBufferDeviceAddressFeaturesEXT where
-  rawOffset = #{offset struct VkPhysicalDeviceBufferDeviceAddressFeaturesEXT, bufferDeviceAddress}
+  rawOffset = #{offset VkPhysicalDeviceBufferDeviceAddressFeaturesEXT, bufferDeviceAddress}
 
 instance Offset "bufferDeviceAddressCaptureReplay" VkPhysicalDeviceBufferDeviceAddressFeaturesEXT where
-  rawOffset = #{offset struct VkPhysicalDeviceBufferDeviceAddressFeaturesEXT, bufferDeviceAddressCaptureReplay}
+  rawOffset = #{offset VkPhysicalDeviceBufferDeviceAddressFeaturesEXT, bufferDeviceAddressCaptureReplay}
 
 instance Offset "bufferDeviceAddressMultiDevice" VkPhysicalDeviceBufferDeviceAddressFeaturesEXT where
-  rawOffset = #{offset struct VkPhysicalDeviceBufferDeviceAddressFeaturesEXT, bufferDeviceAddressMultiDevice}
+  rawOffset = #{offset VkPhysicalDeviceBufferDeviceAddressFeaturesEXT, bufferDeviceAddressMultiDevice}
 
 #else
 

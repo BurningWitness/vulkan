@@ -31,8 +31,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkPipelineColorWriteCreateInfoEXT" #-} VkPipel
          }
 
 instance Storable VkPipelineColorWriteCreateInfoEXT where
-  sizeOf    _ = #{size      struct VkPipelineColorWriteCreateInfoEXT}
-  alignment _ = #{alignment struct VkPipelineColorWriteCreateInfoEXT}
+  sizeOf    _ = #{size      VkPipelineColorWriteCreateInfoEXT}
+  alignment _ = #{alignment VkPipelineColorWriteCreateInfoEXT}
 
   peek ptr = 
     VkPipelineColorWriteCreateInfoEXT
@@ -48,16 +48,16 @@ instance Storable VkPipelineColorWriteCreateInfoEXT where
     pokeField @"pColorWriteEnables" ptr val
 
 instance Offset "sType" VkPipelineColorWriteCreateInfoEXT where
-  rawOffset = #{offset struct VkPipelineColorWriteCreateInfoEXT, sType}
+  rawOffset = #{offset VkPipelineColorWriteCreateInfoEXT, sType}
 
 instance Offset "pNext" VkPipelineColorWriteCreateInfoEXT where
-  rawOffset = #{offset struct VkPipelineColorWriteCreateInfoEXT, pNext}
+  rawOffset = #{offset VkPipelineColorWriteCreateInfoEXT, pNext}
 
 instance Offset "attachmentCount" VkPipelineColorWriteCreateInfoEXT where
-  rawOffset = #{offset struct VkPipelineColorWriteCreateInfoEXT, attachmentCount}
+  rawOffset = #{offset VkPipelineColorWriteCreateInfoEXT, attachmentCount}
 
 instance Offset "pColorWriteEnables" VkPipelineColorWriteCreateInfoEXT where
-  rawOffset = #{offset struct VkPipelineColorWriteCreateInfoEXT, pColorWriteEnables}
+  rawOffset = #{offset VkPipelineColorWriteCreateInfoEXT, pColorWriteEnables}
 
 #else
 

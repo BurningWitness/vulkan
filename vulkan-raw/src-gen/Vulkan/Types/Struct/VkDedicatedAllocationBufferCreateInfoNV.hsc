@@ -30,8 +30,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkDedicatedAllocationBufferCreateInfoNV" #-} V
          }
 
 instance Storable VkDedicatedAllocationBufferCreateInfoNV where
-  sizeOf    _ = #{size      struct VkDedicatedAllocationBufferCreateInfoNV}
-  alignment _ = #{alignment struct VkDedicatedAllocationBufferCreateInfoNV}
+  sizeOf    _ = #{size      VkDedicatedAllocationBufferCreateInfoNV}
+  alignment _ = #{alignment VkDedicatedAllocationBufferCreateInfoNV}
 
   peek ptr = 
     VkDedicatedAllocationBufferCreateInfoNV
@@ -45,13 +45,13 @@ instance Storable VkDedicatedAllocationBufferCreateInfoNV where
     pokeField @"dedicatedAllocation" ptr val
 
 instance Offset "sType" VkDedicatedAllocationBufferCreateInfoNV where
-  rawOffset = #{offset struct VkDedicatedAllocationBufferCreateInfoNV, sType}
+  rawOffset = #{offset VkDedicatedAllocationBufferCreateInfoNV, sType}
 
 instance Offset "pNext" VkDedicatedAllocationBufferCreateInfoNV where
-  rawOffset = #{offset struct VkDedicatedAllocationBufferCreateInfoNV, pNext}
+  rawOffset = #{offset VkDedicatedAllocationBufferCreateInfoNV, pNext}
 
 instance Offset "dedicatedAllocation" VkDedicatedAllocationBufferCreateInfoNV where
-  rawOffset = #{offset struct VkDedicatedAllocationBufferCreateInfoNV, dedicatedAllocation}
+  rawOffset = #{offset VkDedicatedAllocationBufferCreateInfoNV, dedicatedAllocation}
 
 #else
 

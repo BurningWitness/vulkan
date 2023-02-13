@@ -30,8 +30,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkCommandBufferBeginInfo" #-} VkCommandBufferB
          }
 
 instance Storable VkCommandBufferBeginInfo where
-  sizeOf    _ = #{size      struct VkCommandBufferBeginInfo}
-  alignment _ = #{alignment struct VkCommandBufferBeginInfo}
+  sizeOf    _ = #{size      VkCommandBufferBeginInfo}
+  alignment _ = #{alignment VkCommandBufferBeginInfo}
 
   peek ptr = 
     VkCommandBufferBeginInfo
@@ -47,13 +47,13 @@ instance Storable VkCommandBufferBeginInfo where
     pokeField @"pInheritanceInfo" ptr val
 
 instance Offset "sType" VkCommandBufferBeginInfo where
-  rawOffset = #{offset struct VkCommandBufferBeginInfo, sType}
+  rawOffset = #{offset VkCommandBufferBeginInfo, sType}
 
 instance Offset "pNext" VkCommandBufferBeginInfo where
-  rawOffset = #{offset struct VkCommandBufferBeginInfo, pNext}
+  rawOffset = #{offset VkCommandBufferBeginInfo, pNext}
 
 instance Offset "flags" VkCommandBufferBeginInfo where
-  rawOffset = #{offset struct VkCommandBufferBeginInfo, flags}
+  rawOffset = #{offset VkCommandBufferBeginInfo, flags}
 
 instance Offset "pInheritanceInfo" VkCommandBufferBeginInfo where
-  rawOffset = #{offset struct VkCommandBufferBeginInfo, pInheritanceInfo}
+  rawOffset = #{offset VkCommandBufferBeginInfo, pInheritanceInfo}

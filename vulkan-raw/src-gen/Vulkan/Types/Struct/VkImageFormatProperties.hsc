@@ -31,8 +31,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkImageFormatProperties" #-} VkImageFormatProp
          }
 
 instance Storable VkImageFormatProperties where
-  sizeOf    _ = #{size      struct VkImageFormatProperties}
-  alignment _ = #{alignment struct VkImageFormatProperties}
+  sizeOf    _ = #{size      VkImageFormatProperties}
+  alignment _ = #{alignment VkImageFormatProperties}
 
   peek ptr = 
     VkImageFormatProperties
@@ -50,16 +50,16 @@ instance Storable VkImageFormatProperties where
     pokeField @"maxResourceSize" ptr val
 
 instance Offset "maxExtent" VkImageFormatProperties where
-  rawOffset = #{offset struct VkImageFormatProperties, maxExtent}
+  rawOffset = #{offset VkImageFormatProperties, maxExtent}
 
 instance Offset "maxMipLevels" VkImageFormatProperties where
-  rawOffset = #{offset struct VkImageFormatProperties, maxMipLevels}
+  rawOffset = #{offset VkImageFormatProperties, maxMipLevels}
 
 instance Offset "maxArrayLayers" VkImageFormatProperties where
-  rawOffset = #{offset struct VkImageFormatProperties, maxArrayLayers}
+  rawOffset = #{offset VkImageFormatProperties, maxArrayLayers}
 
 instance Offset "sampleCounts" VkImageFormatProperties where
-  rawOffset = #{offset struct VkImageFormatProperties, sampleCounts}
+  rawOffset = #{offset VkImageFormatProperties, sampleCounts}
 
 instance Offset "maxResourceSize" VkImageFormatProperties where
-  rawOffset = #{offset struct VkImageFormatProperties, maxResourceSize}
+  rawOffset = #{offset VkImageFormatProperties, maxResourceSize}

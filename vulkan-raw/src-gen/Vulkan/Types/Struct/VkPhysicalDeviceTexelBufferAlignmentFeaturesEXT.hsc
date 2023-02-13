@@ -30,8 +30,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkPhysicalDeviceTexelBufferAlignmentFeaturesEX
          }
 
 instance Storable VkPhysicalDeviceTexelBufferAlignmentFeaturesEXT where
-  sizeOf    _ = #{size      struct VkPhysicalDeviceTexelBufferAlignmentFeaturesEXT}
-  alignment _ = #{alignment struct VkPhysicalDeviceTexelBufferAlignmentFeaturesEXT}
+  sizeOf    _ = #{size      VkPhysicalDeviceTexelBufferAlignmentFeaturesEXT}
+  alignment _ = #{alignment VkPhysicalDeviceTexelBufferAlignmentFeaturesEXT}
 
   peek ptr = 
     VkPhysicalDeviceTexelBufferAlignmentFeaturesEXT
@@ -45,13 +45,13 @@ instance Storable VkPhysicalDeviceTexelBufferAlignmentFeaturesEXT where
     pokeField @"texelBufferAlignment" ptr val
 
 instance Offset "sType" VkPhysicalDeviceTexelBufferAlignmentFeaturesEXT where
-  rawOffset = #{offset struct VkPhysicalDeviceTexelBufferAlignmentFeaturesEXT, sType}
+  rawOffset = #{offset VkPhysicalDeviceTexelBufferAlignmentFeaturesEXT, sType}
 
 instance Offset "pNext" VkPhysicalDeviceTexelBufferAlignmentFeaturesEXT where
-  rawOffset = #{offset struct VkPhysicalDeviceTexelBufferAlignmentFeaturesEXT, pNext}
+  rawOffset = #{offset VkPhysicalDeviceTexelBufferAlignmentFeaturesEXT, pNext}
 
 instance Offset "texelBufferAlignment" VkPhysicalDeviceTexelBufferAlignmentFeaturesEXT where
-  rawOffset = #{offset struct VkPhysicalDeviceTexelBufferAlignmentFeaturesEXT, texelBufferAlignment}
+  rawOffset = #{offset VkPhysicalDeviceTexelBufferAlignmentFeaturesEXT, texelBufferAlignment}
 
 #else
 

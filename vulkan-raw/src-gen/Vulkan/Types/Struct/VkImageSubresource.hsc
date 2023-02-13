@@ -27,8 +27,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkImageSubresource" #-} VkImageSubresource =
          }
 
 instance Storable VkImageSubresource where
-  sizeOf    _ = #{size      struct VkImageSubresource}
-  alignment _ = #{alignment struct VkImageSubresource}
+  sizeOf    _ = #{size      VkImageSubresource}
+  alignment _ = #{alignment VkImageSubresource}
 
   peek ptr = 
     VkImageSubresource
@@ -42,10 +42,10 @@ instance Storable VkImageSubresource where
     pokeField @"arrayLayer" ptr val
 
 instance Offset "aspectMask" VkImageSubresource where
-  rawOffset = #{offset struct VkImageSubresource, aspectMask}
+  rawOffset = #{offset VkImageSubresource, aspectMask}
 
 instance Offset "mipLevel" VkImageSubresource where
-  rawOffset = #{offset struct VkImageSubresource, mipLevel}
+  rawOffset = #{offset VkImageSubresource, mipLevel}
 
 instance Offset "arrayLayer" VkImageSubresource where
-  rawOffset = #{offset struct VkImageSubresource, arrayLayer}
+  rawOffset = #{offset VkImageSubresource, arrayLayer}

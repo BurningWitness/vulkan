@@ -36,8 +36,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkVideoBeginCodingInfoKHR" #-} VkVideoBeginCod
          }
 
 instance Storable VkVideoBeginCodingInfoKHR where
-  sizeOf    _ = #{size      struct VkVideoBeginCodingInfoKHR}
-  alignment _ = #{alignment struct VkVideoBeginCodingInfoKHR}
+  sizeOf    _ = #{size      VkVideoBeginCodingInfoKHR}
+  alignment _ = #{alignment VkVideoBeginCodingInfoKHR}
 
   peek ptr = 
     VkVideoBeginCodingInfoKHR
@@ -59,25 +59,25 @@ instance Storable VkVideoBeginCodingInfoKHR where
     pokeField @"pReferenceSlots" ptr val
 
 instance Offset "sType" VkVideoBeginCodingInfoKHR where
-  rawOffset = #{offset struct VkVideoBeginCodingInfoKHR, sType}
+  rawOffset = #{offset VkVideoBeginCodingInfoKHR, sType}
 
 instance Offset "pNext" VkVideoBeginCodingInfoKHR where
-  rawOffset = #{offset struct VkVideoBeginCodingInfoKHR, pNext}
+  rawOffset = #{offset VkVideoBeginCodingInfoKHR, pNext}
 
 instance Offset "flags" VkVideoBeginCodingInfoKHR where
-  rawOffset = #{offset struct VkVideoBeginCodingInfoKHR, flags}
+  rawOffset = #{offset VkVideoBeginCodingInfoKHR, flags}
 
 instance Offset "videoSession" VkVideoBeginCodingInfoKHR where
-  rawOffset = #{offset struct VkVideoBeginCodingInfoKHR, videoSession}
+  rawOffset = #{offset VkVideoBeginCodingInfoKHR, videoSession}
 
 instance Offset "videoSessionParameters" VkVideoBeginCodingInfoKHR where
-  rawOffset = #{offset struct VkVideoBeginCodingInfoKHR, videoSessionParameters}
+  rawOffset = #{offset VkVideoBeginCodingInfoKHR, videoSessionParameters}
 
 instance Offset "referenceSlotCount" VkVideoBeginCodingInfoKHR where
-  rawOffset = #{offset struct VkVideoBeginCodingInfoKHR, referenceSlotCount}
+  rawOffset = #{offset VkVideoBeginCodingInfoKHR, referenceSlotCount}
 
 instance Offset "pReferenceSlots" VkVideoBeginCodingInfoKHR where
-  rawOffset = #{offset struct VkVideoBeginCodingInfoKHR, pReferenceSlots}
+  rawOffset = #{offset VkVideoBeginCodingInfoKHR, pReferenceSlots}
 
 #else
 

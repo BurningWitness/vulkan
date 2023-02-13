@@ -30,8 +30,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkImageSwapchainCreateInfoKHR" #-} VkImageSwap
          }
 
 instance Storable VkImageSwapchainCreateInfoKHR where
-  sizeOf    _ = #{size      struct VkImageSwapchainCreateInfoKHR}
-  alignment _ = #{alignment struct VkImageSwapchainCreateInfoKHR}
+  sizeOf    _ = #{size      VkImageSwapchainCreateInfoKHR}
+  alignment _ = #{alignment VkImageSwapchainCreateInfoKHR}
 
   peek ptr = 
     VkImageSwapchainCreateInfoKHR
@@ -45,13 +45,13 @@ instance Storable VkImageSwapchainCreateInfoKHR where
     pokeField @"swapchain" ptr val
 
 instance Offset "sType" VkImageSwapchainCreateInfoKHR where
-  rawOffset = #{offset struct VkImageSwapchainCreateInfoKHR, sType}
+  rawOffset = #{offset VkImageSwapchainCreateInfoKHR, sType}
 
 instance Offset "pNext" VkImageSwapchainCreateInfoKHR where
-  rawOffset = #{offset struct VkImageSwapchainCreateInfoKHR, pNext}
+  rawOffset = #{offset VkImageSwapchainCreateInfoKHR, pNext}
 
 instance Offset "swapchain" VkImageSwapchainCreateInfoKHR where
-  rawOffset = #{offset struct VkImageSwapchainCreateInfoKHR, swapchain}
+  rawOffset = #{offset VkImageSwapchainCreateInfoKHR, swapchain}
 
 #else
 

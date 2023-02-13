@@ -33,8 +33,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkColorBlendEquationEXT" #-} VkColorBlendEquat
          }
 
 instance Storable VkColorBlendEquationEXT where
-  sizeOf    _ = #{size      struct VkColorBlendEquationEXT}
-  alignment _ = #{alignment struct VkColorBlendEquationEXT}
+  sizeOf    _ = #{size      VkColorBlendEquationEXT}
+  alignment _ = #{alignment VkColorBlendEquationEXT}
 
   peek ptr = 
     VkColorBlendEquationEXT
@@ -54,22 +54,22 @@ instance Storable VkColorBlendEquationEXT where
     pokeField @"alphaBlendOp" ptr val
 
 instance Offset "srcColorBlendFactor" VkColorBlendEquationEXT where
-  rawOffset = #{offset struct VkColorBlendEquationEXT, srcColorBlendFactor}
+  rawOffset = #{offset VkColorBlendEquationEXT, srcColorBlendFactor}
 
 instance Offset "dstColorBlendFactor" VkColorBlendEquationEXT where
-  rawOffset = #{offset struct VkColorBlendEquationEXT, dstColorBlendFactor}
+  rawOffset = #{offset VkColorBlendEquationEXT, dstColorBlendFactor}
 
 instance Offset "colorBlendOp" VkColorBlendEquationEXT where
-  rawOffset = #{offset struct VkColorBlendEquationEXT, colorBlendOp}
+  rawOffset = #{offset VkColorBlendEquationEXT, colorBlendOp}
 
 instance Offset "srcAlphaBlendFactor" VkColorBlendEquationEXT where
-  rawOffset = #{offset struct VkColorBlendEquationEXT, srcAlphaBlendFactor}
+  rawOffset = #{offset VkColorBlendEquationEXT, srcAlphaBlendFactor}
 
 instance Offset "dstAlphaBlendFactor" VkColorBlendEquationEXT where
-  rawOffset = #{offset struct VkColorBlendEquationEXT, dstAlphaBlendFactor}
+  rawOffset = #{offset VkColorBlendEquationEXT, dstAlphaBlendFactor}
 
 instance Offset "alphaBlendOp" VkColorBlendEquationEXT where
-  rawOffset = #{offset struct VkColorBlendEquationEXT, alphaBlendOp}
+  rawOffset = #{offset VkColorBlendEquationEXT, alphaBlendOp}
 
 #else
 

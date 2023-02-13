@@ -30,8 +30,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkMemoryGetAndroidHardwareBufferInfoANDROID" #
          }
 
 instance Storable VkMemoryGetAndroidHardwareBufferInfoANDROID where
-  sizeOf    _ = #{size      struct VkMemoryGetAndroidHardwareBufferInfoANDROID}
-  alignment _ = #{alignment struct VkMemoryGetAndroidHardwareBufferInfoANDROID}
+  sizeOf    _ = #{size      VkMemoryGetAndroidHardwareBufferInfoANDROID}
+  alignment _ = #{alignment VkMemoryGetAndroidHardwareBufferInfoANDROID}
 
   peek ptr = 
     VkMemoryGetAndroidHardwareBufferInfoANDROID
@@ -45,13 +45,13 @@ instance Storable VkMemoryGetAndroidHardwareBufferInfoANDROID where
     pokeField @"memory" ptr val
 
 instance Offset "sType" VkMemoryGetAndroidHardwareBufferInfoANDROID where
-  rawOffset = #{offset struct VkMemoryGetAndroidHardwareBufferInfoANDROID, sType}
+  rawOffset = #{offset VkMemoryGetAndroidHardwareBufferInfoANDROID, sType}
 
 instance Offset "pNext" VkMemoryGetAndroidHardwareBufferInfoANDROID where
-  rawOffset = #{offset struct VkMemoryGetAndroidHardwareBufferInfoANDROID, pNext}
+  rawOffset = #{offset VkMemoryGetAndroidHardwareBufferInfoANDROID, pNext}
 
 instance Offset "memory" VkMemoryGetAndroidHardwareBufferInfoANDROID where
-  rawOffset = #{offset struct VkMemoryGetAndroidHardwareBufferInfoANDROID, memory}
+  rawOffset = #{offset VkMemoryGetAndroidHardwareBufferInfoANDROID, memory}
 
 #else
 

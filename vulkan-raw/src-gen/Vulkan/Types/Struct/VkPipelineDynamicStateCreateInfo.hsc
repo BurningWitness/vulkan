@@ -31,8 +31,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkPipelineDynamicStateCreateInfo" #-} VkPipeli
          }
 
 instance Storable VkPipelineDynamicStateCreateInfo where
-  sizeOf    _ = #{size      struct VkPipelineDynamicStateCreateInfo}
-  alignment _ = #{alignment struct VkPipelineDynamicStateCreateInfo}
+  sizeOf    _ = #{size      VkPipelineDynamicStateCreateInfo}
+  alignment _ = #{alignment VkPipelineDynamicStateCreateInfo}
 
   peek ptr = 
     VkPipelineDynamicStateCreateInfo
@@ -50,16 +50,16 @@ instance Storable VkPipelineDynamicStateCreateInfo where
     pokeField @"pDynamicStates" ptr val
 
 instance Offset "sType" VkPipelineDynamicStateCreateInfo where
-  rawOffset = #{offset struct VkPipelineDynamicStateCreateInfo, sType}
+  rawOffset = #{offset VkPipelineDynamicStateCreateInfo, sType}
 
 instance Offset "pNext" VkPipelineDynamicStateCreateInfo where
-  rawOffset = #{offset struct VkPipelineDynamicStateCreateInfo, pNext}
+  rawOffset = #{offset VkPipelineDynamicStateCreateInfo, pNext}
 
 instance Offset "flags" VkPipelineDynamicStateCreateInfo where
-  rawOffset = #{offset struct VkPipelineDynamicStateCreateInfo, flags}
+  rawOffset = #{offset VkPipelineDynamicStateCreateInfo, flags}
 
 instance Offset "dynamicStateCount" VkPipelineDynamicStateCreateInfo where
-  rawOffset = #{offset struct VkPipelineDynamicStateCreateInfo, dynamicStateCount}
+  rawOffset = #{offset VkPipelineDynamicStateCreateInfo, dynamicStateCount}
 
 instance Offset "pDynamicStates" VkPipelineDynamicStateCreateInfo where
-  rawOffset = #{offset struct VkPipelineDynamicStateCreateInfo, pDynamicStates}
+  rawOffset = #{offset VkPipelineDynamicStateCreateInfo, pDynamicStates}

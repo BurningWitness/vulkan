@@ -28,8 +28,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkTraceRaysIndirectCommandKHR" #-} VkTraceRays
          }
 
 instance Storable VkTraceRaysIndirectCommandKHR where
-  sizeOf    _ = #{size      struct VkTraceRaysIndirectCommandKHR}
-  alignment _ = #{alignment struct VkTraceRaysIndirectCommandKHR}
+  sizeOf    _ = #{size      VkTraceRaysIndirectCommandKHR}
+  alignment _ = #{alignment VkTraceRaysIndirectCommandKHR}
 
   peek ptr = 
     VkTraceRaysIndirectCommandKHR
@@ -43,13 +43,13 @@ instance Storable VkTraceRaysIndirectCommandKHR where
     pokeField @"depth" ptr val
 
 instance Offset "width" VkTraceRaysIndirectCommandKHR where
-  rawOffset = #{offset struct VkTraceRaysIndirectCommandKHR, width}
+  rawOffset = #{offset VkTraceRaysIndirectCommandKHR, width}
 
 instance Offset "height" VkTraceRaysIndirectCommandKHR where
-  rawOffset = #{offset struct VkTraceRaysIndirectCommandKHR, height}
+  rawOffset = #{offset VkTraceRaysIndirectCommandKHR, height}
 
 instance Offset "depth" VkTraceRaysIndirectCommandKHR where
-  rawOffset = #{offset struct VkTraceRaysIndirectCommandKHR, depth}
+  rawOffset = #{offset VkTraceRaysIndirectCommandKHR, depth}
 
 #else
 

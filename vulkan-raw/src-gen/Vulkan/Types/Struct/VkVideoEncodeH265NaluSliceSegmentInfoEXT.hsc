@@ -33,8 +33,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkVideoEncodeH265NaluSliceSegmentInfoEXT" #-} 
          }
 
 instance Storable VkVideoEncodeH265NaluSliceSegmentInfoEXT where
-  sizeOf    _ = #{size      struct VkVideoEncodeH265NaluSliceSegmentInfoEXT}
-  alignment _ = #{alignment struct VkVideoEncodeH265NaluSliceSegmentInfoEXT}
+  sizeOf    _ = #{size      VkVideoEncodeH265NaluSliceSegmentInfoEXT}
+  alignment _ = #{alignment VkVideoEncodeH265NaluSliceSegmentInfoEXT}
 
   peek ptr = 
     VkVideoEncodeH265NaluSliceSegmentInfoEXT
@@ -52,19 +52,19 @@ instance Storable VkVideoEncodeH265NaluSliceSegmentInfoEXT where
     pokeField @"pSliceSegmentHeaderStd" ptr val
 
 instance Offset "sType" VkVideoEncodeH265NaluSliceSegmentInfoEXT where
-  rawOffset = #{offset struct VkVideoEncodeH265NaluSliceSegmentInfoEXT, sType}
+  rawOffset = #{offset VkVideoEncodeH265NaluSliceSegmentInfoEXT, sType}
 
 instance Offset "pNext" VkVideoEncodeH265NaluSliceSegmentInfoEXT where
-  rawOffset = #{offset struct VkVideoEncodeH265NaluSliceSegmentInfoEXT, pNext}
+  rawOffset = #{offset VkVideoEncodeH265NaluSliceSegmentInfoEXT, pNext}
 
 instance Offset "ctbCount" VkVideoEncodeH265NaluSliceSegmentInfoEXT where
-  rawOffset = #{offset struct VkVideoEncodeH265NaluSliceSegmentInfoEXT, ctbCount}
+  rawOffset = #{offset VkVideoEncodeH265NaluSliceSegmentInfoEXT, ctbCount}
 
 instance Offset "pReferenceFinalLists" VkVideoEncodeH265NaluSliceSegmentInfoEXT where
-  rawOffset = #{offset struct VkVideoEncodeH265NaluSliceSegmentInfoEXT, pReferenceFinalLists}
+  rawOffset = #{offset VkVideoEncodeH265NaluSliceSegmentInfoEXT, pReferenceFinalLists}
 
 instance Offset "pSliceSegmentHeaderStd" VkVideoEncodeH265NaluSliceSegmentInfoEXT where
-  rawOffset = #{offset struct VkVideoEncodeH265NaluSliceSegmentInfoEXT, pSliceSegmentHeaderStd}
+  rawOffset = #{offset VkVideoEncodeH265NaluSliceSegmentInfoEXT, pSliceSegmentHeaderStd}
 
 #else
 

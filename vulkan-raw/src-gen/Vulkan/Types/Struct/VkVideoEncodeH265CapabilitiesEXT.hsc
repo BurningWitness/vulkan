@@ -53,8 +53,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkVideoEncodeH265CapabilitiesEXT" #-} VkVideoE
          }
 
 instance Storable VkVideoEncodeH265CapabilitiesEXT where
-  sizeOf    _ = #{size      struct VkVideoEncodeH265CapabilitiesEXT}
-  alignment _ = #{alignment struct VkVideoEncodeH265CapabilitiesEXT}
+  sizeOf    _ = #{size      VkVideoEncodeH265CapabilitiesEXT}
+  alignment _ = #{alignment VkVideoEncodeH265CapabilitiesEXT}
 
   peek ptr = 
     VkVideoEncodeH265CapabilitiesEXT
@@ -106,70 +106,70 @@ instance Storable VkVideoEncodeH265CapabilitiesEXT where
     pokeField @"maxMaxNumMergeCand" ptr val
 
 instance Offset "sType" VkVideoEncodeH265CapabilitiesEXT where
-  rawOffset = #{offset struct VkVideoEncodeH265CapabilitiesEXT, sType}
+  rawOffset = #{offset VkVideoEncodeH265CapabilitiesEXT, sType}
 
 instance Offset "pNext" VkVideoEncodeH265CapabilitiesEXT where
-  rawOffset = #{offset struct VkVideoEncodeH265CapabilitiesEXT, pNext}
+  rawOffset = #{offset VkVideoEncodeH265CapabilitiesEXT, pNext}
 
 instance Offset "flags" VkVideoEncodeH265CapabilitiesEXT where
-  rawOffset = #{offset struct VkVideoEncodeH265CapabilitiesEXT, flags}
+  rawOffset = #{offset VkVideoEncodeH265CapabilitiesEXT, flags}
 
 instance Offset "inputModeFlags" VkVideoEncodeH265CapabilitiesEXT where
-  rawOffset = #{offset struct VkVideoEncodeH265CapabilitiesEXT, inputModeFlags}
+  rawOffset = #{offset VkVideoEncodeH265CapabilitiesEXT, inputModeFlags}
 
 instance Offset "outputModeFlags" VkVideoEncodeH265CapabilitiesEXT where
-  rawOffset = #{offset struct VkVideoEncodeH265CapabilitiesEXT, outputModeFlags}
+  rawOffset = #{offset VkVideoEncodeH265CapabilitiesEXT, outputModeFlags}
 
 instance Offset "ctbSizes" VkVideoEncodeH265CapabilitiesEXT where
-  rawOffset = #{offset struct VkVideoEncodeH265CapabilitiesEXT, ctbSizes}
+  rawOffset = #{offset VkVideoEncodeH265CapabilitiesEXT, ctbSizes}
 
 instance Offset "transformBlockSizes" VkVideoEncodeH265CapabilitiesEXT where
-  rawOffset = #{offset struct VkVideoEncodeH265CapabilitiesEXT, transformBlockSizes}
+  rawOffset = #{offset VkVideoEncodeH265CapabilitiesEXT, transformBlockSizes}
 
 instance Offset "maxPPictureL0ReferenceCount" VkVideoEncodeH265CapabilitiesEXT where
-  rawOffset = #{offset struct VkVideoEncodeH265CapabilitiesEXT, maxPPictureL0ReferenceCount}
+  rawOffset = #{offset VkVideoEncodeH265CapabilitiesEXT, maxPPictureL0ReferenceCount}
 
 instance Offset "maxBPictureL0ReferenceCount" VkVideoEncodeH265CapabilitiesEXT where
-  rawOffset = #{offset struct VkVideoEncodeH265CapabilitiesEXT, maxBPictureL0ReferenceCount}
+  rawOffset = #{offset VkVideoEncodeH265CapabilitiesEXT, maxBPictureL0ReferenceCount}
 
 instance Offset "maxL1ReferenceCount" VkVideoEncodeH265CapabilitiesEXT where
-  rawOffset = #{offset struct VkVideoEncodeH265CapabilitiesEXT, maxL1ReferenceCount}
+  rawOffset = #{offset VkVideoEncodeH265CapabilitiesEXT, maxL1ReferenceCount}
 
 instance Offset "maxSubLayersCount" VkVideoEncodeH265CapabilitiesEXT where
-  rawOffset = #{offset struct VkVideoEncodeH265CapabilitiesEXT, maxSubLayersCount}
+  rawOffset = #{offset VkVideoEncodeH265CapabilitiesEXT, maxSubLayersCount}
 
 instance Offset "minLog2MinLumaCodingBlockSizeMinus3" VkVideoEncodeH265CapabilitiesEXT where
-  rawOffset = #{offset struct VkVideoEncodeH265CapabilitiesEXT, minLog2MinLumaCodingBlockSizeMinus3}
+  rawOffset = #{offset VkVideoEncodeH265CapabilitiesEXT, minLog2MinLumaCodingBlockSizeMinus3}
 
 instance Offset "maxLog2MinLumaCodingBlockSizeMinus3" VkVideoEncodeH265CapabilitiesEXT where
-  rawOffset = #{offset struct VkVideoEncodeH265CapabilitiesEXT, maxLog2MinLumaCodingBlockSizeMinus3}
+  rawOffset = #{offset VkVideoEncodeH265CapabilitiesEXT, maxLog2MinLumaCodingBlockSizeMinus3}
 
 instance Offset "minLog2MinLumaTransformBlockSizeMinus2" VkVideoEncodeH265CapabilitiesEXT where
-  rawOffset = #{offset struct VkVideoEncodeH265CapabilitiesEXT, minLog2MinLumaTransformBlockSizeMinus2}
+  rawOffset = #{offset VkVideoEncodeH265CapabilitiesEXT, minLog2MinLumaTransformBlockSizeMinus2}
 
 instance Offset "maxLog2MinLumaTransformBlockSizeMinus2" VkVideoEncodeH265CapabilitiesEXT where
-  rawOffset = #{offset struct VkVideoEncodeH265CapabilitiesEXT, maxLog2MinLumaTransformBlockSizeMinus2}
+  rawOffset = #{offset VkVideoEncodeH265CapabilitiesEXT, maxLog2MinLumaTransformBlockSizeMinus2}
 
 instance Offset "minMaxTransformHierarchyDepthInter" VkVideoEncodeH265CapabilitiesEXT where
-  rawOffset = #{offset struct VkVideoEncodeH265CapabilitiesEXT, minMaxTransformHierarchyDepthInter}
+  rawOffset = #{offset VkVideoEncodeH265CapabilitiesEXT, minMaxTransformHierarchyDepthInter}
 
 instance Offset "maxMaxTransformHierarchyDepthInter" VkVideoEncodeH265CapabilitiesEXT where
-  rawOffset = #{offset struct VkVideoEncodeH265CapabilitiesEXT, maxMaxTransformHierarchyDepthInter}
+  rawOffset = #{offset VkVideoEncodeH265CapabilitiesEXT, maxMaxTransformHierarchyDepthInter}
 
 instance Offset "minMaxTransformHierarchyDepthIntra" VkVideoEncodeH265CapabilitiesEXT where
-  rawOffset = #{offset struct VkVideoEncodeH265CapabilitiesEXT, minMaxTransformHierarchyDepthIntra}
+  rawOffset = #{offset VkVideoEncodeH265CapabilitiesEXT, minMaxTransformHierarchyDepthIntra}
 
 instance Offset "maxMaxTransformHierarchyDepthIntra" VkVideoEncodeH265CapabilitiesEXT where
-  rawOffset = #{offset struct VkVideoEncodeH265CapabilitiesEXT, maxMaxTransformHierarchyDepthIntra}
+  rawOffset = #{offset VkVideoEncodeH265CapabilitiesEXT, maxMaxTransformHierarchyDepthIntra}
 
 instance Offset "maxDiffCuQpDeltaDepth" VkVideoEncodeH265CapabilitiesEXT where
-  rawOffset = #{offset struct VkVideoEncodeH265CapabilitiesEXT, maxDiffCuQpDeltaDepth}
+  rawOffset = #{offset VkVideoEncodeH265CapabilitiesEXT, maxDiffCuQpDeltaDepth}
 
 instance Offset "minMaxNumMergeCand" VkVideoEncodeH265CapabilitiesEXT where
-  rawOffset = #{offset struct VkVideoEncodeH265CapabilitiesEXT, minMaxNumMergeCand}
+  rawOffset = #{offset VkVideoEncodeH265CapabilitiesEXT, minMaxNumMergeCand}
 
 instance Offset "maxMaxNumMergeCand" VkVideoEncodeH265CapabilitiesEXT where
-  rawOffset = #{offset struct VkVideoEncodeH265CapabilitiesEXT, maxMaxNumMergeCand}
+  rawOffset = #{offset VkVideoEncodeH265CapabilitiesEXT, maxMaxNumMergeCand}
 
 #else
 

@@ -40,8 +40,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkVideoEncodeH264RateControlLayerInfoEXT" #-} 
          }
 
 instance Storable VkVideoEncodeH264RateControlLayerInfoEXT where
-  sizeOf    _ = #{size      struct VkVideoEncodeH264RateControlLayerInfoEXT}
-  alignment _ = #{alignment struct VkVideoEncodeH264RateControlLayerInfoEXT}
+  sizeOf    _ = #{size      VkVideoEncodeH264RateControlLayerInfoEXT}
+  alignment _ = #{alignment VkVideoEncodeH264RateControlLayerInfoEXT}
 
   peek ptr = 
     VkVideoEncodeH264RateControlLayerInfoEXT
@@ -71,37 +71,37 @@ instance Storable VkVideoEncodeH264RateControlLayerInfoEXT where
     pokeField @"maxFrameSize" ptr val
 
 instance Offset "sType" VkVideoEncodeH264RateControlLayerInfoEXT where
-  rawOffset = #{offset struct VkVideoEncodeH264RateControlLayerInfoEXT, sType}
+  rawOffset = #{offset VkVideoEncodeH264RateControlLayerInfoEXT, sType}
 
 instance Offset "pNext" VkVideoEncodeH264RateControlLayerInfoEXT where
-  rawOffset = #{offset struct VkVideoEncodeH264RateControlLayerInfoEXT, pNext}
+  rawOffset = #{offset VkVideoEncodeH264RateControlLayerInfoEXT, pNext}
 
 instance Offset "temporalLayerId" VkVideoEncodeH264RateControlLayerInfoEXT where
-  rawOffset = #{offset struct VkVideoEncodeH264RateControlLayerInfoEXT, temporalLayerId}
+  rawOffset = #{offset VkVideoEncodeH264RateControlLayerInfoEXT, temporalLayerId}
 
 instance Offset "useInitialRcQp" VkVideoEncodeH264RateControlLayerInfoEXT where
-  rawOffset = #{offset struct VkVideoEncodeH264RateControlLayerInfoEXT, useInitialRcQp}
+  rawOffset = #{offset VkVideoEncodeH264RateControlLayerInfoEXT, useInitialRcQp}
 
 instance Offset "initialRcQp" VkVideoEncodeH264RateControlLayerInfoEXT where
-  rawOffset = #{offset struct VkVideoEncodeH264RateControlLayerInfoEXT, initialRcQp}
+  rawOffset = #{offset VkVideoEncodeH264RateControlLayerInfoEXT, initialRcQp}
 
 instance Offset "useMinQp" VkVideoEncodeH264RateControlLayerInfoEXT where
-  rawOffset = #{offset struct VkVideoEncodeH264RateControlLayerInfoEXT, useMinQp}
+  rawOffset = #{offset VkVideoEncodeH264RateControlLayerInfoEXT, useMinQp}
 
 instance Offset "minQp" VkVideoEncodeH264RateControlLayerInfoEXT where
-  rawOffset = #{offset struct VkVideoEncodeH264RateControlLayerInfoEXT, minQp}
+  rawOffset = #{offset VkVideoEncodeH264RateControlLayerInfoEXT, minQp}
 
 instance Offset "useMaxQp" VkVideoEncodeH264RateControlLayerInfoEXT where
-  rawOffset = #{offset struct VkVideoEncodeH264RateControlLayerInfoEXT, useMaxQp}
+  rawOffset = #{offset VkVideoEncodeH264RateControlLayerInfoEXT, useMaxQp}
 
 instance Offset "maxQp" VkVideoEncodeH264RateControlLayerInfoEXT where
-  rawOffset = #{offset struct VkVideoEncodeH264RateControlLayerInfoEXT, maxQp}
+  rawOffset = #{offset VkVideoEncodeH264RateControlLayerInfoEXT, maxQp}
 
 instance Offset "useMaxFrameSize" VkVideoEncodeH264RateControlLayerInfoEXT where
-  rawOffset = #{offset struct VkVideoEncodeH264RateControlLayerInfoEXT, useMaxFrameSize}
+  rawOffset = #{offset VkVideoEncodeH264RateControlLayerInfoEXT, useMaxFrameSize}
 
 instance Offset "maxFrameSize" VkVideoEncodeH264RateControlLayerInfoEXT where
-  rawOffset = #{offset struct VkVideoEncodeH264RateControlLayerInfoEXT, maxFrameSize}
+  rawOffset = #{offset VkVideoEncodeH264RateControlLayerInfoEXT, maxFrameSize}
 
 #else
 

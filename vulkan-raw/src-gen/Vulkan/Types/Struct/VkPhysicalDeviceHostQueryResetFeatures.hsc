@@ -30,8 +30,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkPhysicalDeviceHostQueryResetFeatures" #-} Vk
          }
 
 instance Storable VkPhysicalDeviceHostQueryResetFeatures where
-  sizeOf    _ = #{size      struct VkPhysicalDeviceHostQueryResetFeatures}
-  alignment _ = #{alignment struct VkPhysicalDeviceHostQueryResetFeatures}
+  sizeOf    _ = #{size      VkPhysicalDeviceHostQueryResetFeatures}
+  alignment _ = #{alignment VkPhysicalDeviceHostQueryResetFeatures}
 
   peek ptr = 
     VkPhysicalDeviceHostQueryResetFeatures
@@ -45,13 +45,13 @@ instance Storable VkPhysicalDeviceHostQueryResetFeatures where
     pokeField @"hostQueryReset" ptr val
 
 instance Offset "sType" VkPhysicalDeviceHostQueryResetFeatures where
-  rawOffset = #{offset struct VkPhysicalDeviceHostQueryResetFeatures, sType}
+  rawOffset = #{offset VkPhysicalDeviceHostQueryResetFeatures, sType}
 
 instance Offset "pNext" VkPhysicalDeviceHostQueryResetFeatures where
-  rawOffset = #{offset struct VkPhysicalDeviceHostQueryResetFeatures, pNext}
+  rawOffset = #{offset VkPhysicalDeviceHostQueryResetFeatures, pNext}
 
 instance Offset "hostQueryReset" VkPhysicalDeviceHostQueryResetFeatures where
-  rawOffset = #{offset struct VkPhysicalDeviceHostQueryResetFeatures, hostQueryReset}
+  rawOffset = #{offset VkPhysicalDeviceHostQueryResetFeatures, hostQueryReset}
 
 #else
 

@@ -33,8 +33,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkSwapchainPresentScalingCreateInfoEXT" #-} Vk
          }
 
 instance Storable VkSwapchainPresentScalingCreateInfoEXT where
-  sizeOf    _ = #{size      struct VkSwapchainPresentScalingCreateInfoEXT}
-  alignment _ = #{alignment struct VkSwapchainPresentScalingCreateInfoEXT}
+  sizeOf    _ = #{size      VkSwapchainPresentScalingCreateInfoEXT}
+  alignment _ = #{alignment VkSwapchainPresentScalingCreateInfoEXT}
 
   peek ptr = 
     VkSwapchainPresentScalingCreateInfoEXT
@@ -52,19 +52,19 @@ instance Storable VkSwapchainPresentScalingCreateInfoEXT where
     pokeField @"presentGravityY" ptr val
 
 instance Offset "sType" VkSwapchainPresentScalingCreateInfoEXT where
-  rawOffset = #{offset struct VkSwapchainPresentScalingCreateInfoEXT, sType}
+  rawOffset = #{offset VkSwapchainPresentScalingCreateInfoEXT, sType}
 
 instance Offset "pNext" VkSwapchainPresentScalingCreateInfoEXT where
-  rawOffset = #{offset struct VkSwapchainPresentScalingCreateInfoEXT, pNext}
+  rawOffset = #{offset VkSwapchainPresentScalingCreateInfoEXT, pNext}
 
 instance Offset "scalingBehavior" VkSwapchainPresentScalingCreateInfoEXT where
-  rawOffset = #{offset struct VkSwapchainPresentScalingCreateInfoEXT, scalingBehavior}
+  rawOffset = #{offset VkSwapchainPresentScalingCreateInfoEXT, scalingBehavior}
 
 instance Offset "presentGravityX" VkSwapchainPresentScalingCreateInfoEXT where
-  rawOffset = #{offset struct VkSwapchainPresentScalingCreateInfoEXT, presentGravityX}
+  rawOffset = #{offset VkSwapchainPresentScalingCreateInfoEXT, presentGravityX}
 
 instance Offset "presentGravityY" VkSwapchainPresentScalingCreateInfoEXT where
-  rawOffset = #{offset struct VkSwapchainPresentScalingCreateInfoEXT, presentGravityY}
+  rawOffset = #{offset VkSwapchainPresentScalingCreateInfoEXT, presentGravityY}
 
 #else
 

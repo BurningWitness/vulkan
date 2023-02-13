@@ -47,8 +47,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkIndirectCommandsLayoutTokenNV" #-} VkIndirec
          }
 
 instance Storable VkIndirectCommandsLayoutTokenNV where
-  sizeOf    _ = #{size      struct VkIndirectCommandsLayoutTokenNV}
-  alignment _ = #{alignment struct VkIndirectCommandsLayoutTokenNV}
+  sizeOf    _ = #{size      VkIndirectCommandsLayoutTokenNV}
+  alignment _ = #{alignment VkIndirectCommandsLayoutTokenNV}
 
   peek ptr = 
     VkIndirectCommandsLayoutTokenNV
@@ -86,49 +86,49 @@ instance Storable VkIndirectCommandsLayoutTokenNV where
     pokeField @"pIndexTypeValues" ptr val
 
 instance Offset "sType" VkIndirectCommandsLayoutTokenNV where
-  rawOffset = #{offset struct VkIndirectCommandsLayoutTokenNV, sType}
+  rawOffset = #{offset VkIndirectCommandsLayoutTokenNV, sType}
 
 instance Offset "pNext" VkIndirectCommandsLayoutTokenNV where
-  rawOffset = #{offset struct VkIndirectCommandsLayoutTokenNV, pNext}
+  rawOffset = #{offset VkIndirectCommandsLayoutTokenNV, pNext}
 
 instance Offset "tokenType" VkIndirectCommandsLayoutTokenNV where
-  rawOffset = #{offset struct VkIndirectCommandsLayoutTokenNV, tokenType}
+  rawOffset = #{offset VkIndirectCommandsLayoutTokenNV, tokenType}
 
 instance Offset "stream" VkIndirectCommandsLayoutTokenNV where
-  rawOffset = #{offset struct VkIndirectCommandsLayoutTokenNV, stream}
+  rawOffset = #{offset VkIndirectCommandsLayoutTokenNV, stream}
 
 instance Offset "offset" VkIndirectCommandsLayoutTokenNV where
-  rawOffset = #{offset struct VkIndirectCommandsLayoutTokenNV, offset}
+  rawOffset = #{offset VkIndirectCommandsLayoutTokenNV, offset}
 
 instance Offset "vertexBindingUnit" VkIndirectCommandsLayoutTokenNV where
-  rawOffset = #{offset struct VkIndirectCommandsLayoutTokenNV, vertexBindingUnit}
+  rawOffset = #{offset VkIndirectCommandsLayoutTokenNV, vertexBindingUnit}
 
 instance Offset "vertexDynamicStride" VkIndirectCommandsLayoutTokenNV where
-  rawOffset = #{offset struct VkIndirectCommandsLayoutTokenNV, vertexDynamicStride}
+  rawOffset = #{offset VkIndirectCommandsLayoutTokenNV, vertexDynamicStride}
 
 instance Offset "pushconstantPipelineLayout" VkIndirectCommandsLayoutTokenNV where
-  rawOffset = #{offset struct VkIndirectCommandsLayoutTokenNV, pushconstantPipelineLayout}
+  rawOffset = #{offset VkIndirectCommandsLayoutTokenNV, pushconstantPipelineLayout}
 
 instance Offset "pushconstantShaderStageFlags" VkIndirectCommandsLayoutTokenNV where
-  rawOffset = #{offset struct VkIndirectCommandsLayoutTokenNV, pushconstantShaderStageFlags}
+  rawOffset = #{offset VkIndirectCommandsLayoutTokenNV, pushconstantShaderStageFlags}
 
 instance Offset "pushconstantOffset" VkIndirectCommandsLayoutTokenNV where
-  rawOffset = #{offset struct VkIndirectCommandsLayoutTokenNV, pushconstantOffset}
+  rawOffset = #{offset VkIndirectCommandsLayoutTokenNV, pushconstantOffset}
 
 instance Offset "pushconstantSize" VkIndirectCommandsLayoutTokenNV where
-  rawOffset = #{offset struct VkIndirectCommandsLayoutTokenNV, pushconstantSize}
+  rawOffset = #{offset VkIndirectCommandsLayoutTokenNV, pushconstantSize}
 
 instance Offset "indirectStateFlags" VkIndirectCommandsLayoutTokenNV where
-  rawOffset = #{offset struct VkIndirectCommandsLayoutTokenNV, indirectStateFlags}
+  rawOffset = #{offset VkIndirectCommandsLayoutTokenNV, indirectStateFlags}
 
 instance Offset "indexTypeCount" VkIndirectCommandsLayoutTokenNV where
-  rawOffset = #{offset struct VkIndirectCommandsLayoutTokenNV, indexTypeCount}
+  rawOffset = #{offset VkIndirectCommandsLayoutTokenNV, indexTypeCount}
 
 instance Offset "pIndexTypes" VkIndirectCommandsLayoutTokenNV where
-  rawOffset = #{offset struct VkIndirectCommandsLayoutTokenNV, pIndexTypes}
+  rawOffset = #{offset VkIndirectCommandsLayoutTokenNV, pIndexTypes}
 
 instance Offset "pIndexTypeValues" VkIndirectCommandsLayoutTokenNV where
-  rawOffset = #{offset struct VkIndirectCommandsLayoutTokenNV, pIndexTypeValues}
+  rawOffset = #{offset VkIndirectCommandsLayoutTokenNV, pIndexTypeValues}
 
 #else
 

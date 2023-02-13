@@ -28,8 +28,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkSpecializationInfo" #-} VkSpecializationInfo
          }
 
 instance Storable VkSpecializationInfo where
-  sizeOf    _ = #{size      struct VkSpecializationInfo}
-  alignment _ = #{alignment struct VkSpecializationInfo}
+  sizeOf    _ = #{size      VkSpecializationInfo}
+  alignment _ = #{alignment VkSpecializationInfo}
 
   peek ptr = 
     VkSpecializationInfo
@@ -45,13 +45,13 @@ instance Storable VkSpecializationInfo where
     pokeField @"pData" ptr val
 
 instance Offset "mapEntryCount" VkSpecializationInfo where
-  rawOffset = #{offset struct VkSpecializationInfo, mapEntryCount}
+  rawOffset = #{offset VkSpecializationInfo, mapEntryCount}
 
 instance Offset "pMapEntries" VkSpecializationInfo where
-  rawOffset = #{offset struct VkSpecializationInfo, pMapEntries}
+  rawOffset = #{offset VkSpecializationInfo, pMapEntries}
 
 instance Offset "dataSize" VkSpecializationInfo where
-  rawOffset = #{offset struct VkSpecializationInfo, dataSize}
+  rawOffset = #{offset VkSpecializationInfo, dataSize}
 
 instance Offset "pData" VkSpecializationInfo where
-  rawOffset = #{offset struct VkSpecializationInfo, pData}
+  rawOffset = #{offset VkSpecializationInfo, pData}

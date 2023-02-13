@@ -37,8 +37,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkDeviceCreateInfo" #-} VkDeviceCreateInfo =
          }
 
 instance Storable VkDeviceCreateInfo where
-  sizeOf    _ = #{size      struct VkDeviceCreateInfo}
-  alignment _ = #{alignment struct VkDeviceCreateInfo}
+  sizeOf    _ = #{size      VkDeviceCreateInfo}
+  alignment _ = #{alignment VkDeviceCreateInfo}
 
   peek ptr = 
     VkDeviceCreateInfo
@@ -66,31 +66,31 @@ instance Storable VkDeviceCreateInfo where
     pokeField @"pEnabledFeatures" ptr val
 
 instance Offset "sType" VkDeviceCreateInfo where
-  rawOffset = #{offset struct VkDeviceCreateInfo, sType}
+  rawOffset = #{offset VkDeviceCreateInfo, sType}
 
 instance Offset "pNext" VkDeviceCreateInfo where
-  rawOffset = #{offset struct VkDeviceCreateInfo, pNext}
+  rawOffset = #{offset VkDeviceCreateInfo, pNext}
 
 instance Offset "flags" VkDeviceCreateInfo where
-  rawOffset = #{offset struct VkDeviceCreateInfo, flags}
+  rawOffset = #{offset VkDeviceCreateInfo, flags}
 
 instance Offset "queueCreateInfoCount" VkDeviceCreateInfo where
-  rawOffset = #{offset struct VkDeviceCreateInfo, queueCreateInfoCount}
+  rawOffset = #{offset VkDeviceCreateInfo, queueCreateInfoCount}
 
 instance Offset "pQueueCreateInfos" VkDeviceCreateInfo where
-  rawOffset = #{offset struct VkDeviceCreateInfo, pQueueCreateInfos}
+  rawOffset = #{offset VkDeviceCreateInfo, pQueueCreateInfos}
 
 instance Offset "enabledLayerCount" VkDeviceCreateInfo where
-  rawOffset = #{offset struct VkDeviceCreateInfo, enabledLayerCount}
+  rawOffset = #{offset VkDeviceCreateInfo, enabledLayerCount}
 
 instance Offset "ppEnabledLayerNames" VkDeviceCreateInfo where
-  rawOffset = #{offset struct VkDeviceCreateInfo, ppEnabledLayerNames}
+  rawOffset = #{offset VkDeviceCreateInfo, ppEnabledLayerNames}
 
 instance Offset "enabledExtensionCount" VkDeviceCreateInfo where
-  rawOffset = #{offset struct VkDeviceCreateInfo, enabledExtensionCount}
+  rawOffset = #{offset VkDeviceCreateInfo, enabledExtensionCount}
 
 instance Offset "ppEnabledExtensionNames" VkDeviceCreateInfo where
-  rawOffset = #{offset struct VkDeviceCreateInfo, ppEnabledExtensionNames}
+  rawOffset = #{offset VkDeviceCreateInfo, ppEnabledExtensionNames}
 
 instance Offset "pEnabledFeatures" VkDeviceCreateInfo where
-  rawOffset = #{offset struct VkDeviceCreateInfo, pEnabledFeatures}
+  rawOffset = #{offset VkDeviceCreateInfo, pEnabledFeatures}

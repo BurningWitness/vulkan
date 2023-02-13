@@ -30,8 +30,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkDeviceGroupBindSparseInfo" #-} VkDeviceGroup
          }
 
 instance Storable VkDeviceGroupBindSparseInfo where
-  sizeOf    _ = #{size      struct VkDeviceGroupBindSparseInfo}
-  alignment _ = #{alignment struct VkDeviceGroupBindSparseInfo}
+  sizeOf    _ = #{size      VkDeviceGroupBindSparseInfo}
+  alignment _ = #{alignment VkDeviceGroupBindSparseInfo}
 
   peek ptr = 
     VkDeviceGroupBindSparseInfo
@@ -47,16 +47,16 @@ instance Storable VkDeviceGroupBindSparseInfo where
     pokeField @"memoryDeviceIndex" ptr val
 
 instance Offset "sType" VkDeviceGroupBindSparseInfo where
-  rawOffset = #{offset struct VkDeviceGroupBindSparseInfo, sType}
+  rawOffset = #{offset VkDeviceGroupBindSparseInfo, sType}
 
 instance Offset "pNext" VkDeviceGroupBindSparseInfo where
-  rawOffset = #{offset struct VkDeviceGroupBindSparseInfo, pNext}
+  rawOffset = #{offset VkDeviceGroupBindSparseInfo, pNext}
 
 instance Offset "resourceDeviceIndex" VkDeviceGroupBindSparseInfo where
-  rawOffset = #{offset struct VkDeviceGroupBindSparseInfo, resourceDeviceIndex}
+  rawOffset = #{offset VkDeviceGroupBindSparseInfo, resourceDeviceIndex}
 
 instance Offset "memoryDeviceIndex" VkDeviceGroupBindSparseInfo where
-  rawOffset = #{offset struct VkDeviceGroupBindSparseInfo, memoryDeviceIndex}
+  rawOffset = #{offset VkDeviceGroupBindSparseInfo, memoryDeviceIndex}
 
 #else
 

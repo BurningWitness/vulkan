@@ -38,8 +38,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkImageMemoryBarrier" #-} VkImageMemoryBarrier
          }
 
 instance Storable VkImageMemoryBarrier where
-  sizeOf    _ = #{size      struct VkImageMemoryBarrier}
-  alignment _ = #{alignment struct VkImageMemoryBarrier}
+  sizeOf    _ = #{size      VkImageMemoryBarrier}
+  alignment _ = #{alignment VkImageMemoryBarrier}
 
   peek ptr = 
     VkImageMemoryBarrier
@@ -67,31 +67,31 @@ instance Storable VkImageMemoryBarrier where
     pokeField @"subresourceRange" ptr val
 
 instance Offset "sType" VkImageMemoryBarrier where
-  rawOffset = #{offset struct VkImageMemoryBarrier, sType}
+  rawOffset = #{offset VkImageMemoryBarrier, sType}
 
 instance Offset "pNext" VkImageMemoryBarrier where
-  rawOffset = #{offset struct VkImageMemoryBarrier, pNext}
+  rawOffset = #{offset VkImageMemoryBarrier, pNext}
 
 instance Offset "srcAccessMask" VkImageMemoryBarrier where
-  rawOffset = #{offset struct VkImageMemoryBarrier, srcAccessMask}
+  rawOffset = #{offset VkImageMemoryBarrier, srcAccessMask}
 
 instance Offset "dstAccessMask" VkImageMemoryBarrier where
-  rawOffset = #{offset struct VkImageMemoryBarrier, dstAccessMask}
+  rawOffset = #{offset VkImageMemoryBarrier, dstAccessMask}
 
 instance Offset "oldLayout" VkImageMemoryBarrier where
-  rawOffset = #{offset struct VkImageMemoryBarrier, oldLayout}
+  rawOffset = #{offset VkImageMemoryBarrier, oldLayout}
 
 instance Offset "newLayout" VkImageMemoryBarrier where
-  rawOffset = #{offset struct VkImageMemoryBarrier, newLayout}
+  rawOffset = #{offset VkImageMemoryBarrier, newLayout}
 
 instance Offset "srcQueueFamilyIndex" VkImageMemoryBarrier where
-  rawOffset = #{offset struct VkImageMemoryBarrier, srcQueueFamilyIndex}
+  rawOffset = #{offset VkImageMemoryBarrier, srcQueueFamilyIndex}
 
 instance Offset "dstQueueFamilyIndex" VkImageMemoryBarrier where
-  rawOffset = #{offset struct VkImageMemoryBarrier, dstQueueFamilyIndex}
+  rawOffset = #{offset VkImageMemoryBarrier, dstQueueFamilyIndex}
 
 instance Offset "image" VkImageMemoryBarrier where
-  rawOffset = #{offset struct VkImageMemoryBarrier, image}
+  rawOffset = #{offset VkImageMemoryBarrier, image}
 
 instance Offset "subresourceRange" VkImageMemoryBarrier where
-  rawOffset = #{offset struct VkImageMemoryBarrier, subresourceRange}
+  rawOffset = #{offset VkImageMemoryBarrier, subresourceRange}

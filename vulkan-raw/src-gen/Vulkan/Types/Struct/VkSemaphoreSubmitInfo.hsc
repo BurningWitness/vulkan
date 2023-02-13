@@ -34,8 +34,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkSemaphoreSubmitInfo" #-} VkSemaphoreSubmitIn
          }
 
 instance Storable VkSemaphoreSubmitInfo where
-  sizeOf    _ = #{size      struct VkSemaphoreSubmitInfo}
-  alignment _ = #{alignment struct VkSemaphoreSubmitInfo}
+  sizeOf    _ = #{size      VkSemaphoreSubmitInfo}
+  alignment _ = #{alignment VkSemaphoreSubmitInfo}
 
   peek ptr = 
     VkSemaphoreSubmitInfo
@@ -55,22 +55,22 @@ instance Storable VkSemaphoreSubmitInfo where
     pokeField @"deviceIndex" ptr val
 
 instance Offset "sType" VkSemaphoreSubmitInfo where
-  rawOffset = #{offset struct VkSemaphoreSubmitInfo, sType}
+  rawOffset = #{offset VkSemaphoreSubmitInfo, sType}
 
 instance Offset "pNext" VkSemaphoreSubmitInfo where
-  rawOffset = #{offset struct VkSemaphoreSubmitInfo, pNext}
+  rawOffset = #{offset VkSemaphoreSubmitInfo, pNext}
 
 instance Offset "semaphore" VkSemaphoreSubmitInfo where
-  rawOffset = #{offset struct VkSemaphoreSubmitInfo, semaphore}
+  rawOffset = #{offset VkSemaphoreSubmitInfo, semaphore}
 
 instance Offset "value" VkSemaphoreSubmitInfo where
-  rawOffset = #{offset struct VkSemaphoreSubmitInfo, value}
+  rawOffset = #{offset VkSemaphoreSubmitInfo, value}
 
 instance Offset "stageMask" VkSemaphoreSubmitInfo where
-  rawOffset = #{offset struct VkSemaphoreSubmitInfo, stageMask}
+  rawOffset = #{offset VkSemaphoreSubmitInfo, stageMask}
 
 instance Offset "deviceIndex" VkSemaphoreSubmitInfo where
-  rawOffset = #{offset struct VkSemaphoreSubmitInfo, deviceIndex}
+  rawOffset = #{offset VkSemaphoreSubmitInfo, deviceIndex}
 
 #else
 

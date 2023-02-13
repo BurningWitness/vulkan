@@ -31,8 +31,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkPhysicalDeviceMeshShaderFeaturesNV" #-} VkPh
          }
 
 instance Storable VkPhysicalDeviceMeshShaderFeaturesNV where
-  sizeOf    _ = #{size      struct VkPhysicalDeviceMeshShaderFeaturesNV}
-  alignment _ = #{alignment struct VkPhysicalDeviceMeshShaderFeaturesNV}
+  sizeOf    _ = #{size      VkPhysicalDeviceMeshShaderFeaturesNV}
+  alignment _ = #{alignment VkPhysicalDeviceMeshShaderFeaturesNV}
 
   peek ptr = 
     VkPhysicalDeviceMeshShaderFeaturesNV
@@ -48,16 +48,16 @@ instance Storable VkPhysicalDeviceMeshShaderFeaturesNV where
     pokeField @"meshShader" ptr val
 
 instance Offset "sType" VkPhysicalDeviceMeshShaderFeaturesNV where
-  rawOffset = #{offset struct VkPhysicalDeviceMeshShaderFeaturesNV, sType}
+  rawOffset = #{offset VkPhysicalDeviceMeshShaderFeaturesNV, sType}
 
 instance Offset "pNext" VkPhysicalDeviceMeshShaderFeaturesNV where
-  rawOffset = #{offset struct VkPhysicalDeviceMeshShaderFeaturesNV, pNext}
+  rawOffset = #{offset VkPhysicalDeviceMeshShaderFeaturesNV, pNext}
 
 instance Offset "taskShader" VkPhysicalDeviceMeshShaderFeaturesNV where
-  rawOffset = #{offset struct VkPhysicalDeviceMeshShaderFeaturesNV, taskShader}
+  rawOffset = #{offset VkPhysicalDeviceMeshShaderFeaturesNV, taskShader}
 
 instance Offset "meshShader" VkPhysicalDeviceMeshShaderFeaturesNV where
-  rawOffset = #{offset struct VkPhysicalDeviceMeshShaderFeaturesNV, meshShader}
+  rawOffset = #{offset VkPhysicalDeviceMeshShaderFeaturesNV, meshShader}
 
 #else
 

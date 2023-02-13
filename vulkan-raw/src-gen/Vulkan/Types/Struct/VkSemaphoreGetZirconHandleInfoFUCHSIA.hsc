@@ -32,8 +32,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkSemaphoreGetZirconHandleInfoFUCHSIA" #-} VkS
          }
 
 instance Storable VkSemaphoreGetZirconHandleInfoFUCHSIA where
-  sizeOf    _ = #{size      struct VkSemaphoreGetZirconHandleInfoFUCHSIA}
-  alignment _ = #{alignment struct VkSemaphoreGetZirconHandleInfoFUCHSIA}
+  sizeOf    _ = #{size      VkSemaphoreGetZirconHandleInfoFUCHSIA}
+  alignment _ = #{alignment VkSemaphoreGetZirconHandleInfoFUCHSIA}
 
   peek ptr = 
     VkSemaphoreGetZirconHandleInfoFUCHSIA
@@ -49,16 +49,16 @@ instance Storable VkSemaphoreGetZirconHandleInfoFUCHSIA where
     pokeField @"handleType" ptr val
 
 instance Offset "sType" VkSemaphoreGetZirconHandleInfoFUCHSIA where
-  rawOffset = #{offset struct VkSemaphoreGetZirconHandleInfoFUCHSIA, sType}
+  rawOffset = #{offset VkSemaphoreGetZirconHandleInfoFUCHSIA, sType}
 
 instance Offset "pNext" VkSemaphoreGetZirconHandleInfoFUCHSIA where
-  rawOffset = #{offset struct VkSemaphoreGetZirconHandleInfoFUCHSIA, pNext}
+  rawOffset = #{offset VkSemaphoreGetZirconHandleInfoFUCHSIA, pNext}
 
 instance Offset "semaphore" VkSemaphoreGetZirconHandleInfoFUCHSIA where
-  rawOffset = #{offset struct VkSemaphoreGetZirconHandleInfoFUCHSIA, semaphore}
+  rawOffset = #{offset VkSemaphoreGetZirconHandleInfoFUCHSIA, semaphore}
 
 instance Offset "handleType" VkSemaphoreGetZirconHandleInfoFUCHSIA where
-  rawOffset = #{offset struct VkSemaphoreGetZirconHandleInfoFUCHSIA, handleType}
+  rawOffset = #{offset VkSemaphoreGetZirconHandleInfoFUCHSIA, handleType}
 
 #else
 

@@ -36,8 +36,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkSurfacePresentScalingCapabilitiesEXT" #-} Vk
          }
 
 instance Storable VkSurfacePresentScalingCapabilitiesEXT where
-  sizeOf    _ = #{size      struct VkSurfacePresentScalingCapabilitiesEXT}
-  alignment _ = #{alignment struct VkSurfacePresentScalingCapabilitiesEXT}
+  sizeOf    _ = #{size      VkSurfacePresentScalingCapabilitiesEXT}
+  alignment _ = #{alignment VkSurfacePresentScalingCapabilitiesEXT}
 
   peek ptr = 
     VkSurfacePresentScalingCapabilitiesEXT
@@ -59,25 +59,25 @@ instance Storable VkSurfacePresentScalingCapabilitiesEXT where
     pokeField @"maxScaledImageExtent" ptr val
 
 instance Offset "sType" VkSurfacePresentScalingCapabilitiesEXT where
-  rawOffset = #{offset struct VkSurfacePresentScalingCapabilitiesEXT, sType}
+  rawOffset = #{offset VkSurfacePresentScalingCapabilitiesEXT, sType}
 
 instance Offset "pNext" VkSurfacePresentScalingCapabilitiesEXT where
-  rawOffset = #{offset struct VkSurfacePresentScalingCapabilitiesEXT, pNext}
+  rawOffset = #{offset VkSurfacePresentScalingCapabilitiesEXT, pNext}
 
 instance Offset "supportedPresentScaling" VkSurfacePresentScalingCapabilitiesEXT where
-  rawOffset = #{offset struct VkSurfacePresentScalingCapabilitiesEXT, supportedPresentScaling}
+  rawOffset = #{offset VkSurfacePresentScalingCapabilitiesEXT, supportedPresentScaling}
 
 instance Offset "supportedPresentGravityX" VkSurfacePresentScalingCapabilitiesEXT where
-  rawOffset = #{offset struct VkSurfacePresentScalingCapabilitiesEXT, supportedPresentGravityX}
+  rawOffset = #{offset VkSurfacePresentScalingCapabilitiesEXT, supportedPresentGravityX}
 
 instance Offset "supportedPresentGravityY" VkSurfacePresentScalingCapabilitiesEXT where
-  rawOffset = #{offset struct VkSurfacePresentScalingCapabilitiesEXT, supportedPresentGravityY}
+  rawOffset = #{offset VkSurfacePresentScalingCapabilitiesEXT, supportedPresentGravityY}
 
 instance Offset "minScaledImageExtent" VkSurfacePresentScalingCapabilitiesEXT where
-  rawOffset = #{offset struct VkSurfacePresentScalingCapabilitiesEXT, minScaledImageExtent}
+  rawOffset = #{offset VkSurfacePresentScalingCapabilitiesEXT, minScaledImageExtent}
 
 instance Offset "maxScaledImageExtent" VkSurfacePresentScalingCapabilitiesEXT where
-  rawOffset = #{offset struct VkSurfacePresentScalingCapabilitiesEXT, maxScaledImageExtent}
+  rawOffset = #{offset VkSurfacePresentScalingCapabilitiesEXT, maxScaledImageExtent}
 
 #else
 

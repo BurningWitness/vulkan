@@ -30,8 +30,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkPhysicalDeviceSubpassShadingFeaturesHUAWEI" 
          }
 
 instance Storable VkPhysicalDeviceSubpassShadingFeaturesHUAWEI where
-  sizeOf    _ = #{size      struct VkPhysicalDeviceSubpassShadingFeaturesHUAWEI}
-  alignment _ = #{alignment struct VkPhysicalDeviceSubpassShadingFeaturesHUAWEI}
+  sizeOf    _ = #{size      VkPhysicalDeviceSubpassShadingFeaturesHUAWEI}
+  alignment _ = #{alignment VkPhysicalDeviceSubpassShadingFeaturesHUAWEI}
 
   peek ptr = 
     VkPhysicalDeviceSubpassShadingFeaturesHUAWEI
@@ -45,13 +45,13 @@ instance Storable VkPhysicalDeviceSubpassShadingFeaturesHUAWEI where
     pokeField @"subpassShading" ptr val
 
 instance Offset "sType" VkPhysicalDeviceSubpassShadingFeaturesHUAWEI where
-  rawOffset = #{offset struct VkPhysicalDeviceSubpassShadingFeaturesHUAWEI, sType}
+  rawOffset = #{offset VkPhysicalDeviceSubpassShadingFeaturesHUAWEI, sType}
 
 instance Offset "pNext" VkPhysicalDeviceSubpassShadingFeaturesHUAWEI where
-  rawOffset = #{offset struct VkPhysicalDeviceSubpassShadingFeaturesHUAWEI, pNext}
+  rawOffset = #{offset VkPhysicalDeviceSubpassShadingFeaturesHUAWEI, pNext}
 
 instance Offset "subpassShading" VkPhysicalDeviceSubpassShadingFeaturesHUAWEI where
-  rawOffset = #{offset struct VkPhysicalDeviceSubpassShadingFeaturesHUAWEI, subpassShading}
+  rawOffset = #{offset VkPhysicalDeviceSubpassShadingFeaturesHUAWEI, subpassShading}
 
 #else
 

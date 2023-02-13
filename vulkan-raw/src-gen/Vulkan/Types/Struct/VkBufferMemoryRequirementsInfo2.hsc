@@ -30,8 +30,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkBufferMemoryRequirementsInfo2" #-} VkBufferM
          }
 
 instance Storable VkBufferMemoryRequirementsInfo2 where
-  sizeOf    _ = #{size      struct VkBufferMemoryRequirementsInfo2}
-  alignment _ = #{alignment struct VkBufferMemoryRequirementsInfo2}
+  sizeOf    _ = #{size      VkBufferMemoryRequirementsInfo2}
+  alignment _ = #{alignment VkBufferMemoryRequirementsInfo2}
 
   peek ptr = 
     VkBufferMemoryRequirementsInfo2
@@ -45,13 +45,13 @@ instance Storable VkBufferMemoryRequirementsInfo2 where
     pokeField @"buffer" ptr val
 
 instance Offset "sType" VkBufferMemoryRequirementsInfo2 where
-  rawOffset = #{offset struct VkBufferMemoryRequirementsInfo2, sType}
+  rawOffset = #{offset VkBufferMemoryRequirementsInfo2, sType}
 
 instance Offset "pNext" VkBufferMemoryRequirementsInfo2 where
-  rawOffset = #{offset struct VkBufferMemoryRequirementsInfo2, pNext}
+  rawOffset = #{offset VkBufferMemoryRequirementsInfo2, pNext}
 
 instance Offset "buffer" VkBufferMemoryRequirementsInfo2 where
-  rawOffset = #{offset struct VkBufferMemoryRequirementsInfo2, buffer}
+  rawOffset = #{offset VkBufferMemoryRequirementsInfo2, buffer}
 
 #else
 

@@ -33,8 +33,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkColorBlendAdvancedEXT" #-} VkColorBlendAdvan
          }
 
 instance Storable VkColorBlendAdvancedEXT where
-  sizeOf    _ = #{size      struct VkColorBlendAdvancedEXT}
-  alignment _ = #{alignment struct VkColorBlendAdvancedEXT}
+  sizeOf    _ = #{size      VkColorBlendAdvancedEXT}
+  alignment _ = #{alignment VkColorBlendAdvancedEXT}
 
   peek ptr = 
     VkColorBlendAdvancedEXT
@@ -52,19 +52,19 @@ instance Storable VkColorBlendAdvancedEXT where
     pokeField @"clampResults" ptr val
 
 instance Offset "advancedBlendOp" VkColorBlendAdvancedEXT where
-  rawOffset = #{offset struct VkColorBlendAdvancedEXT, advancedBlendOp}
+  rawOffset = #{offset VkColorBlendAdvancedEXT, advancedBlendOp}
 
 instance Offset "srcPremultiplied" VkColorBlendAdvancedEXT where
-  rawOffset = #{offset struct VkColorBlendAdvancedEXT, srcPremultiplied}
+  rawOffset = #{offset VkColorBlendAdvancedEXT, srcPremultiplied}
 
 instance Offset "dstPremultiplied" VkColorBlendAdvancedEXT where
-  rawOffset = #{offset struct VkColorBlendAdvancedEXT, dstPremultiplied}
+  rawOffset = #{offset VkColorBlendAdvancedEXT, dstPremultiplied}
 
 instance Offset "blendOverlap" VkColorBlendAdvancedEXT where
-  rawOffset = #{offset struct VkColorBlendAdvancedEXT, blendOverlap}
+  rawOffset = #{offset VkColorBlendAdvancedEXT, blendOverlap}
 
 instance Offset "clampResults" VkColorBlendAdvancedEXT where
-  rawOffset = #{offset struct VkColorBlendAdvancedEXT, clampResults}
+  rawOffset = #{offset VkColorBlendAdvancedEXT, clampResults}
 
 #else
 

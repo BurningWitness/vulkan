@@ -39,8 +39,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkDescriptorDataEXT" #-} VkDescriptorDataEXT =
          }
 
 instance Storable VkDescriptorDataEXT where
-  sizeOf    _ = #{size      union VkDescriptorDataEXT}
-  alignment _ = #{alignment union VkDescriptorDataEXT}
+  sizeOf    _ = #{size      VkDescriptorDataEXT}
+  alignment _ = #{alignment VkDescriptorDataEXT}
 
   peek ptr = 
     VkDescriptorDataEXT
@@ -68,34 +68,34 @@ instance Storable VkDescriptorDataEXT where
     pokeField @"accelerationStructure" ptr val
 
 instance Offset "pSampler" VkDescriptorDataEXT where
-  rawOffset = #{offset union VkDescriptorDataEXT, pSampler}
+  rawOffset = #{offset VkDescriptorDataEXT, pSampler}
 
 instance Offset "pCombinedImageSampler" VkDescriptorDataEXT where
-  rawOffset = #{offset union VkDescriptorDataEXT, pCombinedImageSampler}
+  rawOffset = #{offset VkDescriptorDataEXT, pCombinedImageSampler}
 
 instance Offset "pInputAttachmentImage" VkDescriptorDataEXT where
-  rawOffset = #{offset union VkDescriptorDataEXT, pInputAttachmentImage}
+  rawOffset = #{offset VkDescriptorDataEXT, pInputAttachmentImage}
 
 instance Offset "pSampledImage" VkDescriptorDataEXT where
-  rawOffset = #{offset union VkDescriptorDataEXT, pSampledImage}
+  rawOffset = #{offset VkDescriptorDataEXT, pSampledImage}
 
 instance Offset "pStorageImage" VkDescriptorDataEXT where
-  rawOffset = #{offset union VkDescriptorDataEXT, pStorageImage}
+  rawOffset = #{offset VkDescriptorDataEXT, pStorageImage}
 
 instance Offset "pUniformTexelBuffer" VkDescriptorDataEXT where
-  rawOffset = #{offset union VkDescriptorDataEXT, pUniformTexelBuffer}
+  rawOffset = #{offset VkDescriptorDataEXT, pUniformTexelBuffer}
 
 instance Offset "pStorageTexelBuffer" VkDescriptorDataEXT where
-  rawOffset = #{offset union VkDescriptorDataEXT, pStorageTexelBuffer}
+  rawOffset = #{offset VkDescriptorDataEXT, pStorageTexelBuffer}
 
 instance Offset "pUniformBuffer" VkDescriptorDataEXT where
-  rawOffset = #{offset union VkDescriptorDataEXT, pUniformBuffer}
+  rawOffset = #{offset VkDescriptorDataEXT, pUniformBuffer}
 
 instance Offset "pStorageBuffer" VkDescriptorDataEXT where
-  rawOffset = #{offset union VkDescriptorDataEXT, pStorageBuffer}
+  rawOffset = #{offset VkDescriptorDataEXT, pStorageBuffer}
 
 instance Offset "accelerationStructure" VkDescriptorDataEXT where
-  rawOffset = #{offset union VkDescriptorDataEXT, accelerationStructure}
+  rawOffset = #{offset VkDescriptorDataEXT, accelerationStructure}
 
 #else
 

@@ -31,8 +31,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkSurfacePresentModeCompatibilityEXT" #-} VkSu
          }
 
 instance Storable VkSurfacePresentModeCompatibilityEXT where
-  sizeOf    _ = #{size      struct VkSurfacePresentModeCompatibilityEXT}
-  alignment _ = #{alignment struct VkSurfacePresentModeCompatibilityEXT}
+  sizeOf    _ = #{size      VkSurfacePresentModeCompatibilityEXT}
+  alignment _ = #{alignment VkSurfacePresentModeCompatibilityEXT}
 
   peek ptr = 
     VkSurfacePresentModeCompatibilityEXT
@@ -48,16 +48,16 @@ instance Storable VkSurfacePresentModeCompatibilityEXT where
     pokeField @"pPresentModes" ptr val
 
 instance Offset "sType" VkSurfacePresentModeCompatibilityEXT where
-  rawOffset = #{offset struct VkSurfacePresentModeCompatibilityEXT, sType}
+  rawOffset = #{offset VkSurfacePresentModeCompatibilityEXT, sType}
 
 instance Offset "pNext" VkSurfacePresentModeCompatibilityEXT where
-  rawOffset = #{offset struct VkSurfacePresentModeCompatibilityEXT, pNext}
+  rawOffset = #{offset VkSurfacePresentModeCompatibilityEXT, pNext}
 
 instance Offset "presentModeCount" VkSurfacePresentModeCompatibilityEXT where
-  rawOffset = #{offset struct VkSurfacePresentModeCompatibilityEXT, presentModeCount}
+  rawOffset = #{offset VkSurfacePresentModeCompatibilityEXT, presentModeCount}
 
 instance Offset "pPresentModes" VkSurfacePresentModeCompatibilityEXT where
-  rawOffset = #{offset struct VkSurfacePresentModeCompatibilityEXT, pPresentModes}
+  rawOffset = #{offset VkSurfacePresentModeCompatibilityEXT, pPresentModes}
 
 #else
 

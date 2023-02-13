@@ -27,8 +27,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkVertexInputBindingDivisorDescriptionEXT" #-}
          }
 
 instance Storable VkVertexInputBindingDivisorDescriptionEXT where
-  sizeOf    _ = #{size      struct VkVertexInputBindingDivisorDescriptionEXT}
-  alignment _ = #{alignment struct VkVertexInputBindingDivisorDescriptionEXT}
+  sizeOf    _ = #{size      VkVertexInputBindingDivisorDescriptionEXT}
+  alignment _ = #{alignment VkVertexInputBindingDivisorDescriptionEXT}
 
   peek ptr = 
     VkVertexInputBindingDivisorDescriptionEXT
@@ -40,10 +40,10 @@ instance Storable VkVertexInputBindingDivisorDescriptionEXT where
     pokeField @"divisor" ptr val
 
 instance Offset "binding" VkVertexInputBindingDivisorDescriptionEXT where
-  rawOffset = #{offset struct VkVertexInputBindingDivisorDescriptionEXT, binding}
+  rawOffset = #{offset VkVertexInputBindingDivisorDescriptionEXT, binding}
 
 instance Offset "divisor" VkVertexInputBindingDivisorDescriptionEXT where
-  rawOffset = #{offset struct VkVertexInputBindingDivisorDescriptionEXT, divisor}
+  rawOffset = #{offset VkVertexInputBindingDivisorDescriptionEXT, divisor}
 
 #else
 

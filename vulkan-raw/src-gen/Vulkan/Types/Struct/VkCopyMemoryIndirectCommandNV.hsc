@@ -29,8 +29,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkCopyMemoryIndirectCommandNV" #-} VkCopyMemor
          }
 
 instance Storable VkCopyMemoryIndirectCommandNV where
-  sizeOf    _ = #{size      struct VkCopyMemoryIndirectCommandNV}
-  alignment _ = #{alignment struct VkCopyMemoryIndirectCommandNV}
+  sizeOf    _ = #{size      VkCopyMemoryIndirectCommandNV}
+  alignment _ = #{alignment VkCopyMemoryIndirectCommandNV}
 
   peek ptr = 
     VkCopyMemoryIndirectCommandNV
@@ -44,13 +44,13 @@ instance Storable VkCopyMemoryIndirectCommandNV where
     pokeField @"size" ptr val
 
 instance Offset "srcAddress" VkCopyMemoryIndirectCommandNV where
-  rawOffset = #{offset struct VkCopyMemoryIndirectCommandNV, srcAddress}
+  rawOffset = #{offset VkCopyMemoryIndirectCommandNV, srcAddress}
 
 instance Offset "dstAddress" VkCopyMemoryIndirectCommandNV where
-  rawOffset = #{offset struct VkCopyMemoryIndirectCommandNV, dstAddress}
+  rawOffset = #{offset VkCopyMemoryIndirectCommandNV, dstAddress}
 
 instance Offset "size" VkCopyMemoryIndirectCommandNV where
-  rawOffset = #{offset struct VkCopyMemoryIndirectCommandNV, size}
+  rawOffset = #{offset VkCopyMemoryIndirectCommandNV, size}
 
 #else
 

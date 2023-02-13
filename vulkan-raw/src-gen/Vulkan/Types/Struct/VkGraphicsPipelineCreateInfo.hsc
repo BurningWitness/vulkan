@@ -55,8 +55,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkGraphicsPipelineCreateInfo" #-} VkGraphicsPi
          }
 
 instance Storable VkGraphicsPipelineCreateInfo where
-  sizeOf    _ = #{size      struct VkGraphicsPipelineCreateInfo}
-  alignment _ = #{alignment struct VkGraphicsPipelineCreateInfo}
+  sizeOf    _ = #{size      VkGraphicsPipelineCreateInfo}
+  alignment _ = #{alignment VkGraphicsPipelineCreateInfo}
 
   peek ptr = 
     VkGraphicsPipelineCreateInfo
@@ -102,58 +102,58 @@ instance Storable VkGraphicsPipelineCreateInfo where
     pokeField @"basePipelineIndex" ptr val
 
 instance Offset "sType" VkGraphicsPipelineCreateInfo where
-  rawOffset = #{offset struct VkGraphicsPipelineCreateInfo, sType}
+  rawOffset = #{offset VkGraphicsPipelineCreateInfo, sType}
 
 instance Offset "pNext" VkGraphicsPipelineCreateInfo where
-  rawOffset = #{offset struct VkGraphicsPipelineCreateInfo, pNext}
+  rawOffset = #{offset VkGraphicsPipelineCreateInfo, pNext}
 
 instance Offset "flags" VkGraphicsPipelineCreateInfo where
-  rawOffset = #{offset struct VkGraphicsPipelineCreateInfo, flags}
+  rawOffset = #{offset VkGraphicsPipelineCreateInfo, flags}
 
 instance Offset "stageCount" VkGraphicsPipelineCreateInfo where
-  rawOffset = #{offset struct VkGraphicsPipelineCreateInfo, stageCount}
+  rawOffset = #{offset VkGraphicsPipelineCreateInfo, stageCount}
 
 instance Offset "pStages" VkGraphicsPipelineCreateInfo where
-  rawOffset = #{offset struct VkGraphicsPipelineCreateInfo, pStages}
+  rawOffset = #{offset VkGraphicsPipelineCreateInfo, pStages}
 
 instance Offset "pVertexInputState" VkGraphicsPipelineCreateInfo where
-  rawOffset = #{offset struct VkGraphicsPipelineCreateInfo, pVertexInputState}
+  rawOffset = #{offset VkGraphicsPipelineCreateInfo, pVertexInputState}
 
 instance Offset "pInputAssemblyState" VkGraphicsPipelineCreateInfo where
-  rawOffset = #{offset struct VkGraphicsPipelineCreateInfo, pInputAssemblyState}
+  rawOffset = #{offset VkGraphicsPipelineCreateInfo, pInputAssemblyState}
 
 instance Offset "pTessellationState" VkGraphicsPipelineCreateInfo where
-  rawOffset = #{offset struct VkGraphicsPipelineCreateInfo, pTessellationState}
+  rawOffset = #{offset VkGraphicsPipelineCreateInfo, pTessellationState}
 
 instance Offset "pViewportState" VkGraphicsPipelineCreateInfo where
-  rawOffset = #{offset struct VkGraphicsPipelineCreateInfo, pViewportState}
+  rawOffset = #{offset VkGraphicsPipelineCreateInfo, pViewportState}
 
 instance Offset "pRasterizationState" VkGraphicsPipelineCreateInfo where
-  rawOffset = #{offset struct VkGraphicsPipelineCreateInfo, pRasterizationState}
+  rawOffset = #{offset VkGraphicsPipelineCreateInfo, pRasterizationState}
 
 instance Offset "pMultisampleState" VkGraphicsPipelineCreateInfo where
-  rawOffset = #{offset struct VkGraphicsPipelineCreateInfo, pMultisampleState}
+  rawOffset = #{offset VkGraphicsPipelineCreateInfo, pMultisampleState}
 
 instance Offset "pDepthStencilState" VkGraphicsPipelineCreateInfo where
-  rawOffset = #{offset struct VkGraphicsPipelineCreateInfo, pDepthStencilState}
+  rawOffset = #{offset VkGraphicsPipelineCreateInfo, pDepthStencilState}
 
 instance Offset "pColorBlendState" VkGraphicsPipelineCreateInfo where
-  rawOffset = #{offset struct VkGraphicsPipelineCreateInfo, pColorBlendState}
+  rawOffset = #{offset VkGraphicsPipelineCreateInfo, pColorBlendState}
 
 instance Offset "pDynamicState" VkGraphicsPipelineCreateInfo where
-  rawOffset = #{offset struct VkGraphicsPipelineCreateInfo, pDynamicState}
+  rawOffset = #{offset VkGraphicsPipelineCreateInfo, pDynamicState}
 
 instance Offset "layout" VkGraphicsPipelineCreateInfo where
-  rawOffset = #{offset struct VkGraphicsPipelineCreateInfo, layout}
+  rawOffset = #{offset VkGraphicsPipelineCreateInfo, layout}
 
 instance Offset "renderPass" VkGraphicsPipelineCreateInfo where
-  rawOffset = #{offset struct VkGraphicsPipelineCreateInfo, renderPass}
+  rawOffset = #{offset VkGraphicsPipelineCreateInfo, renderPass}
 
 instance Offset "subpass" VkGraphicsPipelineCreateInfo where
-  rawOffset = #{offset struct VkGraphicsPipelineCreateInfo, subpass}
+  rawOffset = #{offset VkGraphicsPipelineCreateInfo, subpass}
 
 instance Offset "basePipelineHandle" VkGraphicsPipelineCreateInfo where
-  rawOffset = #{offset struct VkGraphicsPipelineCreateInfo, basePipelineHandle}
+  rawOffset = #{offset VkGraphicsPipelineCreateInfo, basePipelineHandle}
 
 instance Offset "basePipelineIndex" VkGraphicsPipelineCreateInfo where
-  rawOffset = #{offset struct VkGraphicsPipelineCreateInfo, basePipelineIndex}
+  rawOffset = #{offset VkGraphicsPipelineCreateInfo, basePipelineIndex}

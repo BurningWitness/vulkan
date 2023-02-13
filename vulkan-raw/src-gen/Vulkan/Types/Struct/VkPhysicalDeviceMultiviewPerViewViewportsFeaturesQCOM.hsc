@@ -30,8 +30,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkPhysicalDeviceMultiviewPerViewViewportsFeatu
          }
 
 instance Storable VkPhysicalDeviceMultiviewPerViewViewportsFeaturesQCOM where
-  sizeOf    _ = #{size      struct VkPhysicalDeviceMultiviewPerViewViewportsFeaturesQCOM}
-  alignment _ = #{alignment struct VkPhysicalDeviceMultiviewPerViewViewportsFeaturesQCOM}
+  sizeOf    _ = #{size      VkPhysicalDeviceMultiviewPerViewViewportsFeaturesQCOM}
+  alignment _ = #{alignment VkPhysicalDeviceMultiviewPerViewViewportsFeaturesQCOM}
 
   peek ptr = 
     VkPhysicalDeviceMultiviewPerViewViewportsFeaturesQCOM
@@ -45,13 +45,13 @@ instance Storable VkPhysicalDeviceMultiviewPerViewViewportsFeaturesQCOM where
     pokeField @"multiviewPerViewViewports" ptr val
 
 instance Offset "sType" VkPhysicalDeviceMultiviewPerViewViewportsFeaturesQCOM where
-  rawOffset = #{offset struct VkPhysicalDeviceMultiviewPerViewViewportsFeaturesQCOM, sType}
+  rawOffset = #{offset VkPhysicalDeviceMultiviewPerViewViewportsFeaturesQCOM, sType}
 
 instance Offset "pNext" VkPhysicalDeviceMultiviewPerViewViewportsFeaturesQCOM where
-  rawOffset = #{offset struct VkPhysicalDeviceMultiviewPerViewViewportsFeaturesQCOM, pNext}
+  rawOffset = #{offset VkPhysicalDeviceMultiviewPerViewViewportsFeaturesQCOM, pNext}
 
 instance Offset "multiviewPerViewViewports" VkPhysicalDeviceMultiviewPerViewViewportsFeaturesQCOM where
-  rawOffset = #{offset struct VkPhysicalDeviceMultiviewPerViewViewportsFeaturesQCOM, multiviewPerViewViewports}
+  rawOffset = #{offset VkPhysicalDeviceMultiviewPerViewViewportsFeaturesQCOM, multiviewPerViewViewports}
 
 #else
 

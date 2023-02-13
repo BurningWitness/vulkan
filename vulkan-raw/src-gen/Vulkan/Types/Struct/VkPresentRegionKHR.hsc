@@ -28,8 +28,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkPresentRegionKHR" #-} VkPresentRegionKHR =
          }
 
 instance Storable VkPresentRegionKHR where
-  sizeOf    _ = #{size      struct VkPresentRegionKHR}
-  alignment _ = #{alignment struct VkPresentRegionKHR}
+  sizeOf    _ = #{size      VkPresentRegionKHR}
+  alignment _ = #{alignment VkPresentRegionKHR}
 
   peek ptr = 
     VkPresentRegionKHR
@@ -41,10 +41,10 @@ instance Storable VkPresentRegionKHR where
     pokeField @"pRectangles" ptr val
 
 instance Offset "rectangleCount" VkPresentRegionKHR where
-  rawOffset = #{offset struct VkPresentRegionKHR, rectangleCount}
+  rawOffset = #{offset VkPresentRegionKHR, rectangleCount}
 
 instance Offset "pRectangles" VkPresentRegionKHR where
-  rawOffset = #{offset struct VkPresentRegionKHR, pRectangles}
+  rawOffset = #{offset VkPresentRegionKHR, pRectangles}
 
 #else
 

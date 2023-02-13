@@ -30,8 +30,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkQueueFamilyQueryResultStatusPropertiesKHR" #
          }
 
 instance Storable VkQueueFamilyQueryResultStatusPropertiesKHR where
-  sizeOf    _ = #{size      struct VkQueueFamilyQueryResultStatusPropertiesKHR}
-  alignment _ = #{alignment struct VkQueueFamilyQueryResultStatusPropertiesKHR}
+  sizeOf    _ = #{size      VkQueueFamilyQueryResultStatusPropertiesKHR}
+  alignment _ = #{alignment VkQueueFamilyQueryResultStatusPropertiesKHR}
 
   peek ptr = 
     VkQueueFamilyQueryResultStatusPropertiesKHR
@@ -45,13 +45,13 @@ instance Storable VkQueueFamilyQueryResultStatusPropertiesKHR where
     pokeField @"queryResultStatusSupport" ptr val
 
 instance Offset "sType" VkQueueFamilyQueryResultStatusPropertiesKHR where
-  rawOffset = #{offset struct VkQueueFamilyQueryResultStatusPropertiesKHR, sType}
+  rawOffset = #{offset VkQueueFamilyQueryResultStatusPropertiesKHR, sType}
 
 instance Offset "pNext" VkQueueFamilyQueryResultStatusPropertiesKHR where
-  rawOffset = #{offset struct VkQueueFamilyQueryResultStatusPropertiesKHR, pNext}
+  rawOffset = #{offset VkQueueFamilyQueryResultStatusPropertiesKHR, pNext}
 
 instance Offset "queryResultStatusSupport" VkQueueFamilyQueryResultStatusPropertiesKHR where
-  rawOffset = #{offset struct VkQueueFamilyQueryResultStatusPropertiesKHR, queryResultStatusSupport}
+  rawOffset = #{offset VkQueueFamilyQueryResultStatusPropertiesKHR, queryResultStatusSupport}
 
 #else
 

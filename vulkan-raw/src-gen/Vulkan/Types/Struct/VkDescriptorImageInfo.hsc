@@ -28,8 +28,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkDescriptorImageInfo" #-} VkDescriptorImageIn
          }
 
 instance Storable VkDescriptorImageInfo where
-  sizeOf    _ = #{size      struct VkDescriptorImageInfo}
-  alignment _ = #{alignment struct VkDescriptorImageInfo}
+  sizeOf    _ = #{size      VkDescriptorImageInfo}
+  alignment _ = #{alignment VkDescriptorImageInfo}
 
   peek ptr = 
     VkDescriptorImageInfo
@@ -43,10 +43,10 @@ instance Storable VkDescriptorImageInfo where
     pokeField @"imageLayout" ptr val
 
 instance Offset "sampler" VkDescriptorImageInfo where
-  rawOffset = #{offset struct VkDescriptorImageInfo, sampler}
+  rawOffset = #{offset VkDescriptorImageInfo, sampler}
 
 instance Offset "imageView" VkDescriptorImageInfo where
-  rawOffset = #{offset struct VkDescriptorImageInfo, imageView}
+  rawOffset = #{offset VkDescriptorImageInfo, imageView}
 
 instance Offset "imageLayout" VkDescriptorImageInfo where
-  rawOffset = #{offset struct VkDescriptorImageInfo, imageLayout}
+  rawOffset = #{offset VkDescriptorImageInfo, imageLayout}

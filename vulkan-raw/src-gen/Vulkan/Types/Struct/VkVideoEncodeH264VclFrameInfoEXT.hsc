@@ -35,8 +35,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkVideoEncodeH264VclFrameInfoEXT" #-} VkVideoE
          }
 
 instance Storable VkVideoEncodeH264VclFrameInfoEXT where
-  sizeOf    _ = #{size      struct VkVideoEncodeH264VclFrameInfoEXT}
-  alignment _ = #{alignment struct VkVideoEncodeH264VclFrameInfoEXT}
+  sizeOf    _ = #{size      VkVideoEncodeH264VclFrameInfoEXT}
+  alignment _ = #{alignment VkVideoEncodeH264VclFrameInfoEXT}
 
   peek ptr = 
     VkVideoEncodeH264VclFrameInfoEXT
@@ -56,22 +56,22 @@ instance Storable VkVideoEncodeH264VclFrameInfoEXT where
     pokeField @"pCurrentPictureInfo" ptr val
 
 instance Offset "sType" VkVideoEncodeH264VclFrameInfoEXT where
-  rawOffset = #{offset struct VkVideoEncodeH264VclFrameInfoEXT, sType}
+  rawOffset = #{offset VkVideoEncodeH264VclFrameInfoEXT, sType}
 
 instance Offset "pNext" VkVideoEncodeH264VclFrameInfoEXT where
-  rawOffset = #{offset struct VkVideoEncodeH264VclFrameInfoEXT, pNext}
+  rawOffset = #{offset VkVideoEncodeH264VclFrameInfoEXT, pNext}
 
 instance Offset "pReferenceFinalLists" VkVideoEncodeH264VclFrameInfoEXT where
-  rawOffset = #{offset struct VkVideoEncodeH264VclFrameInfoEXT, pReferenceFinalLists}
+  rawOffset = #{offset VkVideoEncodeH264VclFrameInfoEXT, pReferenceFinalLists}
 
 instance Offset "naluSliceEntryCount" VkVideoEncodeH264VclFrameInfoEXT where
-  rawOffset = #{offset struct VkVideoEncodeH264VclFrameInfoEXT, naluSliceEntryCount}
+  rawOffset = #{offset VkVideoEncodeH264VclFrameInfoEXT, naluSliceEntryCount}
 
 instance Offset "pNaluSliceEntries" VkVideoEncodeH264VclFrameInfoEXT where
-  rawOffset = #{offset struct VkVideoEncodeH264VclFrameInfoEXT, pNaluSliceEntries}
+  rawOffset = #{offset VkVideoEncodeH264VclFrameInfoEXT, pNaluSliceEntries}
 
 instance Offset "pCurrentPictureInfo" VkVideoEncodeH264VclFrameInfoEXT where
-  rawOffset = #{offset struct VkVideoEncodeH264VclFrameInfoEXT, pCurrentPictureInfo}
+  rawOffset = #{offset VkVideoEncodeH264VclFrameInfoEXT, pCurrentPictureInfo}
 
 #else
 

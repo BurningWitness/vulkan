@@ -1,3 +1,7 @@
+{-# LANGUAGE CApiFFI #-}
+{-# LANGUAGE CPP #-}
+{-# LANGUAGE MagicHash #-}
+
 #include <vulkan/vulkan.h>
 
 #if VK_KHR_synchronization2
@@ -10,17 +14,19 @@ import GHC.Ptr
 import Vulkan.Types.Enum.VkResult
 import Vulkan.Types.Handle
 import Vulkan.Types.Struct.VkSubmitInfo2
-import Vulkan.Types.Command.VkQueueSubmit2
 import Vulkan.Types.VkFun
 
 
 
-type VkQueueSubmit2KHR = VkQueueSubmit2
+type VkQueueSubmit2KHR =
+          VkQueue -- ^ queue
+       -> #{type uint32_t} -- ^ submitCount
+       -> Ptr VkSubmitInfo2 -- ^ pSubmits
+       -> VkFence -- ^ fence
+       -> IO VkResult
 
-vkFunQueueSubmit2KHR
-  :: VkFun VkQueueSubmit2KHR
-vkFunQueueSubmit2KHR = vkFunQueueSubmit2
-
+vkFunQueueSubmit2KHR :: VkFun VkQueueSubmit2KHR
+vkFunQueueSubmit2KHR = VkFun (Ptr ("vkQueueSubmit2KHR\0"##))
 
 #else
 

@@ -1,14 +1,14 @@
 {-# LANGUAGE CPP #-}
+{-# LANGUAGE PatternSynonyms #-}
 
 #include <vulkan/vulkan.h>
 
 module Vulkan.Types.Enum.VkCommandPoolTrimFlagsKHR where
 
-import Data.Int
-import Vulkan.Types.Enum.VkCommandPoolTrimFlags
+import Vulkan.Types.Base
 
 
 
 #if VK_KHR_maintenance1
-type VkCommandPoolTrimFlagsKHR = VkCommandPoolTrimFlags
+type VkCommandPoolTrimFlagsKHR = VkFlags
 #endif

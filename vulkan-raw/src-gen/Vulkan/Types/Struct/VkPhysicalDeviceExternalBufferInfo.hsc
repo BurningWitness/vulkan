@@ -34,8 +34,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkPhysicalDeviceExternalBufferInfo" #-} VkPhys
          }
 
 instance Storable VkPhysicalDeviceExternalBufferInfo where
-  sizeOf    _ = #{size      struct VkPhysicalDeviceExternalBufferInfo}
-  alignment _ = #{alignment struct VkPhysicalDeviceExternalBufferInfo}
+  sizeOf    _ = #{size      VkPhysicalDeviceExternalBufferInfo}
+  alignment _ = #{alignment VkPhysicalDeviceExternalBufferInfo}
 
   peek ptr = 
     VkPhysicalDeviceExternalBufferInfo
@@ -53,19 +53,19 @@ instance Storable VkPhysicalDeviceExternalBufferInfo where
     pokeField @"handleType" ptr val
 
 instance Offset "sType" VkPhysicalDeviceExternalBufferInfo where
-  rawOffset = #{offset struct VkPhysicalDeviceExternalBufferInfo, sType}
+  rawOffset = #{offset VkPhysicalDeviceExternalBufferInfo, sType}
 
 instance Offset "pNext" VkPhysicalDeviceExternalBufferInfo where
-  rawOffset = #{offset struct VkPhysicalDeviceExternalBufferInfo, pNext}
+  rawOffset = #{offset VkPhysicalDeviceExternalBufferInfo, pNext}
 
 instance Offset "flags" VkPhysicalDeviceExternalBufferInfo where
-  rawOffset = #{offset struct VkPhysicalDeviceExternalBufferInfo, flags}
+  rawOffset = #{offset VkPhysicalDeviceExternalBufferInfo, flags}
 
 instance Offset "usage" VkPhysicalDeviceExternalBufferInfo where
-  rawOffset = #{offset struct VkPhysicalDeviceExternalBufferInfo, usage}
+  rawOffset = #{offset VkPhysicalDeviceExternalBufferInfo, usage}
 
 instance Offset "handleType" VkPhysicalDeviceExternalBufferInfo where
-  rawOffset = #{offset struct VkPhysicalDeviceExternalBufferInfo, handleType}
+  rawOffset = #{offset VkPhysicalDeviceExternalBufferInfo, handleType}
 
 #else
 

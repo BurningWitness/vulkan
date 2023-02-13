@@ -30,8 +30,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkPhysicalDeviceCopyMemoryIndirectFeaturesNV" 
          }
 
 instance Storable VkPhysicalDeviceCopyMemoryIndirectFeaturesNV where
-  sizeOf    _ = #{size      struct VkPhysicalDeviceCopyMemoryIndirectFeaturesNV}
-  alignment _ = #{alignment struct VkPhysicalDeviceCopyMemoryIndirectFeaturesNV}
+  sizeOf    _ = #{size      VkPhysicalDeviceCopyMemoryIndirectFeaturesNV}
+  alignment _ = #{alignment VkPhysicalDeviceCopyMemoryIndirectFeaturesNV}
 
   peek ptr = 
     VkPhysicalDeviceCopyMemoryIndirectFeaturesNV
@@ -45,13 +45,13 @@ instance Storable VkPhysicalDeviceCopyMemoryIndirectFeaturesNV where
     pokeField @"indirectCopy" ptr val
 
 instance Offset "sType" VkPhysicalDeviceCopyMemoryIndirectFeaturesNV where
-  rawOffset = #{offset struct VkPhysicalDeviceCopyMemoryIndirectFeaturesNV, sType}
+  rawOffset = #{offset VkPhysicalDeviceCopyMemoryIndirectFeaturesNV, sType}
 
 instance Offset "pNext" VkPhysicalDeviceCopyMemoryIndirectFeaturesNV where
-  rawOffset = #{offset struct VkPhysicalDeviceCopyMemoryIndirectFeaturesNV, pNext}
+  rawOffset = #{offset VkPhysicalDeviceCopyMemoryIndirectFeaturesNV, pNext}
 
 instance Offset "indirectCopy" VkPhysicalDeviceCopyMemoryIndirectFeaturesNV where
-  rawOffset = #{offset struct VkPhysicalDeviceCopyMemoryIndirectFeaturesNV, indirectCopy}
+  rawOffset = #{offset VkPhysicalDeviceCopyMemoryIndirectFeaturesNV, indirectCopy}
 
 #else
 

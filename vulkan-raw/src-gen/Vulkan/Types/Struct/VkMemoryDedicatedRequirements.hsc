@@ -31,8 +31,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkMemoryDedicatedRequirements" #-} VkMemoryDed
          }
 
 instance Storable VkMemoryDedicatedRequirements where
-  sizeOf    _ = #{size      struct VkMemoryDedicatedRequirements}
-  alignment _ = #{alignment struct VkMemoryDedicatedRequirements}
+  sizeOf    _ = #{size      VkMemoryDedicatedRequirements}
+  alignment _ = #{alignment VkMemoryDedicatedRequirements}
 
   peek ptr = 
     VkMemoryDedicatedRequirements
@@ -48,16 +48,16 @@ instance Storable VkMemoryDedicatedRequirements where
     pokeField @"requiresDedicatedAllocation" ptr val
 
 instance Offset "sType" VkMemoryDedicatedRequirements where
-  rawOffset = #{offset struct VkMemoryDedicatedRequirements, sType}
+  rawOffset = #{offset VkMemoryDedicatedRequirements, sType}
 
 instance Offset "pNext" VkMemoryDedicatedRequirements where
-  rawOffset = #{offset struct VkMemoryDedicatedRequirements, pNext}
+  rawOffset = #{offset VkMemoryDedicatedRequirements, pNext}
 
 instance Offset "prefersDedicatedAllocation" VkMemoryDedicatedRequirements where
-  rawOffset = #{offset struct VkMemoryDedicatedRequirements, prefersDedicatedAllocation}
+  rawOffset = #{offset VkMemoryDedicatedRequirements, prefersDedicatedAllocation}
 
 instance Offset "requiresDedicatedAllocation" VkMemoryDedicatedRequirements where
-  rawOffset = #{offset struct VkMemoryDedicatedRequirements, requiresDedicatedAllocation}
+  rawOffset = #{offset VkMemoryDedicatedRequirements, requiresDedicatedAllocation}
 
 #else
 

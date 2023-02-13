@@ -34,8 +34,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkDebugMarkerObjectTagInfoEXT" #-} VkDebugMark
          }
 
 instance Storable VkDebugMarkerObjectTagInfoEXT where
-  sizeOf    _ = #{size      struct VkDebugMarkerObjectTagInfoEXT}
-  alignment _ = #{alignment struct VkDebugMarkerObjectTagInfoEXT}
+  sizeOf    _ = #{size      VkDebugMarkerObjectTagInfoEXT}
+  alignment _ = #{alignment VkDebugMarkerObjectTagInfoEXT}
 
   peek ptr = 
     VkDebugMarkerObjectTagInfoEXT
@@ -57,25 +57,25 @@ instance Storable VkDebugMarkerObjectTagInfoEXT where
     pokeField @"pTag" ptr val
 
 instance Offset "sType" VkDebugMarkerObjectTagInfoEXT where
-  rawOffset = #{offset struct VkDebugMarkerObjectTagInfoEXT, sType}
+  rawOffset = #{offset VkDebugMarkerObjectTagInfoEXT, sType}
 
 instance Offset "pNext" VkDebugMarkerObjectTagInfoEXT where
-  rawOffset = #{offset struct VkDebugMarkerObjectTagInfoEXT, pNext}
+  rawOffset = #{offset VkDebugMarkerObjectTagInfoEXT, pNext}
 
 instance Offset "objectType" VkDebugMarkerObjectTagInfoEXT where
-  rawOffset = #{offset struct VkDebugMarkerObjectTagInfoEXT, objectType}
+  rawOffset = #{offset VkDebugMarkerObjectTagInfoEXT, objectType}
 
 instance Offset "object" VkDebugMarkerObjectTagInfoEXT where
-  rawOffset = #{offset struct VkDebugMarkerObjectTagInfoEXT, object}
+  rawOffset = #{offset VkDebugMarkerObjectTagInfoEXT, object}
 
 instance Offset "tagName" VkDebugMarkerObjectTagInfoEXT where
-  rawOffset = #{offset struct VkDebugMarkerObjectTagInfoEXT, tagName}
+  rawOffset = #{offset VkDebugMarkerObjectTagInfoEXT, tagName}
 
 instance Offset "tagSize" VkDebugMarkerObjectTagInfoEXT where
-  rawOffset = #{offset struct VkDebugMarkerObjectTagInfoEXT, tagSize}
+  rawOffset = #{offset VkDebugMarkerObjectTagInfoEXT, tagSize}
 
 instance Offset "pTag" VkDebugMarkerObjectTagInfoEXT where
-  rawOffset = #{offset struct VkDebugMarkerObjectTagInfoEXT, pTag}
+  rawOffset = #{offset VkDebugMarkerObjectTagInfoEXT, pTag}
 
 #else
 

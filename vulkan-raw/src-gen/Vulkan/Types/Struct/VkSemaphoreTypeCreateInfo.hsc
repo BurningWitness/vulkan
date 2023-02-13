@@ -31,8 +31,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkSemaphoreTypeCreateInfo" #-} VkSemaphoreType
          }
 
 instance Storable VkSemaphoreTypeCreateInfo where
-  sizeOf    _ = #{size      struct VkSemaphoreTypeCreateInfo}
-  alignment _ = #{alignment struct VkSemaphoreTypeCreateInfo}
+  sizeOf    _ = #{size      VkSemaphoreTypeCreateInfo}
+  alignment _ = #{alignment VkSemaphoreTypeCreateInfo}
 
   peek ptr = 
     VkSemaphoreTypeCreateInfo
@@ -48,16 +48,16 @@ instance Storable VkSemaphoreTypeCreateInfo where
     pokeField @"initialValue" ptr val
 
 instance Offset "sType" VkSemaphoreTypeCreateInfo where
-  rawOffset = #{offset struct VkSemaphoreTypeCreateInfo, sType}
+  rawOffset = #{offset VkSemaphoreTypeCreateInfo, sType}
 
 instance Offset "pNext" VkSemaphoreTypeCreateInfo where
-  rawOffset = #{offset struct VkSemaphoreTypeCreateInfo, pNext}
+  rawOffset = #{offset VkSemaphoreTypeCreateInfo, pNext}
 
 instance Offset "semaphoreType" VkSemaphoreTypeCreateInfo where
-  rawOffset = #{offset struct VkSemaphoreTypeCreateInfo, semaphoreType}
+  rawOffset = #{offset VkSemaphoreTypeCreateInfo, semaphoreType}
 
 instance Offset "initialValue" VkSemaphoreTypeCreateInfo where
-  rawOffset = #{offset struct VkSemaphoreTypeCreateInfo, initialValue}
+  rawOffset = #{offset VkSemaphoreTypeCreateInfo, initialValue}
 
 #else
 

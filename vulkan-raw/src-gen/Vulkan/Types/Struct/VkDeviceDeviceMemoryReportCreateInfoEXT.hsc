@@ -33,8 +33,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkDeviceDeviceMemoryReportCreateInfoEXT" #-} V
          }
 
 instance Storable VkDeviceDeviceMemoryReportCreateInfoEXT where
-  sizeOf    _ = #{size      struct VkDeviceDeviceMemoryReportCreateInfoEXT}
-  alignment _ = #{alignment struct VkDeviceDeviceMemoryReportCreateInfoEXT}
+  sizeOf    _ = #{size      VkDeviceDeviceMemoryReportCreateInfoEXT}
+  alignment _ = #{alignment VkDeviceDeviceMemoryReportCreateInfoEXT}
 
   peek ptr = 
     VkDeviceDeviceMemoryReportCreateInfoEXT
@@ -52,19 +52,19 @@ instance Storable VkDeviceDeviceMemoryReportCreateInfoEXT where
     pokeField @"pUserData" ptr val
 
 instance Offset "sType" VkDeviceDeviceMemoryReportCreateInfoEXT where
-  rawOffset = #{offset struct VkDeviceDeviceMemoryReportCreateInfoEXT, sType}
+  rawOffset = #{offset VkDeviceDeviceMemoryReportCreateInfoEXT, sType}
 
 instance Offset "pNext" VkDeviceDeviceMemoryReportCreateInfoEXT where
-  rawOffset = #{offset struct VkDeviceDeviceMemoryReportCreateInfoEXT, pNext}
+  rawOffset = #{offset VkDeviceDeviceMemoryReportCreateInfoEXT, pNext}
 
 instance Offset "flags" VkDeviceDeviceMemoryReportCreateInfoEXT where
-  rawOffset = #{offset struct VkDeviceDeviceMemoryReportCreateInfoEXT, flags}
+  rawOffset = #{offset VkDeviceDeviceMemoryReportCreateInfoEXT, flags}
 
 instance Offset "pfnUserCallback" VkDeviceDeviceMemoryReportCreateInfoEXT where
-  rawOffset = #{offset struct VkDeviceDeviceMemoryReportCreateInfoEXT, pfnUserCallback}
+  rawOffset = #{offset VkDeviceDeviceMemoryReportCreateInfoEXT, pfnUserCallback}
 
 instance Offset "pUserData" VkDeviceDeviceMemoryReportCreateInfoEXT where
-  rawOffset = #{offset struct VkDeviceDeviceMemoryReportCreateInfoEXT, pUserData}
+  rawOffset = #{offset VkDeviceDeviceMemoryReportCreateInfoEXT, pUserData}
 
 #else
 

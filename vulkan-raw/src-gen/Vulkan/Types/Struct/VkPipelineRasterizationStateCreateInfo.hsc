@@ -42,8 +42,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkPipelineRasterizationStateCreateInfo" #-} Vk
          }
 
 instance Storable VkPipelineRasterizationStateCreateInfo where
-  sizeOf    _ = #{size      struct VkPipelineRasterizationStateCreateInfo}
-  alignment _ = #{alignment struct VkPipelineRasterizationStateCreateInfo}
+  sizeOf    _ = #{size      VkPipelineRasterizationStateCreateInfo}
+  alignment _ = #{alignment VkPipelineRasterizationStateCreateInfo}
 
   peek ptr = 
     VkPipelineRasterizationStateCreateInfo
@@ -77,40 +77,40 @@ instance Storable VkPipelineRasterizationStateCreateInfo where
     pokeField @"lineWidth" ptr val
 
 instance Offset "sType" VkPipelineRasterizationStateCreateInfo where
-  rawOffset = #{offset struct VkPipelineRasterizationStateCreateInfo, sType}
+  rawOffset = #{offset VkPipelineRasterizationStateCreateInfo, sType}
 
 instance Offset "pNext" VkPipelineRasterizationStateCreateInfo where
-  rawOffset = #{offset struct VkPipelineRasterizationStateCreateInfo, pNext}
+  rawOffset = #{offset VkPipelineRasterizationStateCreateInfo, pNext}
 
 instance Offset "flags" VkPipelineRasterizationStateCreateInfo where
-  rawOffset = #{offset struct VkPipelineRasterizationStateCreateInfo, flags}
+  rawOffset = #{offset VkPipelineRasterizationStateCreateInfo, flags}
 
 instance Offset "depthClampEnable" VkPipelineRasterizationStateCreateInfo where
-  rawOffset = #{offset struct VkPipelineRasterizationStateCreateInfo, depthClampEnable}
+  rawOffset = #{offset VkPipelineRasterizationStateCreateInfo, depthClampEnable}
 
 instance Offset "rasterizerDiscardEnable" VkPipelineRasterizationStateCreateInfo where
-  rawOffset = #{offset struct VkPipelineRasterizationStateCreateInfo, rasterizerDiscardEnable}
+  rawOffset = #{offset VkPipelineRasterizationStateCreateInfo, rasterizerDiscardEnable}
 
 instance Offset "polygonMode" VkPipelineRasterizationStateCreateInfo where
-  rawOffset = #{offset struct VkPipelineRasterizationStateCreateInfo, polygonMode}
+  rawOffset = #{offset VkPipelineRasterizationStateCreateInfo, polygonMode}
 
 instance Offset "cullMode" VkPipelineRasterizationStateCreateInfo where
-  rawOffset = #{offset struct VkPipelineRasterizationStateCreateInfo, cullMode}
+  rawOffset = #{offset VkPipelineRasterizationStateCreateInfo, cullMode}
 
 instance Offset "frontFace" VkPipelineRasterizationStateCreateInfo where
-  rawOffset = #{offset struct VkPipelineRasterizationStateCreateInfo, frontFace}
+  rawOffset = #{offset VkPipelineRasterizationStateCreateInfo, frontFace}
 
 instance Offset "depthBiasEnable" VkPipelineRasterizationStateCreateInfo where
-  rawOffset = #{offset struct VkPipelineRasterizationStateCreateInfo, depthBiasEnable}
+  rawOffset = #{offset VkPipelineRasterizationStateCreateInfo, depthBiasEnable}
 
 instance Offset "depthBiasConstantFactor" VkPipelineRasterizationStateCreateInfo where
-  rawOffset = #{offset struct VkPipelineRasterizationStateCreateInfo, depthBiasConstantFactor}
+  rawOffset = #{offset VkPipelineRasterizationStateCreateInfo, depthBiasConstantFactor}
 
 instance Offset "depthBiasClamp" VkPipelineRasterizationStateCreateInfo where
-  rawOffset = #{offset struct VkPipelineRasterizationStateCreateInfo, depthBiasClamp}
+  rawOffset = #{offset VkPipelineRasterizationStateCreateInfo, depthBiasClamp}
 
 instance Offset "depthBiasSlopeFactor" VkPipelineRasterizationStateCreateInfo where
-  rawOffset = #{offset struct VkPipelineRasterizationStateCreateInfo, depthBiasSlopeFactor}
+  rawOffset = #{offset VkPipelineRasterizationStateCreateInfo, depthBiasSlopeFactor}
 
 instance Offset "lineWidth" VkPipelineRasterizationStateCreateInfo where
-  rawOffset = #{offset struct VkPipelineRasterizationStateCreateInfo, lineWidth}
+  rawOffset = #{offset VkPipelineRasterizationStateCreateInfo, lineWidth}

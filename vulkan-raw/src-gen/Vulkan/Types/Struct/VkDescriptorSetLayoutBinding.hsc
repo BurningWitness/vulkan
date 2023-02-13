@@ -31,8 +31,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkDescriptorSetLayoutBinding" #-} VkDescriptor
          }
 
 instance Storable VkDescriptorSetLayoutBinding where
-  sizeOf    _ = #{size      struct VkDescriptorSetLayoutBinding}
-  alignment _ = #{alignment struct VkDescriptorSetLayoutBinding}
+  sizeOf    _ = #{size      VkDescriptorSetLayoutBinding}
+  alignment _ = #{alignment VkDescriptorSetLayoutBinding}
 
   peek ptr = 
     VkDescriptorSetLayoutBinding
@@ -50,16 +50,16 @@ instance Storable VkDescriptorSetLayoutBinding where
     pokeField @"pImmutableSamplers" ptr val
 
 instance Offset "binding" VkDescriptorSetLayoutBinding where
-  rawOffset = #{offset struct VkDescriptorSetLayoutBinding, binding}
+  rawOffset = #{offset VkDescriptorSetLayoutBinding, binding}
 
 instance Offset "descriptorType" VkDescriptorSetLayoutBinding where
-  rawOffset = #{offset struct VkDescriptorSetLayoutBinding, descriptorType}
+  rawOffset = #{offset VkDescriptorSetLayoutBinding, descriptorType}
 
 instance Offset "descriptorCount" VkDescriptorSetLayoutBinding where
-  rawOffset = #{offset struct VkDescriptorSetLayoutBinding, descriptorCount}
+  rawOffset = #{offset VkDescriptorSetLayoutBinding, descriptorCount}
 
 instance Offset "stageFlags" VkDescriptorSetLayoutBinding where
-  rawOffset = #{offset struct VkDescriptorSetLayoutBinding, stageFlags}
+  rawOffset = #{offset VkDescriptorSetLayoutBinding, stageFlags}
 
 instance Offset "pImmutableSamplers" VkDescriptorSetLayoutBinding where
-  rawOffset = #{offset struct VkDescriptorSetLayoutBinding, pImmutableSamplers}
+  rawOffset = #{offset VkDescriptorSetLayoutBinding, pImmutableSamplers}

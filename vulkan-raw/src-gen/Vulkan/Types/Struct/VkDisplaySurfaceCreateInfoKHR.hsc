@@ -41,8 +41,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkDisplaySurfaceCreateInfoKHR" #-} VkDisplaySu
          }
 
 instance Storable VkDisplaySurfaceCreateInfoKHR where
-  sizeOf    _ = #{size      struct VkDisplaySurfaceCreateInfoKHR}
-  alignment _ = #{alignment struct VkDisplaySurfaceCreateInfoKHR}
+  sizeOf    _ = #{size      VkDisplaySurfaceCreateInfoKHR}
+  alignment _ = #{alignment VkDisplaySurfaceCreateInfoKHR}
 
   peek ptr = 
     VkDisplaySurfaceCreateInfoKHR
@@ -70,34 +70,34 @@ instance Storable VkDisplaySurfaceCreateInfoKHR where
     pokeField @"imageExtent" ptr val
 
 instance Offset "sType" VkDisplaySurfaceCreateInfoKHR where
-  rawOffset = #{offset struct VkDisplaySurfaceCreateInfoKHR, sType}
+  rawOffset = #{offset VkDisplaySurfaceCreateInfoKHR, sType}
 
 instance Offset "pNext" VkDisplaySurfaceCreateInfoKHR where
-  rawOffset = #{offset struct VkDisplaySurfaceCreateInfoKHR, pNext}
+  rawOffset = #{offset VkDisplaySurfaceCreateInfoKHR, pNext}
 
 instance Offset "flags" VkDisplaySurfaceCreateInfoKHR where
-  rawOffset = #{offset struct VkDisplaySurfaceCreateInfoKHR, flags}
+  rawOffset = #{offset VkDisplaySurfaceCreateInfoKHR, flags}
 
 instance Offset "displayMode" VkDisplaySurfaceCreateInfoKHR where
-  rawOffset = #{offset struct VkDisplaySurfaceCreateInfoKHR, displayMode}
+  rawOffset = #{offset VkDisplaySurfaceCreateInfoKHR, displayMode}
 
 instance Offset "planeIndex" VkDisplaySurfaceCreateInfoKHR where
-  rawOffset = #{offset struct VkDisplaySurfaceCreateInfoKHR, planeIndex}
+  rawOffset = #{offset VkDisplaySurfaceCreateInfoKHR, planeIndex}
 
 instance Offset "planeStackIndex" VkDisplaySurfaceCreateInfoKHR where
-  rawOffset = #{offset struct VkDisplaySurfaceCreateInfoKHR, planeStackIndex}
+  rawOffset = #{offset VkDisplaySurfaceCreateInfoKHR, planeStackIndex}
 
 instance Offset "transform" VkDisplaySurfaceCreateInfoKHR where
-  rawOffset = #{offset struct VkDisplaySurfaceCreateInfoKHR, transform}
+  rawOffset = #{offset VkDisplaySurfaceCreateInfoKHR, transform}
 
 instance Offset "globalAlpha" VkDisplaySurfaceCreateInfoKHR where
-  rawOffset = #{offset struct VkDisplaySurfaceCreateInfoKHR, globalAlpha}
+  rawOffset = #{offset VkDisplaySurfaceCreateInfoKHR, globalAlpha}
 
 instance Offset "alphaMode" VkDisplaySurfaceCreateInfoKHR where
-  rawOffset = #{offset struct VkDisplaySurfaceCreateInfoKHR, alphaMode}
+  rawOffset = #{offset VkDisplaySurfaceCreateInfoKHR, alphaMode}
 
 instance Offset "imageExtent" VkDisplaySurfaceCreateInfoKHR where
-  rawOffset = #{offset struct VkDisplaySurfaceCreateInfoKHR, imageExtent}
+  rawOffset = #{offset VkDisplaySurfaceCreateInfoKHR, imageExtent}
 
 #else
 

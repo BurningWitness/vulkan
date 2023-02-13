@@ -32,8 +32,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkExportMetalIOSurfaceInfoEXT" #-} VkExportMet
          }
 
 instance Storable VkExportMetalIOSurfaceInfoEXT where
-  sizeOf    _ = #{size      struct VkExportMetalIOSurfaceInfoEXT}
-  alignment _ = #{alignment struct VkExportMetalIOSurfaceInfoEXT}
+  sizeOf    _ = #{size      VkExportMetalIOSurfaceInfoEXT}
+  alignment _ = #{alignment VkExportMetalIOSurfaceInfoEXT}
 
   peek ptr = 
     VkExportMetalIOSurfaceInfoEXT
@@ -49,16 +49,16 @@ instance Storable VkExportMetalIOSurfaceInfoEXT where
     pokeField @"ioSurface" ptr val
 
 instance Offset "sType" VkExportMetalIOSurfaceInfoEXT where
-  rawOffset = #{offset struct VkExportMetalIOSurfaceInfoEXT, sType}
+  rawOffset = #{offset VkExportMetalIOSurfaceInfoEXT, sType}
 
 instance Offset "pNext" VkExportMetalIOSurfaceInfoEXT where
-  rawOffset = #{offset struct VkExportMetalIOSurfaceInfoEXT, pNext}
+  rawOffset = #{offset VkExportMetalIOSurfaceInfoEXT, pNext}
 
 instance Offset "image" VkExportMetalIOSurfaceInfoEXT where
-  rawOffset = #{offset struct VkExportMetalIOSurfaceInfoEXT, image}
+  rawOffset = #{offset VkExportMetalIOSurfaceInfoEXT, image}
 
 instance Offset "ioSurface" VkExportMetalIOSurfaceInfoEXT where
-  rawOffset = #{offset struct VkExportMetalIOSurfaceInfoEXT, ioSurface}
+  rawOffset = #{offset VkExportMetalIOSurfaceInfoEXT, ioSurface}
 
 #else
 

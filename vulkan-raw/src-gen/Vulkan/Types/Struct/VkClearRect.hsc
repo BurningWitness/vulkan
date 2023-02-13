@@ -27,8 +27,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkClearRect" #-} VkClearRect =
          }
 
 instance Storable VkClearRect where
-  sizeOf    _ = #{size      struct VkClearRect}
-  alignment _ = #{alignment struct VkClearRect}
+  sizeOf    _ = #{size      VkClearRect}
+  alignment _ = #{alignment VkClearRect}
 
   peek ptr = 
     VkClearRect
@@ -42,10 +42,10 @@ instance Storable VkClearRect where
     pokeField @"layerCount" ptr val
 
 instance Offset "rect" VkClearRect where
-  rawOffset = #{offset struct VkClearRect, rect}
+  rawOffset = #{offset VkClearRect, rect}
 
 instance Offset "baseArrayLayer" VkClearRect where
-  rawOffset = #{offset struct VkClearRect, baseArrayLayer}
+  rawOffset = #{offset VkClearRect, baseArrayLayer}
 
 instance Offset "layerCount" VkClearRect where
-  rawOffset = #{offset struct VkClearRect, layerCount}
+  rawOffset = #{offset VkClearRect, layerCount}

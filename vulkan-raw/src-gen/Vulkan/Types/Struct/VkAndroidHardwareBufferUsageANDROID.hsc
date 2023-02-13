@@ -29,8 +29,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkAndroidHardwareBufferUsageANDROID" #-} VkAnd
          }
 
 instance Storable VkAndroidHardwareBufferUsageANDROID where
-  sizeOf    _ = #{size      struct VkAndroidHardwareBufferUsageANDROID}
-  alignment _ = #{alignment struct VkAndroidHardwareBufferUsageANDROID}
+  sizeOf    _ = #{size      VkAndroidHardwareBufferUsageANDROID}
+  alignment _ = #{alignment VkAndroidHardwareBufferUsageANDROID}
 
   peek ptr = 
     VkAndroidHardwareBufferUsageANDROID
@@ -44,13 +44,13 @@ instance Storable VkAndroidHardwareBufferUsageANDROID where
     pokeField @"androidHardwareBufferUsage" ptr val
 
 instance Offset "sType" VkAndroidHardwareBufferUsageANDROID where
-  rawOffset = #{offset struct VkAndroidHardwareBufferUsageANDROID, sType}
+  rawOffset = #{offset VkAndroidHardwareBufferUsageANDROID, sType}
 
 instance Offset "pNext" VkAndroidHardwareBufferUsageANDROID where
-  rawOffset = #{offset struct VkAndroidHardwareBufferUsageANDROID, pNext}
+  rawOffset = #{offset VkAndroidHardwareBufferUsageANDROID, pNext}
 
 instance Offset "androidHardwareBufferUsage" VkAndroidHardwareBufferUsageANDROID where
-  rawOffset = #{offset struct VkAndroidHardwareBufferUsageANDROID, androidHardwareBufferUsage}
+  rawOffset = #{offset VkAndroidHardwareBufferUsageANDROID, androidHardwareBufferUsage}
 
 #else
 

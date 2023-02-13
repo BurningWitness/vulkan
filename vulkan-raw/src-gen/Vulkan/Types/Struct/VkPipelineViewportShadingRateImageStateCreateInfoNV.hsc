@@ -33,8 +33,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkPipelineViewportShadingRateImageStateCreateI
          }
 
 instance Storable VkPipelineViewportShadingRateImageStateCreateInfoNV where
-  sizeOf    _ = #{size      struct VkPipelineViewportShadingRateImageStateCreateInfoNV}
-  alignment _ = #{alignment struct VkPipelineViewportShadingRateImageStateCreateInfoNV}
+  sizeOf    _ = #{size      VkPipelineViewportShadingRateImageStateCreateInfoNV}
+  alignment _ = #{alignment VkPipelineViewportShadingRateImageStateCreateInfoNV}
 
   peek ptr = 
     VkPipelineViewportShadingRateImageStateCreateInfoNV
@@ -52,19 +52,19 @@ instance Storable VkPipelineViewportShadingRateImageStateCreateInfoNV where
     pokeField @"pShadingRatePalettes" ptr val
 
 instance Offset "sType" VkPipelineViewportShadingRateImageStateCreateInfoNV where
-  rawOffset = #{offset struct VkPipelineViewportShadingRateImageStateCreateInfoNV, sType}
+  rawOffset = #{offset VkPipelineViewportShadingRateImageStateCreateInfoNV, sType}
 
 instance Offset "pNext" VkPipelineViewportShadingRateImageStateCreateInfoNV where
-  rawOffset = #{offset struct VkPipelineViewportShadingRateImageStateCreateInfoNV, pNext}
+  rawOffset = #{offset VkPipelineViewportShadingRateImageStateCreateInfoNV, pNext}
 
 instance Offset "shadingRateImageEnable" VkPipelineViewportShadingRateImageStateCreateInfoNV where
-  rawOffset = #{offset struct VkPipelineViewportShadingRateImageStateCreateInfoNV, shadingRateImageEnable}
+  rawOffset = #{offset VkPipelineViewportShadingRateImageStateCreateInfoNV, shadingRateImageEnable}
 
 instance Offset "viewportCount" VkPipelineViewportShadingRateImageStateCreateInfoNV where
-  rawOffset = #{offset struct VkPipelineViewportShadingRateImageStateCreateInfoNV, viewportCount}
+  rawOffset = #{offset VkPipelineViewportShadingRateImageStateCreateInfoNV, viewportCount}
 
 instance Offset "pShadingRatePalettes" VkPipelineViewportShadingRateImageStateCreateInfoNV where
-  rawOffset = #{offset struct VkPipelineViewportShadingRateImageStateCreateInfoNV, pShadingRatePalettes}
+  rawOffset = #{offset VkPipelineViewportShadingRateImageStateCreateInfoNV, pShadingRatePalettes}
 
 #else
 

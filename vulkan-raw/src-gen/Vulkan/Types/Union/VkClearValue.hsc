@@ -27,8 +27,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkClearValue" #-} VkClearValue =
          }
 
 instance Storable VkClearValue where
-  sizeOf    _ = #{size      union VkClearValue}
-  alignment _ = #{alignment union VkClearValue}
+  sizeOf    _ = #{size      VkClearValue}
+  alignment _ = #{alignment VkClearValue}
 
   peek ptr = 
     VkClearValue
@@ -40,7 +40,7 @@ instance Storable VkClearValue where
     pokeField @"depthStencil" ptr val
 
 instance Offset "color" VkClearValue where
-  rawOffset = #{offset union VkClearValue, color}
+  rawOffset = #{offset VkClearValue, color}
 
 instance Offset "depthStencil" VkClearValue where
-  rawOffset = #{offset union VkClearValue, depthStencil}
+  rawOffset = #{offset VkClearValue, depthStencil}

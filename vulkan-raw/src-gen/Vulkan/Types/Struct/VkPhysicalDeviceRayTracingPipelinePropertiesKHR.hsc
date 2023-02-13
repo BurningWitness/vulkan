@@ -36,8 +36,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkPhysicalDeviceRayTracingPipelinePropertiesKH
          }
 
 instance Storable VkPhysicalDeviceRayTracingPipelinePropertiesKHR where
-  sizeOf    _ = #{size      struct VkPhysicalDeviceRayTracingPipelinePropertiesKHR}
-  alignment _ = #{alignment struct VkPhysicalDeviceRayTracingPipelinePropertiesKHR}
+  sizeOf    _ = #{size      VkPhysicalDeviceRayTracingPipelinePropertiesKHR}
+  alignment _ = #{alignment VkPhysicalDeviceRayTracingPipelinePropertiesKHR}
 
   peek ptr = 
     VkPhysicalDeviceRayTracingPipelinePropertiesKHR
@@ -65,34 +65,34 @@ instance Storable VkPhysicalDeviceRayTracingPipelinePropertiesKHR where
     pokeField @"maxRayHitAttributeSize" ptr val
 
 instance Offset "sType" VkPhysicalDeviceRayTracingPipelinePropertiesKHR where
-  rawOffset = #{offset struct VkPhysicalDeviceRayTracingPipelinePropertiesKHR, sType}
+  rawOffset = #{offset VkPhysicalDeviceRayTracingPipelinePropertiesKHR, sType}
 
 instance Offset "pNext" VkPhysicalDeviceRayTracingPipelinePropertiesKHR where
-  rawOffset = #{offset struct VkPhysicalDeviceRayTracingPipelinePropertiesKHR, pNext}
+  rawOffset = #{offset VkPhysicalDeviceRayTracingPipelinePropertiesKHR, pNext}
 
 instance Offset "shaderGroupHandleSize" VkPhysicalDeviceRayTracingPipelinePropertiesKHR where
-  rawOffset = #{offset struct VkPhysicalDeviceRayTracingPipelinePropertiesKHR, shaderGroupHandleSize}
+  rawOffset = #{offset VkPhysicalDeviceRayTracingPipelinePropertiesKHR, shaderGroupHandleSize}
 
 instance Offset "maxRayRecursionDepth" VkPhysicalDeviceRayTracingPipelinePropertiesKHR where
-  rawOffset = #{offset struct VkPhysicalDeviceRayTracingPipelinePropertiesKHR, maxRayRecursionDepth}
+  rawOffset = #{offset VkPhysicalDeviceRayTracingPipelinePropertiesKHR, maxRayRecursionDepth}
 
 instance Offset "maxShaderGroupStride" VkPhysicalDeviceRayTracingPipelinePropertiesKHR where
-  rawOffset = #{offset struct VkPhysicalDeviceRayTracingPipelinePropertiesKHR, maxShaderGroupStride}
+  rawOffset = #{offset VkPhysicalDeviceRayTracingPipelinePropertiesKHR, maxShaderGroupStride}
 
 instance Offset "shaderGroupBaseAlignment" VkPhysicalDeviceRayTracingPipelinePropertiesKHR where
-  rawOffset = #{offset struct VkPhysicalDeviceRayTracingPipelinePropertiesKHR, shaderGroupBaseAlignment}
+  rawOffset = #{offset VkPhysicalDeviceRayTracingPipelinePropertiesKHR, shaderGroupBaseAlignment}
 
 instance Offset "shaderGroupHandleCaptureReplaySize" VkPhysicalDeviceRayTracingPipelinePropertiesKHR where
-  rawOffset = #{offset struct VkPhysicalDeviceRayTracingPipelinePropertiesKHR, shaderGroupHandleCaptureReplaySize}
+  rawOffset = #{offset VkPhysicalDeviceRayTracingPipelinePropertiesKHR, shaderGroupHandleCaptureReplaySize}
 
 instance Offset "maxRayDispatchInvocationCount" VkPhysicalDeviceRayTracingPipelinePropertiesKHR where
-  rawOffset = #{offset struct VkPhysicalDeviceRayTracingPipelinePropertiesKHR, maxRayDispatchInvocationCount}
+  rawOffset = #{offset VkPhysicalDeviceRayTracingPipelinePropertiesKHR, maxRayDispatchInvocationCount}
 
 instance Offset "shaderGroupHandleAlignment" VkPhysicalDeviceRayTracingPipelinePropertiesKHR where
-  rawOffset = #{offset struct VkPhysicalDeviceRayTracingPipelinePropertiesKHR, shaderGroupHandleAlignment}
+  rawOffset = #{offset VkPhysicalDeviceRayTracingPipelinePropertiesKHR, shaderGroupHandleAlignment}
 
 instance Offset "maxRayHitAttributeSize" VkPhysicalDeviceRayTracingPipelinePropertiesKHR where
-  rawOffset = #{offset struct VkPhysicalDeviceRayTracingPipelinePropertiesKHR, maxRayHitAttributeSize}
+  rawOffset = #{offset VkPhysicalDeviceRayTracingPipelinePropertiesKHR, maxRayHitAttributeSize}
 
 #else
 

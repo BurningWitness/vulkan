@@ -30,8 +30,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkSurfaceProtectedCapabilitiesKHR" #-} VkSurfa
          }
 
 instance Storable VkSurfaceProtectedCapabilitiesKHR where
-  sizeOf    _ = #{size      struct VkSurfaceProtectedCapabilitiesKHR}
-  alignment _ = #{alignment struct VkSurfaceProtectedCapabilitiesKHR}
+  sizeOf    _ = #{size      VkSurfaceProtectedCapabilitiesKHR}
+  alignment _ = #{alignment VkSurfaceProtectedCapabilitiesKHR}
 
   peek ptr = 
     VkSurfaceProtectedCapabilitiesKHR
@@ -45,13 +45,13 @@ instance Storable VkSurfaceProtectedCapabilitiesKHR where
     pokeField @"supportsProtected" ptr val
 
 instance Offset "sType" VkSurfaceProtectedCapabilitiesKHR where
-  rawOffset = #{offset struct VkSurfaceProtectedCapabilitiesKHR, sType}
+  rawOffset = #{offset VkSurfaceProtectedCapabilitiesKHR, sType}
 
 instance Offset "pNext" VkSurfaceProtectedCapabilitiesKHR where
-  rawOffset = #{offset struct VkSurfaceProtectedCapabilitiesKHR, pNext}
+  rawOffset = #{offset VkSurfaceProtectedCapabilitiesKHR, pNext}
 
 instance Offset "supportsProtected" VkSurfaceProtectedCapabilitiesKHR where
-  rawOffset = #{offset struct VkSurfaceProtectedCapabilitiesKHR, supportsProtected}
+  rawOffset = #{offset VkSurfaceProtectedCapabilitiesKHR, supportsProtected}
 
 #else
 

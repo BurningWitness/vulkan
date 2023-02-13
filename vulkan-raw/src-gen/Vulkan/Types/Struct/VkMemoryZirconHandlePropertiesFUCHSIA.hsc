@@ -29,8 +29,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkMemoryZirconHandlePropertiesFUCHSIA" #-} VkM
          }
 
 instance Storable VkMemoryZirconHandlePropertiesFUCHSIA where
-  sizeOf    _ = #{size      struct VkMemoryZirconHandlePropertiesFUCHSIA}
-  alignment _ = #{alignment struct VkMemoryZirconHandlePropertiesFUCHSIA}
+  sizeOf    _ = #{size      VkMemoryZirconHandlePropertiesFUCHSIA}
+  alignment _ = #{alignment VkMemoryZirconHandlePropertiesFUCHSIA}
 
   peek ptr = 
     VkMemoryZirconHandlePropertiesFUCHSIA
@@ -44,13 +44,13 @@ instance Storable VkMemoryZirconHandlePropertiesFUCHSIA where
     pokeField @"memoryTypeBits" ptr val
 
 instance Offset "sType" VkMemoryZirconHandlePropertiesFUCHSIA where
-  rawOffset = #{offset struct VkMemoryZirconHandlePropertiesFUCHSIA, sType}
+  rawOffset = #{offset VkMemoryZirconHandlePropertiesFUCHSIA, sType}
 
 instance Offset "pNext" VkMemoryZirconHandlePropertiesFUCHSIA where
-  rawOffset = #{offset struct VkMemoryZirconHandlePropertiesFUCHSIA, pNext}
+  rawOffset = #{offset VkMemoryZirconHandlePropertiesFUCHSIA, pNext}
 
 instance Offset "memoryTypeBits" VkMemoryZirconHandlePropertiesFUCHSIA where
-  rawOffset = #{offset struct VkMemoryZirconHandlePropertiesFUCHSIA, memoryTypeBits}
+  rawOffset = #{offset VkMemoryZirconHandlePropertiesFUCHSIA, memoryTypeBits}
 
 #else
 

@@ -31,8 +31,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkPhysicalDeviceProvokingVertexFeaturesEXT" #-
          }
 
 instance Storable VkPhysicalDeviceProvokingVertexFeaturesEXT where
-  sizeOf    _ = #{size      struct VkPhysicalDeviceProvokingVertexFeaturesEXT}
-  alignment _ = #{alignment struct VkPhysicalDeviceProvokingVertexFeaturesEXT}
+  sizeOf    _ = #{size      VkPhysicalDeviceProvokingVertexFeaturesEXT}
+  alignment _ = #{alignment VkPhysicalDeviceProvokingVertexFeaturesEXT}
 
   peek ptr = 
     VkPhysicalDeviceProvokingVertexFeaturesEXT
@@ -48,16 +48,16 @@ instance Storable VkPhysicalDeviceProvokingVertexFeaturesEXT where
     pokeField @"transformFeedbackPreservesProvokingVertex" ptr val
 
 instance Offset "sType" VkPhysicalDeviceProvokingVertexFeaturesEXT where
-  rawOffset = #{offset struct VkPhysicalDeviceProvokingVertexFeaturesEXT, sType}
+  rawOffset = #{offset VkPhysicalDeviceProvokingVertexFeaturesEXT, sType}
 
 instance Offset "pNext" VkPhysicalDeviceProvokingVertexFeaturesEXT where
-  rawOffset = #{offset struct VkPhysicalDeviceProvokingVertexFeaturesEXT, pNext}
+  rawOffset = #{offset VkPhysicalDeviceProvokingVertexFeaturesEXT, pNext}
 
 instance Offset "provokingVertexLast" VkPhysicalDeviceProvokingVertexFeaturesEXT where
-  rawOffset = #{offset struct VkPhysicalDeviceProvokingVertexFeaturesEXT, provokingVertexLast}
+  rawOffset = #{offset VkPhysicalDeviceProvokingVertexFeaturesEXT, provokingVertexLast}
 
 instance Offset "transformFeedbackPreservesProvokingVertex" VkPhysicalDeviceProvokingVertexFeaturesEXT where
-  rawOffset = #{offset struct VkPhysicalDeviceProvokingVertexFeaturesEXT, transformFeedbackPreservesProvokingVertex}
+  rawOffset = #{offset VkPhysicalDeviceProvokingVertexFeaturesEXT, transformFeedbackPreservesProvokingVertex}
 
 #else
 

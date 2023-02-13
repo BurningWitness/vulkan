@@ -28,8 +28,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkPipelineCreationFeedback" #-} VkPipelineCrea
          }
 
 instance Storable VkPipelineCreationFeedback where
-  sizeOf    _ = #{size      struct VkPipelineCreationFeedback}
-  alignment _ = #{alignment struct VkPipelineCreationFeedback}
+  sizeOf    _ = #{size      VkPipelineCreationFeedback}
+  alignment _ = #{alignment VkPipelineCreationFeedback}
 
   peek ptr = 
     VkPipelineCreationFeedback
@@ -41,10 +41,10 @@ instance Storable VkPipelineCreationFeedback where
     pokeField @"duration" ptr val
 
 instance Offset "flags" VkPipelineCreationFeedback where
-  rawOffset = #{offset struct VkPipelineCreationFeedback, flags}
+  rawOffset = #{offset VkPipelineCreationFeedback, flags}
 
 instance Offset "duration" VkPipelineCreationFeedback where
-  rawOffset = #{offset struct VkPipelineCreationFeedback, duration}
+  rawOffset = #{offset VkPipelineCreationFeedback, duration}
 
 #else
 

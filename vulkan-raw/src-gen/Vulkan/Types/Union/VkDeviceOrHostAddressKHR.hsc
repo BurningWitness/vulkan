@@ -28,8 +28,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkDeviceOrHostAddressKHR" #-} VkDeviceOrHostAd
          }
 
 instance Storable VkDeviceOrHostAddressKHR where
-  sizeOf    _ = #{size      union VkDeviceOrHostAddressKHR}
-  alignment _ = #{alignment union VkDeviceOrHostAddressKHR}
+  sizeOf    _ = #{size      VkDeviceOrHostAddressKHR}
+  alignment _ = #{alignment VkDeviceOrHostAddressKHR}
 
   peek ptr = 
     VkDeviceOrHostAddressKHR
@@ -41,10 +41,10 @@ instance Storable VkDeviceOrHostAddressKHR where
     pokeField @"hostAddress" ptr val
 
 instance Offset "deviceAddress" VkDeviceOrHostAddressKHR where
-  rawOffset = #{offset union VkDeviceOrHostAddressKHR, deviceAddress}
+  rawOffset = #{offset VkDeviceOrHostAddressKHR, deviceAddress}
 
 instance Offset "hostAddress" VkDeviceOrHostAddressKHR where
-  rawOffset = #{offset union VkDeviceOrHostAddressKHR, hostAddress}
+  rawOffset = #{offset VkDeviceOrHostAddressKHR, hostAddress}
 
 #else
 

@@ -30,8 +30,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkPipelineInfoKHR" #-} VkPipelineInfoKHR =
          }
 
 instance Storable VkPipelineInfoKHR where
-  sizeOf    _ = #{size      struct VkPipelineInfoKHR}
-  alignment _ = #{alignment struct VkPipelineInfoKHR}
+  sizeOf    _ = #{size      VkPipelineInfoKHR}
+  alignment _ = #{alignment VkPipelineInfoKHR}
 
   peek ptr = 
     VkPipelineInfoKHR
@@ -45,13 +45,13 @@ instance Storable VkPipelineInfoKHR where
     pokeField @"pipeline" ptr val
 
 instance Offset "sType" VkPipelineInfoKHR where
-  rawOffset = #{offset struct VkPipelineInfoKHR, sType}
+  rawOffset = #{offset VkPipelineInfoKHR, sType}
 
 instance Offset "pNext" VkPipelineInfoKHR where
-  rawOffset = #{offset struct VkPipelineInfoKHR, pNext}
+  rawOffset = #{offset VkPipelineInfoKHR, pNext}
 
 instance Offset "pipeline" VkPipelineInfoKHR where
-  rawOffset = #{offset struct VkPipelineInfoKHR, pipeline}
+  rawOffset = #{offset VkPipelineInfoKHR, pipeline}
 
 #else
 

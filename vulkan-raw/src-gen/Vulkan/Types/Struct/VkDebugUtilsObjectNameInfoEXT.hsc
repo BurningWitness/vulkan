@@ -32,8 +32,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkDebugUtilsObjectNameInfoEXT" #-} VkDebugUtil
          }
 
 instance Storable VkDebugUtilsObjectNameInfoEXT where
-  sizeOf    _ = #{size      struct VkDebugUtilsObjectNameInfoEXT}
-  alignment _ = #{alignment struct VkDebugUtilsObjectNameInfoEXT}
+  sizeOf    _ = #{size      VkDebugUtilsObjectNameInfoEXT}
+  alignment _ = #{alignment VkDebugUtilsObjectNameInfoEXT}
 
   peek ptr = 
     VkDebugUtilsObjectNameInfoEXT
@@ -51,19 +51,19 @@ instance Storable VkDebugUtilsObjectNameInfoEXT where
     pokeField @"pObjectName" ptr val
 
 instance Offset "sType" VkDebugUtilsObjectNameInfoEXT where
-  rawOffset = #{offset struct VkDebugUtilsObjectNameInfoEXT, sType}
+  rawOffset = #{offset VkDebugUtilsObjectNameInfoEXT, sType}
 
 instance Offset "pNext" VkDebugUtilsObjectNameInfoEXT where
-  rawOffset = #{offset struct VkDebugUtilsObjectNameInfoEXT, pNext}
+  rawOffset = #{offset VkDebugUtilsObjectNameInfoEXT, pNext}
 
 instance Offset "objectType" VkDebugUtilsObjectNameInfoEXT where
-  rawOffset = #{offset struct VkDebugUtilsObjectNameInfoEXT, objectType}
+  rawOffset = #{offset VkDebugUtilsObjectNameInfoEXT, objectType}
 
 instance Offset "objectHandle" VkDebugUtilsObjectNameInfoEXT where
-  rawOffset = #{offset struct VkDebugUtilsObjectNameInfoEXT, objectHandle}
+  rawOffset = #{offset VkDebugUtilsObjectNameInfoEXT, objectHandle}
 
 instance Offset "pObjectName" VkDebugUtilsObjectNameInfoEXT where
-  rawOffset = #{offset struct VkDebugUtilsObjectNameInfoEXT, pObjectName}
+  rawOffset = #{offset VkDebugUtilsObjectNameInfoEXT, pObjectName}
 
 #else
 

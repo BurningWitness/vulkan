@@ -30,8 +30,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkVideoDecodeCapabilitiesKHR" #-} VkVideoDecod
          }
 
 instance Storable VkVideoDecodeCapabilitiesKHR where
-  sizeOf    _ = #{size      struct VkVideoDecodeCapabilitiesKHR}
-  alignment _ = #{alignment struct VkVideoDecodeCapabilitiesKHR}
+  sizeOf    _ = #{size      VkVideoDecodeCapabilitiesKHR}
+  alignment _ = #{alignment VkVideoDecodeCapabilitiesKHR}
 
   peek ptr = 
     VkVideoDecodeCapabilitiesKHR
@@ -45,13 +45,13 @@ instance Storable VkVideoDecodeCapabilitiesKHR where
     pokeField @"flags" ptr val
 
 instance Offset "sType" VkVideoDecodeCapabilitiesKHR where
-  rawOffset = #{offset struct VkVideoDecodeCapabilitiesKHR, sType}
+  rawOffset = #{offset VkVideoDecodeCapabilitiesKHR, sType}
 
 instance Offset "pNext" VkVideoDecodeCapabilitiesKHR where
-  rawOffset = #{offset struct VkVideoDecodeCapabilitiesKHR, pNext}
+  rawOffset = #{offset VkVideoDecodeCapabilitiesKHR, pNext}
 
 instance Offset "flags" VkVideoDecodeCapabilitiesKHR where
-  rawOffset = #{offset struct VkVideoDecodeCapabilitiesKHR, flags}
+  rawOffset = #{offset VkVideoDecodeCapabilitiesKHR, flags}
 
 #else
 

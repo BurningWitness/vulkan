@@ -32,8 +32,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkDescriptorUpdateTemplateEntry" #-} VkDescrip
          }
 
 instance Storable VkDescriptorUpdateTemplateEntry where
-  sizeOf    _ = #{size      struct VkDescriptorUpdateTemplateEntry}
-  alignment _ = #{alignment struct VkDescriptorUpdateTemplateEntry}
+  sizeOf    _ = #{size      VkDescriptorUpdateTemplateEntry}
+  alignment _ = #{alignment VkDescriptorUpdateTemplateEntry}
 
   peek ptr = 
     VkDescriptorUpdateTemplateEntry
@@ -53,22 +53,22 @@ instance Storable VkDescriptorUpdateTemplateEntry where
     pokeField @"stride" ptr val
 
 instance Offset "dstBinding" VkDescriptorUpdateTemplateEntry where
-  rawOffset = #{offset struct VkDescriptorUpdateTemplateEntry, dstBinding}
+  rawOffset = #{offset VkDescriptorUpdateTemplateEntry, dstBinding}
 
 instance Offset "dstArrayElement" VkDescriptorUpdateTemplateEntry where
-  rawOffset = #{offset struct VkDescriptorUpdateTemplateEntry, dstArrayElement}
+  rawOffset = #{offset VkDescriptorUpdateTemplateEntry, dstArrayElement}
 
 instance Offset "descriptorCount" VkDescriptorUpdateTemplateEntry where
-  rawOffset = #{offset struct VkDescriptorUpdateTemplateEntry, descriptorCount}
+  rawOffset = #{offset VkDescriptorUpdateTemplateEntry, descriptorCount}
 
 instance Offset "descriptorType" VkDescriptorUpdateTemplateEntry where
-  rawOffset = #{offset struct VkDescriptorUpdateTemplateEntry, descriptorType}
+  rawOffset = #{offset VkDescriptorUpdateTemplateEntry, descriptorType}
 
 instance Offset "offset" VkDescriptorUpdateTemplateEntry where
-  rawOffset = #{offset struct VkDescriptorUpdateTemplateEntry, offset}
+  rawOffset = #{offset VkDescriptorUpdateTemplateEntry, offset}
 
 instance Offset "stride" VkDescriptorUpdateTemplateEntry where
-  rawOffset = #{offset struct VkDescriptorUpdateTemplateEntry, stride}
+  rawOffset = #{offset VkDescriptorUpdateTemplateEntry, stride}
 
 #else
 

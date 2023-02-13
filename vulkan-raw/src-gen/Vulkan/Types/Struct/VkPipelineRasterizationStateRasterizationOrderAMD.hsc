@@ -30,8 +30,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkPipelineRasterizationStateRasterizationOrder
          }
 
 instance Storable VkPipelineRasterizationStateRasterizationOrderAMD where
-  sizeOf    _ = #{size      struct VkPipelineRasterizationStateRasterizationOrderAMD}
-  alignment _ = #{alignment struct VkPipelineRasterizationStateRasterizationOrderAMD}
+  sizeOf    _ = #{size      VkPipelineRasterizationStateRasterizationOrderAMD}
+  alignment _ = #{alignment VkPipelineRasterizationStateRasterizationOrderAMD}
 
   peek ptr = 
     VkPipelineRasterizationStateRasterizationOrderAMD
@@ -45,13 +45,13 @@ instance Storable VkPipelineRasterizationStateRasterizationOrderAMD where
     pokeField @"rasterizationOrder" ptr val
 
 instance Offset "sType" VkPipelineRasterizationStateRasterizationOrderAMD where
-  rawOffset = #{offset struct VkPipelineRasterizationStateRasterizationOrderAMD, sType}
+  rawOffset = #{offset VkPipelineRasterizationStateRasterizationOrderAMD, sType}
 
 instance Offset "pNext" VkPipelineRasterizationStateRasterizationOrderAMD where
-  rawOffset = #{offset struct VkPipelineRasterizationStateRasterizationOrderAMD, pNext}
+  rawOffset = #{offset VkPipelineRasterizationStateRasterizationOrderAMD, pNext}
 
 instance Offset "rasterizationOrder" VkPipelineRasterizationStateRasterizationOrderAMD where
-  rawOffset = #{offset struct VkPipelineRasterizationStateRasterizationOrderAMD, rasterizationOrder}
+  rawOffset = #{offset VkPipelineRasterizationStateRasterizationOrderAMD, rasterizationOrder}
 
 #else
 

@@ -30,8 +30,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkPhysicalDeviceShaderIntegerFunctions2Feature
          }
 
 instance Storable VkPhysicalDeviceShaderIntegerFunctions2FeaturesINTEL where
-  sizeOf    _ = #{size      struct VkPhysicalDeviceShaderIntegerFunctions2FeaturesINTEL}
-  alignment _ = #{alignment struct VkPhysicalDeviceShaderIntegerFunctions2FeaturesINTEL}
+  sizeOf    _ = #{size      VkPhysicalDeviceShaderIntegerFunctions2FeaturesINTEL}
+  alignment _ = #{alignment VkPhysicalDeviceShaderIntegerFunctions2FeaturesINTEL}
 
   peek ptr = 
     VkPhysicalDeviceShaderIntegerFunctions2FeaturesINTEL
@@ -45,13 +45,13 @@ instance Storable VkPhysicalDeviceShaderIntegerFunctions2FeaturesINTEL where
     pokeField @"shaderIntegerFunctions2" ptr val
 
 instance Offset "sType" VkPhysicalDeviceShaderIntegerFunctions2FeaturesINTEL where
-  rawOffset = #{offset struct VkPhysicalDeviceShaderIntegerFunctions2FeaturesINTEL, sType}
+  rawOffset = #{offset VkPhysicalDeviceShaderIntegerFunctions2FeaturesINTEL, sType}
 
 instance Offset "pNext" VkPhysicalDeviceShaderIntegerFunctions2FeaturesINTEL where
-  rawOffset = #{offset struct VkPhysicalDeviceShaderIntegerFunctions2FeaturesINTEL, pNext}
+  rawOffset = #{offset VkPhysicalDeviceShaderIntegerFunctions2FeaturesINTEL, pNext}
 
 instance Offset "shaderIntegerFunctions2" VkPhysicalDeviceShaderIntegerFunctions2FeaturesINTEL where
-  rawOffset = #{offset struct VkPhysicalDeviceShaderIntegerFunctions2FeaturesINTEL, shaderIntegerFunctions2}
+  rawOffset = #{offset VkPhysicalDeviceShaderIntegerFunctions2FeaturesINTEL, shaderIntegerFunctions2}
 
 #else
 

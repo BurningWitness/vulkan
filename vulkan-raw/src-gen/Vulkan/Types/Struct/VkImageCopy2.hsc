@@ -36,8 +36,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkImageCopy2" #-} VkImageCopy2 =
          }
 
 instance Storable VkImageCopy2 where
-  sizeOf    _ = #{size      struct VkImageCopy2}
-  alignment _ = #{alignment struct VkImageCopy2}
+  sizeOf    _ = #{size      VkImageCopy2}
+  alignment _ = #{alignment VkImageCopy2}
 
   peek ptr = 
     VkImageCopy2
@@ -59,25 +59,25 @@ instance Storable VkImageCopy2 where
     pokeField @"extent" ptr val
 
 instance Offset "sType" VkImageCopy2 where
-  rawOffset = #{offset struct VkImageCopy2, sType}
+  rawOffset = #{offset VkImageCopy2, sType}
 
 instance Offset "pNext" VkImageCopy2 where
-  rawOffset = #{offset struct VkImageCopy2, pNext}
+  rawOffset = #{offset VkImageCopy2, pNext}
 
 instance Offset "srcSubresource" VkImageCopy2 where
-  rawOffset = #{offset struct VkImageCopy2, srcSubresource}
+  rawOffset = #{offset VkImageCopy2, srcSubresource}
 
 instance Offset "srcOffset" VkImageCopy2 where
-  rawOffset = #{offset struct VkImageCopy2, srcOffset}
+  rawOffset = #{offset VkImageCopy2, srcOffset}
 
 instance Offset "dstSubresource" VkImageCopy2 where
-  rawOffset = #{offset struct VkImageCopy2, dstSubresource}
+  rawOffset = #{offset VkImageCopy2, dstSubresource}
 
 instance Offset "dstOffset" VkImageCopy2 where
-  rawOffset = #{offset struct VkImageCopy2, dstOffset}
+  rawOffset = #{offset VkImageCopy2, dstOffset}
 
 instance Offset "extent" VkImageCopy2 where
-  rawOffset = #{offset struct VkImageCopy2, extent}
+  rawOffset = #{offset VkImageCopy2, extent}
 
 #else
 

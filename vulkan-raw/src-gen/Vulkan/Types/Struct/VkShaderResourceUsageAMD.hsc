@@ -30,8 +30,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkShaderResourceUsageAMD" #-} VkShaderResource
          }
 
 instance Storable VkShaderResourceUsageAMD where
-  sizeOf    _ = #{size      struct VkShaderResourceUsageAMD}
-  alignment _ = #{alignment struct VkShaderResourceUsageAMD}
+  sizeOf    _ = #{size      VkShaderResourceUsageAMD}
+  alignment _ = #{alignment VkShaderResourceUsageAMD}
 
   peek ptr = 
     VkShaderResourceUsageAMD
@@ -49,19 +49,19 @@ instance Storable VkShaderResourceUsageAMD where
     pokeField @"scratchMemUsageInBytes" ptr val
 
 instance Offset "numUsedVgprs" VkShaderResourceUsageAMD where
-  rawOffset = #{offset struct VkShaderResourceUsageAMD, numUsedVgprs}
+  rawOffset = #{offset VkShaderResourceUsageAMD, numUsedVgprs}
 
 instance Offset "numUsedSgprs" VkShaderResourceUsageAMD where
-  rawOffset = #{offset struct VkShaderResourceUsageAMD, numUsedSgprs}
+  rawOffset = #{offset VkShaderResourceUsageAMD, numUsedSgprs}
 
 instance Offset "ldsSizePerLocalWorkGroup" VkShaderResourceUsageAMD where
-  rawOffset = #{offset struct VkShaderResourceUsageAMD, ldsSizePerLocalWorkGroup}
+  rawOffset = #{offset VkShaderResourceUsageAMD, ldsSizePerLocalWorkGroup}
 
 instance Offset "ldsUsageSizeInBytes" VkShaderResourceUsageAMD where
-  rawOffset = #{offset struct VkShaderResourceUsageAMD, ldsUsageSizeInBytes}
+  rawOffset = #{offset VkShaderResourceUsageAMD, ldsUsageSizeInBytes}
 
 instance Offset "scratchMemUsageInBytes" VkShaderResourceUsageAMD where
-  rawOffset = #{offset struct VkShaderResourceUsageAMD, scratchMemUsageInBytes}
+  rawOffset = #{offset VkShaderResourceUsageAMD, scratchMemUsageInBytes}
 
 #else
 

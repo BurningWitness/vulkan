@@ -34,8 +34,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkBufferConstraintsInfoFUCHSIA" #-} VkBufferCo
          }
 
 instance Storable VkBufferConstraintsInfoFUCHSIA where
-  sizeOf    _ = #{size      struct VkBufferConstraintsInfoFUCHSIA}
-  alignment _ = #{alignment struct VkBufferConstraintsInfoFUCHSIA}
+  sizeOf    _ = #{size      VkBufferConstraintsInfoFUCHSIA}
+  alignment _ = #{alignment VkBufferConstraintsInfoFUCHSIA}
 
   peek ptr = 
     VkBufferConstraintsInfoFUCHSIA
@@ -53,19 +53,19 @@ instance Storable VkBufferConstraintsInfoFUCHSIA where
     pokeField @"bufferCollectionConstraints" ptr val
 
 instance Offset "sType" VkBufferConstraintsInfoFUCHSIA where
-  rawOffset = #{offset struct VkBufferConstraintsInfoFUCHSIA, sType}
+  rawOffset = #{offset VkBufferConstraintsInfoFUCHSIA, sType}
 
 instance Offset "pNext" VkBufferConstraintsInfoFUCHSIA where
-  rawOffset = #{offset struct VkBufferConstraintsInfoFUCHSIA, pNext}
+  rawOffset = #{offset VkBufferConstraintsInfoFUCHSIA, pNext}
 
 instance Offset "createInfo" VkBufferConstraintsInfoFUCHSIA where
-  rawOffset = #{offset struct VkBufferConstraintsInfoFUCHSIA, createInfo}
+  rawOffset = #{offset VkBufferConstraintsInfoFUCHSIA, createInfo}
 
 instance Offset "requiredFormatFeatures" VkBufferConstraintsInfoFUCHSIA where
-  rawOffset = #{offset struct VkBufferConstraintsInfoFUCHSIA, requiredFormatFeatures}
+  rawOffset = #{offset VkBufferConstraintsInfoFUCHSIA, requiredFormatFeatures}
 
 instance Offset "bufferCollectionConstraints" VkBufferConstraintsInfoFUCHSIA where
-  rawOffset = #{offset struct VkBufferConstraintsInfoFUCHSIA, bufferCollectionConstraints}
+  rawOffset = #{offset VkBufferConstraintsInfoFUCHSIA, bufferCollectionConstraints}
 
 #else
 

@@ -33,8 +33,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkDescriptorGetInfoEXT" #-} VkDescriptorGetInf
          }
 
 instance Storable VkDescriptorGetInfoEXT where
-  sizeOf    _ = #{size      struct VkDescriptorGetInfoEXT}
-  alignment _ = #{alignment struct VkDescriptorGetInfoEXT}
+  sizeOf    _ = #{size      VkDescriptorGetInfoEXT}
+  alignment _ = #{alignment VkDescriptorGetInfoEXT}
 
   peek ptr = 
     VkDescriptorGetInfoEXT
@@ -50,16 +50,16 @@ instance Storable VkDescriptorGetInfoEXT where
     pokeField @"data" ptr val
 
 instance Offset "sType" VkDescriptorGetInfoEXT where
-  rawOffset = #{offset struct VkDescriptorGetInfoEXT, sType}
+  rawOffset = #{offset VkDescriptorGetInfoEXT, sType}
 
 instance Offset "pNext" VkDescriptorGetInfoEXT where
-  rawOffset = #{offset struct VkDescriptorGetInfoEXT, pNext}
+  rawOffset = #{offset VkDescriptorGetInfoEXT, pNext}
 
 instance Offset "type_" VkDescriptorGetInfoEXT where
-  rawOffset = #{offset struct VkDescriptorGetInfoEXT, type}
+  rawOffset = #{offset VkDescriptorGetInfoEXT, type}
 
 instance Offset "data_" VkDescriptorGetInfoEXT where
-  rawOffset = #{offset struct VkDescriptorGetInfoEXT, data}
+  rawOffset = #{offset VkDescriptorGetInfoEXT, data}
 
 instance Offset "type" VkDescriptorGetInfoEXT where
   rawOffset = rawOffset @"type_" @VkDescriptorGetInfoEXT

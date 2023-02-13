@@ -23,8 +23,8 @@ import Foreign.Storable.Offset
 data {-# CTYPE "vulkan/vulkan.h" "VkAccelerationStructureInstanceKHR" #-} VkAccelerationStructureInstanceKHR = VkAccelerationStructureInstanceKHR
 
 instance Storable VkAccelerationStructureInstanceKHR where
-  sizeOf    _ = #{size      struct VkAccelerationStructureInstanceKHR}
-  alignment _ = #{alignment struct VkAccelerationStructureInstanceKHR}
+  sizeOf    _ = #{size      VkAccelerationStructureInstanceKHR}
+  alignment _ = #{alignment VkAccelerationStructureInstanceKHR}
 
   peek _ptr = pure VkAccelerationStructureInstanceKHR
 

@@ -71,15 +71,15 @@ censor (a:as) | isUpper a = Just $ toLower a : as
               | otherwise = Nothing
 
 shapeType :: Mixer.Type -> String
-shapeType (BareType a)                    = a
-shapeType (HscType a)                     = "#{type " <> a <> "}"
-shapeType (VkType FunPointer a)           = "FunPtr " <> a
-shapeType (VkType _ a)                    = capitalize a
-shapeType (Type1 a (BareType b))          = a <> " " <> b
-shapeType (Type1 a (HscType b))           = a <> " #{type " <> b <> "}"
-shapeType (Type1 a (VkType FunPointer b)) = a <> " (FunPtr " <> capitalize b <> ")"
-shapeType (Type1 a (VkType _ b))          = a <> " " <> capitalize b
-shapeType (Type1 a b)                     = a <> " (" <> shapeType b <> ")"
+shapeType (BareType a)                        = a
+shapeType (HscType a)                         = "#{type " <> a <> "}"
+shapeType (VkType FuncPointerCat a)           = "FunPtr " <> a
+shapeType (VkType _ a)                        = capitalize a
+shapeType (Type1 a (BareType b))              = a <> " " <> b
+shapeType (Type1 a (HscType b))               = a <> " #{type " <> b <> "}"
+shapeType (Type1 a (VkType FuncPointerCat b)) = a <> " (FunPtr " <> capitalize b <> ")"
+shapeType (Type1 a (VkType _ b))              = a <> " " <> capitalize b
+shapeType (Type1 a b)                         = a <> " (" <> shapeType b <> ")"
 
 deriveEnumType :: String -> Mixer.Type -> String
 deriveEnumType name (HscType _) = "#{type enum " <> name <> "}"
@@ -201,17 +201,17 @@ vulkan_h = Packager.Include "vulkan/vulkan.h"
 
 depToImports :: Dependencies -> [Import]
 depToImports (Dependencies dep) =
-  let fuse Mixer.Include _   = []
-      fuse Protected _       = [toImport protectName]
-      fuse Define _          = [toImport defineName]
-      fuse Basic _           = [toImport baseName]
-      fuse Const _           = [toImport constantName]
-      fuse Enumerated strs   = toImport . enumName <$> Set.toAscList strs
-      fuse FunPointer _      = [toImport funcPointerName]
-      fuse Handle _          = [toImport handleName]
-      fuse Mixer.Struct strs = toImport . structName <$> Set.toAscList strs
-      fuse Mixer.Union strs  = toImport . unionName <$> Set.toAscList strs
-      fuse Function strs     = toImport . commandName <$> Set.toAscList strs
+  let fuse Mixer.Include _      = []
+      fuse Protected _          = [toImport protectName]
+      fuse Define _             = [toImport defineName]
+      fuse Basic _              = [toImport baseName]
+      fuse Const _              = [toImport constantName]
+      fuse EnumCat strs         = toImport . enumName <$> Set.toAscList strs
+      fuse FuncPointerCat _     = [toImport funcPointerName]
+      fuse Handle _             = [toImport handleName]
+      fuse Mixer.StructCat strs = toImport . structName <$> Set.toAscList strs
+      fuse Mixer.UnionCat strs  = toImport . unionName <$> Set.toAscList strs
+      fuse Function strs        = toImport . commandName <$> Set.toAscList strs
 
   in Map.foldrWithKey (\k v -> mappend $ fuse k v) [] dep
 
@@ -529,17 +529,6 @@ packageConstants mixed =
   let decls =
         (\f -> Map.foldrWithKey f [] $ getField @"constants" mixed) $ \name cons acc ->
           (: acc) $
-            case getField @"alias" cons of
-              Just alias ->
-                Pattern
-                 { name    = name
-                 , type_   = deriveConstType (getField @"value" cons) :| []
-                 , value   = alias
-                 , comment = getField @"comment" cons
-                 , flags   = Nothing
-                 }
-
-              Nothing ->
                 case constValue $ getField @"value" cons of
                   Left cstr ->
                     PatternCString
@@ -575,22 +564,11 @@ packageEnums :: Mixed -> [Module]
 packageEnums mixed =
   let mkEnum :: Enumerator -> Declaration
       mkEnum enum =
-        case getField @"flavor" enum of
-          Alias alias ->
-            Pattern
-              { name    = getField @"name" enum
-              , type_   = deriveConstType (Integral 0 :: Value Integer) :| []
-              , value   = alias
-              , comment = getField @"comment" enum
-              , flags   = Flags FlagHsc <$> deriveFlags (getField @"tags" enum)
-              }
-
-          Normal value ->
-            case constValue value of
+            case constValue (getField @"value" enum) of
               Left cstr ->
                 PatternCString
                   { name    = getField @"name" enum
-                  , type_   = deriveConstType value :| []
+                  , type_   = deriveConstType (getField @"value" enum) :| []
                   , string  = cstr
                   , comment = getField @"comment" enum
                   , flags   = Flags FlagHsc <$> deriveFlags (getField @"tags" enum)
@@ -598,7 +576,7 @@ packageEnums mixed =
               Right val ->
                 Pattern
                   { name    = getField @"name" enum
-                  , type_   = deriveConstType value :| []
+                  , type_   = deriveConstType (getField @"value" enum) :| []
                   , value   = val
                   , comment = getField @"comment" enum
                   , flags   = Flags FlagHsc <$> deriveFlags (getField @"tags" enum)
@@ -606,27 +584,6 @@ packageEnums mixed =
 
   in (\f -> Map.foldrWithKey f [] $ getField @"enums" mixed) $ \name enum acc ->
        (: acc) $
-         case getField @"flavor" enum of
-           Alias alias ->
-             let aliased =
-                   TypeSynonym
-                     { name    = name
-                     , args    = Arg alias Nothing :| []
-                     , comment = getField @"comment" enum
-                     , flags   = Flags FlagHsc <$> deriveFlags (getField @"tags" enum)
-                     }
-             in Module
-                  { ext      = Hsc
-                  , pragmas  = [Pragma "CPP"]
-                  , name     = enumName name
-                  , flags    = Nothing
-                  , exports  = []
-                  , includes = [vulkan_h]
-                  , imports  = [Import "Data.Int", toImport $ enumName alias]
-                  , decls    = [aliased]
-                  }
-
-           Normal entries ->
              let top =
                    TypeSynonym
                      { name    = name
@@ -647,7 +604,7 @@ packageEnums mixed =
                   , imports  = case getField @"type_" enum of
                                  Int           -> [Import "Data.Int"]
                                  Custom custom -> depToImports (dependencies custom)
-                  , decls    = top : fmap mkEnum entries
+                  , decls    = top : (mkEnum <$> getField @"enums" enum)
                   }
 
 
@@ -692,7 +649,7 @@ packageFuncPointers mixed =
        , exports  = []
        , includes = [vulkan_h]
        , imports  = [ Import "Data.Int", Import "Data.Void", Import "Data.Word"
-                    , Import "Foreign.Ptr" ] <> depToImports (purgeCategory FunPointer deps)
+                    , Import "Foreign.Ptr" ] <> depToImports (purgeCategory FuncPointerCat deps)
        , decls    = decls
        }
 
@@ -716,18 +673,8 @@ packageHandles mixed =
                    }
 
       decls =
-        (\f -> Map.foldrWithKey f [] $ getField @"handles" mixed) $ \name hand acc ->
+        (\f -> Map.foldrWithKey f [] $ getField @"handles" mixed) $ \name handle acc ->
           (<> acc) $
-            case hand of
-              Alias alias ->
-                pure TypeSynonym
-                       { name    = name
-                       , args    = Arg alias Nothing :| []
-                       , comment = Nothing
-                       , flags   = Nothing
-                       }
-
-              Normal handle ->
                 [ EmptyDatatype
                     { name    = name <> "_T"
                     , cname   = Just $ "struct " <> name <> "_T"
@@ -759,29 +706,8 @@ packageHandles mixed =
 
 packageStructs :: Mixed -> Augments -> [Module]
 packageStructs mixed augs = do
-  (\f -> Map.foldrWithKey f [] $ getField @"structs" mixed) $ \name strt acc ->
+  (\f -> Map.foldrWithKey f [] $ getField @"structs" mixed) $ \name struct acc ->
     (: acc) $
-      case strt of
-        Alias alias ->
-          let aliased =
-                TypeSynonym
-                  { name    = name
-                  , args    = Arg alias Nothing :| []
-                  , comment = Nothing
-                  , flags   = Nothing
-                  }
-          in Module
-               { ext      = Hsc
-               , pragmas  = []
-               , name     = structName name
-               , flags    = Nothing
-               , exports  = []
-               , includes = [vulkan_h]
-               , imports  = [toImport $ structName alias]
-               , decls    = [aliased]
-               }
-
-        Normal struct ->
           let (deps, censored, fields) =
                 if Set.member name (getField @"cauterizedStructs" augs)
                   then mempty
@@ -882,29 +808,8 @@ packageStructs mixed augs = do
 
 packageUnions :: Mixed -> [Module]
 packageUnions mixed = do
-  (\f -> Map.foldrWithKey f [] $ getField @"unions" mixed) $ \name unio acc ->
+  (\f -> Map.foldrWithKey f [] $ getField @"unions" mixed) $ \name union acc ->
     (: acc) $
-      case unio of
-        Alias alias ->
-          let aliased =
-                TypeSynonym
-                  { name    = name
-                  , args    = Arg alias Nothing :| []
-                  , comment = Nothing
-                  , flags   = Nothing
-                  }
-          in Module
-               { ext      = Hsc
-               , pragmas  = []
-               , name     = unionName name
-               , flags    = Nothing
-               , exports  = []
-               , includes = [vulkan_h]
-               , imports  = [toImport $ unionName alias]
-               , decls    = [aliased]
-               }
-
-        Normal union ->
           let (deps, censored, fields) =
                 (\f -> foldr f mempty (getField @"fields" union)) $ \field (deps', cens, acc') ->
                   ( dependencies (getField @"type_" field) <> deps'
@@ -1023,15 +928,9 @@ packageCommands mixed augs = do
                     []     -> errorWithoutStackTrace "Packager: empty nonempty list"
                     ne:nes -> ne :| nes
 
-          addAliasDep =
-            case getField @"type_" comm of
-              Normal _    -> id
-              Alias alias -> mappend . Dependencies $ Map.singleton Function (Set.singleton (toCap alias))
-
           new = case getField @"type_" comm of
-                  Normal mayFlavor
-                    | Imported mayFlag <- mayFlavor
-                    , not . Set.member name $ getField @"demotedCommands" augs
+                  Imported mayFlag
+                    | not . Set.member name $ getField @"demotedCommands" augs
                         -> [ TypeSynonym
                                { name    = toCap name
                                , args    = args1
@@ -1053,7 +952,7 @@ packageCommands mixed augs = do
                                }
                            ]
 
-                    | otherwise ->
+                  _ ->
                         [ TypeSynonym
                             { name    = toCap name
                             , args    = args1
@@ -1069,41 +968,21 @@ packageCommands mixed augs = do
                             }
                         ]
 
-                  Alias alias ->
-                    [ TypeSynonym
-                        { name    = toCap name
-                        , args    = Arg (toCap alias) Nothing :| []
-                        , comment = Nothing
-                        , flags   = Nothing
-                        }
-                    , FunctionSynonym
-                        { name    = toFun name
-                        , synonym = toFun alias
-                        , args    = Arg ("VkFun " <> toCap name) Nothing :| []
-                        , comment = Nothing
-                        , flags   = Nothing
-                        }
-                    ]
-
       in Module
            { ext      = Hsc
-           , pragmas  = case getField @"type_" comm of
-                          Normal cmdtype ->
-                            let tagmod =
-                                  case cmdtype of
-                                    Imported _ -> (:) $ Pragma "ForeignFunctionInterface"
-                                    _          -> id
+           , pragmas  = let tagmod =
+                              case getField @"type_" comm of
+                                Imported _ -> (:) $ Pragma "ForeignFunctionInterface"
+                                _          -> id
 
-                            in tagmod [Pragma "CApiFFI", Pragma "CPP", Pragma "MagicHash"]
-
-                          Alias _  -> []
+                        in tagmod [Pragma "CApiFFI", Pragma "CPP", Pragma "MagicHash"]
 
            , name     = commandName name
            , flags    = Flags FlagHsc <$> deriveFlags (getField @"tags" comm)
            , exports  = []
            , includes = [vulkan_h]
            , imports  = Import "Data.Int" : Import "Data.Word" : Import "GHC.Ptr"
-                      : depToImports (addAliasDep deps1) <> [Import "Vulkan.Types.VkFun"]
+                      : depToImports deps1 <> [Import "Vulkan.Types.VkFun"]
            , decls    = new
            }
 
@@ -1185,11 +1064,11 @@ packageFeatures mixed augs =
         toDependencies req =
           case req of
             RequireType name cat     -> Dependencies $ Map.singleton cat (Set.singleton name)
-            RequireEnumerator extd _ -> Dependencies $ Map.singleton Enumerated (Set.singleton extd)
+            RequireEnumerator extd _ -> Dependencies $ Map.singleton EnumCat (Set.singleton extd)
             RequireEnumeratorInplace {} -> mempty
             RequireHandle name _     -> Dependencies $ Map.singleton Mixer.Handle (Set.singleton name)
-            RequireStruct name _     -> Dependencies $ Map.singleton Mixer.Struct (Set.singleton name)
-            RequireUnion name _      -> Dependencies $ Map.singleton Mixer.Union (Set.singleton name)
+            RequireStruct name _     -> Dependencies $ Map.singleton StructCat (Set.singleton name)
+            RequireUnion name _      -> Dependencies $ Map.singleton UnionCat (Set.singleton name)
             RequireCommand cmd _     -> Dependencies $ Map.singleton Function (Set.singleton cmd)
 
         _toDeclaration :: Require -> [Declaration]
@@ -1312,11 +1191,11 @@ packageExtensions mixed =
         toDependencies req =
           case req of
             RequireType name cat     -> Dependencies $ Map.singleton cat (Set.singleton name)
-            RequireEnumerator extd _ -> Dependencies $ Map.singleton Enumerated (Set.singleton extd)
+            RequireEnumerator extd _ -> Dependencies $ Map.singleton EnumCat (Set.singleton extd)
             RequireEnumeratorInplace {} -> mempty
             RequireHandle name _     -> Dependencies $ Map.singleton Handle (Set.singleton name)
-            RequireStruct name _     -> Dependencies $ Map.singleton Mixer.Struct (Set.singleton name)
-            RequireUnion name _      -> Dependencies $ Map.singleton Mixer.Union (Set.singleton name)
+            RequireStruct name _     -> Dependencies $ Map.singleton StructCat (Set.singleton name)
+            RequireUnion name _      -> Dependencies $ Map.singleton UnionCat (Set.singleton name)
             RequireCommand cmd _     -> Dependencies $ Map.singleton Function (Set.singleton cmd)
 
         toDeclaration :: Require -> [Declaration]
@@ -1584,16 +1463,12 @@ composeDeclaration ext decl =
 
         StorableInstance {..} ->
           mconcat
-            [ let flv = case flavor of
-                          Packager.Struct -> "struct"
-                          Packager.Union  -> "union"
-
-              in mconcat
-                   [ "instance Storable ", name, " where\n"
-                   , "  sizeOf    _ = #{size      ", flv, " ", name, "}\n"
-                   , "  alignment _ = #{alignment ", flv, " ", name, "}\n"
-                   , "\n"
-                   ]
+            [ mconcat
+                [ "instance Storable ", name, " where\n"
+                , "  sizeOf    _ = #{size      ", name, "}\n"
+                , "  alignment _ = #{alignment ", name, "}\n"
+                , "\n"
+                ]
             , case fieldnames of
                 []     -> "  peek _ptr = pure " <> name
                 fn:fns -> mconcat
@@ -1617,13 +1492,10 @@ composeDeclaration ext decl =
             ]
 
         OffsetInstance {..} ->
-          let flv = case flavor of
-                      Packager.Struct -> "struct"
-                      Packager.Union  -> "union"
-          in mconcat
-               [ "instance Offset \"", fieldname, "\" ", name, " where\n"
-               , "  rawOffset = #{offset ", flv, " ", name, ", ", offset, "}"
-               ]
+          mconcat
+            [ "instance Offset \"", fieldname, "\" ", name, " where\n"
+            , "  rawOffset = #{offset ", name, ", ", offset, "}"
+            ]
 
         OffsetSynonymInstance {..} ->
           mconcat
@@ -1749,11 +1621,11 @@ otherDependencies _mixd sorted =
       fuse Define _              = Just $ defineName
       fuse Basic _               = Just $ baseName
       fuse Const _               = Just $ constantName
-      fuse Enumerated str        = Just $ enumName str
-      fuse FunPointer _          = Just $ funcPointerName
+      fuse EnumCat str           = Just $ enumName str
+      fuse FuncPointerCat _      = Just $ funcPointerName
       fuse Handle _              = Just $ handleName
-      fuse Mixer.Struct str      = Just $ structName str
-      fuse Mixer.Union str       = Just $ unionName str
+      fuse Mixer.StructCat str   = Just $ structName str
+      fuse Mixer.UnionCat str    = Just $ unionName str
       fuse Function str          = Just $ commandName str
 
   in sorted <&> \entry ->

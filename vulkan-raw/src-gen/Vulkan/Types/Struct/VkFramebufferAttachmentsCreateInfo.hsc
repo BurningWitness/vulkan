@@ -31,8 +31,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkFramebufferAttachmentsCreateInfo" #-} VkFram
          }
 
 instance Storable VkFramebufferAttachmentsCreateInfo where
-  sizeOf    _ = #{size      struct VkFramebufferAttachmentsCreateInfo}
-  alignment _ = #{alignment struct VkFramebufferAttachmentsCreateInfo}
+  sizeOf    _ = #{size      VkFramebufferAttachmentsCreateInfo}
+  alignment _ = #{alignment VkFramebufferAttachmentsCreateInfo}
 
   peek ptr = 
     VkFramebufferAttachmentsCreateInfo
@@ -48,16 +48,16 @@ instance Storable VkFramebufferAttachmentsCreateInfo where
     pokeField @"pAttachmentImageInfos" ptr val
 
 instance Offset "sType" VkFramebufferAttachmentsCreateInfo where
-  rawOffset = #{offset struct VkFramebufferAttachmentsCreateInfo, sType}
+  rawOffset = #{offset VkFramebufferAttachmentsCreateInfo, sType}
 
 instance Offset "pNext" VkFramebufferAttachmentsCreateInfo where
-  rawOffset = #{offset struct VkFramebufferAttachmentsCreateInfo, pNext}
+  rawOffset = #{offset VkFramebufferAttachmentsCreateInfo, pNext}
 
 instance Offset "attachmentImageInfoCount" VkFramebufferAttachmentsCreateInfo where
-  rawOffset = #{offset struct VkFramebufferAttachmentsCreateInfo, attachmentImageInfoCount}
+  rawOffset = #{offset VkFramebufferAttachmentsCreateInfo, attachmentImageInfoCount}
 
 instance Offset "pAttachmentImageInfos" VkFramebufferAttachmentsCreateInfo where
-  rawOffset = #{offset struct VkFramebufferAttachmentsCreateInfo, pAttachmentImageInfos}
+  rawOffset = #{offset VkFramebufferAttachmentsCreateInfo, pAttachmentImageInfos}
 
 #else
 

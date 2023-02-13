@@ -33,8 +33,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkSubpassDescriptionDepthStencilResolve" #-} V
          }
 
 instance Storable VkSubpassDescriptionDepthStencilResolve where
-  sizeOf    _ = #{size      struct VkSubpassDescriptionDepthStencilResolve}
-  alignment _ = #{alignment struct VkSubpassDescriptionDepthStencilResolve}
+  sizeOf    _ = #{size      VkSubpassDescriptionDepthStencilResolve}
+  alignment _ = #{alignment VkSubpassDescriptionDepthStencilResolve}
 
   peek ptr = 
     VkSubpassDescriptionDepthStencilResolve
@@ -52,19 +52,19 @@ instance Storable VkSubpassDescriptionDepthStencilResolve where
     pokeField @"pDepthStencilResolveAttachment" ptr val
 
 instance Offset "sType" VkSubpassDescriptionDepthStencilResolve where
-  rawOffset = #{offset struct VkSubpassDescriptionDepthStencilResolve, sType}
+  rawOffset = #{offset VkSubpassDescriptionDepthStencilResolve, sType}
 
 instance Offset "pNext" VkSubpassDescriptionDepthStencilResolve where
-  rawOffset = #{offset struct VkSubpassDescriptionDepthStencilResolve, pNext}
+  rawOffset = #{offset VkSubpassDescriptionDepthStencilResolve, pNext}
 
 instance Offset "depthResolveMode" VkSubpassDescriptionDepthStencilResolve where
-  rawOffset = #{offset struct VkSubpassDescriptionDepthStencilResolve, depthResolveMode}
+  rawOffset = #{offset VkSubpassDescriptionDepthStencilResolve, depthResolveMode}
 
 instance Offset "stencilResolveMode" VkSubpassDescriptionDepthStencilResolve where
-  rawOffset = #{offset struct VkSubpassDescriptionDepthStencilResolve, stencilResolveMode}
+  rawOffset = #{offset VkSubpassDescriptionDepthStencilResolve, stencilResolveMode}
 
 instance Offset "pDepthStencilResolveAttachment" VkSubpassDescriptionDepthStencilResolve where
-  rawOffset = #{offset struct VkSubpassDescriptionDepthStencilResolve, pDepthStencilResolveAttachment}
+  rawOffset = #{offset VkSubpassDescriptionDepthStencilResolve, pDepthStencilResolveAttachment}
 
 #else
 

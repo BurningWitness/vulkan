@@ -41,8 +41,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkAccelerationStructureTrianglesOpacityMicroma
          }
 
 instance Storable VkAccelerationStructureTrianglesOpacityMicromapEXT where
-  sizeOf    _ = #{size      struct VkAccelerationStructureTrianglesOpacityMicromapEXT}
-  alignment _ = #{alignment struct VkAccelerationStructureTrianglesOpacityMicromapEXT}
+  sizeOf    _ = #{size      VkAccelerationStructureTrianglesOpacityMicromapEXT}
+  alignment _ = #{alignment VkAccelerationStructureTrianglesOpacityMicromapEXT}
 
   peek ptr = 
     VkAccelerationStructureTrianglesOpacityMicromapEXT
@@ -70,34 +70,34 @@ instance Storable VkAccelerationStructureTrianglesOpacityMicromapEXT where
     pokeField @"micromap" ptr val
 
 instance Offset "sType" VkAccelerationStructureTrianglesOpacityMicromapEXT where
-  rawOffset = #{offset struct VkAccelerationStructureTrianglesOpacityMicromapEXT, sType}
+  rawOffset = #{offset VkAccelerationStructureTrianglesOpacityMicromapEXT, sType}
 
 instance Offset "pNext" VkAccelerationStructureTrianglesOpacityMicromapEXT where
-  rawOffset = #{offset struct VkAccelerationStructureTrianglesOpacityMicromapEXT, pNext}
+  rawOffset = #{offset VkAccelerationStructureTrianglesOpacityMicromapEXT, pNext}
 
 instance Offset "indexType" VkAccelerationStructureTrianglesOpacityMicromapEXT where
-  rawOffset = #{offset struct VkAccelerationStructureTrianglesOpacityMicromapEXT, indexType}
+  rawOffset = #{offset VkAccelerationStructureTrianglesOpacityMicromapEXT, indexType}
 
 instance Offset "indexBuffer" VkAccelerationStructureTrianglesOpacityMicromapEXT where
-  rawOffset = #{offset struct VkAccelerationStructureTrianglesOpacityMicromapEXT, indexBuffer}
+  rawOffset = #{offset VkAccelerationStructureTrianglesOpacityMicromapEXT, indexBuffer}
 
 instance Offset "indexStride" VkAccelerationStructureTrianglesOpacityMicromapEXT where
-  rawOffset = #{offset struct VkAccelerationStructureTrianglesOpacityMicromapEXT, indexStride}
+  rawOffset = #{offset VkAccelerationStructureTrianglesOpacityMicromapEXT, indexStride}
 
 instance Offset "baseTriangle" VkAccelerationStructureTrianglesOpacityMicromapEXT where
-  rawOffset = #{offset struct VkAccelerationStructureTrianglesOpacityMicromapEXT, baseTriangle}
+  rawOffset = #{offset VkAccelerationStructureTrianglesOpacityMicromapEXT, baseTriangle}
 
 instance Offset "usageCountsCount" VkAccelerationStructureTrianglesOpacityMicromapEXT where
-  rawOffset = #{offset struct VkAccelerationStructureTrianglesOpacityMicromapEXT, usageCountsCount}
+  rawOffset = #{offset VkAccelerationStructureTrianglesOpacityMicromapEXT, usageCountsCount}
 
 instance Offset "pUsageCounts" VkAccelerationStructureTrianglesOpacityMicromapEXT where
-  rawOffset = #{offset struct VkAccelerationStructureTrianglesOpacityMicromapEXT, pUsageCounts}
+  rawOffset = #{offset VkAccelerationStructureTrianglesOpacityMicromapEXT, pUsageCounts}
 
 instance Offset "ppUsageCounts" VkAccelerationStructureTrianglesOpacityMicromapEXT where
-  rawOffset = #{offset struct VkAccelerationStructureTrianglesOpacityMicromapEXT, ppUsageCounts}
+  rawOffset = #{offset VkAccelerationStructureTrianglesOpacityMicromapEXT, ppUsageCounts}
 
 instance Offset "micromap" VkAccelerationStructureTrianglesOpacityMicromapEXT where
-  rawOffset = #{offset struct VkAccelerationStructureTrianglesOpacityMicromapEXT, micromap}
+  rawOffset = #{offset VkAccelerationStructureTrianglesOpacityMicromapEXT, micromap}
 
 #else
 

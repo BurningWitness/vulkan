@@ -29,8 +29,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkAccelerationStructureVersionInfoKHR" #-} VkA
          }
 
 instance Storable VkAccelerationStructureVersionInfoKHR where
-  sizeOf    _ = #{size      struct VkAccelerationStructureVersionInfoKHR}
-  alignment _ = #{alignment struct VkAccelerationStructureVersionInfoKHR}
+  sizeOf    _ = #{size      VkAccelerationStructureVersionInfoKHR}
+  alignment _ = #{alignment VkAccelerationStructureVersionInfoKHR}
 
   peek ptr = 
     VkAccelerationStructureVersionInfoKHR
@@ -44,13 +44,13 @@ instance Storable VkAccelerationStructureVersionInfoKHR where
     pokeField @"pVersionData" ptr val
 
 instance Offset "sType" VkAccelerationStructureVersionInfoKHR where
-  rawOffset = #{offset struct VkAccelerationStructureVersionInfoKHR, sType}
+  rawOffset = #{offset VkAccelerationStructureVersionInfoKHR, sType}
 
 instance Offset "pNext" VkAccelerationStructureVersionInfoKHR where
-  rawOffset = #{offset struct VkAccelerationStructureVersionInfoKHR, pNext}
+  rawOffset = #{offset VkAccelerationStructureVersionInfoKHR, pNext}
 
 instance Offset "pVersionData" VkAccelerationStructureVersionInfoKHR where
-  rawOffset = #{offset struct VkAccelerationStructureVersionInfoKHR, pVersionData}
+  rawOffset = #{offset VkAccelerationStructureVersionInfoKHR, pVersionData}
 
 #else
 

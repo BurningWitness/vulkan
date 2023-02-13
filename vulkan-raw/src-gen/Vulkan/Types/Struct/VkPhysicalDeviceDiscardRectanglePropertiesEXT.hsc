@@ -29,8 +29,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkPhysicalDeviceDiscardRectanglePropertiesEXT"
          }
 
 instance Storable VkPhysicalDeviceDiscardRectanglePropertiesEXT where
-  sizeOf    _ = #{size      struct VkPhysicalDeviceDiscardRectanglePropertiesEXT}
-  alignment _ = #{alignment struct VkPhysicalDeviceDiscardRectanglePropertiesEXT}
+  sizeOf    _ = #{size      VkPhysicalDeviceDiscardRectanglePropertiesEXT}
+  alignment _ = #{alignment VkPhysicalDeviceDiscardRectanglePropertiesEXT}
 
   peek ptr = 
     VkPhysicalDeviceDiscardRectanglePropertiesEXT
@@ -44,13 +44,13 @@ instance Storable VkPhysicalDeviceDiscardRectanglePropertiesEXT where
     pokeField @"maxDiscardRectangles" ptr val
 
 instance Offset "sType" VkPhysicalDeviceDiscardRectanglePropertiesEXT where
-  rawOffset = #{offset struct VkPhysicalDeviceDiscardRectanglePropertiesEXT, sType}
+  rawOffset = #{offset VkPhysicalDeviceDiscardRectanglePropertiesEXT, sType}
 
 instance Offset "pNext" VkPhysicalDeviceDiscardRectanglePropertiesEXT where
-  rawOffset = #{offset struct VkPhysicalDeviceDiscardRectanglePropertiesEXT, pNext}
+  rawOffset = #{offset VkPhysicalDeviceDiscardRectanglePropertiesEXT, pNext}
 
 instance Offset "maxDiscardRectangles" VkPhysicalDeviceDiscardRectanglePropertiesEXT where
-  rawOffset = #{offset struct VkPhysicalDeviceDiscardRectanglePropertiesEXT, maxDiscardRectangles}
+  rawOffset = #{offset VkPhysicalDeviceDiscardRectanglePropertiesEXT, maxDiscardRectangles}
 
 #else
 

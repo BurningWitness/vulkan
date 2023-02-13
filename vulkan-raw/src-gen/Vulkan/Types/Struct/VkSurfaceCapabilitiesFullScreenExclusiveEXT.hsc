@@ -30,8 +30,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkSurfaceCapabilitiesFullScreenExclusiveEXT" #
          }
 
 instance Storable VkSurfaceCapabilitiesFullScreenExclusiveEXT where
-  sizeOf    _ = #{size      struct VkSurfaceCapabilitiesFullScreenExclusiveEXT}
-  alignment _ = #{alignment struct VkSurfaceCapabilitiesFullScreenExclusiveEXT}
+  sizeOf    _ = #{size      VkSurfaceCapabilitiesFullScreenExclusiveEXT}
+  alignment _ = #{alignment VkSurfaceCapabilitiesFullScreenExclusiveEXT}
 
   peek ptr = 
     VkSurfaceCapabilitiesFullScreenExclusiveEXT
@@ -45,13 +45,13 @@ instance Storable VkSurfaceCapabilitiesFullScreenExclusiveEXT where
     pokeField @"fullScreenExclusiveSupported" ptr val
 
 instance Offset "sType" VkSurfaceCapabilitiesFullScreenExclusiveEXT where
-  rawOffset = #{offset struct VkSurfaceCapabilitiesFullScreenExclusiveEXT, sType}
+  rawOffset = #{offset VkSurfaceCapabilitiesFullScreenExclusiveEXT, sType}
 
 instance Offset "pNext" VkSurfaceCapabilitiesFullScreenExclusiveEXT where
-  rawOffset = #{offset struct VkSurfaceCapabilitiesFullScreenExclusiveEXT, pNext}
+  rawOffset = #{offset VkSurfaceCapabilitiesFullScreenExclusiveEXT, pNext}
 
 instance Offset "fullScreenExclusiveSupported" VkSurfaceCapabilitiesFullScreenExclusiveEXT where
-  rawOffset = #{offset struct VkSurfaceCapabilitiesFullScreenExclusiveEXT, fullScreenExclusiveSupported}
+  rawOffset = #{offset VkSurfaceCapabilitiesFullScreenExclusiveEXT, fullScreenExclusiveSupported}
 
 #else
 

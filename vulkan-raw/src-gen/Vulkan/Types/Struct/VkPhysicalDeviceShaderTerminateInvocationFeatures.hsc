@@ -30,8 +30,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkPhysicalDeviceShaderTerminateInvocationFeatu
          }
 
 instance Storable VkPhysicalDeviceShaderTerminateInvocationFeatures where
-  sizeOf    _ = #{size      struct VkPhysicalDeviceShaderTerminateInvocationFeatures}
-  alignment _ = #{alignment struct VkPhysicalDeviceShaderTerminateInvocationFeatures}
+  sizeOf    _ = #{size      VkPhysicalDeviceShaderTerminateInvocationFeatures}
+  alignment _ = #{alignment VkPhysicalDeviceShaderTerminateInvocationFeatures}
 
   peek ptr = 
     VkPhysicalDeviceShaderTerminateInvocationFeatures
@@ -45,13 +45,13 @@ instance Storable VkPhysicalDeviceShaderTerminateInvocationFeatures where
     pokeField @"shaderTerminateInvocation" ptr val
 
 instance Offset "sType" VkPhysicalDeviceShaderTerminateInvocationFeatures where
-  rawOffset = #{offset struct VkPhysicalDeviceShaderTerminateInvocationFeatures, sType}
+  rawOffset = #{offset VkPhysicalDeviceShaderTerminateInvocationFeatures, sType}
 
 instance Offset "pNext" VkPhysicalDeviceShaderTerminateInvocationFeatures where
-  rawOffset = #{offset struct VkPhysicalDeviceShaderTerminateInvocationFeatures, pNext}
+  rawOffset = #{offset VkPhysicalDeviceShaderTerminateInvocationFeatures, pNext}
 
 instance Offset "shaderTerminateInvocation" VkPhysicalDeviceShaderTerminateInvocationFeatures where
-  rawOffset = #{offset struct VkPhysicalDeviceShaderTerminateInvocationFeatures, shaderTerminateInvocation}
+  rawOffset = #{offset VkPhysicalDeviceShaderTerminateInvocationFeatures, shaderTerminateInvocation}
 
 #else
 

@@ -33,8 +33,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkAccelerationStructureMemoryRequirementsInfoN
          }
 
 instance Storable VkAccelerationStructureMemoryRequirementsInfoNV where
-  sizeOf    _ = #{size      struct VkAccelerationStructureMemoryRequirementsInfoNV}
-  alignment _ = #{alignment struct VkAccelerationStructureMemoryRequirementsInfoNV}
+  sizeOf    _ = #{size      VkAccelerationStructureMemoryRequirementsInfoNV}
+  alignment _ = #{alignment VkAccelerationStructureMemoryRequirementsInfoNV}
 
   peek ptr = 
     VkAccelerationStructureMemoryRequirementsInfoNV
@@ -50,16 +50,16 @@ instance Storable VkAccelerationStructureMemoryRequirementsInfoNV where
     pokeField @"accelerationStructure" ptr val
 
 instance Offset "sType" VkAccelerationStructureMemoryRequirementsInfoNV where
-  rawOffset = #{offset struct VkAccelerationStructureMemoryRequirementsInfoNV, sType}
+  rawOffset = #{offset VkAccelerationStructureMemoryRequirementsInfoNV, sType}
 
 instance Offset "pNext" VkAccelerationStructureMemoryRequirementsInfoNV where
-  rawOffset = #{offset struct VkAccelerationStructureMemoryRequirementsInfoNV, pNext}
+  rawOffset = #{offset VkAccelerationStructureMemoryRequirementsInfoNV, pNext}
 
 instance Offset "type_" VkAccelerationStructureMemoryRequirementsInfoNV where
-  rawOffset = #{offset struct VkAccelerationStructureMemoryRequirementsInfoNV, type}
+  rawOffset = #{offset VkAccelerationStructureMemoryRequirementsInfoNV, type}
 
 instance Offset "accelerationStructure" VkAccelerationStructureMemoryRequirementsInfoNV where
-  rawOffset = #{offset struct VkAccelerationStructureMemoryRequirementsInfoNV, accelerationStructure}
+  rawOffset = #{offset VkAccelerationStructureMemoryRequirementsInfoNV, accelerationStructure}
 
 instance Offset "type" VkAccelerationStructureMemoryRequirementsInfoNV where
   rawOffset = rawOffset @"type_" @VkAccelerationStructureMemoryRequirementsInfoNV

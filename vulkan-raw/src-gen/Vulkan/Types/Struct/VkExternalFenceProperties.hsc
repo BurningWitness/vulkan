@@ -33,8 +33,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkExternalFenceProperties" #-} VkExternalFence
          }
 
 instance Storable VkExternalFenceProperties where
-  sizeOf    _ = #{size      struct VkExternalFenceProperties}
-  alignment _ = #{alignment struct VkExternalFenceProperties}
+  sizeOf    _ = #{size      VkExternalFenceProperties}
+  alignment _ = #{alignment VkExternalFenceProperties}
 
   peek ptr = 
     VkExternalFenceProperties
@@ -52,19 +52,19 @@ instance Storable VkExternalFenceProperties where
     pokeField @"externalFenceFeatures" ptr val
 
 instance Offset "sType" VkExternalFenceProperties where
-  rawOffset = #{offset struct VkExternalFenceProperties, sType}
+  rawOffset = #{offset VkExternalFenceProperties, sType}
 
 instance Offset "pNext" VkExternalFenceProperties where
-  rawOffset = #{offset struct VkExternalFenceProperties, pNext}
+  rawOffset = #{offset VkExternalFenceProperties, pNext}
 
 instance Offset "exportFromImportedHandleTypes" VkExternalFenceProperties where
-  rawOffset = #{offset struct VkExternalFenceProperties, exportFromImportedHandleTypes}
+  rawOffset = #{offset VkExternalFenceProperties, exportFromImportedHandleTypes}
 
 instance Offset "compatibleHandleTypes" VkExternalFenceProperties where
-  rawOffset = #{offset struct VkExternalFenceProperties, compatibleHandleTypes}
+  rawOffset = #{offset VkExternalFenceProperties, compatibleHandleTypes}
 
 instance Offset "externalFenceFeatures" VkExternalFenceProperties where
-  rawOffset = #{offset struct VkExternalFenceProperties, externalFenceFeatures}
+  rawOffset = #{offset VkExternalFenceProperties, externalFenceFeatures}
 
 #else
 

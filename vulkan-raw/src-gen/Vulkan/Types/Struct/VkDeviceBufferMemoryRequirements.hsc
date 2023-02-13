@@ -30,8 +30,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkDeviceBufferMemoryRequirements" #-} VkDevice
          }
 
 instance Storable VkDeviceBufferMemoryRequirements where
-  sizeOf    _ = #{size      struct VkDeviceBufferMemoryRequirements}
-  alignment _ = #{alignment struct VkDeviceBufferMemoryRequirements}
+  sizeOf    _ = #{size      VkDeviceBufferMemoryRequirements}
+  alignment _ = #{alignment VkDeviceBufferMemoryRequirements}
 
   peek ptr = 
     VkDeviceBufferMemoryRequirements
@@ -45,13 +45,13 @@ instance Storable VkDeviceBufferMemoryRequirements where
     pokeField @"pCreateInfo" ptr val
 
 instance Offset "sType" VkDeviceBufferMemoryRequirements where
-  rawOffset = #{offset struct VkDeviceBufferMemoryRequirements, sType}
+  rawOffset = #{offset VkDeviceBufferMemoryRequirements, sType}
 
 instance Offset "pNext" VkDeviceBufferMemoryRequirements where
-  rawOffset = #{offset struct VkDeviceBufferMemoryRequirements, pNext}
+  rawOffset = #{offset VkDeviceBufferMemoryRequirements, pNext}
 
 instance Offset "pCreateInfo" VkDeviceBufferMemoryRequirements where
-  rawOffset = #{offset struct VkDeviceBufferMemoryRequirements, pCreateInfo}
+  rawOffset = #{offset VkDeviceBufferMemoryRequirements, pCreateInfo}
 
 #else
 

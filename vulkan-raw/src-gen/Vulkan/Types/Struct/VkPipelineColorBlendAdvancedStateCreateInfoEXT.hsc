@@ -33,8 +33,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkPipelineColorBlendAdvancedStateCreateInfoEXT
          }
 
 instance Storable VkPipelineColorBlendAdvancedStateCreateInfoEXT where
-  sizeOf    _ = #{size      struct VkPipelineColorBlendAdvancedStateCreateInfoEXT}
-  alignment _ = #{alignment struct VkPipelineColorBlendAdvancedStateCreateInfoEXT}
+  sizeOf    _ = #{size      VkPipelineColorBlendAdvancedStateCreateInfoEXT}
+  alignment _ = #{alignment VkPipelineColorBlendAdvancedStateCreateInfoEXT}
 
   peek ptr = 
     VkPipelineColorBlendAdvancedStateCreateInfoEXT
@@ -52,19 +52,19 @@ instance Storable VkPipelineColorBlendAdvancedStateCreateInfoEXT where
     pokeField @"blendOverlap" ptr val
 
 instance Offset "sType" VkPipelineColorBlendAdvancedStateCreateInfoEXT where
-  rawOffset = #{offset struct VkPipelineColorBlendAdvancedStateCreateInfoEXT, sType}
+  rawOffset = #{offset VkPipelineColorBlendAdvancedStateCreateInfoEXT, sType}
 
 instance Offset "pNext" VkPipelineColorBlendAdvancedStateCreateInfoEXT where
-  rawOffset = #{offset struct VkPipelineColorBlendAdvancedStateCreateInfoEXT, pNext}
+  rawOffset = #{offset VkPipelineColorBlendAdvancedStateCreateInfoEXT, pNext}
 
 instance Offset "srcPremultiplied" VkPipelineColorBlendAdvancedStateCreateInfoEXT where
-  rawOffset = #{offset struct VkPipelineColorBlendAdvancedStateCreateInfoEXT, srcPremultiplied}
+  rawOffset = #{offset VkPipelineColorBlendAdvancedStateCreateInfoEXT, srcPremultiplied}
 
 instance Offset "dstPremultiplied" VkPipelineColorBlendAdvancedStateCreateInfoEXT where
-  rawOffset = #{offset struct VkPipelineColorBlendAdvancedStateCreateInfoEXT, dstPremultiplied}
+  rawOffset = #{offset VkPipelineColorBlendAdvancedStateCreateInfoEXT, dstPremultiplied}
 
 instance Offset "blendOverlap" VkPipelineColorBlendAdvancedStateCreateInfoEXT where
-  rawOffset = #{offset struct VkPipelineColorBlendAdvancedStateCreateInfoEXT, blendOverlap}
+  rawOffset = #{offset VkPipelineColorBlendAdvancedStateCreateInfoEXT, blendOverlap}
 
 #else
 

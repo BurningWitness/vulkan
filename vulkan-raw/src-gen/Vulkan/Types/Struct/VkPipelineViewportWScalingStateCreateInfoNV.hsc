@@ -33,8 +33,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkPipelineViewportWScalingStateCreateInfoNV" #
          }
 
 instance Storable VkPipelineViewportWScalingStateCreateInfoNV where
-  sizeOf    _ = #{size      struct VkPipelineViewportWScalingStateCreateInfoNV}
-  alignment _ = #{alignment struct VkPipelineViewportWScalingStateCreateInfoNV}
+  sizeOf    _ = #{size      VkPipelineViewportWScalingStateCreateInfoNV}
+  alignment _ = #{alignment VkPipelineViewportWScalingStateCreateInfoNV}
 
   peek ptr = 
     VkPipelineViewportWScalingStateCreateInfoNV
@@ -52,19 +52,19 @@ instance Storable VkPipelineViewportWScalingStateCreateInfoNV where
     pokeField @"pViewportWScalings" ptr val
 
 instance Offset "sType" VkPipelineViewportWScalingStateCreateInfoNV where
-  rawOffset = #{offset struct VkPipelineViewportWScalingStateCreateInfoNV, sType}
+  rawOffset = #{offset VkPipelineViewportWScalingStateCreateInfoNV, sType}
 
 instance Offset "pNext" VkPipelineViewportWScalingStateCreateInfoNV where
-  rawOffset = #{offset struct VkPipelineViewportWScalingStateCreateInfoNV, pNext}
+  rawOffset = #{offset VkPipelineViewportWScalingStateCreateInfoNV, pNext}
 
 instance Offset "viewportWScalingEnable" VkPipelineViewportWScalingStateCreateInfoNV where
-  rawOffset = #{offset struct VkPipelineViewportWScalingStateCreateInfoNV, viewportWScalingEnable}
+  rawOffset = #{offset VkPipelineViewportWScalingStateCreateInfoNV, viewportWScalingEnable}
 
 instance Offset "viewportCount" VkPipelineViewportWScalingStateCreateInfoNV where
-  rawOffset = #{offset struct VkPipelineViewportWScalingStateCreateInfoNV, viewportCount}
+  rawOffset = #{offset VkPipelineViewportWScalingStateCreateInfoNV, viewportCount}
 
 instance Offset "pViewportWScalings" VkPipelineViewportWScalingStateCreateInfoNV where
-  rawOffset = #{offset struct VkPipelineViewportWScalingStateCreateInfoNV, pViewportWScalings}
+  rawOffset = #{offset VkPipelineViewportWScalingStateCreateInfoNV, pViewportWScalings}
 
 #else
 

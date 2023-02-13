@@ -30,8 +30,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkPhysicalDeviceMaintenance4Properties" #-} Vk
          }
 
 instance Storable VkPhysicalDeviceMaintenance4Properties where
-  sizeOf    _ = #{size      struct VkPhysicalDeviceMaintenance4Properties}
-  alignment _ = #{alignment struct VkPhysicalDeviceMaintenance4Properties}
+  sizeOf    _ = #{size      VkPhysicalDeviceMaintenance4Properties}
+  alignment _ = #{alignment VkPhysicalDeviceMaintenance4Properties}
 
   peek ptr = 
     VkPhysicalDeviceMaintenance4Properties
@@ -45,13 +45,13 @@ instance Storable VkPhysicalDeviceMaintenance4Properties where
     pokeField @"maxBufferSize" ptr val
 
 instance Offset "sType" VkPhysicalDeviceMaintenance4Properties where
-  rawOffset = #{offset struct VkPhysicalDeviceMaintenance4Properties, sType}
+  rawOffset = #{offset VkPhysicalDeviceMaintenance4Properties, sType}
 
 instance Offset "pNext" VkPhysicalDeviceMaintenance4Properties where
-  rawOffset = #{offset struct VkPhysicalDeviceMaintenance4Properties, pNext}
+  rawOffset = #{offset VkPhysicalDeviceMaintenance4Properties, pNext}
 
 instance Offset "maxBufferSize" VkPhysicalDeviceMaintenance4Properties where
-  rawOffset = #{offset struct VkPhysicalDeviceMaintenance4Properties, maxBufferSize}
+  rawOffset = #{offset VkPhysicalDeviceMaintenance4Properties, maxBufferSize}
 
 #else
 

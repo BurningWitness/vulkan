@@ -1,9 +1,53 @@
+{-# LANGUAGE DataKinds #-}
+{-# LANGUAGE DuplicateRecordFields #-}
+{-# LANGUAGE MultiParamTypeClasses #-}
+#if __GLASGOW_HASKELL__ >= 902
+{-# LANGUAGE NoFieldSelectors #-}
+#endif
+{-# LANGUAGE TypeApplications #-}
+
 #include <vulkan/vulkan.h>
+
+#if VK_EXT_pipeline_creation_feedback
 
 module Vulkan.Types.Struct.VkPipelineCreationFeedbackEXT where
 
-import Vulkan.Types.Struct.VkPipelineCreationFeedback
+import Data.Int
+import Data.Word
+import Foreign.Ptr
+import Foreign.Storable
+import Foreign.Storable.Offset
+import Vulkan.Types.Enum.VkPipelineCreationFeedbackFlags
 
 
 
-type VkPipelineCreationFeedbackEXT = VkPipelineCreationFeedback
+data {-# CTYPE "vulkan/vulkan.h" "VkPipelineCreationFeedbackEXT" #-} VkPipelineCreationFeedbackEXT =
+       VkPipelineCreationFeedbackEXT
+         { flags :: VkPipelineCreationFeedbackFlags
+         , duration :: #{type uint64_t}
+         }
+
+instance Storable VkPipelineCreationFeedbackEXT where
+  sizeOf    _ = #{size      VkPipelineCreationFeedbackEXT}
+  alignment _ = #{alignment VkPipelineCreationFeedbackEXT}
+
+  peek ptr = 
+    VkPipelineCreationFeedbackEXT
+       <$> peek (offset @"flags" ptr)
+       <*> peek (offset @"duration" ptr)
+
+  poke ptr val = do
+    pokeField @"flags" ptr val
+    pokeField @"duration" ptr val
+
+instance Offset "flags" VkPipelineCreationFeedbackEXT where
+  rawOffset = #{offset VkPipelineCreationFeedbackEXT, flags}
+
+instance Offset "duration" VkPipelineCreationFeedbackEXT where
+  rawOffset = #{offset VkPipelineCreationFeedbackEXT, duration}
+
+#else
+
+module Vulkan.Types.Struct.VkPipelineCreationFeedbackEXT where
+
+#endif

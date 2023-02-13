@@ -30,8 +30,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkPhysicalDeviceImageViewImageFormatInfoEXT" #
          }
 
 instance Storable VkPhysicalDeviceImageViewImageFormatInfoEXT where
-  sizeOf    _ = #{size      struct VkPhysicalDeviceImageViewImageFormatInfoEXT}
-  alignment _ = #{alignment struct VkPhysicalDeviceImageViewImageFormatInfoEXT}
+  sizeOf    _ = #{size      VkPhysicalDeviceImageViewImageFormatInfoEXT}
+  alignment _ = #{alignment VkPhysicalDeviceImageViewImageFormatInfoEXT}
 
   peek ptr = 
     VkPhysicalDeviceImageViewImageFormatInfoEXT
@@ -45,13 +45,13 @@ instance Storable VkPhysicalDeviceImageViewImageFormatInfoEXT where
     pokeField @"imageViewType" ptr val
 
 instance Offset "sType" VkPhysicalDeviceImageViewImageFormatInfoEXT where
-  rawOffset = #{offset struct VkPhysicalDeviceImageViewImageFormatInfoEXT, sType}
+  rawOffset = #{offset VkPhysicalDeviceImageViewImageFormatInfoEXT, sType}
 
 instance Offset "pNext" VkPhysicalDeviceImageViewImageFormatInfoEXT where
-  rawOffset = #{offset struct VkPhysicalDeviceImageViewImageFormatInfoEXT, pNext}
+  rawOffset = #{offset VkPhysicalDeviceImageViewImageFormatInfoEXT, pNext}
 
 instance Offset "imageViewType" VkPhysicalDeviceImageViewImageFormatInfoEXT where
-  rawOffset = #{offset struct VkPhysicalDeviceImageViewImageFormatInfoEXT, imageViewType}
+  rawOffset = #{offset VkPhysicalDeviceImageViewImageFormatInfoEXT, imageViewType}
 
 #else
 

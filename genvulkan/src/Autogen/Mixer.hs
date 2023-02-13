@@ -37,39 +37,7 @@ addFeature api tag (MentionTag feats exts) =
 
 addExtension :: String -> ExtensionTag -> MentionTag -> MentionTag
 addExtension ext reqs (MentionTag feats exts) =
-  MentionTag feats $ Map.insertWith (<>) ext reqs exts
-{-
-deriveFlags :: MentionTag -> Maybe String
-deriveFlags (MentionTag feats exts) =
-  let brfeats
-        | Map.null feats                                     = Right []
-        | Just (FeatureTag 1 _) <- Map.lookup "vulkan" feats = Left ()
-        | otherwise = Right $ getField @"name" <$> Map.elems feats
-
-      brexts = Map.toList exts <&> \(name, ExtensionTag ext) ->
-                 if Set.null ext
-                   then name
-                   else name <> " && " <> List.intercalate " && " (Set.toList ext)
-
-  in case (brfeats, brexts) of
-       (Left ()  , _     ) -> Nothing
-       (Right [] , []    ) -> Nothing
-       (Right [] , [xt0] ) -> Just xt0
-       (Right [] , xts   ) -> Just $ "(" <> List.intercalate ") || (" xts <> ")"
-       (Right fts, []    ) -> Just $ List.intercalate " || " fts
-       (Right fts, xts   ) ->
-         Just $ List.intercalate " || " fts <> " || (" <> List.intercalate ") || (" xts <> ")"
--}
-
-
-fromMentionEnum :: SortedMentions -> MentionEnum -> Either String Mixer.Enumerator
-fromMentionEnum _sorted enum = do
-  Right Mixer.Enumerator
-          { comment = getField @"comment" enum
-          , name    = getField @"name" enum
-          , flavor  = getField @"value" enum
-          , tags    = getField @"tag" enum
-          }
+  MentionTag feats $ Map.insertWith (<>) ext reqs exts     
 
 
 
@@ -293,13 +261,13 @@ categorize frac name =
               , guarding Mixer.Basic  . getField @"bases" $ getField @"types" frac
               , if Map.member name (getField @"enums" $ getField @"types" frac)
                      || Map.member name (getField @"bitmasks" $ getField @"types" frac)
-                  then [Mixer.Enumerated]
+                  then [Mixer.EnumCat]
                   else []
 
-              , guarding Mixer.FunPointer . getField @"funcpointers" $ getField @"types" frac
+              , guarding Mixer.FuncPointerCat . getField @"funcpointers" $ getField @"types" frac
               , guarding Mixer.Handle . getField @"handles" $ getField @"types" frac
-              , guarding Mixer.Struct . getField @"structs" $ getField @"types" frac
-              , guarding Mixer.Union . getField @"unions" $ getField @"types" frac
+              , guarding Mixer.StructCat . getField @"structs" $ getField @"types" frac
+              , guarding Mixer.UnionCat . getField @"unions" $ getField @"types" frac
               ]
 
   in case mconcat total of
@@ -350,197 +318,186 @@ retype frac = go
 moldOffset :: Integer -> Integer -> Maybe Direction -> Integer
 moldOffset extnumber offset Nothing      = 1000000000 + (extnumber - 1) * 1000 + offset
 moldOffset extnumber offset (Just Minus) = negate $ moldOffset extnumber offset Nothing
+{-
+bitToEnum :: Fractions -> MentionTag -> Distillery.Bit -> Either String Mixer.Enumerator
+bitToEnum frac tag bite = do
+  value <-
+    case bite of
+      Bit {}           -> Right . Integral . setBit 0 . fromIntegral $ getField @"bitpos" bite
+      BitEnumerator {} -> Right $ getField @"value" bite
+--      BitAlias {}      -> _ $ getField @"alias" bite
 
-bitToEnum :: MentionTag -> Distillery.Bit -> Mixer.Enumerator
-bitToEnum tag bite =
-  Mixer.Enumerator
-    { comment    = getField @"comment" bite
-    , name       = getField @"name"    bite
-    , flavor     =
-        case bite of
-          Bit {}           -> Normal . Integral . setBit 0 . fromIntegral $ getField @"bitpos" bite
-          BitEnumerator {} -> Normal $ getField @"value" bite
-          BitAlias {}      -> Alias $ getField @"alias" bite
-    , tags       = tag
-    }
+  Right Mixer.Enumerator
+          { comment    = getField @"comment" bite
+          , name       = getField @"name"    bite
+          , value      = value
+          , tags       = tag
+          }
 
-enumToEnum :: MentionTag -> Distillery.Enumerator -> Mixer.Enumerator
-enumToEnum tag enum =
-  Mixer.Enumerator
-    { comment   = getField @"comment" enum
-    , name      = getField @"name"    enum
-    , flavor    =
-        case enum of
-          Distillery.Enumerator {} -> Normal $ getField @"value" enum
-          EnumeratorAlias {}       -> Alias $ getField @"alias" enum
-    , tags      = tag
-    }
+enumToEnum :: Fractions -> MentionTag -> Distillery.Enumerator -> Either String Mixer.Enumerator
+enumToEnum frac tag enum = do
+-}
 
 
 
 mixEnums :: Fractions -> Mentions -> SortedMentions -> Either String (Map String Mixer.Enum)
-mixEnums frac mentions sorted =
-  let mixTypeMentions =
-        case Map.lookup Enumerated sorted of
-          Nothing    -> Right Map.empty
-          Just enums ->
-            flip Map.traverseWithKey enums $ \enum tag ->
-              case Map.lookup enum (getField @"bitmasks" $ getField @"types" frac) of
-                Nothing                  ->
-                  case Map.lookup enum (getField @"enums" $ getField @"types" frac) of
-                    Nothing -> Left $ "Unknown enum " <> enum
+mixEnums frac mentions sorted = do
+  case Map.lookup EnumCat sorted of
+    Nothing    -> Right Map.empty
+    Just ens ->
+      flip Map.traverseWithKey ens $ \name0 tag -> do
+        let mentioned = case Map.lookup name0 $ getField @"enums" mentions of
+                          Nothing   -> []
+                          Just ment -> ment
 
-                    Just (EnumStubAlias alias) ->
-                      Right Mixer.Enum
-                              { comment = Nothing
-                              , type_   = Mixer.Int
-                              , flavor  = Alias alias
-                              , tags    = tag
-                              }
+            loopStub source name n
+              | n > 15    = Left $ "Ran out of loops looking for an alias to enum stub " <> source
+              | otherwise =
+                  case Map.lookup name (getField @"bitmasks" $ getField @"types" frac) of
+                    Nothing                  ->
+                      case Map.lookup name (getField @"enums" $ getField @"types" frac) of
+                        Nothing                    -> Left $ "Could not find enum stub " <> name
+                        Just (EnumStubAlias alias) -> loopStub source alias (n + 1)
+                        Just EnumStub              -> Right Mixer.Int
 
-                    Just EnumStub ->
-                      case Map.lookup enum (getField @"bitmasks" frac) of
-                        Nothing ->
-                          case Map.lookup enum (getField @"enums" frac) of
-                            Nothing ->
-                              Right Mixer.Enum
-                                      { comment   = Nothing
-                                      , type_     = Mixer.Int
-                                      , flavor    = Normal []
-                                      , tags      = tag
-                                      }
+                    Just (BitmaskStubAlias alias) -> loopStub source alias (n + 1)
+                    Just (BitmaskStub stubtype)   -> Custom <$> mkVkType frac stubtype
 
-                            Just realEnum ->
-                              Right Mixer.Enum
-                                      { comment = getField @"comment" realEnum
-                                      , type_   = Mixer.Int
-                                      , flavor  = Normal $ enumToEnum tag <$> getField @"enums" realEnum
-                                      , tags    = tag
-                                      }
+            lookupCore name =
+              case Map.lookup name (getField @"bitmasks" frac) of
+                Nothing ->
+                  case Map.lookup name (getField @"enums" frac) of
+                    Nothing       ->
+                      ( Left []
+                      , \type_ pieces -> Mixer.Enum
+                                           { comment = Nothing
+                                           , type_   = type_
+                                           , enums   = pieces
+                                           , tags    = tag
+                                           }
+                      )
 
-                        Just realBitmask ->
-                          Right Mixer.Enum
-                                  { comment = getField @"comment" realBitmask
-                                  , type_   = Mixer.Int
-                                  , flavor  = Normal $ bitToEnum tag <$> getField @"bits" realBitmask
-                                  , tags    = tag
-                                  }
+                    Just realEnum ->
+                      ( Left $ getField @"enums" realEnum
+                      , \type_ pieces -> Mixer.Enum
+                                           { comment = getField @"comment" realEnum
+                                           , type_   = type_
+                                           , enums   = pieces
+                                           , tags    = tag
+                                           }
+                      )
 
-                Just (BitmaskStubAlias alias) ->
-                  case Map.lookup alias (getField @"bitmasks" $ getField @"types" frac) of
-                    Nothing                  -> Left $ "Could not find bitmask alias " <> alias
-                    Just BitmaskStubAlias {} ->
-                      Left $ "Bitmask alias " <> alias <> " refers to a different alias"
+                Just realBitmask ->
+                  ( Right $ getField @"bits" realBitmask
+                  , \type_ pieces -> Mixer.Enum
+                                       { comment = getField @"comment" realBitmask
+                                       , type_   = type_
+                                       , enums   = pieces
+                                       , tags    = tag
+                                       }
+                  )
 
-                    Just (BitmaskStub stubtype) -> do
-                      type_ <- mkVkType frac stubtype
-                      Right Mixer.Enum
-                              { comment = Nothing
-                              , type_   = Custom type_
-                              , flavor  = Alias alias
-                              , tags    = tag
-                              }
-
-                Just (BitmaskStub stubtype) -> do
-                  type_ <- mkVkType frac stubtype
-                  case Map.lookup enum (getField @"bitmasks" frac) of
-                    Nothing ->
-                      Right Mixer.Enum
-                              { comment   = Nothing
-                              , type_     = Custom type_
-                              , flavor    = Normal []
+            dealiasEnum :: Either Distillery.Enumerator MentionEnum -> [Distillery.Enumerator] -> [MentionEnum] -> Either Distillery.Enumerator MentionEnum -> Int -> Either String Mixer.Enumerator
+            dealiasEnum source enums ments part n
+              | n > 15    = Left $ "Could not find alias for enum " <> either (getField @"name") (getField @"name") source
+              | otherwise = do
+                  case part of
+                    Left e@Distillery.Enumerator {} ->
+                      Right Mixer.Enumerator
+                              { comment   = either (getField @"comment") (getField @"comment") source
+                              , name      = either (getField @"name")    (getField @"name")    source
+                              , value     = getField @"value" e
                               , tags      = tag
                               }
 
-                    Just realBitmask ->
-                      Right Mixer.Enum
-                              { comment = getField @"comment" realBitmask
-                              , type_   = Custom type_
-                              , flavor  = Normal $ bitToEnum tag <$> getField @"bits" realBitmask
-                              , tags    = tag
+                    Left e@EnumeratorAlias {}       ->
+                      case find ((== getField @"alias" e) . getField @"name") enums of
+                        Nothing  ->
+                          case find ((== getField @"alias" e) . getField @"name") ments of
+                            Nothing -> Left $ "No alias for enumerator " <> either (getField @"name") (getField @"name") source
+                            Just m  -> dealiasEnum source enums ments (Right m) (n + 1)
+                        Just e2  -> dealiasEnum source enums ments (Left e2) (n + 1)
+
+                    Right m@MentionEnum {}          ->
+                      case getField @"flavor" m of
+                        Normal value ->
+                          Right Mixer.Enumerator
+                                 { comment   = either (getField @"comment") (getField @"comment") source
+                                 , name      = either (getField @"name")    (getField @"name")    source
+                                 , value     = value
+                                 , tags      = either (const tag) (getField @"tag") source
+                                 }
+
+                        Alias alias  ->
+                          case find ((== alias) . getField @"name") enums of
+                            Nothing  ->
+                              case find ((== alias) . getField @"name") ments of
+                                Nothing -> Left $ "No alias for enumerator " <> either (getField @"name") (getField @"name") source
+                                Just m2 -> dealiasEnum source enums ments (Right m2) (n + 1)
+                            Just e  -> dealiasEnum source enums ments (Left e) (n + 1)
+
+            dealiasBit :: Either Bit MentionEnum -> [Bit] -> [MentionEnum] -> Either Bit MentionEnum -> Int -> Either String Mixer.Enumerator
+            dealiasBit source bits ments part n
+              | n > 15    = Left $ "Could not find alias for bit " <> either (getField @"name") (getField @"name") source
+              | otherwise = do
+                  case part of
+                    Left b@Distillery.Bit {} ->
+                      let value = Integral . setBit 0 . fromIntegral $ getField @"bitpos" b
+                      in Right Mixer.Enumerator
+                                 { comment   = either (getField @"comment") (getField @"comment") source
+                                 , name      = either (getField @"name")    (getField @"name")    source
+                                 , value     = value
+                                 , tags      = tag
+                                 }
+
+                    Left b@Distillery.BitEnumerator {} ->
+                      Right Mixer.Enumerator
+                              { comment   = either (getField @"comment") (getField @"comment") source
+                              , name      = either (getField @"name")    (getField @"name")    source
+                              , value     = getField @"value" b
+                              , tags      = tag
                               }
 
-      mixEnumMentions :: Map String Mixer.Enum -> Either String (Map String Mixer.Enum)
-      mixEnumMentions top =
-        (\f -> foldlMWithKey f top (getField @"enums" mentions)) $ \acc enum ment -> do
-          dement <- traverse (fromMentionEnum sorted) ment
-          (\f -> Map.alterF f enum acc) $ \mayVal ->
-            case mayVal of
-              Just Mixer.Enum {..} ->
-                case flavor of
-                  Alias _      -> Left $ "Extended enum " <> enum <> " is an alias"
-                  Normal parts ->
-                    Right $ Just Mixer.Enum
-                                   { comment = comment
-                                   , type_   = type_
-                                   , flavor  = Normal $ parts <> dement
-                                   , tags    = tags
-                                   }
+                    Left b@BitAlias {}       ->
+                      case find ((== getField @"alias" b) . getField @"name") bits of
+                        Nothing  ->
+                          case find ((== getField @"alias" b) . getField @"name") ments of
+                            Nothing -> Left $ "No alias for bit " <> either (getField @"name") (getField @"name") source
+                            Just m  -> dealiasBit source bits ments (Right m) (n + 1)
+                        Just b2  -> dealiasBit source bits ments (Left b2) (n + 1)
 
-              Nothing ->
-                case Map.lookup enum (getField @"bitmasks" $ getField @"types" frac) of
-                  Nothing                  ->
-                    case Map.lookup enum (getField @"enums" $ getField @"types" frac) of
-                      Nothing -> Left $ "Unknown enum " <> enum
+                    Right m@MentionEnum {}          ->
+                      case getField @"flavor" m of
+                        Normal value ->
+                          Right Mixer.Enumerator
+                                 { comment   = either (getField @"comment") (getField @"comment") source
+                                 , name      = either (getField @"name")    (getField @"name")    source
+                                 , value     = value
+                                 , tags      = either (const tag) (getField @"tag") source
+                                 }
 
-                      Just EnumStubAlias {} ->
-                        Left $ "Top-level " <> enum <> " enum mention resolves to an alias"
+                        Alias alias  ->
+                          case find ((== alias) . getField @"name") bits of
+                            Nothing  ->
+                              case find ((== alias) . getField @"name") ments of
+                                Nothing -> Left $ "No alias for bit " <> either (getField @"name") (getField @"name") source
+                                Just m2 -> dealiasBit source bits ments (Right m2) (n + 1)
+                            Just b   -> dealiasBit source bits ments (Left b) (n + 1)
 
-                      Just EnumStub {} ->
-                        case Map.lookup enum (getField @"bitmasks" frac) of
-                          Nothing ->
-                            case Map.lookup enum (getField @"enums" frac) of
-                              Nothing ->
-                                Right $ Just Mixer.Enum
-                                               { comment   = Nothing
-                                               , type_     = Mixer.Int
-                                               , flavor    = Normal dement
-                                               , tags      = mempty
-                                               }
+            sequenceDealias (Left enums) rest = do
+              top    <- traverse (\e -> dealiasEnum (Left e)  enums rest (Left e)  0) enums
+              bottom <- traverse (\m -> dealiasEnum (Right m) enums rest (Right m) 0) rest
+              Right $ top <> bottom
 
-                              Just realEnum ->
-                                Right $ Just Mixer.Enum
-                                               { comment = getField @"comment" realEnum
-                                               , type_   = Mixer.Int
-                                               , flavor  =
-                                                   Normal $ (enumToEnum mempty <$> getField @"enums" realEnum) <> dement
-                                               , tags    = mempty
-                                               }
+            sequenceDealias (Right bits) rest = do
+              top    <- traverse (\b -> dealiasBit (Left b)  bits rest (Left b)  0) bits
+              bottom <- traverse (\m -> dealiasBit (Right m) bits rest (Right m) 0) rest
+              Right $ top <> bottom
 
-                          Just realBitmask ->
-                            Right $ Just Mixer.Enum
-                                           { comment = getField @"comment" realBitmask
-                                           , type_   = Mixer.Int
-                                           , flavor  =
-                                               Normal $ (bitToEnum mempty <$> getField @"bits" realBitmask) <> dement
-                                           , tags    = mempty
-                                           }
-                  Just BitmaskStubAlias {} ->
-                    Left $ "Top-level " <> enum <> " enum mention resolves to an alias"
-
-                  Just (BitmaskStub stubtype) -> do
-                    type_ <- mkVkType frac stubtype
-                    case Map.lookup enum (getField @"bitmasks" frac) of
-                      Nothing ->
-                        Right $ Just Mixer.Enum
-                                       { comment   = Nothing
-                                       , type_     = Custom type_
-                                       , flavor    = Normal dement
-                                       , tags      = mempty
-                                       }
-
-                      Just realBitmask ->
-                        Right $ Just Mixer.Enum
-                                       { comment = getField @"comment" realBitmask
-                                       , type_   = Custom type_
-                                       , flavor  =
-                                           Normal $ (bitToEnum mempty <$> getField @"bits" realBitmask) <> dement
-                                       , tags    = mempty
-                                       }
-
-  in do
-    top <- mixTypeMentions
-    mixEnumMentions top
+        type_ <- loopStub name0 name0 (0 :: Int)
+        let (core, shell) = lookupCore name0
+        enumlist <- sequenceDealias core mentioned
+        Right $ shell type_ enumlist
 
 
 
@@ -581,7 +538,6 @@ mixConstants frac =
       Distillery.Constant {} ->
         Right Mixer.Constant
                 { value   = getField @"value" constant
-                , alias   = Nothing
                 , comment = getField @"comment" constant
                 }
 
@@ -594,7 +550,6 @@ mixConstants frac =
           Just aliased@Distillery.Constant {} ->
             Right Mixer.Constant
                     { value   = getField @"value" aliased
-                    , alias   = Just $ getField @"alias" constant
                     , comment = getField @"comment" constant
                     }
 
@@ -602,7 +557,7 @@ mixConstants frac =
 
 mixFuncPointers :: Fractions -> SortedMentions -> Either String (Map String Mixer.FuncPointer)
 mixFuncPointers frac sorted =
-  case Map.lookup Mixer.FunPointer sorted of
+  case Map.lookup Mixer.FuncPointerCat sorted of
     Nothing      -> Left "No mentions of funcpointers?"
     Just funptrs ->
       flip Map.traverseWithKey funptrs $ \name _mentionTag ->
@@ -638,68 +593,82 @@ mixHandles frac sorted =
   case Map.lookup Mixer.Handle sorted of
     Nothing      -> Left "No mentions of handles?"
     Just handles ->
-      flip Map.traverseWithKey handles $ \name _mentionTag ->
-        case Map.lookup name (getField @"handles" $ getField @"types" frac) of
-          Nothing         -> Left $ "No handle " <> name
-          Just realHandle ->
-            Right $
-              case realHandle of
-                Distillery.Handle                -> Normal Mixer.DispatchableHandle
-                Distillery.NonDispatchableHandle -> Normal Mixer.NonDispatchableHandle
-                Distillery.HandleAlias alias     -> Alias alias
+      let loop source name n
+            | n > 15    = Left $ "Ran out of loops looking up alias for handle " <> source
+            | otherwise =
+                case Map.lookup name (getField @"handles" $ getField @"types" frac) of
+                  Nothing         -> Left $ "No handle " <> name
+                  Just realHandle ->
+                    case realHandle of
+                      Distillery.Handle                -> Right Mixer.DispatchableHandle
+                      Distillery.NonDispatchableHandle -> Right Mixer.NonDispatchableHandle
+                      Distillery.HandleAlias alias     -> loop source alias (n + 1)
+
+      in flip Map.traverseWithKey handles $ \name _mentionTag ->
+           loop name name (0 :: Int)
 
 
 
 mixStructs :: Fractions -> SortedMentions -> Either String (Map String Mixer.Struct)
 mixStructs frac sorted =
-  case Map.lookup Mixer.Struct sorted of
+  case Map.lookup Mixer.StructCat sorted of
     Nothing     -> Left "No mentions of structs?"
-    Just unions ->
-      (\f -> foldlMWithKey f Map.empty unions) $ \acc name mentionTag -> do
-        case Map.lookup name (getField @"structs" $ getField @"types" frac) of
-          Nothing         -> Left $ "No struct " <> name
-          Just realStruct ->
-            case realStruct of
-              StructAlias alias        -> Right $ Map.insert name (Alias alias) acc
-              Distillery.Struct fields -> do
-                fields' <- for fields $ \arg -> do
-                             t' <- retype frac $ getField @"type_" arg
-                             Right Mixer.Field
-                                     { name    = getField @"name" arg
-                                     , type_   = t'
-                                     , comment = getField @"comment" arg
-                                     }
+    Just structs ->
+      flip Map.traverseWithKey structs $ \name0 mentionTag ->
+        let loop source name n
+              | n > 15    = Left $ "Ran out of loops looking up alias for struct " <> source
+              | otherwise =
+                  case Map.lookup name (getField @"structs" $ getField @"types" frac) of
+                    Nothing         -> Left $ "No struct " <> name
+                    Just realStruct ->
+                      case realStruct of
+                        StructAlias alias        -> loop source alias (n + 1)
+                        Distillery.Struct fields -> do
+                          fields' <- for fields $ \arg -> do
+                                       t' <- retype frac $ getField @"type_" arg
+                                       Right Mixer.Field
+                                               { name    = getField @"name" arg
+                                               , type_   = t'
+                                               , comment = getField @"comment" arg
+                                               }
 
-                Right . (\r -> Map.insert name r acc) $
-                          Normal RealStruct
-                                 { fields = fields'
-                                 , tags   = mentionTag
-                                 }
+                          Right $ Mixer.Struct
+                                    { fields = fields'
+                                    , tags   = mentionTag
+                                    }
+
+        in loop name0 name0 (0 :: Int)
+
+
 
 mixUnions :: Fractions -> SortedMentions -> Either String (Map String Mixer.Union)
 mixUnions frac sorted =
-  case Map.lookup Mixer.Union sorted of
+  case Map.lookup Mixer.UnionCat sorted of
     Nothing     -> Left "No mentions of unions?"
     Just unions ->
-      flip Map.traverseWithKey unions $ \name mentionTag -> do
-        case Map.lookup name (getField @"unions" $ getField @"types" frac) of
-          Nothing        -> Left $ "No union " <> name
-          Just realUnion ->
-            case realUnion of
-              UnionAlias alias        -> Right $ Alias alias
-              Distillery.Union fields -> do
-                fields' <- for fields $ \arg -> do
-                             t' <- retype frac $ getField @"type_" arg
-                             Right Mixer.Field
-                                     { name    = getField @"name" arg
-                                     , type_   = t'
-                                     , comment = getField @"comment" arg
-                                     }
+      flip Map.traverseWithKey unions $ \name0 mentionTag ->
+        let loop source name n
+              | n > 15    = Left $ "Ran out of loops looking up alias for union " <> source
+              | otherwise =
+                  case Map.lookup name (getField @"unions" $ getField @"types" frac) of
+                    Nothing        -> Left $ "No union " <> name
+                    Just realUnion ->
+                      case realUnion of
+                        UnionAlias alias        -> loop source alias (n + 1)
+                        Distillery.Union fields -> do
+                          fields' <- for fields $ \arg -> do
+                                       t' <- retype frac $ getField @"type_" arg
+                                       Right Mixer.Field
+                                               { name    = getField @"name" arg
+                                               , type_   = t'
+                                               , comment = getField @"comment" arg
+                                               }
 
-                Right $ Normal RealUnion
-                                 { fields = fields'
-                                 , tags   = mentionTag
-                                 }
+                          Right Mixer.Union
+                                        { fields = fields'
+                                        , tags   = mentionTag
+                                        }
+        in loop name0 name0 (0 :: Int)
 
 
 
@@ -713,55 +682,37 @@ getFlagName api      ver =
 
 mixCommands :: Fractions -> Mentions -> Either String (Map String Mixer.Command)
 mixCommands frac mentions =
-  flip Map.traverseWithKey (getField @"commands" mentions) $ \name mentionTag -> do
-    case Map.lookup name (getField @"commands" frac) of
-      Nothing          -> Left $ "No command " <> name
-      Just realCommand ->
-        case realCommand of
-          CommandAlias alias          ->
-            case Map.lookup alias (getField @"commands" frac) of
-              Nothing -> Left $ "Cannot find alias for command " <> name
-              Just CommandAlias {} ->
-                Left $ "Command alias " <> name <> " links to an alias"
+  flip Map.traverseWithKey (getField @"commands" mentions) $ \name0 mentionTag ->
+    let loop source name n
+          | n > 15    = Left $ "Ran out of loops looking up alias for command " <> source
+          | otherwise =
+              case Map.lookup name (getField @"commands" frac) of
+                Nothing          -> Left $ "Cannot find command name " <> name
+                Just command ->
+                  case command of
+                    CommandAlias alias          -> loop source alias (n + 1)
+                    Distillery.Command args ret -> do
+                      args' <- for args $ \arg -> do
+                                 t' <- retype frac $ getField @"type_" arg
+                                 Right Mixer.Argument
+                                         { name  = getField @"name" arg
+                                         , type_ = t'
+                                         }
 
-              Just (Distillery.Command args ret) -> do
-                args' <- for args $ \arg -> do
-                          t' <- retype frac $ getField @"type_" arg
-                          Right Mixer.Argument
-                                  { name  = getField @"name" arg
-                                  , type_ = t'
-                                  }
+                      ret' <- retype frac ret
 
-                ret' <- retype frac ret
+                      cmdtype <-
+                        case Map.lookup "vulkan" $ getField @"features" mentionTag of
+                          Nothing                 -> Right Extended
+                          Just (FeatureTag ver _) -> Imported <$> getFlagName "vulkan" ver
 
-                Right $ Mixer.Command
-                          { arguments = args'
-                          , return    = ret'
-                          , type_     = Alias alias
-                          , tags      = mentionTag
-                          }
-
-          Distillery.Command args ret -> do
-            args' <- for args $ \arg -> do
-                       t' <- retype frac $ getField @"type_" arg
-                       Right Mixer.Argument
-                               { name  = getField @"name" arg
-                               , type_ = t'
-                               }
-
-            ret' <- retype frac ret
-
-            cmdtype <-
-              case Map.lookup "vulkan" $ getField @"features" mentionTag of
-                Nothing                 -> Right Extended
-                Just (FeatureTag ver _) -> Imported <$> getFlagName "vulkan" ver
-
-            Right $ Mixer.Command
-                            { arguments = args'
-                            , return    = ret'
-                            , type_     = Normal cmdtype
-                            , tags      = mentionTag
-                            }
+                      Right $ Mixer.Command
+                                      { arguments = args'
+                                      , return    = ret'
+                                      , type_     = cmdtype
+                                      , tags      = mentionTag
+                                      }
+    in loop name0 name0 (0 :: Int)
 
 
 
@@ -769,11 +720,10 @@ requireFeatureType :: Fractions -> Map String Mixer.Enum -> String -> Double -> 
 requireFeatureType frac enums api number name = do
   cat <- categorize frac name
   case cat of
-    Enumerated ->
-      case getField @"flavor" <$> Map.lookup name enums of
-        Nothing             -> Left name
-        Just (Alias _alias) -> Left $ "Feature requires an enumerator alias for  " <> name
-        Just (Normal ens)   ->
+    EnumCat ->
+      case Map.lookup name enums of
+        Nothing    -> Left name
+        Just en ->
           Right $
             let applyRequire :: Mixer.Enumerator -> Mixer.Require
                 applyRequire enum =
@@ -790,10 +740,10 @@ requireFeatureType frac enums api number name = do
 
             in (:) Mixer.RequireType
                      { name = name
-                     , category = Enumerated
+                     , category = EnumCat
                      }
                  $ applyRequire <$>
-                     filter (condition . getField @"features" . getField @"tags") ens
+                     filter (condition . getField @"features" . getField @"tags") (getField @"enums" en)
 
     Mixer.Handle ->
       case Map.lookup name . getField @"handles" $ getField @"types" frac of
@@ -809,7 +759,7 @@ requireFeatureType frac enums api number name = do
                                                }
                                            ]
 
-    Mixer.Struct ->
+    Mixer.StructCat ->
       case Map.lookup name . getField @"structs" $ getField @"types" frac of
         Nothing                   -> Left $ "No struct " <> name
         Just (StructAlias alias)  -> Right [ RequireStruct
@@ -823,7 +773,7 @@ requireFeatureType frac enums api number name = do
                                                }
                                            ]
 
-    Mixer.Union ->
+    Mixer.UnionCat ->
       case Map.lookup name . getField @"unions" $ getField @"types" frac of
         Nothing                  -> Left $ "No struct " <> name
         Just (UnionAlias alias)  -> Right [ RequireUnion
@@ -846,14 +796,10 @@ requireExtensionType :: String -> Fractions -> Map String Mixer.Enum -> String -
 requireExtensionType extname frac enums name = do
   cat <- categorize frac name
   case cat of
-    Enumerated ->
-      case getField @"flavor" <$> Map.lookup name enums of
-        Nothing            -> Left name
-        Just (Alias _)     -> Right . pure $ Mixer.RequireType
-                                               { name     = name
-                                               , category = Enumerated
-                                               }
-        Just (Normal ens)  ->
+    EnumCat ->
+      case Map.lookup name enums of
+        Nothing -> Left $ "No enum " <> name
+        Just en ->
           Right $
             let applyRequire :: Mixer.Enumerator -> Mixer.Require
                 applyRequire enum =
@@ -863,11 +809,11 @@ requireExtensionType extname frac enums name = do
                     }
 
             in (:) Mixer.RequireType
-                     { name = name
-                     , category = Enumerated
+                     { name     = name
+                     , category = EnumCat
                      }
                  $ applyRequire <$>
-                     filter (Map.member extname . getField @"extensions" . getField @"tags") ens
+                     filter (Map.member extname . getField @"extensions" . getField @"tags") (getField @"enums" en)
 
     Mixer.Handle ->
       case Map.lookup name . getField @"handles" $ getField @"types" frac of
@@ -883,7 +829,7 @@ requireExtensionType extname frac enums name = do
                                                }
                                            ]
 
-    Mixer.Struct ->
+    Mixer.StructCat ->
       case Map.lookup name . getField @"structs" $ getField @"types" frac of
         Nothing                   -> Left $ "No struct " <> name
         Just (StructAlias alias)  -> Right [ RequireStruct
@@ -897,7 +843,7 @@ requireExtensionType extname frac enums name = do
                                                }
                                            ]
 
-    Mixer.Union ->
+    Mixer.UnionCat ->
       case Map.lookup name . getField @"unions" $ getField @"types" frac of
         Nothing                  -> Left $ "No struct " <> name
         Just (UnionAlias alias)  -> Right [ RequireUnion
@@ -915,8 +861,6 @@ requireExtensionType extname frac enums name = do
                                  { name     = name
                                  , category = cat
                                  }
-
-
 
 
 
@@ -1119,7 +1063,7 @@ mixExtensionBlock frac ment enums _extnumber extname acc0 block@RequireExtension
                 Just entry ->
                   case Map.lookup (getField @"alias" req) entry of
                     Nothing  -> Left $ "Cannot find alias to " <> getField @"name" req <> " in extension " <> extname
-                    Just val -> 
+                    Just val ->
                       Right $ acc <> [ Mixer.RequireEnumeratorInplace
                                          { name    = getField @"name" req
                                          , value   = val
@@ -1208,7 +1152,7 @@ sortDependencies frac sorted =
   (\f -> foldlMWithKey f Map.empty sorted) $ \acc0 cat mentions ->
     (\f -> foldlMWithKey f acc0 mentions) $ \acc1 name tag -> do
       let nodep = Map.insertWith (\_ -> Set.insert (cat, name)) Nothing (Set.singleton (cat, name)) acc1
-      if elem cat [Enumerated, Mixer.Struct, Mixer.Union, Function]
+      if elem cat [EnumCat, Mixer.StructCat, Mixer.UnionCat, Function]
            && Map.null (getField @"features" tag)
         then do
           deps <-

@@ -30,8 +30,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkPhysicalDeviceFragmentDensityMapOffsetFeatur
          }
 
 instance Storable VkPhysicalDeviceFragmentDensityMapOffsetFeaturesQCOM where
-  sizeOf    _ = #{size      struct VkPhysicalDeviceFragmentDensityMapOffsetFeaturesQCOM}
-  alignment _ = #{alignment struct VkPhysicalDeviceFragmentDensityMapOffsetFeaturesQCOM}
+  sizeOf    _ = #{size      VkPhysicalDeviceFragmentDensityMapOffsetFeaturesQCOM}
+  alignment _ = #{alignment VkPhysicalDeviceFragmentDensityMapOffsetFeaturesQCOM}
 
   peek ptr = 
     VkPhysicalDeviceFragmentDensityMapOffsetFeaturesQCOM
@@ -45,13 +45,13 @@ instance Storable VkPhysicalDeviceFragmentDensityMapOffsetFeaturesQCOM where
     pokeField @"fragmentDensityMapOffset" ptr val
 
 instance Offset "sType" VkPhysicalDeviceFragmentDensityMapOffsetFeaturesQCOM where
-  rawOffset = #{offset struct VkPhysicalDeviceFragmentDensityMapOffsetFeaturesQCOM, sType}
+  rawOffset = #{offset VkPhysicalDeviceFragmentDensityMapOffsetFeaturesQCOM, sType}
 
 instance Offset "pNext" VkPhysicalDeviceFragmentDensityMapOffsetFeaturesQCOM where
-  rawOffset = #{offset struct VkPhysicalDeviceFragmentDensityMapOffsetFeaturesQCOM, pNext}
+  rawOffset = #{offset VkPhysicalDeviceFragmentDensityMapOffsetFeaturesQCOM, pNext}
 
 instance Offset "fragmentDensityMapOffset" VkPhysicalDeviceFragmentDensityMapOffsetFeaturesQCOM where
-  rawOffset = #{offset struct VkPhysicalDeviceFragmentDensityMapOffsetFeaturesQCOM, fragmentDensityMapOffset}
+  rawOffset = #{offset VkPhysicalDeviceFragmentDensityMapOffsetFeaturesQCOM, fragmentDensityMapOffset}
 
 #else
 

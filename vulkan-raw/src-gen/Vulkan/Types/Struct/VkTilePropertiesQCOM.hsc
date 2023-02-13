@@ -34,8 +34,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkTilePropertiesQCOM" #-} VkTilePropertiesQCOM
          }
 
 instance Storable VkTilePropertiesQCOM where
-  sizeOf    _ = #{size      struct VkTilePropertiesQCOM}
-  alignment _ = #{alignment struct VkTilePropertiesQCOM}
+  sizeOf    _ = #{size      VkTilePropertiesQCOM}
+  alignment _ = #{alignment VkTilePropertiesQCOM}
 
   peek ptr = 
     VkTilePropertiesQCOM
@@ -53,19 +53,19 @@ instance Storable VkTilePropertiesQCOM where
     pokeField @"origin" ptr val
 
 instance Offset "sType" VkTilePropertiesQCOM where
-  rawOffset = #{offset struct VkTilePropertiesQCOM, sType}
+  rawOffset = #{offset VkTilePropertiesQCOM, sType}
 
 instance Offset "pNext" VkTilePropertiesQCOM where
-  rawOffset = #{offset struct VkTilePropertiesQCOM, pNext}
+  rawOffset = #{offset VkTilePropertiesQCOM, pNext}
 
 instance Offset "tileSize" VkTilePropertiesQCOM where
-  rawOffset = #{offset struct VkTilePropertiesQCOM, tileSize}
+  rawOffset = #{offset VkTilePropertiesQCOM, tileSize}
 
 instance Offset "apronSize" VkTilePropertiesQCOM where
-  rawOffset = #{offset struct VkTilePropertiesQCOM, apronSize}
+  rawOffset = #{offset VkTilePropertiesQCOM, apronSize}
 
 instance Offset "origin" VkTilePropertiesQCOM where
-  rawOffset = #{offset struct VkTilePropertiesQCOM, origin}
+  rawOffset = #{offset VkTilePropertiesQCOM, origin}
 
 #else
 

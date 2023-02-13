@@ -30,8 +30,8 @@ data {-# CTYPE "vulkan/vulkan.h" "VkPhysicalDeviceMultiviewPerViewAttributesProp
          }
 
 instance Storable VkPhysicalDeviceMultiviewPerViewAttributesPropertiesNVX where
-  sizeOf    _ = #{size      struct VkPhysicalDeviceMultiviewPerViewAttributesPropertiesNVX}
-  alignment _ = #{alignment struct VkPhysicalDeviceMultiviewPerViewAttributesPropertiesNVX}
+  sizeOf    _ = #{size      VkPhysicalDeviceMultiviewPerViewAttributesPropertiesNVX}
+  alignment _ = #{alignment VkPhysicalDeviceMultiviewPerViewAttributesPropertiesNVX}
 
   peek ptr = 
     VkPhysicalDeviceMultiviewPerViewAttributesPropertiesNVX
@@ -45,13 +45,13 @@ instance Storable VkPhysicalDeviceMultiviewPerViewAttributesPropertiesNVX where
     pokeField @"perViewPositionAllComponents" ptr val
 
 instance Offset "sType" VkPhysicalDeviceMultiviewPerViewAttributesPropertiesNVX where
-  rawOffset = #{offset struct VkPhysicalDeviceMultiviewPerViewAttributesPropertiesNVX, sType}
+  rawOffset = #{offset VkPhysicalDeviceMultiviewPerViewAttributesPropertiesNVX, sType}
 
 instance Offset "pNext" VkPhysicalDeviceMultiviewPerViewAttributesPropertiesNVX where
-  rawOffset = #{offset struct VkPhysicalDeviceMultiviewPerViewAttributesPropertiesNVX, pNext}
+  rawOffset = #{offset VkPhysicalDeviceMultiviewPerViewAttributesPropertiesNVX, pNext}
 
 instance Offset "perViewPositionAllComponents" VkPhysicalDeviceMultiviewPerViewAttributesPropertiesNVX where
-  rawOffset = #{offset struct VkPhysicalDeviceMultiviewPerViewAttributesPropertiesNVX, perViewPositionAllComponents}
+  rawOffset = #{offset VkPhysicalDeviceMultiviewPerViewAttributesPropertiesNVX, perViewPositionAllComponents}
 
 #else
 
