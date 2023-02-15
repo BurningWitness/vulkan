@@ -1,0 +1,6 @@
+packages: ../vulkan-raw
+        , ../vk-mem-alloc
+        , .
+
+package vulkan-raw
+  flags: +VK_KHR_surface +VK_KHR_swapchain

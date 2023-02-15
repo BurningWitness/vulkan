@@ -5,12 +5,17 @@ module Autogen.Cabal.Types where
 
 
 
-data Extension =
-       Extension
-         { name  :: String
-         , macro :: String 
+data Platform =
+       Platform
+         { name    :: String
+         , macro   :: String
+         , comment :: String
          }
-       deriving (Show, Eq, Ord)
+       deriving Show
+
+data Class = Feat String Double
+           | Ext String
+             deriving (Show, Eq, Ord)
 
 data Body =
        Body

@@ -31,7 +31,7 @@ import GHC.Ptr
 import Vulkan.Types.Enum.VkDeviceMemoryReportEventTypeEXT
 import Vulkan.Types.Enum.VkDeviceMemoryReportFlagsEXT
 import Vulkan.Types.Enum.VkStructureType
-import Vulkan.Types.FuncPointer
+import Vulkan.Types.FuncPointer.PFN_vkDeviceMemoryReportCallbackEXT
 import Vulkan.Types.Struct.VkDeviceDeviceMemoryReportCreateInfoEXT
 import Vulkan.Types.Struct.VkDeviceMemoryReportCallbackDataEXT
 import Vulkan.Types.Struct.VkPhysicalDeviceDeviceMemoryReportFeaturesEXT

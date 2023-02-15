@@ -10,7 +10,7 @@ module Vulkan.Types.Command.VkGetInstanceProcAddr where
 import Data.Int
 import Data.Word
 import GHC.Ptr
-import Vulkan.Types.FuncPointer
+import Vulkan.Types.FuncPointer.PFN_vkVoidFunction
 import Vulkan.Types.Handle
 import Vulkan.Types.VkFun
 

@@ -74,9 +74,9 @@ autogen xmlPath = do
 
   putStrLn "Distilled"
 
-  (mixd, sdeps) <- case mix dist of
-                     Left err    -> die $ "Mixer issue:\n" <> err
-                     Right mixed -> return mixed
+  (mixd, plats, bulks) <- case mix dist of
+                            Left err    -> die $ "Mixer issue:\n" <> err
+                            Right mixed -> return mixed
 
   putStrLn "Mixed"
 
@@ -84,12 +84,16 @@ autogen xmlPath = do
             Left err   -> die $ "Packager issue:\n" <> err
             Right pack -> return pack
 
-  putStrLn "Packaged"
+  classes <- case cabalExtensions bulks of
+               Left err -> die $ "Cabal file forming issue: " <> err
+               Right cs -> return cs
 
+  putStrLn "Packaged"
+{-
   deps <- case cabalDependencies mixd sdeps of
             Left err   -> die $ "Cabal dependency resolution issue:\n" <> err
             Right deps -> return deps
-
+-}
   Right temp <- readTemplate "vulkan-raw.template"
 
   putStrLn "Read the template"
@@ -101,6 +105,6 @@ autogen xmlPath = do
 
   putStrLn $ "Writing Cabal file " <> cabalfile
 
-  writeFile cabalfile $ fillTemplate temp deps
+  writeFile cabalfile $ fillTemplate temp plats classes
 
   putStrLn "Done"

@@ -29,8 +29,6 @@ import           Prelude hiding (Enum)
 import           System.FilePath
 import           System.Directory
 
-import           Autogen.Mixer
-
 
 
 newtype Dependencies = Dependencies (Map Category (Set String))
@@ -141,8 +139,8 @@ baseName = Name $ "Vulkan" :| ["Types", "Base"]
 enumName :: String -> Name
 enumName str = Name $ "Vulkan" :| ["Types", "Enum", str]
 
-funcPointerName :: Name
-funcPointerName = Name $ "Vulkan" :| ["Types", "FuncPointer"]
+funcPointerName :: String -> Name
+funcPointerName str = Name $ "Vulkan" :| ["Types", "FuncPointer", str]
 
 handleName :: Name
 handleName = Name $ "Vulkan" :| ["Types", "Handle"]
@@ -207,7 +205,7 @@ depToImports (Dependencies dep) =
       fuse Basic _              = [toImport baseName]
       fuse Const _              = [toImport constantName]
       fuse EnumCat strs         = toImport . enumName <$> Set.toAscList strs
-      fuse FuncPointerCat _     = [toImport funcPointerName]
+      fuse FuncPointerCat strs  = toImport . funcPointerName <$> Set.toAscList strs
       fuse Handle _             = [toImport handleName]
       fuse Mixer.StructCat strs = toImport . structName <$> Set.toAscList strs
       fuse Mixer.UnionCat strs  = toImport . unionName <$> Set.toAscList strs
@@ -609,49 +607,47 @@ packageEnums mixed =
 
 
 
-packageFuncPointers :: Mixed -> Module
+packageFuncPointers :: Mixed -> [Module]
 packageFuncPointers mixed =
-  let shapeArg Mixer.Field {..} =
-        Arg
-          { type_   = shapeType type_
-          , comment = Just name
-          }
+  (\f -> Map.foldrWithKey f [] (getField @"funcpointers" mixed)) $ \fname fptr acc ->
+    (: acc) $
+      let shapeArg Mixer.Field {..} =
+            Arg
+              { type_   = shapeType type_
+              , comment = Just name
+              }
 
-      (deps, decls) =
-        (\f -> Map.foldrWithKey f mempty (getField @"funcpointers" mixed)) $ \name fptr (deps', acc) ->
-          ( case fptr of
-              VoidPointer    -> deps'
-              FuncPointer {} ->
-                foldr (mappend . dependencies) deps'
-                  (getField @"return" fptr : (getField @"type_" <$> getField @"fields" fptr))
-
-          , (: acc) $
-              TypeSynonym
-                { name    = name
-                , args    =
-                    case fptr of
-                      VoidPointer    -> Arg "Void" Nothing :| []
-                      FuncPointer {} ->
-                        case (shapeArg <$> getField @"fields" fptr) <>
-                                [Arg (shapeType . Type1 "IO" $ getField @"return" fptr) Nothing] of
-                          []     -> errorWithoutStackTrace "Packager: empty nonempty list"
-                          ne:nes -> ne :| nes
-
-                , comment = Nothing
-                , flags   = Nothing
-                }
-          )
-  in Module
-       { ext      = Hsc
-       , pragmas  = []
-       , name     = funcPointerName
-       , flags    = Nothing
-       , exports  = []
-       , includes = [vulkan_h]
-       , imports  = [ Import "Data.Int", Import "Data.Void", Import "Data.Word"
-                    , Import "Foreign.Ptr" ] <> depToImports (purgeCategory FuncPointerCat deps)
-       , decls    = decls
-       }
+          deps = case fptr of
+                   VoidPointer    -> mempty
+                   FuncPointer {} ->
+                     foldr (mappend . dependencies) mempty
+                       (getField @"return" fptr : (getField @"type_" <$> getField @"fields" fptr))
+    
+          decl = TypeSynonym
+                   { name    = fname
+                   , args    =
+                       case fptr of
+                         VoidPointer    -> Arg "Void" Nothing :| []
+                         FuncPointer {} ->
+                           case (shapeArg <$> getField @"fields" fptr) <>
+                                   [Arg (shapeType . Type1 "IO" $ getField @"return" fptr) Nothing] of
+                             []     -> errorWithoutStackTrace "Packager: empty nonempty list"
+                             ne:nes -> ne :| nes
+    
+                   , comment = Nothing
+                   , flags   = Nothing
+                   }
+      in Module
+           { ext      = Hsc
+           , pragmas  = []
+           , name     = funcPointerName fname
+           , flags    = Nothing
+           , exports  = []
+           , includes = [vulkan_h]
+           , imports  = [ Import "Data.Int", Import "Data.Void", Import "Data.Word"
+                        , Import "Foreign.Ptr" ] <> depToImports deps
+           , decls    = [decl]
+           }
 
 
 
@@ -1596,6 +1592,26 @@ writeModules path mdls = do
 
 
 
+cabalExtensions :: Map Class (Set (Category, String)) -> Either String (Map Class Body)
+cabalExtensions =
+  Map.traverseWithKey $ \c s ->
+    case c of
+      Feat api num -> do
+        feat <- featureName api num
+        Right Body
+                { exposed = [moduleName feat]
+                , other   = fmap (\(Import i) -> i) . depToImports $
+                              Set.foldr (\(cat, name) -> mappend (Dependencies $ Map.singleton cat (Set.singleton name))) mempty s
+                }
+
+      Ext extname ->
+        Right Body
+                { exposed = [moduleName $ extensionName extname]
+                , other   = fmap (\(Import i) -> i) . depToImports $
+                              Set.foldr (\(cat, name) -> mappend (Dependencies $ Map.singleton cat (Set.singleton name))) mempty s
+                }
+
+{-
 exposedDependencies :: Mixed -> Either String (Map (Maybe Cabal.Extension) [String])
 exposedDependencies mixd = do
   feats <- (\f -> foldlM f [] $ getField @"features" mixd) $ \acc feat -> do
@@ -1642,7 +1658,7 @@ cabalDependencies mixd sorted = do
   Right $ Map.mergeWithKey (\_ a b -> Just $ Cabal.Body a b)
                            (fmap $ flip Cabal.Body []) (fmap $ Cabal.Body []) exposed other
 
-
+-}
 
 package :: Mixed -> Augments -> Either String [Module]
 package mixed augs = do
@@ -1653,11 +1669,11 @@ package mixed augs = do
           , define
           , packageBases mixed
           , packageConstants mixed
-          , packageFuncPointers mixed
           , packageHandles mixed
           ]
      <> mconcat
-          [ packageEnums mixed
+          [ packageFuncPointers mixed
+          , packageEnums mixed
           , packageStructs mixed augs
           , packageUnions mixed
           , packageCommands mixed augs

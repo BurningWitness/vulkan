@@ -15,7 +15,11 @@ import Data.Word
 import Foreign.Ptr
 import Foreign.Storable
 import Foreign.Storable.Offset
-import Vulkan.Types.FuncPointer
+import Vulkan.Types.FuncPointer.PFN_vkAllocationFunction
+import Vulkan.Types.FuncPointer.PFN_vkFreeFunction
+import Vulkan.Types.FuncPointer.PFN_vkInternalAllocationNotification
+import Vulkan.Types.FuncPointer.PFN_vkInternalFreeNotification
+import Vulkan.Types.FuncPointer.PFN_vkReallocationFunction
 
 
 

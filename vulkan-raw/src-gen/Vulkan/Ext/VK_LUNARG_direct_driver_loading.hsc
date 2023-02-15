@@ -26,7 +26,7 @@ import GHC.Ptr
 import Vulkan.Types.Enum.VkDirectDriverLoadingFlagsLUNARG
 import Vulkan.Types.Enum.VkDirectDriverLoadingModeLUNARG
 import Vulkan.Types.Enum.VkStructureType
-import Vulkan.Types.FuncPointer
+import Vulkan.Types.FuncPointer.PFN_vkGetInstanceProcAddrLUNARG
 import Vulkan.Types.Struct.VkDirectDriverLoadingInfoLUNARG
 import Vulkan.Types.Struct.VkDirectDriverLoadingListLUNARG
 import Vulkan.Types.VkFun

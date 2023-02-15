@@ -8,7 +8,7 @@
 module Autogen.Mixer
   ( Category (..)
   , Augments (..)
-  , SortedDependencies
+  , Class (..)
   , mix
   ) where
 
@@ -23,11 +23,11 @@ import           Data.Functor
 import qualified Data.List as List
 import           Data.Map (Map)
 import qualified Data.Map as Map
-import           Data.Maybe
 import           Data.Set (Set)
 import qualified Data.Set as Set
 import           Data.Traversable
 import           GHC.Records
+import           Numeric
 
 
 
@@ -318,25 +318,6 @@ retype frac = go
 moldOffset :: Integer -> Integer -> Maybe Direction -> Integer
 moldOffset extnumber offset Nothing      = 1000000000 + (extnumber - 1) * 1000 + offset
 moldOffset extnumber offset (Just Minus) = negate $ moldOffset extnumber offset Nothing
-{-
-bitToEnum :: Fractions -> MentionTag -> Distillery.Bit -> Either String Mixer.Enumerator
-bitToEnum frac tag bite = do
-  value <-
-    case bite of
-      Bit {}           -> Right . Integral . setBit 0 . fromIntegral $ getField @"bitpos" bite
-      BitEnumerator {} -> Right $ getField @"value" bite
---      BitAlias {}      -> _ $ getField @"alias" bite
-
-  Right Mixer.Enumerator
-          { comment    = getField @"comment" bite
-          , name       = getField @"name"    bite
-          , value      = value
-          , tags       = tag
-          }
-
-enumToEnum :: Fractions -> MentionTag -> Distillery.Enumerator -> Either String Mixer.Enumerator
-enumToEnum frac tag enum = do
--}
 
 
 
@@ -672,11 +653,13 @@ mixUnions frac sorted =
 
 
 
+underscore :: Char -> Char
+underscore '.' = '_'
+underscore c   = c
+
 getFlagName :: String -> Double -> Either String (Maybe String)
 getFlagName "vulkan" 1.0 = Right Nothing
-getFlagName "vulkan" 1.1 = Right $ Just "CORE_1_1"
-getFlagName "vulkan" 1.2 = Right $ Just "CORE_1_2"
-getFlagName "vulkan" 1.3 = Right $ Just "CORE_1_3"
+getFlagName "vulkan" api = Right . Just $ "CORE_" <> fmap underscore (showFFloat Nothing api "")
 getFlagName api      ver =
   Left $ "No defined feature flag name for " <> api <> " v" <> show ver
 
@@ -1145,6 +1128,103 @@ mixExtensions frac ment enums =
 
 
 
+compartNames :: MentionTag -> [Cabal.Class]
+compartNames tag =
+  let defeat name (FeatureTag num _) = (:) $ Feat name num
+      feats = Map.foldrWithKey defeat [] (getField @"features" tag)
+      exts = Ext <$> Map.keys (getField @"extensions" tag)
+  in feats <> exts
+
+
+
+compartMentions :: Fractions -> Mentions -> SortedMentions -> Map Class (Set (Category, String))
+compartMentions frac ment sorted =
+  let featnames = Map.foldrWithKey (\f -> flip $ foldr (goFeat f)) [] $ getField @"features" frac
+      extnames = fmap Ext . Map.keys $ Map.filter (not . any (== "disabled") . getField @"supported") (getField @"extensions" frac)
+      base = foldr (\c -> Map.insert c Set.empty) Map.empty $ featnames <> extnames
+
+      enumed = Map.foldrWithKey (\e -> flip $ foldr (goEnum e)) base $ getField @"enums" ment
+      typed = Map.foldrWithKey (\cat -> flip $ Map.foldrWithKey (goType cat)) enumed sorted
+  in Map.foldrWithKey goCommand typed $ getField @"commands" ment
+  where
+    goFeat :: String -> Distillery.Feature -> [Class] -> [Class]
+    goFeat name feat = (:) $ Feat name (getField @"number" feat)
+
+    goEnum :: String -> MentionEnum -> Map Class (Set (Category, String)) -> Map Class (Set (Category, String))
+    goEnum en me acc = do
+      foldr (\c -> Map.insertWith (<>) c $ Set.singleton (EnumCat, en)) acc .
+        compartNames $ getField @"tag" me
+
+    goType :: Category -> String -> MentionTag -> Map Class (Set (Category, String)) -> Map Class (Set (Category, String))
+    goType cat type_ tag acc =
+      foldr (\c -> Map.insertWith (<>) c $ Set.singleton (cat, type_)) acc $
+        compartNames tag
+
+    goCommand :: String -> MentionTag -> Map Class (Set (Category, String)) -> Map Class (Set (Category, String))
+    goCommand s tag acc =
+      foldr (\c -> Map.insertWith (<>) c $ Set.singleton (Function, s)) acc $
+        compartNames tag
+
+
+
+digModuleLists :: Mixed -> Map Class (Set (Category, String)) -> Either String (Map Class (Set (Category, String)))
+digModuleLists mixed = traverse $ shuffle Set.empty
+  where
+    shuffle :: Set (Category, String) -> Set (Category, String) -> Either String (Set (Category, String))
+    shuffle acc s = do
+      s' <- foldlM go Set.empty s
+      let total = acc <> s
+          delta = Set.difference s' total
+      if Set.null delta
+        then Right $ total <> s'
+        else shuffle total s'
+
+    detype :: Mixer.Type -> Set (Category, String) -> Set (Category, String)
+    detype (Mixer.VkType c s) = Set.insert (c, s)
+    detype (Type1 _ s)        = detype s
+    detype _                  = id
+
+    go :: Set (Category, String) -> (Category, String) -> Either String (Set (Category, String))
+    go acc (c, s) =
+      case c of
+        FuncPointerCat ->
+          case Map.lookup s $ getField @"funcpointers" mixed of
+            Nothing                               -> Left $ "No funcpointer " <> show s
+            Just Mixer.VoidPointer                -> Right acc
+            Just funcpointer@Mixer.FuncPointer {} ->
+              Right . detype (getField @"return" funcpointer)
+                    . foldr (detype . getField @"type_") acc $ getField @"fields" funcpointer
+        StructCat ->
+          case Map.lookup s $ getField @"structs" mixed of
+            Nothing     -> Left $ "No struct " <> show s
+            Just struct -> Right . foldr (detype . getField @"type_") acc $ getField @"fields" struct
+
+        UnionCat ->
+          case Map.lookup s $ getField @"unions" mixed of
+            Nothing     -> Left $ "No union " <> show s
+            Just struct -> Right . foldr (detype . getField @"type_") acc $ getField @"fields" struct
+
+        Function ->
+          case Map.lookup s $ getField @"commands" mixed of
+            Nothing      -> Left $ "No command " <> show s
+            Just command -> Right . detype (getField @"return" command)
+                                            . foldr (detype . getField @"type_") acc $ getField @"arguments" command
+
+
+        _ -> Right acc
+  
+  
+
+
+
+compartPlatforms :: Fractions -> [Cabal.Platform]
+compartPlatforms frac =
+  let f name (Distillery.Platform macro comment) = Cabal.Platform name macro comment
+  in Map.foldrWithKey (\k v -> (:) (f k v)) [] $ getField @"platforms" frac
+
+
+
+{-
 type SortedDependencies = Map (Maybe Cabal.Extension) (Set (Category, String))
 
 sortDependencies :: Fractions -> SortedMentions -> Either String SortedDependencies
@@ -1180,27 +1260,28 @@ sortDependencies frac sorted =
                 ds  -> Left $ show cat <> " " <> name <> " depends on multiple extensions: " <> show ds
         else Right nodep
 
+-}
 
-
-mix :: Fractions -> Either String (Mixed, SortedDependencies)
+mix :: Fractions -> Either String (Mixed, [Cabal.Platform], Map Class (Set (Category, String)))
 mix fractions = do
   mentions0 <- premixFeatures fractions emptyMentions
   mentions <- premixExtensions fractions mentions0
   sorted <- sortTypeMentions fractions mentions
-  deps <- sortDependencies fractions sorted
   enums <- mixEnums fractions mentions sorted
-  (,) <$> do Mixed
-               <$> pure (getField @"platforms" fractions)
-               <*> mixProtects fractions sorted
-               <*> pure (Map.keysSet . getField @"defines" $ getField @"types" fractions)
-               <*> mixBases fractions sorted
-               <*> mixConstants fractions
-               <*> pure enums
-               <*> mixFuncPointers fractions sorted
-               <*> mixHandles fractions sorted
-               <*> mixStructs fractions sorted
-               <*> mixUnions fractions sorted
-               <*> mixCommands fractions mentions
-               <*> mixFeatures fractions enums
-               <*> mixExtensions fractions mentions enums
-      <*> pure deps
+  mixed <- Mixed
+             <$> pure (getField @"platforms" fractions)
+             <*> mixProtects fractions sorted
+             <*> pure (Map.keysSet . getField @"defines" $ getField @"types" fractions)
+             <*> mixBases fractions sorted
+             <*> mixConstants fractions
+             <*> pure enums
+             <*> mixFuncPointers fractions sorted
+             <*> mixHandles fractions sorted
+             <*> mixStructs fractions sorted
+             <*> mixUnions fractions sorted
+             <*> mixCommands fractions mentions
+             <*> mixFeatures fractions enums
+             <*> mixExtensions fractions mentions enums
+  (,,) mixed
+       (compartPlatforms fractions)
+    <$> digModuleLists mixed (compartMentions fractions mentions sorted)

@@ -19,7 +19,7 @@ import Foreign.Storable
 import Foreign.Storable.Offset
 import Vulkan.Types.Enum.VkDebugReportFlagsEXT
 import Vulkan.Types.Enum.VkStructureType
-import Vulkan.Types.FuncPointer
+import Vulkan.Types.FuncPointer.PFN_vkDebugReportCallbackEXT
 
 
 

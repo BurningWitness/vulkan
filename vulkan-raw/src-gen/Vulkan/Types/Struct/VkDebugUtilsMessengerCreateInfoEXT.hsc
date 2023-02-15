@@ -21,7 +21,7 @@ import Vulkan.Types.Enum.VkDebugUtilsMessageSeverityFlagsEXT
 import Vulkan.Types.Enum.VkDebugUtilsMessageTypeFlagsEXT
 import Vulkan.Types.Enum.VkDebugUtilsMessengerCreateFlagsEXT
 import Vulkan.Types.Enum.VkStructureType
-import Vulkan.Types.FuncPointer
+import Vulkan.Types.FuncPointer.PFN_vkDebugUtilsMessengerCallbackEXT
 
 
 

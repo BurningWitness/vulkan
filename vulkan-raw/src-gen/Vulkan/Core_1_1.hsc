@@ -2289,7 +2289,12 @@ import Vulkan.Types.Enum.VkSystemAllocationScope
 import Vulkan.Types.Enum.VkTessellationDomainOrigin
 import Vulkan.Types.Enum.VkVendorId
 import Vulkan.Types.Enum.VkVertexInputRate
-import Vulkan.Types.FuncPointer
+import Vulkan.Types.FuncPointer.PFN_vkAllocationFunction
+import Vulkan.Types.FuncPointer.PFN_vkFreeFunction
+import Vulkan.Types.FuncPointer.PFN_vkInternalAllocationNotification
+import Vulkan.Types.FuncPointer.PFN_vkInternalFreeNotification
+import Vulkan.Types.FuncPointer.PFN_vkReallocationFunction
+import Vulkan.Types.FuncPointer.PFN_vkVoidFunction
 import Vulkan.Types.Handle
 import Vulkan.Types.Struct.VkAllocationCallbacks
 import Vulkan.Types.Struct.VkApplicationInfo

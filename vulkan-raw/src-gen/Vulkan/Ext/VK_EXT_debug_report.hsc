@@ -82,7 +82,7 @@ import Vulkan.Types.Enum.VkDebugReportObjectTypeEXT
 import Vulkan.Types.Enum.VkObjectType
 import Vulkan.Types.Enum.VkResult
 import Vulkan.Types.Enum.VkStructureType
-import Vulkan.Types.FuncPointer
+import Vulkan.Types.FuncPointer.PFN_vkDebugReportCallbackEXT
 import Vulkan.Types.Handle
 import Vulkan.Types.Struct.VkDebugReportCallbackCreateInfoEXT
 import Vulkan.Types.Command.VkCreateDebugReportCallbackEXT

@@ -11,6 +11,10 @@ Alas Hackage currently does not show this (as per [haddock#563](https://github.c
 
 Caveats of this library:
 
+- Extensions have to be exposed through Cabal flags. The reason this approach was chosen is because
+  [API compatibility between versions is explicitly not guaranteed](https://github.com/KhronosGroup/Vulkan-Docs/issues/580#issuecomment-334950292), so this widens the window of acceptable API versions by a ton. Also
+  reduces build times by a ton.
+
 - Functions are exposed in two distinct ways:
 
     - Every function name is exposed through a `vkFun*` definition and can be looked up in a
@@ -18,8 +22,8 @@ Caveats of this library:
       coerced synonyms to `vkGetInstanceProcAddr`/`vkGetDeviceProcAddr`).
 
     - Additionally core functions are imported using the FFI. Core 1.0 is always imported,
-      imports for core 1.1/1.2/1.3 can be enabled by toggling flags `core-1-1`/`core-1-2`/`core-1-3`
-      respectively.
+      imports for core 1.1/1.2/1.3 can be enabled by toggling flags
+      `ffi-core-1-1`/`ffi-core-1-2`/`ffi-core-1-3` respectively.
 
 - Not all functions can be marshalled out of the box.
   If you wish to use these you will have to create C wrappers yourself.
