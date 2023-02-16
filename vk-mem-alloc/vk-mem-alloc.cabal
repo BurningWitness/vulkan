@@ -7,7 +7,7 @@ description:         Raw bindings to [Vulkan Memory Allocator](https://github.co
 license:             BSD-3-Clause
 license-file:        LICENSE
 author:              Oleksii Divak
-maintainer:          frozenwitness@gmail.com
+maintainer:          Oleksii Divak <frozenwitness@gmail.com>
 copyright:           (c) 2023 Oleksii Divak
 category:            Graphics
 build-type:          Simple

@@ -7,7 +7,7 @@ description:         Renders a triangle following Vulkan Tutorial
 license:             BSD-3-Clause
 license-file:        LICENSE
 author:              Oleksii Divak
-maintainer:          frozenwitness@gmail.com
+maintainer:          Oleksii Divak <frozenwitness@gmail.com>
 copyright:           (c) 2023 Oleksii Divak
 category:            Example
 build-type:          Simple

@@ -7,8 +7,8 @@ description:         Please check the README for information on how these bindin
 license:             BSD-3-Clause
 license-file:        LICENSE
 author:              Oleksii Divak
-maintainer:          Oleksii Divak <frozenwitness@gmail.com>
-copyright:           Copyright: (c) 2023 Oleksii Divak
+maintainer:          Oleksii Divak <frozenwitness@gmail.com
+copyright:           (c) 2023 Oleksii Divak
 category:            Graphics
 build-type:          Simple
 

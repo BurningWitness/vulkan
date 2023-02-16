@@ -277,9 +277,9 @@ instance Storable VmaDeviceMemoryCallbacks where
 
   peek ptr =
     VmaDeviceMemoryCallbacks
-      <$> peek (offset @"pfnAllocate" ptr)
-      <*> peek (offset @"pfnFree"     ptr)
-      <*> peek (offset @"pUserData"   ptr)
+      <$> peek (Foreign.Storable.Offset.offset @"pfnAllocate" ptr)
+      <*> peek (Foreign.Storable.Offset.offset @"pfnFree"     ptr)
+      <*> peek (Foreign.Storable.Offset.offset @"pUserData"   ptr)
 
   poke ptr val = do
     pokeField @"pfnAllocate" ptr val
@@ -368,32 +368,32 @@ instance Storable VmaVulkanFunctions where
 
   peek ptr =
     VmaVulkanFunctions
-      <$> peek (offset @"vkGetInstanceProcAddr"                   ptr)
-      <*> peek (offset @"vkGetDeviceProcAddr"                     ptr)
-      <*> peek (offset @"vkGetPhysicalDeviceProperties"           ptr)
-      <*> peek (offset @"vkGetPhysicalDeviceMemoryProperties"     ptr)
-      <*> peek (offset @"vkAllocateMemory"                        ptr)
-      <*> peek (offset @"vkFreeMemory"                            ptr)
-      <*> peek (offset @"vkMapMemory"                             ptr)
-      <*> peek (offset @"vkUnmapMemory"                           ptr)
-      <*> peek (offset @"vkFlushMappedMemoryRanges"               ptr)
-      <*> peek (offset @"vkInvalidateMappedMemoryRanges"          ptr)
-      <*> peek (offset @"vkBindBufferMemory"                      ptr)
-      <*> peek (offset @"vkBindImageMemory"                       ptr)
-      <*> peek (offset @"vkGetBufferMemoryRequirements"           ptr)
-      <*> peek (offset @"vkGetImageMemoryRequirements"            ptr)
-      <*> peek (offset @"vkCreateBuffer"                          ptr)
-      <*> peek (offset @"vkDestroyBuffer"                         ptr)
-      <*> peek (offset @"vkCreateImage"                           ptr)
-      <*> peek (offset @"vkDestroyImage"                          ptr)
-      <*> peek (offset @"vkCmdCopyBuffer"                         ptr)
-      <*> peek (offset @"vkGetBufferMemoryRequirements2KHR"       ptr)
-      <*> peek (offset @"vkGetImageMemoryRequirements2KHR"        ptr)
-      <*> peek (offset @"vkBindBufferMemory2KHR"                  ptr)
-      <*> peek (offset @"vkBindImageMemory2KHR"                   ptr)
-      <*> peek (offset @"vkGetPhysicalDeviceMemoryProperties2KHR" ptr)
-      <*> peek (offset @"vkGetDeviceBufferMemoryRequirements"     ptr)
-      <*> peek (offset @"vkGetDeviceImageMemoryRequirements"      ptr)
+      <$> peek (Foreign.Storable.Offset.offset @"vkGetInstanceProcAddr"                   ptr)
+      <*> peek (Foreign.Storable.Offset.offset @"vkGetDeviceProcAddr"                     ptr)
+      <*> peek (Foreign.Storable.Offset.offset @"vkGetPhysicalDeviceProperties"           ptr)
+      <*> peek (Foreign.Storable.Offset.offset @"vkGetPhysicalDeviceMemoryProperties"     ptr)
+      <*> peek (Foreign.Storable.Offset.offset @"vkAllocateMemory"                        ptr)
+      <*> peek (Foreign.Storable.Offset.offset @"vkFreeMemory"                            ptr)
+      <*> peek (Foreign.Storable.Offset.offset @"vkMapMemory"                             ptr)
+      <*> peek (Foreign.Storable.Offset.offset @"vkUnmapMemory"                           ptr)
+      <*> peek (Foreign.Storable.Offset.offset @"vkFlushMappedMemoryRanges"               ptr)
+      <*> peek (Foreign.Storable.Offset.offset @"vkInvalidateMappedMemoryRanges"          ptr)
+      <*> peek (Foreign.Storable.Offset.offset @"vkBindBufferMemory"                      ptr)
+      <*> peek (Foreign.Storable.Offset.offset @"vkBindImageMemory"                       ptr)
+      <*> peek (Foreign.Storable.Offset.offset @"vkGetBufferMemoryRequirements"           ptr)
+      <*> peek (Foreign.Storable.Offset.offset @"vkGetImageMemoryRequirements"            ptr)
+      <*> peek (Foreign.Storable.Offset.offset @"vkCreateBuffer"                          ptr)
+      <*> peek (Foreign.Storable.Offset.offset @"vkDestroyBuffer"                         ptr)
+      <*> peek (Foreign.Storable.Offset.offset @"vkCreateImage"                           ptr)
+      <*> peek (Foreign.Storable.Offset.offset @"vkDestroyImage"                          ptr)
+      <*> peek (Foreign.Storable.Offset.offset @"vkCmdCopyBuffer"                         ptr)
+      <*> peek (Foreign.Storable.Offset.offset @"vkGetBufferMemoryRequirements2KHR"       ptr)
+      <*> peek (Foreign.Storable.Offset.offset @"vkGetImageMemoryRequirements2KHR"        ptr)
+      <*> peek (Foreign.Storable.Offset.offset @"vkBindBufferMemory2KHR"                  ptr)
+      <*> peek (Foreign.Storable.Offset.offset @"vkBindImageMemory2KHR"                   ptr)
+      <*> peek (Foreign.Storable.Offset.offset @"vkGetPhysicalDeviceMemoryProperties2KHR" ptr)
+      <*> peek (Foreign.Storable.Offset.offset @"vkGetDeviceBufferMemoryRequirements"     ptr)
+      <*> peek (Foreign.Storable.Offset.offset @"vkGetDeviceImageMemoryRequirements"      ptr)
 
   poke ptr val = do
     pokeField @"vkGetInstanceProcAddr"                   ptr val
@@ -464,17 +464,17 @@ instance Storable VmaAllocatorCreateInfo where
 
   peek ptr =
     VmaAllocatorCreateInfo
-      <$> peek (offset @"flags"                          ptr)
-      <*> peek (offset @"physicalDevice"                 ptr)
-      <*> peek (offset @"device"                         ptr)
-      <*> peek (offset @"preferredLargeHeapBlockSize"    ptr)
-      <*> peek (offset @"pAllocationCallbacks"           ptr)
-      <*> peek (offset @"pDeviceMemoryCallbacks"         ptr)
-      <*> peek (offset @"pHeapSizeLimit"                 ptr)
-      <*> peek (offset @"pVulkanFunctions"               ptr)
-      <*> peek (offset @"instance"                       ptr)
-      <*> peek (offset @"vulkanApiVersion"               ptr)
-      <*> peek (offset @"pTypeExternalMemoryHandleTypes" ptr)
+      <$> peek (Foreign.Storable.Offset.offset @"flags"                          ptr)
+      <*> peek (Foreign.Storable.Offset.offset @"physicalDevice"                 ptr)
+      <*> peek (Foreign.Storable.Offset.offset @"device"                         ptr)
+      <*> peek (Foreign.Storable.Offset.offset @"preferredLargeHeapBlockSize"    ptr)
+      <*> peek (Foreign.Storable.Offset.offset @"pAllocationCallbacks"           ptr)
+      <*> peek (Foreign.Storable.Offset.offset @"pDeviceMemoryCallbacks"         ptr)
+      <*> peek (Foreign.Storable.Offset.offset @"pHeapSizeLimit"                 ptr)
+      <*> peek (Foreign.Storable.Offset.offset @"pVulkanFunctions"               ptr)
+      <*> peek (Foreign.Storable.Offset.offset @"instance"                       ptr)
+      <*> peek (Foreign.Storable.Offset.offset @"vulkanApiVersion"               ptr)
+      <*> peek (Foreign.Storable.Offset.offset @"pTypeExternalMemoryHandleTypes" ptr)
 
   poke ptr val = do
     pokeField @"flags"                          ptr val
@@ -514,9 +514,9 @@ instance Storable VmaAllocatorInfo where
 
   peek ptr =
     VmaAllocatorInfo
-      <$> peek (offset @"instance"       ptr)
-      <*> peek (offset @"physicalDevice" ptr)
-      <*> peek (offset @"device"         ptr)
+      <$> peek (Foreign.Storable.Offset.offset @"instance"       ptr)
+      <*> peek (Foreign.Storable.Offset.offset @"physicalDevice" ptr)
+      <*> peek (Foreign.Storable.Offset.offset @"device"         ptr)
 
   poke ptr val = do
     pokeField @"instance"       ptr val
@@ -544,10 +544,10 @@ instance Storable VmaStatistics where
 
   peek ptr =
     VmaStatistics
-      <$> peek (offset @"blockCount"      ptr)
-      <*> peek (offset @"allocationCount" ptr)
-      <*> peek (offset @"blockBytes"      ptr)
-      <*> peek (offset @"allocationBytes" ptr)
+      <$> peek (Foreign.Storable.Offset.offset @"blockCount"      ptr)
+      <*> peek (Foreign.Storable.Offset.offset @"allocationCount" ptr)
+      <*> peek (Foreign.Storable.Offset.offset @"blockBytes"      ptr)
+      <*> peek (Foreign.Storable.Offset.offset @"allocationBytes" ptr)
 
   poke ptr val = do
     pokeField @"blockCount"      ptr val
@@ -580,12 +580,12 @@ instance Storable VmaDetailedStatistics where
 
   peek ptr =
     VmaDetailedStatistics
-      <$> peek (offset @"statistics"         ptr)
-      <*> peek (offset @"unusedRangeCount"   ptr)
-      <*> peek (offset @"allocationSizeMin"  ptr)
-      <*> peek (offset @"allocationSizeMax"  ptr)
-      <*> peek (offset @"unusedRangeSizeMin" ptr)
-      <*> peek (offset @"unusedRangeSizeMax" ptr)
+      <$> peek (Foreign.Storable.Offset.offset @"statistics"         ptr)
+      <*> peek (Foreign.Storable.Offset.offset @"unusedRangeCount"   ptr)
+      <*> peek (Foreign.Storable.Offset.offset @"allocationSizeMin"  ptr)
+      <*> peek (Foreign.Storable.Offset.offset @"allocationSizeMax"  ptr)
+      <*> peek (Foreign.Storable.Offset.offset @"unusedRangeSizeMin" ptr)
+      <*> peek (Foreign.Storable.Offset.offset @"unusedRangeSizeMax" ptr)
 
   poke ptr val = do
     pokeField @"statistics"         ptr val
@@ -614,9 +614,9 @@ instance Storable VmaTotalStatistics where
 
   peek ptr =
     VmaTotalStatistics
-      <$> peek (offset @"memoryType" ptr)
-      <*> peek (offset @"memoryHeap" ptr)
-      <*> peek (offset @"total"      ptr)
+      <$> peek (Foreign.Storable.Offset.offset @"memoryType" ptr)
+      <*> peek (Foreign.Storable.Offset.offset @"memoryHeap" ptr)
+      <*> peek (Foreign.Storable.Offset.offset @"total"      ptr)
 
   poke ptr val = do
     pokeField @"memoryType" ptr val
@@ -642,9 +642,9 @@ instance Storable VmaBudget where
 
   peek ptr =
     VmaBudget
-      <$> peek (offset @"statistics" ptr)
-      <*> peek (offset @"usage"      ptr)
-      <*> peek (offset @"budget"     ptr)
+      <$> peek (Foreign.Storable.Offset.offset @"statistics" ptr)
+      <*> peek (Foreign.Storable.Offset.offset @"usage"      ptr)
+      <*> peek (Foreign.Storable.Offset.offset @"budget"     ptr)
 
   poke ptr val = do
     pokeField @"statistics" ptr val
@@ -680,14 +680,14 @@ instance Storable VmaAllocationCreateInfo where
 
   peek ptr =
     VmaAllocationCreateInfo
-      <$> peek (offset @"flags"          ptr)
-      <*> peek (offset @"usage"          ptr)
-      <*> peek (offset @"requiredFlags"  ptr)
-      <*> peek (offset @"preferredFlags" ptr)
-      <*> peek (offset @"memoryTypeBits" ptr)
-      <*> peek (offset @"pool"           ptr)
-      <*> peek (offset @"pUserData"      ptr)
-      <*> peek (offset @"priority"       ptr)
+      <$> peek (Foreign.Storable.Offset.offset @"flags"          ptr)
+      <*> peek (Foreign.Storable.Offset.offset @"usage"          ptr)
+      <*> peek (Foreign.Storable.Offset.offset @"requiredFlags"  ptr)
+      <*> peek (Foreign.Storable.Offset.offset @"preferredFlags" ptr)
+      <*> peek (Foreign.Storable.Offset.offset @"memoryTypeBits" ptr)
+      <*> peek (Foreign.Storable.Offset.offset @"pool"           ptr)
+      <*> peek (Foreign.Storable.Offset.offset @"pUserData"      ptr)
+      <*> peek (Foreign.Storable.Offset.offset @"priority"       ptr)
 
   poke ptr val = do
     pokeField @"flags"          ptr val
@@ -728,14 +728,14 @@ instance Storable VmaPoolCreateInfo where
 
   peek ptr =
     VmaPoolCreateInfo
-      <$> peek (offset @"memoryTypeIndex"        ptr)
-      <*> peek (offset @"flags"                  ptr)
-      <*> peek (offset @"blockSize"              ptr)
-      <*> peek (offset @"minBlockCount"          ptr)
-      <*> peek (offset @"maxBlockCount"          ptr)
-      <*> peek (offset @"priority"               ptr)
-      <*> peek (offset @"minAllocationAlignment" ptr)
-      <*> peek (offset @"pMemoryAllocateNext"    ptr)
+      <$> peek (Foreign.Storable.Offset.offset @"memoryTypeIndex"        ptr)
+      <*> peek (Foreign.Storable.Offset.offset @"flags"                  ptr)
+      <*> peek (Foreign.Storable.Offset.offset @"blockSize"              ptr)
+      <*> peek (Foreign.Storable.Offset.offset @"minBlockCount"          ptr)
+      <*> peek (Foreign.Storable.Offset.offset @"maxBlockCount"          ptr)
+      <*> peek (Foreign.Storable.Offset.offset @"priority"               ptr)
+      <*> peek (Foreign.Storable.Offset.offset @"minAllocationAlignment" ptr)
+      <*> peek (Foreign.Storable.Offset.offset @"pMemoryAllocateNext"    ptr)
 
   poke ptr val = do
     pokeField @"memoryTypeIndex"        ptr val
@@ -774,13 +774,13 @@ instance Storable VmaAllocationInfo where
 
   peek ptr =
     VmaAllocationInfo
-      <$> peek (offset @"memoryType"   ptr)
-      <*> peek (offset @"deviceMemory" ptr)
-      <*> peek (offset @"offset"       ptr)
-      <*> peek (offset @"size"         ptr)
-      <*> peek (offset @"pMappedData"  ptr)
-      <*> peek (offset @"pUserData"    ptr)
-      <*> peek (offset @"pName"        ptr)
+      <$> peek (Foreign.Storable.Offset.offset @"memoryType"   ptr)
+      <*> peek (Foreign.Storable.Offset.offset @"deviceMemory" ptr)
+      <*> peek (Foreign.Storable.Offset.offset @"offset"       ptr)
+      <*> peek (Foreign.Storable.Offset.offset @"size"         ptr)
+      <*> peek (Foreign.Storable.Offset.offset @"pMappedData"  ptr)
+      <*> peek (Foreign.Storable.Offset.offset @"pUserData"    ptr)
+      <*> peek (Foreign.Storable.Offset.offset @"pName"        ptr)
 
   poke ptr val = do
     pokeField @"memoryType"   ptr val
@@ -812,10 +812,10 @@ instance Storable VmaDefragmentationInfo where
 
   peek ptr =
     VmaDefragmentationInfo
-      <$> peek (offset @"flags"                 ptr)
-      <*> peek (offset @"pool"                  ptr)
-      <*> peek (offset @"maxBytesPerPass"       ptr)
-      <*> peek (offset @"maxAllocationsPerPass" ptr)
+      <$> peek (Foreign.Storable.Offset.offset @"flags"                 ptr)
+      <*> peek (Foreign.Storable.Offset.offset @"pool"                  ptr)
+      <*> peek (Foreign.Storable.Offset.offset @"maxBytesPerPass"       ptr)
+      <*> peek (Foreign.Storable.Offset.offset @"maxAllocationsPerPass" ptr)
 
   poke ptr val = do
     pokeField @"flags"                 ptr val
@@ -842,9 +842,9 @@ instance Storable VmaDefragmentationMove where
 
   peek ptr =
     VmaDefragmentationMove
-      <$> peek (offset @"operation"        ptr)
-      <*> peek (offset @"srcAllocation"    ptr)
-      <*> peek (offset @"dstTmpAllocation" ptr)
+      <$> peek (Foreign.Storable.Offset.offset @"operation"        ptr)
+      <*> peek (Foreign.Storable.Offset.offset @"srcAllocation"    ptr)
+      <*> peek (Foreign.Storable.Offset.offset @"dstTmpAllocation" ptr)
 
   poke ptr val = do
     pokeField @"operation"        ptr val
@@ -868,8 +868,8 @@ instance Storable VmaDefragmentationPassMoveInfo where
 
   peek ptr =
     VmaDefragmentationPassMoveInfo
-      <$> peek (offset @"moveCount" ptr)
-      <*> peek (offset @"pMoves"    ptr)
+      <$> peek (Foreign.Storable.Offset.offset @"moveCount" ptr)
+      <*> peek (Foreign.Storable.Offset.offset @"pMoves"    ptr)
 
   poke ptr val = do
     pokeField @"moveCount" ptr val
@@ -896,10 +896,10 @@ instance Storable VmaDefragmentationStats where
 
   peek ptr =
     VmaDefragmentationStats
-      <$> peek (offset @"bytesMoved"              ptr)
-      <*> peek (offset @"bytesFreed"              ptr)
-      <*> peek (offset @"allocationsMoved"        ptr)
-      <*> peek (offset @"deviceMemoryBlocksFreed" ptr)
+      <$> peek (Foreign.Storable.Offset.offset @"bytesMoved"              ptr)
+      <*> peek (Foreign.Storable.Offset.offset @"bytesFreed"              ptr)
+      <*> peek (Foreign.Storable.Offset.offset @"allocationsMoved"        ptr)
+      <*> peek (Foreign.Storable.Offset.offset @"deviceMemoryBlocksFreed" ptr)
 
   poke ptr val = do
     pokeField @"bytesMoved"              ptr val
@@ -926,9 +926,9 @@ instance Storable VmaVirtualBlockCreateInfo where
 
   peek ptr =
     VmaVirtualBlockCreateInfo
-      <$> peek (offset @"size"                 ptr)
-      <*> peek (offset @"flags"                ptr)
-      <*> peek (offset @"pAllocationCallbacks" ptr)
+      <$> peek (Foreign.Storable.Offset.offset @"size"                 ptr)
+      <*> peek (Foreign.Storable.Offset.offset @"flags"                ptr)
+      <*> peek (Foreign.Storable.Offset.offset @"pAllocationCallbacks" ptr)
 
   poke ptr val = do
     pokeField @"size"                 ptr val
@@ -956,10 +956,10 @@ instance Storable VmaVirtualAllocationCreateInfo where
 
   peek ptr =
     VmaVirtualAllocationCreateInfo
-      <$> peek (offset @"size"      ptr)
-      <*> peek (offset @"alignment" ptr)
-      <*> peek (offset @"flags"     ptr)
-      <*> peek (offset @"pUserData" ptr)
+      <$> peek (Foreign.Storable.Offset.offset @"size"      ptr)
+      <*> peek (Foreign.Storable.Offset.offset @"alignment" ptr)
+      <*> peek (Foreign.Storable.Offset.offset @"flags"     ptr)
+      <*> peek (Foreign.Storable.Offset.offset @"pUserData" ptr)
 
   poke ptr val = do
     pokeField @"size"      ptr val
@@ -986,9 +986,9 @@ instance Storable VmaVirtualAllocationInfo where
 
   peek ptr =
     VmaVirtualAllocationInfo
-      <$> peek (offset @"offset"    ptr)
-      <*> peek (offset @"size"      ptr)
-      <*> peek (offset @"pUserData" ptr)
+      <$> peek (Foreign.Storable.Offset.offset @"offset"    ptr)
+      <*> peek (Foreign.Storable.Offset.offset @"size"      ptr)
+      <*> peek (Foreign.Storable.Offset.offset @"pUserData" ptr)
 
   poke ptr val = do
     pokeField @"offset"    ptr val
