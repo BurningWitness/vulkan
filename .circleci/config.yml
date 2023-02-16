@@ -20,8 +20,8 @@ jobs:
 
             PATH=$HOME/.ghcup/bin:$PATH
 
-            ghcup install cabal 3.6.2.0
-            ghcup set cabal 3.6.2.0
+            ghcup install cabal 3.8.1.0
+            ghcup set cabal 3.8.1.0
 
             ghcup install ghc 9.4.4
             ghcup set ghc 9.4.4
@@ -30,12 +30,19 @@ jobs:
 
       - run:
           name: Update Dependencies
-          command: cabal new-update
+          command: |
+            PATH=$HOME/.ghcup/bin:$PATH
+
+            cabal new-update
+
       - run:
           name: Build
           command: |
+            PATH=$HOME/.ghcup/bin:$PATH
+
             cabal new-build vulkan-raw
             cabal new-build vk-mem-alloc
+
       - save_cache:
           name: Cache
           key: arm64-{{ checksum "vulkan-raw/vulkan-raw.cabal" }}
@@ -155,4 +162,4 @@ workflows:
   workflow:
     jobs:
       - build-arm64:
-          name: aarch64-8.6.5
+          name: aarch64-9.4.4
