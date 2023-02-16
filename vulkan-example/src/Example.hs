@@ -1,10 +1,7 @@
 {-# LANGUAGE CApiFFI
            , DataKinds
-           , DisambiguateRecordFields
-           , DuplicateRecordFields
            , ForeignFunctionInterface
            , MagicHash
-           , NoFieldSelectors
            , PatternSynonyms
            , ScopedTypeVariables
            , TypeApplications
@@ -43,36 +40,36 @@ import           GHC.Records
 
 data Static =
        Static
-         { instance_        :: VkInstance
-         , vk_KHR_surface   :: VK_KHR_surface
-         , window           :: Ptr C'GLFWwindow
-         , surface          :: VkSurfaceKHR
-         , physicalDevice   :: VkPhysicalDevice
-         , queueFamilies    :: QueueFamilies
-         , swapParameters   :: SwapParams
-         , device           :: VkDevice
-         , presentQueue     :: VkQueue
-         , vk_KHR_swapchain :: VK_KHR_swapchain
-         , pipelineLayout   :: VkPipelineLayout
-         , renderPass       :: VkRenderPass
-         , pipeline         :: VkPipeline
-         , commandPool      :: VkCommandPool
-         , commandBuffer    :: VkCommandBuffer
-         , imageAvailable0  :: VkSemaphore
-         , imageAvailable1  :: VkSemaphore
-         , renderFinished0  :: VkSemaphore
-         , renderFinished1  :: VkSemaphore
-         , inFlight0        :: VkFence
-         , inFlight1        :: VkFence
-         , buffer           :: VkBuffer
+         { staticInstance         :: VkInstance
+         , staticVK_KHR_surface   :: VK_KHR_surface
+         , staticWindow           :: Ptr C'GLFWwindow
+         , staticSurface          :: VkSurfaceKHR
+         , staticPhysicalDevice   :: VkPhysicalDevice
+         , staticQueueFamilies    :: QueueFamilies
+         , staticSwapParameters   :: SwapParams
+         , staticDevice           :: VkDevice
+         , staticPresentQueue     :: VkQueue
+         , staticVK_KHR_swapchain :: VK_KHR_swapchain
+         , staticPipelineLayout   :: VkPipelineLayout
+         , staticRenderPass       :: VkRenderPass
+         , staticPipeline         :: VkPipeline
+         , staticCommandPool      :: VkCommandPool
+         , staticCommandBuffer    :: VkCommandBuffer
+         , staticImageAvailable0  :: VkSemaphore
+         , staticImageAvailable1  :: VkSemaphore
+         , staticRenderFinished0  :: VkSemaphore
+         , staticRenderFinished1  :: VkSemaphore
+         , staticInFlight0        :: VkFence
+         , staticInFlight1        :: VkFence
+         , staticBuffer           :: VkBuffer
          }
 
 data Dynamic =
        Dynamic
-         { swapchain      :: VkSwapchainKHR
-         , images         :: [VkImage]
-         , imageViews     :: [VkImageView]
-         , framebuffers   :: [VkFramebuffer]
+         { dynamicSwapchain      :: VkSwapchainKHR
+         , dynamicImages         :: [VkImage]
+         , dynamicImageViews     :: [VkImageView]
+         , dynamicFramebuffers   :: [VkFramebuffer]
          }
 
 initialize :: [CString] -> IO ()
@@ -140,28 +137,28 @@ initialize instLayers = do
                                         ]
 
                                     preloop fsize Front Static
-                                                          { instance_        = inst
-                                                          , vk_KHR_surface   = vk_KHR_surface
-                                                          , window           = window
-                                                          , surface          = surf
-                                                          , physicalDevice   = phys
-                                                          , queueFamilies    = qfam
-                                                          , swapParameters   = swapParams
-                                                          , device           = dev
-                                                          , presentQueue     = pque
-                                                          , vk_KHR_swapchain = vk_KHR_swapchain
-                                                          , pipelineLayout   = layout
-                                                          , renderPass       = pass
-                                                          , pipeline         = pipe
-                                                          , commandPool      = pool
-                                                          , commandBuffer    = cbuf
-                                                          , imageAvailable0  = ia0sem
-                                                          , imageAvailable1  = ia1sem
-                                                          , renderFinished0  = rf0sem
-                                                          , renderFinished1  = rf1sem
-                                                          , inFlight0        = fence0
-                                                          , inFlight1        = fence1
-                                                          , buffer           = buf
+                                                          { staticInstance         = inst
+                                                          , staticVK_KHR_surface   = vk_KHR_surface
+                                                          , staticWindow           = window
+                                                          , staticSurface          = surf
+                                                          , staticPhysicalDevice   = phys
+                                                          , staticQueueFamilies    = qfam
+                                                          , staticSwapParameters   = swapParams
+                                                          , staticDevice           = dev
+                                                          , staticPresentQueue     = pque
+                                                          , staticVK_KHR_swapchain = vk_KHR_swapchain
+                                                          , staticPipelineLayout   = layout
+                                                          , staticRenderPass       = pass
+                                                          , staticPipeline         = pipe
+                                                          , staticCommandPool      = pool
+                                                          , staticCommandBuffer    = cbuf
+                                                          , staticImageAvailable0  = ia0sem
+                                                          , staticImageAvailable1  = ia1sem
+                                                          , staticRenderFinished0  = rf0sem
+                                                          , staticRenderFinished1  = rf1sem
+                                                          , staticInFlight0        = fence0
+                                                          , staticInFlight1        = fence1
+                                                          , staticBuffer           = buf
                                                           }
 
 data Action = Resize
@@ -169,13 +166,13 @@ data Action = Resize
 
 preloop :: (Word32, Word32) -> Side -> Static -> IO ()
 preloop fsize side static = do
-  let window           = getField @"window" static
-      surf             = getField @"surface" static
-      qfam             = getField @"queueFamilies" static
-      swapParams       = getField @"swapParameters" static
-      dev              = getField @"device" static
-      vk_KHR_swapchain = getField @"vk_KHR_swapchain" static
-      pass             = getField @"renderPass" static
+  let window           = getField @"staticWindow"           static
+      surf             = getField @"staticSurface"          static
+      qfam             = getField @"staticQueueFamilies"    static
+      swapParams       = getField @"staticSwapParameters"   static
+      dev              = getField @"staticDevice"           static
+      vk_KHR_swapchain = getField @"staticVK_KHR_swapchain" static
+      pass             = getField @"staticRenderPass"       static
   
   (side', action) <- do
     bracket (createSwapchain vk_KHR_swapchain fsize surf qfam swapParams dev)
@@ -189,10 +186,10 @@ preloop fsize side static = do
                      
           flip finally (deviceWaitIdle dev) $
             loop fsize side static Dynamic
-                                     { swapchain    = swch
-                                     , images       = imgs
-                                     , imageViews   = views
-                                     , framebuffers = fbufs
+                                     { dynamicSwapchain    = swch
+                                     , dynamicImages       = imgs
+                                     , dynamicImageViews   = views
+                                     , dynamicFramebuffers = fbufs
                                      }
   case action of
     Resize ->
@@ -222,21 +219,21 @@ nextSide Back  = Front
 
 loop :: (Word32, Word32) -> Side -> Static -> Dynamic -> IO (Side, Action)
 loop fsize side static dynamic = do
-  let window           = getField @"window" static
-      dev              = getField @"device" static
-      pque             = getField @"presentQueue" static
-      vk_KHR_swapchain = getField @"vk_KHR_swapchain" static
-      pass             = getField @"renderPass" static
-      pipe             = getField @"pipeline" static
-      cbuf             = getField @"commandBuffer" static
+  let window           = getField @"staticWindow"           static
+      dev              = getField @"staticDevice"           static
+      pque             = getField @"staticPresentQueue"     static
+      vk_KHR_swapchain = getField @"staticVK_KHR_swapchain" static
+      pass             = getField @"staticRenderPass"       static
+      pipe             = getField @"staticPipeline"         static
+      cbuf             = getField @"staticCommandBuffer"    static
       (iasem, rfsem, fence) =
         case side of
-          Front -> (getField @"imageAvailable0" static, getField @"renderFinished0" static, getField @"inFlight0" static)
-          Back  -> (getField @"imageAvailable1" static, getField @"renderFinished1" static, getField @"inFlight1" static)
-      buf              = getField @"buffer" static
+          Front -> (getField @"staticImageAvailable0" static, getField @"staticRenderFinished0" static, getField @"staticInFlight0" static)
+          Back  -> (getField @"staticImageAvailable1" static, getField @"staticRenderFinished1" static, getField @"staticInFlight1" static)
+      buf              = getField @"staticBuffer" static
 
-      swch             = getField @"swapchain" dynamic
-      fbufs            = getField @"framebuffers" dynamic
+      swch             = getField @"dynamicSwapchain" dynamic
+      fbufs            = getField @"dynamicFramebuffers" dynamic
   
   nextImage <- acquireNextImageKHR vk_KHR_swapchain dev swch iasem
 
@@ -453,12 +450,12 @@ getPhysicalDeviceSurfaceSupport vk_KHR_surface phys qfam surf =
 
 data SwapExtent =
        SwapExtent
-         { imageCount       :: Word32
-         , minExtentWidth   :: Word32
-         , minExtentHeight  :: Word32
-         , maxExtentWidth   :: Word32
-         , maxExtentHeight  :: Word32
-         , currentTransform :: VkSurfaceTransformFlagBitsKHR
+         { swapExtentImageCount       :: Word32
+         , swapExtentMinExtentWidth   :: Word32
+         , swapExtentMinExtentHeight  :: Word32
+         , swapExtentMaxExtentWidth   :: Word32
+         , swapExtentMaxExtentHeight  :: Word32
+         , swapExtentCurrentTransform :: VkSurfaceTransformFlagBitsKHR
          }
 
 getPhysicalDeviceSurfaceCapabilities :: VK_KHR_surface -> VkPhysicalDevice -> VkSurfaceKHR -> IO SwapExtent
@@ -475,14 +472,14 @@ getPhysicalDeviceSurfaceCapabilities vk_KHR_surface phys surf =
         maxHeight <- peek . offset @"height" $ offset @"maxImageExtent" ptr
         transform <- peek $ offset @"currentTransform" ptr
         return SwapExtent
-                 { imageCount       = if maxCount == minCount
-                                        then minCount
-                                        else minCount + 1
-                 , minExtentWidth   = minWidth
-                 , minExtentHeight  = minHeight
-                 , maxExtentWidth   = maxWidth
-                 , maxExtentHeight  = maxHeight
-                 , currentTransform = transform
+                 { swapExtentImageCount       = if maxCount == minCount
+                                                  then minCount
+                                                  else minCount + 1
+                 , swapExtentMinExtentWidth   = minWidth
+                 , swapExtentMinExtentHeight  = minHeight
+                 , swapExtentMaxExtentWidth   = maxWidth
+                 , swapExtentMaxExtentHeight  = maxHeight
+                 , swapExtentCurrentTransform = transform
                  }
       VK_ERROR_OUT_OF_HOST_MEMORY   -> fail "vkGetPhysicalDeviceSurfaceCapabilitiesKHR: out of host memory"
       VK_ERROR_OUT_OF_DEVICE_MEMORY -> fail "vkGetPhysicalDeviceSurfaceCapabilitiesKHR: out of device memory"
@@ -491,8 +488,8 @@ getPhysicalDeviceSurfaceCapabilities vk_KHR_surface phys surf =
 
 data SwapFormat =
        SwapFormat
-         { format     :: VkFormat
-         , colorSpace :: VkColorSpaceKHR
+         { swapFormatFormat     :: VkFormat
+         , swapFormatColorSpace :: VkColorSpaceKHR
          }
 
 getPhysicalDeviceSurfaceFormat :: VK_KHR_surface -> VkPhysicalDevice -> VkSurfaceKHR -> IO SwapFormat
@@ -575,9 +572,9 @@ getPhysicalDeviceSurfacePresentMode vk_KHR_surface phys surf =
 
 data SwapParams =
        SwapParams
-         { capabilities :: SwapExtent
-         , format       :: SwapFormat
-         , presentMode  :: VkPresentModeKHR
+         { swapParamsCapabilities :: SwapExtent
+         , swapParamsFormat       :: SwapFormat
+         , swapParamsPresentMode  :: VkPresentModeKHR
          }
 
 queryDeviceSwapParams :: VK_KHR_surface -> VkPhysicalDevice -> VkSurfaceKHR -> IO SwapParams
@@ -765,9 +762,9 @@ createSwapchain vk_KHR_swapchain (w, h) surf qfam swapParams dev = do
       poke (offset @"pNext"                          infoPtr) nullPtr
       poke (offset @"flags"                          infoPtr) 0
       poke (offset @"surface"                        infoPtr) surf
-      poke (offset @"minImageCount"                  infoPtr) . getField @"imageCount" $ getField @"capabilities" swapParams
-      poke (offset @"imageFormat"                    infoPtr) . getField @"format"     $ getField @"format" swapParams
-      poke (offset @"imageColorSpace"                infoPtr) . getField @"colorSpace" $ getField @"format" swapParams
+      poke (offset @"minImageCount"                  infoPtr) . getField @"swapExtentImageCount" $ getField @"swapParamsCapabilities" swapParams
+      poke (offset @"imageFormat"                    infoPtr) . getField @"swapFormatFormat"     $ getField @"swapParamsFormat" swapParams
+      poke (offset @"imageColorSpace"                infoPtr) . getField @"swapFormatColorSpace" $ getField @"swapParamsFormat" swapParams
       poke (offset @"width"  $ offset @"imageExtent" infoPtr) w
       poke (offset @"height" $ offset @"imageExtent" infoPtr) h
       poke (offset @"imageArrayLayers"               infoPtr) 1
@@ -775,9 +772,9 @@ createSwapchain vk_KHR_swapchain (w, h) surf qfam swapParams dev = do
       poke (offset @"imageSharingMode"               infoPtr) sharingMode
       poke (offset @"queueFamilyIndexCount"          infoPtr) queLen
       poke (offset @"pQueueFamilyIndices"            infoPtr) quePtr
-      poke (offset @"preTransform"                   infoPtr) . getField @"currentTransform" $ getField @"capabilities" swapParams
+      poke (offset @"preTransform"                   infoPtr) . getField @"swapExtentCurrentTransform" $ getField @"swapParamsCapabilities" swapParams
       poke (offset @"compositeAlpha"                 infoPtr) VK_COMPOSITE_ALPHA_OPAQUE_BIT_KHR
-      poke (offset @"presentMode"                    infoPtr) $ getField @"presentMode" swapParams
+      poke (offset @"presentMode"                    infoPtr) $ getField @"swapParamsPresentMode" swapParams
       poke (offset @"clipped"                        infoPtr) VK_TRUE
       poke (offset @"oldSwapchain"                   infoPtr) VK_NULL_HANDLE
 
@@ -829,7 +826,7 @@ createImageView dev swapParams img = do
     poke (offset @"flags"                                       infoPtr) 0
     poke (offset @"image"                                       infoPtr) img
     poke (offset @"viewType"                                    infoPtr) VK_IMAGE_VIEW_TYPE_2D
-    poke (offset @"format"                                      infoPtr) . getField @"format" $ getField @"format" swapParams
+    poke (offset @"format"                                      infoPtr) . getField @"swapFormatFormat" $ getField @"swapParamsFormat" swapParams
     poke (offset @"r" $ offset @"components"                    infoPtr) VK_COMPONENT_SWIZZLE_IDENTITY
     poke (offset @"g" $ offset @"components"                    infoPtr) VK_COMPONENT_SWIZZLE_IDENTITY
     poke (offset @"b" $ offset @"components"                    infoPtr) VK_COMPONENT_SWIZZLE_IDENTITY
@@ -1075,7 +1072,7 @@ createRenderPass :: SwapParams -> VkDevice -> IO VkRenderPass
 createRenderPass swapParams dev = do
   alloca $ \attaPtr -> do
     poke (offset @"flags"          attaPtr) 0
-    poke (offset @"format"         attaPtr) . getField @"format" $ getField @"format" swapParams
+    poke (offset @"format"         attaPtr) . getField @"swapFormatFormat" $ getField @"swapParamsFormat" swapParams
     poke (offset @"samples"        attaPtr) VK_SAMPLE_COUNT_1_BIT
     poke (offset @"loadOp"         attaPtr) VK_ATTACHMENT_LOAD_OP_CLEAR
     poke (offset @"storeOp"        attaPtr) VK_ATTACHMENT_STORE_OP_STORE
