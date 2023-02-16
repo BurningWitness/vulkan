@@ -14,7 +14,7 @@ import           Foreign.Marshal.Alloc
 import           Foreign.Marshal.Array
 import           Foreign.Ptr
 import           Foreign.Storable
-import           Foreign.Storable.Offset
+import           Foreign.Storable.Offset as Off
 
 
 
@@ -61,7 +61,7 @@ checkInstanceExtensionSupport cstrs = do
                   let go acc n
                         | n < 0     = return acc
                         | otherwise = do
-                            let cstr = offset @"extensionName" $ advancePtr arrPtr n
+                            let cstr = Off.offset @"extensionName" $ advancePtr arrPtr n
                             acc' <- strexclude (castPtr cstr) acc
                             go acc' (n - 1)
 
@@ -100,7 +100,7 @@ checkDeviceExtensionSupport phys cstrs = do
                   let go acc n
                         | n < 0     = return acc
                         | otherwise = do
-                            let cstr = offset @"extensionName" $ advancePtr arrPtr n
+                            let cstr = Off.offset @"extensionName" $ advancePtr arrPtr n
                             acc' <- strexclude (castPtr cstr) acc
                             go acc' (n - 1)
 

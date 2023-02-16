@@ -194,10 +194,6 @@ workflows:
 #     - build-arm64:
 #         name: aarch64-9.2.5
       - build-linux:
-          name: linux-8.2.2
-          version: 8.2.2
-          keep-artifact: false
-      - build-linux:
           name: linux-8.4.4
           version: 8.4.4
           keep-artifact: false
