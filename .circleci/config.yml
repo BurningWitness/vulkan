@@ -51,7 +51,7 @@ jobs:
             - "/root/.cabal"
             - "dist-newstyle"
 
-      - store_artifact:
+      - store_artifacts:
           path: /tmp/out/vulkan-example
 
   build-linux:
