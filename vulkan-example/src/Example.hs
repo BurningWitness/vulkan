@@ -414,7 +414,7 @@ instance Ord (Score a) where
 getDeviceTypeScore :: VkPhysicalDevice -> IO Int
 getDeviceTypeScore phys = do
   alloca $ \ptr -> do
-    vkGetPhysicalDeviceProperties phys ptr
+    Vulkan.Core_1_0.vkGetPhysicalDeviceProperties phys ptr
 
     type_ <- peek $ Off.offset @"deviceType" ptr
     pure $ case type_ of
@@ -1257,7 +1257,7 @@ beginCommandBuffer buf =
 cmdBeginRenderPass :: VkCommandBuffer -> (Word32, Word32) -> VkRenderPass -> VkFramebuffer -> IO ()
 cmdBeginRenderPass buf (w, h) pass fbuf =
   alloca $ \clvaPtr -> do
-    poke (            offset @"float32" $ Off.offset @"color" clvaPtr   ) 0
+    poke (            Off.offset @"float32" $ Off.offset @"color" clvaPtr   ) 0
     poke (advancePtr (Off.offset @"float32" $ Off.offset @"color" clvaPtr) 1) 0
     poke (advancePtr (Off.offset @"float32" $ Off.offset @"color" clvaPtr) 2) 0
     poke (advancePtr (Off.offset @"float32" $ Off.offset @"color" clvaPtr) 3) 1
