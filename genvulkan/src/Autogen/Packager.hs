@@ -511,7 +511,7 @@ packageBases mixed =
                   }
   in Module
        { ext      = Hsc
-       , pragmas  = []
+       , pragmas  = [ Pragma "EmptyDataDecls" ]
        , name     = baseName
        , flags    = Nothing
        , exports  = []
@@ -689,7 +689,7 @@ packageHandles mixed =
 
   in Module
        { ext      = Hsc
-       , pragmas  = [Pragma "CPP", Pragma "GeneralizedNewtypeDeriving"]
+       , pragmas  = [Pragma "CPP", Pragma "EmptyDataDecls", Pragma "GeneralizedNewtypeDeriving" ]
        , name     = handleName
        , flags    = Nothing
        , exports  = []
@@ -780,6 +780,7 @@ packageStructs mixed augs = do
                { ext      = Hsc
                , pragmas  = [ Pragma "DataKinds"
                             , Pragma "DuplicateRecordFields"
+                            , Pragma "FlexibleInstances"
                             , Pragma "MultiParamTypeClasses"
                             , GatedPragma (Flags FlagHsc "__GLASGOW_HASKELL__ >= 902") "NoFieldSelectors"
                             , Pragma "TypeApplications"
@@ -876,6 +877,7 @@ packageUnions mixed = do
                { ext      = Hsc
                , pragmas  = [ Pragma "DataKinds"
                             , Pragma "DuplicateRecordFields"
+                            , Pragma "FlexibleInstances"
                             , Pragma "MultiParamTypeClasses"
                             , GatedPragma (Flags FlagHsc "__GLASGOW_HASKELL__ >= 902") "NoFieldSelectors"
                             , Pragma "TypeApplications"

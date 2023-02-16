@@ -1850,22 +1850,11 @@ library
         Vulkan.Core_1_1
 
       other-modules:
-        Vulkan.Types.Define
-        Vulkan.Types.Base
-        Vulkan.Types.Enum.VkBufferCreateFlagBits
-        Vulkan.Types.Enum.VkBufferCreateFlags
-        Vulkan.Types.Enum.VkBufferUsageFlags
         Vulkan.Types.Enum.VkChromaLocation
-        Vulkan.Types.Enum.VkCommandPoolCreateFlagBits
         Vulkan.Types.Enum.VkCommandPoolTrimFlags
-        Vulkan.Types.Enum.VkComponentSwizzle
-        Vulkan.Types.Enum.VkDependencyFlagBits
-        Vulkan.Types.Enum.VkDescriptorSetLayoutCreateFlags
-        Vulkan.Types.Enum.VkDescriptorType
         Vulkan.Types.Enum.VkDescriptorUpdateTemplateCreateFlags
         Vulkan.Types.Enum.VkDescriptorUpdateTemplateType
         Vulkan.Types.Enum.VkDeviceQueueCreateFlagBits
-        Vulkan.Types.Enum.VkDeviceQueueCreateFlags
         Vulkan.Types.Enum.VkExternalFenceFeatureFlagBits
         Vulkan.Types.Enum.VkExternalFenceFeatureFlags
         Vulkan.Types.Enum.VkExternalFenceHandleTypeFlagBits
@@ -1880,64 +1869,24 @@ library
         Vulkan.Types.Enum.VkExternalSemaphoreHandleTypeFlags
         Vulkan.Types.Enum.VkFenceImportFlagBits
         Vulkan.Types.Enum.VkFenceImportFlags
-        Vulkan.Types.Enum.VkFilter
-        Vulkan.Types.Enum.VkFormat
-        Vulkan.Types.Enum.VkFormatFeatureFlagBits
-        Vulkan.Types.Enum.VkFormatFeatureFlags
-        Vulkan.Types.Enum.VkImageAspectFlagBits
-        Vulkan.Types.Enum.VkImageAspectFlags
-        Vulkan.Types.Enum.VkImageCreateFlagBits
-        Vulkan.Types.Enum.VkImageCreateFlags
-        Vulkan.Types.Enum.VkImageLayout
-        Vulkan.Types.Enum.VkImageTiling
-        Vulkan.Types.Enum.VkImageType
-        Vulkan.Types.Enum.VkImageUsageFlags
-        Vulkan.Types.Enum.VkInternalAllocationType
         Vulkan.Types.Enum.VkMemoryAllocateFlagBits
         Vulkan.Types.Enum.VkMemoryAllocateFlags
-        Vulkan.Types.Enum.VkMemoryHeapFlagBits
-        Vulkan.Types.Enum.VkMemoryHeapFlags
-        Vulkan.Types.Enum.VkMemoryPropertyFlagBits
-        Vulkan.Types.Enum.VkMemoryPropertyFlags
-        Vulkan.Types.Enum.VkObjectType
         Vulkan.Types.Enum.VkPeerMemoryFeatureFlagBits
         Vulkan.Types.Enum.VkPeerMemoryFeatureFlags
-        Vulkan.Types.Enum.VkPhysicalDeviceType
-        Vulkan.Types.Enum.VkPipelineBindPoint
-        Vulkan.Types.Enum.VkPipelineCreateFlagBits
         Vulkan.Types.Enum.VkPointClippingBehavior
-        Vulkan.Types.Enum.VkQueueFlagBits
-        Vulkan.Types.Enum.VkQueueFlags
-        Vulkan.Types.Enum.VkResult
-        Vulkan.Types.Enum.VkSampleCountFlagBits
-        Vulkan.Types.Enum.VkSampleCountFlags
         Vulkan.Types.Enum.VkSamplerYcbcrModelConversion
         Vulkan.Types.Enum.VkSamplerYcbcrRange
         Vulkan.Types.Enum.VkSemaphoreImportFlagBits
         Vulkan.Types.Enum.VkSemaphoreImportFlags
-        Vulkan.Types.Enum.VkShaderStageFlags
-        Vulkan.Types.Enum.VkSparseImageFormatFlags
-        Vulkan.Types.Enum.VkStructureType
         Vulkan.Types.Enum.VkSubgroupFeatureFlagBits
         Vulkan.Types.Enum.VkSubgroupFeatureFlags
-        Vulkan.Types.Enum.VkSystemAllocationScope
         Vulkan.Types.Enum.VkTessellationDomainOrigin
-        Vulkan.Types.FuncPointer.PFN_vkAllocationFunction
-        Vulkan.Types.FuncPointer.PFN_vkFreeFunction
-        Vulkan.Types.FuncPointer.PFN_vkInternalAllocationNotification
-        Vulkan.Types.FuncPointer.PFN_vkInternalFreeNotification
-        Vulkan.Types.FuncPointer.PFN_vkReallocationFunction
-        Vulkan.Types.Handle
-        Vulkan.Types.Struct.VkAllocationCallbacks
         Vulkan.Types.Struct.VkBindBufferMemoryDeviceGroupInfo
         Vulkan.Types.Struct.VkBindBufferMemoryInfo
         Vulkan.Types.Struct.VkBindImageMemoryDeviceGroupInfo
         Vulkan.Types.Struct.VkBindImageMemoryInfo
         Vulkan.Types.Struct.VkBindImagePlaneMemoryInfo
         Vulkan.Types.Struct.VkBufferMemoryRequirementsInfo2
-        Vulkan.Types.Struct.VkComponentMapping
-        Vulkan.Types.Struct.VkDescriptorSetLayoutBinding
-        Vulkan.Types.Struct.VkDescriptorSetLayoutCreateInfo
         Vulkan.Types.Struct.VkDescriptorSetLayoutSupport
         Vulkan.Types.Struct.VkDescriptorUpdateTemplateCreateInfo
         Vulkan.Types.Struct.VkDescriptorUpdateTemplateEntry
@@ -1950,8 +1899,6 @@ library
         Vulkan.Types.Struct.VkExportFenceCreateInfo
         Vulkan.Types.Struct.VkExportMemoryAllocateInfo
         Vulkan.Types.Struct.VkExportSemaphoreCreateInfo
-        Vulkan.Types.Struct.VkExtent2D
-        Vulkan.Types.Struct.VkExtent3D
         Vulkan.Types.Struct.VkExternalBufferProperties
         Vulkan.Types.Struct.VkExternalFenceProperties
         Vulkan.Types.Struct.VkExternalImageFormatProperties
@@ -1959,9 +1906,7 @@ library
         Vulkan.Types.Struct.VkExternalMemoryImageCreateInfo
         Vulkan.Types.Struct.VkExternalMemoryProperties
         Vulkan.Types.Struct.VkExternalSemaphoreProperties
-        Vulkan.Types.Struct.VkFormatProperties
         Vulkan.Types.Struct.VkFormatProperties2
-        Vulkan.Types.Struct.VkImageFormatProperties
         Vulkan.Types.Struct.VkImageFormatProperties2
         Vulkan.Types.Struct.VkImageMemoryRequirementsInfo2
         Vulkan.Types.Struct.VkImagePlaneMemoryRequirementsInfo
@@ -1971,29 +1916,21 @@ library
         Vulkan.Types.Struct.VkMemoryAllocateFlagsInfo
         Vulkan.Types.Struct.VkMemoryDedicatedAllocateInfo
         Vulkan.Types.Struct.VkMemoryDedicatedRequirements
-        Vulkan.Types.Struct.VkMemoryHeap
-        Vulkan.Types.Struct.VkMemoryRequirements
         Vulkan.Types.Struct.VkMemoryRequirements2
-        Vulkan.Types.Struct.VkMemoryType
-        Vulkan.Types.Struct.VkOffset2D
         Vulkan.Types.Struct.VkPhysicalDevice16BitStorageFeatures
         Vulkan.Types.Struct.VkPhysicalDeviceExternalBufferInfo
         Vulkan.Types.Struct.VkPhysicalDeviceExternalFenceInfo
         Vulkan.Types.Struct.VkPhysicalDeviceExternalImageFormatInfo
         Vulkan.Types.Struct.VkPhysicalDeviceExternalSemaphoreInfo
-        Vulkan.Types.Struct.VkPhysicalDeviceFeatures
         Vulkan.Types.Struct.VkPhysicalDeviceFeatures2
         Vulkan.Types.Struct.VkPhysicalDeviceGroupProperties
         Vulkan.Types.Struct.VkPhysicalDeviceIDProperties
         Vulkan.Types.Struct.VkPhysicalDeviceImageFormatInfo2
-        Vulkan.Types.Struct.VkPhysicalDeviceLimits
         Vulkan.Types.Struct.VkPhysicalDeviceMaintenance3Properties
-        Vulkan.Types.Struct.VkPhysicalDeviceMemoryProperties
         Vulkan.Types.Struct.VkPhysicalDeviceMemoryProperties2
         Vulkan.Types.Struct.VkPhysicalDeviceMultiviewFeatures
         Vulkan.Types.Struct.VkPhysicalDeviceMultiviewProperties
         Vulkan.Types.Struct.VkPhysicalDevicePointClippingProperties
-        Vulkan.Types.Struct.VkPhysicalDeviceProperties
         Vulkan.Types.Struct.VkPhysicalDeviceProperties2
         Vulkan.Types.Struct.VkPhysicalDeviceProtectedMemoryFeatures
         Vulkan.Types.Struct.VkPhysicalDeviceProtectedMemoryProperties
@@ -2001,23 +1938,18 @@ library
         Vulkan.Types.Struct.VkPhysicalDeviceShaderDrawParameterFeatures
         Vulkan.Types.Struct.VkPhysicalDeviceShaderDrawParametersFeatures
         Vulkan.Types.Struct.VkPhysicalDeviceSparseImageFormatInfo2
-        Vulkan.Types.Struct.VkPhysicalDeviceSparseProperties
         Vulkan.Types.Struct.VkPhysicalDeviceSubgroupProperties
         Vulkan.Types.Struct.VkPhysicalDeviceVariablePointerFeatures
         Vulkan.Types.Struct.VkPhysicalDeviceVariablePointersFeatures
         Vulkan.Types.Struct.VkPipelineTessellationDomainOriginStateCreateInfo
         Vulkan.Types.Struct.VkProtectedSubmitInfo
-        Vulkan.Types.Struct.VkQueueFamilyProperties
         Vulkan.Types.Struct.VkQueueFamilyProperties2
-        Vulkan.Types.Struct.VkRect2D
         Vulkan.Types.Struct.VkRenderPassInputAttachmentAspectCreateInfo
         Vulkan.Types.Struct.VkRenderPassMultiviewCreateInfo
         Vulkan.Types.Struct.VkSamplerYcbcrConversionCreateInfo
         Vulkan.Types.Struct.VkSamplerYcbcrConversionImageFormatProperties
         Vulkan.Types.Struct.VkSamplerYcbcrConversionInfo
-        Vulkan.Types.Struct.VkSparseImageFormatProperties
         Vulkan.Types.Struct.VkSparseImageFormatProperties2
-        Vulkan.Types.Struct.VkSparseImageMemoryRequirements
         Vulkan.Types.Struct.VkSparseImageMemoryRequirements2
         Vulkan.Types.Command.VkBindBufferMemory2
         Vulkan.Types.Command.VkBindImageMemory2
@@ -2053,76 +1985,35 @@ library
         Vulkan.Core_1_2
 
       other-modules:
-        Vulkan.Types.Define
-        Vulkan.Types.Base
-        Vulkan.Types.Enum.VkAccessFlags
-        Vulkan.Types.Enum.VkAttachmentDescriptionFlags
-        Vulkan.Types.Enum.VkAttachmentLoadOp
-        Vulkan.Types.Enum.VkAttachmentStoreOp
-        Vulkan.Types.Enum.VkBufferCreateFlagBits
-        Vulkan.Types.Enum.VkBufferUsageFlagBits
-        Vulkan.Types.Enum.VkDependencyFlags
         Vulkan.Types.Enum.VkDescriptorBindingFlagBits
         Vulkan.Types.Enum.VkDescriptorBindingFlags
-        Vulkan.Types.Enum.VkDescriptorPoolCreateFlagBits
-        Vulkan.Types.Enum.VkDescriptorSetLayoutCreateFlagBits
         Vulkan.Types.Enum.VkDriverId
-        Vulkan.Types.Enum.VkFormat
-        Vulkan.Types.Enum.VkFormatFeatureFlagBits
-        Vulkan.Types.Enum.VkFramebufferCreateFlagBits
-        Vulkan.Types.Enum.VkImageAspectFlags
-        Vulkan.Types.Enum.VkImageCreateFlags
-        Vulkan.Types.Enum.VkImageLayout
-        Vulkan.Types.Enum.VkImageUsageFlags
-        Vulkan.Types.Enum.VkInternalAllocationType
         Vulkan.Types.Enum.VkMemoryAllocateFlagBits
-        Vulkan.Types.Enum.VkPipelineBindPoint
-        Vulkan.Types.Enum.VkPipelineStageFlags
         Vulkan.Types.Enum.VkPointClippingBehavior
-        Vulkan.Types.Enum.VkRenderPassCreateFlags
         Vulkan.Types.Enum.VkResolveModeFlagBits
         Vulkan.Types.Enum.VkResolveModeFlags
-        Vulkan.Types.Enum.VkResult
-        Vulkan.Types.Enum.VkSampleCountFlagBits
-        Vulkan.Types.Enum.VkSampleCountFlags
-        Vulkan.Types.Enum.VkSamplerAddressMode
         Vulkan.Types.Enum.VkSamplerReductionMode
         Vulkan.Types.Enum.VkSemaphoreType
         Vulkan.Types.Enum.VkSemaphoreWaitFlagBits
         Vulkan.Types.Enum.VkSemaphoreWaitFlags
         Vulkan.Types.Enum.VkShaderFloatControlsIndependence
-        Vulkan.Types.Enum.VkShaderStageFlags
-        Vulkan.Types.Enum.VkStructureType
         Vulkan.Types.Enum.VkSubgroupFeatureFlags
-        Vulkan.Types.Enum.VkSubpassContents
-        Vulkan.Types.Enum.VkSubpassDescriptionFlags
-        Vulkan.Types.Enum.VkSystemAllocationScope
-        Vulkan.Types.FuncPointer.PFN_vkAllocationFunction
-        Vulkan.Types.FuncPointer.PFN_vkFreeFunction
-        Vulkan.Types.FuncPointer.PFN_vkInternalAllocationNotification
-        Vulkan.Types.FuncPointer.PFN_vkInternalFreeNotification
-        Vulkan.Types.FuncPointer.PFN_vkReallocationFunction
-        Vulkan.Types.Handle
-        Vulkan.Types.Struct.VkAllocationCallbacks
         Vulkan.Types.Struct.VkAttachmentDescription2
         Vulkan.Types.Struct.VkAttachmentDescriptionStencilLayout
         Vulkan.Types.Struct.VkAttachmentReference2
         Vulkan.Types.Struct.VkAttachmentReferenceStencilLayout
         Vulkan.Types.Struct.VkBufferDeviceAddressInfo
         Vulkan.Types.Struct.VkBufferOpaqueCaptureAddressCreateInfo
-        Vulkan.Types.Struct.VkClearDepthStencilValue
         Vulkan.Types.Struct.VkConformanceVersion
         Vulkan.Types.Struct.VkDescriptorSetLayoutBindingFlagsCreateInfo
         Vulkan.Types.Struct.VkDescriptorSetVariableDescriptorCountAllocateInfo
         Vulkan.Types.Struct.VkDescriptorSetVariableDescriptorCountLayoutSupport
         Vulkan.Types.Struct.VkDeviceMemoryOpaqueCaptureAddressInfo
-        Vulkan.Types.Struct.VkExtent2D
         Vulkan.Types.Struct.VkFramebufferAttachmentImageInfo
         Vulkan.Types.Struct.VkFramebufferAttachmentsCreateInfo
         Vulkan.Types.Struct.VkImageFormatListCreateInfo
         Vulkan.Types.Struct.VkImageStencilUsageCreateInfo
         Vulkan.Types.Struct.VkMemoryOpaqueCaptureAddressAllocateInfo
-        Vulkan.Types.Struct.VkOffset2D
         Vulkan.Types.Struct.VkPhysicalDevice8BitStorageFeatures
         Vulkan.Types.Struct.VkPhysicalDeviceBufferDeviceAddressFeatures
         Vulkan.Types.Struct.VkPhysicalDeviceDepthStencilResolveProperties
@@ -2146,9 +2037,7 @@ library
         Vulkan.Types.Struct.VkPhysicalDeviceVulkan12Features
         Vulkan.Types.Struct.VkPhysicalDeviceVulkan12Properties
         Vulkan.Types.Struct.VkPhysicalDeviceVulkanMemoryModelFeatures
-        Vulkan.Types.Struct.VkRect2D
         Vulkan.Types.Struct.VkRenderPassAttachmentBeginInfo
-        Vulkan.Types.Struct.VkRenderPassBeginInfo
         Vulkan.Types.Struct.VkRenderPassCreateInfo2
         Vulkan.Types.Struct.VkSamplerReductionModeCreateInfo
         Vulkan.Types.Struct.VkSemaphoreSignalInfo
@@ -2160,8 +2049,6 @@ library
         Vulkan.Types.Struct.VkSubpassDescriptionDepthStencilResolve
         Vulkan.Types.Struct.VkSubpassEndInfo
         Vulkan.Types.Struct.VkTimelineSemaphoreSubmitInfo
-        Vulkan.Types.Union.VkClearColorValue
-        Vulkan.Types.Union.VkClearValue
         Vulkan.Types.Command.VkCmdBeginRenderPass2
         Vulkan.Types.Command.VkCmdDrawIndexedIndirectCount
         Vulkan.Types.Command.VkCmdDrawIndirectCount
@@ -2181,74 +2068,27 @@ library
         Vulkan.Core_1_3
 
       other-modules:
-        Vulkan.Types.Define
-        Vulkan.Types.Base
-        Vulkan.Types.Enum.VkAccessFlagBits
         Vulkan.Types.Enum.VkAccessFlagBits2
         Vulkan.Types.Enum.VkAccessFlags2
-        Vulkan.Types.Enum.VkAttachmentLoadOp
-        Vulkan.Types.Enum.VkAttachmentStoreOp
-        Vulkan.Types.Enum.VkBufferCreateFlags
-        Vulkan.Types.Enum.VkBufferUsageFlags
-        Vulkan.Types.Enum.VkCompareOp
-        Vulkan.Types.Enum.VkCullModeFlags
-        Vulkan.Types.Enum.VkDependencyFlags
-        Vulkan.Types.Enum.VkDescriptorType
-        Vulkan.Types.Enum.VkDynamicState
-        Vulkan.Types.Enum.VkEventCreateFlagBits
-        Vulkan.Types.Enum.VkFilter
-        Vulkan.Types.Enum.VkFormat
         Vulkan.Types.Enum.VkFormatFeatureFlagBits2
         Vulkan.Types.Enum.VkFormatFeatureFlags2
-        Vulkan.Types.Enum.VkFrontFace
-        Vulkan.Types.Enum.VkImageAspectFlagBits
-        Vulkan.Types.Enum.VkImageAspectFlags
-        Vulkan.Types.Enum.VkImageCreateFlags
-        Vulkan.Types.Enum.VkImageLayout
-        Vulkan.Types.Enum.VkImageTiling
-        Vulkan.Types.Enum.VkImageType
-        Vulkan.Types.Enum.VkImageUsageFlags
-        Vulkan.Types.Enum.VkInternalAllocationType
-        Vulkan.Types.Enum.VkObjectType
         Vulkan.Types.Enum.VkPipelineCacheCreateFlagBits
-        Vulkan.Types.Enum.VkPipelineCreateFlagBits
         Vulkan.Types.Enum.VkPipelineCreationFeedbackFlagBits
         Vulkan.Types.Enum.VkPipelineCreationFeedbackFlags
-        Vulkan.Types.Enum.VkPipelineShaderStageCreateFlagBits
-        Vulkan.Types.Enum.VkPipelineStageFlagBits
         Vulkan.Types.Enum.VkPipelineStageFlagBits2
         Vulkan.Types.Enum.VkPipelineStageFlags2
-        Vulkan.Types.Enum.VkPrimitiveTopology
         Vulkan.Types.Enum.VkPrivateDataSlotCreateFlags
         Vulkan.Types.Enum.VkRenderingFlagBits
         Vulkan.Types.Enum.VkRenderingFlags
         Vulkan.Types.Enum.VkResolveModeFlagBits
-        Vulkan.Types.Enum.VkResult
-        Vulkan.Types.Enum.VkSampleCountFlagBits
-        Vulkan.Types.Enum.VkShaderStageFlags
-        Vulkan.Types.Enum.VkSharingMode
-        Vulkan.Types.Enum.VkSparseImageFormatFlags
-        Vulkan.Types.Enum.VkStencilFaceFlags
-        Vulkan.Types.Enum.VkStencilOp
-        Vulkan.Types.Enum.VkStructureType
         Vulkan.Types.Enum.VkSubmitFlagBits
         Vulkan.Types.Enum.VkSubmitFlags
-        Vulkan.Types.Enum.VkSystemAllocationScope
         Vulkan.Types.Enum.VkToolPurposeFlagBits
         Vulkan.Types.Enum.VkToolPurposeFlags
-        Vulkan.Types.FuncPointer.PFN_vkAllocationFunction
-        Vulkan.Types.FuncPointer.PFN_vkFreeFunction
-        Vulkan.Types.FuncPointer.PFN_vkInternalAllocationNotification
-        Vulkan.Types.FuncPointer.PFN_vkInternalFreeNotification
-        Vulkan.Types.FuncPointer.PFN_vkReallocationFunction
-        Vulkan.Types.Handle
-        Vulkan.Types.Struct.VkAllocationCallbacks
         Vulkan.Types.Struct.VkBlitImageInfo2
         Vulkan.Types.Struct.VkBufferCopy2
-        Vulkan.Types.Struct.VkBufferCreateInfo
         Vulkan.Types.Struct.VkBufferImageCopy2
         Vulkan.Types.Struct.VkBufferMemoryBarrier2
-        Vulkan.Types.Struct.VkClearDepthStencilValue
         Vulkan.Types.Struct.VkCommandBufferInheritanceRenderingInfo
         Vulkan.Types.Struct.VkCommandBufferSubmitInfo
         Vulkan.Types.Struct.VkCopyBufferInfo2
@@ -2260,21 +2100,13 @@ library
         Vulkan.Types.Struct.VkDeviceBufferMemoryRequirements
         Vulkan.Types.Struct.VkDeviceImageMemoryRequirements
         Vulkan.Types.Struct.VkDevicePrivateDataCreateInfo
-        Vulkan.Types.Struct.VkExtent2D
-        Vulkan.Types.Struct.VkExtent3D
         Vulkan.Types.Struct.VkFormatProperties3
         Vulkan.Types.Struct.VkImageBlit2
         Vulkan.Types.Struct.VkImageCopy2
-        Vulkan.Types.Struct.VkImageCreateInfo
         Vulkan.Types.Struct.VkImageMemoryBarrier2
         Vulkan.Types.Struct.VkImageResolve2
-        Vulkan.Types.Struct.VkImageSubresourceLayers
-        Vulkan.Types.Struct.VkImageSubresourceRange
         Vulkan.Types.Struct.VkMemoryBarrier2
-        Vulkan.Types.Struct.VkMemoryRequirements
         Vulkan.Types.Struct.VkMemoryRequirements2
-        Vulkan.Types.Struct.VkOffset2D
-        Vulkan.Types.Struct.VkOffset3D
         Vulkan.Types.Struct.VkPhysicalDeviceDynamicRenderingFeatures
         Vulkan.Types.Struct.VkPhysicalDeviceImageRobustnessFeatures
         Vulkan.Types.Struct.VkPhysicalDeviceInlineUniformBlockFeatures
@@ -2301,19 +2133,13 @@ library
         Vulkan.Types.Struct.VkPipelineRenderingCreateInfo
         Vulkan.Types.Struct.VkPipelineShaderStageRequiredSubgroupSizeCreateInfo
         Vulkan.Types.Struct.VkPrivateDataSlotCreateInfo
-        Vulkan.Types.Struct.VkRect2D
         Vulkan.Types.Struct.VkRenderingAttachmentInfo
         Vulkan.Types.Struct.VkRenderingInfo
         Vulkan.Types.Struct.VkResolveImageInfo2
         Vulkan.Types.Struct.VkSemaphoreSubmitInfo
-        Vulkan.Types.Struct.VkSparseImageFormatProperties
-        Vulkan.Types.Struct.VkSparseImageMemoryRequirements
         Vulkan.Types.Struct.VkSparseImageMemoryRequirements2
         Vulkan.Types.Struct.VkSubmitInfo2
-        Vulkan.Types.Struct.VkViewport
         Vulkan.Types.Struct.VkWriteDescriptorSetInlineUniformBlock
-        Vulkan.Types.Union.VkClearColorValue
-        Vulkan.Types.Union.VkClearValue
         Vulkan.Types.Command.VkCmdBeginRendering
         Vulkan.Types.Command.VkCmdBindVertexBuffers2
         Vulkan.Types.Command.VkCmdBlitImage2
@@ -2357,9 +2183,6 @@ library
         Vulkan.Ext.VK_AMD_buffer_marker
 
       other-modules:
-        Vulkan.Types.Base
-        Vulkan.Types.Enum.VkPipelineStageFlagBits
-        Vulkan.Types.Handle
         Vulkan.Types.Command.VkCmdWriteBufferMarkerAMD
 
     if flag (VK_AMD_device_coherent_memory)
@@ -2367,9 +2190,6 @@ library
         Vulkan.Ext.VK_AMD_device_coherent_memory
 
       other-modules:
-        Vulkan.Types.Base
-        Vulkan.Types.Enum.VkMemoryPropertyFlagBits
-        Vulkan.Types.Enum.VkStructureType
         Vulkan.Types.Struct.VkPhysicalDeviceCoherentMemoryFeaturesAMD
 
     if flag (VK_AMD_display_native_hdr)
@@ -2377,10 +2197,7 @@ library
         Vulkan.Ext.VK_AMD_display_native_hdr
 
       other-modules:
-        Vulkan.Types.Base
         Vulkan.Types.Enum.VkColorSpaceKHR
-        Vulkan.Types.Enum.VkStructureType
-        Vulkan.Types.Handle
         Vulkan.Types.Struct.VkDisplayNativeHdrSurfaceCapabilitiesAMD
         Vulkan.Types.Struct.VkSwapchainDisplayNativeHdrCreateInfoAMD
         Vulkan.Types.Command.VkSetLocalDimmingAMD
@@ -2390,8 +2207,6 @@ library
         Vulkan.Ext.VK_AMD_draw_indirect_count
 
       other-modules:
-        Vulkan.Types.Base
-        Vulkan.Types.Handle
         Vulkan.Types.Command.VkCmdDrawIndexedIndirectCountAMD
         Vulkan.Types.Command.VkCmdDrawIndirectCountAMD
 
@@ -2413,7 +2228,6 @@ library
 
       other-modules:
         Vulkan.Types.Enum.VkMemoryOverallocationBehaviorAMD
-        Vulkan.Types.Enum.VkStructureType
         Vulkan.Types.Struct.VkDeviceMemoryOverallocationCreateInfoAMD
 
     if flag (VK_AMD_mixed_attachment_samples)
@@ -2431,7 +2245,6 @@ library
       other-modules:
         Vulkan.Types.Enum.VkPipelineCompilerControlFlagBitsAMD
         Vulkan.Types.Enum.VkPipelineCompilerControlFlagsAMD
-        Vulkan.Types.Enum.VkStructureType
         Vulkan.Types.Struct.VkPipelineCompilerControlCreateInfoAMD
 
     if flag (VK_AMD_rasterization_order)
@@ -2440,7 +2253,6 @@ library
 
       other-modules:
         Vulkan.Types.Enum.VkRasterizationOrderAMD
-        Vulkan.Types.Enum.VkStructureType
         Vulkan.Types.Struct.VkPipelineRasterizationStateRasterizationOrderAMD
 
     if flag (VK_AMD_shader_ballot)
@@ -2452,7 +2264,6 @@ library
         Vulkan.Ext.VK_AMD_shader_core_properties
 
       other-modules:
-        Vulkan.Types.Enum.VkStructureType
         Vulkan.Types.Struct.VkPhysicalDeviceShaderCorePropertiesAMD
 
     if flag (VK_AMD_shader_core_properties2)
@@ -2462,7 +2273,6 @@ library
       other-modules:
         Vulkan.Types.Enum.VkShaderCorePropertiesFlagBitsAMD
         Vulkan.Types.Enum.VkShaderCorePropertiesFlagsAMD
-        Vulkan.Types.Enum.VkStructureType
         Vulkan.Types.Struct.VkPhysicalDeviceShaderCoreProperties2AMD
 
     if flag (VK_AMD_shader_early_and_late_fragment_tests)
@@ -2470,8 +2280,6 @@ library
         Vulkan.Ext.VK_AMD_shader_early_and_late_fragment_tests
 
       other-modules:
-        Vulkan.Types.Base
-        Vulkan.Types.Enum.VkStructureType
         Vulkan.Types.Struct.VkPhysicalDeviceShaderEarlyAndLateFragmentTestsFeaturesAMD
 
     if flag (VK_AMD_shader_explicit_vertex_parameter)
@@ -2491,11 +2299,7 @@ library
         Vulkan.Ext.VK_AMD_shader_info
 
       other-modules:
-        Vulkan.Types.Enum.VkResult
         Vulkan.Types.Enum.VkShaderInfoTypeAMD
-        Vulkan.Types.Enum.VkShaderStageFlagBits
-        Vulkan.Types.Enum.VkShaderStageFlags
-        Vulkan.Types.Handle
         Vulkan.Types.Struct.VkShaderResourceUsageAMD
         Vulkan.Types.Struct.VkShaderStatisticsInfoAMD
         Vulkan.Types.Command.VkGetShaderInfoAMD
@@ -2509,8 +2313,6 @@ library
         Vulkan.Ext.VK_AMD_texture_gather_bias_lod
 
       other-modules:
-        Vulkan.Types.Base
-        Vulkan.Types.Enum.VkStructureType
         Vulkan.Types.Struct.VkTextureLODGatherFormatPropertiesAMD
 
     if flag (VK_ANDROID_external_memory_android_hardware_buffer)
@@ -2518,23 +2320,15 @@ library
         Vulkan.Ext.VK_ANDROID_external_memory_android_hardware_buffer
 
       other-modules:
-        Vulkan.Types.Base
         Vulkan.Types.Enum.VkChromaLocation
-        Vulkan.Types.Enum.VkComponentSwizzle
         Vulkan.Types.Enum.VkExternalMemoryHandleTypeFlagBits
-        Vulkan.Types.Enum.VkFormat
-        Vulkan.Types.Enum.VkFormatFeatureFlags
         Vulkan.Types.Enum.VkFormatFeatureFlags2
-        Vulkan.Types.Enum.VkResult
         Vulkan.Types.Enum.VkSamplerYcbcrModelConversion
         Vulkan.Types.Enum.VkSamplerYcbcrRange
-        Vulkan.Types.Enum.VkStructureType
-        Vulkan.Types.Handle
         Vulkan.Types.Struct.VkAndroidHardwareBufferFormatProperties2ANDROID
         Vulkan.Types.Struct.VkAndroidHardwareBufferFormatPropertiesANDROID
         Vulkan.Types.Struct.VkAndroidHardwareBufferPropertiesANDROID
         Vulkan.Types.Struct.VkAndroidHardwareBufferUsageANDROID
-        Vulkan.Types.Struct.VkComponentMapping
         Vulkan.Types.Struct.VkExternalFormatANDROID
         Vulkan.Types.Struct.VkImportAndroidHardwareBufferInfoANDROID
         Vulkan.Types.Struct.VkMemoryGetAndroidHardwareBufferInfoANDROID
@@ -2546,11 +2340,8 @@ library
         Vulkan.Ext.VK_ARM_rasterization_order_attachment_access
 
       other-modules:
-        Vulkan.Types.Base
         Vulkan.Types.Enum.VkPipelineColorBlendStateCreateFlagBits
         Vulkan.Types.Enum.VkPipelineDepthStencilStateCreateFlagBits
-        Vulkan.Types.Enum.VkStructureType
-        Vulkan.Types.Enum.VkSubpassDescriptionFlagBits
         Vulkan.Types.Struct.VkPhysicalDeviceRasterizationOrderAttachmentAccessFeaturesARM
 
     if flag (VK_ARM_shader_core_builtins)
@@ -2558,8 +2349,6 @@ library
         Vulkan.Ext.VK_ARM_shader_core_builtins
 
       other-modules:
-        Vulkan.Types.Base
-        Vulkan.Types.Enum.VkStructureType
         Vulkan.Types.Struct.VkPhysicalDeviceShaderCoreBuiltinsFeaturesARM
         Vulkan.Types.Struct.VkPhysicalDeviceShaderCoreBuiltinsPropertiesARM
 
@@ -2568,9 +2357,6 @@ library
         Vulkan.Ext.VK_EXT_4444_formats
 
       other-modules:
-        Vulkan.Types.Base
-        Vulkan.Types.Enum.VkFormat
-        Vulkan.Types.Enum.VkStructureType
         Vulkan.Types.Struct.VkPhysicalDevice4444FormatsFeaturesEXT
 
     if flag (VK_EXT_acquire_drm_display)
@@ -2578,8 +2364,6 @@ library
         Vulkan.Ext.VK_EXT_acquire_drm_display
 
       other-modules:
-        Vulkan.Types.Enum.VkResult
-        Vulkan.Types.Handle
         Vulkan.Types.Command.VkAcquireDrmDisplayEXT
         Vulkan.Types.Command.VkGetDrmDisplayEXT
 
@@ -2589,8 +2373,6 @@ library
 
       other-modules:
         Vulkan.Types.Protected
-        Vulkan.Types.Enum.VkResult
-        Vulkan.Types.Handle
         Vulkan.Types.Command.VkAcquireXlibDisplayEXT
         Vulkan.Types.Command.VkGetRandROutputDisplayEXT
 
@@ -2599,9 +2381,6 @@ library
         Vulkan.Ext.VK_EXT_astc_decode_mode
 
       other-modules:
-        Vulkan.Types.Base
-        Vulkan.Types.Enum.VkFormat
-        Vulkan.Types.Enum.VkStructureType
         Vulkan.Types.Struct.VkImageViewASTCDecodeModeEXT
         Vulkan.Types.Struct.VkPhysicalDeviceASTCDecodeFeaturesEXT
 
@@ -2610,12 +2389,6 @@ library
         Vulkan.Ext.VK_EXT_attachment_feedback_loop_layout
 
       other-modules:
-        Vulkan.Types.Base
-        Vulkan.Types.Enum.VkDependencyFlagBits
-        Vulkan.Types.Enum.VkImageLayout
-        Vulkan.Types.Enum.VkImageUsageFlagBits
-        Vulkan.Types.Enum.VkPipelineCreateFlagBits
-        Vulkan.Types.Enum.VkStructureType
         Vulkan.Types.Struct.VkPhysicalDeviceAttachmentFeedbackLoopLayoutFeaturesEXT
 
     if flag (VK_EXT_blend_operation_advanced)
@@ -2623,11 +2396,7 @@ library
         Vulkan.Ext.VK_EXT_blend_operation_advanced
 
       other-modules:
-        Vulkan.Types.Base
-        Vulkan.Types.Enum.VkAccessFlagBits
-        Vulkan.Types.Enum.VkBlendOp
         Vulkan.Types.Enum.VkBlendOverlapEXT
-        Vulkan.Types.Enum.VkStructureType
         Vulkan.Types.Struct.VkPhysicalDeviceBlendOperationAdvancedFeaturesEXT
         Vulkan.Types.Struct.VkPhysicalDeviceBlendOperationAdvancedPropertiesEXT
         Vulkan.Types.Struct.VkPipelineColorBlendAdvancedStateCreateInfoEXT
@@ -2637,10 +2406,6 @@ library
         Vulkan.Ext.VK_EXT_border_color_swizzle
 
       other-modules:
-        Vulkan.Types.Base
-        Vulkan.Types.Enum.VkComponentSwizzle
-        Vulkan.Types.Enum.VkStructureType
-        Vulkan.Types.Struct.VkComponentMapping
         Vulkan.Types.Struct.VkPhysicalDeviceBorderColorSwizzleFeaturesEXT
         Vulkan.Types.Struct.VkSamplerBorderColorComponentMappingCreateInfoEXT
 
@@ -2649,12 +2414,6 @@ library
         Vulkan.Ext.VK_EXT_buffer_device_address
 
       other-modules:
-        Vulkan.Types.Base
-        Vulkan.Types.Enum.VkBufferCreateFlagBits
-        Vulkan.Types.Enum.VkBufferUsageFlagBits
-        Vulkan.Types.Enum.VkResult
-        Vulkan.Types.Enum.VkStructureType
-        Vulkan.Types.Handle
         Vulkan.Types.Struct.VkBufferDeviceAddressCreateInfoEXT
         Vulkan.Types.Struct.VkBufferDeviceAddressInfo
         Vulkan.Types.Struct.VkBufferDeviceAddressInfoEXT
@@ -2667,10 +2426,7 @@ library
         Vulkan.Ext.VK_EXT_calibrated_timestamps
 
       other-modules:
-        Vulkan.Types.Enum.VkResult
-        Vulkan.Types.Enum.VkStructureType
         Vulkan.Types.Enum.VkTimeDomainEXT
-        Vulkan.Types.Handle
         Vulkan.Types.Struct.VkCalibratedTimestampInfoEXT
         Vulkan.Types.Command.VkGetCalibratedTimestampsEXT
         Vulkan.Types.Command.VkGetPhysicalDeviceCalibrateableTimeDomainsEXT
@@ -2680,10 +2436,6 @@ library
         Vulkan.Ext.VK_EXT_color_write_enable
 
       other-modules:
-        Vulkan.Types.Base
-        Vulkan.Types.Enum.VkDynamicState
-        Vulkan.Types.Enum.VkStructureType
-        Vulkan.Types.Handle
         Vulkan.Types.Struct.VkPhysicalDeviceColorWriteEnableFeaturesEXT
         Vulkan.Types.Struct.VkPipelineColorWriteCreateInfoEXT
         Vulkan.Types.Command.VkCmdSetColorWriteEnableEXT
@@ -2693,14 +2445,8 @@ library
         Vulkan.Ext.VK_EXT_conditional_rendering
 
       other-modules:
-        Vulkan.Types.Base
-        Vulkan.Types.Enum.VkAccessFlagBits
-        Vulkan.Types.Enum.VkBufferUsageFlagBits
         Vulkan.Types.Enum.VkConditionalRenderingFlagBitsEXT
         Vulkan.Types.Enum.VkConditionalRenderingFlagsEXT
-        Vulkan.Types.Enum.VkPipelineStageFlagBits
-        Vulkan.Types.Enum.VkStructureType
-        Vulkan.Types.Handle
         Vulkan.Types.Struct.VkCommandBufferInheritanceConditionalRenderingInfoEXT
         Vulkan.Types.Struct.VkConditionalRenderingBeginInfoEXT
         Vulkan.Types.Struct.VkPhysicalDeviceConditionalRenderingFeaturesEXT
@@ -2712,10 +2458,8 @@ library
         Vulkan.Ext.VK_EXT_conservative_rasterization
 
       other-modules:
-        Vulkan.Types.Base
         Vulkan.Types.Enum.VkConservativeRasterizationModeEXT
         Vulkan.Types.Enum.VkPipelineRasterizationConservativeStateCreateFlagsEXT
-        Vulkan.Types.Enum.VkStructureType
         Vulkan.Types.Struct.VkPhysicalDeviceConservativeRasterizationPropertiesEXT
         Vulkan.Types.Struct.VkPipelineRasterizationConservativeStateCreateInfoEXT
 
@@ -2724,14 +2468,9 @@ library
         Vulkan.Ext.VK_EXT_custom_border_color
 
       other-modules:
-        Vulkan.Types.Base
-        Vulkan.Types.Enum.VkBorderColor
-        Vulkan.Types.Enum.VkFormat
-        Vulkan.Types.Enum.VkStructureType
         Vulkan.Types.Struct.VkPhysicalDeviceCustomBorderColorFeaturesEXT
         Vulkan.Types.Struct.VkPhysicalDeviceCustomBorderColorPropertiesEXT
         Vulkan.Types.Struct.VkSamplerCustomBorderColorCreateInfoEXT
-        Vulkan.Types.Union.VkClearColorValue
 
     if flag (VK_EXT_debug_marker)
       exposed-modules:
@@ -2739,9 +2478,6 @@ library
 
       other-modules:
         Vulkan.Types.Enum.VkDebugReportObjectTypeEXT
-        Vulkan.Types.Enum.VkResult
-        Vulkan.Types.Enum.VkStructureType
-        Vulkan.Types.Handle
         Vulkan.Types.Struct.VkDebugMarkerMarkerInfoEXT
         Vulkan.Types.Struct.VkDebugMarkerObjectNameInfoEXT
         Vulkan.Types.Struct.VkDebugMarkerObjectTagInfoEXT
@@ -2756,23 +2492,10 @@ library
         Vulkan.Ext.VK_EXT_debug_report
 
       other-modules:
-        Vulkan.Types.Base
         Vulkan.Types.Enum.VkDebugReportFlagBitsEXT
         Vulkan.Types.Enum.VkDebugReportFlagsEXT
         Vulkan.Types.Enum.VkDebugReportObjectTypeEXT
-        Vulkan.Types.Enum.VkInternalAllocationType
-        Vulkan.Types.Enum.VkObjectType
-        Vulkan.Types.Enum.VkResult
-        Vulkan.Types.Enum.VkStructureType
-        Vulkan.Types.Enum.VkSystemAllocationScope
-        Vulkan.Types.FuncPointer.PFN_vkAllocationFunction
         Vulkan.Types.FuncPointer.PFN_vkDebugReportCallbackEXT
-        Vulkan.Types.FuncPointer.PFN_vkFreeFunction
-        Vulkan.Types.FuncPointer.PFN_vkInternalAllocationNotification
-        Vulkan.Types.FuncPointer.PFN_vkInternalFreeNotification
-        Vulkan.Types.FuncPointer.PFN_vkReallocationFunction
-        Vulkan.Types.Handle
-        Vulkan.Types.Struct.VkAllocationCallbacks
         Vulkan.Types.Struct.VkDebugReportCallbackCreateInfoEXT
         Vulkan.Types.Command.VkCreateDebugReportCallbackEXT
         Vulkan.Types.Command.VkDebugReportMessageEXT
@@ -2783,26 +2506,13 @@ library
         Vulkan.Ext.VK_EXT_debug_utils
 
       other-modules:
-        Vulkan.Types.Base
         Vulkan.Types.Enum.VkDebugUtilsMessageSeverityFlagBitsEXT
         Vulkan.Types.Enum.VkDebugUtilsMessageSeverityFlagsEXT
         Vulkan.Types.Enum.VkDebugUtilsMessageTypeFlagBitsEXT
         Vulkan.Types.Enum.VkDebugUtilsMessageTypeFlagsEXT
         Vulkan.Types.Enum.VkDebugUtilsMessengerCallbackDataFlagsEXT
         Vulkan.Types.Enum.VkDebugUtilsMessengerCreateFlagsEXT
-        Vulkan.Types.Enum.VkInternalAllocationType
-        Vulkan.Types.Enum.VkObjectType
-        Vulkan.Types.Enum.VkResult
-        Vulkan.Types.Enum.VkStructureType
-        Vulkan.Types.Enum.VkSystemAllocationScope
-        Vulkan.Types.FuncPointer.PFN_vkAllocationFunction
         Vulkan.Types.FuncPointer.PFN_vkDebugUtilsMessengerCallbackEXT
-        Vulkan.Types.FuncPointer.PFN_vkFreeFunction
-        Vulkan.Types.FuncPointer.PFN_vkInternalAllocationNotification
-        Vulkan.Types.FuncPointer.PFN_vkInternalFreeNotification
-        Vulkan.Types.FuncPointer.PFN_vkReallocationFunction
-        Vulkan.Types.Handle
-        Vulkan.Types.Struct.VkAllocationCallbacks
         Vulkan.Types.Struct.VkDebugUtilsLabelEXT
         Vulkan.Types.Struct.VkDebugUtilsMessengerCallbackDataEXT
         Vulkan.Types.Struct.VkDebugUtilsMessengerCreateInfoEXT
@@ -2825,8 +2535,6 @@ library
         Vulkan.Ext.VK_EXT_depth_clamp_zero_one
 
       other-modules:
-        Vulkan.Types.Base
-        Vulkan.Types.Enum.VkStructureType
         Vulkan.Types.Struct.VkPhysicalDeviceDepthClampZeroOneFeaturesEXT
 
     if flag (VK_EXT_depth_clip_control)
@@ -2834,8 +2542,6 @@ library
         Vulkan.Ext.VK_EXT_depth_clip_control
 
       other-modules:
-        Vulkan.Types.Base
-        Vulkan.Types.Enum.VkStructureType
         Vulkan.Types.Struct.VkPhysicalDeviceDepthClipControlFeaturesEXT
         Vulkan.Types.Struct.VkPipelineViewportDepthClipControlCreateInfoEXT
 
@@ -2844,9 +2550,7 @@ library
         Vulkan.Ext.VK_EXT_depth_clip_enable
 
       other-modules:
-        Vulkan.Types.Base
         Vulkan.Types.Enum.VkPipelineRasterizationDepthClipStateCreateFlagsEXT
-        Vulkan.Types.Enum.VkStructureType
         Vulkan.Types.Struct.VkPhysicalDeviceDepthClipEnableFeaturesEXT
         Vulkan.Types.Struct.VkPipelineRasterizationDepthClipStateCreateInfoEXT
 
@@ -2859,31 +2563,14 @@ library
         Vulkan.Ext.VK_EXT_descriptor_buffer
 
       other-modules:
-        Vulkan.Types.Base
         Vulkan.Types.Enum.VkAccelerationStructureCreateFlagBitsKHR
         Vulkan.Types.Enum.VkAccessFlagBits2
-        Vulkan.Types.Enum.VkBufferCreateFlagBits
-        Vulkan.Types.Enum.VkBufferUsageFlagBits
-        Vulkan.Types.Enum.VkBufferUsageFlags
-        Vulkan.Types.Enum.VkDescriptorSetLayoutCreateFlagBits
-        Vulkan.Types.Enum.VkDescriptorType
-        Vulkan.Types.Enum.VkFormat
-        Vulkan.Types.Enum.VkImageCreateFlagBits
-        Vulkan.Types.Enum.VkImageLayout
-        Vulkan.Types.Enum.VkImageViewCreateFlagBits
-        Vulkan.Types.Enum.VkPipelineBindPoint
-        Vulkan.Types.Enum.VkPipelineCreateFlagBits
-        Vulkan.Types.Enum.VkResult
-        Vulkan.Types.Enum.VkSamplerCreateFlagBits
-        Vulkan.Types.Enum.VkStructureType
-        Vulkan.Types.Handle
         Vulkan.Types.Struct.VkAccelerationStructureCaptureDescriptorDataInfoEXT
         Vulkan.Types.Struct.VkBufferCaptureDescriptorDataInfoEXT
         Vulkan.Types.Struct.VkDescriptorAddressInfoEXT
         Vulkan.Types.Struct.VkDescriptorBufferBindingInfoEXT
         Vulkan.Types.Struct.VkDescriptorBufferBindingPushDescriptorBufferHandleEXT
         Vulkan.Types.Struct.VkDescriptorGetInfoEXT
-        Vulkan.Types.Struct.VkDescriptorImageInfo
         Vulkan.Types.Struct.VkImageCaptureDescriptorDataInfoEXT
         Vulkan.Types.Struct.VkImageViewCaptureDescriptorDataInfoEXT
         Vulkan.Types.Struct.VkOpaqueCaptureDescriptorDataCreateInfoEXT
@@ -2909,15 +2596,10 @@ library
         Vulkan.Ext.VK_EXT_descriptor_indexing
 
       other-modules:
-        Vulkan.Types.Base
         Vulkan.Types.Enum.VkDescriptorBindingFlagBits
         Vulkan.Types.Enum.VkDescriptorBindingFlagBitsEXT
         Vulkan.Types.Enum.VkDescriptorBindingFlags
         Vulkan.Types.Enum.VkDescriptorBindingFlagsEXT
-        Vulkan.Types.Enum.VkDescriptorPoolCreateFlagBits
-        Vulkan.Types.Enum.VkDescriptorSetLayoutCreateFlagBits
-        Vulkan.Types.Enum.VkResult
-        Vulkan.Types.Enum.VkStructureType
         Vulkan.Types.Struct.VkDescriptorSetLayoutBindingFlagsCreateInfoEXT
         Vulkan.Types.Struct.VkDescriptorSetVariableDescriptorCountAllocateInfoEXT
         Vulkan.Types.Struct.VkDescriptorSetVariableDescriptorCountLayoutSupportEXT
@@ -2929,12 +2611,10 @@ library
         Vulkan.Ext.VK_EXT_device_address_binding_report
 
       other-modules:
-        Vulkan.Types.Base
         Vulkan.Types.Enum.VkDebugUtilsMessageTypeFlagBitsEXT
         Vulkan.Types.Enum.VkDeviceAddressBindingFlagBitsEXT
         Vulkan.Types.Enum.VkDeviceAddressBindingFlagsEXT
         Vulkan.Types.Enum.VkDeviceAddressBindingTypeEXT
-        Vulkan.Types.Enum.VkStructureType
         Vulkan.Types.Struct.VkDeviceAddressBindingCallbackDataEXT
         Vulkan.Types.Struct.VkPhysicalDeviceAddressBindingReportFeaturesEXT
 
@@ -2943,12 +2623,8 @@ library
         Vulkan.Ext.VK_EXT_device_fault
 
       other-modules:
-        Vulkan.Types.Base
         Vulkan.Types.Enum.VkDeviceFaultAddressTypeEXT
         Vulkan.Types.Enum.VkDeviceFaultVendorBinaryHeaderVersionEXT
-        Vulkan.Types.Enum.VkResult
-        Vulkan.Types.Enum.VkStructureType
-        Vulkan.Types.Handle
         Vulkan.Types.Struct.VkDeviceFaultAddressInfoEXT
         Vulkan.Types.Struct.VkDeviceFaultCountsEXT
         Vulkan.Types.Struct.VkDeviceFaultInfoEXT
@@ -2962,11 +2638,8 @@ library
         Vulkan.Ext.VK_EXT_device_memory_report
 
       other-modules:
-        Vulkan.Types.Base
         Vulkan.Types.Enum.VkDeviceMemoryReportEventTypeEXT
         Vulkan.Types.Enum.VkDeviceMemoryReportFlagsEXT
-        Vulkan.Types.Enum.VkObjectType
-        Vulkan.Types.Enum.VkStructureType
         Vulkan.Types.FuncPointer.PFN_vkDeviceMemoryReportCallbackEXT
         Vulkan.Types.Struct.VkDeviceDeviceMemoryReportCreateInfoEXT
         Vulkan.Types.Struct.VkDeviceMemoryReportCallbackDataEXT
@@ -2977,8 +2650,6 @@ library
         Vulkan.Ext.VK_EXT_direct_mode_display
 
       other-modules:
-        Vulkan.Types.Enum.VkResult
-        Vulkan.Types.Handle
         Vulkan.Types.Command.VkReleaseDisplayEXT
 
     if flag (VK_EXT_directfb_surface)
@@ -2987,19 +2658,7 @@ library
 
       other-modules:
         Vulkan.Types.Protected
-        Vulkan.Types.Base
         Vulkan.Types.Enum.VkDirectFBSurfaceCreateFlagsEXT
-        Vulkan.Types.Enum.VkInternalAllocationType
-        Vulkan.Types.Enum.VkResult
-        Vulkan.Types.Enum.VkStructureType
-        Vulkan.Types.Enum.VkSystemAllocationScope
-        Vulkan.Types.FuncPointer.PFN_vkAllocationFunction
-        Vulkan.Types.FuncPointer.PFN_vkFreeFunction
-        Vulkan.Types.FuncPointer.PFN_vkInternalAllocationNotification
-        Vulkan.Types.FuncPointer.PFN_vkInternalFreeNotification
-        Vulkan.Types.FuncPointer.PFN_vkReallocationFunction
-        Vulkan.Types.Handle
-        Vulkan.Types.Struct.VkAllocationCallbacks
         Vulkan.Types.Struct.VkDirectFBSurfaceCreateInfoEXT
         Vulkan.Types.Command.VkCreateDirectFBSurfaceEXT
         Vulkan.Types.Command.VkGetPhysicalDeviceDirectFBPresentationSupportEXT
@@ -3010,15 +2669,9 @@ library
 
       other-modules:
         Vulkan.Types.Enum.VkDiscardRectangleModeEXT
-        Vulkan.Types.Enum.VkDynamicState
         Vulkan.Types.Enum.VkPipelineDiscardRectangleStateCreateFlagsEXT
-        Vulkan.Types.Enum.VkStructureType
-        Vulkan.Types.Handle
-        Vulkan.Types.Struct.VkExtent2D
-        Vulkan.Types.Struct.VkOffset2D
         Vulkan.Types.Struct.VkPhysicalDeviceDiscardRectanglePropertiesEXT
         Vulkan.Types.Struct.VkPipelineDiscardRectangleStateCreateInfoEXT
-        Vulkan.Types.Struct.VkRect2D
         Vulkan.Types.Command.VkCmdSetDiscardRectangleEXT
 
     if flag (VK_EXT_display_control)
@@ -3029,19 +2682,8 @@ library
         Vulkan.Types.Enum.VkDeviceEventTypeEXT
         Vulkan.Types.Enum.VkDisplayEventTypeEXT
         Vulkan.Types.Enum.VkDisplayPowerStateEXT
-        Vulkan.Types.Enum.VkInternalAllocationType
-        Vulkan.Types.Enum.VkResult
-        Vulkan.Types.Enum.VkStructureType
         Vulkan.Types.Enum.VkSurfaceCounterFlagBitsEXT
         Vulkan.Types.Enum.VkSurfaceCounterFlagsEXT
-        Vulkan.Types.Enum.VkSystemAllocationScope
-        Vulkan.Types.FuncPointer.PFN_vkAllocationFunction
-        Vulkan.Types.FuncPointer.PFN_vkFreeFunction
-        Vulkan.Types.FuncPointer.PFN_vkInternalAllocationNotification
-        Vulkan.Types.FuncPointer.PFN_vkInternalFreeNotification
-        Vulkan.Types.FuncPointer.PFN_vkReallocationFunction
-        Vulkan.Types.Handle
-        Vulkan.Types.Struct.VkAllocationCallbacks
         Vulkan.Types.Struct.VkDeviceEventInfoEXT
         Vulkan.Types.Struct.VkDisplayEventInfoEXT
         Vulkan.Types.Struct.VkDisplayPowerInfoEXT
@@ -3057,15 +2699,10 @@ library
 
       other-modules:
         Vulkan.Types.Enum.VkCompositeAlphaFlagsKHR
-        Vulkan.Types.Enum.VkImageUsageFlags
-        Vulkan.Types.Enum.VkResult
-        Vulkan.Types.Enum.VkStructureType
         Vulkan.Types.Enum.VkSurfaceCounterFlagBitsEXT
         Vulkan.Types.Enum.VkSurfaceCounterFlagsEXT
         Vulkan.Types.Enum.VkSurfaceTransformFlagBitsKHR
         Vulkan.Types.Enum.VkSurfaceTransformFlagsKHR
-        Vulkan.Types.Handle
-        Vulkan.Types.Struct.VkExtent2D
         Vulkan.Types.Struct.VkSurfaceCapabilities2EXT
         Vulkan.Types.Command.VkGetPhysicalDeviceSurfaceCapabilities2EXT
 
@@ -3074,21 +2711,7 @@ library
         Vulkan.Ext.VK_EXT_extended_dynamic_state
 
       other-modules:
-        Vulkan.Types.Base
-        Vulkan.Types.Enum.VkCompareOp
-        Vulkan.Types.Enum.VkCullModeFlags
-        Vulkan.Types.Enum.VkDynamicState
-        Vulkan.Types.Enum.VkFrontFace
-        Vulkan.Types.Enum.VkPrimitiveTopology
-        Vulkan.Types.Enum.VkStencilFaceFlags
-        Vulkan.Types.Enum.VkStencilOp
-        Vulkan.Types.Enum.VkStructureType
-        Vulkan.Types.Handle
-        Vulkan.Types.Struct.VkExtent2D
-        Vulkan.Types.Struct.VkOffset2D
         Vulkan.Types.Struct.VkPhysicalDeviceExtendedDynamicStateFeaturesEXT
-        Vulkan.Types.Struct.VkRect2D
-        Vulkan.Types.Struct.VkViewport
         Vulkan.Types.Command.VkCmdBindVertexBuffers2EXT
         Vulkan.Types.Command.VkCmdSetCullModeEXT
         Vulkan.Types.Command.VkCmdSetDepthBoundsTestEnableEXT
@@ -3107,11 +2730,6 @@ library
         Vulkan.Ext.VK_EXT_extended_dynamic_state2
 
       other-modules:
-        Vulkan.Types.Base
-        Vulkan.Types.Enum.VkDynamicState
-        Vulkan.Types.Enum.VkLogicOp
-        Vulkan.Types.Enum.VkStructureType
-        Vulkan.Types.Handle
         Vulkan.Types.Struct.VkPhysicalDeviceExtendedDynamicState2FeaturesEXT
         Vulkan.Types.Command.VkCmdSetDepthBiasEnableEXT
         Vulkan.Types.Command.VkCmdSetLogicOpEXT
@@ -3124,23 +2742,14 @@ library
         Vulkan.Ext.VK_EXT_extended_dynamic_state3
 
       other-modules:
-        Vulkan.Types.Base
-        Vulkan.Types.Enum.VkBlendFactor
-        Vulkan.Types.Enum.VkBlendOp
         Vulkan.Types.Enum.VkBlendOverlapEXT
-        Vulkan.Types.Enum.VkColorComponentFlags
         Vulkan.Types.Enum.VkConservativeRasterizationModeEXT
         Vulkan.Types.Enum.VkCoverageModulationModeNV
         Vulkan.Types.Enum.VkCoverageReductionModeNV
-        Vulkan.Types.Enum.VkDynamicState
         Vulkan.Types.Enum.VkLineRasterizationModeEXT
-        Vulkan.Types.Enum.VkPolygonMode
         Vulkan.Types.Enum.VkProvokingVertexModeEXT
-        Vulkan.Types.Enum.VkSampleCountFlagBits
-        Vulkan.Types.Enum.VkStructureType
         Vulkan.Types.Enum.VkTessellationDomainOrigin
         Vulkan.Types.Enum.VkViewportCoordinateSwizzleNV
-        Vulkan.Types.Handle
         Vulkan.Types.Struct.VkColorBlendAdvancedEXT
         Vulkan.Types.Struct.VkColorBlendEquationEXT
         Vulkan.Types.Struct.VkPhysicalDeviceExtendedDynamicState3FeaturesEXT
@@ -3190,11 +2799,7 @@ library
         Vulkan.Ext.VK_EXT_external_memory_host
 
       other-modules:
-        Vulkan.Types.Base
         Vulkan.Types.Enum.VkExternalMemoryHandleTypeFlagBits
-        Vulkan.Types.Enum.VkResult
-        Vulkan.Types.Enum.VkStructureType
-        Vulkan.Types.Handle
         Vulkan.Types.Struct.VkImportMemoryHostPointerInfoEXT
         Vulkan.Types.Struct.VkMemoryHostPointerPropertiesEXT
         Vulkan.Types.Struct.VkPhysicalDeviceExternalMemoryHostPropertiesEXT
@@ -3205,11 +2810,6 @@ library
         Vulkan.Ext.VK_EXT_filter_cubic
 
       other-modules:
-        Vulkan.Types.Base
-        Vulkan.Types.Enum.VkFilter
-        Vulkan.Types.Enum.VkFormatFeatureFlagBits
-        Vulkan.Types.Enum.VkImageViewType
-        Vulkan.Types.Enum.VkStructureType
         Vulkan.Types.Struct.VkFilterCubicImageViewImageFormatPropertiesEXT
         Vulkan.Types.Struct.VkPhysicalDeviceImageViewImageFormatInfoEXT
 
@@ -3218,19 +2818,7 @@ library
         Vulkan.Ext.VK_EXT_fragment_density_map
 
       other-modules:
-        Vulkan.Types.Base
-        Vulkan.Types.Enum.VkAccessFlagBits
-        Vulkan.Types.Enum.VkFormatFeatureFlagBits
         Vulkan.Types.Enum.VkFormatFeatureFlagBits2
-        Vulkan.Types.Enum.VkImageCreateFlagBits
-        Vulkan.Types.Enum.VkImageLayout
-        Vulkan.Types.Enum.VkImageUsageFlagBits
-        Vulkan.Types.Enum.VkImageViewCreateFlagBits
-        Vulkan.Types.Enum.VkPipelineStageFlagBits
-        Vulkan.Types.Enum.VkSamplerCreateFlagBits
-        Vulkan.Types.Enum.VkStructureType
-        Vulkan.Types.Struct.VkAttachmentReference
-        Vulkan.Types.Struct.VkExtent2D
         Vulkan.Types.Struct.VkPhysicalDeviceFragmentDensityMapFeaturesEXT
         Vulkan.Types.Struct.VkPhysicalDeviceFragmentDensityMapPropertiesEXT
         Vulkan.Types.Struct.VkRenderPassFragmentDensityMapCreateInfoEXT
@@ -3240,9 +2828,6 @@ library
         Vulkan.Ext.VK_EXT_fragment_density_map2
 
       other-modules:
-        Vulkan.Types.Base
-        Vulkan.Types.Enum.VkImageViewCreateFlagBits
-        Vulkan.Types.Enum.VkStructureType
         Vulkan.Types.Struct.VkPhysicalDeviceFragmentDensityMap2FeaturesEXT
         Vulkan.Types.Struct.VkPhysicalDeviceFragmentDensityMap2PropertiesEXT
 
@@ -3251,8 +2836,6 @@ library
         Vulkan.Ext.VK_EXT_fragment_shader_interlock
 
       other-modules:
-        Vulkan.Types.Base
-        Vulkan.Types.Enum.VkStructureType
         Vulkan.Types.Struct.VkPhysicalDeviceFragmentShaderInterlockFeaturesEXT
 
     if flag (VK_EXT_full_screen_exclusive)
@@ -3261,13 +2844,9 @@ library
 
       other-modules:
         Vulkan.Types.Protected
-        Vulkan.Types.Base
         Vulkan.Types.Enum.VkDeviceGroupPresentModeFlagsKHR
         Vulkan.Types.Enum.VkFullScreenExclusiveEXT
         Vulkan.Types.Enum.VkPresentModeKHR
-        Vulkan.Types.Enum.VkResult
-        Vulkan.Types.Enum.VkStructureType
-        Vulkan.Types.Handle
         Vulkan.Types.Struct.VkPhysicalDeviceSurfaceInfo2KHR
         Vulkan.Types.Struct.VkSurfaceCapabilitiesFullScreenExclusiveEXT
         Vulkan.Types.Struct.VkSurfaceFullScreenExclusiveInfoEXT
@@ -3284,8 +2863,6 @@ library
       other-modules:
         Vulkan.Types.Enum.VkQueueGlobalPriorityEXT
         Vulkan.Types.Enum.VkQueueGlobalPriorityKHR
-        Vulkan.Types.Enum.VkResult
-        Vulkan.Types.Enum.VkStructureType
         Vulkan.Types.Struct.VkDeviceQueueGlobalPriorityCreateInfoEXT
 
     if flag (VK_EXT_global_priority_query)
@@ -3293,9 +2870,7 @@ library
         Vulkan.Ext.VK_EXT_global_priority_query
 
       other-modules:
-        Vulkan.Types.Base
         Vulkan.Types.Enum.VkQueueGlobalPriorityKHR
-        Vulkan.Types.Enum.VkStructureType
         Vulkan.Types.Struct.VkPhysicalDeviceGlobalPriorityQueryFeaturesEXT
         Vulkan.Types.Struct.VkQueueFamilyGlobalPriorityPropertiesEXT
 
@@ -3304,12 +2879,9 @@ library
         Vulkan.Ext.VK_EXT_graphics_pipeline_library
 
       other-modules:
-        Vulkan.Types.Base
         Vulkan.Types.Enum.VkGraphicsPipelineLibraryFlagBitsEXT
         Vulkan.Types.Enum.VkGraphicsPipelineLibraryFlagsEXT
-        Vulkan.Types.Enum.VkPipelineCreateFlagBits
         Vulkan.Types.Enum.VkPipelineLayoutCreateFlagBits
-        Vulkan.Types.Enum.VkStructureType
         Vulkan.Types.Struct.VkGraphicsPipelineLibraryCreateInfoEXT
         Vulkan.Types.Struct.VkPhysicalDeviceGraphicsPipelineLibraryFeaturesEXT
         Vulkan.Types.Struct.VkPhysicalDeviceGraphicsPipelineLibraryPropertiesEXT
@@ -3319,8 +2891,6 @@ library
         Vulkan.Ext.VK_EXT_hdr_metadata
 
       other-modules:
-        Vulkan.Types.Enum.VkStructureType
-        Vulkan.Types.Handle
         Vulkan.Types.Struct.VkHdrMetadataEXT
         Vulkan.Types.Struct.VkXYColorEXT
         Vulkan.Types.Command.VkSetHdrMetadataEXT
@@ -3331,17 +2901,6 @@ library
 
       other-modules:
         Vulkan.Types.Enum.VkHeadlessSurfaceCreateFlagsEXT
-        Vulkan.Types.Enum.VkInternalAllocationType
-        Vulkan.Types.Enum.VkResult
-        Vulkan.Types.Enum.VkStructureType
-        Vulkan.Types.Enum.VkSystemAllocationScope
-        Vulkan.Types.FuncPointer.PFN_vkAllocationFunction
-        Vulkan.Types.FuncPointer.PFN_vkFreeFunction
-        Vulkan.Types.FuncPointer.PFN_vkInternalAllocationNotification
-        Vulkan.Types.FuncPointer.PFN_vkInternalFreeNotification
-        Vulkan.Types.FuncPointer.PFN_vkReallocationFunction
-        Vulkan.Types.Handle
-        Vulkan.Types.Struct.VkAllocationCallbacks
         Vulkan.Types.Struct.VkHeadlessSurfaceCreateInfoEXT
         Vulkan.Types.Command.VkCreateHeadlessSurfaceEXT
 
@@ -3350,9 +2909,6 @@ library
         Vulkan.Ext.VK_EXT_host_query_reset
 
       other-modules:
-        Vulkan.Types.Base
-        Vulkan.Types.Enum.VkStructureType
-        Vulkan.Types.Handle
         Vulkan.Types.Struct.VkPhysicalDeviceHostQueryResetFeaturesEXT
         Vulkan.Types.Command.VkResetQueryPoolEXT
 
@@ -3361,9 +2917,6 @@ library
         Vulkan.Ext.VK_EXT_image_2d_view_of_3d
 
       other-modules:
-        Vulkan.Types.Base
-        Vulkan.Types.Enum.VkImageCreateFlagBits
-        Vulkan.Types.Enum.VkStructureType
         Vulkan.Types.Struct.VkPhysicalDeviceImage2DViewOf3DFeaturesEXT
 
     if flag (VK_EXT_image_compression_control)
@@ -3371,21 +2924,14 @@ library
         Vulkan.Ext.VK_EXT_image_compression_control
 
       other-modules:
-        Vulkan.Types.Base
-        Vulkan.Types.Enum.VkImageAspectFlags
         Vulkan.Types.Enum.VkImageCompressionFixedRateFlagBitsEXT
         Vulkan.Types.Enum.VkImageCompressionFixedRateFlagsEXT
         Vulkan.Types.Enum.VkImageCompressionFlagBitsEXT
         Vulkan.Types.Enum.VkImageCompressionFlagsEXT
-        Vulkan.Types.Enum.VkResult
-        Vulkan.Types.Enum.VkStructureType
-        Vulkan.Types.Handle
         Vulkan.Types.Struct.VkImageCompressionControlEXT
         Vulkan.Types.Struct.VkImageCompressionPropertiesEXT
-        Vulkan.Types.Struct.VkImageSubresource
         Vulkan.Types.Struct.VkImageSubresource2EXT
         Vulkan.Types.Struct.VkPhysicalDeviceImageCompressionControlFeaturesEXT
-        Vulkan.Types.Struct.VkSubresourceLayout
         Vulkan.Types.Struct.VkSubresourceLayout2EXT
         Vulkan.Types.Command.VkGetImageSubresourceLayout2EXT
 
@@ -3394,8 +2940,6 @@ library
         Vulkan.Ext.VK_EXT_image_compression_control_swapchain
 
       other-modules:
-        Vulkan.Types.Base
-        Vulkan.Types.Enum.VkStructureType
         Vulkan.Types.Struct.VkPhysicalDeviceImageCompressionControlSwapchainFeaturesEXT
 
     if flag (VK_EXT_image_drm_format_modifier)
@@ -3403,15 +2947,7 @@ library
         Vulkan.Ext.VK_EXT_image_drm_format_modifier
 
       other-modules:
-        Vulkan.Types.Base
-        Vulkan.Types.Enum.VkFormatFeatureFlags
         Vulkan.Types.Enum.VkFormatFeatureFlags2
-        Vulkan.Types.Enum.VkImageAspectFlagBits
-        Vulkan.Types.Enum.VkImageTiling
-        Vulkan.Types.Enum.VkResult
-        Vulkan.Types.Enum.VkSharingMode
-        Vulkan.Types.Enum.VkStructureType
-        Vulkan.Types.Handle
         Vulkan.Types.Struct.VkDrmFormatModifierProperties2EXT
         Vulkan.Types.Struct.VkDrmFormatModifierPropertiesEXT
         Vulkan.Types.Struct.VkDrmFormatModifierPropertiesList2EXT
@@ -3420,7 +2956,6 @@ library
         Vulkan.Types.Struct.VkImageDrmFormatModifierListCreateInfoEXT
         Vulkan.Types.Struct.VkImageDrmFormatModifierPropertiesEXT
         Vulkan.Types.Struct.VkPhysicalDeviceImageDrmFormatModifierInfoEXT
-        Vulkan.Types.Struct.VkSubresourceLayout
         Vulkan.Types.Command.VkGetImageDrmFormatModifierPropertiesEXT
 
     if flag (VK_EXT_image_robustness)
@@ -3428,8 +2963,6 @@ library
         Vulkan.Ext.VK_EXT_image_robustness
 
       other-modules:
-        Vulkan.Types.Base
-        Vulkan.Types.Enum.VkStructureType
         Vulkan.Types.Struct.VkPhysicalDeviceImageRobustnessFeaturesEXT
 
     if flag (VK_EXT_image_view_min_lod)
@@ -3437,8 +2970,6 @@ library
         Vulkan.Ext.VK_EXT_image_view_min_lod
 
       other-modules:
-        Vulkan.Types.Base
-        Vulkan.Types.Enum.VkStructureType
         Vulkan.Types.Struct.VkImageViewMinLodCreateInfoEXT
         Vulkan.Types.Struct.VkPhysicalDeviceImageViewMinLodFeaturesEXT
 
@@ -3447,9 +2978,6 @@ library
         Vulkan.Ext.VK_EXT_index_type_uint8
 
       other-modules:
-        Vulkan.Types.Base
-        Vulkan.Types.Enum.VkIndexType
-        Vulkan.Types.Enum.VkStructureType
         Vulkan.Types.Struct.VkPhysicalDeviceIndexTypeUint8FeaturesEXT
 
     if flag (VK_EXT_inline_uniform_block)
@@ -3457,9 +2985,6 @@ library
         Vulkan.Ext.VK_EXT_inline_uniform_block
 
       other-modules:
-        Vulkan.Types.Base
-        Vulkan.Types.Enum.VkDescriptorType
-        Vulkan.Types.Enum.VkStructureType
         Vulkan.Types.Struct.VkDescriptorPoolInlineUniformBlockCreateInfoEXT
         Vulkan.Types.Struct.VkPhysicalDeviceInlineUniformBlockFeaturesEXT
         Vulkan.Types.Struct.VkPhysicalDeviceInlineUniformBlockPropertiesEXT
@@ -3470,10 +2995,7 @@ library
         Vulkan.Ext.VK_EXT_legacy_dithering
 
       other-modules:
-        Vulkan.Types.Base
         Vulkan.Types.Enum.VkRenderingFlagBits
-        Vulkan.Types.Enum.VkStructureType
-        Vulkan.Types.Enum.VkSubpassDescriptionFlagBits
         Vulkan.Types.Struct.VkPhysicalDeviceLegacyDitheringFeaturesEXT
 
     if flag (VK_EXT_line_rasterization)
@@ -3481,11 +3003,7 @@ library
         Vulkan.Ext.VK_EXT_line_rasterization
 
       other-modules:
-        Vulkan.Types.Base
-        Vulkan.Types.Enum.VkDynamicState
         Vulkan.Types.Enum.VkLineRasterizationModeEXT
-        Vulkan.Types.Enum.VkStructureType
-        Vulkan.Types.Handle
         Vulkan.Types.Struct.VkPhysicalDeviceLineRasterizationFeaturesEXT
         Vulkan.Types.Struct.VkPhysicalDeviceLineRasterizationPropertiesEXT
         Vulkan.Types.Struct.VkPipelineRasterizationLineStateCreateInfoEXT
@@ -3495,17 +3013,11 @@ library
       exposed-modules:
         Vulkan.Ext.VK_EXT_load_store_op_none
 
-      other-modules:
-        Vulkan.Types.Enum.VkAttachmentLoadOp
-        Vulkan.Types.Enum.VkAttachmentStoreOp
-
     if flag (VK_EXT_memory_budget)
       exposed-modules:
         Vulkan.Ext.VK_EXT_memory_budget
 
       other-modules:
-        Vulkan.Types.Base
-        Vulkan.Types.Enum.VkStructureType
         Vulkan.Types.Struct.VkPhysicalDeviceMemoryBudgetPropertiesEXT
 
     if flag (VK_EXT_memory_priority)
@@ -3513,8 +3025,6 @@ library
         Vulkan.Ext.VK_EXT_memory_priority
 
       other-modules:
-        Vulkan.Types.Base
-        Vulkan.Types.Enum.VkStructureType
         Vulkan.Types.Struct.VkMemoryPriorityAllocateInfoEXT
         Vulkan.Types.Struct.VkPhysicalDeviceMemoryPriorityFeaturesEXT
 
@@ -3523,14 +3033,7 @@ library
         Vulkan.Ext.VK_EXT_mesh_shader
 
       other-modules:
-        Vulkan.Types.Base
         Vulkan.Types.Enum.VkIndirectCommandsTokenTypeNV
-        Vulkan.Types.Enum.VkPipelineStageFlagBits
-        Vulkan.Types.Enum.VkQueryPipelineStatisticFlagBits
-        Vulkan.Types.Enum.VkQueryType
-        Vulkan.Types.Enum.VkShaderStageFlagBits
-        Vulkan.Types.Enum.VkStructureType
-        Vulkan.Types.Handle
         Vulkan.Types.Struct.VkDrawMeshTasksIndirectCommandEXT
         Vulkan.Types.Struct.VkPhysicalDeviceMeshShaderFeaturesEXT
         Vulkan.Types.Struct.VkPhysicalDeviceMeshShaderPropertiesEXT
@@ -3543,12 +3046,8 @@ library
         Vulkan.Ext.VK_EXT_metal_objects
 
       other-modules:
-        Vulkan.Types.Base
         Vulkan.Types.Enum.VkExportMetalObjectTypeFlagBitsEXT
         Vulkan.Types.Enum.VkExportMetalObjectTypeFlagsEXT
-        Vulkan.Types.Enum.VkImageAspectFlagBits
-        Vulkan.Types.Enum.VkStructureType
-        Vulkan.Types.Handle
         Vulkan.Types.Struct.VkExportMetalBufferInfoEXT
         Vulkan.Types.Struct.VkExportMetalCommandQueueInfoEXT
         Vulkan.Types.Struct.VkExportMetalDeviceInfoEXT
@@ -3568,19 +3067,7 @@ library
         Vulkan.Ext.VK_EXT_metal_surface
 
       other-modules:
-        Vulkan.Types.Base
-        Vulkan.Types.Enum.VkInternalAllocationType
         Vulkan.Types.Enum.VkMetalSurfaceCreateFlagsEXT
-        Vulkan.Types.Enum.VkResult
-        Vulkan.Types.Enum.VkStructureType
-        Vulkan.Types.Enum.VkSystemAllocationScope
-        Vulkan.Types.FuncPointer.PFN_vkAllocationFunction
-        Vulkan.Types.FuncPointer.PFN_vkFreeFunction
-        Vulkan.Types.FuncPointer.PFN_vkInternalAllocationNotification
-        Vulkan.Types.FuncPointer.PFN_vkInternalFreeNotification
-        Vulkan.Types.FuncPointer.PFN_vkReallocationFunction
-        Vulkan.Types.Handle
-        Vulkan.Types.Struct.VkAllocationCallbacks
         Vulkan.Types.Struct.VkMetalSurfaceCreateInfoEXT
         Vulkan.Types.Command.VkCreateMetalSurfaceEXT
 
@@ -3589,9 +3076,6 @@ library
         Vulkan.Ext.VK_EXT_multi_draw
 
       other-modules:
-        Vulkan.Types.Base
-        Vulkan.Types.Enum.VkStructureType
-        Vulkan.Types.Handle
         Vulkan.Types.Struct.VkMultiDrawIndexedInfoEXT
         Vulkan.Types.Struct.VkMultiDrawInfoEXT
         Vulkan.Types.Struct.VkPhysicalDeviceMultiDrawFeaturesEXT
@@ -3604,10 +3088,6 @@ library
         Vulkan.Ext.VK_EXT_multisampled_render_to_single_sampled
 
       other-modules:
-        Vulkan.Types.Base
-        Vulkan.Types.Enum.VkImageCreateFlagBits
-        Vulkan.Types.Enum.VkSampleCountFlagBits
-        Vulkan.Types.Enum.VkStructureType
         Vulkan.Types.Struct.VkMultisampledRenderToSingleSampledInfoEXT
         Vulkan.Types.Struct.VkPhysicalDeviceMultisampledRenderToSingleSampledFeaturesEXT
         Vulkan.Types.Struct.VkSubpassResolvePerformanceQueryEXT
@@ -3617,11 +3097,6 @@ library
         Vulkan.Ext.VK_EXT_mutable_descriptor_type
 
       other-modules:
-        Vulkan.Types.Base
-        Vulkan.Types.Enum.VkDescriptorPoolCreateFlagBits
-        Vulkan.Types.Enum.VkDescriptorSetLayoutCreateFlagBits
-        Vulkan.Types.Enum.VkDescriptorType
-        Vulkan.Types.Enum.VkStructureType
         Vulkan.Types.Struct.VkMutableDescriptorTypeCreateInfoEXT
         Vulkan.Types.Struct.VkMutableDescriptorTypeListEXT
         Vulkan.Types.Struct.VkPhysicalDeviceMutableDescriptorTypeFeaturesEXT
@@ -3631,9 +3106,6 @@ library
         Vulkan.Ext.VK_EXT_non_seamless_cube_map
 
       other-modules:
-        Vulkan.Types.Base
-        Vulkan.Types.Enum.VkSamplerCreateFlagBits
-        Vulkan.Types.Enum.VkStructureType
         Vulkan.Types.Struct.VkPhysicalDeviceNonSeamlessCubeMapFeaturesEXT
 
     if flag (VK_EXT_opacity_micromap)
@@ -3641,39 +3113,22 @@ library
         Vulkan.Ext.VK_EXT_opacity_micromap
 
       other-modules:
-        Vulkan.Types.Base
         Vulkan.Types.Enum.VkAccelerationStructureBuildTypeKHR
         Vulkan.Types.Enum.VkAccelerationStructureCompatibilityKHR
         Vulkan.Types.Enum.VkAccessFlagBits2
-        Vulkan.Types.Enum.VkBufferUsageFlagBits
         Vulkan.Types.Enum.VkBuildAccelerationStructureFlagBitsKHR
         Vulkan.Types.Enum.VkBuildMicromapFlagBitsEXT
         Vulkan.Types.Enum.VkBuildMicromapFlagsEXT
         Vulkan.Types.Enum.VkBuildMicromapModeEXT
         Vulkan.Types.Enum.VkCopyMicromapModeEXT
         Vulkan.Types.Enum.VkGeometryInstanceFlagBitsKHR
-        Vulkan.Types.Enum.VkIndexType
-        Vulkan.Types.Enum.VkInternalAllocationType
         Vulkan.Types.Enum.VkMicromapCreateFlagBitsEXT
         Vulkan.Types.Enum.VkMicromapCreateFlagsEXT
         Vulkan.Types.Enum.VkMicromapTypeEXT
-        Vulkan.Types.Enum.VkObjectType
         Vulkan.Types.Enum.VkOpacityMicromapFormatEXT
         Vulkan.Types.Enum.VkOpacityMicromapSpecialIndexEXT
-        Vulkan.Types.Enum.VkPipelineCreateFlagBits
         Vulkan.Types.Enum.VkPipelineStageFlagBits2
-        Vulkan.Types.Enum.VkQueryType
-        Vulkan.Types.Enum.VkResult
-        Vulkan.Types.Enum.VkStructureType
-        Vulkan.Types.Enum.VkSystemAllocationScope
-        Vulkan.Types.FuncPointer.PFN_vkAllocationFunction
-        Vulkan.Types.FuncPointer.PFN_vkFreeFunction
-        Vulkan.Types.FuncPointer.PFN_vkInternalAllocationNotification
-        Vulkan.Types.FuncPointer.PFN_vkInternalFreeNotification
-        Vulkan.Types.FuncPointer.PFN_vkReallocationFunction
-        Vulkan.Types.Handle
         Vulkan.Types.Struct.VkAccelerationStructureTrianglesOpacityMicromapEXT
-        Vulkan.Types.Struct.VkAllocationCallbacks
         Vulkan.Types.Struct.VkCopyMemoryToMicromapInfoEXT
         Vulkan.Types.Struct.VkCopyMicromapInfoEXT
         Vulkan.Types.Struct.VkCopyMicromapToMemoryInfoEXT
@@ -3707,9 +3162,6 @@ library
         Vulkan.Ext.VK_EXT_pageable_device_local_memory
 
       other-modules:
-        Vulkan.Types.Base
-        Vulkan.Types.Enum.VkStructureType
-        Vulkan.Types.Handle
         Vulkan.Types.Struct.VkPhysicalDevicePageableDeviceLocalMemoryFeaturesEXT
         Vulkan.Types.Command.VkSetDeviceMemoryPriorityEXT
 
@@ -3718,7 +3170,6 @@ library
         Vulkan.Ext.VK_EXT_pci_bus_info
 
       other-modules:
-        Vulkan.Types.Enum.VkStructureType
         Vulkan.Types.Struct.VkPhysicalDevicePCIBusInfoPropertiesEXT
 
     if flag (VK_EXT_physical_device_drm)
@@ -3726,8 +3177,6 @@ library
         Vulkan.Ext.VK_EXT_physical_device_drm
 
       other-modules:
-        Vulkan.Types.Base
-        Vulkan.Types.Enum.VkStructureType
         Vulkan.Types.Struct.VkPhysicalDeviceDrmPropertiesEXT
 
     if flag (VK_EXT_pipeline_creation_cache_control)
@@ -3735,11 +3184,7 @@ library
         Vulkan.Ext.VK_EXT_pipeline_creation_cache_control
 
       other-modules:
-        Vulkan.Types.Base
         Vulkan.Types.Enum.VkPipelineCacheCreateFlagBits
-        Vulkan.Types.Enum.VkPipelineCreateFlagBits
-        Vulkan.Types.Enum.VkResult
-        Vulkan.Types.Enum.VkStructureType
         Vulkan.Types.Struct.VkPhysicalDevicePipelineCreationCacheControlFeaturesEXT
 
     if flag (VK_EXT_pipeline_creation_feedback)
@@ -3750,7 +3195,6 @@ library
         Vulkan.Types.Enum.VkPipelineCreationFeedbackFlagBitsEXT
         Vulkan.Types.Enum.VkPipelineCreationFeedbackFlags
         Vulkan.Types.Enum.VkPipelineCreationFeedbackFlagsEXT
-        Vulkan.Types.Enum.VkStructureType
         Vulkan.Types.Struct.VkPipelineCreationFeedback
         Vulkan.Types.Struct.VkPipelineCreationFeedbackCreateInfoEXT
         Vulkan.Types.Struct.VkPipelineCreationFeedbackEXT
@@ -3760,8 +3204,6 @@ library
         Vulkan.Ext.VK_EXT_pipeline_library_group_handles
 
       other-modules:
-        Vulkan.Types.Base
-        Vulkan.Types.Enum.VkStructureType
         Vulkan.Types.Struct.VkPhysicalDevicePipelineLibraryGroupHandlesFeaturesEXT
 
     if flag (VK_EXT_pipeline_properties)
@@ -3769,11 +3211,6 @@ library
         Vulkan.Ext.VK_EXT_pipeline_properties
 
       other-modules:
-        Vulkan.Types.Base
-        Vulkan.Types.Enum.VkResult
-        Vulkan.Types.Enum.VkStructureType
-        Vulkan.Types.Handle
-        Vulkan.Types.Struct.VkBaseOutStructure
         Vulkan.Types.Struct.VkPhysicalDevicePipelinePropertiesFeaturesEXT
         Vulkan.Types.Struct.VkPipelineInfoEXT
         Vulkan.Types.Struct.VkPipelinePropertiesIdentifierEXT
@@ -3784,9 +3221,6 @@ library
         Vulkan.Ext.VK_EXT_pipeline_protected_access
 
       other-modules:
-        Vulkan.Types.Base
-        Vulkan.Types.Enum.VkPipelineCreateFlagBits
-        Vulkan.Types.Enum.VkStructureType
         Vulkan.Types.Struct.VkPhysicalDevicePipelineProtectedAccessFeaturesEXT
 
     if flag (VK_EXT_pipeline_robustness)
@@ -3794,10 +3228,8 @@ library
         Vulkan.Ext.VK_EXT_pipeline_robustness
 
       other-modules:
-        Vulkan.Types.Base
         Vulkan.Types.Enum.VkPipelineRobustnessBufferBehaviorEXT
         Vulkan.Types.Enum.VkPipelineRobustnessImageBehaviorEXT
-        Vulkan.Types.Enum.VkStructureType
         Vulkan.Types.Struct.VkPhysicalDevicePipelineRobustnessFeaturesEXT
         Vulkan.Types.Struct.VkPhysicalDevicePipelineRobustnessPropertiesEXT
         Vulkan.Types.Struct.VkPipelineRobustnessCreateInfoEXT
@@ -3811,8 +3243,6 @@ library
         Vulkan.Ext.VK_EXT_primitive_topology_list_restart
 
       other-modules:
-        Vulkan.Types.Base
-        Vulkan.Types.Enum.VkStructureType
         Vulkan.Types.Struct.VkPhysicalDevicePrimitiveTopologyListRestartFeaturesEXT
 
     if flag (VK_EXT_primitives_generated_query)
@@ -3820,9 +3250,6 @@ library
         Vulkan.Ext.VK_EXT_primitives_generated_query
 
       other-modules:
-        Vulkan.Types.Base
-        Vulkan.Types.Enum.VkQueryType
-        Vulkan.Types.Enum.VkStructureType
         Vulkan.Types.Struct.VkPhysicalDevicePrimitivesGeneratedQueryFeaturesEXT
 
     if flag (VK_EXT_private_data)
@@ -3830,21 +3257,8 @@ library
         Vulkan.Ext.VK_EXT_private_data
 
       other-modules:
-        Vulkan.Types.Base
-        Vulkan.Types.Enum.VkInternalAllocationType
-        Vulkan.Types.Enum.VkObjectType
         Vulkan.Types.Enum.VkPrivateDataSlotCreateFlags
         Vulkan.Types.Enum.VkPrivateDataSlotCreateFlagsEXT
-        Vulkan.Types.Enum.VkResult
-        Vulkan.Types.Enum.VkStructureType
-        Vulkan.Types.Enum.VkSystemAllocationScope
-        Vulkan.Types.FuncPointer.PFN_vkAllocationFunction
-        Vulkan.Types.FuncPointer.PFN_vkFreeFunction
-        Vulkan.Types.FuncPointer.PFN_vkInternalAllocationNotification
-        Vulkan.Types.FuncPointer.PFN_vkInternalFreeNotification
-        Vulkan.Types.FuncPointer.PFN_vkReallocationFunction
-        Vulkan.Types.Handle
-        Vulkan.Types.Struct.VkAllocationCallbacks
         Vulkan.Types.Struct.VkDevicePrivateDataCreateInfoEXT
         Vulkan.Types.Struct.VkPhysicalDevicePrivateDataFeaturesEXT
         Vulkan.Types.Struct.VkPrivateDataSlotCreateInfo
@@ -3859,9 +3273,7 @@ library
         Vulkan.Ext.VK_EXT_provoking_vertex
 
       other-modules:
-        Vulkan.Types.Base
         Vulkan.Types.Enum.VkProvokingVertexModeEXT
-        Vulkan.Types.Enum.VkStructureType
         Vulkan.Types.Struct.VkPhysicalDeviceProvokingVertexFeaturesEXT
         Vulkan.Types.Struct.VkPhysicalDeviceProvokingVertexPropertiesEXT
         Vulkan.Types.Struct.VkPipelineRasterizationProvokingVertexStateCreateInfoEXT
@@ -3875,11 +3287,8 @@ library
         Vulkan.Ext.VK_EXT_rasterization_order_attachment_access
 
       other-modules:
-        Vulkan.Types.Base
         Vulkan.Types.Enum.VkPipelineColorBlendStateCreateFlagBits
         Vulkan.Types.Enum.VkPipelineDepthStencilStateCreateFlagBits
-        Vulkan.Types.Enum.VkStructureType
-        Vulkan.Types.Enum.VkSubpassDescriptionFlagBits
         Vulkan.Types.Struct.VkPhysicalDeviceRasterizationOrderAttachmentAccessFeaturesEXT
 
     if flag (VK_EXT_rgba10x6_formats)
@@ -3887,8 +3296,6 @@ library
         Vulkan.Ext.VK_EXT_rgba10x6_formats
 
       other-modules:
-        Vulkan.Types.Base
-        Vulkan.Types.Enum.VkStructureType
         Vulkan.Types.Struct.VkPhysicalDeviceRGBA10X6FormatsFeaturesEXT
 
     if flag (VK_EXT_robustness2)
@@ -3896,8 +3303,6 @@ library
         Vulkan.Ext.VK_EXT_robustness2
 
       other-modules:
-        Vulkan.Types.Base
-        Vulkan.Types.Enum.VkStructureType
         Vulkan.Types.Struct.VkPhysicalDeviceRobustness2FeaturesEXT
         Vulkan.Types.Struct.VkPhysicalDeviceRobustness2PropertiesEXT
 
@@ -3906,15 +3311,7 @@ library
         Vulkan.Ext.VK_EXT_sample_locations
 
       other-modules:
-        Vulkan.Types.Base
-        Vulkan.Types.Enum.VkDynamicState
-        Vulkan.Types.Enum.VkImageCreateFlagBits
-        Vulkan.Types.Enum.VkSampleCountFlagBits
-        Vulkan.Types.Enum.VkSampleCountFlags
-        Vulkan.Types.Enum.VkStructureType
-        Vulkan.Types.Handle
         Vulkan.Types.Struct.VkAttachmentSampleLocationsEXT
-        Vulkan.Types.Struct.VkExtent2D
         Vulkan.Types.Struct.VkMultisamplePropertiesEXT
         Vulkan.Types.Struct.VkPhysicalDeviceSampleLocationsPropertiesEXT
         Vulkan.Types.Struct.VkPipelineSampleLocationsStateCreateInfoEXT
@@ -3930,11 +3327,8 @@ library
         Vulkan.Ext.VK_EXT_sampler_filter_minmax
 
       other-modules:
-        Vulkan.Types.Base
-        Vulkan.Types.Enum.VkFormatFeatureFlagBits
         Vulkan.Types.Enum.VkSamplerReductionMode
         Vulkan.Types.Enum.VkSamplerReductionModeEXT
-        Vulkan.Types.Enum.VkStructureType
         Vulkan.Types.Struct.VkPhysicalDeviceSamplerFilterMinmaxPropertiesEXT
         Vulkan.Types.Struct.VkSamplerReductionModeCreateInfoEXT
 
@@ -3943,8 +3337,6 @@ library
         Vulkan.Ext.VK_EXT_scalar_block_layout
 
       other-modules:
-        Vulkan.Types.Base
-        Vulkan.Types.Enum.VkStructureType
         Vulkan.Types.Struct.VkPhysicalDeviceScalarBlockLayoutFeaturesEXT
 
     if flag (VK_EXT_separate_stencil_usage)
@@ -3952,8 +3344,6 @@ library
         Vulkan.Ext.VK_EXT_separate_stencil_usage
 
       other-modules:
-        Vulkan.Types.Enum.VkImageUsageFlags
-        Vulkan.Types.Enum.VkStructureType
         Vulkan.Types.Struct.VkImageStencilUsageCreateInfoEXT
 
     if flag (VK_EXT_shader_atomic_float)
@@ -3961,8 +3351,6 @@ library
         Vulkan.Ext.VK_EXT_shader_atomic_float
 
       other-modules:
-        Vulkan.Types.Base
-        Vulkan.Types.Enum.VkStructureType
         Vulkan.Types.Struct.VkPhysicalDeviceShaderAtomicFloatFeaturesEXT
 
     if flag (VK_EXT_shader_atomic_float2)
@@ -3970,8 +3358,6 @@ library
         Vulkan.Ext.VK_EXT_shader_atomic_float2
 
       other-modules:
-        Vulkan.Types.Base
-        Vulkan.Types.Enum.VkStructureType
         Vulkan.Types.Struct.VkPhysicalDeviceShaderAtomicFloat2FeaturesEXT
 
     if flag (VK_EXT_shader_demote_to_helper_invocation)
@@ -3979,8 +3365,6 @@ library
         Vulkan.Ext.VK_EXT_shader_demote_to_helper_invocation
 
       other-modules:
-        Vulkan.Types.Base
-        Vulkan.Types.Enum.VkStructureType
         Vulkan.Types.Struct.VkPhysicalDeviceShaderDemoteToHelperInvocationFeaturesEXT
 
     if flag (VK_EXT_shader_image_atomic_int64)
@@ -3988,8 +3372,6 @@ library
         Vulkan.Ext.VK_EXT_shader_image_atomic_int64
 
       other-modules:
-        Vulkan.Types.Base
-        Vulkan.Types.Enum.VkStructureType
         Vulkan.Types.Struct.VkPhysicalDeviceShaderImageAtomicInt64FeaturesEXT
 
     if flag (VK_EXT_shader_module_identifier)
@@ -3997,14 +3379,9 @@ library
         Vulkan.Ext.VK_EXT_shader_module_identifier
 
       other-modules:
-        Vulkan.Types.Base
-        Vulkan.Types.Enum.VkShaderModuleCreateFlags
-        Vulkan.Types.Enum.VkStructureType
-        Vulkan.Types.Handle
         Vulkan.Types.Struct.VkPhysicalDeviceShaderModuleIdentifierFeaturesEXT
         Vulkan.Types.Struct.VkPhysicalDeviceShaderModuleIdentifierPropertiesEXT
         Vulkan.Types.Struct.VkPipelineShaderStageModuleIdentifierCreateInfoEXT
-        Vulkan.Types.Struct.VkShaderModuleCreateInfo
         Vulkan.Types.Struct.VkShaderModuleIdentifierEXT
         Vulkan.Types.Command.VkGetShaderModuleCreateInfoIdentifierEXT
         Vulkan.Types.Command.VkGetShaderModuleIdentifierEXT
@@ -4030,10 +3407,6 @@ library
         Vulkan.Ext.VK_EXT_subgroup_size_control
 
       other-modules:
-        Vulkan.Types.Base
-        Vulkan.Types.Enum.VkPipelineShaderStageCreateFlagBits
-        Vulkan.Types.Enum.VkShaderStageFlags
-        Vulkan.Types.Enum.VkStructureType
         Vulkan.Types.Struct.VkPhysicalDeviceSubgroupSizeControlFeaturesEXT
         Vulkan.Types.Struct.VkPhysicalDeviceSubgroupSizeControlPropertiesEXT
         Vulkan.Types.Struct.VkPipelineShaderStageRequiredSubgroupSizeCreateInfoEXT
@@ -4043,8 +3416,6 @@ library
         Vulkan.Ext.VK_EXT_subpass_merge_feedback
 
       other-modules:
-        Vulkan.Types.Base
-        Vulkan.Types.Enum.VkStructureType
         Vulkan.Types.Enum.VkSubpassMergeStatusEXT
         Vulkan.Types.Struct.VkPhysicalDeviceSubpassMergeFeedbackFeaturesEXT
         Vulkan.Types.Struct.VkRenderPassCreationControlEXT
@@ -4063,8 +3434,6 @@ library
         Vulkan.Types.Enum.VkPresentModeKHR
         Vulkan.Types.Enum.VkPresentScalingFlagBitsEXT
         Vulkan.Types.Enum.VkPresentScalingFlagsEXT
-        Vulkan.Types.Enum.VkStructureType
-        Vulkan.Types.Struct.VkExtent2D
         Vulkan.Types.Struct.VkSurfacePresentModeCompatibilityEXT
         Vulkan.Types.Struct.VkSurfacePresentModeEXT
         Vulkan.Types.Struct.VkSurfacePresentScalingCapabilitiesEXT
@@ -4081,14 +3450,10 @@ library
         Vulkan.Ext.VK_EXT_swapchain_maintenance1
 
       other-modules:
-        Vulkan.Types.Base
         Vulkan.Types.Enum.VkPresentGravityFlagsEXT
         Vulkan.Types.Enum.VkPresentModeKHR
         Vulkan.Types.Enum.VkPresentScalingFlagsEXT
-        Vulkan.Types.Enum.VkResult
-        Vulkan.Types.Enum.VkStructureType
         Vulkan.Types.Enum.VkSwapchainCreateFlagBitsKHR
-        Vulkan.Types.Handle
         Vulkan.Types.Struct.VkPhysicalDeviceSwapchainMaintenance1FeaturesEXT
         Vulkan.Types.Struct.VkReleaseSwapchainImagesInfoEXT
         Vulkan.Types.Struct.VkSwapchainPresentFenceInfoEXT
@@ -4102,8 +3467,6 @@ library
         Vulkan.Ext.VK_EXT_texel_buffer_alignment
 
       other-modules:
-        Vulkan.Types.Base
-        Vulkan.Types.Enum.VkStructureType
         Vulkan.Types.Struct.VkPhysicalDeviceTexelBufferAlignmentFeaturesEXT
         Vulkan.Types.Struct.VkPhysicalDeviceTexelBufferAlignmentPropertiesEXT
 
@@ -4112,9 +3475,6 @@ library
         Vulkan.Ext.VK_EXT_texture_compression_astc_hdr
 
       other-modules:
-        Vulkan.Types.Base
-        Vulkan.Types.Enum.VkFormat
-        Vulkan.Types.Enum.VkStructureType
         Vulkan.Types.Struct.VkPhysicalDeviceTextureCompressionASTCHDRFeaturesEXT
 
     if flag (VK_EXT_tooling_info)
@@ -4122,13 +3482,10 @@ library
         Vulkan.Ext.VK_EXT_tooling_info
 
       other-modules:
-        Vulkan.Types.Enum.VkResult
-        Vulkan.Types.Enum.VkStructureType
         Vulkan.Types.Enum.VkToolPurposeFlagBits
         Vulkan.Types.Enum.VkToolPurposeFlagBitsEXT
         Vulkan.Types.Enum.VkToolPurposeFlags
         Vulkan.Types.Enum.VkToolPurposeFlagsEXT
-        Vulkan.Types.Handle
         Vulkan.Types.Struct.VkPhysicalDeviceToolProperties
         Vulkan.Types.Struct.VkPhysicalDeviceToolPropertiesEXT
         Vulkan.Types.Command.VkGetPhysicalDeviceToolPropertiesEXT
@@ -4138,15 +3495,7 @@ library
         Vulkan.Ext.VK_EXT_transform_feedback
 
       other-modules:
-        Vulkan.Types.Base
-        Vulkan.Types.Enum.VkAccessFlagBits
-        Vulkan.Types.Enum.VkBufferUsageFlagBits
         Vulkan.Types.Enum.VkPipelineRasterizationStateStreamCreateFlagsEXT
-        Vulkan.Types.Enum.VkPipelineStageFlagBits
-        Vulkan.Types.Enum.VkQueryControlFlags
-        Vulkan.Types.Enum.VkQueryType
-        Vulkan.Types.Enum.VkStructureType
-        Vulkan.Types.Handle
         Vulkan.Types.Struct.VkPhysicalDeviceTransformFeedbackFeaturesEXT
         Vulkan.Types.Struct.VkPhysicalDeviceTransformFeedbackPropertiesEXT
         Vulkan.Types.Struct.VkPipelineRasterizationStateStreamCreateInfoEXT
@@ -4162,20 +3511,8 @@ library
         Vulkan.Ext.VK_EXT_validation_cache
 
       other-modules:
-        Vulkan.Types.Enum.VkInternalAllocationType
-        Vulkan.Types.Enum.VkObjectType
-        Vulkan.Types.Enum.VkResult
-        Vulkan.Types.Enum.VkStructureType
-        Vulkan.Types.Enum.VkSystemAllocationScope
         Vulkan.Types.Enum.VkValidationCacheCreateFlagsEXT
         Vulkan.Types.Enum.VkValidationCacheHeaderVersionEXT
-        Vulkan.Types.FuncPointer.PFN_vkAllocationFunction
-        Vulkan.Types.FuncPointer.PFN_vkFreeFunction
-        Vulkan.Types.FuncPointer.PFN_vkInternalAllocationNotification
-        Vulkan.Types.FuncPointer.PFN_vkInternalFreeNotification
-        Vulkan.Types.FuncPointer.PFN_vkReallocationFunction
-        Vulkan.Types.Handle
-        Vulkan.Types.Struct.VkAllocationCallbacks
         Vulkan.Types.Struct.VkShaderModuleValidationCacheCreateInfoEXT
         Vulkan.Types.Struct.VkValidationCacheCreateInfoEXT
         Vulkan.Types.Command.VkCreateValidationCacheEXT
@@ -4188,7 +3525,6 @@ library
         Vulkan.Ext.VK_EXT_validation_features
 
       other-modules:
-        Vulkan.Types.Enum.VkStructureType
         Vulkan.Types.Enum.VkValidationFeatureDisableEXT
         Vulkan.Types.Enum.VkValidationFeatureEnableEXT
         Vulkan.Types.Struct.VkValidationFeaturesEXT
@@ -4198,7 +3534,6 @@ library
         Vulkan.Ext.VK_EXT_validation_flags
 
       other-modules:
-        Vulkan.Types.Enum.VkStructureType
         Vulkan.Types.Enum.VkValidationCheckEXT
         Vulkan.Types.Struct.VkValidationFlagsEXT
 
@@ -4207,8 +3542,6 @@ library
         Vulkan.Ext.VK_EXT_vertex_attribute_divisor
 
       other-modules:
-        Vulkan.Types.Base
-        Vulkan.Types.Enum.VkStructureType
         Vulkan.Types.Struct.VkPhysicalDeviceVertexAttributeDivisorFeaturesEXT
         Vulkan.Types.Struct.VkPhysicalDeviceVertexAttributeDivisorPropertiesEXT
         Vulkan.Types.Struct.VkPipelineVertexInputDivisorStateCreateInfoEXT
@@ -4219,12 +3552,6 @@ library
         Vulkan.Ext.VK_EXT_vertex_input_dynamic_state
 
       other-modules:
-        Vulkan.Types.Base
-        Vulkan.Types.Enum.VkDynamicState
-        Vulkan.Types.Enum.VkFormat
-        Vulkan.Types.Enum.VkStructureType
-        Vulkan.Types.Enum.VkVertexInputRate
-        Vulkan.Types.Handle
         Vulkan.Types.Struct.VkPhysicalDeviceVertexInputDynamicStateFeaturesEXT
         Vulkan.Types.Struct.VkVertexInputAttributeDescription2EXT
         Vulkan.Types.Struct.VkVertexInputBindingDescription2EXT
@@ -4236,8 +3563,6 @@ library
 
       other-modules:
         Vulkan.Types.Protected
-        Vulkan.Types.Base
-        Vulkan.Types.Enum.VkStructureType
         Vulkan.Types.Enum.VkVideoCodecOperationFlagBitsKHR
         Vulkan.Types.Enum.VkVideoEncodeH264CapabilityFlagBitsEXT
         Vulkan.Types.Enum.VkVideoEncodeH264CapabilityFlagsEXT
@@ -4266,8 +3591,6 @@ library
 
       other-modules:
         Vulkan.Types.Protected
-        Vulkan.Types.Base
-        Vulkan.Types.Enum.VkStructureType
         Vulkan.Types.Enum.VkVideoCodecOperationFlagBitsKHR
         Vulkan.Types.Enum.VkVideoEncodeH265CapabilityFlagBitsEXT
         Vulkan.Types.Enum.VkVideoEncodeH265CapabilityFlagsEXT
@@ -4299,9 +3622,6 @@ library
         Vulkan.Ext.VK_EXT_ycbcr_2plane_444_formats
 
       other-modules:
-        Vulkan.Types.Base
-        Vulkan.Types.Enum.VkFormat
-        Vulkan.Types.Enum.VkStructureType
         Vulkan.Types.Struct.VkPhysicalDeviceYcbcr2Plane444FormatsFeaturesEXT
 
     if flag (VK_EXT_ycbcr_image_arrays)
@@ -4309,8 +3629,6 @@ library
         Vulkan.Ext.VK_EXT_ycbcr_image_arrays
 
       other-modules:
-        Vulkan.Types.Base
-        Vulkan.Types.Enum.VkStructureType
         Vulkan.Types.Struct.VkPhysicalDeviceYcbcrImageArraysFeaturesEXT
 
     if flag (VK_FUCHSIA_buffer_collection)
@@ -4319,49 +3637,20 @@ library
 
       other-modules:
         Vulkan.Types.Protected
-        Vulkan.Types.Base
-        Vulkan.Types.Enum.VkBufferCreateFlags
-        Vulkan.Types.Enum.VkBufferUsageFlags
         Vulkan.Types.Enum.VkChromaLocation
-        Vulkan.Types.Enum.VkComponentSwizzle
         Vulkan.Types.Enum.VkDebugReportObjectTypeEXT
-        Vulkan.Types.Enum.VkFormat
-        Vulkan.Types.Enum.VkFormatFeatureFlags
         Vulkan.Types.Enum.VkImageConstraintsInfoFlagBitsFUCHSIA
         Vulkan.Types.Enum.VkImageConstraintsInfoFlagsFUCHSIA
-        Vulkan.Types.Enum.VkImageCreateFlags
         Vulkan.Types.Enum.VkImageFormatConstraintsFlagsFUCHSIA
-        Vulkan.Types.Enum.VkImageLayout
-        Vulkan.Types.Enum.VkImageTiling
-        Vulkan.Types.Enum.VkImageType
-        Vulkan.Types.Enum.VkImageUsageFlags
-        Vulkan.Types.Enum.VkInternalAllocationType
-        Vulkan.Types.Enum.VkObjectType
-        Vulkan.Types.Enum.VkResult
-        Vulkan.Types.Enum.VkSampleCountFlagBits
         Vulkan.Types.Enum.VkSamplerYcbcrModelConversion
         Vulkan.Types.Enum.VkSamplerYcbcrRange
-        Vulkan.Types.Enum.VkSharingMode
-        Vulkan.Types.Enum.VkStructureType
-        Vulkan.Types.Enum.VkSystemAllocationScope
-        Vulkan.Types.FuncPointer.PFN_vkAllocationFunction
-        Vulkan.Types.FuncPointer.PFN_vkFreeFunction
-        Vulkan.Types.FuncPointer.PFN_vkInternalAllocationNotification
-        Vulkan.Types.FuncPointer.PFN_vkInternalFreeNotification
-        Vulkan.Types.FuncPointer.PFN_vkReallocationFunction
-        Vulkan.Types.Handle
-        Vulkan.Types.Struct.VkAllocationCallbacks
         Vulkan.Types.Struct.VkBufferCollectionBufferCreateInfoFUCHSIA
         Vulkan.Types.Struct.VkBufferCollectionConstraintsInfoFUCHSIA
         Vulkan.Types.Struct.VkBufferCollectionCreateInfoFUCHSIA
         Vulkan.Types.Struct.VkBufferCollectionImageCreateInfoFUCHSIA
         Vulkan.Types.Struct.VkBufferCollectionPropertiesFUCHSIA
         Vulkan.Types.Struct.VkBufferConstraintsInfoFUCHSIA
-        Vulkan.Types.Struct.VkBufferCreateInfo
-        Vulkan.Types.Struct.VkComponentMapping
-        Vulkan.Types.Struct.VkExtent3D
         Vulkan.Types.Struct.VkImageConstraintsInfoFUCHSIA
-        Vulkan.Types.Struct.VkImageCreateInfo
         Vulkan.Types.Struct.VkImageFormatConstraintsInfoFUCHSIA
         Vulkan.Types.Struct.VkImportMemoryBufferCollectionFUCHSIA
         Vulkan.Types.Struct.VkSysmemColorSpaceFUCHSIA
@@ -4378,9 +3667,6 @@ library
       other-modules:
         Vulkan.Types.Protected
         Vulkan.Types.Enum.VkExternalMemoryHandleTypeFlagBits
-        Vulkan.Types.Enum.VkResult
-        Vulkan.Types.Enum.VkStructureType
-        Vulkan.Types.Handle
         Vulkan.Types.Struct.VkImportMemoryZirconHandleInfoFUCHSIA
         Vulkan.Types.Struct.VkMemoryGetZirconHandleInfoFUCHSIA
         Vulkan.Types.Struct.VkMemoryZirconHandlePropertiesFUCHSIA
@@ -4394,10 +3680,7 @@ library
       other-modules:
         Vulkan.Types.Protected
         Vulkan.Types.Enum.VkExternalSemaphoreHandleTypeFlagBits
-        Vulkan.Types.Enum.VkResult
         Vulkan.Types.Enum.VkSemaphoreImportFlags
-        Vulkan.Types.Enum.VkStructureType
-        Vulkan.Types.Handle
         Vulkan.Types.Struct.VkImportSemaphoreZirconHandleInfoFUCHSIA
         Vulkan.Types.Struct.VkSemaphoreGetZirconHandleInfoFUCHSIA
         Vulkan.Types.Command.VkGetSemaphoreZirconHandleFUCHSIA
@@ -4410,17 +3693,6 @@ library
       other-modules:
         Vulkan.Types.Protected
         Vulkan.Types.Enum.VkImagePipeSurfaceCreateFlagsFUCHSIA
-        Vulkan.Types.Enum.VkInternalAllocationType
-        Vulkan.Types.Enum.VkResult
-        Vulkan.Types.Enum.VkStructureType
-        Vulkan.Types.Enum.VkSystemAllocationScope
-        Vulkan.Types.FuncPointer.PFN_vkAllocationFunction
-        Vulkan.Types.FuncPointer.PFN_vkFreeFunction
-        Vulkan.Types.FuncPointer.PFN_vkInternalAllocationNotification
-        Vulkan.Types.FuncPointer.PFN_vkInternalFreeNotification
-        Vulkan.Types.FuncPointer.PFN_vkReallocationFunction
-        Vulkan.Types.Handle
-        Vulkan.Types.Struct.VkAllocationCallbacks
         Vulkan.Types.Struct.VkImagePipeSurfaceCreateInfoFUCHSIA
         Vulkan.Types.Command.VkCreateImagePipeSurfaceFUCHSIA
 
@@ -4430,7 +3702,6 @@ library
 
       other-modules:
         Vulkan.Types.Protected
-        Vulkan.Types.Enum.VkStructureType
         Vulkan.Types.Struct.VkPresentFrameTokenGGP
 
     if flag (VK_GGP_stream_descriptor_surface)
@@ -4439,18 +3710,7 @@ library
 
       other-modules:
         Vulkan.Types.Protected
-        Vulkan.Types.Enum.VkInternalAllocationType
-        Vulkan.Types.Enum.VkResult
         Vulkan.Types.Enum.VkStreamDescriptorSurfaceCreateFlagsGGP
-        Vulkan.Types.Enum.VkStructureType
-        Vulkan.Types.Enum.VkSystemAllocationScope
-        Vulkan.Types.FuncPointer.PFN_vkAllocationFunction
-        Vulkan.Types.FuncPointer.PFN_vkFreeFunction
-        Vulkan.Types.FuncPointer.PFN_vkInternalAllocationNotification
-        Vulkan.Types.FuncPointer.PFN_vkInternalFreeNotification
-        Vulkan.Types.FuncPointer.PFN_vkReallocationFunction
-        Vulkan.Types.Handle
-        Vulkan.Types.Struct.VkAllocationCallbacks
         Vulkan.Types.Struct.VkStreamDescriptorSurfaceCreateInfoGGP
         Vulkan.Types.Command.VkCreateStreamDescriptorSurfaceGGP
 
@@ -4463,9 +3723,6 @@ library
         Vulkan.Ext.VK_GOOGLE_display_timing
 
       other-modules:
-        Vulkan.Types.Enum.VkResult
-        Vulkan.Types.Enum.VkStructureType
-        Vulkan.Types.Handle
         Vulkan.Types.Struct.VkPastPresentationTimingGOOGLE
         Vulkan.Types.Struct.VkPresentTimeGOOGLE
         Vulkan.Types.Struct.VkPresentTimesInfoGOOGLE
@@ -4490,12 +3747,7 @@ library
         Vulkan.Ext.VK_HUAWEI_cluster_culling_shader
 
       other-modules:
-        Vulkan.Types.Base
         Vulkan.Types.Enum.VkPipelineStageFlagBits2
-        Vulkan.Types.Enum.VkQueryPipelineStatisticFlagBits
-        Vulkan.Types.Enum.VkShaderStageFlagBits
-        Vulkan.Types.Enum.VkStructureType
-        Vulkan.Types.Handle
         Vulkan.Types.Struct.VkPhysicalDeviceClusterCullingShaderFeaturesHUAWEI
         Vulkan.Types.Struct.VkPhysicalDeviceClusterCullingShaderPropertiesHUAWEI
         Vulkan.Types.Command.VkCmdDrawClusterHUAWEI
@@ -4506,13 +3758,8 @@ library
         Vulkan.Ext.VK_HUAWEI_invocation_mask
 
       other-modules:
-        Vulkan.Types.Base
         Vulkan.Types.Enum.VkAccessFlagBits2
-        Vulkan.Types.Enum.VkImageLayout
-        Vulkan.Types.Enum.VkImageUsageFlagBits
         Vulkan.Types.Enum.VkPipelineStageFlagBits2
-        Vulkan.Types.Enum.VkStructureType
-        Vulkan.Types.Handle
         Vulkan.Types.Struct.VkPhysicalDeviceInvocationMaskFeaturesHUAWEI
         Vulkan.Types.Command.VkCmdBindInvocationMaskHUAWEI
 
@@ -4521,14 +3768,7 @@ library
         Vulkan.Ext.VK_HUAWEI_subpass_shading
 
       other-modules:
-        Vulkan.Types.Base
-        Vulkan.Types.Enum.VkPipelineBindPoint
         Vulkan.Types.Enum.VkPipelineStageFlagBits2
-        Vulkan.Types.Enum.VkResult
-        Vulkan.Types.Enum.VkShaderStageFlagBits
-        Vulkan.Types.Enum.VkStructureType
-        Vulkan.Types.Handle
-        Vulkan.Types.Struct.VkExtent2D
         Vulkan.Types.Struct.VkPhysicalDeviceSubpassShadingFeaturesHUAWEI
         Vulkan.Types.Struct.VkPhysicalDeviceSubpassShadingPropertiesHUAWEI
         Vulkan.Types.Struct.VkSubpassShadingPipelineCreateInfoHUAWEI
@@ -4539,33 +3779,20 @@ library
       exposed-modules:
         Vulkan.Ext.VK_IMG_filter_cubic
 
-      other-modules:
-        Vulkan.Types.Enum.VkFilter
-        Vulkan.Types.Enum.VkFormatFeatureFlagBits
-
     if flag (VK_IMG_format_pvrtc)
       exposed-modules:
         Vulkan.Ext.VK_IMG_format_pvrtc
-
-      other-modules:
-        Vulkan.Types.Enum.VkFormat
 
     if flag (VK_INTEL_performance_query)
       exposed-modules:
         Vulkan.Ext.VK_INTEL_performance_query
 
       other-modules:
-        Vulkan.Types.Base
-        Vulkan.Types.Enum.VkObjectType
         Vulkan.Types.Enum.VkPerformanceConfigurationTypeINTEL
         Vulkan.Types.Enum.VkPerformanceOverrideTypeINTEL
         Vulkan.Types.Enum.VkPerformanceParameterTypeINTEL
         Vulkan.Types.Enum.VkPerformanceValueTypeINTEL
         Vulkan.Types.Enum.VkQueryPoolSamplingModeINTEL
-        Vulkan.Types.Enum.VkQueryType
-        Vulkan.Types.Enum.VkResult
-        Vulkan.Types.Enum.VkStructureType
-        Vulkan.Types.Handle
         Vulkan.Types.Struct.VkInitializePerformanceApiInfoINTEL
         Vulkan.Types.Struct.VkPerformanceConfigurationAcquireInfoINTEL
         Vulkan.Types.Struct.VkPerformanceMarkerInfoINTEL
@@ -4590,8 +3817,6 @@ library
         Vulkan.Ext.VK_INTEL_shader_integer_functions2
 
       other-modules:
-        Vulkan.Types.Base
-        Vulkan.Types.Enum.VkStructureType
         Vulkan.Types.Struct.VkPhysicalDeviceShaderIntegerFunctions2FeaturesINTEL
 
     if flag (VK_KHR_16bit_storage)
@@ -4599,8 +3824,6 @@ library
         Vulkan.Ext.VK_KHR_16bit_storage
 
       other-modules:
-        Vulkan.Types.Base
-        Vulkan.Types.Enum.VkStructureType
         Vulkan.Types.Struct.VkPhysicalDevice16BitStorageFeaturesKHR
 
     if flag (VK_KHR_8bit_storage)
@@ -4608,8 +3831,6 @@ library
         Vulkan.Ext.VK_KHR_8bit_storage
 
       other-modules:
-        Vulkan.Types.Base
-        Vulkan.Types.Enum.VkStructureType
         Vulkan.Types.Struct.VkPhysicalDevice8BitStorageFeaturesKHR
 
     if flag (VK_KHR_acceleration_structure)
@@ -4617,42 +3838,22 @@ library
         Vulkan.Ext.VK_KHR_acceleration_structure
 
       other-modules:
-        Vulkan.Types.Base
         Vulkan.Types.Enum.VkAccelerationStructureBuildTypeKHR
         Vulkan.Types.Enum.VkAccelerationStructureCompatibilityKHR
         Vulkan.Types.Enum.VkAccelerationStructureCreateFlagBitsKHR
         Vulkan.Types.Enum.VkAccelerationStructureCreateFlagsKHR
         Vulkan.Types.Enum.VkAccelerationStructureTypeKHR
-        Vulkan.Types.Enum.VkAccessFlagBits
-        Vulkan.Types.Enum.VkBufferUsageFlagBits
         Vulkan.Types.Enum.VkBuildAccelerationStructureFlagBitsKHR
         Vulkan.Types.Enum.VkBuildAccelerationStructureFlagsKHR
         Vulkan.Types.Enum.VkBuildAccelerationStructureModeKHR
         Vulkan.Types.Enum.VkCopyAccelerationStructureModeKHR
         Vulkan.Types.Enum.VkDebugReportObjectTypeEXT
-        Vulkan.Types.Enum.VkDescriptorType
-        Vulkan.Types.Enum.VkFormat
-        Vulkan.Types.Enum.VkFormatFeatureFlagBits
         Vulkan.Types.Enum.VkFormatFeatureFlagBits2
         Vulkan.Types.Enum.VkGeometryFlagBitsKHR
         Vulkan.Types.Enum.VkGeometryFlagsKHR
         Vulkan.Types.Enum.VkGeometryInstanceFlagBitsKHR
         Vulkan.Types.Enum.VkGeometryInstanceFlagsKHR
         Vulkan.Types.Enum.VkGeometryTypeKHR
-        Vulkan.Types.Enum.VkIndexType
-        Vulkan.Types.Enum.VkInternalAllocationType
-        Vulkan.Types.Enum.VkObjectType
-        Vulkan.Types.Enum.VkPipelineStageFlagBits
-        Vulkan.Types.Enum.VkQueryType
-        Vulkan.Types.Enum.VkResult
-        Vulkan.Types.Enum.VkStructureType
-        Vulkan.Types.Enum.VkSystemAllocationScope
-        Vulkan.Types.FuncPointer.PFN_vkAllocationFunction
-        Vulkan.Types.FuncPointer.PFN_vkFreeFunction
-        Vulkan.Types.FuncPointer.PFN_vkInternalAllocationNotification
-        Vulkan.Types.FuncPointer.PFN_vkInternalFreeNotification
-        Vulkan.Types.FuncPointer.PFN_vkReallocationFunction
-        Vulkan.Types.Handle
         Vulkan.Types.Struct.VkAabbPositionsKHR
         Vulkan.Types.Struct.VkAccelerationStructureBuildGeometryInfoKHR
         Vulkan.Types.Struct.VkAccelerationStructureBuildRangeInfoKHR
@@ -4665,7 +3866,6 @@ library
         Vulkan.Types.Struct.VkAccelerationStructureGeometryTrianglesDataKHR
         Vulkan.Types.Struct.VkAccelerationStructureInstanceKHR
         Vulkan.Types.Struct.VkAccelerationStructureVersionInfoKHR
-        Vulkan.Types.Struct.VkAllocationCallbacks
         Vulkan.Types.Struct.VkCopyAccelerationStructureInfoKHR
         Vulkan.Types.Struct.VkCopyAccelerationStructureToMemoryInfoKHR
         Vulkan.Types.Struct.VkCopyMemoryToAccelerationStructureInfoKHR
@@ -4698,19 +3898,7 @@ library
         Vulkan.Ext.VK_KHR_android_surface
 
       other-modules:
-        Vulkan.Types.Base
         Vulkan.Types.Enum.VkAndroidSurfaceCreateFlagsKHR
-        Vulkan.Types.Enum.VkInternalAllocationType
-        Vulkan.Types.Enum.VkResult
-        Vulkan.Types.Enum.VkStructureType
-        Vulkan.Types.Enum.VkSystemAllocationScope
-        Vulkan.Types.FuncPointer.PFN_vkAllocationFunction
-        Vulkan.Types.FuncPointer.PFN_vkFreeFunction
-        Vulkan.Types.FuncPointer.PFN_vkInternalAllocationNotification
-        Vulkan.Types.FuncPointer.PFN_vkInternalFreeNotification
-        Vulkan.Types.FuncPointer.PFN_vkReallocationFunction
-        Vulkan.Types.Handle
-        Vulkan.Types.Struct.VkAllocationCallbacks
         Vulkan.Types.Struct.VkAndroidSurfaceCreateInfoKHR
         Vulkan.Types.Command.VkCreateAndroidSurfaceKHR
 
@@ -4719,11 +3907,6 @@ library
         Vulkan.Ext.VK_KHR_bind_memory2
 
       other-modules:
-        Vulkan.Types.Base
-        Vulkan.Types.Enum.VkImageCreateFlagBits
-        Vulkan.Types.Enum.VkResult
-        Vulkan.Types.Enum.VkStructureType
-        Vulkan.Types.Handle
         Vulkan.Types.Struct.VkBindBufferMemoryInfo
         Vulkan.Types.Struct.VkBindBufferMemoryInfoKHR
         Vulkan.Types.Struct.VkBindImageMemoryInfo
@@ -4736,13 +3919,7 @@ library
         Vulkan.Ext.VK_KHR_buffer_device_address
 
       other-modules:
-        Vulkan.Types.Base
-        Vulkan.Types.Enum.VkBufferCreateFlagBits
-        Vulkan.Types.Enum.VkBufferUsageFlagBits
         Vulkan.Types.Enum.VkMemoryAllocateFlagBits
-        Vulkan.Types.Enum.VkResult
-        Vulkan.Types.Enum.VkStructureType
-        Vulkan.Types.Handle
         Vulkan.Types.Struct.VkBufferDeviceAddressInfo
         Vulkan.Types.Struct.VkBufferDeviceAddressInfoKHR
         Vulkan.Types.Struct.VkBufferOpaqueCaptureAddressCreateInfoKHR
@@ -4759,12 +3936,6 @@ library
         Vulkan.Ext.VK_KHR_copy_commands2
 
       other-modules:
-        Vulkan.Types.Base
-        Vulkan.Types.Enum.VkFilter
-        Vulkan.Types.Enum.VkImageAspectFlags
-        Vulkan.Types.Enum.VkImageLayout
-        Vulkan.Types.Enum.VkStructureType
-        Vulkan.Types.Handle
         Vulkan.Types.Struct.VkBlitImageInfo2
         Vulkan.Types.Struct.VkBlitImageInfo2KHR
         Vulkan.Types.Struct.VkBufferCopy2
@@ -4779,15 +3950,12 @@ library
         Vulkan.Types.Struct.VkCopyImageInfo2KHR
         Vulkan.Types.Struct.VkCopyImageToBufferInfo2
         Vulkan.Types.Struct.VkCopyImageToBufferInfo2KHR
-        Vulkan.Types.Struct.VkExtent3D
         Vulkan.Types.Struct.VkImageBlit2
         Vulkan.Types.Struct.VkImageBlit2KHR
         Vulkan.Types.Struct.VkImageCopy2
         Vulkan.Types.Struct.VkImageCopy2KHR
         Vulkan.Types.Struct.VkImageResolve2
         Vulkan.Types.Struct.VkImageResolve2KHR
-        Vulkan.Types.Struct.VkImageSubresourceLayers
-        Vulkan.Types.Struct.VkOffset3D
         Vulkan.Types.Struct.VkResolveImageInfo2
         Vulkan.Types.Struct.VkResolveImageInfo2KHR
         Vulkan.Types.Command.VkCmdBlitImage2KHR
@@ -4802,40 +3970,10 @@ library
         Vulkan.Ext.VK_KHR_create_renderpass2
 
       other-modules:
-        Vulkan.Types.Enum.VkAccessFlags
-        Vulkan.Types.Enum.VkAttachmentDescriptionFlags
-        Vulkan.Types.Enum.VkAttachmentLoadOp
-        Vulkan.Types.Enum.VkAttachmentStoreOp
-        Vulkan.Types.Enum.VkDependencyFlags
-        Vulkan.Types.Enum.VkFormat
-        Vulkan.Types.Enum.VkImageAspectFlags
-        Vulkan.Types.Enum.VkImageLayout
-        Vulkan.Types.Enum.VkInternalAllocationType
-        Vulkan.Types.Enum.VkPipelineBindPoint
-        Vulkan.Types.Enum.VkPipelineStageFlags
-        Vulkan.Types.Enum.VkRenderPassCreateFlags
-        Vulkan.Types.Enum.VkResult
-        Vulkan.Types.Enum.VkSampleCountFlagBits
-        Vulkan.Types.Enum.VkStructureType
-        Vulkan.Types.Enum.VkSubpassContents
-        Vulkan.Types.Enum.VkSubpassDescriptionFlags
-        Vulkan.Types.Enum.VkSystemAllocationScope
-        Vulkan.Types.FuncPointer.PFN_vkAllocationFunction
-        Vulkan.Types.FuncPointer.PFN_vkFreeFunction
-        Vulkan.Types.FuncPointer.PFN_vkInternalAllocationNotification
-        Vulkan.Types.FuncPointer.PFN_vkInternalFreeNotification
-        Vulkan.Types.FuncPointer.PFN_vkReallocationFunction
-        Vulkan.Types.Handle
-        Vulkan.Types.Struct.VkAllocationCallbacks
         Vulkan.Types.Struct.VkAttachmentDescription2
         Vulkan.Types.Struct.VkAttachmentDescription2KHR
         Vulkan.Types.Struct.VkAttachmentReference2
         Vulkan.Types.Struct.VkAttachmentReference2KHR
-        Vulkan.Types.Struct.VkClearDepthStencilValue
-        Vulkan.Types.Struct.VkExtent2D
-        Vulkan.Types.Struct.VkOffset2D
-        Vulkan.Types.Struct.VkRect2D
-        Vulkan.Types.Struct.VkRenderPassBeginInfo
         Vulkan.Types.Struct.VkRenderPassCreateInfo2
         Vulkan.Types.Struct.VkRenderPassCreateInfo2KHR
         Vulkan.Types.Struct.VkSubpassBeginInfo
@@ -4846,8 +3984,6 @@ library
         Vulkan.Types.Struct.VkSubpassDescription2KHR
         Vulkan.Types.Struct.VkSubpassEndInfo
         Vulkan.Types.Struct.VkSubpassEndInfoKHR
-        Vulkan.Types.Union.VkClearColorValue
-        Vulkan.Types.Union.VkClearValue
         Vulkan.Types.Command.VkCmdBeginRenderPass2KHR
         Vulkan.Types.Command.VkCmdEndRenderPass2KHR
         Vulkan.Types.Command.VkCmdNextSubpass2KHR
@@ -4858,9 +3994,6 @@ library
         Vulkan.Ext.VK_KHR_dedicated_allocation
 
       other-modules:
-        Vulkan.Types.Base
-        Vulkan.Types.Enum.VkStructureType
-        Vulkan.Types.Handle
         Vulkan.Types.Struct.VkMemoryDedicatedAllocateInfoKHR
         Vulkan.Types.Struct.VkMemoryDedicatedRequirementsKHR
 
@@ -4869,17 +4002,6 @@ library
         Vulkan.Ext.VK_KHR_deferred_host_operations
 
       other-modules:
-        Vulkan.Types.Enum.VkInternalAllocationType
-        Vulkan.Types.Enum.VkObjectType
-        Vulkan.Types.Enum.VkResult
-        Vulkan.Types.Enum.VkSystemAllocationScope
-        Vulkan.Types.FuncPointer.PFN_vkAllocationFunction
-        Vulkan.Types.FuncPointer.PFN_vkFreeFunction
-        Vulkan.Types.FuncPointer.PFN_vkInternalAllocationNotification
-        Vulkan.Types.FuncPointer.PFN_vkInternalFreeNotification
-        Vulkan.Types.FuncPointer.PFN_vkReallocationFunction
-        Vulkan.Types.Handle
-        Vulkan.Types.Struct.VkAllocationCallbacks
         Vulkan.Types.Command.VkCreateDeferredOperationKHR
         Vulkan.Types.Command.VkDeferredOperationJoinKHR
         Vulkan.Types.Command.VkDestroyDeferredOperationKHR
@@ -4891,14 +4013,10 @@ library
         Vulkan.Ext.VK_KHR_depth_stencil_resolve
 
       other-modules:
-        Vulkan.Types.Base
-        Vulkan.Types.Enum.VkImageAspectFlags
-        Vulkan.Types.Enum.VkImageLayout
         Vulkan.Types.Enum.VkResolveModeFlagBits
         Vulkan.Types.Enum.VkResolveModeFlagBitsKHR
         Vulkan.Types.Enum.VkResolveModeFlags
         Vulkan.Types.Enum.VkResolveModeFlagsKHR
-        Vulkan.Types.Enum.VkStructureType
         Vulkan.Types.Struct.VkAttachmentReference2
         Vulkan.Types.Struct.VkPhysicalDeviceDepthStencilResolvePropertiesKHR
         Vulkan.Types.Struct.VkSubpassDescriptionDepthStencilResolveKHR
@@ -4909,24 +4027,10 @@ library
 
       other-modules:
         Vulkan.Types.Enum.VkDebugReportObjectTypeEXT
-        Vulkan.Types.Enum.VkDescriptorType
         Vulkan.Types.Enum.VkDescriptorUpdateTemplateCreateFlags
         Vulkan.Types.Enum.VkDescriptorUpdateTemplateCreateFlagsKHR
         Vulkan.Types.Enum.VkDescriptorUpdateTemplateType
         Vulkan.Types.Enum.VkDescriptorUpdateTemplateTypeKHR
-        Vulkan.Types.Enum.VkInternalAllocationType
-        Vulkan.Types.Enum.VkObjectType
-        Vulkan.Types.Enum.VkPipelineBindPoint
-        Vulkan.Types.Enum.VkResult
-        Vulkan.Types.Enum.VkStructureType
-        Vulkan.Types.Enum.VkSystemAllocationScope
-        Vulkan.Types.FuncPointer.PFN_vkAllocationFunction
-        Vulkan.Types.FuncPointer.PFN_vkFreeFunction
-        Vulkan.Types.FuncPointer.PFN_vkInternalAllocationNotification
-        Vulkan.Types.FuncPointer.PFN_vkInternalFreeNotification
-        Vulkan.Types.FuncPointer.PFN_vkReallocationFunction
-        Vulkan.Types.Handle
-        Vulkan.Types.Struct.VkAllocationCallbacks
         Vulkan.Types.Struct.VkDescriptorUpdateTemplateCreateInfo
         Vulkan.Types.Struct.VkDescriptorUpdateTemplateCreateInfoKHR
         Vulkan.Types.Struct.VkDescriptorUpdateTemplateEntry
@@ -4941,10 +4045,8 @@ library
         Vulkan.Ext.VK_KHR_device_group
 
       other-modules:
-        Vulkan.Types.Enum.VkDependencyFlagBits
         Vulkan.Types.Enum.VkDeviceGroupPresentModeFlagBitsKHR
         Vulkan.Types.Enum.VkDeviceGroupPresentModeFlagsKHR
-        Vulkan.Types.Enum.VkImageCreateFlagBits
         Vulkan.Types.Enum.VkMemoryAllocateFlagBits
         Vulkan.Types.Enum.VkMemoryAllocateFlagBitsKHR
         Vulkan.Types.Enum.VkMemoryAllocateFlags
@@ -4953,11 +4055,7 @@ library
         Vulkan.Types.Enum.VkPeerMemoryFeatureFlagBitsKHR
         Vulkan.Types.Enum.VkPeerMemoryFeatureFlags
         Vulkan.Types.Enum.VkPeerMemoryFeatureFlagsKHR
-        Vulkan.Types.Enum.VkPipelineCreateFlagBits
-        Vulkan.Types.Enum.VkResult
-        Vulkan.Types.Enum.VkStructureType
         Vulkan.Types.Enum.VkSwapchainCreateFlagBitsKHR
-        Vulkan.Types.Handle
         Vulkan.Types.Struct.VkAcquireNextImageInfoKHR
         Vulkan.Types.Struct.VkBindBufferMemoryDeviceGroupInfoKHR
         Vulkan.Types.Struct.VkBindImageMemoryDeviceGroupInfoKHR
@@ -4969,11 +4067,8 @@ library
         Vulkan.Types.Struct.VkDeviceGroupRenderPassBeginInfoKHR
         Vulkan.Types.Struct.VkDeviceGroupSubmitInfoKHR
         Vulkan.Types.Struct.VkDeviceGroupSwapchainCreateInfoKHR
-        Vulkan.Types.Struct.VkExtent2D
         Vulkan.Types.Struct.VkImageSwapchainCreateInfoKHR
         Vulkan.Types.Struct.VkMemoryAllocateFlagsInfoKHR
-        Vulkan.Types.Struct.VkOffset2D
-        Vulkan.Types.Struct.VkRect2D
         Vulkan.Types.Command.VkAcquireNextImage2KHR
         Vulkan.Types.Command.VkCmdDispatchBaseKHR
         Vulkan.Types.Command.VkCmdSetDeviceMaskKHR
@@ -4987,11 +4082,6 @@ library
         Vulkan.Ext.VK_KHR_device_group_creation
 
       other-modules:
-        Vulkan.Types.Base
-        Vulkan.Types.Enum.VkMemoryHeapFlagBits
-        Vulkan.Types.Enum.VkResult
-        Vulkan.Types.Enum.VkStructureType
-        Vulkan.Types.Handle
         Vulkan.Types.Struct.VkDeviceGroupDeviceCreateInfoKHR
         Vulkan.Types.Struct.VkPhysicalDeviceGroupProperties
         Vulkan.Types.Struct.VkPhysicalDeviceGroupPropertiesKHR
@@ -5002,25 +4092,12 @@ library
         Vulkan.Ext.VK_KHR_display
 
       other-modules:
-        Vulkan.Types.Base
         Vulkan.Types.Enum.VkDisplayModeCreateFlagsKHR
         Vulkan.Types.Enum.VkDisplayPlaneAlphaFlagBitsKHR
         Vulkan.Types.Enum.VkDisplayPlaneAlphaFlagsKHR
         Vulkan.Types.Enum.VkDisplaySurfaceCreateFlagsKHR
-        Vulkan.Types.Enum.VkInternalAllocationType
-        Vulkan.Types.Enum.VkObjectType
-        Vulkan.Types.Enum.VkResult
-        Vulkan.Types.Enum.VkStructureType
         Vulkan.Types.Enum.VkSurfaceTransformFlagBitsKHR
         Vulkan.Types.Enum.VkSurfaceTransformFlagsKHR
-        Vulkan.Types.Enum.VkSystemAllocationScope
-        Vulkan.Types.FuncPointer.PFN_vkAllocationFunction
-        Vulkan.Types.FuncPointer.PFN_vkFreeFunction
-        Vulkan.Types.FuncPointer.PFN_vkInternalAllocationNotification
-        Vulkan.Types.FuncPointer.PFN_vkInternalFreeNotification
-        Vulkan.Types.FuncPointer.PFN_vkReallocationFunction
-        Vulkan.Types.Handle
-        Vulkan.Types.Struct.VkAllocationCallbacks
         Vulkan.Types.Struct.VkDisplayModeCreateInfoKHR
         Vulkan.Types.Struct.VkDisplayModeParametersKHR
         Vulkan.Types.Struct.VkDisplayModePropertiesKHR
@@ -5028,8 +4105,6 @@ library
         Vulkan.Types.Struct.VkDisplayPlanePropertiesKHR
         Vulkan.Types.Struct.VkDisplayPropertiesKHR
         Vulkan.Types.Struct.VkDisplaySurfaceCreateInfoKHR
-        Vulkan.Types.Struct.VkExtent2D
-        Vulkan.Types.Struct.VkOffset2D
         Vulkan.Types.Command.VkCreateDisplayModeKHR
         Vulkan.Types.Command.VkCreateDisplayPlaneSurfaceKHR
         Vulkan.Types.Command.VkGetDisplayModePropertiesKHR
@@ -5043,30 +4118,12 @@ library
         Vulkan.Ext.VK_KHR_display_swapchain
 
       other-modules:
-        Vulkan.Types.Base
         Vulkan.Types.Enum.VkColorSpaceKHR
         Vulkan.Types.Enum.VkCompositeAlphaFlagBitsKHR
-        Vulkan.Types.Enum.VkFormat
-        Vulkan.Types.Enum.VkImageUsageFlags
-        Vulkan.Types.Enum.VkInternalAllocationType
         Vulkan.Types.Enum.VkPresentModeKHR
-        Vulkan.Types.Enum.VkResult
-        Vulkan.Types.Enum.VkSharingMode
-        Vulkan.Types.Enum.VkStructureType
         Vulkan.Types.Enum.VkSurfaceTransformFlagBitsKHR
         Vulkan.Types.Enum.VkSwapchainCreateFlagsKHR
-        Vulkan.Types.Enum.VkSystemAllocationScope
-        Vulkan.Types.FuncPointer.PFN_vkAllocationFunction
-        Vulkan.Types.FuncPointer.PFN_vkFreeFunction
-        Vulkan.Types.FuncPointer.PFN_vkInternalAllocationNotification
-        Vulkan.Types.FuncPointer.PFN_vkInternalFreeNotification
-        Vulkan.Types.FuncPointer.PFN_vkReallocationFunction
-        Vulkan.Types.Handle
-        Vulkan.Types.Struct.VkAllocationCallbacks
         Vulkan.Types.Struct.VkDisplayPresentInfoKHR
-        Vulkan.Types.Struct.VkExtent2D
-        Vulkan.Types.Struct.VkOffset2D
-        Vulkan.Types.Struct.VkRect2D
         Vulkan.Types.Struct.VkSwapchainCreateInfoKHR
         Vulkan.Types.Command.VkCreateSharedSwapchainsKHR
 
@@ -5075,8 +4132,6 @@ library
         Vulkan.Ext.VK_KHR_draw_indirect_count
 
       other-modules:
-        Vulkan.Types.Base
-        Vulkan.Types.Handle
         Vulkan.Types.Command.VkCmdDrawIndexedIndirectCountKHR
         Vulkan.Types.Command.VkCmdDrawIndirectCountKHR
 
@@ -5087,7 +4142,6 @@ library
       other-modules:
         Vulkan.Types.Enum.VkDriverId
         Vulkan.Types.Enum.VkDriverIdKHR
-        Vulkan.Types.Enum.VkStructureType
         Vulkan.Types.Struct.VkConformanceVersion
         Vulkan.Types.Struct.VkConformanceVersionKHR
         Vulkan.Types.Struct.VkPhysicalDeviceDriverPropertiesKHR
@@ -5097,37 +4151,22 @@ library
         Vulkan.Ext.VK_KHR_dynamic_rendering
 
       other-modules:
-        Vulkan.Types.Base
-        Vulkan.Types.Enum.VkAttachmentLoadOp
-        Vulkan.Types.Enum.VkAttachmentStoreOp
-        Vulkan.Types.Enum.VkFormat
-        Vulkan.Types.Enum.VkImageLayout
-        Vulkan.Types.Enum.VkPipelineCreateFlagBits
         Vulkan.Types.Enum.VkRenderingFlagBitsKHR
         Vulkan.Types.Enum.VkRenderingFlags
         Vulkan.Types.Enum.VkRenderingFlagsKHR
         Vulkan.Types.Enum.VkResolveModeFlagBits
-        Vulkan.Types.Enum.VkSampleCountFlagBits
-        Vulkan.Types.Enum.VkStructureType
-        Vulkan.Types.Handle
         Vulkan.Types.Struct.VkAttachmentSampleCountInfoAMD
         Vulkan.Types.Struct.VkAttachmentSampleCountInfoNV
-        Vulkan.Types.Struct.VkClearDepthStencilValue
         Vulkan.Types.Struct.VkCommandBufferInheritanceRenderingInfoKHR
-        Vulkan.Types.Struct.VkExtent2D
         Vulkan.Types.Struct.VkMultiviewPerViewAttributesInfoNVX
-        Vulkan.Types.Struct.VkOffset2D
         Vulkan.Types.Struct.VkPhysicalDeviceDynamicRenderingFeaturesKHR
         Vulkan.Types.Struct.VkPipelineRenderingCreateInfoKHR
-        Vulkan.Types.Struct.VkRect2D
         Vulkan.Types.Struct.VkRenderingAttachmentInfo
         Vulkan.Types.Struct.VkRenderingAttachmentInfoKHR
         Vulkan.Types.Struct.VkRenderingFragmentDensityMapAttachmentInfoEXT
         Vulkan.Types.Struct.VkRenderingFragmentShadingRateAttachmentInfoKHR
         Vulkan.Types.Struct.VkRenderingInfo
         Vulkan.Types.Struct.VkRenderingInfoKHR
-        Vulkan.Types.Union.VkClearColorValue
-        Vulkan.Types.Union.VkClearValue
         Vulkan.Types.Command.VkCmdBeginRenderingKHR
         Vulkan.Types.Command.VkCmdEndRenderingKHR
 
@@ -5140,7 +4179,6 @@ library
         Vulkan.Types.Enum.VkFenceImportFlagBits
         Vulkan.Types.Enum.VkFenceImportFlagBitsKHR
         Vulkan.Types.Enum.VkFenceImportFlagsKHR
-        Vulkan.Types.Enum.VkStructureType
         Vulkan.Types.Struct.VkExportFenceCreateInfoKHR
 
     if flag (VK_KHR_external_fence_capabilities)
@@ -5148,7 +4186,6 @@ library
         Vulkan.Ext.VK_KHR_external_fence_capabilities
 
       other-modules:
-        Vulkan.Types.Base
         Vulkan.Types.Enum.VkExternalFenceFeatureFlagBits
         Vulkan.Types.Enum.VkExternalFenceFeatureFlagBitsKHR
         Vulkan.Types.Enum.VkExternalFenceFeatureFlags
@@ -5157,8 +4194,6 @@ library
         Vulkan.Types.Enum.VkExternalFenceHandleTypeFlagBitsKHR
         Vulkan.Types.Enum.VkExternalFenceHandleTypeFlags
         Vulkan.Types.Enum.VkExternalFenceHandleTypeFlagsKHR
-        Vulkan.Types.Enum.VkStructureType
-        Vulkan.Types.Handle
         Vulkan.Types.Struct.VkExternalFenceProperties
         Vulkan.Types.Struct.VkExternalFencePropertiesKHR
         Vulkan.Types.Struct.VkPhysicalDeviceExternalFenceInfo
@@ -5173,9 +4208,6 @@ library
       other-modules:
         Vulkan.Types.Enum.VkExternalFenceHandleTypeFlagBits
         Vulkan.Types.Enum.VkFenceImportFlags
-        Vulkan.Types.Enum.VkResult
-        Vulkan.Types.Enum.VkStructureType
-        Vulkan.Types.Handle
         Vulkan.Types.Struct.VkFenceGetFdInfoKHR
         Vulkan.Types.Struct.VkImportFenceFdInfoKHR
         Vulkan.Types.Command.VkGetFenceFdKHR
@@ -5189,9 +4221,6 @@ library
         Vulkan.Types.Protected
         Vulkan.Types.Enum.VkExternalFenceHandleTypeFlagBits
         Vulkan.Types.Enum.VkFenceImportFlags
-        Vulkan.Types.Enum.VkResult
-        Vulkan.Types.Enum.VkStructureType
-        Vulkan.Types.Handle
         Vulkan.Types.Struct.VkExportFenceWin32HandleInfoKHR
         Vulkan.Types.Struct.VkFenceGetWin32HandleInfoKHR
         Vulkan.Types.Struct.VkImportFenceWin32HandleInfoKHR
@@ -5204,8 +4233,6 @@ library
 
       other-modules:
         Vulkan.Types.Enum.VkExternalMemoryHandleTypeFlags
-        Vulkan.Types.Enum.VkResult
-        Vulkan.Types.Enum.VkStructureType
         Vulkan.Types.Struct.VkExportMemoryAllocateInfoKHR
         Vulkan.Types.Struct.VkExternalMemoryBufferCreateInfoKHR
         Vulkan.Types.Struct.VkExternalMemoryImageCreateInfoKHR
@@ -5215,9 +4242,6 @@ library
         Vulkan.Ext.VK_KHR_external_memory_capabilities
 
       other-modules:
-        Vulkan.Types.Base
-        Vulkan.Types.Enum.VkBufferCreateFlags
-        Vulkan.Types.Enum.VkBufferUsageFlags
         Vulkan.Types.Enum.VkExternalMemoryFeatureFlagBits
         Vulkan.Types.Enum.VkExternalMemoryFeatureFlagBitsKHR
         Vulkan.Types.Enum.VkExternalMemoryFeatureFlags
@@ -5226,8 +4250,6 @@ library
         Vulkan.Types.Enum.VkExternalMemoryHandleTypeFlagBitsKHR
         Vulkan.Types.Enum.VkExternalMemoryHandleTypeFlags
         Vulkan.Types.Enum.VkExternalMemoryHandleTypeFlagsKHR
-        Vulkan.Types.Enum.VkStructureType
-        Vulkan.Types.Handle
         Vulkan.Types.Struct.VkExternalBufferProperties
         Vulkan.Types.Struct.VkExternalBufferPropertiesKHR
         Vulkan.Types.Struct.VkExternalImageFormatPropertiesKHR
@@ -5245,9 +4267,6 @@ library
 
       other-modules:
         Vulkan.Types.Enum.VkExternalMemoryHandleTypeFlagBits
-        Vulkan.Types.Enum.VkResult
-        Vulkan.Types.Enum.VkStructureType
-        Vulkan.Types.Handle
         Vulkan.Types.Struct.VkImportMemoryFdInfoKHR
         Vulkan.Types.Struct.VkMemoryFdPropertiesKHR
         Vulkan.Types.Struct.VkMemoryGetFdInfoKHR
@@ -5261,9 +4280,6 @@ library
       other-modules:
         Vulkan.Types.Protected
         Vulkan.Types.Enum.VkExternalMemoryHandleTypeFlagBits
-        Vulkan.Types.Enum.VkResult
-        Vulkan.Types.Enum.VkStructureType
-        Vulkan.Types.Handle
         Vulkan.Types.Struct.VkExportMemoryWin32HandleInfoKHR
         Vulkan.Types.Struct.VkImportMemoryWin32HandleInfoKHR
         Vulkan.Types.Struct.VkMemoryGetWin32HandleInfoKHR
@@ -5280,7 +4296,6 @@ library
         Vulkan.Types.Enum.VkSemaphoreImportFlagBits
         Vulkan.Types.Enum.VkSemaphoreImportFlagBitsKHR
         Vulkan.Types.Enum.VkSemaphoreImportFlagsKHR
-        Vulkan.Types.Enum.VkStructureType
         Vulkan.Types.Struct.VkExportSemaphoreCreateInfoKHR
 
     if flag (VK_KHR_external_semaphore_capabilities)
@@ -5288,7 +4303,6 @@ library
         Vulkan.Ext.VK_KHR_external_semaphore_capabilities
 
       other-modules:
-        Vulkan.Types.Base
         Vulkan.Types.Enum.VkExternalSemaphoreFeatureFlagBits
         Vulkan.Types.Enum.VkExternalSemaphoreFeatureFlagBitsKHR
         Vulkan.Types.Enum.VkExternalSemaphoreFeatureFlags
@@ -5297,8 +4311,6 @@ library
         Vulkan.Types.Enum.VkExternalSemaphoreHandleTypeFlagBitsKHR
         Vulkan.Types.Enum.VkExternalSemaphoreHandleTypeFlags
         Vulkan.Types.Enum.VkExternalSemaphoreHandleTypeFlagsKHR
-        Vulkan.Types.Enum.VkStructureType
-        Vulkan.Types.Handle
         Vulkan.Types.Struct.VkExternalSemaphoreProperties
         Vulkan.Types.Struct.VkExternalSemaphorePropertiesKHR
         Vulkan.Types.Struct.VkPhysicalDeviceExternalSemaphoreInfo
@@ -5312,10 +4324,7 @@ library
 
       other-modules:
         Vulkan.Types.Enum.VkExternalSemaphoreHandleTypeFlagBits
-        Vulkan.Types.Enum.VkResult
         Vulkan.Types.Enum.VkSemaphoreImportFlags
-        Vulkan.Types.Enum.VkStructureType
-        Vulkan.Types.Handle
         Vulkan.Types.Struct.VkImportSemaphoreFdInfoKHR
         Vulkan.Types.Struct.VkSemaphoreGetFdInfoKHR
         Vulkan.Types.Command.VkGetSemaphoreFdKHR
@@ -5328,10 +4337,7 @@ library
       other-modules:
         Vulkan.Types.Protected
         Vulkan.Types.Enum.VkExternalSemaphoreHandleTypeFlagBits
-        Vulkan.Types.Enum.VkResult
         Vulkan.Types.Enum.VkSemaphoreImportFlags
-        Vulkan.Types.Enum.VkStructureType
-        Vulkan.Types.Handle
         Vulkan.Types.Struct.VkD3D12FenceSubmitInfoKHR
         Vulkan.Types.Struct.VkExportSemaphoreWin32HandleInfoKHR
         Vulkan.Types.Struct.VkImportSemaphoreWin32HandleInfoKHR
@@ -5347,7 +4353,6 @@ library
         Vulkan.Types.Enum.VkFormatFeatureFlagBits2KHR
         Vulkan.Types.Enum.VkFormatFeatureFlags2
         Vulkan.Types.Enum.VkFormatFeatureFlags2KHR
-        Vulkan.Types.Enum.VkStructureType
         Vulkan.Types.Struct.VkFormatProperties3KHR
 
     if flag (VK_KHR_fragment_shader_barycentric)
@@ -5355,8 +4360,6 @@ library
         Vulkan.Ext.VK_KHR_fragment_shader_barycentric
 
       other-modules:
-        Vulkan.Types.Base
-        Vulkan.Types.Enum.VkStructureType
         Vulkan.Types.Struct.VkPhysicalDeviceFragmentShaderBarycentricFeaturesKHR
         Vulkan.Types.Struct.VkPhysicalDeviceFragmentShaderBarycentricPropertiesKHR
 
@@ -5365,23 +4368,9 @@ library
         Vulkan.Ext.VK_KHR_fragment_shading_rate
 
       other-modules:
-        Vulkan.Types.Base
-        Vulkan.Types.Enum.VkAccessFlagBits
-        Vulkan.Types.Enum.VkDynamicState
-        Vulkan.Types.Enum.VkFormatFeatureFlagBits
         Vulkan.Types.Enum.VkFormatFeatureFlagBits2
         Vulkan.Types.Enum.VkFragmentShadingRateCombinerOpKHR
-        Vulkan.Types.Enum.VkImageAspectFlags
-        Vulkan.Types.Enum.VkImageLayout
-        Vulkan.Types.Enum.VkImageUsageFlagBits
-        Vulkan.Types.Enum.VkPipelineStageFlagBits
-        Vulkan.Types.Enum.VkResult
-        Vulkan.Types.Enum.VkSampleCountFlagBits
-        Vulkan.Types.Enum.VkSampleCountFlags
-        Vulkan.Types.Enum.VkStructureType
-        Vulkan.Types.Handle
         Vulkan.Types.Struct.VkAttachmentReference2
-        Vulkan.Types.Struct.VkExtent2D
         Vulkan.Types.Struct.VkFragmentShadingRateAttachmentInfoKHR
         Vulkan.Types.Struct.VkPhysicalDeviceFragmentShadingRateFeaturesKHR
         Vulkan.Types.Struct.VkPhysicalDeviceFragmentShadingRateKHR
@@ -5395,12 +4384,8 @@ library
         Vulkan.Ext.VK_KHR_get_display_properties2
 
       other-modules:
-        Vulkan.Types.Base
         Vulkan.Types.Enum.VkDisplayPlaneAlphaFlagsKHR
-        Vulkan.Types.Enum.VkResult
-        Vulkan.Types.Enum.VkStructureType
         Vulkan.Types.Enum.VkSurfaceTransformFlagsKHR
-        Vulkan.Types.Handle
         Vulkan.Types.Struct.VkDisplayModeParametersKHR
         Vulkan.Types.Struct.VkDisplayModeProperties2KHR
         Vulkan.Types.Struct.VkDisplayModePropertiesKHR
@@ -5411,8 +4396,6 @@ library
         Vulkan.Types.Struct.VkDisplayPlanePropertiesKHR
         Vulkan.Types.Struct.VkDisplayProperties2KHR
         Vulkan.Types.Struct.VkDisplayPropertiesKHR
-        Vulkan.Types.Struct.VkExtent2D
-        Vulkan.Types.Struct.VkOffset2D
         Vulkan.Types.Command.VkGetDisplayModeProperties2KHR
         Vulkan.Types.Command.VkGetDisplayPlaneCapabilities2KHR
         Vulkan.Types.Command.VkGetPhysicalDeviceDisplayPlaneProperties2KHR
@@ -5423,23 +4406,14 @@ library
         Vulkan.Ext.VK_KHR_get_memory_requirements2
 
       other-modules:
-        Vulkan.Types.Base
-        Vulkan.Types.Enum.VkImageAspectFlags
-        Vulkan.Types.Enum.VkSparseImageFormatFlags
-        Vulkan.Types.Enum.VkStructureType
-        Vulkan.Types.Handle
         Vulkan.Types.Struct.VkBufferMemoryRequirementsInfo2
         Vulkan.Types.Struct.VkBufferMemoryRequirementsInfo2KHR
-        Vulkan.Types.Struct.VkExtent3D
         Vulkan.Types.Struct.VkImageMemoryRequirementsInfo2
         Vulkan.Types.Struct.VkImageMemoryRequirementsInfo2KHR
         Vulkan.Types.Struct.VkImageSparseMemoryRequirementsInfo2
         Vulkan.Types.Struct.VkImageSparseMemoryRequirementsInfo2KHR
-        Vulkan.Types.Struct.VkMemoryRequirements
         Vulkan.Types.Struct.VkMemoryRequirements2
         Vulkan.Types.Struct.VkMemoryRequirements2KHR
-        Vulkan.Types.Struct.VkSparseImageFormatProperties
-        Vulkan.Types.Struct.VkSparseImageMemoryRequirements
         Vulkan.Types.Struct.VkSparseImageMemoryRequirements2
         Vulkan.Types.Struct.VkSparseImageMemoryRequirements2KHR
         Vulkan.Types.Command.VkGetBufferMemoryRequirements2KHR
@@ -5451,52 +4425,22 @@ library
         Vulkan.Ext.VK_KHR_get_physical_device_properties2
 
       other-modules:
-        Vulkan.Types.Base
-        Vulkan.Types.Enum.VkFormat
-        Vulkan.Types.Enum.VkFormatFeatureFlags
-        Vulkan.Types.Enum.VkImageAspectFlags
-        Vulkan.Types.Enum.VkImageCreateFlags
-        Vulkan.Types.Enum.VkImageTiling
-        Vulkan.Types.Enum.VkImageType
-        Vulkan.Types.Enum.VkImageUsageFlags
-        Vulkan.Types.Enum.VkMemoryHeapFlags
-        Vulkan.Types.Enum.VkMemoryPropertyFlags
-        Vulkan.Types.Enum.VkPhysicalDeviceType
-        Vulkan.Types.Enum.VkQueueFlags
-        Vulkan.Types.Enum.VkResult
-        Vulkan.Types.Enum.VkSampleCountFlagBits
-        Vulkan.Types.Enum.VkSampleCountFlags
-        Vulkan.Types.Enum.VkSparseImageFormatFlags
-        Vulkan.Types.Enum.VkStructureType
-        Vulkan.Types.Handle
-        Vulkan.Types.Struct.VkExtent3D
-        Vulkan.Types.Struct.VkFormatProperties
         Vulkan.Types.Struct.VkFormatProperties2
         Vulkan.Types.Struct.VkFormatProperties2KHR
-        Vulkan.Types.Struct.VkImageFormatProperties
         Vulkan.Types.Struct.VkImageFormatProperties2
         Vulkan.Types.Struct.VkImageFormatProperties2KHR
-        Vulkan.Types.Struct.VkMemoryHeap
-        Vulkan.Types.Struct.VkMemoryType
-        Vulkan.Types.Struct.VkPhysicalDeviceFeatures
         Vulkan.Types.Struct.VkPhysicalDeviceFeatures2
         Vulkan.Types.Struct.VkPhysicalDeviceFeatures2KHR
         Vulkan.Types.Struct.VkPhysicalDeviceImageFormatInfo2
         Vulkan.Types.Struct.VkPhysicalDeviceImageFormatInfo2KHR
-        Vulkan.Types.Struct.VkPhysicalDeviceLimits
-        Vulkan.Types.Struct.VkPhysicalDeviceMemoryProperties
         Vulkan.Types.Struct.VkPhysicalDeviceMemoryProperties2
         Vulkan.Types.Struct.VkPhysicalDeviceMemoryProperties2KHR
-        Vulkan.Types.Struct.VkPhysicalDeviceProperties
         Vulkan.Types.Struct.VkPhysicalDeviceProperties2
         Vulkan.Types.Struct.VkPhysicalDeviceProperties2KHR
         Vulkan.Types.Struct.VkPhysicalDeviceSparseImageFormatInfo2
         Vulkan.Types.Struct.VkPhysicalDeviceSparseImageFormatInfo2KHR
-        Vulkan.Types.Struct.VkPhysicalDeviceSparseProperties
-        Vulkan.Types.Struct.VkQueueFamilyProperties
         Vulkan.Types.Struct.VkQueueFamilyProperties2
         Vulkan.Types.Struct.VkQueueFamilyProperties2KHR
-        Vulkan.Types.Struct.VkSparseImageFormatProperties
         Vulkan.Types.Struct.VkSparseImageFormatProperties2
         Vulkan.Types.Struct.VkSparseImageFormatProperties2KHR
         Vulkan.Types.Command.VkGetPhysicalDeviceFeatures2KHR
@@ -5514,14 +4458,8 @@ library
       other-modules:
         Vulkan.Types.Enum.VkColorSpaceKHR
         Vulkan.Types.Enum.VkCompositeAlphaFlagsKHR
-        Vulkan.Types.Enum.VkFormat
-        Vulkan.Types.Enum.VkImageUsageFlags
-        Vulkan.Types.Enum.VkResult
-        Vulkan.Types.Enum.VkStructureType
         Vulkan.Types.Enum.VkSurfaceTransformFlagBitsKHR
         Vulkan.Types.Enum.VkSurfaceTransformFlagsKHR
-        Vulkan.Types.Handle
-        Vulkan.Types.Struct.VkExtent2D
         Vulkan.Types.Struct.VkPhysicalDeviceSurfaceInfo2KHR
         Vulkan.Types.Struct.VkSurfaceCapabilities2KHR
         Vulkan.Types.Struct.VkSurfaceCapabilitiesKHR
@@ -5535,10 +4473,7 @@ library
         Vulkan.Ext.VK_KHR_global_priority
 
       other-modules:
-        Vulkan.Types.Base
         Vulkan.Types.Enum.VkQueueGlobalPriorityKHR
-        Vulkan.Types.Enum.VkResult
-        Vulkan.Types.Enum.VkStructureType
         Vulkan.Types.Struct.VkDeviceQueueGlobalPriorityCreateInfoKHR
         Vulkan.Types.Struct.VkPhysicalDeviceGlobalPriorityQueryFeaturesKHR
         Vulkan.Types.Struct.VkQueueFamilyGlobalPriorityPropertiesKHR
@@ -5548,8 +4483,6 @@ library
         Vulkan.Ext.VK_KHR_image_format_list
 
       other-modules:
-        Vulkan.Types.Enum.VkFormat
-        Vulkan.Types.Enum.VkStructureType
         Vulkan.Types.Struct.VkImageFormatListCreateInfoKHR
 
     if flag (VK_KHR_imageless_framebuffer)
@@ -5557,13 +4490,6 @@ library
         Vulkan.Ext.VK_KHR_imageless_framebuffer
 
       other-modules:
-        Vulkan.Types.Base
-        Vulkan.Types.Enum.VkFormat
-        Vulkan.Types.Enum.VkFramebufferCreateFlagBits
-        Vulkan.Types.Enum.VkImageCreateFlags
-        Vulkan.Types.Enum.VkImageUsageFlags
-        Vulkan.Types.Enum.VkStructureType
-        Vulkan.Types.Handle
         Vulkan.Types.Struct.VkFramebufferAttachmentImageInfo
         Vulkan.Types.Struct.VkFramebufferAttachmentImageInfoKHR
         Vulkan.Types.Struct.VkFramebufferAttachmentsCreateInfoKHR
@@ -5575,9 +4501,6 @@ library
         Vulkan.Ext.VK_KHR_incremental_present
 
       other-modules:
-        Vulkan.Types.Enum.VkStructureType
-        Vulkan.Types.Struct.VkExtent2D
-        Vulkan.Types.Struct.VkOffset2D
         Vulkan.Types.Struct.VkPresentRegionKHR
         Vulkan.Types.Struct.VkPresentRegionsKHR
         Vulkan.Types.Struct.VkRectLayerKHR
@@ -5589,10 +4512,6 @@ library
       other-modules:
         Vulkan.Types.Enum.VkCommandPoolTrimFlags
         Vulkan.Types.Enum.VkCommandPoolTrimFlagsKHR
-        Vulkan.Types.Enum.VkFormatFeatureFlagBits
-        Vulkan.Types.Enum.VkImageCreateFlagBits
-        Vulkan.Types.Enum.VkResult
-        Vulkan.Types.Handle
         Vulkan.Types.Command.VkTrimCommandPoolKHR
 
     if flag (VK_KHR_maintenance2)
@@ -5600,13 +4519,8 @@ library
         Vulkan.Ext.VK_KHR_maintenance2
 
       other-modules:
-        Vulkan.Types.Enum.VkImageAspectFlags
-        Vulkan.Types.Enum.VkImageCreateFlagBits
-        Vulkan.Types.Enum.VkImageLayout
-        Vulkan.Types.Enum.VkImageUsageFlags
         Vulkan.Types.Enum.VkPointClippingBehavior
         Vulkan.Types.Enum.VkPointClippingBehaviorKHR
-        Vulkan.Types.Enum.VkStructureType
         Vulkan.Types.Enum.VkTessellationDomainOrigin
         Vulkan.Types.Enum.VkTessellationDomainOriginKHR
         Vulkan.Types.Struct.VkImageViewUsageCreateInfoKHR
@@ -5621,14 +4535,6 @@ library
         Vulkan.Ext.VK_KHR_maintenance3
 
       other-modules:
-        Vulkan.Types.Base
-        Vulkan.Types.Enum.VkDescriptorSetLayoutCreateFlags
-        Vulkan.Types.Enum.VkDescriptorType
-        Vulkan.Types.Enum.VkShaderStageFlags
-        Vulkan.Types.Enum.VkStructureType
-        Vulkan.Types.Handle
-        Vulkan.Types.Struct.VkDescriptorSetLayoutBinding
-        Vulkan.Types.Struct.VkDescriptorSetLayoutCreateInfo
         Vulkan.Types.Struct.VkDescriptorSetLayoutSupport
         Vulkan.Types.Struct.VkDescriptorSetLayoutSupportKHR
         Vulkan.Types.Struct.VkPhysicalDeviceMaintenance3PropertiesKHR
@@ -5639,35 +4545,13 @@ library
         Vulkan.Ext.VK_KHR_maintenance4
 
       other-modules:
-        Vulkan.Types.Base
-        Vulkan.Types.Enum.VkBufferCreateFlags
-        Vulkan.Types.Enum.VkBufferUsageFlags
-        Vulkan.Types.Enum.VkFormat
-        Vulkan.Types.Enum.VkImageAspectFlagBits
-        Vulkan.Types.Enum.VkImageAspectFlags
-        Vulkan.Types.Enum.VkImageCreateFlags
-        Vulkan.Types.Enum.VkImageLayout
-        Vulkan.Types.Enum.VkImageTiling
-        Vulkan.Types.Enum.VkImageType
-        Vulkan.Types.Enum.VkImageUsageFlags
-        Vulkan.Types.Enum.VkSampleCountFlagBits
-        Vulkan.Types.Enum.VkSharingMode
-        Vulkan.Types.Enum.VkSparseImageFormatFlags
-        Vulkan.Types.Enum.VkStructureType
-        Vulkan.Types.Handle
-        Vulkan.Types.Struct.VkBufferCreateInfo
         Vulkan.Types.Struct.VkDeviceBufferMemoryRequirements
         Vulkan.Types.Struct.VkDeviceBufferMemoryRequirementsKHR
         Vulkan.Types.Struct.VkDeviceImageMemoryRequirements
         Vulkan.Types.Struct.VkDeviceImageMemoryRequirementsKHR
-        Vulkan.Types.Struct.VkExtent3D
-        Vulkan.Types.Struct.VkImageCreateInfo
-        Vulkan.Types.Struct.VkMemoryRequirements
         Vulkan.Types.Struct.VkMemoryRequirements2
         Vulkan.Types.Struct.VkPhysicalDeviceMaintenance4FeaturesKHR
         Vulkan.Types.Struct.VkPhysicalDeviceMaintenance4PropertiesKHR
-        Vulkan.Types.Struct.VkSparseImageFormatProperties
-        Vulkan.Types.Struct.VkSparseImageMemoryRequirements
         Vulkan.Types.Struct.VkSparseImageMemoryRequirements2
         Vulkan.Types.Command.VkGetDeviceBufferMemoryRequirementsKHR
         Vulkan.Types.Command.VkGetDeviceImageMemoryRequirementsKHR
@@ -5678,9 +4562,6 @@ library
         Vulkan.Ext.VK_KHR_multiview
 
       other-modules:
-        Vulkan.Types.Base
-        Vulkan.Types.Enum.VkDependencyFlagBits
-        Vulkan.Types.Enum.VkStructureType
         Vulkan.Types.Struct.VkPhysicalDeviceMultiviewFeaturesKHR
         Vulkan.Types.Struct.VkPhysicalDeviceMultiviewPropertiesKHR
         Vulkan.Types.Struct.VkRenderPassMultiviewCreateInfoKHR
@@ -5690,7 +4571,6 @@ library
         Vulkan.Ext.VK_KHR_performance_query
 
       other-modules:
-        Vulkan.Types.Base
         Vulkan.Types.Enum.VkAcquireProfilingLockFlagBitsKHR
         Vulkan.Types.Enum.VkAcquireProfilingLockFlagsKHR
         Vulkan.Types.Enum.VkPerformanceCounterDescriptionFlagBitsKHR
@@ -5698,10 +4578,6 @@ library
         Vulkan.Types.Enum.VkPerformanceCounterScopeKHR
         Vulkan.Types.Enum.VkPerformanceCounterStorageKHR
         Vulkan.Types.Enum.VkPerformanceCounterUnitKHR
-        Vulkan.Types.Enum.VkQueryType
-        Vulkan.Types.Enum.VkResult
-        Vulkan.Types.Enum.VkStructureType
-        Vulkan.Types.Handle
         Vulkan.Types.Struct.VkAcquireProfilingLockInfoKHR
         Vulkan.Types.Struct.VkPerformanceCounterDescriptionKHR
         Vulkan.Types.Struct.VkPerformanceCounterKHR
@@ -5720,13 +4596,7 @@ library
         Vulkan.Ext.VK_KHR_pipeline_executable_properties
 
       other-modules:
-        Vulkan.Types.Base
-        Vulkan.Types.Enum.VkPipelineCreateFlagBits
         Vulkan.Types.Enum.VkPipelineExecutableStatisticFormatKHR
-        Vulkan.Types.Enum.VkResult
-        Vulkan.Types.Enum.VkShaderStageFlags
-        Vulkan.Types.Enum.VkStructureType
-        Vulkan.Types.Handle
         Vulkan.Types.Struct.VkPhysicalDevicePipelineExecutablePropertiesFeaturesKHR
         Vulkan.Types.Struct.VkPipelineExecutableInfoKHR
         Vulkan.Types.Struct.VkPipelineExecutableInternalRepresentationKHR
@@ -5743,25 +4613,17 @@ library
         Vulkan.Ext.VK_KHR_pipeline_library
 
       other-modules:
-        Vulkan.Types.Enum.VkPipelineCreateFlagBits
-        Vulkan.Types.Enum.VkStructureType
-        Vulkan.Types.Handle
         Vulkan.Types.Struct.VkPipelineLibraryCreateInfoKHR
 
     if flag (VK_KHR_portability_enumeration)
       exposed-modules:
         Vulkan.Ext.VK_KHR_portability_enumeration
 
-      other-modules:
-        Vulkan.Types.Enum.VkInstanceCreateFlagBits
-
     if flag (VK_KHR_portability_subset)
       exposed-modules:
         Vulkan.Ext.VK_KHR_portability_subset
 
       other-modules:
-        Vulkan.Types.Base
-        Vulkan.Types.Enum.VkStructureType
         Vulkan.Types.Struct.VkPhysicalDevicePortabilitySubsetFeaturesKHR
         Vulkan.Types.Struct.VkPhysicalDevicePortabilitySubsetPropertiesKHR
 
@@ -5770,8 +4632,6 @@ library
         Vulkan.Ext.VK_KHR_present_id
 
       other-modules:
-        Vulkan.Types.Base
-        Vulkan.Types.Enum.VkStructureType
         Vulkan.Types.Struct.VkPhysicalDevicePresentIdFeaturesKHR
         Vulkan.Types.Struct.VkPresentIdKHR
 
@@ -5780,10 +4640,6 @@ library
         Vulkan.Ext.VK_KHR_present_wait
 
       other-modules:
-        Vulkan.Types.Base
-        Vulkan.Types.Enum.VkResult
-        Vulkan.Types.Enum.VkStructureType
-        Vulkan.Types.Handle
         Vulkan.Types.Struct.VkPhysicalDevicePresentWaitFeaturesKHR
         Vulkan.Types.Command.VkWaitForPresentKHR
 
@@ -5792,18 +4648,8 @@ library
         Vulkan.Ext.VK_KHR_push_descriptor
 
       other-modules:
-        Vulkan.Types.Base
-        Vulkan.Types.Enum.VkDescriptorSetLayoutCreateFlagBits
-        Vulkan.Types.Enum.VkDescriptorType
         Vulkan.Types.Enum.VkDescriptorUpdateTemplateType
-        Vulkan.Types.Enum.VkImageLayout
-        Vulkan.Types.Enum.VkPipelineBindPoint
-        Vulkan.Types.Enum.VkStructureType
-        Vulkan.Types.Handle
-        Vulkan.Types.Struct.VkDescriptorBufferInfo
-        Vulkan.Types.Struct.VkDescriptorImageInfo
         Vulkan.Types.Struct.VkPhysicalDevicePushDescriptorPropertiesKHR
-        Vulkan.Types.Struct.VkWriteDescriptorSet
         Vulkan.Types.Command.VkCmdPushDescriptorSetKHR
         Vulkan.Types.Command.VkCmdPushDescriptorSetWithTemplateKHR
 
@@ -5812,8 +4658,6 @@ library
         Vulkan.Ext.VK_KHR_ray_query
 
       other-modules:
-        Vulkan.Types.Base
-        Vulkan.Types.Enum.VkStructureType
         Vulkan.Types.Struct.VkPhysicalDeviceRayQueryFeaturesKHR
 
     if flag (VK_KHR_ray_tracing_maintenance1)
@@ -5821,12 +4665,8 @@ library
         Vulkan.Ext.VK_KHR_ray_tracing_maintenance1
 
       other-modules:
-        Vulkan.Types.Base
         Vulkan.Types.Enum.VkAccessFlagBits2
         Vulkan.Types.Enum.VkPipelineStageFlagBits2
-        Vulkan.Types.Enum.VkQueryType
-        Vulkan.Types.Enum.VkStructureType
-        Vulkan.Types.Handle
         Vulkan.Types.Struct.VkPhysicalDeviceRayTracingMaintenance1FeaturesKHR
         Vulkan.Types.Struct.VkTraceRaysIndirectCommand2KHR
         Vulkan.Types.Command.VkCmdTraceRaysIndirect2KHR
@@ -5836,39 +4676,14 @@ library
         Vulkan.Ext.VK_KHR_ray_tracing_pipeline
 
       other-modules:
-        Vulkan.Types.Base
-        Vulkan.Types.Enum.VkBufferUsageFlagBits
-        Vulkan.Types.Enum.VkDynamicState
-        Vulkan.Types.Enum.VkInternalAllocationType
-        Vulkan.Types.Enum.VkPipelineBindPoint
-        Vulkan.Types.Enum.VkPipelineCreateFlagBits
-        Vulkan.Types.Enum.VkPipelineCreateFlags
-        Vulkan.Types.Enum.VkPipelineDynamicStateCreateFlags
-        Vulkan.Types.Enum.VkPipelineShaderStageCreateFlags
-        Vulkan.Types.Enum.VkPipelineStageFlagBits
         Vulkan.Types.Enum.VkRayTracingShaderGroupTypeKHR
-        Vulkan.Types.Enum.VkResult
         Vulkan.Types.Enum.VkShaderGroupShaderKHR
-        Vulkan.Types.Enum.VkShaderStageFlagBits
-        Vulkan.Types.Enum.VkStructureType
-        Vulkan.Types.Enum.VkSystemAllocationScope
-        Vulkan.Types.FuncPointer.PFN_vkAllocationFunction
-        Vulkan.Types.FuncPointer.PFN_vkFreeFunction
-        Vulkan.Types.FuncPointer.PFN_vkInternalAllocationNotification
-        Vulkan.Types.FuncPointer.PFN_vkInternalFreeNotification
-        Vulkan.Types.FuncPointer.PFN_vkReallocationFunction
-        Vulkan.Types.Handle
-        Vulkan.Types.Struct.VkAllocationCallbacks
         Vulkan.Types.Struct.VkPhysicalDeviceRayTracingPipelineFeaturesKHR
         Vulkan.Types.Struct.VkPhysicalDeviceRayTracingPipelinePropertiesKHR
-        Vulkan.Types.Struct.VkPipelineDynamicStateCreateInfo
         Vulkan.Types.Struct.VkPipelineLibraryCreateInfoKHR
-        Vulkan.Types.Struct.VkPipelineShaderStageCreateInfo
         Vulkan.Types.Struct.VkRayTracingPipelineCreateInfoKHR
         Vulkan.Types.Struct.VkRayTracingPipelineInterfaceCreateInfoKHR
         Vulkan.Types.Struct.VkRayTracingShaderGroupCreateInfoKHR
-        Vulkan.Types.Struct.VkSpecializationInfo
-        Vulkan.Types.Struct.VkSpecializationMapEntry
         Vulkan.Types.Struct.VkStridedDeviceAddressRegionKHR
         Vulkan.Types.Struct.VkTraceRaysIndirectCommandKHR
         Vulkan.Types.Command.VkCmdSetRayTracingPipelineStackSizeKHR
@@ -5887,42 +4702,19 @@ library
       exposed-modules:
         Vulkan.Ext.VK_KHR_sampler_mirror_clamp_to_edge
 
-      other-modules:
-        Vulkan.Types.Enum.VkSamplerAddressMode
-
     if flag (VK_KHR_sampler_ycbcr_conversion)
       exposed-modules:
         Vulkan.Ext.VK_KHR_sampler_ycbcr_conversion
 
       other-modules:
-        Vulkan.Types.Base
         Vulkan.Types.Enum.VkChromaLocation
         Vulkan.Types.Enum.VkChromaLocationKHR
-        Vulkan.Types.Enum.VkComponentSwizzle
         Vulkan.Types.Enum.VkDebugReportObjectTypeEXT
-        Vulkan.Types.Enum.VkFilter
-        Vulkan.Types.Enum.VkFormat
-        Vulkan.Types.Enum.VkFormatFeatureFlagBits
-        Vulkan.Types.Enum.VkImageAspectFlagBits
-        Vulkan.Types.Enum.VkImageCreateFlagBits
-        Vulkan.Types.Enum.VkInternalAllocationType
-        Vulkan.Types.Enum.VkObjectType
-        Vulkan.Types.Enum.VkResult
         Vulkan.Types.Enum.VkSamplerYcbcrModelConversion
         Vulkan.Types.Enum.VkSamplerYcbcrModelConversionKHR
         Vulkan.Types.Enum.VkSamplerYcbcrRange
         Vulkan.Types.Enum.VkSamplerYcbcrRangeKHR
-        Vulkan.Types.Enum.VkStructureType
-        Vulkan.Types.Enum.VkSystemAllocationScope
-        Vulkan.Types.FuncPointer.PFN_vkAllocationFunction
-        Vulkan.Types.FuncPointer.PFN_vkFreeFunction
-        Vulkan.Types.FuncPointer.PFN_vkInternalAllocationNotification
-        Vulkan.Types.FuncPointer.PFN_vkInternalFreeNotification
-        Vulkan.Types.FuncPointer.PFN_vkReallocationFunction
-        Vulkan.Types.Handle
-        Vulkan.Types.Struct.VkAllocationCallbacks
         Vulkan.Types.Struct.VkBindImagePlaneMemoryInfoKHR
-        Vulkan.Types.Struct.VkComponentMapping
         Vulkan.Types.Struct.VkImagePlaneMemoryRequirementsInfoKHR
         Vulkan.Types.Struct.VkPhysicalDeviceSamplerYcbcrConversionFeaturesKHR
         Vulkan.Types.Struct.VkSamplerYcbcrConversionCreateInfo
@@ -5937,9 +4729,6 @@ library
         Vulkan.Ext.VK_KHR_separate_depth_stencil_layouts
 
       other-modules:
-        Vulkan.Types.Base
-        Vulkan.Types.Enum.VkImageLayout
-        Vulkan.Types.Enum.VkStructureType
         Vulkan.Types.Struct.VkAttachmentDescriptionStencilLayoutKHR
         Vulkan.Types.Struct.VkAttachmentReferenceStencilLayoutKHR
         Vulkan.Types.Struct.VkPhysicalDeviceSeparateDepthStencilLayoutsFeaturesKHR
@@ -5949,8 +4738,6 @@ library
         Vulkan.Ext.VK_KHR_shader_atomic_int64
 
       other-modules:
-        Vulkan.Types.Base
-        Vulkan.Types.Enum.VkStructureType
         Vulkan.Types.Struct.VkPhysicalDeviceShaderAtomicInt64FeaturesKHR
 
     if flag (VK_KHR_shader_clock)
@@ -5958,8 +4745,6 @@ library
         Vulkan.Ext.VK_KHR_shader_clock
 
       other-modules:
-        Vulkan.Types.Base
-        Vulkan.Types.Enum.VkStructureType
         Vulkan.Types.Struct.VkPhysicalDeviceShaderClockFeaturesKHR
 
     if flag (VK_KHR_shader_draw_parameters)
@@ -5971,8 +4756,6 @@ library
         Vulkan.Ext.VK_KHR_shader_float16_int8
 
       other-modules:
-        Vulkan.Types.Base
-        Vulkan.Types.Enum.VkStructureType
         Vulkan.Types.Struct.VkPhysicalDeviceFloat16Int8FeaturesKHR
         Vulkan.Types.Struct.VkPhysicalDeviceShaderFloat16Int8FeaturesKHR
 
@@ -5981,10 +4764,8 @@ library
         Vulkan.Ext.VK_KHR_shader_float_controls
 
       other-modules:
-        Vulkan.Types.Base
         Vulkan.Types.Enum.VkShaderFloatControlsIndependence
         Vulkan.Types.Enum.VkShaderFloatControlsIndependenceKHR
-        Vulkan.Types.Enum.VkStructureType
         Vulkan.Types.Struct.VkPhysicalDeviceFloatControlsPropertiesKHR
 
     if flag (VK_KHR_shader_integer_dot_product)
@@ -5992,8 +4773,6 @@ library
         Vulkan.Ext.VK_KHR_shader_integer_dot_product
 
       other-modules:
-        Vulkan.Types.Base
-        Vulkan.Types.Enum.VkStructureType
         Vulkan.Types.Struct.VkPhysicalDeviceShaderIntegerDotProductFeaturesKHR
         Vulkan.Types.Struct.VkPhysicalDeviceShaderIntegerDotProductPropertiesKHR
 
@@ -6006,8 +4785,6 @@ library
         Vulkan.Ext.VK_KHR_shader_subgroup_extended_types
 
       other-modules:
-        Vulkan.Types.Base
-        Vulkan.Types.Enum.VkStructureType
         Vulkan.Types.Struct.VkPhysicalDeviceShaderSubgroupExtendedTypesFeaturesKHR
 
     if flag (VK_KHR_shader_subgroup_uniform_control_flow)
@@ -6015,8 +4792,6 @@ library
         Vulkan.Ext.VK_KHR_shader_subgroup_uniform_control_flow
 
       other-modules:
-        Vulkan.Types.Base
-        Vulkan.Types.Enum.VkStructureType
         Vulkan.Types.Struct.VkPhysicalDeviceShaderSubgroupUniformControlFlowFeaturesKHR
 
     if flag (VK_KHR_shader_terminate_invocation)
@@ -6024,8 +4799,6 @@ library
         Vulkan.Ext.VK_KHR_shader_terminate_invocation
 
       other-modules:
-        Vulkan.Types.Base
-        Vulkan.Types.Enum.VkStructureType
         Vulkan.Types.Struct.VkPhysicalDeviceShaderTerminateInvocationFeaturesKHR
 
     if flag (VK_KHR_shared_presentable_image)
@@ -6033,12 +4806,7 @@ library
         Vulkan.Ext.VK_KHR_shared_presentable_image
 
       other-modules:
-        Vulkan.Types.Enum.VkImageLayout
-        Vulkan.Types.Enum.VkImageUsageFlags
         Vulkan.Types.Enum.VkPresentModeKHR
-        Vulkan.Types.Enum.VkResult
-        Vulkan.Types.Enum.VkStructureType
-        Vulkan.Types.Handle
         Vulkan.Types.Struct.VkSharedPresentSurfaceCapabilitiesKHR
         Vulkan.Types.Command.VkGetSwapchainStatusKHR
 
@@ -6055,27 +4823,12 @@ library
         Vulkan.Ext.VK_KHR_surface
 
       other-modules:
-        Vulkan.Types.Base
         Vulkan.Types.Enum.VkColorSpaceKHR
         Vulkan.Types.Enum.VkCompositeAlphaFlagBitsKHR
         Vulkan.Types.Enum.VkCompositeAlphaFlagsKHR
-        Vulkan.Types.Enum.VkFormat
-        Vulkan.Types.Enum.VkImageUsageFlags
-        Vulkan.Types.Enum.VkInternalAllocationType
-        Vulkan.Types.Enum.VkObjectType
         Vulkan.Types.Enum.VkPresentModeKHR
-        Vulkan.Types.Enum.VkResult
         Vulkan.Types.Enum.VkSurfaceTransformFlagBitsKHR
         Vulkan.Types.Enum.VkSurfaceTransformFlagsKHR
-        Vulkan.Types.Enum.VkSystemAllocationScope
-        Vulkan.Types.FuncPointer.PFN_vkAllocationFunction
-        Vulkan.Types.FuncPointer.PFN_vkFreeFunction
-        Vulkan.Types.FuncPointer.PFN_vkInternalAllocationNotification
-        Vulkan.Types.FuncPointer.PFN_vkInternalFreeNotification
-        Vulkan.Types.FuncPointer.PFN_vkReallocationFunction
-        Vulkan.Types.Handle
-        Vulkan.Types.Struct.VkAllocationCallbacks
-        Vulkan.Types.Struct.VkExtent2D
         Vulkan.Types.Struct.VkSurfaceCapabilitiesKHR
         Vulkan.Types.Struct.VkSurfaceFormatKHR
         Vulkan.Types.Command.VkDestroySurfaceKHR
@@ -6089,8 +4842,6 @@ library
         Vulkan.Ext.VK_KHR_surface_protected_capabilities
 
       other-modules:
-        Vulkan.Types.Base
-        Vulkan.Types.Enum.VkStructureType
         Vulkan.Types.Struct.VkSurfaceProtectedCapabilitiesKHR
 
     if flag (VK_KHR_swapchain)
@@ -6098,41 +4849,21 @@ library
         Vulkan.Ext.VK_KHR_swapchain
 
       other-modules:
-        Vulkan.Types.Base
         Vulkan.Types.Enum.VkColorSpaceKHR
         Vulkan.Types.Enum.VkCompositeAlphaFlagBitsKHR
         Vulkan.Types.Enum.VkDeviceGroupPresentModeFlagBitsKHR
         Vulkan.Types.Enum.VkDeviceGroupPresentModeFlagsKHR
-        Vulkan.Types.Enum.VkFormat
-        Vulkan.Types.Enum.VkImageLayout
-        Vulkan.Types.Enum.VkImageUsageFlags
-        Vulkan.Types.Enum.VkInternalAllocationType
-        Vulkan.Types.Enum.VkObjectType
         Vulkan.Types.Enum.VkPresentModeKHR
-        Vulkan.Types.Enum.VkResult
-        Vulkan.Types.Enum.VkSharingMode
-        Vulkan.Types.Enum.VkStructureType
         Vulkan.Types.Enum.VkSurfaceTransformFlagBitsKHR
         Vulkan.Types.Enum.VkSwapchainCreateFlagBitsKHR
         Vulkan.Types.Enum.VkSwapchainCreateFlagsKHR
-        Vulkan.Types.Enum.VkSystemAllocationScope
-        Vulkan.Types.FuncPointer.PFN_vkAllocationFunction
-        Vulkan.Types.FuncPointer.PFN_vkFreeFunction
-        Vulkan.Types.FuncPointer.PFN_vkInternalAllocationNotification
-        Vulkan.Types.FuncPointer.PFN_vkInternalFreeNotification
-        Vulkan.Types.FuncPointer.PFN_vkReallocationFunction
-        Vulkan.Types.Handle
         Vulkan.Types.Struct.VkAcquireNextImageInfoKHR
-        Vulkan.Types.Struct.VkAllocationCallbacks
         Vulkan.Types.Struct.VkBindImageMemorySwapchainInfoKHR
         Vulkan.Types.Struct.VkDeviceGroupPresentCapabilitiesKHR
         Vulkan.Types.Struct.VkDeviceGroupPresentInfoKHR
         Vulkan.Types.Struct.VkDeviceGroupSwapchainCreateInfoKHR
-        Vulkan.Types.Struct.VkExtent2D
         Vulkan.Types.Struct.VkImageSwapchainCreateInfoKHR
-        Vulkan.Types.Struct.VkOffset2D
         Vulkan.Types.Struct.VkPresentInfoKHR
-        Vulkan.Types.Struct.VkRect2D
         Vulkan.Types.Struct.VkSwapchainCreateInfoKHR
         Vulkan.Types.Command.VkAcquireNextImage2KHR
         Vulkan.Types.Command.VkAcquireNextImageKHR
@@ -6156,27 +4887,17 @@ library
         Vulkan.Ext.VK_KHR_synchronization2
 
       other-modules:
-        Vulkan.Types.Base
-        Vulkan.Types.Enum.VkAccessFlagBits
         Vulkan.Types.Enum.VkAccessFlagBits2
         Vulkan.Types.Enum.VkAccessFlagBits2KHR
         Vulkan.Types.Enum.VkAccessFlags2
         Vulkan.Types.Enum.VkAccessFlags2KHR
-        Vulkan.Types.Enum.VkDependencyFlags
-        Vulkan.Types.Enum.VkEventCreateFlagBits
-        Vulkan.Types.Enum.VkImageAspectFlags
-        Vulkan.Types.Enum.VkImageLayout
-        Vulkan.Types.Enum.VkPipelineStageFlagBits
         Vulkan.Types.Enum.VkPipelineStageFlagBits2
         Vulkan.Types.Enum.VkPipelineStageFlagBits2KHR
         Vulkan.Types.Enum.VkPipelineStageFlags2
         Vulkan.Types.Enum.VkPipelineStageFlags2KHR
-        Vulkan.Types.Enum.VkResult
-        Vulkan.Types.Enum.VkStructureType
         Vulkan.Types.Enum.VkSubmitFlagBitsKHR
         Vulkan.Types.Enum.VkSubmitFlags
         Vulkan.Types.Enum.VkSubmitFlagsKHR
-        Vulkan.Types.Handle
         Vulkan.Types.Struct.VkBufferMemoryBarrier2
         Vulkan.Types.Struct.VkBufferMemoryBarrier2KHR
         Vulkan.Types.Struct.VkCheckpointData2NV
@@ -6186,7 +4907,6 @@ library
         Vulkan.Types.Struct.VkDependencyInfoKHR
         Vulkan.Types.Struct.VkImageMemoryBarrier2
         Vulkan.Types.Struct.VkImageMemoryBarrier2KHR
-        Vulkan.Types.Struct.VkImageSubresourceRange
         Vulkan.Types.Struct.VkMemoryBarrier2
         Vulkan.Types.Struct.VkMemoryBarrier2KHR
         Vulkan.Types.Struct.VkPhysicalDeviceSynchronization2FeaturesKHR
@@ -6209,16 +4929,12 @@ library
         Vulkan.Ext.VK_KHR_timeline_semaphore
 
       other-modules:
-        Vulkan.Types.Base
-        Vulkan.Types.Enum.VkResult
         Vulkan.Types.Enum.VkSemaphoreType
         Vulkan.Types.Enum.VkSemaphoreTypeKHR
         Vulkan.Types.Enum.VkSemaphoreWaitFlagBits
         Vulkan.Types.Enum.VkSemaphoreWaitFlagBitsKHR
         Vulkan.Types.Enum.VkSemaphoreWaitFlags
         Vulkan.Types.Enum.VkSemaphoreWaitFlagsKHR
-        Vulkan.Types.Enum.VkStructureType
-        Vulkan.Types.Handle
         Vulkan.Types.Struct.VkPhysicalDeviceTimelineSemaphoreFeaturesKHR
         Vulkan.Types.Struct.VkPhysicalDeviceTimelineSemaphorePropertiesKHR
         Vulkan.Types.Struct.VkSemaphoreSignalInfo
@@ -6236,8 +4952,6 @@ library
         Vulkan.Ext.VK_KHR_uniform_buffer_standard_layout
 
       other-modules:
-        Vulkan.Types.Base
-        Vulkan.Types.Enum.VkStructureType
         Vulkan.Types.Struct.VkPhysicalDeviceUniformBufferStandardLayoutFeaturesKHR
 
     if flag (VK_KHR_variable_pointers)
@@ -6245,8 +4959,6 @@ library
         Vulkan.Ext.VK_KHR_variable_pointers
 
       other-modules:
-        Vulkan.Types.Base
-        Vulkan.Types.Enum.VkStructureType
         Vulkan.Types.Struct.VkPhysicalDeviceVariablePointerFeaturesKHR
         Vulkan.Types.Struct.VkPhysicalDeviceVariablePointersFeaturesKHR
 
@@ -6256,11 +4968,9 @@ library
 
       other-modules:
         Vulkan.Types.Protected
-        Vulkan.Types.Enum.VkStructureType
         Vulkan.Types.Enum.VkVideoCodecOperationFlagBitsKHR
         Vulkan.Types.Enum.VkVideoDecodeH264PictureLayoutFlagBitsKHR
         Vulkan.Types.Enum.VkVideoDecodeH264PictureLayoutFlagsKHR
-        Vulkan.Types.Struct.VkOffset2D
         Vulkan.Types.Struct.VkVideoDecodeH264CapabilitiesKHR
         Vulkan.Types.Struct.VkVideoDecodeH264DpbSlotInfoKHR
         Vulkan.Types.Struct.VkVideoDecodeH264PictureInfoKHR
@@ -6274,7 +4984,6 @@ library
 
       other-modules:
         Vulkan.Types.Protected
-        Vulkan.Types.Enum.VkStructureType
         Vulkan.Types.Enum.VkVideoCodecOperationFlagBitsKHR
         Vulkan.Types.Struct.VkVideoDecodeH265CapabilitiesKHR
         Vulkan.Types.Struct.VkVideoDecodeH265DpbSlotInfoKHR
@@ -6288,24 +4997,14 @@ library
         Vulkan.Ext.VK_KHR_video_decode_queue
 
       other-modules:
-        Vulkan.Types.Base
         Vulkan.Types.Enum.VkAccessFlagBits2
-        Vulkan.Types.Enum.VkBufferUsageFlagBits
-        Vulkan.Types.Enum.VkFormatFeatureFlagBits
         Vulkan.Types.Enum.VkFormatFeatureFlagBits2
-        Vulkan.Types.Enum.VkImageLayout
-        Vulkan.Types.Enum.VkImageUsageFlagBits
         Vulkan.Types.Enum.VkPipelineStageFlagBits2
-        Vulkan.Types.Enum.VkQueueFlagBits
-        Vulkan.Types.Enum.VkStructureType
         Vulkan.Types.Enum.VkVideoDecodeCapabilityFlagBitsKHR
         Vulkan.Types.Enum.VkVideoDecodeCapabilityFlagsKHR
         Vulkan.Types.Enum.VkVideoDecodeFlagsKHR
         Vulkan.Types.Enum.VkVideoDecodeUsageFlagBitsKHR
         Vulkan.Types.Enum.VkVideoDecodeUsageFlagsKHR
-        Vulkan.Types.Handle
-        Vulkan.Types.Struct.VkExtent2D
-        Vulkan.Types.Struct.VkOffset2D
         Vulkan.Types.Struct.VkVideoDecodeCapabilitiesKHR
         Vulkan.Types.Struct.VkVideoDecodeInfoKHR
         Vulkan.Types.Struct.VkVideoDecodeUsageInfoKHR
@@ -6318,17 +5017,9 @@ library
         Vulkan.Ext.VK_KHR_video_encode_queue
 
       other-modules:
-        Vulkan.Types.Base
         Vulkan.Types.Enum.VkAccessFlagBits2
-        Vulkan.Types.Enum.VkBufferUsageFlagBits
-        Vulkan.Types.Enum.VkFormatFeatureFlagBits
         Vulkan.Types.Enum.VkFormatFeatureFlagBits2
-        Vulkan.Types.Enum.VkImageLayout
-        Vulkan.Types.Enum.VkImageUsageFlagBits
         Vulkan.Types.Enum.VkPipelineStageFlagBits2
-        Vulkan.Types.Enum.VkQueryType
-        Vulkan.Types.Enum.VkQueueFlagBits
-        Vulkan.Types.Enum.VkStructureType
         Vulkan.Types.Enum.VkVideoCodingControlFlagBitsKHR
         Vulkan.Types.Enum.VkVideoEncodeCapabilityFlagBitsKHR
         Vulkan.Types.Enum.VkVideoEncodeCapabilityFlagsKHR
@@ -6341,9 +5032,6 @@ library
         Vulkan.Types.Enum.VkVideoEncodeTuningModeKHR
         Vulkan.Types.Enum.VkVideoEncodeUsageFlagBitsKHR
         Vulkan.Types.Enum.VkVideoEncodeUsageFlagsKHR
-        Vulkan.Types.Handle
-        Vulkan.Types.Struct.VkExtent2D
-        Vulkan.Types.Struct.VkOffset2D
         Vulkan.Types.Struct.VkVideoEncodeCapabilitiesKHR
         Vulkan.Types.Struct.VkVideoEncodeInfoKHR
         Vulkan.Types.Struct.VkVideoEncodeRateControlInfoKHR
@@ -6358,21 +5046,7 @@ library
         Vulkan.Ext.VK_KHR_video_queue
 
       other-modules:
-        Vulkan.Types.Base
-        Vulkan.Types.Enum.VkComponentSwizzle
-        Vulkan.Types.Enum.VkFormat
-        Vulkan.Types.Enum.VkImageCreateFlags
-        Vulkan.Types.Enum.VkImageTiling
-        Vulkan.Types.Enum.VkImageType
-        Vulkan.Types.Enum.VkImageUsageFlags
-        Vulkan.Types.Enum.VkInternalAllocationType
-        Vulkan.Types.Enum.VkObjectType
-        Vulkan.Types.Enum.VkQueryResultFlagBits
         Vulkan.Types.Enum.VkQueryResultStatusKHR
-        Vulkan.Types.Enum.VkQueryType
-        Vulkan.Types.Enum.VkResult
-        Vulkan.Types.Enum.VkStructureType
-        Vulkan.Types.Enum.VkSystemAllocationScope
         Vulkan.Types.Enum.VkVideoBeginCodingFlagsKHR
         Vulkan.Types.Enum.VkVideoCapabilityFlagBitsKHR
         Vulkan.Types.Enum.VkVideoCapabilityFlagsKHR
@@ -6388,19 +5062,7 @@ library
         Vulkan.Types.Enum.VkVideoSessionCreateFlagBitsKHR
         Vulkan.Types.Enum.VkVideoSessionCreateFlagsKHR
         Vulkan.Types.Enum.VkVideoSessionParametersCreateFlagsKHR
-        Vulkan.Types.FuncPointer.PFN_vkAllocationFunction
-        Vulkan.Types.FuncPointer.PFN_vkFreeFunction
-        Vulkan.Types.FuncPointer.PFN_vkInternalAllocationNotification
-        Vulkan.Types.FuncPointer.PFN_vkInternalFreeNotification
-        Vulkan.Types.FuncPointer.PFN_vkReallocationFunction
-        Vulkan.Types.Handle
-        Vulkan.Types.Struct.VkAllocationCallbacks
         Vulkan.Types.Struct.VkBindVideoSessionMemoryInfoKHR
-        Vulkan.Types.Struct.VkComponentMapping
-        Vulkan.Types.Struct.VkExtensionProperties
-        Vulkan.Types.Struct.VkExtent2D
-        Vulkan.Types.Struct.VkMemoryRequirements
-        Vulkan.Types.Struct.VkOffset2D
         Vulkan.Types.Struct.VkPhysicalDeviceVideoFormatInfoKHR
         Vulkan.Types.Struct.VkQueueFamilyQueryResultStatusPropertiesKHR
         Vulkan.Types.Struct.VkQueueFamilyVideoPropertiesKHR
@@ -6435,8 +5097,6 @@ library
         Vulkan.Ext.VK_KHR_vulkan_memory_model
 
       other-modules:
-        Vulkan.Types.Base
-        Vulkan.Types.Enum.VkStructureType
         Vulkan.Types.Struct.VkPhysicalDeviceVulkanMemoryModelFeaturesKHR
 
     if flag (VK_KHR_wayland_surface)
@@ -6445,19 +5105,7 @@ library
 
       other-modules:
         Vulkan.Types.Protected
-        Vulkan.Types.Base
-        Vulkan.Types.Enum.VkInternalAllocationType
-        Vulkan.Types.Enum.VkResult
-        Vulkan.Types.Enum.VkStructureType
-        Vulkan.Types.Enum.VkSystemAllocationScope
         Vulkan.Types.Enum.VkWaylandSurfaceCreateFlagsKHR
-        Vulkan.Types.FuncPointer.PFN_vkAllocationFunction
-        Vulkan.Types.FuncPointer.PFN_vkFreeFunction
-        Vulkan.Types.FuncPointer.PFN_vkInternalAllocationNotification
-        Vulkan.Types.FuncPointer.PFN_vkInternalFreeNotification
-        Vulkan.Types.FuncPointer.PFN_vkReallocationFunction
-        Vulkan.Types.Handle
-        Vulkan.Types.Struct.VkAllocationCallbacks
         Vulkan.Types.Struct.VkWaylandSurfaceCreateInfoKHR
         Vulkan.Types.Command.VkCreateWaylandSurfaceKHR
         Vulkan.Types.Command.VkGetPhysicalDeviceWaylandPresentationSupportKHR
@@ -6467,8 +5115,6 @@ library
         Vulkan.Ext.VK_KHR_win32_keyed_mutex
 
       other-modules:
-        Vulkan.Types.Enum.VkStructureType
-        Vulkan.Types.Handle
         Vulkan.Types.Struct.VkWin32KeyedMutexAcquireReleaseInfoKHR
 
     if flag (VK_KHR_win32_surface)
@@ -6477,19 +5123,7 @@ library
 
       other-modules:
         Vulkan.Types.Protected
-        Vulkan.Types.Base
-        Vulkan.Types.Enum.VkInternalAllocationType
-        Vulkan.Types.Enum.VkResult
-        Vulkan.Types.Enum.VkStructureType
-        Vulkan.Types.Enum.VkSystemAllocationScope
         Vulkan.Types.Enum.VkWin32SurfaceCreateFlagsKHR
-        Vulkan.Types.FuncPointer.PFN_vkAllocationFunction
-        Vulkan.Types.FuncPointer.PFN_vkFreeFunction
-        Vulkan.Types.FuncPointer.PFN_vkInternalAllocationNotification
-        Vulkan.Types.FuncPointer.PFN_vkInternalFreeNotification
-        Vulkan.Types.FuncPointer.PFN_vkReallocationFunction
-        Vulkan.Types.Handle
-        Vulkan.Types.Struct.VkAllocationCallbacks
         Vulkan.Types.Struct.VkWin32SurfaceCreateInfoKHR
         Vulkan.Types.Command.VkCreateWin32SurfaceKHR
         Vulkan.Types.Command.VkGetPhysicalDeviceWin32PresentationSupportKHR
@@ -6499,8 +5133,6 @@ library
         Vulkan.Ext.VK_KHR_workgroup_memory_explicit_layout
 
       other-modules:
-        Vulkan.Types.Base
-        Vulkan.Types.Enum.VkStructureType
         Vulkan.Types.Struct.VkPhysicalDeviceWorkgroupMemoryExplicitLayoutFeaturesKHR
 
     if flag (VK_KHR_xcb_surface)
@@ -6509,19 +5141,7 @@ library
 
       other-modules:
         Vulkan.Types.Protected
-        Vulkan.Types.Base
-        Vulkan.Types.Enum.VkInternalAllocationType
-        Vulkan.Types.Enum.VkResult
-        Vulkan.Types.Enum.VkStructureType
-        Vulkan.Types.Enum.VkSystemAllocationScope
         Vulkan.Types.Enum.VkXcbSurfaceCreateFlagsKHR
-        Vulkan.Types.FuncPointer.PFN_vkAllocationFunction
-        Vulkan.Types.FuncPointer.PFN_vkFreeFunction
-        Vulkan.Types.FuncPointer.PFN_vkInternalAllocationNotification
-        Vulkan.Types.FuncPointer.PFN_vkInternalFreeNotification
-        Vulkan.Types.FuncPointer.PFN_vkReallocationFunction
-        Vulkan.Types.Handle
-        Vulkan.Types.Struct.VkAllocationCallbacks
         Vulkan.Types.Struct.VkXcbSurfaceCreateInfoKHR
         Vulkan.Types.Command.VkCreateXcbSurfaceKHR
         Vulkan.Types.Command.VkGetPhysicalDeviceXcbPresentationSupportKHR
@@ -6532,19 +5152,7 @@ library
 
       other-modules:
         Vulkan.Types.Protected
-        Vulkan.Types.Base
-        Vulkan.Types.Enum.VkInternalAllocationType
-        Vulkan.Types.Enum.VkResult
-        Vulkan.Types.Enum.VkStructureType
-        Vulkan.Types.Enum.VkSystemAllocationScope
         Vulkan.Types.Enum.VkXlibSurfaceCreateFlagsKHR
-        Vulkan.Types.FuncPointer.PFN_vkAllocationFunction
-        Vulkan.Types.FuncPointer.PFN_vkFreeFunction
-        Vulkan.Types.FuncPointer.PFN_vkInternalAllocationNotification
-        Vulkan.Types.FuncPointer.PFN_vkInternalFreeNotification
-        Vulkan.Types.FuncPointer.PFN_vkReallocationFunction
-        Vulkan.Types.Handle
-        Vulkan.Types.Struct.VkAllocationCallbacks
         Vulkan.Types.Struct.VkXlibSurfaceCreateInfoKHR
         Vulkan.Types.Command.VkCreateXlibSurfaceKHR
         Vulkan.Types.Command.VkGetPhysicalDeviceXlibPresentationSupportKHR
@@ -6554,8 +5162,6 @@ library
         Vulkan.Ext.VK_KHR_zero_initialize_workgroup_memory
 
       other-modules:
-        Vulkan.Types.Base
-        Vulkan.Types.Enum.VkStructureType
         Vulkan.Types.Struct.VkPhysicalDeviceZeroInitializeWorkgroupMemoryFeaturesKHR
 
     if flag (VK_LUNARG_direct_driver_loading)
@@ -6565,10 +5171,7 @@ library
       other-modules:
         Vulkan.Types.Enum.VkDirectDriverLoadingFlagsLUNARG
         Vulkan.Types.Enum.VkDirectDriverLoadingModeLUNARG
-        Vulkan.Types.Enum.VkStructureType
         Vulkan.Types.FuncPointer.PFN_vkGetInstanceProcAddrLUNARG
-        Vulkan.Types.FuncPointer.PFN_vkVoidFunction
-        Vulkan.Types.Handle
         Vulkan.Types.Struct.VkDirectDriverLoadingInfoLUNARG
         Vulkan.Types.Struct.VkDirectDriverLoadingListLUNARG
 
@@ -6578,17 +5181,6 @@ library
 
       other-modules:
         Vulkan.Types.Enum.VkIOSSurfaceCreateFlagsMVK
-        Vulkan.Types.Enum.VkInternalAllocationType
-        Vulkan.Types.Enum.VkResult
-        Vulkan.Types.Enum.VkStructureType
-        Vulkan.Types.Enum.VkSystemAllocationScope
-        Vulkan.Types.FuncPointer.PFN_vkAllocationFunction
-        Vulkan.Types.FuncPointer.PFN_vkFreeFunction
-        Vulkan.Types.FuncPointer.PFN_vkInternalAllocationNotification
-        Vulkan.Types.FuncPointer.PFN_vkInternalFreeNotification
-        Vulkan.Types.FuncPointer.PFN_vkReallocationFunction
-        Vulkan.Types.Handle
-        Vulkan.Types.Struct.VkAllocationCallbacks
         Vulkan.Types.Struct.VkIOSSurfaceCreateInfoMVK
         Vulkan.Types.Command.VkCreateIOSSurfaceMVK
 
@@ -6597,18 +5189,7 @@ library
         Vulkan.Ext.VK_MVK_macos_surface
 
       other-modules:
-        Vulkan.Types.Enum.VkInternalAllocationType
         Vulkan.Types.Enum.VkMacOSSurfaceCreateFlagsMVK
-        Vulkan.Types.Enum.VkResult
-        Vulkan.Types.Enum.VkStructureType
-        Vulkan.Types.Enum.VkSystemAllocationScope
-        Vulkan.Types.FuncPointer.PFN_vkAllocationFunction
-        Vulkan.Types.FuncPointer.PFN_vkFreeFunction
-        Vulkan.Types.FuncPointer.PFN_vkInternalAllocationNotification
-        Vulkan.Types.FuncPointer.PFN_vkInternalFreeNotification
-        Vulkan.Types.FuncPointer.PFN_vkReallocationFunction
-        Vulkan.Types.Handle
-        Vulkan.Types.Struct.VkAllocationCallbacks
         Vulkan.Types.Struct.VkMacOSSurfaceCreateInfoMVK
         Vulkan.Types.Command.VkCreateMacOSSurfaceMVK
 
@@ -6617,18 +5198,7 @@ library
         Vulkan.Ext.VK_NN_vi_surface
 
       other-modules:
-        Vulkan.Types.Enum.VkInternalAllocationType
-        Vulkan.Types.Enum.VkResult
-        Vulkan.Types.Enum.VkStructureType
-        Vulkan.Types.Enum.VkSystemAllocationScope
         Vulkan.Types.Enum.VkViSurfaceCreateFlagsNN
-        Vulkan.Types.FuncPointer.PFN_vkAllocationFunction
-        Vulkan.Types.FuncPointer.PFN_vkFreeFunction
-        Vulkan.Types.FuncPointer.PFN_vkInternalAllocationNotification
-        Vulkan.Types.FuncPointer.PFN_vkInternalFreeNotification
-        Vulkan.Types.FuncPointer.PFN_vkReallocationFunction
-        Vulkan.Types.Handle
-        Vulkan.Types.Struct.VkAllocationCallbacks
         Vulkan.Types.Struct.VkViSurfaceCreateInfoNN
         Vulkan.Types.Command.VkCreateViSurfaceNN
 
@@ -6638,18 +5208,6 @@ library
 
       other-modules:
         Vulkan.Types.Enum.VkDebugReportObjectTypeEXT
-        Vulkan.Types.Enum.VkInternalAllocationType
-        Vulkan.Types.Enum.VkObjectType
-        Vulkan.Types.Enum.VkResult
-        Vulkan.Types.Enum.VkStructureType
-        Vulkan.Types.Enum.VkSystemAllocationScope
-        Vulkan.Types.FuncPointer.PFN_vkAllocationFunction
-        Vulkan.Types.FuncPointer.PFN_vkFreeFunction
-        Vulkan.Types.FuncPointer.PFN_vkInternalAllocationNotification
-        Vulkan.Types.FuncPointer.PFN_vkInternalFreeNotification
-        Vulkan.Types.FuncPointer.PFN_vkReallocationFunction
-        Vulkan.Types.Handle
-        Vulkan.Types.Struct.VkAllocationCallbacks
         Vulkan.Types.Struct.VkCuFunctionCreateInfoNVX
         Vulkan.Types.Struct.VkCuLaunchInfoNVX
         Vulkan.Types.Struct.VkCuModuleCreateInfoNVX
@@ -6664,11 +5222,6 @@ library
         Vulkan.Ext.VK_NVX_image_view_handle
 
       other-modules:
-        Vulkan.Types.Base
-        Vulkan.Types.Enum.VkDescriptorType
-        Vulkan.Types.Enum.VkResult
-        Vulkan.Types.Enum.VkStructureType
-        Vulkan.Types.Handle
         Vulkan.Types.Struct.VkImageViewAddressPropertiesNVX
         Vulkan.Types.Struct.VkImageViewHandleInfoNVX
         Vulkan.Types.Command.VkGetImageViewAddressNVX
@@ -6679,9 +5232,6 @@ library
         Vulkan.Ext.VK_NVX_multiview_per_view_attributes
 
       other-modules:
-        Vulkan.Types.Base
-        Vulkan.Types.Enum.VkStructureType
-        Vulkan.Types.Enum.VkSubpassDescriptionFlagBits
         Vulkan.Types.Struct.VkPhysicalDeviceMultiviewPerViewAttributesPropertiesNVX
 
     if flag (VK_NV_acquire_winrt_display)
@@ -6689,8 +5239,6 @@ library
         Vulkan.Ext.VK_NV_acquire_winrt_display
 
       other-modules:
-        Vulkan.Types.Enum.VkResult
-        Vulkan.Types.Handle
         Vulkan.Types.Command.VkAcquireWinrtDisplayNV
         Vulkan.Types.Command.VkGetWinrtDisplayNV
 
@@ -6699,10 +5247,6 @@ library
         Vulkan.Ext.VK_NV_clip_space_w_scaling
 
       other-modules:
-        Vulkan.Types.Base
-        Vulkan.Types.Enum.VkDynamicState
-        Vulkan.Types.Enum.VkStructureType
-        Vulkan.Types.Handle
         Vulkan.Types.Struct.VkPipelineViewportWScalingStateCreateInfoNV
         Vulkan.Types.Struct.VkViewportWScalingNV
         Vulkan.Types.Command.VkCmdSetViewportWScalingNV
@@ -6712,8 +5256,6 @@ library
         Vulkan.Ext.VK_NV_compute_shader_derivatives
 
       other-modules:
-        Vulkan.Types.Base
-        Vulkan.Types.Enum.VkStructureType
         Vulkan.Types.Struct.VkPhysicalDeviceComputeShaderDerivativesFeaturesNV
 
     if flag (VK_NV_cooperative_matrix)
@@ -6721,13 +5263,8 @@ library
         Vulkan.Ext.VK_NV_cooperative_matrix
 
       other-modules:
-        Vulkan.Types.Base
         Vulkan.Types.Enum.VkComponentTypeNV
-        Vulkan.Types.Enum.VkResult
         Vulkan.Types.Enum.VkScopeNV
-        Vulkan.Types.Enum.VkShaderStageFlags
-        Vulkan.Types.Enum.VkStructureType
-        Vulkan.Types.Handle
         Vulkan.Types.Struct.VkCooperativeMatrixPropertiesNV
         Vulkan.Types.Struct.VkPhysicalDeviceCooperativeMatrixFeaturesNV
         Vulkan.Types.Struct.VkPhysicalDeviceCooperativeMatrixPropertiesNV
@@ -6738,17 +5275,8 @@ library
         Vulkan.Ext.VK_NV_copy_memory_indirect
 
       other-modules:
-        Vulkan.Types.Base
-        Vulkan.Types.Enum.VkImageAspectFlags
-        Vulkan.Types.Enum.VkImageLayout
-        Vulkan.Types.Enum.VkQueueFlags
-        Vulkan.Types.Enum.VkStructureType
-        Vulkan.Types.Handle
         Vulkan.Types.Struct.VkCopyMemoryIndirectCommandNV
         Vulkan.Types.Struct.VkCopyMemoryToImageIndirectCommandNV
-        Vulkan.Types.Struct.VkExtent3D
-        Vulkan.Types.Struct.VkImageSubresourceLayers
-        Vulkan.Types.Struct.VkOffset3D
         Vulkan.Types.Struct.VkPhysicalDeviceCopyMemoryIndirectFeaturesNV
         Vulkan.Types.Struct.VkPhysicalDeviceCopyMemoryIndirectPropertiesNV
         Vulkan.Types.Command.VkCmdCopyMemoryIndirectNV
@@ -6759,9 +5287,6 @@ library
         Vulkan.Ext.VK_NV_corner_sampled_image
 
       other-modules:
-        Vulkan.Types.Base
-        Vulkan.Types.Enum.VkImageCreateFlagBits
-        Vulkan.Types.Enum.VkStructureType
         Vulkan.Types.Struct.VkPhysicalDeviceCornerSampledImageFeaturesNV
 
     if flag (VK_NV_coverage_reduction_mode)
@@ -6769,14 +5294,8 @@ library
         Vulkan.Ext.VK_NV_coverage_reduction_mode
 
       other-modules:
-        Vulkan.Types.Base
         Vulkan.Types.Enum.VkCoverageReductionModeNV
         Vulkan.Types.Enum.VkPipelineCoverageReductionStateCreateFlagsNV
-        Vulkan.Types.Enum.VkResult
-        Vulkan.Types.Enum.VkSampleCountFlagBits
-        Vulkan.Types.Enum.VkSampleCountFlags
-        Vulkan.Types.Enum.VkStructureType
-        Vulkan.Types.Handle
         Vulkan.Types.Struct.VkFramebufferMixedSamplesCombinationNV
         Vulkan.Types.Struct.VkPhysicalDeviceCoverageReductionModeFeaturesNV
         Vulkan.Types.Struct.VkPipelineCoverageReductionStateCreateInfoNV
@@ -6787,9 +5306,6 @@ library
         Vulkan.Ext.VK_NV_dedicated_allocation
 
       other-modules:
-        Vulkan.Types.Base
-        Vulkan.Types.Enum.VkStructureType
-        Vulkan.Types.Handle
         Vulkan.Types.Struct.VkDedicatedAllocationBufferCreateInfoNV
         Vulkan.Types.Struct.VkDedicatedAllocationImageCreateInfoNV
         Vulkan.Types.Struct.VkDedicatedAllocationMemoryAllocateInfoNV
@@ -6799,8 +5315,6 @@ library
         Vulkan.Ext.VK_NV_dedicated_allocation_image_aliasing
 
       other-modules:
-        Vulkan.Types.Base
-        Vulkan.Types.Enum.VkStructureType
         Vulkan.Types.Struct.VkPhysicalDeviceDedicatedAllocationImageAliasingFeaturesNV
 
     if flag (VK_NV_device_diagnostic_checkpoints)
@@ -6808,10 +5322,6 @@ library
         Vulkan.Ext.VK_NV_device_diagnostic_checkpoints
 
       other-modules:
-        Vulkan.Types.Enum.VkPipelineStageFlagBits
-        Vulkan.Types.Enum.VkPipelineStageFlags
-        Vulkan.Types.Enum.VkStructureType
-        Vulkan.Types.Handle
         Vulkan.Types.Struct.VkCheckpointDataNV
         Vulkan.Types.Struct.VkQueueFamilyCheckpointPropertiesNV
         Vulkan.Types.Command.VkCmdSetCheckpointNV
@@ -6822,10 +5332,8 @@ library
         Vulkan.Ext.VK_NV_device_diagnostics_config
 
       other-modules:
-        Vulkan.Types.Base
         Vulkan.Types.Enum.VkDeviceDiagnosticsConfigFlagBitsNV
         Vulkan.Types.Enum.VkDeviceDiagnosticsConfigFlagsNV
-        Vulkan.Types.Enum.VkStructureType
         Vulkan.Types.Struct.VkDeviceDiagnosticsConfigCreateInfoNV
         Vulkan.Types.Struct.VkPhysicalDeviceDiagnosticsConfigFeaturesNV
 
@@ -6834,36 +5342,11 @@ library
         Vulkan.Ext.VK_NV_device_generated_commands
 
       other-modules:
-        Vulkan.Types.Base
-        Vulkan.Types.Enum.VkAccessFlagBits
-        Vulkan.Types.Enum.VkFormat
-        Vulkan.Types.Enum.VkIndexType
         Vulkan.Types.Enum.VkIndirectCommandsLayoutUsageFlagBitsNV
         Vulkan.Types.Enum.VkIndirectCommandsLayoutUsageFlagsNV
         Vulkan.Types.Enum.VkIndirectCommandsTokenTypeNV
         Vulkan.Types.Enum.VkIndirectStateFlagBitsNV
         Vulkan.Types.Enum.VkIndirectStateFlagsNV
-        Vulkan.Types.Enum.VkInternalAllocationType
-        Vulkan.Types.Enum.VkObjectType
-        Vulkan.Types.Enum.VkPipelineBindPoint
-        Vulkan.Types.Enum.VkPipelineCreateFlagBits
-        Vulkan.Types.Enum.VkPipelineShaderStageCreateFlags
-        Vulkan.Types.Enum.VkPipelineStageFlagBits
-        Vulkan.Types.Enum.VkPipelineTessellationStateCreateFlags
-        Vulkan.Types.Enum.VkPipelineVertexInputStateCreateFlags
-        Vulkan.Types.Enum.VkResult
-        Vulkan.Types.Enum.VkShaderStageFlagBits
-        Vulkan.Types.Enum.VkShaderStageFlags
-        Vulkan.Types.Enum.VkStructureType
-        Vulkan.Types.Enum.VkSystemAllocationScope
-        Vulkan.Types.Enum.VkVertexInputRate
-        Vulkan.Types.FuncPointer.PFN_vkAllocationFunction
-        Vulkan.Types.FuncPointer.PFN_vkFreeFunction
-        Vulkan.Types.FuncPointer.PFN_vkInternalAllocationNotification
-        Vulkan.Types.FuncPointer.PFN_vkInternalFreeNotification
-        Vulkan.Types.FuncPointer.PFN_vkReallocationFunction
-        Vulkan.Types.Handle
-        Vulkan.Types.Struct.VkAllocationCallbacks
         Vulkan.Types.Struct.VkBindIndexBufferIndirectCommandNV
         Vulkan.Types.Struct.VkBindShaderGroupIndirectCommandNV
         Vulkan.Types.Struct.VkBindVertexBufferIndirectCommandNV
@@ -6874,18 +5357,10 @@ library
         Vulkan.Types.Struct.VkIndirectCommandsLayoutCreateInfoNV
         Vulkan.Types.Struct.VkIndirectCommandsLayoutTokenNV
         Vulkan.Types.Struct.VkIndirectCommandsStreamNV
-        Vulkan.Types.Struct.VkMemoryRequirements
         Vulkan.Types.Struct.VkMemoryRequirements2
         Vulkan.Types.Struct.VkPhysicalDeviceDeviceGeneratedCommandsFeaturesNV
         Vulkan.Types.Struct.VkPhysicalDeviceDeviceGeneratedCommandsPropertiesNV
-        Vulkan.Types.Struct.VkPipelineShaderStageCreateInfo
-        Vulkan.Types.Struct.VkPipelineTessellationStateCreateInfo
-        Vulkan.Types.Struct.VkPipelineVertexInputStateCreateInfo
         Vulkan.Types.Struct.VkSetStateFlagsIndirectCommandNV
-        Vulkan.Types.Struct.VkSpecializationInfo
-        Vulkan.Types.Struct.VkSpecializationMapEntry
-        Vulkan.Types.Struct.VkVertexInputAttributeDescription
-        Vulkan.Types.Struct.VkVertexInputBindingDescription
         Vulkan.Types.Command.VkCmdBindPipelineShaderGroupNV
         Vulkan.Types.Command.VkCmdExecuteGeneratedCommandsNV
         Vulkan.Types.Command.VkCmdPreprocessGeneratedCommandsNV
@@ -6899,7 +5374,6 @@ library
 
       other-modules:
         Vulkan.Types.Enum.VkExternalMemoryHandleTypeFlagsNV
-        Vulkan.Types.Enum.VkStructureType
         Vulkan.Types.Struct.VkExportMemoryAllocateInfoNV
         Vulkan.Types.Struct.VkExternalMemoryImageCreateInfoNV
 
@@ -6908,22 +5382,11 @@ library
         Vulkan.Ext.VK_NV_external_memory_capabilities
 
       other-modules:
-        Vulkan.Types.Base
         Vulkan.Types.Enum.VkExternalMemoryFeatureFlagBitsNV
         Vulkan.Types.Enum.VkExternalMemoryFeatureFlagsNV
         Vulkan.Types.Enum.VkExternalMemoryHandleTypeFlagBitsNV
         Vulkan.Types.Enum.VkExternalMemoryHandleTypeFlagsNV
-        Vulkan.Types.Enum.VkFormat
-        Vulkan.Types.Enum.VkImageCreateFlags
-        Vulkan.Types.Enum.VkImageTiling
-        Vulkan.Types.Enum.VkImageType
-        Vulkan.Types.Enum.VkImageUsageFlags
-        Vulkan.Types.Enum.VkResult
-        Vulkan.Types.Enum.VkSampleCountFlags
-        Vulkan.Types.Handle
-        Vulkan.Types.Struct.VkExtent3D
         Vulkan.Types.Struct.VkExternalImageFormatPropertiesNV
-        Vulkan.Types.Struct.VkImageFormatProperties
         Vulkan.Types.Command.VkGetPhysicalDeviceExternalImageFormatPropertiesNV
 
     if flag (VK_NV_external_memory_rdma)
@@ -6931,12 +5394,7 @@ library
         Vulkan.Ext.VK_NV_external_memory_rdma
 
       other-modules:
-        Vulkan.Types.Base
         Vulkan.Types.Enum.VkExternalMemoryHandleTypeFlagBits
-        Vulkan.Types.Enum.VkMemoryPropertyFlagBits
-        Vulkan.Types.Enum.VkResult
-        Vulkan.Types.Enum.VkStructureType
-        Vulkan.Types.Handle
         Vulkan.Types.Struct.VkMemoryGetRemoteAddressInfoNV
         Vulkan.Types.Struct.VkPhysicalDeviceExternalMemoryRDMAFeaturesNV
         Vulkan.Types.Command.VkGetMemoryRemoteAddressNV
@@ -6948,9 +5406,6 @@ library
       other-modules:
         Vulkan.Types.Protected
         Vulkan.Types.Enum.VkExternalMemoryHandleTypeFlagsNV
-        Vulkan.Types.Enum.VkResult
-        Vulkan.Types.Enum.VkStructureType
-        Vulkan.Types.Handle
         Vulkan.Types.Struct.VkExportMemoryWin32HandleInfoNV
         Vulkan.Types.Struct.VkImportMemoryWin32HandleInfoNV
         Vulkan.Types.Command.VkGetMemoryWin32HandleNV
@@ -6959,17 +5414,12 @@ library
       exposed-modules:
         Vulkan.Ext.VK_NV_fill_rectangle
 
-      other-modules:
-        Vulkan.Types.Enum.VkPolygonMode
-
     if flag (VK_NV_fragment_coverage_to_color)
       exposed-modules:
         Vulkan.Ext.VK_NV_fragment_coverage_to_color
 
       other-modules:
-        Vulkan.Types.Base
         Vulkan.Types.Enum.VkPipelineCoverageToColorStateCreateFlagsNV
-        Vulkan.Types.Enum.VkStructureType
         Vulkan.Types.Struct.VkPipelineCoverageToColorStateCreateInfoNV
 
     if flag (VK_NV_fragment_shader_barycentric)
@@ -6977,8 +5427,6 @@ library
         Vulkan.Ext.VK_NV_fragment_shader_barycentric
 
       other-modules:
-        Vulkan.Types.Base
-        Vulkan.Types.Enum.VkStructureType
         Vulkan.Types.Struct.VkPhysicalDeviceFragmentShaderBarycentricFeaturesNV
 
     if flag (VK_NV_fragment_shading_rate_enums)
@@ -6986,13 +5434,9 @@ library
         Vulkan.Ext.VK_NV_fragment_shading_rate_enums
 
       other-modules:
-        Vulkan.Types.Base
         Vulkan.Types.Enum.VkFragmentShadingRateCombinerOpKHR
         Vulkan.Types.Enum.VkFragmentShadingRateNV
         Vulkan.Types.Enum.VkFragmentShadingRateTypeNV
-        Vulkan.Types.Enum.VkSampleCountFlagBits
-        Vulkan.Types.Enum.VkStructureType
-        Vulkan.Types.Handle
         Vulkan.Types.Struct.VkPhysicalDeviceFragmentShadingRateEnumsFeaturesNV
         Vulkan.Types.Struct.VkPhysicalDeviceFragmentShadingRateEnumsPropertiesNV
         Vulkan.Types.Struct.VkPipelineFragmentShadingRateEnumStateCreateInfoNV
@@ -7003,10 +5447,8 @@ library
         Vulkan.Ext.VK_NV_framebuffer_mixed_samples
 
       other-modules:
-        Vulkan.Types.Base
         Vulkan.Types.Enum.VkCoverageModulationModeNV
         Vulkan.Types.Enum.VkPipelineCoverageModulationStateCreateFlagsNV
-        Vulkan.Types.Enum.VkStructureType
         Vulkan.Types.Struct.VkPipelineCoverageModulationStateCreateInfoNV
 
     if flag (VK_NV_geometry_shader_passthrough)
@@ -7017,28 +5459,20 @@ library
       exposed-modules:
         Vulkan.Ext.VK_NV_glsl_shader
 
-      other-modules:
-        Vulkan.Types.Enum.VkResult
-
     if flag (VK_NV_inherited_viewport_scissor)
       exposed-modules:
         Vulkan.Ext.VK_NV_inherited_viewport_scissor
 
       other-modules:
-        Vulkan.Types.Base
-        Vulkan.Types.Enum.VkStructureType
         Vulkan.Types.Struct.VkCommandBufferInheritanceViewportScissorInfoNV
         Vulkan.Types.Struct.VkPhysicalDeviceInheritedViewportScissorFeaturesNV
-        Vulkan.Types.Struct.VkViewport
 
     if flag (VK_NV_linear_color_attachment)
       exposed-modules:
         Vulkan.Ext.VK_NV_linear_color_attachment
 
       other-modules:
-        Vulkan.Types.Base
         Vulkan.Types.Enum.VkFormatFeatureFlagBits2
-        Vulkan.Types.Enum.VkStructureType
         Vulkan.Types.Struct.VkPhysicalDeviceLinearColorAttachmentFeaturesNV
 
     if flag (VK_NV_memory_decompression)
@@ -7046,11 +5480,8 @@ library
         Vulkan.Ext.VK_NV_memory_decompression
 
       other-modules:
-        Vulkan.Types.Base
         Vulkan.Types.Enum.VkMemoryDecompressionMethodFlagBitsNV
         Vulkan.Types.Enum.VkMemoryDecompressionMethodFlagsNV
-        Vulkan.Types.Enum.VkStructureType
-        Vulkan.Types.Handle
         Vulkan.Types.Struct.VkDecompressMemoryRegionNV
         Vulkan.Types.Struct.VkPhysicalDeviceMemoryDecompressionFeaturesNV
         Vulkan.Types.Struct.VkPhysicalDeviceMemoryDecompressionPropertiesNV
@@ -7062,11 +5493,6 @@ library
         Vulkan.Ext.VK_NV_mesh_shader
 
       other-modules:
-        Vulkan.Types.Base
-        Vulkan.Types.Enum.VkPipelineStageFlagBits
-        Vulkan.Types.Enum.VkShaderStageFlagBits
-        Vulkan.Types.Enum.VkStructureType
-        Vulkan.Types.Handle
         Vulkan.Types.Struct.VkDrawMeshTasksIndirectCommandNV
         Vulkan.Types.Struct.VkPhysicalDeviceMeshShaderFeaturesNV
         Vulkan.Types.Struct.VkPhysicalDeviceMeshShaderPropertiesNV
@@ -7079,13 +5505,8 @@ library
         Vulkan.Ext.VK_NV_optical_flow
 
       other-modules:
-        Vulkan.Types.Base
         Vulkan.Types.Enum.VkAccessFlagBits2
-        Vulkan.Types.Enum.VkFormat
         Vulkan.Types.Enum.VkFormatFeatureFlagBits2
-        Vulkan.Types.Enum.VkImageLayout
-        Vulkan.Types.Enum.VkInternalAllocationType
-        Vulkan.Types.Enum.VkObjectType
         Vulkan.Types.Enum.VkOpticalFlowExecuteFlagBitsNV
         Vulkan.Types.Enum.VkOpticalFlowExecuteFlagsNV
         Vulkan.Types.Enum.VkOpticalFlowGridSizeFlagBitsNV
@@ -7097,19 +5518,6 @@ library
         Vulkan.Types.Enum.VkOpticalFlowUsageFlagBitsNV
         Vulkan.Types.Enum.VkOpticalFlowUsageFlagsNV
         Vulkan.Types.Enum.VkPipelineStageFlagBits2
-        Vulkan.Types.Enum.VkQueueFlagBits
-        Vulkan.Types.Enum.VkResult
-        Vulkan.Types.Enum.VkStructureType
-        Vulkan.Types.Enum.VkSystemAllocationScope
-        Vulkan.Types.FuncPointer.PFN_vkAllocationFunction
-        Vulkan.Types.FuncPointer.PFN_vkFreeFunction
-        Vulkan.Types.FuncPointer.PFN_vkInternalAllocationNotification
-        Vulkan.Types.FuncPointer.PFN_vkInternalFreeNotification
-        Vulkan.Types.FuncPointer.PFN_vkReallocationFunction
-        Vulkan.Types.Handle
-        Vulkan.Types.Struct.VkAllocationCallbacks
-        Vulkan.Types.Struct.VkExtent2D
-        Vulkan.Types.Struct.VkOffset2D
         Vulkan.Types.Struct.VkOpticalFlowExecuteInfoNV
         Vulkan.Types.Struct.VkOpticalFlowImageFormatInfoNV
         Vulkan.Types.Struct.VkOpticalFlowImageFormatPropertiesNV
@@ -7117,7 +5525,6 @@ library
         Vulkan.Types.Struct.VkOpticalFlowSessionCreatePrivateDataInfoNV
         Vulkan.Types.Struct.VkPhysicalDeviceOpticalFlowFeaturesNV
         Vulkan.Types.Struct.VkPhysicalDeviceOpticalFlowPropertiesNV
-        Vulkan.Types.Struct.VkRect2D
         Vulkan.Types.Command.VkBindOpticalFlowSessionImageNV
         Vulkan.Types.Command.VkCmdOpticalFlowExecuteNV
         Vulkan.Types.Command.VkCreateOpticalFlowSessionNV
@@ -7129,8 +5536,6 @@ library
         Vulkan.Ext.VK_NV_present_barrier
 
       other-modules:
-        Vulkan.Types.Base
-        Vulkan.Types.Enum.VkStructureType
         Vulkan.Types.Struct.VkPhysicalDevicePresentBarrierFeaturesNV
         Vulkan.Types.Struct.VkSurfaceCapabilitiesPresentBarrierNV
         Vulkan.Types.Struct.VkSwapchainPresentBarrierCreateInfoNV
@@ -7140,20 +5545,15 @@ library
         Vulkan.Ext.VK_NV_ray_tracing
 
       other-modules:
-        Vulkan.Types.Base
         Vulkan.Types.Enum.VkAccelerationStructureMemoryRequirementsTypeNV
         Vulkan.Types.Enum.VkAccelerationStructureTypeKHR
         Vulkan.Types.Enum.VkAccelerationStructureTypeNV
-        Vulkan.Types.Enum.VkAccessFlagBits
-        Vulkan.Types.Enum.VkBufferUsageFlagBits
         Vulkan.Types.Enum.VkBuildAccelerationStructureFlagBitsKHR
         Vulkan.Types.Enum.VkBuildAccelerationStructureFlagBitsNV
         Vulkan.Types.Enum.VkBuildAccelerationStructureFlagsNV
         Vulkan.Types.Enum.VkCopyAccelerationStructureModeKHR
         Vulkan.Types.Enum.VkCopyAccelerationStructureModeNV
         Vulkan.Types.Enum.VkDebugReportObjectTypeEXT
-        Vulkan.Types.Enum.VkDescriptorType
-        Vulkan.Types.Enum.VkFormat
         Vulkan.Types.Enum.VkGeometryFlagBitsKHR
         Vulkan.Types.Enum.VkGeometryFlagBitsNV
         Vulkan.Types.Enum.VkGeometryFlagsKHR
@@ -7164,46 +5564,22 @@ library
         Vulkan.Types.Enum.VkGeometryInstanceFlagsNV
         Vulkan.Types.Enum.VkGeometryTypeKHR
         Vulkan.Types.Enum.VkGeometryTypeNV
-        Vulkan.Types.Enum.VkIndexType
-        Vulkan.Types.Enum.VkInternalAllocationType
-        Vulkan.Types.Enum.VkObjectType
-        Vulkan.Types.Enum.VkPipelineBindPoint
-        Vulkan.Types.Enum.VkPipelineCreateFlagBits
-        Vulkan.Types.Enum.VkPipelineCreateFlags
-        Vulkan.Types.Enum.VkPipelineShaderStageCreateFlags
-        Vulkan.Types.Enum.VkPipelineStageFlagBits
-        Vulkan.Types.Enum.VkQueryType
         Vulkan.Types.Enum.VkRayTracingShaderGroupTypeKHR
         Vulkan.Types.Enum.VkRayTracingShaderGroupTypeNV
-        Vulkan.Types.Enum.VkResult
-        Vulkan.Types.Enum.VkShaderStageFlagBits
-        Vulkan.Types.Enum.VkStructureType
-        Vulkan.Types.Enum.VkSystemAllocationScope
-        Vulkan.Types.FuncPointer.PFN_vkAllocationFunction
-        Vulkan.Types.FuncPointer.PFN_vkFreeFunction
-        Vulkan.Types.FuncPointer.PFN_vkInternalAllocationNotification
-        Vulkan.Types.FuncPointer.PFN_vkInternalFreeNotification
-        Vulkan.Types.FuncPointer.PFN_vkReallocationFunction
-        Vulkan.Types.Handle
         Vulkan.Types.Struct.VkAabbPositionsNV
         Vulkan.Types.Struct.VkAccelerationStructureCreateInfoNV
         Vulkan.Types.Struct.VkAccelerationStructureInfoNV
         Vulkan.Types.Struct.VkAccelerationStructureInstanceNV
         Vulkan.Types.Struct.VkAccelerationStructureMemoryRequirementsInfoNV
-        Vulkan.Types.Struct.VkAllocationCallbacks
         Vulkan.Types.Struct.VkBindAccelerationStructureMemoryInfoNV
         Vulkan.Types.Struct.VkGeometryAABBNV
         Vulkan.Types.Struct.VkGeometryDataNV
         Vulkan.Types.Struct.VkGeometryNV
         Vulkan.Types.Struct.VkGeometryTrianglesNV
-        Vulkan.Types.Struct.VkMemoryRequirements
         Vulkan.Types.Struct.VkMemoryRequirements2KHR
         Vulkan.Types.Struct.VkPhysicalDeviceRayTracingPropertiesNV
-        Vulkan.Types.Struct.VkPipelineShaderStageCreateInfo
         Vulkan.Types.Struct.VkRayTracingPipelineCreateInfoNV
         Vulkan.Types.Struct.VkRayTracingShaderGroupCreateInfoNV
-        Vulkan.Types.Struct.VkSpecializationInfo
-        Vulkan.Types.Struct.VkSpecializationMapEntry
         Vulkan.Types.Struct.VkTransformMatrixKHR
         Vulkan.Types.Struct.VkTransformMatrixNV
         Vulkan.Types.Struct.VkWriteDescriptorSetAccelerationStructureNV
@@ -7225,9 +5601,7 @@ library
         Vulkan.Ext.VK_NV_ray_tracing_invocation_reorder
 
       other-modules:
-        Vulkan.Types.Base
         Vulkan.Types.Enum.VkRayTracingInvocationReorderModeNV
-        Vulkan.Types.Enum.VkStructureType
         Vulkan.Types.Struct.VkPhysicalDeviceRayTracingInvocationReorderFeaturesNV
         Vulkan.Types.Struct.VkPhysicalDeviceRayTracingInvocationReorderPropertiesNV
 
@@ -7236,15 +5610,12 @@ library
         Vulkan.Ext.VK_NV_ray_tracing_motion_blur
 
       other-modules:
-        Vulkan.Types.Base
         Vulkan.Types.Enum.VkAccelerationStructureCreateFlagBitsKHR
         Vulkan.Types.Enum.VkAccelerationStructureMotionInfoFlagsNV
         Vulkan.Types.Enum.VkAccelerationStructureMotionInstanceFlagsNV
         Vulkan.Types.Enum.VkAccelerationStructureMotionInstanceTypeNV
         Vulkan.Types.Enum.VkBuildAccelerationStructureFlagBitsKHR
         Vulkan.Types.Enum.VkGeometryInstanceFlagsKHR
-        Vulkan.Types.Enum.VkPipelineCreateFlagBits
-        Vulkan.Types.Enum.VkStructureType
         Vulkan.Types.Struct.VkAccelerationStructureGeometryMotionTrianglesDataNV
         Vulkan.Types.Struct.VkAccelerationStructureInstanceKHR
         Vulkan.Types.Struct.VkAccelerationStructureMatrixMotionInstanceNV
@@ -7262,8 +5633,6 @@ library
         Vulkan.Ext.VK_NV_representative_fragment_test
 
       other-modules:
-        Vulkan.Types.Base
-        Vulkan.Types.Enum.VkStructureType
         Vulkan.Types.Struct.VkPhysicalDeviceRepresentativeFragmentTestFeaturesNV
         Vulkan.Types.Struct.VkPipelineRepresentativeFragmentTestStateCreateInfoNV
 
@@ -7276,15 +5645,8 @@ library
         Vulkan.Ext.VK_NV_scissor_exclusive
 
       other-modules:
-        Vulkan.Types.Base
-        Vulkan.Types.Enum.VkDynamicState
-        Vulkan.Types.Enum.VkStructureType
-        Vulkan.Types.Handle
-        Vulkan.Types.Struct.VkExtent2D
-        Vulkan.Types.Struct.VkOffset2D
         Vulkan.Types.Struct.VkPhysicalDeviceExclusiveScissorFeaturesNV
         Vulkan.Types.Struct.VkPipelineViewportExclusiveScissorStateCreateInfoNV
-        Vulkan.Types.Struct.VkRect2D
         Vulkan.Types.Command.VkCmdSetExclusiveScissorNV
 
     if flag (VK_NV_shader_image_footprint)
@@ -7292,8 +5654,6 @@ library
         Vulkan.Ext.VK_NV_shader_image_footprint
 
       other-modules:
-        Vulkan.Types.Base
-        Vulkan.Types.Enum.VkStructureType
         Vulkan.Types.Struct.VkPhysicalDeviceShaderImageFootprintFeaturesNV
 
     if flag (VK_NV_shader_sm_builtins)
@@ -7301,8 +5661,6 @@ library
         Vulkan.Ext.VK_NV_shader_sm_builtins
 
       other-modules:
-        Vulkan.Types.Base
-        Vulkan.Types.Enum.VkStructureType
         Vulkan.Types.Struct.VkPhysicalDeviceShaderSMBuiltinsFeaturesNV
         Vulkan.Types.Struct.VkPhysicalDeviceShaderSMBuiltinsPropertiesNV
 
@@ -7318,19 +5676,10 @@ library
         Vulkan.Ext.VK_NV_shading_rate_image
 
       other-modules:
-        Vulkan.Types.Base
-        Vulkan.Types.Enum.VkAccessFlagBits
         Vulkan.Types.Enum.VkCoarseSampleOrderTypeNV
-        Vulkan.Types.Enum.VkDynamicState
-        Vulkan.Types.Enum.VkImageLayout
-        Vulkan.Types.Enum.VkImageUsageFlagBits
-        Vulkan.Types.Enum.VkPipelineStageFlagBits
         Vulkan.Types.Enum.VkShadingRatePaletteEntryNV
-        Vulkan.Types.Enum.VkStructureType
-        Vulkan.Types.Handle
         Vulkan.Types.Struct.VkCoarseSampleLocationNV
         Vulkan.Types.Struct.VkCoarseSampleOrderCustomNV
-        Vulkan.Types.Struct.VkExtent2D
         Vulkan.Types.Struct.VkPhysicalDeviceShadingRateImageFeaturesNV
         Vulkan.Types.Struct.VkPhysicalDeviceShadingRateImagePropertiesNV
         Vulkan.Types.Struct.VkPipelineViewportCoarseSampleOrderStateCreateInfoNV
@@ -7350,7 +5699,6 @@ library
 
       other-modules:
         Vulkan.Types.Enum.VkPipelineViewportSwizzleStateCreateFlagsNV
-        Vulkan.Types.Enum.VkStructureType
         Vulkan.Types.Enum.VkViewportCoordinateSwizzleNV
         Vulkan.Types.Struct.VkPipelineViewportSwizzleStateCreateInfoNV
         Vulkan.Types.Struct.VkViewportSwizzleNV
@@ -7360,8 +5708,6 @@ library
         Vulkan.Ext.VK_NV_win32_keyed_mutex
 
       other-modules:
-        Vulkan.Types.Enum.VkStructureType
-        Vulkan.Types.Handle
         Vulkan.Types.Struct.VkWin32KeyedMutexAcquireReleaseInfoNV
 
     if flag (VK_QCOM_fragment_density_map_offset)
@@ -7369,11 +5715,6 @@ library
         Vulkan.Ext.VK_QCOM_fragment_density_map_offset
 
       other-modules:
-        Vulkan.Types.Base
-        Vulkan.Types.Enum.VkImageCreateFlagBits
-        Vulkan.Types.Enum.VkStructureType
-        Vulkan.Types.Struct.VkExtent2D
-        Vulkan.Types.Struct.VkOffset2D
         Vulkan.Types.Struct.VkPhysicalDeviceFragmentDensityMapOffsetFeaturesQCOM
         Vulkan.Types.Struct.VkPhysicalDeviceFragmentDensityMapOffsetPropertiesQCOM
         Vulkan.Types.Struct.VkSubpassFragmentDensityMapOffsetEndInfoQCOM
@@ -7383,15 +5724,8 @@ library
         Vulkan.Ext.VK_QCOM_image_processing
 
       other-modules:
-        Vulkan.Types.Base
-        Vulkan.Types.Enum.VkDescriptorType
         Vulkan.Types.Enum.VkFormatFeatureFlagBits2
-        Vulkan.Types.Enum.VkImageUsageFlagBits
-        Vulkan.Types.Enum.VkSamplerCreateFlagBits
-        Vulkan.Types.Enum.VkStructureType
-        Vulkan.Types.Struct.VkExtent2D
         Vulkan.Types.Struct.VkImageViewSampleWeightCreateInfoQCOM
-        Vulkan.Types.Struct.VkOffset2D
         Vulkan.Types.Struct.VkPhysicalDeviceImageProcessingFeaturesQCOM
         Vulkan.Types.Struct.VkPhysicalDeviceImageProcessingPropertiesQCOM
 
@@ -7400,36 +5734,23 @@ library
         Vulkan.Ext.VK_QCOM_multiview_per_view_viewports
 
       other-modules:
-        Vulkan.Types.Base
-        Vulkan.Types.Enum.VkStructureType
         Vulkan.Types.Struct.VkPhysicalDeviceMultiviewPerViewViewportsFeaturesQCOM
 
     if flag (VK_QCOM_render_pass_shader_resolve)
       exposed-modules:
         Vulkan.Ext.VK_QCOM_render_pass_shader_resolve
 
-      other-modules:
-        Vulkan.Types.Enum.VkSubpassDescriptionFlagBits
-
     if flag (VK_QCOM_render_pass_store_ops)
       exposed-modules:
         Vulkan.Ext.VK_QCOM_render_pass_store_ops
-
-      other-modules:
-        Vulkan.Types.Enum.VkAttachmentStoreOp
 
     if flag (VK_QCOM_render_pass_transform)
       exposed-modules:
         Vulkan.Ext.VK_QCOM_render_pass_transform
 
       other-modules:
-        Vulkan.Types.Enum.VkRenderPassCreateFlagBits
-        Vulkan.Types.Enum.VkStructureType
         Vulkan.Types.Enum.VkSurfaceTransformFlagBitsKHR
         Vulkan.Types.Struct.VkCommandBufferInheritanceRenderPassTransformInfoQCOM
-        Vulkan.Types.Struct.VkExtent2D
-        Vulkan.Types.Struct.VkOffset2D
-        Vulkan.Types.Struct.VkRect2D
         Vulkan.Types.Struct.VkRenderPassTransformBeginInfoQCOM
 
     if flag (VK_QCOM_rotated_copy_commands)
@@ -7437,7 +5758,6 @@ library
         Vulkan.Ext.VK_QCOM_rotated_copy_commands
 
       other-modules:
-        Vulkan.Types.Enum.VkStructureType
         Vulkan.Types.Enum.VkSurfaceTransformFlagBitsKHR
         Vulkan.Types.Struct.VkCopyCommandTransformInfoQCOM
 
@@ -7446,27 +5766,13 @@ library
         Vulkan.Ext.VK_QCOM_tile_properties
 
       other-modules:
-        Vulkan.Types.Base
-        Vulkan.Types.Enum.VkAttachmentLoadOp
-        Vulkan.Types.Enum.VkAttachmentStoreOp
-        Vulkan.Types.Enum.VkImageLayout
         Vulkan.Types.Enum.VkRenderingFlags
         Vulkan.Types.Enum.VkResolveModeFlagBits
-        Vulkan.Types.Enum.VkResult
-        Vulkan.Types.Enum.VkStructureType
-        Vulkan.Types.Handle
-        Vulkan.Types.Struct.VkClearDepthStencilValue
-        Vulkan.Types.Struct.VkExtent2D
-        Vulkan.Types.Struct.VkExtent3D
-        Vulkan.Types.Struct.VkOffset2D
         Vulkan.Types.Struct.VkPhysicalDeviceTilePropertiesFeaturesQCOM
-        Vulkan.Types.Struct.VkRect2D
         Vulkan.Types.Struct.VkRenderingAttachmentInfo
         Vulkan.Types.Struct.VkRenderingInfo
         Vulkan.Types.Struct.VkRenderingInfoKHR
         Vulkan.Types.Struct.VkTilePropertiesQCOM
-        Vulkan.Types.Union.VkClearColorValue
-        Vulkan.Types.Union.VkClearValue
         Vulkan.Types.Command.VkGetDynamicRenderingTilePropertiesQCOM
         Vulkan.Types.Command.VkGetFramebufferTilePropertiesQCOM
 
@@ -7476,19 +5782,7 @@ library
 
       other-modules:
         Vulkan.Types.Protected
-        Vulkan.Types.Base
-        Vulkan.Types.Enum.VkInternalAllocationType
-        Vulkan.Types.Enum.VkResult
         Vulkan.Types.Enum.VkScreenSurfaceCreateFlagsQNX
-        Vulkan.Types.Enum.VkStructureType
-        Vulkan.Types.Enum.VkSystemAllocationScope
-        Vulkan.Types.FuncPointer.PFN_vkAllocationFunction
-        Vulkan.Types.FuncPointer.PFN_vkFreeFunction
-        Vulkan.Types.FuncPointer.PFN_vkInternalAllocationNotification
-        Vulkan.Types.FuncPointer.PFN_vkInternalFreeNotification
-        Vulkan.Types.FuncPointer.PFN_vkReallocationFunction
-        Vulkan.Types.Handle
-        Vulkan.Types.Struct.VkAllocationCallbacks
         Vulkan.Types.Struct.VkScreenSurfaceCreateInfoQNX
         Vulkan.Types.Command.VkCreateScreenSurfaceQNX
         Vulkan.Types.Command.VkGetPhysicalDeviceScreenPresentationSupportQNX
@@ -7498,8 +5792,6 @@ library
         Vulkan.Ext.VK_SEC_amigo_profiling
 
       other-modules:
-        Vulkan.Types.Base
-        Vulkan.Types.Enum.VkStructureType
         Vulkan.Types.Struct.VkAmigoProfilingSubmitInfoSEC
         Vulkan.Types.Struct.VkPhysicalDeviceAmigoProfilingFeaturesSEC
 
@@ -7508,9 +5800,6 @@ library
         Vulkan.Ext.VK_VALVE_descriptor_set_host_mapping
 
       other-modules:
-        Vulkan.Types.Base
-        Vulkan.Types.Enum.VkStructureType
-        Vulkan.Types.Handle
         Vulkan.Types.Struct.VkDescriptorSetBindingReferenceVALVE
         Vulkan.Types.Struct.VkDescriptorSetLayoutHostMappingInfoVALVE
         Vulkan.Types.Struct.VkPhysicalDeviceDescriptorSetHostMappingFeaturesVALVE
@@ -7522,11 +5811,6 @@ library
         Vulkan.Ext.VK_VALVE_mutable_descriptor_type
 
       other-modules:
-        Vulkan.Types.Base
-        Vulkan.Types.Enum.VkDescriptorPoolCreateFlagBits
-        Vulkan.Types.Enum.VkDescriptorSetLayoutCreateFlagBits
-        Vulkan.Types.Enum.VkDescriptorType
-        Vulkan.Types.Enum.VkStructureType
         Vulkan.Types.Struct.VkMutableDescriptorTypeCreateInfoVALVE
         Vulkan.Types.Struct.VkMutableDescriptorTypeListEXT
         Vulkan.Types.Struct.VkMutableDescriptorTypeListVALVE

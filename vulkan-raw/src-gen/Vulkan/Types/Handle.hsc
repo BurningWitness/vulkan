@@ -1,4 +1,5 @@
 {-# LANGUAGE CPP #-}
+{-# LANGUAGE EmptyDataDecls #-}
 {-# LANGUAGE GeneralizedNewtypeDeriving #-}
 
 #include <vulkan/vulkan.h>

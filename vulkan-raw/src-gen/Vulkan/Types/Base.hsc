@@ -1,3 +1,5 @@
+{-# LANGUAGE EmptyDataDecls #-}
+
 #include <vulkan/vulkan.h>
 
 module Vulkan.Types.Base where
