@@ -20,13 +20,13 @@ jobs:
 
             PATH=$HOME/.ghcup/bin:$PATH
 
-            ghcup install cabal 3.8.1.0
-            ghcup set cabal 3.8.1.0
+            ghcup install cabal 3.6.2.0
+            ghcup set cabal 3.6.2.0
 
             ghcup install ghc 9.2.5
             ghcup set ghc 9.2.5
 
-            sudo apt-get install libvulkan-dev
+            sudo apt-get install libgl-dev libvulkan-dev xorg-dev
 
       - run:
           name: Update Dependencies
@@ -40,8 +40,9 @@ jobs:
           command: |
             PATH=$HOME/.ghcup/bin:$PATH
 
-            cabal new-build vulkan-raw
-            cabal new-build vk-mem-alloc
+            mkdir /tmp/out
+            cd vulkan-example
+            cabal new-install --install-method=copy --installdir=/tmp/out vulkan-example
 
       - save_cache:
           name: Cache
@@ -49,6 +50,9 @@ jobs:
           paths:
             - "/root/.cabal"
             - "dist-newstyle"
+
+      - store_artifact:
+          path: /tmp/out/vulkan-example
 
   build-linux:
     machine:

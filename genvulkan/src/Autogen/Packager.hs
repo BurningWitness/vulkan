@@ -1592,6 +1592,18 @@ writeModules path mdls = do
 
 
 
+purgeModuleLists :: Map Class (Set (Category, String)) -> Either String (Map Class (Set (Category, String)))
+purgeModuleLists sorted =
+  case Map.lookup (Feat "vulkan" 1.0) sorted of
+    Nothing  -> Left "Could not find core version 1.0"
+    Just ver ->
+      let go (Feat "vulkan" 1.0) set = set
+          go _                   set = Set.filter (\(c, _) -> not $ elem c [Mixer.Define, Basic, Mixer.Handle])
+                                         $ Set.difference set ver
+      in Right $ Map.mapWithKey go sorted
+
+
+
 cabalExtensions :: Map Class (Set (Category, String)) -> Either String (Map Class Body)
 cabalExtensions =
   Map.traverseWithKey $ \c s ->
@@ -1611,54 +1623,7 @@ cabalExtensions =
                               Set.foldr (\(cat, name) -> mappend (Dependencies $ Map.singleton cat (Set.singleton name))) mempty s
                 }
 
-{-
-exposedDependencies :: Mixed -> Either String (Map (Maybe Cabal.Extension) [String])
-exposedDependencies mixd = do
-  feats <- (\f -> foldlM f [] $ getField @"features" mixd) $ \acc feat -> do
-             name <- featureName (getField @"api" feat) (getField @"number" feat)
-             Right $ acc <> [(Nothing, [moduleName name])]
 
-  exts <- (\f -> foldlMWithKey f [] $ getField @"extensions" mixd) $ \acc name ext -> do
-            mayPlatform <- flip traverse (getField @"platform" ext) $ \platform -> do
-                             macro <- lookupProtect mixd platform
-                             Right Cabal.Extension
-                                     { name  = platform
-                                     , macro = let Flags _ macro_ = macro
-                                               in macro_
-                                     }
-            Right $ acc <> [(mayPlatform, [moduleName $ extensionName name])]
-
-  Right . Map.fromListWith (flip (<>)) $ feats <> exts
-
-otherDependencies :: Mixed -> SortedDependencies -> Map (Maybe Cabal.Extension) [String]
-otherDependencies _mixd sorted =
-  let fuse Mixer.Include _       = Nothing
-      fuse Protected _           = Just $ protectName
-      fuse Define _              = Just $ defineName
-      fuse Basic _               = Just $ baseName
-      fuse Const _               = Just $ constantName
-      fuse EnumCat str           = Just $ enumName str
-      fuse FuncPointerCat _      = Just $ funcPointerName
-      fuse Handle _              = Just $ handleName
-      fuse Mixer.StructCat str   = Just $ structName str
-      fuse Mixer.UnionCat str    = Just $ unionName str
-      fuse Function str          = Just $ commandName str
-
-  in sorted <&> \entry ->
-       Set.toAscList . Set.fromList . catMaybes . fmap (fmap moduleName . uncurry fuse) $ Set.toList entry
-
-cabalDependencies :: Mixed -> SortedDependencies -> Either String (Map (Maybe Cabal.Extension) Cabal.Body)
-cabalDependencies mixd sorted = do
-  exposed <- exposedDependencies mixd
-  let other = Map.insertWith (<>) Nothing
-                [ "Vulkan.Types.Command.VkGetDeviceFunPtr", "Vulkan.Types.Command.VkGetInstanceFunPtr"
-                , "Vulkan.Types.Constant", "Vulkan.Types.VkFun"
-                ]
-                $ otherDependencies mixd sorted
-  Right $ Map.mergeWithKey (\_ a b -> Just $ Cabal.Body a b)
-                           (fmap $ flip Cabal.Body []) (fmap $ Cabal.Body []) exposed other
-
--}
 
 package :: Mixed -> Augments -> Either String [Module]
 package mixed augs = do

@@ -84,7 +84,7 @@ autogen xmlPath = do
             Left err   -> die $ "Packager issue:\n" <> err
             Right pack -> return pack
 
-  classes <- case cabalExtensions bulks of
+  classes <- case cabalExtensions =<< purgeModuleLists bulks of
                Left err -> die $ "Cabal file forming issue: " <> err
                Right cs -> return cs
 

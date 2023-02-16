@@ -1212,8 +1212,6 @@ digModuleLists mixed = traverse $ shuffle Set.empty
 
 
         _ -> Right acc
-  
-  
 
 
 
@@ -1223,44 +1221,6 @@ compartPlatforms frac =
   in Map.foldrWithKey (\k v -> (:) (f k v)) [] $ getField @"platforms" frac
 
 
-
-{-
-type SortedDependencies = Map (Maybe Cabal.Extension) (Set (Category, String))
-
-sortDependencies :: Fractions -> SortedMentions -> Either String SortedDependencies
-sortDependencies frac sorted =
-  (\f -> foldlMWithKey f Map.empty sorted) $ \acc0 cat mentions ->
-    (\f -> foldlMWithKey f acc0 mentions) $ \acc1 name tag -> do
-      let nodep = Map.insertWith (\_ -> Set.insert (cat, name)) Nothing (Set.singleton (cat, name)) acc1
-      if elem cat [EnumCat, Mixer.StructCat, Mixer.UnionCat, Function]
-           && Map.null (getField @"features" tag)
-        then do
-          deps <-
-            (\f -> foldlM f Set.empty . Map.keys $ getField @"extensions" tag) $ \acc2 extname ->
-              case Map.lookup extname $ getField @"extensions" frac of
-                Nothing  -> Left $ "No extension " <> extname
-                Just ext ->
-                  if any (== "disabled") $ getField @"supported" ext
-                    then Right acc2
-                    else
-                      case getField @"platform" ext of
-                        Nothing   -> Right $ Set.insert Nothing acc2
-                        Just plat ->
-                          case Map.lookup plat $ getField @"platforms" frac of
-                            Nothing       -> Left $ "No platform " <> plat
-                            Just platform ->
-                              Right $ Set.insert (Just $ Cabal.Extension plat $ getField @"protect" platform) acc2
-
-          if Set.member Nothing deps
-            then Right nodep
-            else
-              case catMaybes $ Set.toList deps of
-                []  -> Right nodep
-                [d] -> Right $ Map.insertWith (\_ -> Set.insert (cat, name)) (Just d) (Set.singleton (cat, name)) acc1
-                ds  -> Left $ show cat <> " " <> name <> " depends on multiple extensions: " <> show ds
-        else Right nodep
-
--}
 
 mix :: Fractions -> Either String (Mixed, [Cabal.Platform], Map Class (Set (Category, String)))
 mix fractions = do
@@ -1282,6 +1242,5 @@ mix fractions = do
              <*> mixCommands fractions mentions
              <*> mixFeatures fractions enums
              <*> mixExtensions fractions mentions enums
-  (,,) mixed
-       (compartPlatforms fractions)
-    <$> digModuleLists mixed (compartMentions fractions mentions sorted)
+  dug <- digModuleLists mixed (compartMentions fractions mentions sorted)
+  Right (mixed, compartPlatforms fractions, dug)
