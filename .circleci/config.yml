@@ -17,7 +17,7 @@ jobs:
           name: Install GHC
           command: |
             sudo apt-get update
-            sudo apt-get install -y libgl-dev libvulkan-dev xorg-dev
+            sudo NEEDRESTART_MODE=a apt-get install -y libgl-dev libvulkan-dev xorg-dev
 
             curl --proto '=https' --tlsv1.2 -sSf https://get-ghcup.haskell.org | BOOTSTRAP_HASKELL_NONINTERACTIVE=1 BOOTSTRAP_HASKELL_MINIMAL=1 sh
 
