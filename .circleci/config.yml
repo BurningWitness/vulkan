@@ -16,15 +16,18 @@ jobs:
       - run:
           name: Install GHC
           command: |
-            sudo apt-get install libvulkan-dev ghc cabal-install
+            curl --proto '=https' --tlsv1.2 -sSf https://get-ghcup.haskell.org | BOOTSTRAP_HASKELL_NONINTERACTIVE=1 BOOTSTRAP_HASKELL_MINIMAL=1 sh
 
-            # Fix for Cabal-2.4.0.0 not initializing the package DB automatically
-            if [ ! -d ~/.cabal/store/ghc-8.6.5 ]; then
-              mkdir -p ~/.cabal/store/ghc-8.6.5;
-              ghc-pkg init ~/.cabal/store/ghc-8.6.5/package.db;
-            else
-              echo 'Package directory already present';
-            fi
+            PATH=$HOME/.ghcup/bin:$PATH
+
+            ghcup install cabal 3.6.2.0
+            ghcup set cabal 3.6.2.0
+
+            ghcup install ghc 9.4.4
+            ghcup set ghc 9.4.4
+
+            sudo apt-get install libvulkan-dev
+
       - run:
           name: Update Dependencies
           command: cabal new-update
@@ -153,21 +156,3 @@ workflows:
     jobs:
       - build-arm64:
           name: aarch64-8.6.5
-      - build-linux:
-          name: linux-8.2.2
-          version: 8.2.2
-      - build-linux:
-          name: linux-8.4.4
-          version: 8.4.4
-      - build-linux:
-          name: linux-8.6.5
-          version: 8.6.5
-      - build-linux:
-          name: linux-8.8.4
-          version: 8.8.4
-      - build-linux:
-          name: linux-8.10.4
-          version: 8.10.4
-      - build-linux:
-          name: linux-9.0.1
-          version: 9.0.1
