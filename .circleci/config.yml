@@ -43,7 +43,7 @@ jobs:
 
             mkdir /tmp/out
             cd vulkan-example
-            cabal new-install --install-method=copy --installdir=/tmp/out vulkan-example
+            cabal new-install --install-method=copy --installdir=/tmp/out exe:vulkan-example
 
       - save_cache:
           name: Cache
