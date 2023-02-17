@@ -147,8 +147,8 @@ jobs:
             ghcup install cabal 3.6.2.0
             ghcup set cabal 3.6.2.0
 
-            ghcup install ghc 9.2.5
-            ghcup set ghc 9.2.5
+            ghcup install ghc 9.4.4
+            ghcup set ghc 9.4.4
 
             echo 'export PATH=/C/ghcup/bin:/C/VulkanSDK/Bin:$APPDATA/local/bin:$PATH' >> $BASH_ENV
 
@@ -164,7 +164,7 @@ jobs:
           command: |
             mkdir $TEMP/out
             cd vulkan-example
-            cabal new-install -v2 --install-method=copy --installdir="$TEMP/out" --enable-executable-stripping exe:vulkan-example
+            cabal new-install --install-method=copy --installdir="$TEMP/out" --enable-executable-stripping exe:vulkan-example
 
 #     - save_cache:
 #         name: Cache
@@ -207,4 +207,4 @@ workflows:
 #         version: 9.2.5
 #         keep-artifact: true
       - build-windows:
-          name: windows-9.2.5
+          name: windows-9.4.4
