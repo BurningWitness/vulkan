@@ -1390,7 +1390,10 @@ library
 
     reexported-modules:  Foreign.Storable.Offset
 
-    extra-libraries:     vulkan
+    if os (windows)
+      extra-libraries:   vulkan-1
+    else
+      extra-libraries:   vulkan
 
     if flag (platform-android)
       cpp-options: -DVK_USE_PLATFORM_ANDROID_KHR

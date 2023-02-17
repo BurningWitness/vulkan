@@ -131,6 +131,10 @@ jobs:
 
             curl --proto '=https' --tlsv1.2 -sSf https://get-ghcup.haskell.org | BOOTSTRAP_HASKELL_NONINTERACTIVE=1 BOOTSTRAP_HASKELL_MINIMAL=1 sh
 
+            ls /C/VulkanSDK
+
+            ls /C/VulkanSDK/1.2.182.0
+
             PATH=/C/ghcup/bin:$PATH
 
             ghcup install cabal 3.6.2.0
