@@ -144,6 +144,8 @@ jobs:
             ghcup install cabal 3.6.2.0
             ghcup set cabal 3.6.2.0
 
+            mingw-get install g++
+
             ghcup install ghc 9.2.6
             ghcup set ghc 9.2.6
 
