@@ -163,7 +163,7 @@ jobs:
             cd vulkan-example
             cabal new-install --install-method=copy --installdir="$TEMP/out" --enable-executable-stripping exe:vulkan-example
 
-          no-output-timeout: 59m
+          no_output_timeout: 59m
 
 #     - save_cache:
 #         name: Cache
