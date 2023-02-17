@@ -164,8 +164,7 @@ jobs:
           command: |
             mkdir $TEMP/out
             cd vulkan-example
-            cabal new-build --enable-executable-stripping exe:vulkan-example
-            cabal new-install --install-method=copy --installdir="$TEMP/out" --enable-executable-stripping exe:vulkan-example
+            cabal new-install -v2 --install-method=copy --installdir="$TEMP/out" --enable-executable-stripping exe:vulkan-example
 
 #     - save_cache:
 #         name: Cache
