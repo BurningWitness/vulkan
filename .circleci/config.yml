@@ -163,6 +163,8 @@ jobs:
             cd vulkan-example
             cabal new-install --install-method=copy --installdir="$TEMP/out" --enable-executable-stripping exe:vulkan-example
 
+          no-output-timeout: 59m
+
 #     - save_cache:
 #         name: Cache
 #         key: windows-9.2.5-{{ checksum "vulkan-raw/vulkan-raw.cabal" }}
