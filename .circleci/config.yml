@@ -118,14 +118,11 @@ jobs:
 
   build-windows:
     executor: win/default
-    parameters:
-      resolver:
-        type: string
     steps:
       - checkout
       - restore_cache:
           name: Restore
-          key: windows--<< parameters.resolver >>-{{ checksum "vulkan-raw/vulkan-raw.cabal" }}
+          key: windows-9.2.5-{{ checksum "vulkan-raw/vulkan-raw.cabal" }}
       - run:
           name: Install GHC
           shell: bash.exe
