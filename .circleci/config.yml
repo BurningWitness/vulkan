@@ -115,37 +115,6 @@ jobs:
                 path: /tmp/out/vulkan-example
 
 
-  build-macos:
-    macos:
-      xcode: 12.5.1
-    resource_class: medium
-    parameters:
-      resolver:
-        type: string
-    steps:
-      - checkout
-      - restore_cache:
-          name: Restore
-          key: macos-<< parameters.resolver >>-{{ checksum "vulkan-raw/vulkan-raw.cabal" }}
-      - run:
-          name: Install Stack
-          command: |
-            brew install vulkan-headers molten-vk
-            curl -sSL https://get.haskellstack.org/ | sh
-
-      - run:
-          name: Build
-          command: |
-            stack init --resolver << parameters.resolver >> --omit-packages
-            echo -e 'packages:\n- vk-mem-alloc\n- vulkan-raw\n\nresolver: << parameters.resolver >>\n\nextra-deps:\n- storable-offset-0.1.0.0' > stack.yaml
-            stack build vulkan-raw
-            stack build vk-mem-alloc
-      - save_cache:
-          name: Cache
-          key: macos-<< parameters.resolver >>-{{ checksum "vulkan-raw/vulkan-raw.cabal" }}
-          paths:
-            - "$HOME/.stack"
-            - ".stack-work"
 
   build-windows:
     executor: win/default
@@ -158,34 +127,46 @@ jobs:
           name: Restore
           key: windows--<< parameters.resolver >>-{{ checksum "vulkan-raw/vulkan-raw.cabal" }}
       - run:
-          name: Install Stack
+          name: Install GHC
           shell: bash.exe
           command: |
             choco install vulkan-sdk
-            mkdir stack-build
-            cd stack-build
-            curl -LO --no-progress-meter https://get.haskellstack.org/stable/windows-x86_64.zip
-            unzip windows-x86_64.zip
-            mkdir -pv "$APPDATA/local/bin"
-            mv -v stack.exe "$APPDATA/local/bin"
-            cd ..
-            echo 'export PATH=$APPDATA/local/bin:$PATH' >> $BASH_ENV
+
+            curl --proto '=https' --tlsv1.2 -sSf https://get-ghcup.haskell.org | BOOTSTRAP_HASKELL_NONINTERACTIVE=1 BOOTSTRAP_HASKELL_MINIMAL=1 sh
+
+            PATH=$HOME/.ghcup/bin:$PATH
+
+            ghcup install cabal 3.6.2.0
+            ghcup set cabal 3.6.2.0
+
+            ghcup install ghc 9.2.5
+            ghcup set ghc 9.2.5
+
+            echo 'export PATH=$HOME/.ghcup/bin:$VULKAN_SDK/Bin:$APPDATA/local/bin:$PATH' >> $BASH_ENV
+
+      - run:
+          name: Update Dependencies
+          shell: bash.exe
+          command: |
+            cabal new-update
 
       - run:
           name: Build
           shell: bash.exe
           command: |
-            stack init --resolver << parameters.resolver >> --omit-packages
-            echo -e 'packages:\n- vk-mem-alloc\n- vulkan-raw\n\nresolver: << parameters.resolver >>\n\nextra-deps:\n- storable-offset-0.1.0.0' > stack.yaml
-            stack build vulkan-raw
-            stack build vk-mem-alloc
-      - save_cache:
-          name: Cache
-          key: windows-<< parameters.resolver >>-{{ checksum "vulkan-raw/vulkan-raw.cabal" }}
-          paths:
-            - "$APPDATA/stack"
-            - ".stack-work"
+            mkdir $TEMP/out
+            cd vulkan-example
+            cabal new-install --install-method=copy --installdir="$TEMP/out" --enable-executable-stripping exe:vulkan-example
 
+#     - save_cache:
+#         name: Cache
+#         key: windows-9.2.5-{{ checksum "vulkan-raw/vulkan-raw.cabal" }}
+#         paths:
+#           - "%APPDATA%\cabal"
+#           - "dist-newstyle"
+
+      - store_artifacts:
+          path: $TEMP/out/vulkan-example.exe
 
 
 workflows:
@@ -193,27 +174,29 @@ workflows:
     jobs:
 #     - build-arm64:
 #         name: aarch64-9.2.5
-      - build-linux:
-          name: linux-8.4.4
-          version: 8.4.4
-          keep-artifact: false
-      - build-linux:
-          name: linux-8.6.5
-          version: 8.6.5
-          keep-artifact: false
-      - build-linux:
-          name: linux-8.8.4
-          version: 8.8.4
-          keep-artifact: false
-      - build-linux:
-          name: linux-8.10.7
-          version: 8.10.7
-          keep-artifact: false
-      - build-linux:
-          name: linux-9.0.2
-          version: 9.0.2
-          keep-artifact: false
+#     - build-linux:
+#         name: linux-8.4.4
+#         version: 8.4.4
+#         keep-artifact: false
+#     - build-linux:
+#         name: linux-8.6.5
+#         version: 8.6.5
+#         keep-artifact: false
+#     - build-linux:
+#         name: linux-8.8.4
+#         version: 8.8.4
+#         keep-artifact: false
+#     - build-linux:
+#         name: linux-8.10.7
+#         version: 8.10.7
+#         keep-artifact: false
+#     - build-linux:
+#         name: linux-9.0.2
+#         version: 9.0.2
+#         keep-artifact: false
 #     - build-linux:
 #         name: linux-9.2.5
 #         version: 9.2.5
 #         keep-artifact: true
+      - build-windows:
+          name: windows-9.2.5
