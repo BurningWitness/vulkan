@@ -149,7 +149,7 @@ jobs:
             ghcup install ghc 9.2.6
             ghcup set ghc 9.2.6
 
-            echo 'export PATH=/C/ghcup/bin:/C/VulkanSDK/Bin:$APPDATA/local/bin:$PATH' >> $BASH_ENV
+            echo 'export PATH=/C/ghcup/bin:/C/ghcup/ghc/9.2.6/mingw/bin:/C/VulkanSDK/Bin:$APPDATA/local/bin:$PATH' >> $BASH_ENV
 
       - run:
           name: Update Dependencies
