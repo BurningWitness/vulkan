@@ -139,6 +139,8 @@ jobs:
             ghcup install ghc 9.2.5
             ghcup set ghc 9.2.5
 
+            echo "$VULKAN_SDK"
+            echo "export VULKAN_SDK=$VULKAN_SDK" >> $BASH_ENV
             echo 'export PATH=/C/ghcup/bin:$VULKAN_SDK/Bin:$APPDATA/local/bin:$PATH' >> $BASH_ENV
 
       - run:
@@ -153,7 +155,7 @@ jobs:
           command: |
             mkdir $TEMP/out
             cd vulkan-example
-            cabal new-install --install-method=copy --installdir="$TEMP/out" --enable-executable-stripping exe:vulkan-example
+            cabal new-install --extra-include-dirs="$VULKAN_SDK/Include" --install-method=copy --installdir="$TEMP/out" --enable-executable-stripping exe:vulkan-example
 
 #     - save_cache:
 #         name: Cache
