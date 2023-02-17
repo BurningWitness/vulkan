@@ -127,11 +127,13 @@ jobs:
           name: Install GHC
           shell: bash.exe
           command: |
-            curl -sSf https://sdk.lunarg.com/sdk/download/1.3.239.0/windows/VulkanSDK-1.3.239.0-Installer.exe --output "$TEMP/vulkan-sdk.exe"
+            curl --proto '=https' --tlsv1.2 -sSf https://sdk.lunarg.com/sdk/download/1.3.239.0/windows/VulkanSDK-1.3.239.0-Installer.exe --output "$TEMP/vulkan-sdk.exe"
 
             "$TEMP/vulkan-sdk.exe" --root "/C/VulkanSDK" --accept-licenses --default-answer --confirm-command install
 
-            ls /C/VulkanSDK
+            curl --proto '=https' --tlsv1.2 -sSf https://sdk.lunarg.com/sdk/download/1.3.239.0/windows/VulkanRT-1.3.239.0-Installer.exe --output "$TEMP/vulkan-runtime.exe"
+
+            "$TEMP/vulkan-runtime.exe"
 
             /C/VulkanSDK/Bin/vulkaninfoSDK.exe
 
