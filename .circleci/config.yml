@@ -136,9 +136,7 @@ jobs:
             unzip -d "$TEMP" "$TEMP/vulkan-components.zip"
 
             echo "install"
-            ls "/C/VulkanSDK/Include"
-            echo "lib"
-            ls "$TEMP/VulkanRT-1.3.239.0-Components/x64/"
+            ls "/C/VulkanSDK/Include/vulkan"
 
             LD_LIBRARY_PATH="$TEMP/VulkanRT-1.3.239.0-Components/x64/" /C/VulkanSDK/Bin/vulkaninfoSDK.exe
 
@@ -166,7 +164,7 @@ jobs:
           command: |
             mkdir $TEMP/out
             cd vulkan-example
-            cabal new-install --extra-install-dirs="/C/VulkanSDK/Include" --extra-lib-dirs="$TEMP/VulkanRT-1.3.239.0-Components/x64/" --install-method=copy --installdir="$TEMP/out" --enable-executable-stripping exe:vulkan-example
+            cabal new-install --extra-include-dirs="/C/VulkanSDK/Include" --extra-lib-dirs="$TEMP/VulkanRT-1.3.239.0-Components/x64/" --install-method=copy --installdir="$TEMP/out" --enable-executable-stripping exe:vulkan-example
 
 #     - save_cache:
 #         name: Cache
