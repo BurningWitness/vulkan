@@ -131,7 +131,7 @@ jobs:
 
             curl --proto '=https' --tlsv1.2 -sSf https://get-ghcup.haskell.org | BOOTSTRAP_HASKELL_NONINTERACTIVE=1 BOOTSTRAP_HASKELL_MINIMAL=1 sh
 
-            PATH=$HOME/.ghcup/bin:$PATH
+            PATH=/C/ghcup/bin:$PATH
 
             ghcup install cabal 3.6.2.0
             ghcup set cabal 3.6.2.0
@@ -139,7 +139,7 @@ jobs:
             ghcup install ghc 9.2.5
             ghcup set ghc 9.2.5
 
-            echo 'export PATH=$HOME/.ghcup/bin:$VULKAN_SDK/Bin:$APPDATA/local/bin:$PATH' >> $BASH_ENV
+            echo 'export PATH=/C/ghcup/bin:$VULKAN_SDK/Bin:$APPDATA/local/bin:$PATH' >> $BASH_ENV
 
       - run:
           name: Update Dependencies
