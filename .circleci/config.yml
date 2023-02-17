@@ -127,7 +127,7 @@ jobs:
           name: Install GHC
           shell: bash.exe
           command: |
-            choco install vulkan-sdk
+            choco install vulkan-sdk --version=1.2.182.0
 
             curl --proto '=https' --tlsv1.2 -sSf https://get-ghcup.haskell.org | BOOTSTRAP_HASKELL_NONINTERACTIVE=1 BOOTSTRAP_HASKELL_MINIMAL=1 sh
 
@@ -139,9 +139,7 @@ jobs:
             ghcup install ghc 9.2.5
             ghcup set ghc 9.2.5
 
-            echo "$VULKAN_SDK"
-            echo "export VULKAN_SDK=$VULKAN_SDK" >> $BASH_ENV
-            echo 'export PATH=/C/ghcup/bin:$VULKAN_SDK/Bin:$APPDATA/local/bin:$PATH' >> $BASH_ENV
+            echo 'export PATH=/C/ghcup/bin:/C/VulkanSDK/1.2.182.0/Bin:$APPDATA/local/bin:$PATH' >> $BASH_ENV
 
       - run:
           name: Update Dependencies
@@ -155,7 +153,7 @@ jobs:
           command: |
             mkdir $TEMP/out
             cd vulkan-example
-            cabal new-install --extra-include-dirs="$VULKAN_SDK/Include" --install-method=copy --installdir="$TEMP/out" --enable-executable-stripping exe:vulkan-example
+            cabal new-install --extra-include-dirs="/C/VulkanSDK/1.2.182.0/Include" --install-method=copy --installdir="$TEMP/out" --enable-executable-stripping exe:vulkan-example
 
 #     - save_cache:
 #         name: Cache
