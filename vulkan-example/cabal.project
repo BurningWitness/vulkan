@@ -1,9 +1,6 @@
 packages: ../vulkan-raw
         , ../vk-mem-alloc
         , .
-        , ../../storable-offset
-
-with-compiler: ghc-9.4.3
 
 package vulkan-raw
   flags: +VK_KHR_surface +VK_KHR_swapchain
