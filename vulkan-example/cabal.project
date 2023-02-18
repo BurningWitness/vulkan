@@ -8,3 +8,6 @@ package vulkan-raw
   extra-include-dirs: "C:\\VulkanSDK\\Include"
 
   extra-lib-dirs: "C:\\VulkanSDK\\Lib"
+
+package vk-mem-alloc
+  extra-include-dirs: "C:\\VulkanSDK\\Include"
