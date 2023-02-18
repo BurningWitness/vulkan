@@ -161,7 +161,7 @@ jobs:
           command: |
             mkdir $TEMP/out
             cd vulkan-example
-            cabal new-install -j1 -v3 --ghc-options='-v' --with-gcc=g++ --install-method=copy --installdir="$TEMP/out" --enable-executable-stripping exe:vulkan-example
+            cabal new-install -j1 -v3 --ghc-options='-v' --install-method=copy --installdir="$TEMP/out" --enable-executable-stripping exe:vulkan-example
 
           no_output_timeout: 59m
 
