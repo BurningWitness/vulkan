@@ -1381,6 +1381,8 @@ library
     default-language:    Haskell2010
     ghc-options:         -Wall -Wno-unused-imports -Wno-missing-pattern-synonym-signatures
 
+    cc-options:          -v
+
     if flag (stdcall)
       cpp-options:       -DCALLCV=stdcall
     elif flag (ccall)
