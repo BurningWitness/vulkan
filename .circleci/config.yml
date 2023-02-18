@@ -147,18 +147,16 @@ jobs:
             ghcup install ghc 9.2.6
             ghcup set ghc 9.2.6
 
-            echo 'bin'
-            ls /C/ghcup/ghc/9.2.6/mingw/bin
-            echo 'etc'
-            ls /C/ghcup/ghc/9.2.6/mingw/etc
-            echo 'include'
-            ls /C/ghcup/ghc/9.2.6/mingw/include
-            echo 'lib'
-            ls /C/ghcup/ghc/9.2.6/mingw/lib
-            echo 'share'
-            ls /C/ghcup/ghc/9.2.6/mingw/share
-            echo 'long'
-            ls /C/ghcup/ghc/9.2.6/mingw/x86_64-w64-mingw32
+            echo 'lib gcc'
+            ls /C/ghcup/ghc/9.2.6/mingw/lib/gcc
+            echo 'share gcc'
+            ls /C/ghcup/ghc/9.2.6/mingw/share/gcc-10.2.0
+            echo 'long bin'
+            ls /C/ghcup/ghc/9.2.6/mingw/x86_64-w64-mingw32/bin
+            echo 'long include'
+            ls /C/ghcup/ghc/9.2.6/mingw/x86_64-w64-mingw32/include
+            echo 'long lib'
+            ls /C/ghcup/ghc/9.2.6/mingw/x86_64-w64-mingw32/lib
 
             echo 'export PATH=/C/ghcup/bin:/C/ghcup/ghc/9.2.6/mingw/bin:/C/VulkanSDK/Bin:$PATH' >> $BASH_ENV
 
