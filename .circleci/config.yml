@@ -148,14 +148,8 @@ jobs:
             ghcup set ghc 9.2.6
 
             echo 'mingw'
-            ls /C/ghcup/ghc/9.2.6/mingw
+            cmd //c tree C:\\ghcup\\ghc\\9.2.6\\mingw
             
-            echo 'mini'
-            ls /C/tools/miniconda3/Library/mingw-w64
-
-            echo 'git'
-            ls /C/Program Files/Git/mingw64
-
             echo 'export PATH=/C/ghcup/bin:/C/ghcup/ghc/9.2.6/mingw/bin:/C/VulkanSDK/Bin:$PATH' >> $BASH_ENV
 
       - run:
