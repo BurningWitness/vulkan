@@ -6,7 +6,6 @@ package vulkan-raw
   flags: +VK_KHR_surface +VK_KHR_swapchain
 
   extra-include-dirs: "C:\\VulkanSDK\\Include"
-                      "C:\\ghcup\\ghc\\9.2.6\\mingw\\x86_64-w64-mingw32\\include"
 
   extra-lib-dirs: "C:\\VulkanSDK\\Lib"
 
