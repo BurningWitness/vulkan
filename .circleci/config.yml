@@ -147,13 +147,13 @@ jobs:
             ghcup install ghc 9.2.6
             ghcup set ghc 9.2.6
 
-            echo 'cabal'
-            ls "$APPDATA/cabal/bin"
+            echo 'mingw'
+            ls "/C/ghcup/ghc/9.2.6/mingw/"
 
-            echo 'local'
-            ls "$APPDATA/local/bin"
+            echo 'mingw include'
+            ls "/C/ghcup/ghc/9.2.6/mingw/include/"
 
-            echo 'export PATH=/C/ghcup/bin:/C/ghcup/ghc/9.2.6/mingw/bin:/C/VulkanSDK/Bin:$APPDATA/cabal/bin:$APPDATA/local/bin:$PATH' >> $BASH_ENV
+            echo 'export PATH=/C/ghcup/bin:/C/ghcup/ghc/9.2.6/mingw/bin:/C/VulkanSDK/Bin:$PATH' >> $BASH_ENV
 
       - run:
           name: Update Dependencies
