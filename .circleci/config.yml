@@ -147,11 +147,15 @@ jobs:
             ghcup install ghc 9.2.6
             ghcup set ghc 9.2.6
 
-            echo 'mingw'
-            ls "/C/ghcup/ghc/9.2.6/mingw/"
+            echo 'mingw x86_64-w64-mingw32'
+            ls "/C/ghcup/ghc/9.2.6/mingw/x86_64-w64-mingw32/"
 
-            echo 'mingw include'
-            ls "/C/ghcup/ghc/9.2.6/mingw/include/"
+            echo 'mingw x86_64-w64-mingw32 include'
+            ls "/C/ghcup/ghc/9.2.6/mingw/x86_64-w64-mingw32/include"
+
+            echo "C_INCLUDE_PATH = $C_INCLUDE_PATH"
+
+            echo "CPLUS_INCLUDE_PATH = $CPLUS_INCLUDE_PATH"
 
             echo 'export PATH=/C/ghcup/bin:/C/ghcup/ghc/9.2.6/mingw/bin:/C/VulkanSDK/Bin:$PATH' >> $BASH_ENV
 
