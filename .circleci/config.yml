@@ -159,10 +159,8 @@ jobs:
           name: Build
           shell: bash.exe
           command: |
-            g++ --help
-            cc1 --help
-            cc1plus --help
-            ld --help
+            if [ -f cc1 ]; then echo 'cc1 exists'; else echo 'no cc1'; fi
+            if [ -f cc1plus ]; then echo 'cc1plus exists'; else echo 'no cc1'; fi
             mkdir $TEMP/out
             cd vulkan-example
             cabal new-install -j1 -v3 --ghc-options='-v' --install-method=copy --installdir="$TEMP/out" --enable-executable-stripping exe:vulkan-example
