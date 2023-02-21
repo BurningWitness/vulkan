@@ -17,6 +17,8 @@ library
     ghc-options:         -Wall
 
     if os (windows)
+      extra-include-dirs: "C:\\VulkanSDK\\Include"
+      extra-lib-dirs:     "C:\\VulkanSDK\\Lib"
       extra-libraries:   vulkan-1
     else
       extra-libraries:   vulkan
