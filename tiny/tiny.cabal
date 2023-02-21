@@ -1,0 +1,29 @@
+cabal-version:       2.2
+
+name:                tiny
+version:             0.1.0.0
+category:            Graphics
+build-type:          Simple
+
+library
+
+    build-tool-depends:  hsc2hs:hsc2hs
+    hs-source-dirs:      src
+
+    build-depends:
+        base >= 4.9 && < 5
+
+    default-language:    Haskell2010
+    ghc-options:         -Wall
+
+    if os (windows)
+      extra-libraries:   vulkan-1
+    else
+      extra-libraries:   vulkan
+
+
+
+source-repository head
+    type:     git
+    location: https://github.com/burningwitness/vulkan
+    subdir:   tiny

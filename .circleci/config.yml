@@ -159,11 +159,9 @@ jobs:
           name: Build
           shell: bash.exe
           command: |
-            if [ -f cc1 ]; then echo 'cc1 exists'; else echo 'no cc1'; fi
-            if [ -f cc1plus ]; then echo 'cc1plus exists'; else echo 'no cc1'; fi
-            mkdir $TEMP/out
-            cd vulkan-example
-            cabal new-install -j1 -v3 --ghc-options='-v' --install-method=copy --installdir="$TEMP/out" --enable-executable-stripping exe:vulkan-example
+#           mkdir $TEMP/out
+            cd tiny # vulkan-example
+            cabal new-build -j1 -v3 --ghc-options='-v' lib:tiny # --install-method=copy --installdir="$TEMP/out" --enable-executable-stripping exe:vulkan-example
 
           no_output_timeout: 59m
 
@@ -174,8 +172,8 @@ jobs:
 #           - "%APPDATA%\cabal"
 #           - "dist-newstyle"
 
-      - store_artifacts:
-          path: $TEMP/out/vulkan-example.exe
+#     - store_artifacts:
+#         path: $TEMP/out/vulkan-example.exe
 
 
 workflows:
