@@ -1392,8 +1392,6 @@ library
 
     if os (windows)
       extra-libraries:   vulkan-1
-      extra-include-dirs: "C:\\VulkanSDK\\Include"
-      extra-lib-dirs:     "C:\\VulkanSDK\\Lib"
     else
       extra-libraries:   vulkan
 
