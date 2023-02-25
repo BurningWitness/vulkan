@@ -122,11 +122,13 @@ jobs:
       - checkout
       - restore_cache:
           name: Restore
-          key: windows-9.4.4-{{ checksum "vulkan-raw/vulkan-raw.cabal" }}
+          key: windows-9.2.6-{{ checksum "vulkan-raw/vulkan-raw.cabal" }}
       - run:
           name: Install GHC
           shell: bash.exe
           command: |
+            choco install msys2
+
             curl --proto '=https' --tlsv1.2 -sSf https://sdk.lunarg.com/sdk/download/1.3.239.0/windows/VulkanSDK-1.3.239.0-Installer.exe --output "$TEMP/vulkan-sdk.exe"
 
             "$TEMP/vulkan-sdk.exe" --root "/C/VulkanSDK" --accept-licenses --default-answer --confirm-command install
@@ -138,10 +140,10 @@ jobs:
             ghcup install cabal 3.6.2.0
             ghcup set cabal 3.6.2.0
 
-            ghcup install ghc 9.4.4
-            ghcup set ghc 9.4.4
+            ghcup install ghc 9.2.6
+            ghcup set ghc 9.2.6
 
-            echo 'export PATH=/C/ghcup/ghc/9.4.4/mingw/x86_64-w64-mingw32/bin:/C/ghcup/ghc/9.4.4/mingw/lib/gcc/x86_64-w64-mingw32/10.2.0:/C/ghcup/bin:/C/ghcup/ghc/9.4.4/mingw/bin:/C/VulkanSDK/Bin:$PATH' >> $BASH_ENV
+            echo 'export PATH=/C/ghcup/ghc/9.2.6/mingw/x86_64-w64-mingw32/bin:/C/ghcup/ghc/9.4.4/mingw/lib/gcc/x86_64-w64-mingw32/10.2.0:/C/ghcup/bin:/C/ghcup/ghc/9.4.4/mingw/bin:/C/VulkanSDK/Bin:$PATH' >> $BASH_ENV
 
       - run:
           name: Update Dependencies
@@ -162,7 +164,7 @@ jobs:
 
 #     - save_cache:
 #         name: Cache
-#         key: windows-9.4.4-{{ checksum "vulkan-raw/vulkan-raw.cabal" }}
+#         key: windows-9.2.6-{{ checksum "vulkan-raw/vulkan-raw.cabal" }}
 #         paths:
 #           - "%APPDATA%\cabal"
 #           - "dist-newstyle"
@@ -201,4 +203,4 @@ workflows:
 #         version: 9.2.5
 #         keep-artifact: true
       - build-windows:
-          name: windows-9.4.4
+          name: windows-9.2.6
