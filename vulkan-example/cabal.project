@@ -2,8 +2,7 @@ packages: ../vulkan-raw
         , ../vk-mem-alloc
         , .
 
-package storable-offset
-  allow-newer: true
+allow-newer: storable-offset:base
 
 package vulkan-raw
   flags: +VK_KHR_surface +VK_KHR_swapchain
