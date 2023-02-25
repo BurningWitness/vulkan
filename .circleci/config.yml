@@ -159,8 +159,10 @@ jobs:
           name: Build
           shell: bash.exe
           command: |
-            cd tiny
-            cabal new-build -j1 -v3 --ghc-options='-v' lib:tiny
+#           mkdir $TEMP/out
+#           cd vulkan-example
+            cabal new-build -j1 -f-core-1-1 -f-core-1-2 -f-core-1-3 vulkan-raw
+#           cabal new-install -j1 -v3 --ghc-options='-v' --install-method=copy --installdir="$TEMP/out" --enable-executable-stripping exe:vulkan-example
 
           no_output_timeout: 59m
 
