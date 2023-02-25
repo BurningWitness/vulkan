@@ -159,6 +159,7 @@ jobs:
           name: Build
           shell: bash.exe
           command: |
+            cd vulkan-raw
             cabal new-build -j1 -f-core-1-1 -f-core-1-2 -f-core-1-3 vulkan-raw
 
           no_output_timeout: 59m
