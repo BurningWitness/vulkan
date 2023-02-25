@@ -1390,7 +1390,7 @@ library
 
     reexported-modules:  Foreign.Storable.Offset
 
-    if os (linux)
+    if os (linux) || os (darwin)
       extra-libraries:   vulkan
     elif os (windows)
       extra-libraries:   vulkan-1
