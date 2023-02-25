@@ -131,12 +131,6 @@ jobs:
 
             "$TEMP/vulkan-sdk.exe" --root "/C/VulkanSDK" --accept-licenses --default-answer --confirm-command install
 
-            curl --proto '=https' --tlsv1.2 -sSf https://sdk.lunarg.com/sdk/download/1.3.239.0/windows/VulkanRT-1.3.239.0-Components.zip --output "$TEMP/vulkan-components.zip"
-
-            unzip -d "$TEMP" "$TEMP/vulkan-components.zip"
-
-            LD_LIBRARY_PATH="$TEMP/VulkanRT-1.3.239.0-Components/x64/" /C/VulkanSDK/Bin/vulkaninfoSDK.exe
-
             curl --proto '=https' --tlsv1.2 -sSf https://get-ghcup.haskell.org | BOOTSTRAP_HASKELL_NONINTERACTIVE=1 BOOTSTRAP_HASKELL_MINIMAL=1 sh
 
             PATH=/C/ghcup/bin:$PATH
@@ -159,20 +153,22 @@ jobs:
           name: Build
           shell: bash.exe
           command: |
-            cd vulkan-raw
-            cabal new-build -j1 -f-core-1-1 -f-core-1-2 -f-core-1-3 -fVK_KHR_surface -fVK_KHR_swapchain vulkan-raw
+            mkdir $TEMP/out
+            cd vulkan-example
+            echo -e '  extra-include-dirs: "C:\\VulkanSDK\\Include"\n  extra-lib-dirs: "C:\\VulkanSDK\\Lib"\n\npackage vk-mem-alloc\n  extra-include-dirs: "C:\\VulkanSDK\\Include"' >> cabal.project
+            cabal new-install --install-method=copy --installdir="$TEMP/out" --enable-executable-stripping exe:vulkan-example
 
           no_output_timeout: 59m
 
 #     - save_cache:
 #         name: Cache
-#         key: windows-9.2.5-{{ checksum "vulkan-raw/vulkan-raw.cabal" }}
+#         key: windows-9.2.6-{{ checksum "vulkan-raw/vulkan-raw.cabal" }}
 #         paths:
 #           - "%APPDATA%\cabal"
 #           - "dist-newstyle"
 
-#     - store_artifacts:
-#         path: $TEMP/out/vulkan-example.exe
+      - store_artifacts:
+          path: $TEMP/out/vulkan-example.exe
 
 
 workflows:

@@ -21,7 +21,11 @@ import           Foreign.Ptr
 import           Foreign.Storable
 import           Foreign.Storable.Offset
 import           GHC.Records
+#if VERSION_DEPENDENT
 import           Vulkan.Core_1_3
+#else
+import           Vulkan.Core_1_0
+#endif
 
 
 
@@ -311,6 +315,7 @@ data {-# CTYPE "vk_mem_alloc.h" "VmaVulkanFunctions" #-} VmaVulkanFunctions =
          , vkCreateImage                           :: FunPtr VkCreateImage
          , vkDestroyImage                          :: FunPtr VkDestroyImage
          , vkCmdCopyBuffer                         :: FunPtr VkCmdCopyBuffer
+#if VERSION_DEPENDENT
 #if VMA_DEDICATED_ALLOCATION || VMA_VULKAN_VERSION >= 1001000
          , vkGetBufferMemoryRequirements2KHR       :: FunPtr VkGetBufferMemoryRequirements2
          , vkGetImageMemoryRequirements2KHR        :: FunPtr VkGetImageMemoryRequirements2
@@ -325,6 +330,7 @@ data {-# CTYPE "vk_mem_alloc.h" "VmaVulkanFunctions" #-} VmaVulkanFunctions =
 #if VMA_VULKAN_VERSION >= 1003000
          , vkGetDeviceBufferMemoryRequirements     :: FunPtr VkGetDeviceBufferMemoryRequirements
          , vkGetDeviceImageMemoryRequirements      :: FunPtr VkGetDeviceImageMemoryRequirements
+#endif
 #endif
          }
 
@@ -347,6 +353,7 @@ instance Offset "vkDestroyBuffer"                         VmaVulkanFunctions whe
 instance Offset "vkCreateImage"                           VmaVulkanFunctions where rawOffset = #offset struct VmaVulkanFunctions, vkCreateImage
 instance Offset "vkDestroyImage"                          VmaVulkanFunctions where rawOffset = #offset struct VmaVulkanFunctions, vkDestroyImage
 instance Offset "vkCmdCopyBuffer"                         VmaVulkanFunctions where rawOffset = #offset struct VmaVulkanFunctions, vkCmdCopyBuffer
+#if VERSION_DEPENDENT
 #if VMA_DEDICATED_ALLOCATION || VMA_VULKAN_VERSION >= 1001000
 instance Offset "vkGetBufferMemoryRequirements2KHR"       VmaVulkanFunctions where rawOffset = #offset struct VmaVulkanFunctions, vkGetBufferMemoryRequirements2KHR
 instance Offset "vkGetImageMemoryRequirements2KHR"        VmaVulkanFunctions where rawOffset = #offset struct VmaVulkanFunctions, vkGetImageMemoryRequirements2KHR
@@ -361,6 +368,7 @@ instance Offset "vkGetPhysicalDeviceMemoryProperties2KHR" VmaVulkanFunctions whe
 #if VMA_VULKAN_VERSION >= 1003000
 instance Offset "vkGetDeviceBufferMemoryRequirements"     VmaVulkanFunctions where rawOffset = #offset struct VmaVulkanFunctions, vkGetDeviceBufferMemoryRequirements
 instance Offset "vkGetDeviceImageMemoryRequirements"      VmaVulkanFunctions where rawOffset = #offset struct VmaVulkanFunctions, vkGetDeviceImageMemoryRequirements
+#endif
 #endif
 
 instance Storable VmaVulkanFunctions where
@@ -388,6 +396,7 @@ instance Storable VmaVulkanFunctions where
       <*> peek (Foreign.Storable.Offset.offset @"vkCreateImage"                           ptr)
       <*> peek (Foreign.Storable.Offset.offset @"vkDestroyImage"                          ptr)
       <*> peek (Foreign.Storable.Offset.offset @"vkCmdCopyBuffer"                         ptr)
+#if VERSION_DEPENDENT
       <*> peek (Foreign.Storable.Offset.offset @"vkGetBufferMemoryRequirements2KHR"       ptr)
       <*> peek (Foreign.Storable.Offset.offset @"vkGetImageMemoryRequirements2KHR"        ptr)
       <*> peek (Foreign.Storable.Offset.offset @"vkBindBufferMemory2KHR"                  ptr)
@@ -395,6 +404,7 @@ instance Storable VmaVulkanFunctions where
       <*> peek (Foreign.Storable.Offset.offset @"vkGetPhysicalDeviceMemoryProperties2KHR" ptr)
       <*> peek (Foreign.Storable.Offset.offset @"vkGetDeviceBufferMemoryRequirements"     ptr)
       <*> peek (Foreign.Storable.Offset.offset @"vkGetDeviceImageMemoryRequirements"      ptr)
+#endif
 
   poke ptr val = do
     pokeField @"vkGetInstanceProcAddr"                   ptr val
@@ -416,6 +426,7 @@ instance Storable VmaVulkanFunctions where
     pokeField @"vkCreateImage"                           ptr val
     pokeField @"vkDestroyImage"                          ptr val
     pokeField @"vkCmdCopyBuffer"                         ptr val
+#if VERSION_DEPENDENT
     pokeField @"vkGetBufferMemoryRequirements2KHR"       ptr val
     pokeField @"vkGetImageMemoryRequirements2KHR"        ptr val
     pokeField @"vkBindBufferMemory2KHR"                  ptr val
@@ -423,6 +434,7 @@ instance Storable VmaVulkanFunctions where
     pokeField @"vkGetPhysicalDeviceMemoryProperties2KHR" ptr val
     pokeField @"vkGetDeviceBufferMemoryRequirements"     ptr val
     pokeField @"vkGetDeviceImageMemoryRequirements"      ptr val
+#endif
 
 
 
@@ -438,7 +450,11 @@ data {-# CTYPE "vk_mem_alloc.h" "VmaAllocatorCreateInfo" #-} VmaAllocatorCreateI
          , pVulkanFunctions               :: Ptr VmaVulkanFunctions
          , instance_                      :: VkInstance
          , vulkanApiVersion               :: #type uint32_t
+#if VERSION_DEPENDENT
          , pTypeExternalMemoryHandleTypes :: Ptr VkExternalMemoryHandleTypeFlags
+#else
+         , pTypeExternalMemoryHandleTypes :: Ptr ()
+#endif
          }
 
 instance Offset "flags"                          VmaAllocatorCreateInfo where rawOffset = #offset struct VmaAllocatorCreateInfo, flags

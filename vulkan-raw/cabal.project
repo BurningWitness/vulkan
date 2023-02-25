@@ -1,8 +1,0 @@
-packages: .
-
-package vulkan-raw
-  flags: -core-1-1 -core-1-2 -core-1-3
-
-  extra-include-dirs: "C:\\VulkanSDK\\Include"
-
-  extra-lib-dirs: "C:\\VulkanSDK\\Lib"

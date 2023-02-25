@@ -82,9 +82,7 @@ fillClassFlag (Feat "vulkan" 1.0) = Nothing
 fillClassFlag (Feat api      num) =
   Just $
     mconcat
-      [ if api == "vulkan"
-          then fillFlag' (featFlag api num) ("Expose core version " <> showFFloat Nothing num "") "True"
-          else fillFlag (featFlag api num) $ "Expose core version " <> showFFloat Nothing num ""
+      [ fillFlag (featFlag api num) $ "Expose core version " <> showFFloat Nothing num ""
       , "\n"
       , "\n"
       , fillFlag ("ffi-" <> featFlag api num) $

@@ -4,10 +4,3 @@ packages: ../vulkan-raw
 
 package vulkan-raw
   flags: +VK_KHR_surface +VK_KHR_swapchain
-
-  extra-include-dirs: "C:\\VulkanSDK\\Include"
-
-  extra-lib-dirs: "C:\\VulkanSDK\\Lib"
-
-package vk-mem-alloc
-  extra-include-dirs: "C:\\VulkanSDK\\Include"

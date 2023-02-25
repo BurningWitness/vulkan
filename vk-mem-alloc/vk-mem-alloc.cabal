@@ -22,6 +22,12 @@ flag stdcall
   description: Use the stdcall call convention (takes precedence over the ccall flag).
   default: False
 
+flag version-dependent
+  description: |
+    Exposes version-dependent fields.
+    Requires core versions 1.1 through 1.3 enabled in vulkan-raw.
+  default: False
+
 flag debug
   description: Debug configuration.
   default: False
@@ -58,6 +64,9 @@ library
       cpp-options:      -DCALLCV=ccall
     else
       cpp-options:      -DCALLCV=capi
+
+    if flag (version-dependent)
+      cpp-options:      -DVERSION_DEPENDENT
 
     if !flag (debug)
       cpp-options:      -DNDEBUG

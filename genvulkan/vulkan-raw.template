@@ -44,7 +44,10 @@ library
 
     reexported-modules:  Foreign.Storable.Offset
 
-    extra-libraries:     vulkan
+    if os (linux)
+      extra-libraries:   vulkan
+    elif os (windows)
+      extra-libraries:   vulkan-1
 
 --[BULK]--
 
