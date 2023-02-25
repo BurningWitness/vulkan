@@ -155,7 +155,7 @@ jobs:
           command: |
             mkdir $TEMP/out
             cd vulkan-example
-            echo -e '  extra-include-dirs: "C:\\VulkanSDK\\Include"\n  extra-lib-dirs: "C:\\VulkanSDK\\Lib"\n\npackage vk-mem-alloc\n  extra-include-dirs: "C:\\VulkanSDK\\Include"' >> cabal.project
+            echo -e '  extra-include-dirs: "C:\\\\VulkanSDK\\\\Include"\n  extra-lib-dirs: "C:\\\\VulkanSDK\\\\Lib"\n\npackage vk-mem-alloc\n  extra-include-dirs: "C:\\\\VulkanSDK\\\\Include"' >> cabal.project
             cabal new-install --install-method=copy --installdir="$TEMP/out" --enable-executable-stripping exe:vulkan-example
 
           no_output_timeout: 59m
