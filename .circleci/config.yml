@@ -154,16 +154,13 @@ jobs:
 
       - save_cache:
           name: Cache
-          key: linux-<< parameters.version >>-{{ checksum "vulkan-raw/vulkan-raw.cabal" }}
+          key: macos-9.2.5-{{ checksum "vulkan-raw/vulkan-raw.cabal" }}
           paths:
             - "/root/.cabal"
             - "dist-newstyle"
 
-      - when:
-          condition: << parameters.keep-artifact >>
-          steps:
-            - store_artifacts:
-                path: /tmp/out/vulkan-example
+      - store_artifacts:
+          path: /tmp/out/vulkan-example
 
 
 
