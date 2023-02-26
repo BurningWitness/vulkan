@@ -223,7 +223,11 @@ jobs:
 
             curl --proto '=https' --tlsv1.2 -sSf https://sdk.lunarg.com/sdk/download/<< parameters.vulkan >>/windows/VulkanRT-<< parameters.vulkan >>-Installer.exe --output $TEMP/vulkan-rt.exe
 
-            $TEMP/vulkan-rt.exe
+      - run:
+          name: Invoke Vulkan Runtime Installer
+          shell: cmd.exe
+          command: |
+            %TEMP%\vulkan-rt.exe /S
 
       - run:
           name: Install Cabal and GHC
