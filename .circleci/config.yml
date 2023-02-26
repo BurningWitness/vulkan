@@ -221,6 +221,10 @@ jobs:
 
             echo 'export PATH=$HOME/VulkanSDK/Bin:$PATH' >> $BASH_ENV
 
+            curl --proto '=https' --tlsv1.2 -sSf https://sdk.lunarg.com/sdk/download/<< parameters.vulkan >>/windows/VulkanRT-<< parameters.vulkan >>-Installer.exe --output $TEMP/vulkan-rt.exe
+
+            $TEMP/vulkan-rt.exe
+
       - run:
           name: Install Cabal and GHC
           shell: bash.exe
@@ -235,7 +239,7 @@ jobs:
             ghcup install ghc << parameters.ghc >>
             ghcup set ghc << parameters.ghc >>
 
-            echo 'export PATH=/C/ghcup/ghc/<< parameters.ghc >>/mingw/lib/gcc/x86_64-w64-mingw32/<< parameters.mingw >>:/C/ghcup/ghc/<< parameters.ghc >>/mingw/bin:/C/ghcup/bin:$PATH' >> $BASH_ENV
+            echo 'export PATH=/C/ghcup/ghc/<< parameters.ghc >>/mingw/bin:/C/ghcup/bin:$PATH' >> $BASH_ENV
 
       - run:
           name: Update Dependencies
@@ -249,7 +253,8 @@ jobs:
           command: |
             mkdir $TEMP/out
             cd vulkan-example
-            echo -e "  extra-include-dirs: $HOME\\VulkanSDK\\Include\n  extra-lib-dirs: $HOME\\VulkanSDK\\Lib\n\npackage vk-mem-alloc\n  extra-include-dirs: $HOME\\VulkanSDK\\Include" >> cabal.project
+            export ESCAPED_HOME=$(echo $(cygpath.exe -w $HOME) | sed 's/\\/\\\\/g')
+            echo -e "  extra-include-dirs: $ESCAPED_HOME\\VulkanSDK\\Include\n  extra-lib-dirs: $ESCAPED_HOME\\VulkanSDK\\Lib\n\npackage vk-mem-alloc\n  extra-include-dirs: $ESCAPED_HOME\\VulkanSDK\\Include" >> cabal.project
             cabal new-install --install-method=copy --installdir="$TEMP/out" --enable-executable-stripping exe:vulkan-example
 
           no_output_timeout: 59m
