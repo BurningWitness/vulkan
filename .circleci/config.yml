@@ -114,35 +114,41 @@ jobs:
     macos:
       xcode: 14.2.0
     resource_class: medium
+    parameters:
+      vulkan:
+        type: string
+      cabal:
+        type: string
+      ghc:
+        type: string
     steps:
       - checkout
       - restore_cache:
           name: Restore
-          key: macos-9.2.5-{{ checksum "vulkan-raw/vulkan-raw.cabal" }}
+          key: macos-<< parameters.ghc >>-{{ checksum "vulkan-raw/vulkan-raw.cabal" }}
 
       - run:
-          name: Install GHC
+          name: Install Vulkan
           command: |
-            curl --proto '=https' --tlsv1.2 -sSf https://sdk.lunarg.com/sdk/download/1.3.239.0/mac/vulkansdk-macos-1.3.239.0.dmg --output /tmp/vulkan-sdk.dmg
+            curl --proto '=https' --tlsv1.2 -sSf https://sdk.lunarg.com/sdk/download/<< parameters.vulkan >>/mac/vulkansdk-macos-<< parameters.vulkan >>.dmg --output /tmp/vulkan-sdk.dmg
 
             hdiutil attach /tmp/vulkan-sdk.dmg
 
-            sudo /Volumes/vulkansdk-macos-1.3.239.0/InstallVulkan.app/Contents/MacOS/InstallVulkan --root ~/VulkanSDK --accept-licenses --default-answer --confirm-command install
+            sudo /Volumes/vulkansdk-macos-<< parameters.vulkan >>/InstallVulkan.app/Contents/MacOS/InstallVulkan --root ~/VulkanSDK --accept-licenses --default-answer --confirm-command install
 
-            cd ~/VulkanSDK
-
-            sudo ./install_vulkan.py --force-install
-
+      - run:
+          name: Install Cabal and GHC
+          command: |
             curl --proto '=https' --tlsv1.2 -sSf https://get-ghcup.haskell.org | BOOTSTRAP_HASKELL_NONINTERACTIVE=1 BOOTSTRAP_HASKELL_MINIMAL=1 sh
 
             export PATH=$HOME/.ghcup/bin:$PATH
             echo 'export PATH=$HOME/.ghcup/bin:$PATH' >> $BASH_ENV
 
-            ghcup install cabal 3.6.2.0
-            ghcup set cabal 3.6.2.0
+            ghcup install cabal << parameters.cabal >>
+            ghcup set cabal << parameters.cabal >>
 
-            ghcup install ghc 9.2.5
-            ghcup set ghc 9.2.5
+            ghcup install ghc << parameters.ghc >>
+            ghcup set ghc << parameters.ghc >>
 
       - run:
           name: Update Dependencies
@@ -154,12 +160,12 @@ jobs:
           command: |
             mkdir /tmp/out
             cd vulkan-example
-            echo '  extra-include-dirs: /Users/distiller/VulkanSDK/macOS/include\nextra-lib-dirs: /Users/distiller/VulkanSDK/macOS/lib\n\npackage vk-mem-alloc\n  extra-include-dirs: /Users/distiller/VulkanSDK/macOS/include' >> cabal.project
+            echo '  extra-include-dirs: ~/VulkanSDK/macOS/include\nextra-lib-dirs: ~/VulkanSDK/macOS/lib\n\npackage vk-mem-alloc\n  extra-include-dirs: ~/VulkanSDK/macOS/include' >> cabal.project
             cabal new-install --install-method=copy --installdir=/tmp/out --enable-executable-stripping exe:vulkan-example
 
       - save_cache:
           name: Cache
-          key: macos-9.2.5-{{ checksum "vulkan-raw/vulkan-raw.cabal" }}
+          key: macos-<< parameters.ghc >>-{{ checksum "vulkan-raw/vulkan-raw.cabal" }}
           paths:
             - "/root/.cabal"
             - "dist-newstyle"
@@ -256,5 +262,8 @@ workflows:
 #         keep-artifact: true
       - build-macos:
           name: macos-9.2.5
+          vulkan: 1.3.239.0
+          cabal: 3.6.2.0
+          ghc: 9.2.5
 #     - build-windows:
 #         name: windows-9.2.6
