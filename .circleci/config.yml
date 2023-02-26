@@ -217,9 +217,9 @@ jobs:
           command: |
             curl --proto '=https' --tlsv1.2 -sSf https://sdk.lunarg.com/sdk/download/<< parameters.vulkan >>/windows/VulkanSDK-<< parameters.vulkan >>-Installer.exe --output $TEMP/vulkan-sdk.exe
 
-            $TEMP/vulkan-sdk.exe --root ~/VulkanSDK --accept-licenses --default-answer --confirm-command install
+            $TEMP/vulkan-sdk.exe --root $HOME/VulkanSDK --accept-licenses --default-answer --confirm-command install
 
-            echo 'export PATH=/C/VulkanSDK/Bin:$PATH' >> $BASH_ENV
+            echo 'export PATH=$HOME/VulkanSDK/Bin:$PATH' >> $BASH_ENV
 
       - run:
           name: Install Cabal and GHC
@@ -249,7 +249,7 @@ jobs:
           command: |
             mkdir $TEMP/out
             cd vulkan-example
-            printf '  extra-include-dirs: "C:\\\\VulkanSDK\\\\Include"\n  extra-lib-dirs: "C:\\\\VulkanSDK\\\\Lib"\n\npackage vk-mem-alloc\n  extra-include-dirs: "C:\\\\VulkanSDK\\\\Include"' >> cabal.project
+            echo -e "  extra-include-dirs: $HOME\\VulkanSDK\\Include\n  extra-lib-dirs: $HOME\\VulkanSDK\\Lib\n\npackage vk-mem-alloc\n  extra-include-dirs: $HOME\\VulkanSDK\\Include" >> cabal.project
             cabal new-install --install-method=copy --installdir="$TEMP/out" --enable-executable-stripping exe:vulkan-example
 
           no_output_timeout: 59m
