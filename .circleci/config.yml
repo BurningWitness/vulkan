@@ -8,11 +8,16 @@ jobs:
     machine:
       image: ubuntu-2204:current
     resource_class: arm.medium
+    parameters:
+      cabal:
+        type: string
+      ghc:
+        type: string
     steps:
       - checkout
       - restore_cache:
           name: Restore
-          key: arm64-{{ checksum "vulkan-raw/vulkan-raw.cabal" }}
+          key: arm64-<< parameters.ghc >>-{{ checksum "vulkan-raw/vulkan-raw.cabal" }}
       - run:
           name: Install GHC
           command: |
@@ -24,11 +29,11 @@ jobs:
             PATH=$HOME/.ghcup/bin:$PATH
             echo 'export PATH=$HOME/.ghcup/bin:$PATH' >> $BASH_ENV
 
-            ghcup install cabal 3.6.2.0
-            ghcup set cabal 3.6.2.0
+            ghcup install cabal << parameters.cabal >>
+            ghcup set cabal << parameters.cabal >>
 
-            ghcup install ghc 9.2.5
-            ghcup set ghc 9.2.5
+            ghcup install ghc << parameters.ghc >>
+            ghcup set ghc << parameters.ghc >>
 
       - run:
           name: Update Dependencies
@@ -44,20 +49,23 @@ jobs:
 
       - save_cache:
           name: Cache
-          key: arm64-{{ checksum "vulkan-raw/vulkan-raw.cabal" }}
+          key: arm64-<< parameters.ghc >>-{{ checksum "vulkan-raw/vulkan-raw.cabal" }}
           paths:
             - "/root/.cabal"
             - "dist-newstyle"
 
       - store_artifacts:
           path: /tmp/out/vulkan-example
+          destination: vulkan-example
 
   build-linux:
     machine:
       image: ubuntu-2204:current
     resource_class: medium
     parameters:
-      version:
+      cabal:
+        type: string
+      ghc:
         type: string
       keep-artifact:
         type: boolean
@@ -65,7 +73,7 @@ jobs:
       - checkout
       - restore_cache:
           name: Restore
-          key: linux-<< parameters.version >>-{{ checksum "vulkan-raw/vulkan-raw.cabal" }}
+          key: linux-<< parameters.ghc >>-{{ checksum "vulkan-raw/vulkan-raw.cabal" }}
       - run:
           name: Install GHC
           command: |
@@ -77,11 +85,11 @@ jobs:
             export PATH=$HOME/.ghcup/bin:$PATH
             echo 'export PATH=$HOME/.ghcup/bin:$PATH' >> $BASH_ENV
 
-            ghcup install cabal 3.6.2.0
-            ghcup set cabal 3.6.2.0
+            ghcup install cabal << parameters.cabal >>
+            ghcup set cabal << parameters.cabal >>
 
-            ghcup install ghc << parameters.version >>
-            ghcup set ghc << parameters.version >>
+            ghcup install ghc << parameters.ghc >>
+            ghcup set ghc << parameters.ghc >>
 
       - run:
           name: Update Dependencies
@@ -97,7 +105,7 @@ jobs:
 
       - save_cache:
           name: Cache
-          key: linux-<< parameters.version >>-{{ checksum "vulkan-raw/vulkan-raw.cabal" }}
+          key: linux-<< parameters.ghc >>-{{ checksum "vulkan-raw/vulkan-raw.cabal" }}
           paths:
             - "/root/.cabal"
             - "dist-newstyle"
@@ -107,6 +115,7 @@ jobs:
           steps:
             - store_artifacts:
                 path: /tmp/out/vulkan-example
+                destination: vulkan-example
 
 
 
@@ -176,7 +185,7 @@ jobs:
 
       - store_artifacts:
           path: /tmp/out/vulkan-example
-
+          destination: vulkan-example
 
 
 
@@ -238,36 +247,44 @@ jobs:
 workflows:
   workflow:
     jobs:
-#     - build-arm64:
-#         name: aarch64-9.2.5
+      - build-arm64:
+          name: aarch64-9.2.5
+          cabal: 3.6.2.0
+          ghc: 9.2.5
 #     - build-linux:
 #         name: linux-8.4.4
-#         version: 8.4.4
+#         cabal: 3.6.2.0
+#         ghc: 8.4.4
 #         keep-artifact: false
 #     - build-linux:
 #         name: linux-8.6.5
-#         version: 8.6.5
+#         cabal: 3.6.2.0
+#         ghc: 8.6.5
 #         keep-artifact: false
 #     - build-linux:
 #         name: linux-8.8.4
-#         version: 8.8.4
+#         cabal: 3.6.2.0
+#         ghc: 8.8.4
 #         keep-artifact: false
 #     - build-linux:
 #         name: linux-8.10.7
-#         version: 8.10.7
+#         cabal: 3.6.2.0
+#         ghc: 8.10.7
 #         keep-artifact: false
 #     - build-linux:
 #         name: linux-9.0.2
-#         version: 9.0.2
+#         cabal: 3.6.2.0
+#         ghc: 9.0.2
 #         keep-artifact: false
-#     - build-linux:
-#         name: linux-9.2.5
-#         version: 9.2.5
-#         keep-artifact: true
-      - build-macos:
-          name: macos-9.2.5
-          vulkan: 1.3.239.0
+      - build-linux:
+          name: linux-9.2.5
           cabal: 3.6.2.0
           ghc: 9.2.5
+          keep-artifact: true
+#     - build-macos:
+#         name: macos-9.2.5
+#         vulkan: 1.3.239.0
+#         cabal: 3.6.2.0
+#         ghc: 9.2.5
 #     - build-windows:
 #         name: windows-9.2.6
