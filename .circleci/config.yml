@@ -136,6 +136,10 @@ jobs:
 
             sudo /Volumes/vulkansdk-macos-<< parameters.vulkan >>/InstallVulkan.app/Contents/MacOS/InstallVulkan --root ~/VulkanSDK --accept-licenses --default-answer --confirm-command install
 
+            cd ~/VulkanSDK
+
+            sudo ./install_vulkan.py --force-install
+
       - run:
           name: Install Cabal and GHC
           command: |
