@@ -265,7 +265,7 @@ jobs:
           name: Cache
           key: windows-<< parameters.ghc >>-{{ checksum "vulkan-raw/vulkan-raw.cabal" }}
           paths:
-            - "%APPDATA%\cabal"
+            - "%APPDATA%\\cabal"
             - "dist-newstyle"
 
       - store_artifacts:
