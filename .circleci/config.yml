@@ -180,7 +180,7 @@ jobs:
             mkdir /tmp/out
             cd vulkan-example
             echo -e '  extra-include-dirs: ~/VulkanSDK/macOS/include\nextra-lib-dirs: ~/VulkanSDK/macOS/lib\n\npackage vk-mem-alloc\n  extra-include-dirs: ~/VulkanSDK/macOS/include' >> cabal.project
-            cabal new-install --install-method=copy --installdir=/tmp/out --enable-executable-stripping exe:vulkan-example
+            cabal new-install --install-method=copy --installdir=/tmp/out --enable-executable-static --enable-executable-stripping exe:vulkan-example
 
       - save_cache:
           name: Cache
