@@ -245,8 +245,6 @@ jobs:
 
             echo 'export PATH=/C/ghcup/bin:$PATH' >> $BASH_ENV
             echo 'export PATH=/C/ghcup/ghc/<< parameters.ghc >>/mingw/bin:$PATH' >> $BASH_ENV
-            echo 'export PATH=/C/ghcup/ghc/<< parameters.ghc >>/mingw/lib/gcc/x86_64-w64-mingw32/<< parameters.mingw >>:$PATH' >> $BASH_ENV
-            echo 'export PATH=/C/ghcup/ghc/<< parameters.ghc >>/mingw/x86_64-w64-mingw32/lib:$PATH' >> $BASH_ENV
 
       - run:
           name: Update Dependencies
@@ -261,8 +259,20 @@ jobs:
             mkdir $TEMP/out
             cd vulkan-example
             export ESCAPED_HOME=$(echo $(cygpath.exe -w $HOME) | sed -e 's/\\\\/\\\\\\\\/g')
-            echo -e "  extra-include-dirs: $ESCAPED_HOME\\VulkanSDK\\Include\n  extra-lib-dirs: $ESCAPED_HOME\\VulkanSDK\\Lib\n\npackage vk-mem-alloc\n  extra-include-dirs: $ESCAPED_HOME\\VulkanSDK\\Include" >> cabal.project
-            cabal new-install --install-method=copy --installdir="$TEMP/out" --enable-executable-static --enable-executable-stripping exe:vulkan-example
+
+            cat << EOF >> cabal.project
+              extra-include-dirs: $ESCAPED_HOME\\VulkanSDK\\Include
+              extra-lib-dirs: $ESCAPED_HOME\\VulkanSDK\\Lib
+
+            package vk-mem-alloc
+              extra-include-dirs: $ESCAPED_HOME\\VulkanSDK\\Include
+
+            package *
+              extra-lib-dirs: C:\\ghcup\\ghc\\<< parameters.ghc >>\\mingw\\lib\\gcc\\x86_64-w64-mingw32\\<< parameters.mingw >>
+                              C:\\ghcup\\ghc\\<< parameters.ghc >>\\mingw\\x86_64-w64-mingw32\\lib
+            EOF
+
+            cabal new-install --install-method=copy --installdir="$TEMP/out" --enable-executable-stripping exe:vulkan-example
 
             ldd $TEMP/out/vulkan-example.exe
 
