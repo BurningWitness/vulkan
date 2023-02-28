@@ -86,7 +86,7 @@ library
       elif os (openbsd)
         extra-libraries: c++ c++abi pthread
       elif os (windows)
-        extra-libraries: c++ c++abi
+        extra-libraries: stdc++
 
 
 
