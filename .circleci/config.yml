@@ -244,7 +244,6 @@ jobs:
             ghcup set ghc << parameters.ghc >>
 
             echo 'export PATH=/C/ghcup/bin:$PATH' >> $BASH_ENV
-            echo 'export PATH=/C/ghcup/ghc/<< parameters.ghc >>/mingw/bin:$PATH' >> $BASH_ENV
 
       - run:
           name: Update Dependencies
@@ -258,18 +257,17 @@ jobs:
           command: |
             mkdir $TEMP/out
             cd vulkan-example
-            export ESCAPED_HOME=$(echo $(cygpath.exe -w $HOME) | sed -e 's/\\\\/\\\\\\\\/g')
 
             cat \<< EOF >> cabal.project
-              extra-include-dirs: $ESCAPED_HOME\\VulkanSDK\\Include
-              extra-lib-dirs: $ESCAPED_HOME\\VulkanSDK\\Lib
+              extra-include-dirs: $(cygpath.exe -w $HOME)\VulkanSDK\Include
+              extra-lib-dirs: $(cygpath.exe -w $HOME)\VulkanSDK\Lib
 
             package vk-mem-alloc
-              extra-include-dirs: $ESCAPED_HOME\\VulkanSDK\\Include
+              extra-include-dirs: $(cygpath.exe -w $HOME)\VulkanSDK\Include
 
             package *
-              extra-lib-dirs: C:\\ghcup\\ghc\\<< parameters.ghc >>\\mingw\\lib\\gcc\\x86_64-w64-mingw32\\<< parameters.mingw >>
-                              C:\\ghcup\\ghc\\<< parameters.ghc >>\\mingw\\x86_64-w64-mingw32\\lib
+              extra-lib-dirs: C:\ghcup\ghc\<< parameters.ghc >>\mingw\lib\gcc\x86_64-w64-mingw32\<< parameters.mingw >>
+                              C:\ghcup\ghc\<< parameters.ghc >>\mingw\x86_64-w64-mingw32\lib
             EOF
 
             cabal new-install --install-method=copy --installdir="$TEMP/out" --enable-executable-stripping exe:vulkan-example
@@ -282,11 +280,11 @@ jobs:
           name: Cache
           key: windows-<< parameters.ghc >>-{{ checksum "vulkan-raw/vulkan-raw.cabal" }}
           paths:
-            - "C:\\Users\\circleci\\AppData\\cabal"
-            - "dist-newstyle"
+            - C:\Users\circleci\AppData\cabal
+            - dist-newstyle
 
       - store_artifacts:
-          path: C:\\Users\\circleci\\AppData\\Local\\Temp\\out\\vulkan-example.exe
+          path: C:\Users\circleci\AppData\Local\Temp\out\vulkan-example.exe
           destination: vulkan-example-x86_64.exe
 
 workflows:
