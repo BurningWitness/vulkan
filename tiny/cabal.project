@@ -1,0 +1,4 @@
+packages: .
+        , ../../storable-offset
+
+with-compiler: ghc-9.4.3
