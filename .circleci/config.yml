@@ -256,7 +256,7 @@ jobs:
             mkdir $TEMP/out
             cd tiny
             export ESCAPED_HOME=$(echo $(cygpath.exe -w $HOME) | sed -e 's/\\\\/\\\\\\\\/g')
-            echo -e "  extra-include-dirs: $ESCAPED_HOME\\VulkanSDK\\Include\n  extra-lib-dirs: $ESCAPED_HOME\\VulkanSDK\\Lib\n\npackage vk-mem-alloc\n  extra-include-dirs: $ESCAPED_HOME\\VulkanSDK\\Include" >> cabal.project
+            echo -e "  extra-include-dirs: $ESCAPED_HOME\\VulkanSDK\\Include\n  extra-lib-dirs: $ESCAPED_HOME\\VulkanSDK\\Lib" >> cabal.project
             cabal new-build exe:tiny
 
           no_output_timeout: 59m
@@ -315,7 +315,7 @@ workflows:
 #         cabal: 3.6.2.0
 #         ghc: 9.2.5
       - build-windows:
-          name: windows-9.4.4
+          name: windows-9.2.7
           vulkan: 1.3.239.0
           cabal: 3.6.2.0
-          ghc: 9.4.4
+          ghc: 9.2.7
