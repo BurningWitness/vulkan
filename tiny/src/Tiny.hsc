@@ -10,8 +10,6 @@ module Tiny where
 
 import           Data.Int
 import           Data.Word
-import           Foreign.Storable
-import           Foreign.Storable.Offset
 import           GHC.Ptr
 
 
