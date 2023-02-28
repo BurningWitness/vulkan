@@ -260,7 +260,7 @@ jobs:
             cd vulkan-example
             export ESCAPED_HOME=$(echo $(cygpath.exe -w $HOME) | sed -e 's/\\\\/\\\\\\\\/g')
 
-            cat << eof >> cabal.project
+            cat \<< EOF >> cabal.project
               extra-include-dirs: $ESCAPED_HOME\\VulkanSDK\\Include
               extra-lib-dirs: $ESCAPED_HOME\\VulkanSDK\\Lib
 
@@ -270,7 +270,7 @@ jobs:
             package *
               extra-lib-dirs: C:\\ghcup\\ghc\\<< parameters.ghc >>\\mingw\\lib\\gcc\\x86_64-w64-mingw32\\<< parameters.mingw >>
                               C:\\ghcup\\ghc\\<< parameters.ghc >>\\mingw\\x86_64-w64-mingw32\\lib
-            eof
+            EOF
 
             cabal new-install --install-method=copy --installdir="$TEMP/out" --enable-executable-stripping exe:vulkan-example
 
