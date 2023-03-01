@@ -492,10 +492,6 @@ flag VK_EXT_pipeline_creation_feedback
   description: Expose extension VK_EXT_pipeline_creation_feedback
   default: False
 
-flag VK_EXT_pipeline_library_group_handles
-  description: Expose extension VK_EXT_pipeline_library_group_handles
-  default: False
-
 flag VK_EXT_pipeline_properties
   description: Expose extension VK_EXT_pipeline_properties
   default: False
@@ -3201,13 +3197,6 @@ library
         Vulkan.Types.Struct.VkPipelineCreationFeedback
         Vulkan.Types.Struct.VkPipelineCreationFeedbackCreateInfoEXT
         Vulkan.Types.Struct.VkPipelineCreationFeedbackEXT
-
-    if flag (VK_EXT_pipeline_library_group_handles)
-      exposed-modules:
-        Vulkan.Ext.VK_EXT_pipeline_library_group_handles
-
-      other-modules:
-        Vulkan.Types.Struct.VkPhysicalDevicePipelineLibraryGroupHandlesFeaturesEXT
 
     if flag (VK_EXT_pipeline_properties)
       exposed-modules:
