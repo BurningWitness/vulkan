@@ -182,9 +182,6 @@ jobs:
             cat \<< EOF >> cabal.project
               extra-include-dirs: ~/VulkanSDK/macOS/include
               extra-lib-dirs: ~/VulkanSDK/macOS/lib
-
-            package vk-mem-alloc
-              extra-include-dirs: ~/VulkanSDK/macOS/include
             EOF
 
             cabal new-install --install-method=copy --installdir=/tmp/out --enable-executable-stripping exe:vulkan-example
@@ -270,8 +267,9 @@ jobs:
               extra-lib-dirs: $(cygpath.exe -w $HOME)\VulkanSDK\Lib
 
             package vk-mem-alloc
-              extra-include-dirs: $(cygpath.exe -w $HOME)\VulkanSDK\Include
+              ld-options: -Wl,-Bstatic -lstdc++ -Bdynamic
 
+            package vulkan-example
               ld-options: -Wl,-Bstatic -lstdc++ -Bdynamic
             EOF
 
