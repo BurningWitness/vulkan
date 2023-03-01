@@ -251,7 +251,7 @@ jobs:
 
             cabal new-install --install-method=copy --installdir=$TEMP/out exe:vulkan-example
 
-            strip.exe $TEMP/out/vulkan-example.exe
+            /C/ghcup/ghc/<< parameters.ghc >>/mingw/bin/strip.exe $TEMP/out/vulkan-example.exe
 
           no_output_timeout: 50m
 
