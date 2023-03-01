@@ -289,7 +289,7 @@ jobs:
           name: Cache
           key: windows-<< parameters.ghc >>-{{ checksum "vulkan-raw/vulkan-raw.cabal" }}
           paths:
-            - C:\Users\circleci\AppData\cabal
+            - C:\Users\circleci\AppData\Roaming\cabal
             - dist-newstyle
 
       - store_artifacts:
