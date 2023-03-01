@@ -1,0 +1,352 @@
+version: 2.1
+
+orbs:
+  win: circleci/windows@2.2.0
+
+jobs:
+  build-arm64:
+    machine:
+      image: ubuntu-2204:current
+    resource_class: arm.medium
+    parameters:
+      cabal:
+        type: string
+      ghc:
+        type: string
+    steps:
+      - checkout
+      - restore_cache:
+          name: Restore
+          key: arm64-<< parameters.ghc >>-{{ checksum "vulkan-raw/vulkan-raw.cabal" }}
+      - run:
+          name: Install libraries
+          command: |
+            sudo apt-get update
+            sudo NEEDRESTART_MODE=a apt-get install -y libgl-dev libvulkan-dev xorg-dev
+
+      - run:
+          name: Install Cabal and GHC
+          command: |
+            curl --proto '=https' --tlsv1.2 -sSf https://get-ghcup.haskell.org | BOOTSTRAP_HASKELL_NONINTERACTIVE=1 BOOTSTRAP_HASKELL_MINIMAL=1 sh
+
+            PATH=$HOME/.ghcup/bin:$PATH
+            echo 'export PATH=$HOME/.ghcup/bin:$PATH' >> $BASH_ENV
+
+            ghcup install cabal << parameters.cabal >>
+            ghcup set cabal << parameters.cabal >>
+
+            ghcup install ghc << parameters.ghc >>
+            ghcup set ghc << parameters.ghc >>
+
+      - run:
+          name: Update Dependencies
+          command: |
+            cabal new-update
+
+      - run:
+          name: Build
+          command: |
+            mkdir /tmp/out
+            cd vulkan-example
+            cabal new-install --install-method=copy --installdir=/tmp/out --enable-executable-stripping exe:vulkan-example
+
+      - save_cache:
+          name: Cache
+          key: arm64-<< parameters.ghc >>-{{ checksum "vulkan-raw/vulkan-raw.cabal" }}
+          paths:
+            - "~/.cabal"
+            - "vulkan-example/dist-newstyle"
+
+      - store_artifacts:
+          path: /tmp/out/vulkan-example
+          destination: vulkan-example-arm64-linux
+
+  build-linux:
+    machine:
+      image: ubuntu-2204:current
+    resource_class: medium
+    parameters:
+      vulkan:
+        type: string
+      cabal:
+        type: string
+      ghc:
+        type: string
+      keep-artifact:
+        type: boolean
+    steps:
+      - checkout
+      - restore_cache:
+          name: Restore
+          key: linux-<< parameters.ghc >>-{{ checksum "vulkan-raw/vulkan-raw.cabal" }}
+      - run:
+          name: Update apt
+          command: |
+            wget -qO- https://packages.lunarg.com/lunarg-signing-key-pub.asc | sudo tee /etc/apt/trusted.gpg.d/lunarg.asc
+            sudo wget -qO /etc/apt/sources.list.d/lunarg-vulkan-<< parameters.vulkan >>-jammy.list https://packages.lunarg.com/vulkan/<< parameters.vulkan >>/lunarg-vulkan-<< parameters.vulkan >>-jammy.list
+            sudo apt-get update
+
+      - run:
+          name: Install libraries
+          command: |
+            sudo NEEDRESTART_MODE=a apt-get install -y libgl-dev xorg-dev
+
+      - run:
+          name: Install Vulkan
+          command: |
+            sudo NEEDRESTART_MODE=a apt-get install -y vulkan-sdk
+
+      - run:
+          name: Install Cabal and GHC
+          command: |
+            curl --proto '=https' --tlsv1.2 -sSf https://get-ghcup.haskell.org | BOOTSTRAP_HASKELL_NONINTERACTIVE=1 BOOTSTRAP_HASKELL_MINIMAL=1 sh
+
+            export PATH=$HOME/.ghcup/bin:$PATH
+            echo 'export PATH=$HOME/.ghcup/bin:$PATH' >> $BASH_ENV
+
+            ghcup install cabal << parameters.cabal >>
+            ghcup set cabal << parameters.cabal >>
+
+            ghcup install ghc << parameters.ghc >>
+            ghcup set ghc << parameters.ghc >>
+
+      - run:
+          name: Update Dependencies
+          command: |
+            cabal new-update
+
+      - run:
+          name: Build
+          command: |
+            mkdir /tmp/out
+            cd vulkan-example
+            cabal new-install --install-method=copy --installdir=/tmp/out --enable-executable-stripping exe:vulkan-example
+
+      - save_cache:
+          name: Cache
+          key: linux-<< parameters.ghc >>-{{ checksum "vulkan-raw/vulkan-raw.cabal" }}
+          paths:
+            - "~/.cabal"
+            - "vulkan-example/dist-newstyle"
+
+      - when:
+          condition: << parameters.keep-artifact >>
+          steps:
+            - store_artifacts:
+                path: /tmp/out/vulkan-example
+                destination: vulkan-example-x86_64-linux
+
+
+
+  build-macos:
+    macos:
+      xcode: 14.2.0
+    resource_class: medium
+    parameters:
+      vulkan:
+        type: string
+      cabal:
+        type: string
+      ghc:
+        type: string
+    steps:
+      - checkout
+      - restore_cache:
+          name: Restore
+          key: macos-<< parameters.ghc >>-{{ checksum "vulkan-raw/vulkan-raw.cabal" }}
+
+      - run:
+          name: Install Vulkan
+          command: |
+            curl --proto '=https' --tlsv1.2 -sSf https://sdk.lunarg.com/sdk/download/<< parameters.vulkan >>/mac/vulkansdk-macos-<< parameters.vulkan >>.dmg --output /tmp/vulkan-sdk.dmg
+
+            hdiutil attach /tmp/vulkan-sdk.dmg
+
+            sudo /Volumes/vulkansdk-macos-<< parameters.vulkan >>/InstallVulkan.app/Contents/MacOS/InstallVulkan --root ~/VulkanSDK --accept-licenses --default-answer --confirm-command install
+
+            cd ~/VulkanSDK
+
+            sudo ./install_vulkan.py --force-install
+
+      - run:
+          name: Install Cabal and GHC
+          command: |
+            curl --proto '=https' --tlsv1.2 -sSf https://get-ghcup.haskell.org | BOOTSTRAP_HASKELL_NONINTERACTIVE=1 BOOTSTRAP_HASKELL_MINIMAL=1 sh
+
+            export PATH=$HOME/.ghcup/bin:$PATH
+            echo 'export PATH=$HOME/.ghcup/bin:$PATH' >> $BASH_ENV
+
+            ghcup install cabal << parameters.cabal >>
+            ghcup set cabal << parameters.cabal >>
+
+            ghcup install ghc << parameters.ghc >>
+            ghcup set ghc << parameters.ghc >>
+
+      - run:
+          name: Update Dependencies
+          command: |
+            cabal new-update
+
+      - run:
+          name: Build
+          command: |
+            mkdir /tmp/out
+            cd vulkan-example
+            cabal new-install --install-method=copy --installdir=/tmp/out --enable-executable-stripping exe:vulkan-example
+
+      - save_cache:
+          name: Cache
+          key: macos-<< parameters.ghc >>-{{ checksum "vulkan-raw/vulkan-raw.cabal" }}
+          paths:
+            - "~/.cabal"
+            - "vulkan-example/dist-newstyle"
+
+      - store_artifacts:
+          path: /tmp/out/vulkan-example
+          destination: vulkan-example-x86_64-macos
+
+
+
+  build-windows:
+    executor: win/default
+    parameters:
+      mingw:
+        type: string
+      vulkan:
+        type: string
+      cabal:
+        type: string
+      ghc:
+        type: string
+    steps:
+      - checkout
+      - restore_cache:
+          name: Restore
+          key: windows-<< parameters.ghc >>-{{ checksum "vulkan-raw/vulkan-raw.cabal" }}
+      - run:
+          name: Install Vulkan
+          shell: bash.exe
+          command: |
+            curl --proto '=https' --tlsv1.2 -sSf https://sdk.lunarg.com/sdk/download/<< parameters.vulkan >>/windows/VulkanSDK-<< parameters.vulkan >>-Installer.exe --output $TEMP/vulkan-sdk.exe
+
+            $TEMP/vulkan-sdk.exe --root $HOME/VulkanSDK --accept-licenses --default-answer --confirm-command install
+
+            echo 'export PATH=$HOME/VulkanSDK/Bin:$PATH' >> $BASH_ENV
+
+            curl --proto '=https' --tlsv1.2 -sSf https://sdk.lunarg.com/sdk/download/<< parameters.vulkan >>/windows/VulkanRT-<< parameters.vulkan >>-Installer.exe --output $TEMP/vulkan-rt.exe
+
+      - run:
+          name: Invoke Vulkan Runtime Installer
+          shell: cmd.exe
+          command: |
+            %TEMP%\vulkan-rt.exe /S
+
+      - run:
+          name: Install Cabal and GHC
+          shell: bash.exe
+          command: |
+            curl --proto '=https' --tlsv1.2 -sSf https://get-ghcup.haskell.org | BOOTSTRAP_HASKELL_NONINTERACTIVE=1 BOOTSTRAP_HASKELL_MINIMAL=1 sh
+
+            PATH=/C/ghcup/bin:$PATH
+
+            ghcup install cabal << parameters.cabal >>
+            ghcup set cabal << parameters.cabal >>
+
+            ghcup install ghc << parameters.ghc >>
+            ghcup set ghc << parameters.ghc >>
+
+            echo 'export PATH=/C/ghcup/bin:$PATH' >> $BASH_ENV
+
+      - run:
+          name: Update Dependencies
+          shell: bash.exe
+          command: |
+            cabal new-update
+
+      - run:
+          name: Build
+          shell: bash.exe
+          command: |
+            mkdir $TEMP/out
+            cd vulkan-example
+
+            cat \<< EOF >> cabal.project
+              extra-include-dirs: $(cygpath.exe -w $HOME)\VulkanSDK\Include
+              extra-lib-dirs: $(cygpath.exe -w $HOME)\VulkanSDK\Lib
+
+            package vk-mem-alloc
+              ld-options: -Wl,-Bstatic -lstdc++ -Bdynamic
+
+            package vulkan-example
+              ld-options: -Wl,-Bstatic -lstdc++ -Bdynamic
+            EOF
+
+            cabal new-install --install-method=copy --installdir="$TEMP/out" --enable-executable-stripping exe:vulkan-example
+
+          no_output_timeout: 59m
+
+      - save_cache:
+          name: Cache
+          key: windows-<< parameters.ghc >>-{{ checksum "vulkan-raw/vulkan-raw.cabal" }}
+          paths:
+            - C:\Users\circleci\AppData\cabal
+            - dist-newstyle
+
+      - store_artifacts:
+          path: C:\Users\circleci\AppData\Local\Temp\out\vulkan-example.exe
+          destination: vulkan-example-x86_64.exe
+
+workflows:
+  workflow:
+    jobs:
+      - build-arm64:
+          name: aarch64-9.2.7
+          cabal: 3.6.2.0
+          ghc: 9.2.7
+      - build-linux:
+          name: linux-8.4.4
+          vulkan: 1.3.239
+          cabal: 3.6.2.0
+          ghc: 8.4.4
+          keep-artifact: false
+      - build-linux:
+          name: linux-8.6.5
+          vulkan: 1.3.239
+          cabal: 3.6.2.0
+          ghc: 8.6.5
+          keep-artifact: false
+      - build-linux:
+          name: linux-8.8.4
+          vulkan: 1.3.239
+          cabal: 3.6.2.0
+          ghc: 8.8.4
+          keep-artifact: false
+      - build-linux:
+          name: linux-8.10.7
+          vulkan: 1.3.239
+          cabal: 3.6.2.0
+          ghc: 8.10.7
+          keep-artifact: false
+      - build-linux:
+          name: linux-9.0.2
+          vulkan: 1.3.239
+          cabal: 3.6.2.0
+          ghc: 9.0.2
+          keep-artifact: false
+      - build-linux:
+          name: linux-9.2.7
+          vulkan: 1.3.239
+          cabal: 3.6.2.0
+          ghc: 9.2.7
+          keep-artifact: true
+      - build-macos:
+          name: macos-9.2.7
+          vulkan: 1.3.239.0
+          cabal: 3.6.2.0
+          ghc: 9.2.7
+      - build-windows:
+          name: windows-9.2.7
+          mingw: 10.2.0
+          vulkan: 1.3.239.0
+          cabal: 3.6.2.0
+          ghc: 9.2.7

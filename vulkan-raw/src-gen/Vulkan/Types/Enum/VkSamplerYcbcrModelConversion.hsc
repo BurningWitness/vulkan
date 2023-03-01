@@ -1,0 +1,68 @@
+{-# LANGUAGE CPP #-}
+{-# LANGUAGE PatternSynonyms #-}
+
+#include <vulkan/vulkan.h>
+
+module Vulkan.Types.Enum.VkSamplerYcbcrModelConversion where
+
+import Data.Int
+
+
+
+#if VK_VERSION_1_1
+type VkSamplerYcbcrModelConversion = #{type int}
+#endif
+
+#if VK_VERSION_1_1
+pattern VK_SAMPLER_YCBCR_MODEL_CONVERSION_RGB_IDENTITY :: (Eq a, Num a) => a
+pattern VK_SAMPLER_YCBCR_MODEL_CONVERSION_RGB_IDENTITY = 0
+#endif
+
+#if VK_VERSION_1_1
+-- | just range expansion
+pattern VK_SAMPLER_YCBCR_MODEL_CONVERSION_YCBCR_IDENTITY :: (Eq a, Num a) => a
+pattern VK_SAMPLER_YCBCR_MODEL_CONVERSION_YCBCR_IDENTITY = 1
+#endif
+
+#if VK_VERSION_1_1
+-- | aka HD YUV
+pattern VK_SAMPLER_YCBCR_MODEL_CONVERSION_YCBCR_709 :: (Eq a, Num a) => a
+pattern VK_SAMPLER_YCBCR_MODEL_CONVERSION_YCBCR_709 = 2
+#endif
+
+#if VK_VERSION_1_1
+-- | aka SD YUV
+pattern VK_SAMPLER_YCBCR_MODEL_CONVERSION_YCBCR_601 :: (Eq a, Num a) => a
+pattern VK_SAMPLER_YCBCR_MODEL_CONVERSION_YCBCR_601 = 3
+#endif
+
+#if VK_VERSION_1_1
+-- | aka UHD YUV
+pattern VK_SAMPLER_YCBCR_MODEL_CONVERSION_YCBCR_2020 :: (Eq a, Num a) => a
+pattern VK_SAMPLER_YCBCR_MODEL_CONVERSION_YCBCR_2020 = 4
+#endif
+
+#if VK_VERSION_1_1
+pattern VK_SAMPLER_YCBCR_MODEL_CONVERSION_RGB_IDENTITY_KHR :: (Eq a, Num a) => a
+pattern VK_SAMPLER_YCBCR_MODEL_CONVERSION_RGB_IDENTITY_KHR = 0
+#endif
+
+#if VK_VERSION_1_1
+pattern VK_SAMPLER_YCBCR_MODEL_CONVERSION_YCBCR_IDENTITY_KHR :: (Eq a, Num a) => a
+pattern VK_SAMPLER_YCBCR_MODEL_CONVERSION_YCBCR_IDENTITY_KHR = 1
+#endif
+
+#if VK_VERSION_1_1
+pattern VK_SAMPLER_YCBCR_MODEL_CONVERSION_YCBCR_709_KHR :: (Eq a, Num a) => a
+pattern VK_SAMPLER_YCBCR_MODEL_CONVERSION_YCBCR_709_KHR = 2
+#endif
+
+#if VK_VERSION_1_1
+pattern VK_SAMPLER_YCBCR_MODEL_CONVERSION_YCBCR_601_KHR :: (Eq a, Num a) => a
+pattern VK_SAMPLER_YCBCR_MODEL_CONVERSION_YCBCR_601_KHR = 3
+#endif
+
+#if VK_VERSION_1_1
+pattern VK_SAMPLER_YCBCR_MODEL_CONVERSION_YCBCR_2020_KHR :: (Eq a, Num a) => a
+pattern VK_SAMPLER_YCBCR_MODEL_CONVERSION_YCBCR_2020_KHR = 4
+#endif

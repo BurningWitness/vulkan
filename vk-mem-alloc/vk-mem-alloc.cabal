@@ -1,0 +1,92 @@
+cabal-version:       2.2
+
+name:                vk-mem-alloc
+version:             0.1.0.0
+synopsis:            Raw bindings to Vulkan Memory Allocator
+description:         Raw bindings to [Vulkan Memory Allocator](https://github.com/GPUOpen-LibrariesAndSDKs/VulkanMemoryAllocator)
+license:             BSD-3-Clause
+license-file:        LICENSE
+author:              Oleksii Divak
+maintainer:          Oleksii Divak <frozenwitness@gmail.com>
+copyright:           (c) 2023 Oleksii Divak
+category:            Graphics
+build-type:          Simple
+extra-source-files:  include/*.h
+                     include/*.cpp
+
+flag ccall
+  description: Use the ccall call convention.
+  default: False
+
+flag stdcall
+  description: Use the stdcall call convention (takes precedence over the ccall flag).
+  default: False
+
+flag version-dependent
+  description: |
+    Exposes version-dependent fields.
+    Requires core versions 1.1 through 1.3 enabled in vulkan-raw.
+  default: False
+
+flag debug
+  description: Debug configuration.
+  default: False
+
+flag stats-string
+  description: Generate statistics JSON-building functions.
+  default: False
+
+library
+    build-tool-depends: hsc2hs:hsc2hs
+
+    hs-source-dirs:     src
+
+    exposed-modules:    VkMemAlloc
+
+    include-dirs:       include
+
+    install-includes:   vk_mem_alloc.h
+
+    cxx-sources:        include/vk_mem_alloc.cpp
+
+    build-depends:      base >= 4.11 && < 5
+                      , vulkan-raw
+
+    default-language:   Haskell2010
+
+    ghc-options:        -Wall 
+
+    cxx-options:        -std=c++17
+
+    if flag (stdcall)
+      cpp-options:      -DCALLCV=stdcall
+    elif flag (ccall)
+      cpp-options:      -DCALLCV=ccall
+    else
+      cpp-options:      -DCALLCV=capi
+
+    if flag (version-dependent)
+      cpp-options:      -DVERSION_DEPENDENT
+
+    if !flag (debug)
+      cpp-options:      -DNDEBUG
+
+    if flag (stats-string)
+      cpp-options:      -DVMA_STATS_STRING_ENABLED=1
+    else
+      cpp-options:      -DVMA_STATS_STRING_ENABLED=0
+
+    if impl (ghc >= 9.4)
+      build-depends:    system-cxx-std-lib
+    else
+      if os (linux)
+        extra-libraries: stdc++
+      elif os (darwin)
+        extra-libraries: c++
+
+
+
+source-repository head
+    type:     git
+    location: https://github.com/burningwitness/vulkan
+    subdir:   vk-mem-alloc

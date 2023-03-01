@@ -1,0 +1,8 @@
+packages: ../vulkan-raw
+        , ../vk-mem-alloc
+        , .
+
+allow-newer: storable-offset:base
+
+package vulkan-raw
+  flags: +VK_KHR_surface +VK_KHR_swapchain

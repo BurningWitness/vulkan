@@ -1,0 +1,92 @@
+{-# LANGUAGE CPP #-}
+{-# LANGUAGE PatternSynonyms #-}
+
+#include <vulkan/vulkan.h>
+
+module Vulkan.Types.Enum.VkQueryType where
+
+import Data.Int
+
+
+
+type VkQueryType = #{type int}
+
+pattern VK_QUERY_TYPE_OCCLUSION :: (Eq a, Num a) => a
+pattern VK_QUERY_TYPE_OCCLUSION = 0
+
+-- | Optional
+pattern VK_QUERY_TYPE_PIPELINE_STATISTICS :: (Eq a, Num a) => a
+pattern VK_QUERY_TYPE_PIPELINE_STATISTICS = 1
+
+pattern VK_QUERY_TYPE_TIMESTAMP :: (Eq a, Num a) => a
+pattern VK_QUERY_TYPE_TIMESTAMP = 2
+
+#if VK_KHR_video_queue
+pattern VK_QUERY_TYPE_RESULT_STATUS_ONLY_KHR :: (Eq a, Num a) => a
+pattern VK_QUERY_TYPE_RESULT_STATUS_ONLY_KHR = 1000023000
+#endif
+
+#if VK_EXT_transform_feedback
+pattern VK_QUERY_TYPE_TRANSFORM_FEEDBACK_STREAM_EXT :: (Eq a, Num a) => a
+pattern VK_QUERY_TYPE_TRANSFORM_FEEDBACK_STREAM_EXT = 1000028004
+#endif
+
+#if VK_KHR_performance_query
+pattern VK_QUERY_TYPE_PERFORMANCE_QUERY_KHR :: (Eq a, Num a) => a
+pattern VK_QUERY_TYPE_PERFORMANCE_QUERY_KHR = 1000116000
+#endif
+
+#if VK_KHR_acceleration_structure
+pattern VK_QUERY_TYPE_ACCELERATION_STRUCTURE_COMPACTED_SIZE_KHR :: (Eq a, Num a) => a
+pattern VK_QUERY_TYPE_ACCELERATION_STRUCTURE_COMPACTED_SIZE_KHR = 1000150000
+#endif
+
+#if VK_KHR_acceleration_structure
+pattern VK_QUERY_TYPE_ACCELERATION_STRUCTURE_SERIALIZATION_SIZE_KHR :: (Eq a, Num a) => a
+pattern VK_QUERY_TYPE_ACCELERATION_STRUCTURE_SERIALIZATION_SIZE_KHR = 1000150001
+#endif
+
+#if VK_NV_ray_tracing
+pattern VK_QUERY_TYPE_ACCELERATION_STRUCTURE_COMPACTED_SIZE_NV :: (Eq a, Num a) => a
+pattern VK_QUERY_TYPE_ACCELERATION_STRUCTURE_COMPACTED_SIZE_NV = 1000165000
+#endif
+
+#if VK_INTEL_performance_query
+pattern VK_QUERY_TYPE_PERFORMANCE_QUERY_INTEL :: (Eq a, Num a) => a
+pattern VK_QUERY_TYPE_PERFORMANCE_QUERY_INTEL = 1000210000
+#endif
+
+#if VK_KHR_video_encode_queue
+pattern VK_QUERY_TYPE_VIDEO_ENCODE_BITSTREAM_BUFFER_RANGE_KHR :: (Eq a, Num a) => a
+pattern VK_QUERY_TYPE_VIDEO_ENCODE_BITSTREAM_BUFFER_RANGE_KHR = 1000299000
+#endif
+
+#if VK_EXT_mesh_shader
+pattern VK_QUERY_TYPE_MESH_PRIMITIVES_GENERATED_EXT :: (Eq a, Num a) => a
+pattern VK_QUERY_TYPE_MESH_PRIMITIVES_GENERATED_EXT = 1000328000
+#endif
+
+#if VK_EXT_primitives_generated_query
+pattern VK_QUERY_TYPE_PRIMITIVES_GENERATED_EXT :: (Eq a, Num a) => a
+pattern VK_QUERY_TYPE_PRIMITIVES_GENERATED_EXT = 1000382000
+#endif
+
+#if VK_KHR_ray_tracing_maintenance1
+pattern VK_QUERY_TYPE_ACCELERATION_STRUCTURE_SERIALIZATION_BOTTOM_LEVEL_POINTERS_KHR :: (Eq a, Num a) => a
+pattern VK_QUERY_TYPE_ACCELERATION_STRUCTURE_SERIALIZATION_BOTTOM_LEVEL_POINTERS_KHR = 1000386000
+#endif
+
+#if VK_KHR_ray_tracing_maintenance1
+pattern VK_QUERY_TYPE_ACCELERATION_STRUCTURE_SIZE_KHR :: (Eq a, Num a) => a
+pattern VK_QUERY_TYPE_ACCELERATION_STRUCTURE_SIZE_KHR = 1000386001
+#endif
+
+#if VK_EXT_opacity_micromap
+pattern VK_QUERY_TYPE_MICROMAP_SERIALIZATION_SIZE_EXT :: (Eq a, Num a) => a
+pattern VK_QUERY_TYPE_MICROMAP_SERIALIZATION_SIZE_EXT = 1000396000
+#endif
+
+#if VK_EXT_opacity_micromap
+pattern VK_QUERY_TYPE_MICROMAP_COMPACTED_SIZE_EXT :: (Eq a, Num a) => a
+pattern VK_QUERY_TYPE_MICROMAP_COMPACTED_SIZE_EXT = 1000396001
+#endif
