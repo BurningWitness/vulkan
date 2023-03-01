@@ -15,9 +15,6 @@ jobs:
         type: string
     steps:
       - checkout
-      - restore_cache:
-          name: Restore
-          key: arm64-<< parameters.ghc >>-{{ checksum "vulkan-raw/vulkan-raw.cabal" }}
       - run:
           name: Install libraries
           command: |
@@ -48,14 +45,8 @@ jobs:
           command: |
             mkdir /tmp/out
             cd vulkan-example
-            cabal new-install --install-method=copy --installdir=/tmp/out --enable-executable-stripping exe:vulkan-example
-
-      - save_cache:
-          name: Cache
-          key: arm64-<< parameters.ghc >>-{{ checksum "vulkan-raw/vulkan-raw.cabal" }}
-          paths:
-            - "~/.cabal"
-            - "vulkan-example/dist-newstyle"
+            cabal new-install --install-method=copy --installdir=/tmp/out exe:vulkan-example
+            strip /tmp/out/vulkan-example
 
       - store_artifacts:
           path: /tmp/out/vulkan-example
@@ -76,9 +67,6 @@ jobs:
         type: boolean
     steps:
       - checkout
-      - restore_cache:
-          name: Restore
-          key: linux-<< parameters.ghc >>-{{ checksum "vulkan-raw/vulkan-raw.cabal" }}
       - run:
           name: Update apt
           command: |
@@ -120,14 +108,8 @@ jobs:
           command: |
             mkdir /tmp/out
             cd vulkan-example
-            cabal new-install --install-method=copy --installdir=/tmp/out --enable-executable-stripping exe:vulkan-example
-
-      - save_cache:
-          name: Cache
-          key: linux-<< parameters.ghc >>-{{ checksum "vulkan-raw/vulkan-raw.cabal" }}
-          paths:
-            - "~/.cabal"
-            - "vulkan-example/dist-newstyle"
+            cabal new-install --install-method=copy --installdir=/tmp/out exe:vulkan-example
+            strip /tmp/out/vulkan-example
 
       - when:
           condition: << parameters.keep-artifact >>
@@ -151,9 +133,6 @@ jobs:
         type: string
     steps:
       - checkout
-      - restore_cache:
-          name: Restore
-          key: macos-<< parameters.ghc >>-{{ checksum "vulkan-raw/vulkan-raw.cabal" }}
 
       - run:
           name: Install Vulkan
@@ -192,14 +171,8 @@ jobs:
           command: |
             mkdir /tmp/out
             cd vulkan-example
-            cabal new-install --install-method=copy --installdir=/tmp/out --enable-executable-stripping exe:vulkan-example
-
-      - save_cache:
-          name: Cache
-          key: macos-<< parameters.ghc >>-{{ checksum "vulkan-raw/vulkan-raw.cabal" }}
-          paths:
-            - "~/.cabal"
-            - "vulkan-example/dist-newstyle"
+            cabal new-install --install-method=copy --installdir=/tmp/out exe:vulkan-example
+            strip /tmp/out/vulkan-example
 
       - store_artifacts:
           path: /tmp/out/vulkan-example
@@ -210,8 +183,6 @@ jobs:
   build-windows:
     executor: win/default
     parameters:
-      mingw:
-        type: string
       vulkan:
         type: string
       cabal:
@@ -220,9 +191,6 @@ jobs:
         type: string
     steps:
       - checkout
-      - restore_cache:
-          name: Restore
-          key: windows-<< parameters.ghc >>-{{ checksum "vulkan-raw/vulkan-raw.cabal" }}
       - run:
           name: Install Vulkan
           shell: bash.exe
@@ -281,16 +249,9 @@ jobs:
               ld-options: -Wl,-Bstatic -lstdc++ -Bdynamic
             EOF
 
-            cabal new-install --install-method=copy --installdir="$TEMP/out" --enable-executable-stripping exe:vulkan-example
+            cabal new-install --install-method=copy --installdir=$TEMP/out exe:vulkan-example
 
-          no_output_timeout: 59m
-
-      - save_cache:
-          name: Cache
-          key: windows-<< parameters.ghc >>-{{ checksum "vulkan-raw/vulkan-raw.cabal" }}
-          paths:
-            - C:\Users\circleci\AppData\Roaming\cabal
-            - dist-newstyle
+            strip $TEMP/out
 
       - store_artifacts:
           path: C:\Users\circleci\AppData\Local\Temp\out\vulkan-example.exe
@@ -346,7 +307,6 @@ workflows:
           ghc: 9.2.7
       - build-windows:
           name: windows-9.2.7
-          mingw: 10.2.0
           vulkan: 1.3.239.0
           cabal: 3.6.2.0
           ghc: 9.2.7
