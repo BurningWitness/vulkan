@@ -205,11 +205,6 @@ jobs:
           command: |
             mkdir /tmp/out
             cd vulkan-example
-            cat \<< EOF >> cabal.project
-              extra-include-dirs: ~/VulkanSDK/macOS/include
-              extra-lib-dirs: ~/VulkanSDK/macOS/lib
-            EOF
-
             cabal new-install --install-method=copy --installdir=/tmp/out --enable-executable-stripping exe:vulkan-example
 
       - save_cache:
@@ -358,11 +353,11 @@ workflows:
 #         cabal: 3.6.2.0
 #         ghc: 9.2.5
 #         keep-artifact: true
-#     - build-macos:
-#         name: macos-9.2.5
-#         vulkan: 1.3.239.0
-#         cabal: 3.6.2.0
-#         ghc: 9.2.5
+      - build-macos:
+          name: macos-9.2.5
+          vulkan: 1.3.239.0
+          cabal: 3.6.2.0
+          ghc: 9.2.5
 #     - build-windows:
 #         name: windows-9.2.7
 #         mingw: 10.2.0
