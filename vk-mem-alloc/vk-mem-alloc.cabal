@@ -81,12 +81,8 @@ library
     else
       if os (linux)
         extra-libraries: stdc++
-      elif os (darwin) || os (freebsd)
+      elif os (darwin)
         extra-libraries: c++
-      elif os (openbsd)
-        extra-libraries: c++ c++abi pthread
-      elif os (windows)
-        extra-libraries: stdc++
 
 
 
