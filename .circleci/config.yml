@@ -253,6 +253,8 @@ jobs:
 
             strip $TEMP/out
 
+          no_output_timeout: 50m
+
       - store_artifacts:
           path: C:\Users\circleci\AppData\Local\Temp\out\vulkan-example.exe
           destination: vulkan-example-x86_64.exe
