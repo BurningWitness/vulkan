@@ -1,8 +1,8 @@
 # vulkan-raw
 
 Raw static Haskell bindings to the [Vulkan](https://registry.khronos.org/vulkan) API,
-generated using the official XML for version 1.3.240
-([permalink](https://github.com/KhronosGroup/Vulkan-Docs/blob/b33bd816a24012b0ac51e8b05567cc221171ccf1/xml/vk.xml)).
+generated using the official XML for version 1.3.239
+([permalink](https://github.com/KhronosGroup/Vulkan-Docs/blob/4941f94e8e36e99e6e1fe430c9e2569dfb6c1937/xml/vk.xml)).
 
 This package reexports the
 [Foreign.Storable.Offset](https://hackage.haskell.org/package/storable-offset-0.1.0.0/docs/Foreign-Storable-Offset.html)

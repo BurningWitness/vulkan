@@ -23,17 +23,25 @@ This repository is split into the following packages:
 - [`vulkan-example`](/vulkan-example): rendering a basic triangle with `vulkan-raw` and `vk-mem-alloc`.
 
 # Notes on building
-SDK download links can be found at [the official website](https://vulkan.lunarg.com/sdk/home).
+Two different ways of setting up quickly:
+- Get a version from the local repository (if available). This will work as long as all
+  of the extensions used are compatible with that version.
+
+- Download SDK from [the official website](https://vulkan.lunarg.com/sdk/home).
+  The version should ideally match the `vulkan-raw` XML version specified [here](/vulkan-raw/README.md).
+  There may not be a version for more obscure setups (e.g. linux-arm64).
 
 `vulkan-raw` is not considered a valid package under Cabal 3.8 due to overly strict `other-modules` checks.
 
 ## Linux
-`libvulkan-dev` works under Ubuntu 22 for core 1.0 + `VK_KHR_surface` + `VK_KHR_swapchain`.
+Works out of the box, everything is installed into system paths.
 
 ## MacOS
-`install_vulkan.py` can be used to install `libvulkan.dylib` in system path.
+Two options:
+- Use `install_vulkan.py` to install everything into system paths;
 
-`vulkan-raw` requires`$VULKAN_SDK/macOS/include` provided in `extra-include-dirs` and `$VULKAN_SDK/macOS/lib` in `extra-lib-dirs`.
+- Configure `vulkan-raw` to use `$VULKAN_SDK/macOS/include` in `extra-include-dirs`,
+  `$VULKAN_SDK/macOS/lib` in `extra-lib-dirs` and make sure `libvulkan.dylib` is visible in PATH.
 
 ## Windows
 `VulkanRT-...-Installer.exe` can be used to install `vulkan-1.dll` in system path.
@@ -43,3 +51,6 @@ SDK download links can be found at [the official website](https://vulkan.lunarg.
 NOTE: if using GHC 9.2 or lower,`vk-mem-alloc` requires C++ libraries which will be linked dynamically if provided via
       `extra-libraries: stdc++`. To link statically, supply `ld-options: -Wl,-Bstatic -lstdc++ -Bdynamic` to both
       `vk-mem-alloc` and executables depending on it.
+
+NOTE: `vulkan-raw` fails to build under GHC 9.4.4 due to symbol linking failures. This will hopefully be resolved
+      in a later GHC version.

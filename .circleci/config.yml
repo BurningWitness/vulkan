@@ -9,8 +9,6 @@ jobs:
       image: ubuntu-2204:current
     resource_class: arm.medium
     parameters:
-      vulkan:
-        type: string
       cabal:
         type: string
       ghc:
@@ -21,21 +19,9 @@ jobs:
           name: Restore
           key: arm64-<< parameters.ghc >>-{{ checksum "vulkan-raw/vulkan-raw.cabal" }}
       - run:
-          name: Update apt
-          command: |
-            wget -qO- https://packages.lunarg.com/lunarg-signing-key-pub.asc | sudo tee /etc/apt/trusted.gpg.d/lunarg.asc
-            sudo wget -qO /etc/apt/sources.list.d/lunarg-vulkan-<< parameters.vulkan >>-jammy.list https://packages.lunarg.com/vulkan/<< parameters.vulkan >>/lunarg-vulkan-<< parameters.vulkan >>-jammy.list
-            sudo apt-get update
-
-      - run:
           name: Install libraries
           command: |
-            sudo NEEDRESTART_MODE=a apt-get install -y libgl-dev xorg-dev
-
-      - run:
-          name: Install Vulkan
-          command: |
-            sudo NEEDRESTART_MODE=a apt-get install -y vulkan-sdk
+            sudo NEEDRESTART_MODE=a apt-get install -y libgl-dev libvulkan-dev xorg-dev
 
       - run:
           name: Install Cabal and GHC
@@ -313,54 +299,54 @@ workflows:
   workflow:
     jobs:
       - build-arm64:
-          name: aarch64-9.2.5
+          name: aarch64-9.2.7
           vulkan: 1.3.239
           cabal: 3.6.2.0
-          ghc: 9.2.5
-#     - build-linux:
-#         name: linux-8.4.4
-#         vulkan: 1.3.239
-#         cabal: 3.6.2.0
-#         ghc: 8.4.4
-#         keep-artifact: false
-#     - build-linux:
-#         name: linux-8.6.5
-#         vulkan: 1.3.239
-#         cabal: 3.6.2.0
-#         ghc: 8.6.5
-#         keep-artifact: false
-#     - build-linux:
-#         name: linux-8.8.4
-#         vulkan: 1.3.239
-#         cabal: 3.6.2.0
-#         ghc: 8.8.4
-#         keep-artifact: false
-#     - build-linux:
-#         name: linux-8.10.7
-#         vulkan: 1.3.239
-#         cabal: 3.6.2.0
-#         ghc: 8.10.7
-#         keep-artifact: false
-#     - build-linux:
-#         name: linux-9.0.2
-#         vulkan: 1.3.239
-#         cabal: 3.6.2.0
-#         ghc: 9.0.2
-#         keep-artifact: false
-#     - build-linux:
-#         name: linux-9.2.5
-#         vulkan: 1.3.239
-#         cabal: 3.6.2.0
-#         ghc: 9.2.5
-#         keep-artifact: true
+          ghc: 9.2.7
+      - build-linux:
+          name: linux-8.4.4
+          vulkan: 1.3.239
+          cabal: 3.6.2.0
+          ghc: 8.4.4
+          keep-artifact: false
+      - build-linux:
+          name: linux-8.6.5
+          vulkan: 1.3.239
+          cabal: 3.6.2.0
+          ghc: 8.6.5
+          keep-artifact: false
+      - build-linux:
+          name: linux-8.8.4
+          vulkan: 1.3.239
+          cabal: 3.6.2.0
+          ghc: 8.8.4
+          keep-artifact: false
+      - build-linux:
+          name: linux-8.10.7
+          vulkan: 1.3.239
+          cabal: 3.6.2.0
+          ghc: 8.10.7
+          keep-artifact: false
+      - build-linux:
+          name: linux-9.0.2
+          vulkan: 1.3.239
+          cabal: 3.6.2.0
+          ghc: 9.0.2
+          keep-artifact: false
+      - build-linux:
+          name: linux-9.2.7
+          vulkan: 1.3.239
+          cabal: 3.6.2.0
+          ghc: 9.2.7
+          keep-artifact: true
       - build-macos:
-          name: macos-9.2.5
+          name: macos-9.2.7
           vulkan: 1.3.239.0
           cabal: 3.6.2.0
-          ghc: 9.2.5
-#     - build-windows:
-#         name: windows-9.2.7
-#         mingw: 10.2.0
-#         vulkan: 1.3.239.0
-#         cabal: 3.6.2.0
-#         ghc: 9.2.7
+          ghc: 9.2.7
+      - build-windows:
+          name: windows-9.2.7
+          mingw: 10.2.0
+          vulkan: 1.3.239.0
+          cabal: 3.6.2.0
+          ghc: 9.2.7

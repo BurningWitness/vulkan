@@ -83,7 +83,7 @@ initialize instLayers = do
 
       let wsize = (512, 512)
 
-      bracket (glfwCreateWindow wsize "Triangles") c'glfwDestroyWindow $ \window -> do
+      bracket (glfwCreateWindow wsize "Example") c'glfwDestroyWindow $ \window -> do
 
         glfwSetStickyKeys window
 
